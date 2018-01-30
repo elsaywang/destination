@@ -7,7 +7,6 @@ function Nav(props) {
     const getSelectedIndex = () => {
         return routes.indexOf(props.location.pathname);
     };
-    const isSelected = () => getSelectedIndex > 0;
 
     return (
         <TabList selectedIndex={getSelectedIndex()} orientation="vertical">

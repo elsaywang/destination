@@ -27,7 +27,6 @@ class SearchContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
         search: state.search,
     };
