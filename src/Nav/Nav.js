@@ -1,37 +1,33 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styles from './Nav.module.css';
+import { NavLink, withRouter } from 'react-router-dom';
+import { Tab, TabList } from '@react/react-spectrum/TabList';
 
-function Nav() {
+function Nav(props) {
+    const routes = ['/dashboard', '/all-signals', '/aa', '/other', 'onboarded'];
+    const getSelectedIndex = () => {
+        return routes.indexOf(props.location.pathname);
+    };
+    const isSelected = () => getSelectedIndex > 0;
+
     return (
-        <ul className={styles.nav}>
-            <li>
-                <NavLink to="/dashboard" activeClassName={styles.active}>
-                    Dashboard
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/all-signals" activeClassName={styles.active}>
-                    All Signals Search
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/aa" activeClassName={styles.active}>
-                    Adobe Analytics
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/other" activeClassName={styles.active}>
-                    Other Real-Time Signals
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/onboarded" activeClassName={styles.active}>
-                    Onboarded Signals
-                </NavLink>
-            </li>
-        </ul>
+        <TabList selectedIndex={getSelectedIndex()} orientation="vertical">
+            <NavLink to="/dashboard">
+                <Tab selected={props.location.pathname === '/dashboard'}>Dashboard</Tab>
+            </NavLink>
+            <NavLink to="/all-signals">
+                <Tab selected={props.location.pathname === '/all-signals'}>All Signals Search</Tab>
+            </NavLink>
+            <NavLink to="/aa">
+                <Tab selected={props.location.pathname === '/aa'}>Adobe Analytics</Tab>
+            </NavLink>
+            <NavLink to="/other">
+                <Tab selected={props.location.pathname === '/other'}>Other Real-Time Signals</Tab>
+            </NavLink>
+            <NavLink to="/onboarded">
+                <Tab selected={props.location.pathname === '/onboarded'}>Onboarded Signals</Tab>
+            </NavLink>
+        </TabList>
     );
 }
 
-export default Nav;
+export default withRouter(Nav);
