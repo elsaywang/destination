@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
+import registerServiceWorker from './registerServiceWorker';
+
 import Nav from './Nav/Nav';
 import Dashboard from './Dashboard/Dashboard';
 import SearchContainer from './SearchContainer/SearchContainer';
@@ -28,3 +30,5 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root'),
 );
+
+registerServiceWorker();
