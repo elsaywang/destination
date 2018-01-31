@@ -15,7 +15,7 @@ const store = createStore(reducers);
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename="/portal/signals">
             <Fragment>
                 <Nav />
                 <Switch>

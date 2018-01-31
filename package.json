@@ -1,35 +1,28 @@
 {
-  "name": "signals",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@react/react-spectrum": "^2.2.1",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "jest": "^22.1.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "react-scripts-cssmodules": "^1.0.171",
-    "react-test-renderer": "^16.2.0",
-    "redux": "^3.7.2",
-    "redux-actions": "^2.2.1",
-    "redux-promise-middleware": "^5.0.0",
-    "redux-thunk": "^2.2.0"
-  },
+  "name": "portal-signals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "@aam/eslint-config-aam": "^1.1.2",
-    "husky": "^0.14.3",
-    "prettier": "^1.10.2",
-    "pretty-quick": "^1.2.3",
-    "redux-devtools-extension": "^2.13.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.adobe.com/AAM/portal-signals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "config": "^1.29.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.17.4",
+    "memory-cache": "^0.2.0",
+    "request": "^2.83.0",
+    "serve-index": "^1.9.1"
+  },
+  "proxy": "http://localhost:8081/"
 }
