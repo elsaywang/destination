@@ -1,19 +1,12 @@
 var express = require('express');
 var app = express();
-var config = require('config');
 var cache = require('memory-cache');
 var path = require('path');
 var request = require('request');
 var cookieParser = require('cookie-parser')();
 var cheerio = require('cheerio');
 var proxy = require('http-proxy-middleware');
-var serveIndex = require('serve-index');
-
-//--- global variables ---
-global.port = config.has('server.port') ? config.get('server.port') : 8081;
-global.portalHost = config.get('portal.host');
-global.portalCsrfPath = config.get('portal.csrfPath');
-global.portalCsrfTagId = config.get('portal.csrfTagId');
+require('./global.js');
 
 //--- app middlewares ---
 function logRequest(req, res, next) {
