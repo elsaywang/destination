@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -15,7 +15,7 @@ const store = createStore(reducers);
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter basename="/portal/signals">
+        <HashRouter>
             <Fragment>
                 <Nav />
                 <Switch>
@@ -26,7 +26,7 @@ ReactDOM.render(
                     <Route exact path="/onboarded" component={SearchContainer} />
                 </Switch>
             </Fragment>
-        </BrowserRouter>
+        </HashRouter>
     </Provider>,
     document.getElementById('root'),
 );
