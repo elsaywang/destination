@@ -1,0 +1,10 @@
+{
+    "server": {
+        "port": 8081
+    },
+    "portal": {
+        "host": "http://localhost:8080/portal",
+        "csrfPath": "/Analytics/reports.ddx",
+        "csrfTagId": "_tk"
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "portal-signals-server",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "prod": "node server.js",
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.adobe.com/AAM/portal-signals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "config": "^1.29.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.17.4",
+    "memory-cache": "^0.2.0",
+    "request": "^2.83.0"
+  },
+  "proxy": "http://localhost:8081/",
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
