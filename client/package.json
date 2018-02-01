@@ -1,6 +1,6 @@
 {
-  "name": "signals",
-  "version": "0.1.0",
+  "name": "portal-signals-client",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@react/react-spectrum": "^2.2.1",

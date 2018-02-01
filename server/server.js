@@ -9,7 +9,7 @@ require('./global.js');
 app.use(...middleware);
 
 // use static assets in client/build
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 // routes
 app.use('/', routes);
