@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prod": "node server.js",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +25,8 @@
     "request": "^2.83.0",
     "serve-index": "^1.9.1"
   },
-  "proxy": "http://localhost:8081/"
+  "proxy": "http://localhost:8081/",
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
 }
