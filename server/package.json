@@ -1,9 +1,8 @@
 {
   "name": "portal-signals-server",
   "version": "1.0.0",
-  "description": "",
   "private": true,
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "prod": "node server.js",
     "start": "nodemon server.js",
@@ -25,8 +24,8 @@
     "memory-cache": "^0.2.0",
     "request": "^2.83.0"
   },
-  "proxy": "http://localhost:8081/",
   "devDependencies": {
     "nodemon": "^1.14.11"
-  }
+  },
+  "proxy": "http://localhost:8081/"
 }
