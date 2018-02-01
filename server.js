@@ -9,7 +9,6 @@ var cheerio = require('cheerio');
 var proxy = require('http-proxy-middleware');
 var serveIndex = require('serve-index');
 
-
 //--- global variables ---
 global.port = config.has('server.port') ? config.get('server.port') : 8081;
 global.portalHost = config.get('portal.host');
@@ -23,23 +22,20 @@ function logRequest(req, res, next) {
 }
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
-// app.use('/static', express.static(path.join(__dirname, 'client', 'build', 'static')));
-// app.use(express.static(path.join(__dirname, 'client', 'build', 'static')));
 
 function cacheCsrf(req, res, next) {
     var jsession = req.cookies['JSESSIONID'];
     if (jsession) {
         var csrf = cache.get(jsession);
         if (!csrf) {
-
             var options = {
                 method: 'GET',
                 uri: portalHost + portalCsrfPath,
-                headers: { cookie: req.headers.cookie }
+                headers: { cookie: req.headers.cookie },
             };
 
             // get csrf token from old portal
-            request(options, function (error, response, body) {
+            request(options, function(error, response, body) {
                 if (!error && response && response.statusCode === 200) {
                     var html = cheerio.load(body);
                     var csrf = html('#' + portalCsrfTagId).attr('content');
@@ -59,11 +55,10 @@ function cacheCsrf(req, res, next) {
 
 var proxyAPI = proxy('/api', {
     target: portalHost,
-    changeOrigin: true
+    changeOrigin: true,
 });
 
 app.use(logRequest, cookieParser, cacheCsrf, proxyAPI);
-
 
 //--- app routes ---
 app.get('*', function(req, res) {
@@ -71,15 +66,12 @@ app.get('*', function(req, res) {
     var csrf;
     if (jsession) {
         csrf = cache.get(jsession);
-        console.log(jsession + ' --> ' + csrf)
+        console.log(jsession + ' --> ' + csrf);
     }
-    console.log('dirname: ' + __dirname);
-    res.render('index.html', {_csrf : csrf});
-    // res.send(__dirname);
+    res.render('index.html', { _csrf: csrf });
 });
 
-
 //--- start server ---
-app.listen(port, function () {
+app.listen(port, function() {
     console.log('server started at http://localhost:' + port);
 });
