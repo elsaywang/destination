@@ -19,7 +19,7 @@ ReactDOM.render(
             <Fragment>
                 <Nav />
                 <Switch>
-                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route exact path="/" component={Dashboard} />
                     <Route exact path="/all-signals" component={SearchContainer} />
                     <Route exact path="/aa" component={SearchContainer} />
                     <Route exact path="/other" component={SearchContainer} />
