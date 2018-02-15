@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
 import registerServiceWorker from './registerServiceWorker';
-
+import Layout from './Layout';
 import Nav from './Nav/Nav';
 import Dashboard from './Dashboard/Dashboard';
 import SearchContainer from './SearchContainer/SearchContainer';
@@ -16,16 +16,13 @@ const store = createStore(reducers);
 ReactDOM.render(
     <Provider store={store}>
         <HashRouter>
-            <Fragment>
+            <Layout>
                 <Nav />
                 <Switch>
                     <Route exact path="/" component={Dashboard} />
-                    <Route exact path="/all-signals" component={SearchContainer} />
-                    <Route exact path="/aa" component={SearchContainer} />
-                    <Route exact path="/other" component={SearchContainer} />
-                    <Route exact path="/onboarded" component={SearchContainer} />
+                    <Route exact path="/search" component={SearchContainer} />
                 </Switch>
-            </Fragment>
+            </Layout>
         </HashRouter>
     </Provider>,
     document.getElementById('root'),
