@@ -1,6 +1,6 @@
-import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
+import React from 'react';
 
 function Nav(props) {
     const routes = ['/', '/search'];
