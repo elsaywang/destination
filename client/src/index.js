@@ -1,15 +1,15 @@
+import '@react/react-spectrum/page';
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducers from './reducers';
+import reducers from './reducers/';
 import registerServiceWorker from './registerServiceWorker';
-import Layout from './Layout';
-import Nav from './Nav/Nav';
-import Dashboard from './Dashboard/Dashboard';
-import SearchContainer from './SearchContainer/SearchContainer';
-import '@react/react-spectrum/page';
+import Dashboard from './components/Dashboard';
+import Layout from './components/Layout';
+import Nav from './components/Nav';
+import SearchContainer from './containers/SearchContainer';
 
 const store = createStore(reducers);
 

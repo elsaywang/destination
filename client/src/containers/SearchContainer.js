@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import styles from './SearchContainer.module.css';
-import Search from '../Search/Search';
-import Table from '../Table/Table';
+import Search from '../components/Search';
+import Table from '../components/Table';
 import { callSearch } from '../actions';
 
 class SearchContainer extends Component {
