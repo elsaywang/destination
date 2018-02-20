@@ -1,0 +1,18 @@
+:local(.inline-block) {
+    display: inline-block;
+    margin: 0 10px;
+    height: 72px;
+    vertical-align: bottom;
+}
+
+:local(.inline-block + .inline-block) {
+    margin-left: 0;
+}
+
+:local(.label) {
+    display: block;
+    margin: 10px 0;
+    font-size: 0.875em;
+    vertical-align: middle;
+    transition: color 150ms ease-in-out;
+}
