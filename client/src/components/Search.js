@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
@@ -8,180 +8,86 @@ import Add from '@react/react-spectrum/Icon/Add';
 import AdvancedSearch from './AdvancedSearch';
 import KeyValuePair from './KeyValuePair';
 import Label from './Label';
+import withSearchFilters from '../HOCs/withSearchFilters';
 
 import viewRecordsOptions from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
 
-const initialSearchState = {
-    kvp: [
-        {
-            id: 0,
-            key: '',
-            operator: '=',
-            value: '',
-        },
-    ],
-    status: 'all',
-    advanced: false,
-    viewRecordsFor: 7,
-    minCount: 1000,
-};
-
-class SearchExperience extends Component {
-    constructor() {
-        super();
-
-        this.state = initialSearchState;
-    }
-
-    onAdvancedSearchChange = value => {
-        this.setState({
-            advanced: value,
-        });
-    };
-
-    onKeyChange = (value, event) => {
-        let kvp = [...this.state.kvp];
-
-        kvp[event.target.id].key = value;
-        this.setState({ kvp });
-    };
-
-    onValueChange = (value, event) => {
-        let kvp = [...this.state.kvp];
-
-        kvp[event.target.id].value = value;
-        this.setState({ kvp });
-    };
-
-    onOperatorChange = (id, value) => {
-        let kvp = [...this.state.kvp];
-
-        kvp[id].operator = value;
-        this.setState({ kvp });
-    };
-
-    onAddClick = () => {
-        const nextId = this.state.kvp.length;
-        const newKvp = {
-            id: nextId,
-            key: '',
-            operator: '=',
-            value: '',
-        };
-
-        this.setState(prevState => ({
-            kvp: [...prevState.kvp, newKvp],
-        }));
-    };
-
-    onStatusChange = value => {
-        this.setState({
-            status: value,
-        });
-    };
-
-    onViewRecordsChange = value => {
-        if (value === 'custom') {
-            // AAM-34805
-            // invoke custom date picker
-            // set state to custom date range
-        } else {
-            this.setState({
-                viewRecordsFor: value,
-            });
-        }
-    };
-
-    onMinCountChange = value => {
-        this.setState({
-            minCount: value,
-        });
-    };
-
-    onSearch = () => {
-        this.props.onSearch(this.state);
-    };
-
-    clearAll = () => {
-        this.setState(initialSearchState);
-    };
-
-    renderKVPFields = () =>
-        this.state.kvp.map(pair => (
+function Search(props) {
+    const renderKVPFields = () =>
+        props.kvp.map(pair => (
             <GridColumn size={7}>
                 <KeyValuePair
                     key={pair.id}
                     pair={pair}
-                    onKeyChange={this.onKeyChange}
-                    onOperatorChange={this.onOperatorChange}
-                    onValueChange={this.onValueChange}
+                    onKeyChange={props.onKeyChange}
+                    onOperatorChange={props.onOperatorChange}
+                    onValueChange={props.onValueChange}
                 />
             </GridColumn>
         ));
 
-    renderAddButton = () => (
-        <GridColumn size={2}>
-            <Button label="Add" onClick={this.onAddClick} icon={<Add />} variant="quiet" />
-        </GridColumn>
+    return (
+        <GridRow>
+            <GridColumn size={12}>
+                <Well>
+                    <AdvancedSearch onAdvancedSearchChange={props.onAdvancedSearchChange} />
+
+                    <GridRow>
+                        <GridColumn size={8}>
+                            <GridRow valign="bottom">
+                                {renderKVPFields()}
+                                <GridColumn size={2}>
+                                    <Button
+                                        label="Add"
+                                        onClick={props.onAddClick}
+                                        icon={<Add />}
+                                        variant="quiet"
+                                    />
+                                </GridColumn>
+                            </GridRow>
+
+                            <GridRow valign="bottom">
+                                <GridColumn size={7}>
+                                    <Label value="Signal Status">
+                                        <Select
+                                            value={props.status}
+                                            onChange={props.onStatusChange}
+                                            options={statusOptions}
+                                        />
+                                    </Label>
+
+                                    <Label value="View Records For">
+                                        <Select
+                                            value={props.viewRecordsFor}
+                                            onChange={props.onViewRecordsChange}
+                                            options={viewRecordsOptions}
+                                        />
+                                    </Label>
+
+                                    <Label value="Minimum Counts">
+                                        <NumberInput
+                                            onChange={props.onMinCountChange}
+                                            value={props.minCount}
+                                        />
+                                    </Label>
+                                </GridColumn>
+
+                                <GridColumn size={3}>
+                                    <Button label="Search" onClick={props.onSearch} variant="cta" />
+                                    <Button
+                                        label="Clear All"
+                                        onClick={props.onClearAll}
+                                        variant="secondary"
+                                    />
+                                </GridColumn>
+                            </GridRow>
+                        </GridColumn>
+                    </GridRow>
+                </Well>
+            </GridColumn>
+        </GridRow>
     );
-
-    renderOtherSearchFields = () => (
-        <GridColumn size={7}>
-            <Label value="Signal Status">
-                <Select
-                    value={this.state.status}
-                    onChange={this.onStatusChange}
-                    options={statusOptions}
-                />
-            </Label>
-
-            <Label value="View Records For">
-                <Select
-                    value={this.state.viewRecordsFor}
-                    onChange={this.onViewRecordsChange}
-                    options={viewRecordsOptions}
-                />
-            </Label>
-
-            <Label value="Minimum Counts">
-                <NumberInput onChange={this.onMinCountChange} value={this.state.minCount} />
-            </Label>
-        </GridColumn>
-    );
-
-    renderSearchButtons = () => (
-        <GridColumn size={3}>
-            <Button label="Search" onClick={this.onSearch} variant="cta" />
-            <Button label="Clear All" onClick={this.clearAll} variant="secondary" />
-        </GridColumn>
-    );
-
-    render() {
-        return (
-            <GridRow>
-                <GridColumn size={12}>
-                    <Well>
-                        <AdvancedSearch onAdvancedSearchChange={this.onAdvancedSearchChange} />
-
-                        <GridRow>
-                            <GridColumn size={8}>
-                                <GridRow valign="bottom">
-                                    {this.renderKVPFields()}
-                                    {this.renderAddButton()}
-                                </GridRow>
-
-                                <GridRow valign="bottom">
-                                    {this.renderOtherSearchFields()}
-                                    {this.renderSearchButtons()}
-                                </GridRow>
-                            </GridColumn>
-                        </GridRow>
-                    </Well>
-                </GridColumn>
-            </GridRow>
-        );
-    }
 }
 
-export default SearchExperience;
+export default withSearchFilters(Search);
