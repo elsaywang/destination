@@ -99,8 +99,8 @@ class SearchExperience extends Component {
         });
     };
 
-    onSearchClick = () => {
-        // make API call w/ this.state
+    onSearch = () => {
+        this.props.onSearch(this.state);
     };
 
     clearAll = () => {
@@ -152,8 +152,7 @@ class SearchExperience extends Component {
 
     renderSearchButtons = () => (
         <GridColumn size={3}>
-            <Button label="Search" onClick={this.onSearchClick} variant="cta" />
-
+            <Button label="Search" onClick={this.onSearch} variant="cta" />
             <Button label="Clear All" onClick={this.clearAll} variant="secondary" />
         </GridColumn>
     );
