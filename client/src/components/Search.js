@@ -8,14 +8,13 @@ import Add from '@react/react-spectrum/Icon/Add';
 import AdvancedSearch from './AdvancedSearch';
 import KeyValuePair from './KeyValuePair';
 import Label from './Label';
-import withSearchFilters from '../HOCs/withSearchFilters';
 
 import viewRecordsOptions from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
 
 function Search(props) {
     const renderKVPFields = () =>
-        props.kvp.map(pair => (
+        props.keyValuePairs.map(pair => (
             <GridColumn size={7}>
                 <KeyValuePair
                     key={pair.id}
@@ -90,4 +89,4 @@ function Search(props) {
     );
 }
 
-export default withSearchFilters(Search);
+export default Search;
