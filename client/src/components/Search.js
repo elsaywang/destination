@@ -15,6 +15,7 @@ import statusOptions from '../constants/signalStatusOptions';
 const initialSearchState = {
     kvp: [
         {
+            id: 0,
             key: '',
             operator: '=',
             value: '',
@@ -39,34 +40,39 @@ class SearchExperience extends Component {
         });
     };
 
-    onKeyChange = value => {
-        this.setState({
-            key: value,
-        });
+    onKeyChange = (value, event) => {
+        let kvp = [...this.state.kvp];
+
+        kvp[event.target.id].key = value;
+        this.setState({ kvp });
     };
 
-    onValueChange = value => {
-        this.setState({
-            value: value,
-        });
+    onValueChange = (value, event) => {
+        let kvp = [...this.state.kvp];
+
+        kvp[event.target.id].value = value;
+        this.setState({ kvp });
     };
 
-    onOperatorChange = value => {
-        this.setState({
-            operator: value,
-        });
+    onOperatorChange = (id, value) => {
+        let kvp = [...this.state.kvp];
+
+        kvp[id].operator = value;
+        this.setState({ kvp });
     };
 
     onAddClick = () => {
+        const nextId = this.state.kvp.length;
         const newKvp = {
+            id: nextId,
             key: '',
-            operator: '',
+            operator: '=',
             value: '',
         };
 
-        this.setState({
-            kvp: [...this.state.kvp, newKvp],
-        });
+        this.setState(prevState => ({
+            kvp: [...prevState.kvp, newKvp],
+        }));
     };
 
     onStatusChange = value => {
@@ -101,6 +107,57 @@ class SearchExperience extends Component {
         this.setState(initialSearchState);
     };
 
+    renderKVPFields = () =>
+        this.state.kvp.map(pair => (
+            <GridColumn size={7}>
+                <KeyValuePair
+                    key={pair.id}
+                    pair={pair}
+                    onKeyChange={this.onKeyChange}
+                    onOperatorChange={this.onOperatorChange}
+                    onValueChange={this.onValueChange}
+                />
+            </GridColumn>
+        ));
+
+    renderAddButton = () => (
+        <GridColumn size={2}>
+            <Button label="Add" onClick={this.onAddClick} icon={<Add />} variant="quiet" />
+        </GridColumn>
+    );
+
+    renderOtherSearchFields = () => (
+        <GridColumn size={7}>
+            <Label value="Signal Status">
+                <Select
+                    value={this.state.status}
+                    onChange={this.onStatusChange}
+                    options={statusOptions}
+                />
+            </Label>
+
+            <Label value="View Records For">
+                <Select
+                    value={this.state.viewRecordsFor}
+                    onChange={this.onViewRecordsChange}
+                    options={viewRecordsOptions}
+                />
+            </Label>
+
+            <Label value="Minimum Counts">
+                <NumberInput onChange={this.onMinCountChange} value={this.state.minCount} />
+            </Label>
+        </GridColumn>
+    );
+
+    renderSearchButtons = () => (
+        <GridColumn size={3}>
+            <Button label="Search" onClick={this.onSearchClick} variant="cta" />
+
+            <Button label="Clear All" onClick={this.clearAll} variant="secondary" />
+        </GridColumn>
+    );
+
     render() {
         return (
             <GridRow>
@@ -111,66 +168,13 @@ class SearchExperience extends Component {
                         <GridRow>
                             <GridColumn size={8}>
                                 <GridRow valign="bottom">
-                                    {this.state.kvp.map((pair, index) => (
-                                        <GridColumn size={7}>
-                                            <KeyValuePair
-                                                key={index}
-                                                keyName={pair.key}
-                                                value={pair.value}
-                                                onKeyChange={this.onKeyChange}
-                                                onOperatorChange={this.onOperatorChange}
-                                                onValueChange={this.onValueChange}
-                                            />
-                                        </GridColumn>
-                                    ))}
-                                    <GridColumn size={2}>
-                                        <Button
-                                            label="Add"
-                                            onClick={this.onAddClick}
-                                            icon={<Add />}
-                                            variant="quiet"
-                                        />
-                                    </GridColumn>
+                                    {this.renderKVPFields()}
+                                    {this.renderAddButton()}
                                 </GridRow>
 
                                 <GridRow valign="bottom">
-                                    <GridColumn size={7}>
-                                        <Label value="Signal Status">
-                                            <Select
-                                                value={this.state.status}
-                                                onChange={this.onStatusChange}
-                                                options={statusOptions}
-                                            />
-                                        </Label>
-
-                                        <Label value="View Records For">
-                                            <Select
-                                                value={this.state.viewRecordsFor}
-                                                onChange={this.onViewRecordsChange}
-                                                options={viewRecordsOptions}
-                                            />
-                                        </Label>
-
-                                        <Label value="Minimum Counts">
-                                            <NumberInput
-                                                onChange={this.onMinCountChange}
-                                                value={this.state.minCount}
-                                            />
-                                        </Label>
-                                    </GridColumn>
-                                    <GridColumn size={3}>
-                                        <Button
-                                            label="Search"
-                                            onClick={this.onSearchClick}
-                                            variant="cta"
-                                        />
-
-                                        <Button
-                                            label="Clear All"
-                                            onClick={this.clearAll}
-                                            variant="secondary"
-                                        />
-                                    </GridColumn>
+                                    {this.renderOtherSearchFields()}
+                                    {this.renderSearchButtons()}
                                 </GridRow>
                             </GridColumn>
                         </GridRow>

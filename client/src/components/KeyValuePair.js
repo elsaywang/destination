@@ -3,29 +3,31 @@ import Select from '@react/react-spectrum/Select';
 import Search from '@react/react-spectrum/Search';
 import Label from './Label';
 
-function KeyValuePair(props) {
+function KeyValuePair({ onKeyChange, onOperatorChange, onValueChange, pair }) {
     const operatorOptions = [
         { label: '=', value: '=' },
         { label: '>', value: '>' },
         { label: '<', value: '<' },
     ];
+    const { id, key, value, operator } = pair;
 
     return (
         <Fragment>
             <Label value="Key">
                 <Search
-                    value={props.keyName}
+                    id={id}
+                    value={key}
                     placeholder="Type a key or key name"
-                    onChange={props.onKeyChange}
+                    onChange={onKeyChange}
                 />
             </Label>
-            <Select onChange={props.onOperatorChange} options={operatorOptions} />
+            <Select
+                value={operator}
+                onChange={onOperatorChange.bind(this, id)}
+                options={operatorOptions}
+            />
             <Label value="Value">
-                <Search
-                    value={props.value}
-                    placeholder="Type a value"
-                    onChange={props.onValueChange}
-                />
+                <Search id={id} value={value} placeholder="Type a value" onChange={onValueChange} />
             </Label>
         </Fragment>
     );
