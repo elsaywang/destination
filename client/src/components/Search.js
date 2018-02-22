@@ -50,6 +50,7 @@ function Search(props) {
                                 <GridColumn size={7}>
                                     <Label value="Signal Status">
                                         <Select
+                                            className="signal-status"
                                             value={props.status}
                                             onChange={props.onStatusChange}
                                             options={statusOptions}
@@ -58,6 +59,7 @@ function Search(props) {
 
                                     <Label value="View Records For">
                                         <Select
+                                            className="view-records"
                                             value={props.viewRecordsFor}
                                             onChange={props.onViewRecordsChange}
                                             options={viewRecordsOptions}
@@ -66,6 +68,7 @@ function Search(props) {
 
                                     <Label value="Minimum Counts">
                                         <NumberInput
+                                            className="min-counts"
                                             onChange={props.onMinCountChange}
                                             value={props.minCount}
                                         />
