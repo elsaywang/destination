@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchFilters /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SearchFilters
+    onSearch={[MockFunction]}
+    path="test"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "advanced": false,
+      "keyValuePairs": Array [
+        Object {
+          "id": 0,
+          "key": "",
+          "operator": "=",
+          "value": "",
+        },
+      ],
+      "minCount": 1000,
+      "onAddClick": [Function],
+      "onAdvancedSearchChange": [Function],
+      "onClearAll": [Function],
+      "onKeyChange": [Function],
+      "onMinCountChange": [Function],
+      "onOperatorChange": [Function],
+      "onSearch": [Function],
+      "onStatusChange": [Function],
+      "onValueChange": [Function],
+      "onViewRecordsChange": [Function],
+      "status": "all",
+      "viewRecordsFor": 7,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "advanced": false,
+        "keyValuePairs": Array [
+          Object {
+            "id": 0,
+            "key": "",
+            "operator": "=",
+            "value": "",
+          },
+        ],
+        "minCount": 1000,
+        "onAddClick": [Function],
+        "onAdvancedSearchChange": [Function],
+        "onClearAll": [Function],
+        "onKeyChange": [Function],
+        "onMinCountChange": [Function],
+        "onOperatorChange": [Function],
+        "onSearch": [Function],
+        "onStatusChange": [Function],
+        "onValueChange": [Function],
+        "onViewRecordsChange": [Function],
+        "status": "all",
+        "viewRecordsFor": 7,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

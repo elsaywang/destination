@@ -88,7 +88,7 @@ class SearchFilters extends Component {
     };
 
     onSearch = () => {
-        this.props.onSearch(this.props);
+        this.props.onSearch(this.state);
     };
 
     onClearAll = () => {
