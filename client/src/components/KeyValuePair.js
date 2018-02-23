@@ -2,12 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Select from '@react/react-spectrum/Select';
 import Search from '@react/react-spectrum/Search';
 import Label from './Label';
-
-const operatorOptions = [
-    { label: '=', value: '=' },
-    { label: '>', value: '>' },
-    { label: '<', value: '<' },
-];
+import operatorOptions from '../constants/operatorOptions';
 
 class KeyValuePair extends Component {
     constructor(props) {
@@ -24,6 +19,7 @@ class KeyValuePair extends Component {
             <Fragment>
                 <Label value="Key">
                     <Search
+                        className="key-search"
                         id={id}
                         value={key}
                         placeholder="Type a key or key name"
@@ -31,12 +27,14 @@ class KeyValuePair extends Component {
                     />
                 </Label>
                 <Select
+                    className="operator"
                     value={operator}
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
                 />
                 <Label value="Value">
                     <Search
+                        className="value-search"
                         id={id}
                         value={value}
                         placeholder="Type a value"

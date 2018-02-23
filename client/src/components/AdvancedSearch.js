@@ -10,7 +10,7 @@ function AdvancedSearch({ onAdvancedSearchChange, onFilterChange }) {
             <Switch
                 onChange={onAdvancedSearchChange}
                 aria-label="Advanced Search"
-                label="Advanced search for Adobe Analaytics. Search by key/value names and results in:"
+                label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
             />
             <Select
                 placeholder="Filter by report suite"
