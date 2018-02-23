@@ -1,34 +1,23 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import styles from './SearchContainer.module.css';
-import Search from '../components/Search';
+import SearchFilters from './SearchFilters';
 import Table from '../components/Table';
 import { callSearch } from '../actions';
 
-class SearchContainer extends Component {
-    componentDidMount() {
-        if (this.props.location.pathname === '/aa') {
-            // call API for report suites
-        }
-        // based off location, make API Call
-        callSearch(this.props.location.pathname);
-        // TODO: make saved searches api call
-    }
-
-    render() {
-        return (
-            <Fragment>
-                <h1 className={styles.header}>{this.props.location.pathname}</h1>
-                <Search path={this.props.location.pathname} />
-                <Table data={this.props.search} />
-            </Fragment>
-        );
-    }
+function SearchContainer(props) {
+    return (
+        <Fragment>
+            <h1 className={styles.header}>{props.location.pathname}</h1>
+            <SearchFilters onSearch={callSearch} path={props.location.pathname} />
+            <Table data={props.results} />
+        </Fragment>
+    );
 }
 
 const mapStateToProps = state => {
     return {
-        search: state.search,
+        results: state.results,
     };
 };
 

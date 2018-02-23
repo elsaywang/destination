@@ -5,8 +5,8 @@ export const CALL_SEARCH_FULFILLED = 'CALL_SEARCH_FULFILLED';
 export const CALL_SEARCH_REJECTED = 'CALL_SEARCH_REJECTED';
 export const callSearch = createAction(
     CALL_SEARCH,
-    path =>
+    search =>
         new Promise(() => ({
-            search: path,
+            results: [{ id: 0, key: 'name', value: 'value' }],
         })),
 );
