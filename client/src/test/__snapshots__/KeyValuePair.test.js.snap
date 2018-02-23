@@ -60,6 +60,18 @@ ShallowWrapper {
                 "label": "<",
                 "value": "<",
               },
+              Object {
+                "label": ">=",
+                "value": ">=",
+              },
+              Object {
+                "label": "<=",
+                "value": "<=",
+              },
+              Object {
+                "label": "contains",
+                "value": "contains",
+              },
             ]
           }
           value="="
@@ -136,6 +148,18 @@ ShallowWrapper {
             Object {
               "label": "<",
               "value": "<",
+            },
+            Object {
+              "label": ">=",
+              "value": ">=",
+            },
+            Object {
+              "label": "<=",
+              "value": "<=",
+            },
+            Object {
+              "label": "contains",
+              "value": "contains",
             },
           ],
           "value": "=",
@@ -220,6 +244,18 @@ ShallowWrapper {
                   "label": "<",
                   "value": "<",
                 },
+                Object {
+                  "label": ">=",
+                  "value": ">=",
+                },
+                Object {
+                  "label": "<=",
+                  "value": "<=",
+                },
+                Object {
+                  "label": "contains",
+                  "value": "contains",
+                },
               ]
             }
             value="="
@@ -296,6 +332,18 @@ ShallowWrapper {
               Object {
                 "label": "<",
                 "value": "<",
+              },
+              Object {
+                "label": ">=",
+                "value": ">=",
+              },
+              Object {
+                "label": "<=",
+                "value": "<=",
+              },
+              Object {
+                "label": "contains",
+                "value": "contains",
               },
             ],
             "value": "=",
