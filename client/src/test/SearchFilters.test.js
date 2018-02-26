@@ -115,11 +115,6 @@ describe('<SearchFilters /> component', () => {
             expect(wrapper.props().onSearch()).toHaveBeenCalled();
         });
 
-        it('.onClearAll() to reset state back to initial state', () => {
-            wrapper.props().onClearAll();
-            expect(wrapper.state()).toEqual(initialState);
-        });
-
         it('.onAddClick() adds another keyValuePair to state.keyValuePairs', () => {
             expect(wrapper.state('keyValuePairs')).toEqual(initialState.keyValuePairs);
 
@@ -135,6 +130,24 @@ describe('<SearchFilters /> component', () => {
 
             wrapper.props().onAddClick();
             expect(wrapper.state('keyValuePairs')).toEqual(expected);
+        });
+
+        it('.onClearAll() to reset state back to initial state', () => {
+            wrapper.props().onClearAll();
+            expect(wrapper.state()).toEqual({
+                keyValuePairs: [
+                    {
+                        id: 0,
+                        key: '',
+                        operator: '=',
+                        value: '',
+                    },
+                ],
+                status: 'all',
+                advanced: false,
+                viewRecordsFor: 7,
+                minCount: 1000,
+            });
         });
     });
 });
