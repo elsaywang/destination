@@ -9,16 +9,14 @@ function SearchContainer(props) {
     return (
         <Fragment>
             <h1 className={styles.header}>{props.location.pathname}</h1>
-            <SearchFilters onSearch={callSearch} path={props.location.pathname} />
+            <SearchFilters onSearch={props.callSearch} path={props.location.pathname} />
             <Table data={props.results} />
         </Fragment>
     );
 }
 
-const mapStateToProps = state => {
-    return {
-        results: state.results,
-    };
-};
+const mapStateToProps = state => ({
+    test: state.test,
+});
 
-export default connect(mapStateToProps)(SearchContainer);
+export default connect(mapStateToProps, { callSearch })(SearchContainer);

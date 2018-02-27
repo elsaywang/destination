@@ -6,7 +6,9 @@ export const CALL_SEARCH_REJECTED = 'CALL_SEARCH_REJECTED';
 export const callSearch = createAction(
     CALL_SEARCH,
     search =>
-        new Promise(() => ({
-            results: [{ id: 0, key: 'name', value: 'value' }],
-        })),
+        new Promise(resolve =>
+            resolve({
+                results: [{ id: 0, key: 'name', value: 'value' }],
+            }),
+        ),
 );
