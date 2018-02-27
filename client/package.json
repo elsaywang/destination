@@ -23,6 +23,7 @@
     "cypress:open": "cypress open",
     "json-server": "json-server data-generator.js --port 3002 --routes ./routes.json"
   },
+  "proxy": "http://localhost:3002",
   "devDependencies": {
     "@aam/eslint-config-aam": "^1.2.0",
     "cypress": "^1.4.2",
