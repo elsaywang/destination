@@ -92,7 +92,20 @@ class SearchFilters extends Component {
     };
 
     onClearAll = () => {
-        this.setState(initialSearchState);
+        this.setState({
+            keyValuePairs: [
+                {
+                    id: 0,
+                    key: '',
+                    operator: '=',
+                    value: '',
+                },
+            ],
+            status: 'all',
+            advanced: false,
+            viewRecordsFor: 7,
+            minCount: 1000,
+        });
     };
 
     render() {
