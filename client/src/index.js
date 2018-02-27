@@ -3,20 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
-import promiseMiddleware from 'redux-promise-middleware';
-import reducers from './reducers/';
+import configureStore from './configureStore';
 import registerServiceWorker from './registerServiceWorker';
 import Dashboard from './components/Dashboard';
 import Layout from './components/Layout';
 import Nav from './components/Nav';
 import SearchContainer from './containers/SearchContainer';
 
-const store = createStore(reducers, composeWithDevTools(applyMiddleware(promiseMiddleware())));
-
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={configureStore()}>
         <HashRouter>
             <Layout>
                 <Nav />
