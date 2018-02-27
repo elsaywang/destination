@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
+import { GridColumn, GridRow } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TBody, TD, TH, THead, TR } from '@react/react-spectrum/Table';
+import { TBody, TD, TH, THead, TR, Table } from '@react/react-spectrum/Table';
 
 function Dashboard() {
     return (

@@ -4,9 +4,7 @@ import React from 'react';
 
 function Nav(props) {
     const routes = ['/', '/search'];
-    const getSelectedIndex = () => {
-        return routes.indexOf(props.location.pathname);
-    };
+    const getSelectedIndex = () => routes.indexOf(props.location.pathname);
     const noOp = () => {};
 
     return (

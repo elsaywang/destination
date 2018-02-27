@@ -2,5 +2,8 @@
     "extends": "@aam/eslint-config-aam",
     "rules": {
         "react/jsx-filename-extension": 0
+    },
+    "env": {
+        "jest": true
     }
 }
