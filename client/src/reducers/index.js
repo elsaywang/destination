@@ -7,6 +7,7 @@ const test = handleActions(
     {
         CALL_SEARCH_FULFILLED: (state, action) => action.payload,
     },
+    {},
 );
 
 export default combineReducers({
