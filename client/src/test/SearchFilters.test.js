@@ -42,18 +42,14 @@ describe('<SearchFilters /> component', () => {
 
         it('.onKeyChange() changes key state to given value at given id in keyValuePairs[]', () => {
             const value = 'test';
-            const event = {
-                target: {
-                    id: 0,
-                },
-            };
+            const id = 0;
 
             expect(wrapper.state('keyValuePairs')[0].key).toBe(initialState.keyValuePairs[0].key);
 
-            wrapper.props().onKeyChange(value, event);
+            wrapper.props().onKeyChange(id, value);
             const newKeyValuePairs = [...initialState.keyValuePairs];
 
-            newKeyValuePairs[event.target.id].key = value;
+            newKeyValuePairs[id].key = value;
 
             expect(wrapper.state('keyValuePairs')[0].key).toBe(value);
         });
