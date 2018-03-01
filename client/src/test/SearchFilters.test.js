@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import SearchFilters from '../containers/SearchFilters';
 import Search from '../components/Search';
-import Button from '@react/react-spectrum/Button/index';
 
 describe('<SearchFilters /> component', () => {
     const mockFn = jest.fn();
@@ -48,10 +47,12 @@ describe('<SearchFilters /> component', () => {
                     id: 0,
                 },
             };
+
             expect(wrapper.state('keyValuePairs')[0].key).toBe(initialState.keyValuePairs[0].key);
 
             wrapper.props().onKeyChange(value, event);
             const newKeyValuePairs = [...initialState.keyValuePairs];
+
             newKeyValuePairs[event.target.id].key = value;
 
             expect(wrapper.state('keyValuePairs')[0].key).toBe(value);
@@ -64,12 +65,14 @@ describe('<SearchFilters /> component', () => {
                     id: 0,
                 },
             };
+
             expect(wrapper.state('keyValuePairs')[0].value).toBe(
                 initialState.keyValuePairs[0].value,
             );
 
             wrapper.props().onValueChange(value, event);
             const newKeyValuePairs = [...initialState.keyValuePairs];
+
             newKeyValuePairs[event.target.id].value = value;
 
             expect(wrapper.state('keyValuePairs')[0].value).toBe(value);
@@ -78,12 +81,14 @@ describe('<SearchFilters /> component', () => {
         it('.onOperatorChange() changes operator state to given value at given id in keyValuePairs[]', () => {
             const value = '>';
             const id = 0;
+
             expect(wrapper.state('keyValuePairs')[0].operator).toBe(
                 initialState.keyValuePairs[0].operator,
             );
 
             wrapper.props().onOperatorChange(id, value);
             const newKeyValuePairs = [...initialState.keyValuePairs];
+
             newKeyValuePairs[id].operator = value;
 
             expect(wrapper.state('keyValuePairs')[0].operator).toBe(value);
