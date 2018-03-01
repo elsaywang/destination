@@ -28,10 +28,10 @@ class SearchFilters extends Component {
         });
     };
 
-    onKeyChange = (value, event) => {
+    onKeyChange = (id, value) => {
         let keyValuePairs = [...this.state.keyValuePairs];
 
-        keyValuePairs[event.target.id].key = value;
+        keyValuePairs[id].key = value;
         this.setState({ keyValuePairs });
     };
 
