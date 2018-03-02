@@ -2,8 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import operators from '../constants/operatorOptions';
 import KeyValuePair from '../components/KeyValuePair';
+import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
 import Search from '@react/react-spectrum/Search';
+import Textfield from '@react/react-spectrum/Textfield';
 
 describe('<KeyValuePair /> component', () => {
     const mockFn = jest.fn();
@@ -27,13 +29,11 @@ describe('<KeyValuePair /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <Search /> for key / key name search', () => {
-            expect(
-                wrapper
-                    .find(Search)
-                    .filter('.key-search')
-                    .exists(),
-            ).toBe(true);
+        it('renders <Autocomplete /> and <Textfield /> child for key / key name search', () => {
+            const autocomplete = wrapper.find(Autocomplete);
+
+            expect(autocomplete.filter('.key-search').exists()).toBe(true);
+            expect(autocomplete.find(Textfield).exists()).toBe(true);
         });
 
         it('renders <Select /> with operator options', () => {
