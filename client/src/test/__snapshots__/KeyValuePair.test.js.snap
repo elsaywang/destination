@@ -33,15 +33,21 @@ ShallowWrapper {
         <Label
           value="Key"
         >
-          <Search
+          <Autocomplete
+            allowCreate={false}
             className="key-search"
-            icon={<SearchMagGlass />}
+            getCompletions={[Function]}
             id={0}
-            onChange={[MockFunction]}
-            onSubmit={[Function]}
-            placeholder="Type a key or key name"
-            value=""
-          />
+            onSelect={[Function]}
+          >
+            <Textfield
+              disabled={false}
+              invalid={false}
+              placeholder="Type a key or key name"
+              readOnly={false}
+              required={false}
+            />
+          </Autocomplete>
         </Label>,
         <Select
           className="operator"
@@ -98,15 +104,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Search
+          "children": <Autocomplete
+            allowCreate={false}
             className="key-search"
-            icon={<SearchMagGlass />}
+            getCompletions={[Function]}
             id={0}
-            onChange={[MockFunction]}
-            onSubmit={[Function]}
-            placeholder="Type a key or key name"
-            value=""
-          />,
+            onSelect={[Function]}
+          >
+            <Textfield
+              disabled={false}
+              invalid={false}
+              placeholder="Type a key or key name"
+              readOnly={false}
+              required={false}
+            />
+          </Autocomplete>,
           "value": "Key",
         },
         "ref": null,
@@ -115,16 +127,35 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "allowCreate": false,
+            "children": <Textfield
+              disabled={false}
+              invalid={false}
+              placeholder="Type a key or key name"
+              readOnly={false}
+              required={false}
+            />,
             "className": "key-search",
-            "icon": <SearchMagGlass />,
+            "getCompletions": [Function],
             "id": 0,
-            "onChange": [MockFunction],
-            "onSubmit": [Function],
-            "placeholder": "Type a key or key name",
-            "value": "",
+            "onSelect": [Function],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "disabled": false,
+              "invalid": false,
+              "placeholder": "Type a key or key name",
+              "readOnly": false,
+              "required": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
         },
         "type": [Function],
@@ -217,15 +248,21 @@ ShallowWrapper {
           <Label
             value="Key"
           >
-            <Search
+            <Autocomplete
+              allowCreate={false}
               className="key-search"
-              icon={<SearchMagGlass />}
+              getCompletions={[Function]}
               id={0}
-              onChange={[MockFunction]}
-              onSubmit={[Function]}
-              placeholder="Type a key or key name"
-              value=""
-            />
+              onSelect={[Function]}
+            >
+              <Textfield
+                disabled={false}
+                invalid={false}
+                placeholder="Type a key or key name"
+                readOnly={false}
+                required={false}
+              />
+            </Autocomplete>
           </Label>,
           <Select
             className="operator"
@@ -282,15 +319,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Search
+            "children": <Autocomplete
+              allowCreate={false}
               className="key-search"
-              icon={<SearchMagGlass />}
+              getCompletions={[Function]}
               id={0}
-              onChange={[MockFunction]}
-              onSubmit={[Function]}
-              placeholder="Type a key or key name"
-              value=""
-            />,
+              onSelect={[Function]}
+            >
+              <Textfield
+                disabled={false}
+                invalid={false}
+                placeholder="Type a key or key name"
+                readOnly={false}
+                required={false}
+              />
+            </Autocomplete>,
             "value": "Key",
           },
           "ref": null,
@@ -299,16 +342,35 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "allowCreate": false,
+              "children": <Textfield
+                disabled={false}
+                invalid={false}
+                placeholder="Type a key or key name"
+                readOnly={false}
+                required={false}
+              />,
               "className": "key-search",
-              "icon": <SearchMagGlass />,
+              "getCompletions": [Function],
               "id": 0,
-              "onChange": [MockFunction],
-              "onSubmit": [Function],
-              "placeholder": "Type a key or key name",
-              "value": "",
+              "onSelect": [Function],
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "invalid": false,
+                "placeholder": "Type a key or key name",
+                "readOnly": false,
+                "required": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": [Function],
           },
           "type": [Function],

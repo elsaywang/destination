@@ -1,9 +1,9 @@
+import * as actionCreators from '../actions';
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import styles from './SearchContainer.module.css';
 import SearchFilters from './SearchFilters';
 import Table from '../components/Table';
-import { callSearch } from '../actions';
 
 const items = [
     {
@@ -29,13 +29,14 @@ function SearchContainer(props) {
         <Fragment>
             <h1 className={styles.header}>{props.location.pathname}</h1>
             <SearchFilters onSearch={props.callSearch} path={props.location.pathname} />
-            <Table items={items} data={props.results} />
+            <Table items={items} />
         </Fragment>
     );
 }
 
 const mapStateToProps = state => ({
-    test: state.test,
+    results: state.results,
+    savedSearches: state.savedSearches,
 });
 
-export default connect(mapStateToProps, { callSearch })(SearchContainer);
+export default connect(mapStateToProps, actionCreators)(SearchContainer);
