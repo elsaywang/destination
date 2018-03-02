@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import polyfills from './polyfills';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
