@@ -1,9 +1,12 @@
 import * as actionCreators from '../actions';
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import styles from './SearchContainer.module.css';
+import Heading from '@react/react-spectrum/Heading';
+import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
+import SignalSourceFilter from './SignalSourceFilter';
 import Table from '../components/Table';
+import styles from './SearchContainer.css';
 
 const items = [
     {
@@ -24,14 +27,52 @@ const items = [
     },
 ];
 
-function SearchContainer(props) {
-    return (
-        <Fragment>
-            <h1 className={styles.header}>{props.location.pathname}</h1>
-            <SearchFilters onSearch={props.callSearch} path={props.location.pathname} />
-            <Table items={items} />
-        </Fragment>
-    );
+class SearchContainer extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            counts: {
+                all: 72093,
+                adobeAnalytics: 34300,
+                actionableLogFiles: 359,
+                generalOnlineData: 27,
+                onboardedRecords: 37407,
+            },
+        };
+    }
+
+    componentDidMount() {
+        // TODO: API call to getCounts and set state
+    }
+
+    onSignalSourceChange = () => {
+        // TODO: API call to update items in table results
+    };
+
+    render() {
+        return (
+            <Fragment>
+                <GridRow>
+                    <GridColumn size={12}>
+                        <SearchFilters onSearch={this.props.callSearch} />
+                    </GridColumn>
+                </GridRow>
+                <div style={{ display: 'flex' }}>
+                    <div className={styles.tabListContainer}>
+                        <SignalSourceFilter
+                            onSignalSourceChange={this.onSignalSourceChange}
+                            counts={this.state.counts}
+                        />
+                    </div>
+                    <div className={styles.tableContainer}>
+                        <Heading size={3}>Search Results for</Heading>
+                        <Table items={items} data={this.props.results} />
+                    </div>
+                </div>
+            </Fragment>
+        );
+    }
 }
 
 const mapStateToProps = state => ({

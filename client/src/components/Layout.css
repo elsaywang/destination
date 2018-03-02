@@ -1,0 +1,6 @@
+@value colors: '../constants/colors.css';
+@value borderGrey from colors;
+
+:global(.borderRight) {
+    border-right: 1px solid borderGrey;
+}

@@ -1,0 +1,21 @@
+:local(.heading) {
+    display: block;
+    padding: 0 20px;
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: var(--subtitle-color);
+}
+
+:local(.tabList) {
+    padding: 20px 40px 20px 20px;
+}
+
+:local(.tabList) .spectrum-TabList-item {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+:local(.tabList) .is-selected span {
+    font-weight: bold;
+}
