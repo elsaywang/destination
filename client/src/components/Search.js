@@ -30,10 +30,13 @@ function Search(props) {
         <GridRow>
             <GridColumn size={12}>
                 <Well>
-                    <AdvancedSearch onAdvancedSearchChange={props.onAdvancedSearchChange} />
+                    <AdvancedSearch
+                        enabled={props.advanced}
+                        onAdvancedSearchChange={props.onAdvancedSearchChange}
+                    />
 
                     <GridRow>
-                        <GridColumn size={8}>
+                        <GridColumn size={12}>
                             <GridRow valign="bottom">
                                 {renderKVPFields()}
                                 <GridColumn size={2}>

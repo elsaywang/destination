@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdvancedSearch
+    enabled={false}
     onAdvancedSearchChange={[MockFunction]}
     onFilterChange={[MockFunction]}
   />,
@@ -23,6 +24,7 @@ ShallowWrapper {
       "children": Array [
         <Switch
           aria-label="Advanced Search"
+          checked={false}
           label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
           onChange={[MockFunction]}
         />,
@@ -42,6 +44,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "aria-label": "Advanced Search",
+          "checked": false,
           "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
           "onChange": [MockFunction],
         },
@@ -75,6 +78,7 @@ ShallowWrapper {
         "children": Array [
           <Switch
             aria-label="Advanced Search"
+            checked={false}
             label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
             onChange={[MockFunction]}
           />,
@@ -94,6 +98,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "aria-label": "Advanced Search",
+            "checked": false,
             "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
             "onChange": [MockFunction],
           },
