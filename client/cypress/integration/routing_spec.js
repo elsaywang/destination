@@ -1,19 +1,26 @@
 describe('Integration Tests for routing', function() {
     it('should check the ability for routing in the UI', function() {
-        // navigate to Signal Home Page
+        // Visit signal Dashboard (home) URL
         cy.visit('http://localhost:3000');
-        // verify - it is signsl home page
+        // Verify - it is signal Dashboard (home) page
         cy.title().should('contain', 'Signals');
-        // click on surch link
-        cy.contains('Search').click();
-        //verify the search page
+        // Visit signal Search page URL
+        cy.visit('http://localhost:3000/#/search');
+        // Verify - it is signal Search page
         cy
             .get('button')
             .contains('Search')
             .should('be.exist');
-        // click on Dashboard button
+        // Navigate to signal Dashboard by clicking - Dashboard tab
         cy.contains('Dashboard').click();
-        //veriufy the dashbord page
+        // Verify - it is signal Dashboard page
         cy.get('.spectrum-Table').should('be.exist');
+        // Navigate to signal Search by clicking - Search tab
+        cy.contains('Search').click();
+        // Verify - it is signal Search page
+        cy
+            .get('button')
+            .contains('Search')
+            .should('be.exist');
     });
 });
