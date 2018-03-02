@@ -6,14 +6,14 @@ describe('Integration Tests for routing', function() {
         cy.title().should('contain', 'Signals');
         // click on surch link
         cy.contains('Search').click();
-        // verify the search page
+        //verify the search page
         cy
             .get('button')
             .contains('Search')
             .should('be.exist');
         // click on Dashboard button
         cy.contains('Dashboard').click();
-        //veriufy - the dashbord page
+        //veriufy the dashbord page
         cy.get('.spectrum-Table').should('be.exist');
     });
 });
