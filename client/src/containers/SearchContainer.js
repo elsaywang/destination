@@ -5,7 +5,7 @@ import Heading from '@react/react-spectrum/Heading';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
 import SignalSourceFilter from '../components/SignalSourceFilter';
-import Table from '../components/Table';
+import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
 import ButtonGroup from '@react/react-spectrum/ButtonGroup';
 import Button from '@react/react-spectrum/Button';
@@ -81,7 +81,7 @@ class SearchContainer extends Component {
                     </div>
                     <div className={styles.tableContainer}>
                         <Heading size={3}>Search Results for</Heading>
-                        <Table items={items} signalType={this.state.signalType} />
+                        <SignalsTable items={items} signalType={this.state.signalType} />
                     </div>
                 </div>
                 <ButtonGroup
