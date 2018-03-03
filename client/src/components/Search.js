@@ -7,7 +7,7 @@ import NumberInput from '@react/react-spectrum/NumberInput';
 import Add from '@react/react-spectrum/Icon/Add';
 import AdvancedSearch from './AdvancedSearch';
 import KeyValuePair from './KeyValuePair';
-import Label from './Label';
+import Label from './common/Label';
 
 import viewRecordsOptions from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
