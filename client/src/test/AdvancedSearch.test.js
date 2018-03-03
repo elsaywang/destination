@@ -6,7 +6,7 @@ import Switch from '@react/react-spectrum/Switch';
 
 describe('Advanced Search', () => {
     const mockFn = jest.fn();
-    let wrapper = shallow(
+    const wrapper = shallow(
         <AdvancedSearch enabled={false} onFilterChange={mockFn} onAdvancedSearchChange={mockFn} />,
     );
 
@@ -23,12 +23,12 @@ describe('Advanced Search', () => {
             expect(wrapper.find(Select).exists()).toBe(true);
         });
 
-        it('when <AdvancedSearch /> is passed enabled: false, <Select /> should be disabled', () => {
+        it('renders <Select /> with disabled: true when <AdvancedSearch /> is passed enabled: false', () => {
             wrapper.setProps({ enabled: false });
             expect(wrapper.find(Select).props().disabled).toBe(true);
         });
 
-        it('when <AdvancedSearch /> is passed enabled: true, <Select /> should be enabled', () => {
+        it('renders <Select /> with disabled: false when <AdvancedSearch /> is passed enabled: true', () => {
             wrapper.setProps({ enabled: true });
             expect(wrapper.find(Select).props().disabled).toBe(false);
         });
