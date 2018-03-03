@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { TableView } from '@react/react-spectrum/TableView';
 import DataSource from './DataSource';
@@ -33,5 +34,11 @@ class Table extends Component {
         return `${headHeight + bodyHeight}px`;
     }
 }
+
+Table.propTypes = {
+    items: PropTypes.array.isRequired,
+    columns: PropTypes.array.isRequired,
+    renderCell: PropTypes.func.isRequired,
+};
 
 export default Table;
