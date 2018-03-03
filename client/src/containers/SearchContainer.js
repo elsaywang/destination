@@ -46,7 +46,7 @@ class SearchContainer extends Component {
         // TODO: API call to getCounts and set state
     }
 
-    onSignalSourceChange = () => {
+    handleSignalSourceChange = () => {
         // TODO: API call to update items in table results
     };
 
@@ -61,7 +61,7 @@ class SearchContainer extends Component {
                 <div style={{ display: 'flex' }}>
                     <div className={styles.tabListContainer}>
                         <SignalSourceFilter
-                            onSignalSourceChange={this.onSignalSourceChange}
+                            handleSignalSourceChange={this.handleSignalSourceChange}
                             counts={this.state.counts}
                         />
                     </div>
