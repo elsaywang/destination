@@ -1,39 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { TableView, TableViewDataSource } from '@react/react-spectrum/TableView';
-import { basicColumns } from '../constants/columns';
+import { analyticsColumns, basicColumns } from '../constants/columns';
 
-const renderCell = (column, data) => <span>{data}</span>;
+/**
+ * Table component that wraps the react-spectrum table components
+ * (`TableView` and `TableViewDataSource`). More easily accepts props
+ * for items, columns, and a renderCell method.
+ */
+class Table extends Component {
+    render() {
+        const { items, columns, renderCell } = this.props;
+        const DataSourceWithColumns = withColumns(DataSource, columns);
+        const dataSource = new DataSourceWithColumns({ items });
 
-// Dynamically set the height of the table's container to show up to a certain number of rows.
-const getTableHeight = (items, maxRows = 10) => {
-    const headHeight = 40;
-    const rowHeight = 48;
-    const bodyHeight = Math.min(items.length, maxRows) * rowHeight;
+        return (
+            <div style={{ height: this.getTableHeight(items) }}>
+                <TableView dataSource={dataSource} renderCell={renderCell} />
+            </div>
+        );
+    }
 
-    return `${headHeight + bodyHeight}px`;
-};
+    /**
+     * Dynamically set the height of the table's container to show up to a
+     * certain number of rows.
+     */
+    getTableHeight(items, maxRows = 10) {
+        const headHeight = 40;
+        const rowHeight = 48;
+        const bodyHeight = Math.min(items.length, maxRows) * rowHeight;
 
-const Table = ({ items }) => {
-    const dataSource = new DataSource({ items });
+        return `${headHeight + bodyHeight}px`;
+    }
+}
 
-    return (
-        <div style={{ height: getTableHeight(items) }}>
-            <TableView dataSource={dataSource} renderCell={renderCell} />
-        </div>
-    );
-};
-
+/**
+ * Extends the react-spectrum `TableViewDataSource` and overrides the methods
+ * that refer to the table items, whihc are stored as `this.items`.
+ */
 class DataSource extends TableViewDataSource {
     constructor({ items }) {
         super();
 
         this.items = items;
-    }
-    // Override
-    getColumns() {
-        // TODO: Find a way to dynamically return a column group based on a signalType prop.
-        // Stuck because the `TableViewDataSource` superclass calls `getColumns()` before props are available.
-        return basicColumns;
     }
     // Override
     getNumberOfRows() {
@@ -51,4 +59,36 @@ class DataSource extends TableViewDataSource {
     }
 }
 
-export default Table;
+/**
+ * Quasi-HOC that wraps the above `DataSource` class (which extends the
+ * react-spectrum `TableViewDataSource` class) to return dynamic columns.
+ */
+function withColumns(DataSource, columns) {
+    return class extends DataSource {
+        // Override for `TableViewDataSource`
+        getColumns() {
+            return columns;
+        }
+    };
+}
+
+class SignalsTable extends Component {
+    getColumns(signalType) {
+        return signalType === 'analytics' ? analyticsColumns : basicColumns;
+    }
+
+    renderCell(column, data) {
+        return <span>{data}</span>;
+    }
+
+    render() {
+        const { items, signalType } = this.props;
+        const columns = this.getColumns(signalType);
+
+        return <Table items={items} columns={columns} renderCell={this.renderCell} />;
+    }
+}
+
+// TODO: This file now contains SignalsTable and common-component Table code.
+// Extract individual classes & components into separate files.
+export default SignalsTable;
