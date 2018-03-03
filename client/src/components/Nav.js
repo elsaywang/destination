@@ -9,7 +9,7 @@ function Nav(props) {
 
     return (
         <TabList
-            style={{ marginBottom: 20 }}
+            style={{ marginBottom: 20, width: '100%' }}
             selectedIndex={getSelectedIndex()}
             variant="anchored"
             onChange={noOp}>
