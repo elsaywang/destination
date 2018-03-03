@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
-import SignalSourceFilter from './SignalSourceFilter';
+import SignalSourceFilter from '../components/SignalSourceFilter';
 import Table from '../components/Table';
 import styles from './SearchContainer.css';
 
@@ -39,6 +39,7 @@ class SearchContainer extends Component {
                 generalOnlineData: 27,
                 onboardedRecords: 37407,
             },
+            filter: 'all',
         };
     }
 
@@ -46,7 +47,10 @@ class SearchContainer extends Component {
         // TODO: API call to getCounts and set state
     }
 
-    handleSignalSourceChange = () => {
+    handleSignalSourceChange = value => {
+        this.setState({
+            filter: value,
+        });
         // TODO: API call to update items in table results
     };
 
@@ -59,15 +63,16 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
                 <div style={{ display: 'flex' }}>
-                    <div className={styles.tabListContainer}>
+                    <div className={styles.filterListContainer}>
                         <SignalSourceFilter
                             handleSignalSourceChange={this.handleSignalSourceChange}
                             counts={this.state.counts}
+                            filter={this.state.filter}
                         />
                     </div>
                     <div className={styles.tableContainer}>
                         <Heading size={3}>Search Results for</Heading>
-                        <Table items={items} data={this.props.results} />
+                        <Table items={items} />
                     </div>
                 </div>
             </Fragment>

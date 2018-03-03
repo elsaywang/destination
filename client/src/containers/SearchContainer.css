@@ -1,13 +1,9 @@
-:local(.tabListContainer),
+:local(.filterListContainer),
 :local(.tableContainer) {
     display: inline-block;
-}
-
-:local(.tabListContainer) {
-    composes: borderRight from global;
-    padding: 20px 0;
-}
-
-:local(.tableContainer) {
     padding: 20px;
+}
+
+:local(.filterListContainer) {
+    composes: borderRight from global;
 }
