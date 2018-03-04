@@ -6,4 +6,5 @@
 
 :local(.filterListContainer) {
     composes: borderRight from global;
+    padding-left: 0;
 }
