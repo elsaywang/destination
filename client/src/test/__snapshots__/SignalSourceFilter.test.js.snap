@@ -1,0 +1,1465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignalSourceFilter /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignalSourceFilter
+    counts={
+      Object {
+        "actionableLogFiles": 359,
+        "adobeAnalytics": 34300,
+        "all": 72093,
+        "generalOnlineData": 27,
+        "onboardedRecords": 37407,
+      }
+    }
+    filter="all"
+    handleSignalSourceChange={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Heading
+          className={undefined}
+          size={3}
+        >
+          Filter By Signal Source:
+        </Heading>,
+        <TabList
+          className={undefined}
+          onChange={[MockFunction]}
+          orientation="vertical"
+          value="all"
+        >
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={true}
+          >
+            All (72093)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            Adobe Analytics (34300)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            Actionable Log Files (359)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            General Online Data (27)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            Onboarded Records (37407)
+          </Tab>
+        </TabList>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Filter By Signal Source:",
+          "className": undefined,
+          "size": 3,
+        },
+        "ref": null,
+        "rendered": "Filter By Signal Source:",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={true}
+            >
+              All (72093)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Adobe Analytics (34300)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Actionable Log Files (359)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              General Online Data (27)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Onboarded Records (37407)
+            </Tab>,
+          ],
+          "className": undefined,
+          "onChange": [MockFunction],
+          "orientation": "vertical",
+          "value": "all",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "All (72093)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": true,
+            },
+            "ref": null,
+            "rendered": "All (72093)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Adobe Analytics (34300)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "Adobe Analytics (34300)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Actionable Log Files (359)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "Actionable Log Files (359)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "General Online Data (27)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "General Online Data (27)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Onboarded Records (37407)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "Onboarded Records (37407)",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Heading
+            className={undefined}
+            size={3}
+          >
+            Filter By Signal Source:
+          </Heading>,
+          <TabList
+            className={undefined}
+            onChange={[MockFunction]}
+            orientation="vertical"
+            value="all"
+          >
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={true}
+            >
+              All (72093)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Adobe Analytics (34300)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Actionable Log Files (359)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              General Online Data (27)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Onboarded Records (37407)
+            </Tab>
+          </TabList>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Filter By Signal Source:",
+            "className": undefined,
+            "size": 3,
+          },
+          "ref": null,
+          "rendered": "Filter By Signal Source:",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={true}
+              >
+                All (72093)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                Adobe Analytics (34300)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                Actionable Log Files (359)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                General Online Data (27)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                Onboarded Records (37407)
+              </Tab>,
+            ],
+            "className": undefined,
+            "onChange": [MockFunction],
+            "orientation": "vertical",
+            "value": "all",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "All (72093)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": true,
+              },
+              "ref": null,
+              "rendered": "All (72093)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Adobe Analytics (34300)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "Adobe Analytics (34300)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Actionable Log Files (359)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "Actionable Log Files (359)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "General Online Data (27)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "General Online Data (27)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Onboarded Records (37407)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "Onboarded Records (37407)",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SignalSourceFilter /> component rendering renders <Tab /> component with correct label when props.count change 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignalSourceFilter
+    counts={
+      Object {
+        "actionableLogFiles": 100,
+        "adobeAnalytics": 1000,
+        "all": 1100,
+        "generalOnlineData": 0,
+        "onboardedRecords": 0,
+      }
+    }
+    filter="adobeAnalytics"
+    handleSignalSourceChange={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Heading
+          className={undefined}
+          size={3}
+        >
+          Filter By Signal Source:
+        </Heading>,
+        <TabList
+          className={undefined}
+          onChange={[MockFunction]}
+          orientation="vertical"
+          value="adobeAnalytics"
+        >
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            All (1100)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={true}
+          >
+            Adobe Analytics (1000)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            Actionable Log Files (100)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            General Online Data (0)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            Onboarded Records (0)
+          </Tab>
+        </TabList>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Filter By Signal Source:",
+          "className": undefined,
+          "size": 3,
+        },
+        "ref": null,
+        "rendered": "Filter By Signal Source:",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              All (1100)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={true}
+            >
+              Adobe Analytics (1000)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Actionable Log Files (100)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              General Online Data (0)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Onboarded Records (0)
+            </Tab>,
+          ],
+          "className": undefined,
+          "onChange": [MockFunction],
+          "orientation": "vertical",
+          "value": "adobeAnalytics",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "All (1100)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "All (1100)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Adobe Analytics (1000)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": true,
+            },
+            "ref": null,
+            "rendered": "Adobe Analytics (1000)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Actionable Log Files (100)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "Actionable Log Files (100)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "General Online Data (0)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "General Online Data (0)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Onboarded Records (0)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "Onboarded Records (0)",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Heading
+            className={undefined}
+            size={3}
+          >
+            Filter By Signal Source:
+          </Heading>,
+          <TabList
+            className={undefined}
+            onChange={[MockFunction]}
+            orientation="vertical"
+            value="adobeAnalytics"
+          >
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              All (1100)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={true}
+            >
+              Adobe Analytics (1000)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Actionable Log Files (100)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              General Online Data (0)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Onboarded Records (0)
+            </Tab>
+          </TabList>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Filter By Signal Source:",
+            "className": undefined,
+            "size": 3,
+          },
+          "ref": null,
+          "rendered": "Filter By Signal Source:",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                All (1100)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={true}
+              >
+                Adobe Analytics (1000)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                Actionable Log Files (100)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                General Online Data (0)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                Onboarded Records (0)
+              </Tab>,
+            ],
+            "className": undefined,
+            "onChange": [MockFunction],
+            "orientation": "vertical",
+            "value": "adobeAnalytics",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "All (1100)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "All (1100)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Adobe Analytics (1000)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": true,
+              },
+              "ref": null,
+              "rendered": "Adobe Analytics (1000)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Actionable Log Files (100)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "Actionable Log Files (100)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "General Online Data (0)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "General Online Data (0)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Onboarded Records (0)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "Onboarded Records (0)",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SignalSourceFilter /> component rendering renders correctly selected <Tab /> component when props.filter change 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignalSourceFilter
+    counts={
+      Object {
+        "actionableLogFiles": 359,
+        "adobeAnalytics": 34300,
+        "all": 72093,
+        "generalOnlineData": 27,
+        "onboardedRecords": 37407,
+      }
+    }
+    filter="adobeAnalytics"
+    handleSignalSourceChange={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Heading
+          className={undefined}
+          size={3}
+        >
+          Filter By Signal Source:
+        </Heading>,
+        <TabList
+          className={undefined}
+          onChange={[MockFunction]}
+          orientation="vertical"
+          value="adobeAnalytics"
+        >
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            All (72093)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={true}
+          >
+            Adobe Analytics (34300)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            Actionable Log Files (359)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            General Online Data (27)
+          </Tab>
+          <Tab
+            disabled={false}
+            id="react-spectrum-1"
+            invalid={false}
+            renderChildren={true}
+            selected={false}
+          >
+            Onboarded Records (37407)
+          </Tab>
+        </TabList>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Filter By Signal Source:",
+          "className": undefined,
+          "size": 3,
+        },
+        "ref": null,
+        "rendered": "Filter By Signal Source:",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              All (72093)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={true}
+            >
+              Adobe Analytics (34300)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Actionable Log Files (359)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              General Online Data (27)
+            </Tab>,
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Onboarded Records (37407)
+            </Tab>,
+          ],
+          "className": undefined,
+          "onChange": [MockFunction],
+          "orientation": "vertical",
+          "value": "adobeAnalytics",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "All (72093)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "All (72093)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Adobe Analytics (34300)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": true,
+            },
+            "ref": null,
+            "rendered": "Adobe Analytics (34300)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Actionable Log Files (359)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "Actionable Log Files (359)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "General Online Data (27)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "General Online Data (27)",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Onboarded Records (37407)",
+              "disabled": false,
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "renderChildren": true,
+              "selected": false,
+            },
+            "ref": null,
+            "rendered": "Onboarded Records (37407)",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Heading
+            className={undefined}
+            size={3}
+          >
+            Filter By Signal Source:
+          </Heading>,
+          <TabList
+            className={undefined}
+            onChange={[MockFunction]}
+            orientation="vertical"
+            value="adobeAnalytics"
+          >
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              All (72093)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={true}
+            >
+              Adobe Analytics (34300)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Actionable Log Files (359)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              General Online Data (27)
+            </Tab>
+            <Tab
+              disabled={false}
+              id="react-spectrum-1"
+              invalid={false}
+              renderChildren={true}
+              selected={false}
+            >
+              Onboarded Records (37407)
+            </Tab>
+          </TabList>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Filter By Signal Source:",
+            "className": undefined,
+            "size": 3,
+          },
+          "ref": null,
+          "rendered": "Filter By Signal Source:",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                All (72093)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={true}
+              >
+                Adobe Analytics (34300)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                Actionable Log Files (359)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                General Online Data (27)
+              </Tab>,
+              <Tab
+                disabled={false}
+                id="react-spectrum-1"
+                invalid={false}
+                renderChildren={true}
+                selected={false}
+              >
+                Onboarded Records (37407)
+              </Tab>,
+            ],
+            "className": undefined,
+            "onChange": [MockFunction],
+            "orientation": "vertical",
+            "value": "adobeAnalytics",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "All (72093)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "All (72093)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Adobe Analytics (34300)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": true,
+              },
+              "ref": null,
+              "rendered": "Adobe Analytics (34300)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Actionable Log Files (359)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "Actionable Log Files (359)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "General Online Data (27)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "General Online Data (27)",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Onboarded Records (37407)",
+                "disabled": false,
+                "id": "react-spectrum-1",
+                "invalid": false,
+                "renderChildren": true,
+                "selected": false,
+              },
+              "ref": null,
+              "rendered": "Onboarded Records (37407)",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

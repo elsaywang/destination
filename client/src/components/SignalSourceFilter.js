@@ -6,11 +6,10 @@ import getSignalSourceOptions from '../constants/getSignalSourceOptions';
 
 function SignalSourceFilter({ filter, counts, handleSignalSourceChange }) {
     const signalSourceOptions = getSignalSourceOptions(counts);
-    const renderTabs = () => {
-        return signalSourceOptions.map(option => (
+    const renderTabs = () =>
+        signalSourceOptions.map(option => (
             <Tab selected={filter === option.value}>{option.label}</Tab>
         ));
-    };
 
     return (
         <Fragment>
