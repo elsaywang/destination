@@ -28,7 +28,7 @@ node ("docker") {
     stage ('Running Tests') {
         parallel 'run UI tests': {
             uiImage.inside {
-                sh '(cd /usr/src/app/client &&  CI=true npm test)'
+                sh '(cd /usr/src/app/client && npm test -- --coverage --bail --ci)'
             }
         }, 'run API tests': {
             apiImage.inside {
@@ -44,7 +44,6 @@ node ("docker") {
             }
         }, 'Publish API aggregator Image': {
             docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
-
                 apiImage.push('latest')
             }
         }
