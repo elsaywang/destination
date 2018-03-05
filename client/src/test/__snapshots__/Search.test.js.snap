@@ -53,13 +53,14 @@ ShallowWrapper {
       >
         <Well>
           <AdvancedSearch
+            enabled={false}
             onAdvancedSearchChange={[MockFunction]}
           />
           <GridRow
             reverse={false}
           >
             <GridColumn
-              size={8}
+              size={12}
             >
               <GridRow
                 reverse={false}
@@ -221,13 +222,14 @@ ShallowWrapper {
       "props": Object {
         "children": <Well>
           <AdvancedSearch
+            enabled={false}
             onAdvancedSearchChange={[MockFunction]}
           />
           <GridRow
             reverse={false}
           >
             <GridColumn
-              size={8}
+              size={12}
             >
               <GridRow
                 reverse={false}
@@ -388,13 +390,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <AdvancedSearch
+              enabled={false}
               onAdvancedSearchChange={[MockFunction]}
             />,
             <GridRow
               reverse={false}
             >
               <GridColumn
-                size={8}
+                size={12}
               >
                 <GridRow
                   reverse={false}
@@ -553,6 +556,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "enabled": false,
               "onAdvancedSearchChange": [MockFunction],
             },
             "ref": null,
@@ -565,7 +569,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <GridColumn
-                size={8}
+                size={12}
               >
                 <GridRow
                   reverse={false}
@@ -870,7 +874,7 @@ ShallowWrapper {
                     </GridColumn>
                   </GridRow>,
                 ],
-                "size": 8,
+                "size": 12,
               },
               "ref": null,
               "rendered": Array [
@@ -1491,13 +1495,14 @@ ShallowWrapper {
         >
           <Well>
             <AdvancedSearch
+              enabled={false}
               onAdvancedSearchChange={[MockFunction]}
             />
             <GridRow
               reverse={false}
             >
               <GridColumn
-                size={8}
+                size={12}
               >
                 <GridRow
                   reverse={false}
@@ -1659,13 +1664,14 @@ ShallowWrapper {
         "props": Object {
           "children": <Well>
             <AdvancedSearch
+              enabled={false}
               onAdvancedSearchChange={[MockFunction]}
             />
             <GridRow
               reverse={false}
             >
               <GridColumn
-                size={8}
+                size={12}
               >
                 <GridRow
                   reverse={false}
@@ -1826,13 +1832,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <AdvancedSearch
+                enabled={false}
                 onAdvancedSearchChange={[MockFunction]}
               />,
               <GridRow
                 reverse={false}
               >
                 <GridColumn
-                  size={8}
+                  size={12}
                 >
                   <GridRow
                     reverse={false}
@@ -1991,6 +1998,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "enabled": false,
                 "onAdvancedSearchChange": [MockFunction],
               },
               "ref": null,
@@ -2003,7 +2011,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": <GridColumn
-                  size={8}
+                  size={12}
                 >
                   <GridRow
                     reverse={false}
@@ -2308,7 +2316,7 @@ ShallowWrapper {
                       </GridColumn>
                     </GridRow>,
                   ],
-                  "size": 8,
+                  "size": 12,
                 },
                 "ref": null,
                 "rendered": Array [

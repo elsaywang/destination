@@ -52,7 +52,7 @@ class KeyValuePair extends Component {
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
                 />
-                <Label value="Value">
+                <Label value="Value (Optional)">
                     <Search
                         className="value-search"
                         id={id}

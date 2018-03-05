@@ -83,7 +83,7 @@ ShallowWrapper {
           value="="
         />,
         <Label
-          value="Value"
+          value="Value (Optional)"
         >
           <Search
             className="value-search"
@@ -213,7 +213,7 @@ ShallowWrapper {
             placeholder="Type a value"
             value=""
           />,
-          "value": "Value",
+          "value": "Value (Optional)",
         },
         "ref": null,
         "rendered": Object {
@@ -298,7 +298,7 @@ ShallowWrapper {
             value="="
           />,
           <Label
-            value="Value"
+            value="Value (Optional)"
           >
             <Search
               className="value-search"
@@ -428,7 +428,7 @@ ShallowWrapper {
               placeholder="Type a value"
               value=""
             />,
-            "value": "Value",
+            "value": "Value (Optional)",
           },
           "ref": null,
           "rendered": Object {

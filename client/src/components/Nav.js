@@ -8,7 +8,11 @@ function Nav(props) {
     const noOp = () => {};
 
     return (
-        <TabList selectedIndex={getSelectedIndex()} variant="anchored" onChange={noOp}>
+        <TabList
+            style={{ marginBottom: 20, width: '100%' }}
+            selectedIndex={getSelectedIndex()}
+            variant="anchored"
+            onChange={noOp}>
             <NavLink to="/">
                 <Tab selected={props.location.pathname === '/'}>Dashboard</Tab>
             </NavLink>

@@ -5,7 +5,7 @@ import Search from '../components/Search';
 
 describe('<SearchFilters /> component', () => {
     const mockFn = jest.fn();
-    const wrapper = shallow(<SearchFilters onSearch={mockFn} path="test" />);
+    const wrapper = shallow(<SearchFilters onSearch={mockFn} />);
 
     describe('rendering', () => {
         it('matches snapshot', () => {

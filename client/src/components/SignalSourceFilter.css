@@ -1,0 +1,10 @@
+:local(.heading) {
+    display: block;
+    padding-left: 29px;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+:local(.signalSource) {
+    padding: 0 20px;
+}
