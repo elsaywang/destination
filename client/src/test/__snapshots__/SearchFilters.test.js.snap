@@ -17,7 +17,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
       "advanced": false,
       "keyValuePairs": Array [
@@ -35,6 +35,7 @@ ShallowWrapper {
       "onKeyChange": [Function],
       "onMinCountChange": [Function],
       "onOperatorChange": [Function],
+      "onRemoveClick": [Function],
       "onSearch": [Function],
       "onStatusChange": [Function],
       "onValueChange": [Function],
@@ -50,7 +51,7 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "advanced": false,
         "keyValuePairs": Array [
@@ -68,6 +69,99 @@ ShallowWrapper {
         "onKeyChange": [Function],
         "onMinCountChange": [Function],
         "onOperatorChange": [Function],
+        "onRemoveClick": [Function],
+        "onSearch": [Function],
+        "onStatusChange": [Function],
+        "onValueChange": [Function],
+        "onViewRecordsChange": [Function],
+        "status": "all",
+        "viewRecordsFor": 7,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SearchFilters /> component state changes based on events .onAddClick() adds another keyValuePair to state.keyValuePairs 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SearchFilters
+    onSearch={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "advanced": false,
+      "keyValuePairs": Array [
+        Object {
+          "id": 0,
+          "key": "test",
+          "operator": ">",
+          "value": "",
+        },
+      ],
+      "minCount": 1000,
+      "onAddClick": [Function],
+      "onAdvancedSearchChange": [Function],
+      "onClearAll": [Function],
+      "onKeyChange": [Function],
+      "onMinCountChange": [Function],
+      "onOperatorChange": [Function],
+      "onRemoveClick": [Function],
+      "onSearch": [Function],
+      "onStatusChange": [Function],
+      "onValueChange": [Function],
+      "onViewRecordsChange": [Function],
+      "status": "all",
+      "viewRecordsFor": 7,
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "advanced": false,
+        "keyValuePairs": Array [
+          Object {
+            "id": 0,
+            "key": "test",
+            "operator": ">",
+            "value": "",
+          },
+        ],
+        "minCount": 1000,
+        "onAddClick": [Function],
+        "onAdvancedSearchChange": [Function],
+        "onClearAll": [Function],
+        "onKeyChange": [Function],
+        "onMinCountChange": [Function],
+        "onOperatorChange": [Function],
+        "onRemoveClick": [Function],
         "onSearch": [Function],
         "onStatusChange": [Function],
         "onValueChange": [Function],

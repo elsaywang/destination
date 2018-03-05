@@ -67,7 +67,7 @@ ShallowWrapper {
                 valign="bottom"
               >
                 <GridColumn
-                  size={7}
+                  size={4}
                 >
                   <KeyValuePair
                     onKeyChange={[MockFunction]}
@@ -84,7 +84,22 @@ ShallowWrapper {
                   />
                 </GridColumn>
                 <GridColumn
-                  size={7}
+                  size={2}
+                >
+                  <Button
+                    icon={<AddCircle />}
+                    label="Add"
+                    onClick={[MockFunction]}
+                    variant="quiet"
+                  />
+                </GridColumn>
+              </GridRow>
+              <GridRow
+                reverse={false}
+                valign="bottom"
+              >
+                <GridColumn
+                  size={4}
                 >
                   <KeyValuePair
                     onKeyChange={[MockFunction]}
@@ -104,16 +119,16 @@ ShallowWrapper {
                   size={2}
                 >
                   <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    icon={<Add />}
-                    invalid={false}
+                    icon={<AddCircle />}
                     label="Add"
-                    logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
+                    variant="quiet"
+                  />
+                  <Button
+                    data-id={1}
+                    icon={<RemoveCircle />}
+                    label="Remove"
+                    onClick={undefined}
                     variant="quiet"
                   />
                 </GridColumn>
@@ -204,27 +219,13 @@ ShallowWrapper {
                   size={3}
                 >
                   <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
                     label="Search"
-                    logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
                     variant="cta"
                   />
                   <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
                     label="Clear All"
-                    logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
                     variant="secondary"
                   />
                 </GridColumn>
@@ -257,7 +258,7 @@ ShallowWrapper {
                 valign="bottom"
               >
                 <GridColumn
-                  size={7}
+                  size={4}
                 >
                   <KeyValuePair
                     onKeyChange={[MockFunction]}
@@ -274,7 +275,22 @@ ShallowWrapper {
                   />
                 </GridColumn>
                 <GridColumn
-                  size={7}
+                  size={2}
+                >
+                  <Button
+                    icon={<AddCircle />}
+                    label="Add"
+                    onClick={[MockFunction]}
+                    variant="quiet"
+                  />
+                </GridColumn>
+              </GridRow>
+              <GridRow
+                reverse={false}
+                valign="bottom"
+              >
+                <GridColumn
+                  size={4}
                 >
                   <KeyValuePair
                     onKeyChange={[MockFunction]}
@@ -294,16 +310,16 @@ ShallowWrapper {
                   size={2}
                 >
                   <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    icon={<Add />}
-                    invalid={false}
+                    icon={<AddCircle />}
                     label="Add"
-                    logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
+                    variant="quiet"
+                  />
+                  <Button
+                    data-id={1}
+                    icon={<RemoveCircle />}
+                    label="Remove"
+                    onClick={undefined}
                     variant="quiet"
                   />
                 </GridColumn>
@@ -394,27 +410,13 @@ ShallowWrapper {
                   size={3}
                 >
                   <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
                     label="Search"
-                    logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
                     variant="cta"
                   />
                   <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
                     label="Clear All"
-                    logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
                     variant="secondary"
                   />
                 </GridColumn>
@@ -446,7 +448,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -463,7 +465,22 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
+                    size={2}
+                  >
+                    <Button
+                      icon={<AddCircle />}
+                      label="Add"
+                      onClick={[MockFunction]}
+                      variant="quiet"
+                    />
+                  </GridColumn>
+                </GridRow>
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
+                >
+                  <GridColumn
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -483,16 +500,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      icon={<Add />}
-                      invalid={false}
+                      icon={<AddCircle />}
                       label="Add"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
+                      variant="quiet"
+                    />
+                    <Button
+                      data-id={1}
+                      icon={<RemoveCircle />}
+                      label="Remove"
+                      onClick={undefined}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -583,27 +600,13 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Search"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="cta"
                     />
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Clear All"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -639,7 +642,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -656,7 +659,22 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
+                    size={2}
+                  >
+                    <Button
+                      icon={<AddCircle />}
+                      label="Add"
+                      onClick={[MockFunction]}
+                      variant="quiet"
+                    />
+                  </GridColumn>
+                </GridRow>
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
+                >
+                  <GridColumn
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -676,16 +694,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      icon={<Add />}
-                      invalid={false}
+                      icon={<AddCircle />}
                       label="Add"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
+                      variant="quiet"
+                    />
+                    <Button
+                      data-id={1}
+                      icon={<RemoveCircle />}
+                      label="Remove"
+                      onClick={undefined}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -776,27 +794,13 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Search"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="cta"
                     />
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Clear All"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -811,62 +815,79 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  <GridRow
-                    reverse={false}
-                    valign="bottom"
-                  >
-                    <GridColumn
-                      size={7}
+                  Array [
+                    <GridRow
+                      reverse={false}
+                      valign="bottom"
                     >
-                      <KeyValuePair
-                        onKeyChange={[MockFunction]}
-                        onOperatorChange={[MockFunction]}
-                        onValueChange={[MockFunction]}
-                        pair={
-                          Object {
-                            "id": 0,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeyChange={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
+                            }
                           }
-                        }
-                      />
-                    </GridColumn>
-                    <GridColumn
-                      size={7}
+                        />
+                      </GridColumn>
+                      <GridColumn
+                        size={2}
+                      >
+                        <Button
+                          icon={<AddCircle />}
+                          label="Add"
+                          onClick={[MockFunction]}
+                          variant="quiet"
+                        />
+                      </GridColumn>
+                    </GridRow>,
+                    <GridRow
+                      reverse={false}
+                      valign="bottom"
                     >
-                      <KeyValuePair
-                        onKeyChange={[MockFunction]}
-                        onOperatorChange={[MockFunction]}
-                        onValueChange={[MockFunction]}
-                        pair={
-                          Object {
-                            "id": 1,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeyChange={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 1,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
+                            }
                           }
-                        }
-                      />
-                    </GridColumn>
-                    <GridColumn
-                      size={2}
-                    >
-                      <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        icon={<Add />}
-                        invalid={false}
-                        label="Add"
-                        logic={false}
-                        onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
-                        variant="quiet"
-                      />
-                    </GridColumn>
-                  </GridRow>,
+                        />
+                      </GridColumn>
+                      <GridColumn
+                        size={2}
+                      >
+                        <Button
+                          icon={<AddCircle />}
+                          label="Add"
+                          onClick={[MockFunction]}
+                          variant="quiet"
+                        />
+                        <Button
+                          data-id={1}
+                          icon={<RemoveCircle />}
+                          label="Remove"
+                          onClick={undefined}
+                          variant="quiet"
+                        />
+                      </GridColumn>
+                    </GridRow>,
+                  ],
                   <GridRow
                     reverse={false}
                     valign="bottom"
@@ -953,27 +974,13 @@ ShallowWrapper {
                       size={3}
                     >
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
                         label="Search"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
                         variant="cta"
                       />
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
                         label="Clear All"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
                         variant="secondary"
                       />
                     </GridColumn>
@@ -989,56 +996,30 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": Array [
-                      Array [
-                        <GridColumn
-                          size={7}
-                        >
-                          <KeyValuePair
-                            onKeyChange={[MockFunction]}
-                            onOperatorChange={[MockFunction]}
-                            onValueChange={[MockFunction]}
-                            pair={
-                              Object {
-                                "id": 0,
-                                "key": "",
-                                "operator": "=",
-                                "value": "",
-                              }
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeyChange={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
                             }
-                          />
-                        </GridColumn>,
-                        <GridColumn
-                          size={7}
-                        >
-                          <KeyValuePair
-                            onKeyChange={[MockFunction]}
-                            onOperatorChange={[MockFunction]}
-                            onValueChange={[MockFunction]}
-                            pair={
-                              Object {
-                                "id": 1,
-                                "key": "",
-                                "operator": "=",
-                                "value": "",
-                              }
-                            }
-                          />
-                        </GridColumn>,
-                      ],
+                          }
+                        />
+                      </GridColumn>,
                       <GridColumn
                         size={2}
                       >
                         <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          icon={<Add />}
-                          invalid={false}
+                          icon={<AddCircle />}
                           label="Add"
-                          logic={false}
                           onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
                           variant="quiet"
                         />
                       </GridColumn>,
@@ -1066,7 +1047,7 @@ ShallowWrapper {
                             }
                           }
                         />,
-                        "size": 7,
+                        "size": 4,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -1095,6 +1076,91 @@ ShallowWrapper {
                       "key": "1",
                       "nodeType": "class",
                       "props": Object {
+                        "children": Array [
+                          <Button
+                            icon={<AddCircle />}
+                            label="Add"
+                            onClick={[MockFunction]}
+                            variant="quiet"
+                          />,
+                          false,
+                        ],
+                        "size": 2,
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "icon": <AddCircle />,
+                            "label": "Add",
+                            "onClick": [MockFunction],
+                            "variant": "quiet",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        false,
+                      ],
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeyChange={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 1,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
+                            }
+                          }
+                        />
+                      </GridColumn>,
+                      <GridColumn
+                        size={2}
+                      >
+                        <Button
+                          icon={<AddCircle />}
+                          label="Add"
+                          onClick={[MockFunction]}
+                          variant="quiet"
+                        />
+                        <Button
+                          data-id={1}
+                          icon={<RemoveCircle />}
+                          label="Remove"
+                          onClick={undefined}
+                          variant="quiet"
+                        />
+                      </GridColumn>,
+                    ],
+                    "reverse": false,
+                    "valign": "bottom",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
                         "children": <KeyValuePair
                           onKeyChange={[MockFunction]}
                           onOperatorChange={[MockFunction]}
@@ -1108,7 +1174,7 @@ ShallowWrapper {
                             }
                           }
                         />,
-                        "size": 7,
+                        "size": 4,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -1137,43 +1203,55 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          icon={<Add />}
-                          invalid={false}
-                          label="Add"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
-                          variant="quiet"
-                        />,
+                        "children": Array [
+                          <Button
+                            icon={<AddCircle />}
+                            label="Add"
+                            onClick={[MockFunction]}
+                            variant="quiet"
+                          />,
+                          <Button
+                            data-id={1}
+                            icon={<RemoveCircle />}
+                            label="Remove"
+                            onClick={undefined}
+                            variant="quiet"
+                          />,
+                        ],
                         "size": 2,
                       },
                       "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "block": false,
-                          "disabled": false,
-                          "element": "button",
-                          "icon": <Add />,
-                          "invalid": false,
-                          "label": "Add",
-                          "logic": false,
-                          "onClick": [MockFunction],
-                          "quiet": false,
-                          "selected": false,
-                          "variant": "quiet",
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "icon": <AddCircle />,
+                            "label": "Add",
+                            "onClick": [MockFunction],
+                            "variant": "quiet",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
                         },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "data-id": 1,
+                            "icon": <RemoveCircle />,
+                            "label": "Remove",
+                            "onClick": undefined,
+                            "variant": "quiet",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                      ],
                       "type": [Function],
                     },
                   ],
@@ -1267,27 +1345,13 @@ ShallowWrapper {
                         size={3}
                       >
                         <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
                           label="Search"
-                          logic={false}
                           onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
                           variant="cta"
                         />
                         <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
                           label="Clear All"
-                          logic={false}
                           onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
                           variant="secondary"
                         />
                       </GridColumn>,
@@ -1566,27 +1630,13 @@ ShallowWrapper {
                       "props": Object {
                         "children": Array [
                           <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
                             label="Search"
-                            logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
                             variant="cta"
                           />,
                           <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
                             label="Clear All"
-                            logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
                             variant="secondary"
                           />,
                         ],
@@ -1599,15 +1649,8 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "block": false,
-                            "disabled": false,
-                            "element": "button",
-                            "invalid": false,
                             "label": "Search",
-                            "logic": false,
                             "onClick": [MockFunction],
-                            "quiet": false,
-                            "selected": false,
                             "variant": "cta",
                           },
                           "ref": null,
@@ -1619,15 +1662,8 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "block": false,
-                            "disabled": false,
-                            "element": "button",
-                            "invalid": false,
                             "label": "Clear All",
-                            "logic": false,
                             "onClick": [MockFunction],
-                            "quiet": false,
-                            "selected": false,
                             "variant": "secondary",
                           },
                           "ref": null,
@@ -1677,7 +1713,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -1694,7 +1730,22 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
+                    size={2}
+                  >
+                    <Button
+                      icon={<AddCircle />}
+                      label="Add"
+                      onClick={[MockFunction]}
+                      variant="quiet"
+                    />
+                  </GridColumn>
+                </GridRow>
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
+                >
+                  <GridColumn
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -1714,16 +1765,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      icon={<Add />}
-                      invalid={false}
+                      icon={<AddCircle />}
                       label="Add"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
+                      variant="quiet"
+                    />
+                    <Button
+                      data-id={1}
+                      icon={<RemoveCircle />}
+                      label="Remove"
+                      onClick={undefined}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -1814,27 +1865,13 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Search"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="cta"
                     />
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Clear All"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -1867,7 +1904,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -1884,7 +1921,22 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
+                    size={2}
+                  >
+                    <Button
+                      icon={<AddCircle />}
+                      label="Add"
+                      onClick={[MockFunction]}
+                      variant="quiet"
+                    />
+                  </GridColumn>
+                </GridRow>
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
+                >
+                  <GridColumn
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -1904,16 +1956,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      icon={<Add />}
-                      invalid={false}
+                      icon={<AddCircle />}
                       label="Add"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
+                      variant="quiet"
+                    />
+                    <Button
+                      data-id={1}
+                      icon={<RemoveCircle />}
+                      label="Remove"
+                      onClick={undefined}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -2004,27 +2056,13 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Search"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="cta"
                     />
                     <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
                       label="Clear All"
-                      logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -2056,7 +2094,7 @@ ShallowWrapper {
                     valign="bottom"
                   >
                     <GridColumn
-                      size={7}
+                      size={4}
                     >
                       <KeyValuePair
                         onKeyChange={[MockFunction]}
@@ -2073,7 +2111,22 @@ ShallowWrapper {
                       />
                     </GridColumn>
                     <GridColumn
-                      size={7}
+                      size={2}
+                    >
+                      <Button
+                        icon={<AddCircle />}
+                        label="Add"
+                        onClick={[MockFunction]}
+                        variant="quiet"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={4}
                     >
                       <KeyValuePair
                         onKeyChange={[MockFunction]}
@@ -2093,16 +2146,16 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        icon={<Add />}
-                        invalid={false}
+                        icon={<AddCircle />}
                         label="Add"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
+                        variant="quiet"
+                      />
+                      <Button
+                        data-id={1}
+                        icon={<RemoveCircle />}
+                        label="Remove"
+                        onClick={undefined}
                         variant="quiet"
                       />
                     </GridColumn>
@@ -2193,27 +2246,13 @@ ShallowWrapper {
                       size={3}
                     >
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
                         label="Search"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
                         variant="cta"
                       />
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
                         label="Clear All"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
                         variant="secondary"
                       />
                     </GridColumn>
@@ -2249,7 +2288,7 @@ ShallowWrapper {
                     valign="bottom"
                   >
                     <GridColumn
-                      size={7}
+                      size={4}
                     >
                       <KeyValuePair
                         onKeyChange={[MockFunction]}
@@ -2266,7 +2305,22 @@ ShallowWrapper {
                       />
                     </GridColumn>
                     <GridColumn
-                      size={7}
+                      size={2}
+                    >
+                      <Button
+                        icon={<AddCircle />}
+                        label="Add"
+                        onClick={[MockFunction]}
+                        variant="quiet"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={4}
                     >
                       <KeyValuePair
                         onKeyChange={[MockFunction]}
@@ -2286,16 +2340,16 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        icon={<Add />}
-                        invalid={false}
+                        icon={<AddCircle />}
                         label="Add"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
+                        variant="quiet"
+                      />
+                      <Button
+                        data-id={1}
+                        icon={<RemoveCircle />}
+                        label="Remove"
+                        onClick={undefined}
                         variant="quiet"
                       />
                     </GridColumn>
@@ -2386,27 +2440,13 @@ ShallowWrapper {
                       size={3}
                     >
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
                         label="Search"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
                         variant="cta"
                       />
                       <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
                         label="Clear All"
-                        logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
                         variant="secondary"
                       />
                     </GridColumn>
@@ -2421,62 +2461,79 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": Array [
-                    <GridRow
-                      reverse={false}
-                      valign="bottom"
-                    >
-                      <GridColumn
-                        size={7}
+                    Array [
+                      <GridRow
+                        reverse={false}
+                        valign="bottom"
                       >
-                        <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 0,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
+                        <GridColumn
+                          size={4}
+                        >
+                          <KeyValuePair
+                            onKeyChange={[MockFunction]}
+                            onOperatorChange={[MockFunction]}
+                            onValueChange={[MockFunction]}
+                            pair={
+                              Object {
+                                "id": 0,
+                                "key": "",
+                                "operator": "=",
+                                "value": "",
+                              }
                             }
-                          }
-                        />
-                      </GridColumn>
-                      <GridColumn
-                        size={7}
+                          />
+                        </GridColumn>
+                        <GridColumn
+                          size={2}
+                        >
+                          <Button
+                            icon={<AddCircle />}
+                            label="Add"
+                            onClick={[MockFunction]}
+                            variant="quiet"
+                          />
+                        </GridColumn>
+                      </GridRow>,
+                      <GridRow
+                        reverse={false}
+                        valign="bottom"
                       >
-                        <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 1,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
+                        <GridColumn
+                          size={4}
+                        >
+                          <KeyValuePair
+                            onKeyChange={[MockFunction]}
+                            onOperatorChange={[MockFunction]}
+                            onValueChange={[MockFunction]}
+                            pair={
+                              Object {
+                                "id": 1,
+                                "key": "",
+                                "operator": "=",
+                                "value": "",
+                              }
                             }
-                          }
-                        />
-                      </GridColumn>
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          icon={<Add />}
-                          invalid={false}
-                          label="Add"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
-                          variant="quiet"
-                        />
-                      </GridColumn>
-                    </GridRow>,
+                          />
+                        </GridColumn>
+                        <GridColumn
+                          size={2}
+                        >
+                          <Button
+                            icon={<AddCircle />}
+                            label="Add"
+                            onClick={[MockFunction]}
+                            variant="quiet"
+                          />
+                          <Button
+                            data-id={1}
+                            icon={<RemoveCircle />}
+                            label="Remove"
+                            onClick={undefined}
+                            variant="quiet"
+                          />
+                        </GridColumn>
+                      </GridRow>,
+                    ],
                     <GridRow
                       reverse={false}
                       valign="bottom"
@@ -2563,27 +2620,13 @@ ShallowWrapper {
                         size={3}
                       >
                         <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
                           label="Search"
-                          logic={false}
                           onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
                           variant="cta"
                         />
                         <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
                           label="Clear All"
-                          logic={false}
                           onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
                           variant="secondary"
                         />
                       </GridColumn>
@@ -2599,56 +2642,30 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        Array [
-                          <GridColumn
-                            size={7}
-                          >
-                            <KeyValuePair
-                              onKeyChange={[MockFunction]}
-                              onOperatorChange={[MockFunction]}
-                              onValueChange={[MockFunction]}
-                              pair={
-                                Object {
-                                  "id": 0,
-                                  "key": "",
-                                  "operator": "=",
-                                  "value": "",
-                                }
+                        <GridColumn
+                          size={4}
+                        >
+                          <KeyValuePair
+                            onKeyChange={[MockFunction]}
+                            onOperatorChange={[MockFunction]}
+                            onValueChange={[MockFunction]}
+                            pair={
+                              Object {
+                                "id": 0,
+                                "key": "",
+                                "operator": "=",
+                                "value": "",
                               }
-                            />
-                          </GridColumn>,
-                          <GridColumn
-                            size={7}
-                          >
-                            <KeyValuePair
-                              onKeyChange={[MockFunction]}
-                              onOperatorChange={[MockFunction]}
-                              onValueChange={[MockFunction]}
-                              pair={
-                                Object {
-                                  "id": 1,
-                                  "key": "",
-                                  "operator": "=",
-                                  "value": "",
-                                }
-                              }
-                            />
-                          </GridColumn>,
-                        ],
+                            }
+                          />
+                        </GridColumn>,
                         <GridColumn
                           size={2}
                         >
                           <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            icon={<Add />}
-                            invalid={false}
+                            icon={<AddCircle />}
                             label="Add"
-                            logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
                             variant="quiet"
                           />
                         </GridColumn>,
@@ -2676,7 +2693,7 @@ ShallowWrapper {
                               }
                             }
                           />,
-                          "size": 7,
+                          "size": 4,
                         },
                         "ref": null,
                         "rendered": Object {
@@ -2705,6 +2722,91 @@ ShallowWrapper {
                         "key": "1",
                         "nodeType": "class",
                         "props": Object {
+                          "children": Array [
+                            <Button
+                              icon={<AddCircle />}
+                              label="Add"
+                              onClick={[MockFunction]}
+                              variant="quiet"
+                            />,
+                            false,
+                          ],
+                          "size": 2,
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "icon": <AddCircle />,
+                              "label": "Add",
+                              "onClick": [MockFunction],
+                              "variant": "quiet",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          false,
+                        ],
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <GridColumn
+                          size={4}
+                        >
+                          <KeyValuePair
+                            onKeyChange={[MockFunction]}
+                            onOperatorChange={[MockFunction]}
+                            onValueChange={[MockFunction]}
+                            pair={
+                              Object {
+                                "id": 1,
+                                "key": "",
+                                "operator": "=",
+                                "value": "",
+                              }
+                            }
+                          />
+                        </GridColumn>,
+                        <GridColumn
+                          size={2}
+                        >
+                          <Button
+                            icon={<AddCircle />}
+                            label="Add"
+                            onClick={[MockFunction]}
+                            variant="quiet"
+                          />
+                          <Button
+                            data-id={1}
+                            icon={<RemoveCircle />}
+                            label="Remove"
+                            onClick={undefined}
+                            variant="quiet"
+                          />
+                        </GridColumn>,
+                      ],
+                      "reverse": false,
+                      "valign": "bottom",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
                           "children": <KeyValuePair
                             onKeyChange={[MockFunction]}
                             onOperatorChange={[MockFunction]}
@@ -2718,7 +2820,7 @@ ShallowWrapper {
                               }
                             }
                           />,
-                          "size": 7,
+                          "size": 4,
                         },
                         "ref": null,
                         "rendered": Object {
@@ -2747,43 +2849,55 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            icon={<Add />}
-                            invalid={false}
-                            label="Add"
-                            logic={false}
-                            onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
-                            variant="quiet"
-                          />,
+                          "children": Array [
+                            <Button
+                              icon={<AddCircle />}
+                              label="Add"
+                              onClick={[MockFunction]}
+                              variant="quiet"
+                            />,
+                            <Button
+                              data-id={1}
+                              icon={<RemoveCircle />}
+                              label="Remove"
+                              onClick={undefined}
+                              variant="quiet"
+                            />,
+                          ],
                           "size": 2,
                         },
                         "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "block": false,
-                            "disabled": false,
-                            "element": "button",
-                            "icon": <Add />,
-                            "invalid": false,
-                            "label": "Add",
-                            "logic": false,
-                            "onClick": [MockFunction],
-                            "quiet": false,
-                            "selected": false,
-                            "variant": "quiet",
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "icon": <AddCircle />,
+                              "label": "Add",
+                              "onClick": [MockFunction],
+                              "variant": "quiet",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
                           },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "data-id": 1,
+                              "icon": <RemoveCircle />,
+                              "label": "Remove",
+                              "onClick": undefined,
+                              "variant": "quiet",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                        ],
                         "type": [Function],
                       },
                     ],
@@ -2877,27 +2991,13 @@ ShallowWrapper {
                           size={3}
                         >
                           <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
                             label="Search"
-                            logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
                             variant="cta"
                           />
                           <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
                             label="Clear All"
-                            logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
                             variant="secondary"
                           />
                         </GridColumn>,
@@ -3176,27 +3276,13 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <Button
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
                               label="Search"
-                              logic={false}
                               onClick={[MockFunction]}
-                              quiet={false}
-                              selected={false}
                               variant="cta"
                             />,
                             <Button
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
                               label="Clear All"
-                              logic={false}
                               onClick={[MockFunction]}
-                              quiet={false}
-                              selected={false}
                               variant="secondary"
                             />,
                           ],
@@ -3209,15 +3295,8 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "block": false,
-                              "disabled": false,
-                              "element": "button",
-                              "invalid": false,
                               "label": "Search",
-                              "logic": false,
                               "onClick": [MockFunction],
-                              "quiet": false,
-                              "selected": false,
                               "variant": "cta",
                             },
                             "ref": null,
@@ -3229,15 +3308,8 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "block": false,
-                              "disabled": false,
-                              "element": "button",
-                              "invalid": false,
                               "label": "Clear All",
-                              "logic": false,
                               "onClick": [MockFunction],
-                              "quiet": false,
-                              "selected": false,
                               "variant": "secondary",
                             },
                             "ref": null,

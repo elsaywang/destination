@@ -28,31 +28,33 @@ class SearchFilters extends Component {
         });
     };
 
-    onKeyChange = (id, value) => {
+    onKeyChange = (value, event) => {
         let keyValuePairs = [...this.state.keyValuePairs];
+        const id = event.target.closest('.key-search').children[0].getAttribute('data-id');
 
-        keyValuePairs[id].key = value;
+        keyValuePairs.find(kvp => kvp.id === Number(id)).key = value;
         this.setState({ keyValuePairs });
     };
 
     onValueChange = (value, event) => {
         let keyValuePairs = [...this.state.keyValuePairs];
+        const id = event.target.closest('.value-search').children[0].getAttribute('data-id');
 
-        keyValuePairs[event.target.id].value = value;
+        keyValuePairs.find(kvp => kvp.id === Number(id)).value = value;
         this.setState({ keyValuePairs });
     };
 
     onOperatorChange = (id, value) => {
         let keyValuePairs = [...this.state.keyValuePairs];
 
-        keyValuePairs[id].operator = value;
+        keyValuePairs.find(kvp => kvp.id === Number(id)).operator = value;
         this.setState({ keyValuePairs });
     };
 
     onAddClick = () => {
-        const nextId = this.state.keyValuePairs.length;
+        const maxId = this.state.keyValuePairs[this.state.keyValuePairs.length - 1].id;
         const newKeyValuePair = {
-            id: nextId,
+            id: maxId + 1,
             key: '',
             operator: '=',
             value: '',
@@ -61,6 +63,17 @@ class SearchFilters extends Component {
         this.setState(prevState => ({
             keyValuePairs: [...prevState.keyValuePairs, newKeyValuePair],
         }));
+    };
+
+    onRemoveClick = event => {
+        const id = event.target.closest('button').getAttribute('data-id');
+        const index = this.state.keyValuePairs.findIndex(kvp => kvp.id === Number(id));
+        const keyValuePairs = [
+            ...this.state.keyValuePairs.slice(0, index),
+            ...this.state.keyValuePairs.slice(index + 1),
+        ];
+
+        this.setState({ keyValuePairs });
     };
 
     onStatusChange = value => {
@@ -117,6 +130,7 @@ class SearchFilters extends Component {
                 onValueChange={this.onValueChange}
                 onOperatorChange={this.onOperatorChange}
                 onAddClick={this.onAddClick}
+                onRemoveClick={this.onRemoveClick}
                 onStatusChange={this.onStatusChange}
                 onViewRecordsChange={this.onViewRecordsChange}
                 onMinCountChange={this.onMinCountChange}

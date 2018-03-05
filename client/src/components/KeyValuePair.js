@@ -13,7 +13,6 @@ class KeyValuePair extends Component {
         super(props);
 
         this.onSelectOperatorChange = this.props.onOperatorChange.bind(this, this.props.pair.id);
-        this.onKeySelect = this.props.onKeyChange.bind(this, this.props.pair.id);
     }
 
     getCompletions = key => {
@@ -34,18 +33,20 @@ class KeyValuePair extends Component {
     };
 
     render() {
-        const { onValueChange, pair } = this.props;
+        const { onValueChange, onKeySelect, pair } = this.props;
         const { id, value, operator } = pair;
+        const forKey = `key${id}`;
+        const forValue = `value${id}`;
 
         return (
             <Fragment>
-                <Label value="Key" labelFor="key">
+                <Label value="Key" labelFor={forKey}>
                     <Autocomplete
-                        id={id}
+                        data-id={id}
                         className={classNames(styles['key-search'], 'key-search')}
                         getCompletions={this.getCompletions}
-                        onSelect={this.onKeySelect}>
-                        <Textfield id="key" placeholder="Type a key or key name" />
+                        onSelect={onKeySelect}>
+                        <Textfield id={forKey} placeholder="Type a key or key name" />
                     </Autocomplete>
                 </Label>
                 <Select
@@ -54,10 +55,11 @@ class KeyValuePair extends Component {
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
                 />
-                <Label value="Value (Optional)" labelFor={id}>
+                <Label value="Value (Optional)" labelFor={forValue}>
                     <Search
                         className="value-search"
-                        id={id}
+                        id={forValue}
+                        data-id={id}
                         value={value}
                         placeholder="Type a value"
                         onChange={onValueChange}
