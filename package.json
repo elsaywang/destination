@@ -3,17 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "scripts": {
-    "start": "npm run build && npm run prod",
-    "prod": "NODE_CONFIG_DIR=./server/config node ./server/server.js",
-    "server": "NODE_CONFIG_DIR=./server/config nodemon ./server/server.js",
-    "build": "cd client && npm run build",
-    "client": "cd client && npm start",
-    "postinstall": "cd ./client && npm install && cd ../server && npm install"
-  },
-  "devDependencies": {
-    "nodemon": "^1.14.11"
-  },
   "repository": {
     "type": "git",
     "url": "git@git.corp.adobe.com:AAM/portal-signals.git"
