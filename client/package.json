@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@react/react-spectrum": "^2.3.2",
+    "classnames": "^2.2.5",
     "cypress": "^1.4.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
