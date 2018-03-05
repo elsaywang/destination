@@ -8,15 +8,17 @@ import withColumns from './withColumns';
  * Table component that wraps the react-spectrum table components
  * (`TableView` and `TableViewDataSource`). More easily accepts props
  * for items, columns, and a renderCell method.
+ * TODO: nice empty state
  */
 class Table extends Component {
     render() {
         const { items, columns, renderCell } = this.props;
         const DataSourceWithColumns = withColumns(DataSource, columns);
         const dataSource = new DataSourceWithColumns({ items });
+        const height = this.getTableHeight(items);
 
         return (
-            <div style={{ height: this.getTableHeight(items) }}>
+            <div className="table-wrapper" style={{ height }}>
                 <TableView dataSource={dataSource} renderCell={renderCell} />
             </div>
         );
