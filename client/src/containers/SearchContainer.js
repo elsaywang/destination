@@ -7,8 +7,6 @@ import SearchFilters from './SearchFilters';
 import SignalSourceFilter from '../components/SignalSourceFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
-import ButtonGroup from '@react/react-spectrum/ButtonGroup';
-import Button from '@react/react-spectrum/Button';
 
 const items = [
     {
@@ -42,7 +40,6 @@ class SearchContainer extends Component {
                 onboardedRecords: 37407,
             },
             filter: 'all',
-            signalType: 'all', // test
         };
     }
 
@@ -55,12 +52,6 @@ class SearchContainer extends Component {
             filter: value,
         });
         // TODO: API call to update items in table results
-    };
-
-    setSignalType = signalType => {
-        this.setState({
-            signalType: signalType,
-        });
     };
 
     render() {
@@ -81,19 +72,9 @@ class SearchContainer extends Component {
                     </div>
                     <div className={styles.tableContainer}>
                         <Heading size={3}>Search Results for</Heading>
-                        <SignalsTable items={items} signalType={this.state.signalType} />
+                        <SignalsTable items={items} />
                     </div>
                 </div>
-                <ButtonGroup
-                    label="Signal Type filters"
-                    onChange={this.setSignalType}
-                    value={this.state.signalType}>
-                    <Button value="all" label="All" />
-                    <Button value="analytics" label="Adobe Analytics" />
-                    <Button value="alf" label="Actionable Log Files" />
-                    <Button value="general" label="General Online Data" />
-                    <Button value="onboarded" label="Onboarded Records" />
-                </ButtonGroup>
             </Fragment>
         );
     }

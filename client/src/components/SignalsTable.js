@@ -13,7 +13,7 @@ class SignalsTable extends Component {
     }
 
     render() {
-        const { items, signalType } = this.props;
+        const { items, signalType } = this.props; // TODO: hook up signalType to real filters
         const columns = this.getColumns(signalType);
 
         return <Table items={items} columns={columns} renderCell={this.renderCell} />;
@@ -22,7 +22,7 @@ class SignalsTable extends Component {
 
 SignalsTable.propTypes = {
     items: PropTypes.array,
-    signalType: PropTypes.string,
+    // signalType: PropTypes.string,
 };
 
 export default SignalsTable;
