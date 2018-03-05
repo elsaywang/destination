@@ -2,15 +2,11 @@ def uiImage
 def apiImage
 def uiImageName = "signal-center-ui:${env.BUILD_ID}"
 def apiImageName = "signal-center-api-aggregator:${env.BUILD_ID}"
+def workspace
 
 node ("docker") {
 
-    //@aam:registry=https://artifactory.corp.adobe.com/artifactory/api/docker/docker-aam-portal-ui-release/
-    //artifactory.corp.adobe.com/artifactory/api/npm/npm-eslint-config-aam-dev-local/:_password=QVBCTXIyNEZBRDFoZ1pTcmRUVUw3VFQ1blNR
-    //artifactory.corp.adobe.com/artifactory/api/npm/npm-eslint-config-aam-dev-local/:username=parga
-    //artifactory.corp.adobe.com/artifactory/api/npm/npm-eslint-config-aam-dev-local/:email=parga@adobe.com
-    //artifactory.corp.adobe.com/artifactory/api/npm/npm-eslint-config-aam-dev-local/:always-auth=true
-
+    workspace = pwd()
     stage ('Checkout latest repo changes') {
         checkout scm
     }
@@ -27,9 +23,22 @@ node ("docker") {
 
     stage ('Running Tests') {
         parallel 'run UI tests': {
-            uiImage.inside {
-                sh '(cd /usr/src/app/client && npm test -- --coverage --bail --ci)'
+
+            uiImage.inside("-u root -v ${workspace}/artifacts:/usr/src/app/artifacts") {\
+                sh 'mkdir -p /usr/src/app/client/coverage'
+                sh '(cd /usr/src/app/client &&  CI=true npm test -- --coverage --bail)'
+                sh 'cp -r /usr/src/app/client/coverage /usr/src/app/artifacts/coverage'
             }
+
+            publishHTML (target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: false,
+                keepAll: true,
+                reportDir: "${workspace}/artifacts/coverage/lcov-report",
+                reportFiles: 'index.html',
+                reportName: "UI Coverage Report"
+            ])
+
         }, 'run API tests': {
             apiImage.inside {
                 sh '(cd /usr/src/app/server && npm test)'

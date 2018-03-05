@@ -104,9 +104,16 @@ ShallowWrapper {
                   size={2}
                 >
                   <Button
+                    block={false}
+                    disabled={false}
+                    element="button"
                     icon={<Add />}
+                    invalid={false}
                     label="Add"
+                    logic={false}
                     onClick={[MockFunction]}
+                    quiet={false}
+                    selected={false}
                     variant="quiet"
                   />
                 </GridColumn>
@@ -197,13 +204,27 @@ ShallowWrapper {
                   size={3}
                 >
                   <Button
+                    block={false}
+                    disabled={false}
+                    element="button"
+                    invalid={false}
                     label="Search"
+                    logic={false}
                     onClick={[MockFunction]}
+                    quiet={false}
+                    selected={false}
                     variant="cta"
                   />
                   <Button
+                    block={false}
+                    disabled={false}
+                    element="button"
+                    invalid={false}
                     label="Clear All"
+                    logic={false}
                     onClick={[MockFunction]}
+                    quiet={false}
+                    selected={false}
                     variant="secondary"
                   />
                 </GridColumn>
@@ -273,9 +294,16 @@ ShallowWrapper {
                   size={2}
                 >
                   <Button
+                    block={false}
+                    disabled={false}
+                    element="button"
                     icon={<Add />}
+                    invalid={false}
                     label="Add"
+                    logic={false}
                     onClick={[MockFunction]}
+                    quiet={false}
+                    selected={false}
                     variant="quiet"
                   />
                 </GridColumn>
@@ -366,13 +394,27 @@ ShallowWrapper {
                   size={3}
                 >
                   <Button
+                    block={false}
+                    disabled={false}
+                    element="button"
+                    invalid={false}
                     label="Search"
+                    logic={false}
                     onClick={[MockFunction]}
+                    quiet={false}
+                    selected={false}
                     variant="cta"
                   />
                   <Button
+                    block={false}
+                    disabled={false}
+                    element="button"
+                    invalid={false}
                     label="Clear All"
+                    logic={false}
                     onClick={[MockFunction]}
+                    quiet={false}
+                    selected={false}
                     variant="secondary"
                   />
                 </GridColumn>
@@ -441,9 +483,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
                       icon={<Add />}
+                      invalid={false}
                       label="Add"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -534,13 +583,27 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Search"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="cta"
                     />
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Clear All"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -613,9 +676,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
                       icon={<Add />}
+                      invalid={false}
                       label="Add"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -706,13 +776,27 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Search"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="cta"
                     />
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Clear All"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -769,9 +853,16 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
                         icon={<Add />}
+                        invalid={false}
                         label="Add"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="quiet"
                       />
                     </GridColumn>
@@ -862,13 +953,27 @@ ShallowWrapper {
                       size={3}
                     >
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
+                        invalid={false}
                         label="Search"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="cta"
                       />
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
+                        invalid={false}
                         label="Clear All"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="secondary"
                       />
                     </GridColumn>
@@ -924,9 +1029,16 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          block={false}
+                          disabled={false}
+                          element="button"
                           icon={<Add />}
+                          invalid={false}
                           label="Add"
+                          logic={false}
                           onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
                           variant="quiet"
                         />
                       </GridColumn>,
@@ -1026,9 +1138,16 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": <Button
+                          block={false}
+                          disabled={false}
+                          element="button"
                           icon={<Add />}
+                          invalid={false}
                           label="Add"
+                          logic={false}
                           onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
                           variant="quiet"
                         />,
                         "size": 2,
@@ -1039,9 +1158,16 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
+                          "block": false,
+                          "disabled": false,
+                          "element": "button",
                           "icon": <Add />,
+                          "invalid": false,
                           "label": "Add",
+                          "logic": false,
                           "onClick": [MockFunction],
+                          "quiet": false,
+                          "selected": false,
                           "variant": "quiet",
                         },
                         "ref": null,
@@ -1141,13 +1267,27 @@ ShallowWrapper {
                         size={3}
                       >
                         <Button
+                          block={false}
+                          disabled={false}
+                          element="button"
+                          invalid={false}
                           label="Search"
+                          logic={false}
                           onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
                           variant="cta"
                         />
                         <Button
+                          block={false}
+                          disabled={false}
+                          element="button"
+                          invalid={false}
                           label="Clear All"
+                          logic={false}
                           onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
                           variant="secondary"
                         />
                       </GridColumn>,
@@ -1426,13 +1566,27 @@ ShallowWrapper {
                       "props": Object {
                         "children": Array [
                           <Button
+                            block={false}
+                            disabled={false}
+                            element="button"
+                            invalid={false}
                             label="Search"
+                            logic={false}
                             onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
                             variant="cta"
                           />,
                           <Button
+                            block={false}
+                            disabled={false}
+                            element="button"
+                            invalid={false}
                             label="Clear All"
+                            logic={false}
                             onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
                             variant="secondary"
                           />,
                         ],
@@ -1445,8 +1599,15 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
+                            "block": false,
+                            "disabled": false,
+                            "element": "button",
+                            "invalid": false,
                             "label": "Search",
+                            "logic": false,
                             "onClick": [MockFunction],
+                            "quiet": false,
+                            "selected": false,
                             "variant": "cta",
                           },
                           "ref": null,
@@ -1458,8 +1619,15 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
+                            "block": false,
+                            "disabled": false,
+                            "element": "button",
+                            "invalid": false,
                             "label": "Clear All",
+                            "logic": false,
                             "onClick": [MockFunction],
+                            "quiet": false,
+                            "selected": false,
                             "variant": "secondary",
                           },
                           "ref": null,
@@ -1546,9 +1714,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
                       icon={<Add />}
+                      invalid={false}
                       label="Add"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -1639,13 +1814,27 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Search"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="cta"
                     />
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Clear All"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -1715,9 +1904,16 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
                       icon={<Add />}
+                      invalid={false}
                       label="Add"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="quiet"
                     />
                   </GridColumn>
@@ -1808,13 +2004,27 @@ ShallowWrapper {
                     size={3}
                   >
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Search"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="cta"
                     />
                     <Button
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
                       label="Clear All"
+                      logic={false}
                       onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
                       variant="secondary"
                     />
                   </GridColumn>
@@ -1883,9 +2093,16 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
                         icon={<Add />}
+                        invalid={false}
                         label="Add"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="quiet"
                       />
                     </GridColumn>
@@ -1976,13 +2193,27 @@ ShallowWrapper {
                       size={3}
                     >
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
+                        invalid={false}
                         label="Search"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="cta"
                       />
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
+                        invalid={false}
                         label="Clear All"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="secondary"
                       />
                     </GridColumn>
@@ -2055,9 +2286,16 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
                         icon={<Add />}
+                        invalid={false}
                         label="Add"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="quiet"
                       />
                     </GridColumn>
@@ -2148,13 +2386,27 @@ ShallowWrapper {
                       size={3}
                     >
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
+                        invalid={false}
                         label="Search"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="cta"
                       />
                       <Button
+                        block={false}
+                        disabled={false}
+                        element="button"
+                        invalid={false}
                         label="Clear All"
+                        logic={false}
                         onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
                         variant="secondary"
                       />
                     </GridColumn>
@@ -2211,9 +2463,16 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          block={false}
+                          disabled={false}
+                          element="button"
                           icon={<Add />}
+                          invalid={false}
                           label="Add"
+                          logic={false}
                           onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
                           variant="quiet"
                         />
                       </GridColumn>
@@ -2304,13 +2563,27 @@ ShallowWrapper {
                         size={3}
                       >
                         <Button
+                          block={false}
+                          disabled={false}
+                          element="button"
+                          invalid={false}
                           label="Search"
+                          logic={false}
                           onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
                           variant="cta"
                         />
                         <Button
+                          block={false}
+                          disabled={false}
+                          element="button"
+                          invalid={false}
                           label="Clear All"
+                          logic={false}
                           onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
                           variant="secondary"
                         />
                       </GridColumn>
@@ -2366,9 +2639,16 @@ ShallowWrapper {
                           size={2}
                         >
                           <Button
+                            block={false}
+                            disabled={false}
+                            element="button"
                             icon={<Add />}
+                            invalid={false}
                             label="Add"
+                            logic={false}
                             onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
                             variant="quiet"
                           />
                         </GridColumn>,
@@ -2468,9 +2748,16 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": <Button
+                            block={false}
+                            disabled={false}
+                            element="button"
                             icon={<Add />}
+                            invalid={false}
                             label="Add"
+                            logic={false}
                             onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
                             variant="quiet"
                           />,
                           "size": 2,
@@ -2481,9 +2768,16 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
+                            "block": false,
+                            "disabled": false,
+                            "element": "button",
                             "icon": <Add />,
+                            "invalid": false,
                             "label": "Add",
+                            "logic": false,
                             "onClick": [MockFunction],
+                            "quiet": false,
+                            "selected": false,
                             "variant": "quiet",
                           },
                           "ref": null,
@@ -2583,13 +2877,27 @@ ShallowWrapper {
                           size={3}
                         >
                           <Button
+                            block={false}
+                            disabled={false}
+                            element="button"
+                            invalid={false}
                             label="Search"
+                            logic={false}
                             onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
                             variant="cta"
                           />
                           <Button
+                            block={false}
+                            disabled={false}
+                            element="button"
+                            invalid={false}
                             label="Clear All"
+                            logic={false}
                             onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
                             variant="secondary"
                           />
                         </GridColumn>,
@@ -2868,13 +3176,27 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <Button
+                              block={false}
+                              disabled={false}
+                              element="button"
+                              invalid={false}
                               label="Search"
+                              logic={false}
                               onClick={[MockFunction]}
+                              quiet={false}
+                              selected={false}
                               variant="cta"
                             />,
                             <Button
+                              block={false}
+                              disabled={false}
+                              element="button"
+                              invalid={false}
                               label="Clear All"
+                              logic={false}
                               onClick={[MockFunction]}
+                              quiet={false}
+                              selected={false}
                               variant="secondary"
                             />,
                           ],
@@ -2887,8 +3209,15 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
+                              "block": false,
+                              "disabled": false,
+                              "element": "button",
+                              "invalid": false,
                               "label": "Search",
+                              "logic": false,
                               "onClick": [MockFunction],
+                              "quiet": false,
+                              "selected": false,
                               "variant": "cta",
                             },
                             "ref": null,
@@ -2900,8 +3229,15 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
+                              "block": false,
+                              "disabled": false,
+                              "element": "button",
+                              "invalid": false,
                               "label": "Clear All",
+                              "logic": false,
                               "onClick": [MockFunction],
+                              "quiet": false,
+                              "selected": false,
                               "variant": "secondary",
                             },
                             "ref": null,
