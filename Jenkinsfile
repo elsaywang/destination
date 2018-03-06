@@ -26,7 +26,7 @@ node ("docker") {
             parallel 'run UI tests': {
                 uiImage.inside("-u root -v ${workspace}/artifacts:/usr/src/app/artifacts") {
                     sh '(cd /usr/src/app/client && CI=true npm test -- --coverage --bail)'
-                    sh '(cd /usr/src/app/artifacts && rm -r ui-build && mkdir ui-build)'
+                    sh '(cd /usr/src/app/artifacts && rm -rf ui-build && mkdir ui-build)'
                     sh 'cp -R /usr/src/app/client/* /usr/src/app/artifacts/ui-build'
                 }
             }, 'run API tests': {
