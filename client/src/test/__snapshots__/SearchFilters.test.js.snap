@@ -115,8 +115,8 @@ ShallowWrapper {
       "keyValuePairs": Array [
         Object {
           "id": 0,
-          "key": "test",
-          "operator": ">",
+          "key": "",
+          "operator": "=",
           "value": "",
         },
       ],
@@ -149,8 +149,8 @@ ShallowWrapper {
         "keyValuePairs": Array [
           Object {
             "id": 0,
-            "key": "test",
-            "operator": ">",
+            "key": "",
+            "operator": "=",
             "value": "",
           },
         ],

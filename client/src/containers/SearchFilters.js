@@ -65,13 +65,15 @@ class SearchFilters extends Component {
         }));
     };
 
+    removeKeyValuePair = (id, keyValuePairs) => {
+        const index = keyValuePairs.findIndex(kvp => kvp.id === Number(id));
+
+        return [...keyValuePairs.slice(0, index), ...keyValuePairs.slice(index + 1)];
+    };
+
     onRemoveClick = event => {
         const id = event.target.closest('button').getAttribute('data-id');
-        const index = this.state.keyValuePairs.findIndex(kvp => kvp.id === Number(id));
-        const keyValuePairs = [
-            ...this.state.keyValuePairs.slice(0, index),
-            ...this.state.keyValuePairs.slice(index + 1),
-        ];
+        const keyValuePairs = this.removeKeyValuePair(id, this.state.keyValuePairs);
 
         this.setState({ keyValuePairs });
     };

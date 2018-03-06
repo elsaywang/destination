@@ -28,6 +28,7 @@ class Search extends Component {
                 </GridColumn>
                 <GridColumn size={2}>
                     <Button
+                        className="add-button"
                         label="Add"
                         onClick={this.props.onAddClick}
                         icon={<AddCircle />}
@@ -35,6 +36,7 @@ class Search extends Component {
                     />
                     {pair.id !== 0 && (
                         <Button
+                            className="remove-button"
                             data-id={pair.id}
                             label="Remove"
                             onClick={this.props.onRemoveClick}

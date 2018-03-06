@@ -17,12 +17,6 @@ describe('<Search /> component', () => {
                 operator: '=',
                 value: '',
             },
-            {
-                id: 1,
-                key: '',
-                operator: '=',
-                value: '',
-            },
         ],
         status: 'all',
         advanced: false,
@@ -38,6 +32,7 @@ describe('<Search /> component', () => {
             onValueChange={mockFn}
             onOperatorChange={mockFn}
             onAddClick={mockFn}
+            onRemoveClick={mockFn}
             onStatusChange={mockFn}
             onViewRecordsChange={mockFn}
             onMinCountChange={mockFn}
@@ -81,15 +76,61 @@ describe('<Search /> component', () => {
         });
 
         it('renders <Button /> with label "Add"', () => {
-            expect(wrapper.find(Button).someWhere(n => n.props().label === 'Add')).toBe(true);
+            expect(wrapper.find(Button).someWhere(button => button.props().label === 'Add')).toBe(
+                true,
+            );
+        });
+
+        it('renders <Button /> with label "Remove" when there is more than one keyValuePair passed in', () => {
+            expect(
+                wrapper.find(Button).someWhere(button => button.props().label === 'Remove'),
+            ).toBe(false);
+
+            const newState = {
+                ...state,
+                keyValuePairs: [
+                    ...state.keyValuePairs,
+                    {
+                        id: 1,
+                        key: 'new',
+                        operator: '>',
+                        value: 'new',
+                    },
+                ],
+            };
+
+            const newWrapper = shallow(
+                <Search
+                    {...newState}
+                    onAdvancedSearchChange={mockFn}
+                    onKeyChange={mockFn}
+                    onValueChange={mockFn}
+                    onOperatorChange={mockFn}
+                    onAddClick={mockFn}
+                    onRemoveClick={mockFn}
+                    onStatusChange={mockFn}
+                    onViewRecordsChange={mockFn}
+                    onMinCountChange={mockFn}
+                    onSearch={mockFn}
+                    onClearAll={mockFn}
+                />,
+            );
+
+            expect(
+                newWrapper.find(Button).someWhere(button => button.props().label === 'Remove'),
+            ).toBe(true);
         });
 
         it('renders <Button /> with label "Search"', () => {
-            expect(wrapper.find(Button).someWhere(n => n.props().label === 'Search')).toBe(true);
+            expect(
+                wrapper.find(Button).someWhere(button => button.props().label === 'Search'),
+            ).toBe(true);
         });
 
         it('renders <Button /> with label "Clear All"', () => {
-            expect(wrapper.find(Button).someWhere(n => n.props().label === 'Clear All')).toBe(true);
+            expect(
+                wrapper.find(Button).someWhere(button => button.props().label === 'Clear All'),
+            ).toBe(true);
         });
     });
 });
