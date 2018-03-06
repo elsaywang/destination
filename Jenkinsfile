@@ -2,6 +2,7 @@ def uiImage
 def apiImage
 def uiImageName = "signal-center-ui:${env.BUILD_ID}"
 def apiImageName = "signal-center-api-aggregator:${env.BUILD_ID}"
+def cypressBaseImage = "cypress/base:8"
 def workspace
 
 node ("docker") {
@@ -21,17 +22,26 @@ node ("docker") {
             }
         }
 
-        stage ('Running Tests') {
+        stage ('Running Unit Tests') {
             parallel 'run UI tests': {
-                uiImage.inside("-u root -v ${workspace}/artifacts:/usr/src/app/artifacts") {\
-                    sh 'mkdir -p /usr/src/app/client/coverage'
-                    sh '(cd /usr/src/app/client &&  CI=true npm test -- --coverage --bail)'
-                    sh 'cp -r /usr/src/app/client/coverage /usr/src/app/artifacts/coverage'
+                uiImage.inside("-u root -v ${workspace}/artifacts:/usr/src/app/artifacts") {
+                    sh '(cd /usr/src/app/client && CI=true npm test -- --coverage --bail)'
+                    sh '(cd /usr/src/app/artifacts && rm -r ui-build && mkdir ui-build)'
+                    sh 'cp -R /usr/src/app/client/* /usr/src/app/artifacts/ui-build'
                 }
             }, 'run API tests': {
                 apiImage.inside {
                     sh '(cd /usr/src/app/server && npm test)'
                 }
+            }
+        }
+
+        stage('Running Behavioral Tests') {
+            docker.image(cypressBaseImage).inside("-u root -v ${workspace}/artifacts/ui-build:/usr/src/app/ui-build -v ${workspace}/client:/usr/src/app/client") {
+                sh '(cd /usr/src/app/ui-build && mkdir cypress)'
+                sh 'cp -R /usr/src/app/client/cypress/* /usr/src/app/ui-build/cypress/'
+                sh 'cp -R /usr/src/app/client/cypress.json /usr/src/app/ui-build/cypress.json'
+                sh '(cd /usr/src/app/ui-build && npm run ci)'
             }
         }
 
@@ -61,17 +71,12 @@ node ("docker") {
             allowMissing: false,
             alwaysLinkToLastBuild: false,
             keepAll: true,
-            reportDir: "${workspace}/artifacts/coverage/lcov-report",
+            reportDir: "${workspace}/artifacts/ui-build/coverage/lcov-report",
             reportFiles: 'index.html',
             reportName: "UI Coverage Report"
         ])
 
+        archiveArtifacts artifacts: "**/*.mp4", fingerprint: true, allowEmptyArchive: true
+
     }
-
-
-
-
 }
-
-
-
