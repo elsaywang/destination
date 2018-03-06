@@ -5,6 +5,8 @@ import Search from '@react/react-spectrum/Search';
 import Textfield from '@react/react-spectrum/Textfield';
 import Label from './common/Label';
 import operatorOptions from '../constants/operatorOptions';
+import styles from './KeyValuePair.css';
+import classNames from 'classnames';
 
 class KeyValuePair extends Component {
     constructor(props) {
@@ -37,22 +39,22 @@ class KeyValuePair extends Component {
 
         return (
             <Fragment>
-                <Label value="Key">
+                <Label value="Key" labelFor="key">
                     <Autocomplete
                         id={id}
-                        className="key-search"
+                        className={classNames(styles['key-search'], 'key-search')}
                         getCompletions={this.getCompletions}
                         onSelect={this.onKeySelect}>
-                        <Textfield placeholder="Type a key or key name" />
+                        <Textfield id="key" placeholder="Type a key or key name" />
                     </Autocomplete>
                 </Label>
                 <Select
-                    className="operator"
+                    className={classNames(styles.operator, 'operator')}
                     value={operator}
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
                 />
-                <Label value="Value (Optional)">
+                <Label value="Value (Optional)" labelFor={id}>
                     <Search
                         className="value-search"
                         id={id}
