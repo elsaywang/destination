@@ -4,7 +4,7 @@ import SearchContainer from '../containers/SearchContainer';
 import SearchFilters from '../containers/SearchFilters';
 import SelectList from '@react/react-spectrum/SelectList';
 import SignalSourceFilter from '../components/SignalSourceFilter';
-import Table from '../components/Table';
+import SignalsTable from '../components/SignalsTable';
 import configureStore from '../configureStore';
 
 describe('<SearchContainer /> component', () => {
@@ -33,8 +33,8 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(SignalSourceFilter).exists()).toBe(true);
         });
 
-        it('renders <Table /> component', () => {
-            expect(wrapper.find(Table).exists()).toBe(true);
+        it('renders <SignalsTable /> component', () => {
+            expect(wrapper.find(SignalsTable).exists()).toBe(true);
         });
     });
 
