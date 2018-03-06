@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import DataSource from '../components/common/Table/DataSource';
 
 describe('<DataSource /> component', () => {

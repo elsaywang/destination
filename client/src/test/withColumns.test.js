@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import withColumns from '../components/common/Table/withColumns';
 
 describe('withColumns HOC', () => {
