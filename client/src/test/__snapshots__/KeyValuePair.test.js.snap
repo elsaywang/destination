@@ -31,6 +31,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Label
+          labelFor="key"
           value="Key"
         >
           <Autocomplete
@@ -42,6 +43,7 @@ ShallowWrapper {
           >
             <Textfield
               disabled={false}
+              id="key"
               invalid={false}
               placeholder="Type a key or key name"
               readOnly={false}
@@ -83,6 +85,7 @@ ShallowWrapper {
           value="="
         />,
         <Label
+          labelFor={0}
           value="Value (Optional)"
         >
           <Search
@@ -113,12 +116,14 @@ ShallowWrapper {
           >
             <Textfield
               disabled={false}
+              id="key"
               invalid={false}
               placeholder="Type a key or key name"
               readOnly={false}
               required={false}
             />
           </Autocomplete>,
+          "labelFor": "key",
           "value": "Key",
         },
         "ref": null,
@@ -130,6 +135,7 @@ ShallowWrapper {
             "allowCreate": false,
             "children": <Textfield
               disabled={false}
+              id="key"
               invalid={false}
               placeholder="Type a key or key name"
               readOnly={false}
@@ -147,6 +153,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "disabled": false,
+              "id": "key",
               "invalid": false,
               "placeholder": "Type a key or key name",
               "readOnly": false,
@@ -213,6 +220,7 @@ ShallowWrapper {
             placeholder="Type a value"
             value=""
           />,
+          "labelFor": 0,
           "value": "Value (Optional)",
         },
         "ref": null,
@@ -246,6 +254,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Label
+            labelFor="key"
             value="Key"
           >
             <Autocomplete
@@ -257,6 +266,7 @@ ShallowWrapper {
             >
               <Textfield
                 disabled={false}
+                id="key"
                 invalid={false}
                 placeholder="Type a key or key name"
                 readOnly={false}
@@ -298,6 +308,7 @@ ShallowWrapper {
             value="="
           />,
           <Label
+            labelFor={0}
             value="Value (Optional)"
           >
             <Search
@@ -328,12 +339,14 @@ ShallowWrapper {
             >
               <Textfield
                 disabled={false}
+                id="key"
                 invalid={false}
                 placeholder="Type a key or key name"
                 readOnly={false}
                 required={false}
               />
             </Autocomplete>,
+            "labelFor": "key",
             "value": "Key",
           },
           "ref": null,
@@ -345,6 +358,7 @@ ShallowWrapper {
               "allowCreate": false,
               "children": <Textfield
                 disabled={false}
+                id="key"
                 invalid={false}
                 placeholder="Type a key or key name"
                 readOnly={false}
@@ -362,6 +376,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "disabled": false,
+                "id": "key",
                 "invalid": false,
                 "placeholder": "Type a key or key name",
                 "readOnly": false,
@@ -428,6 +443,7 @@ ShallowWrapper {
               placeholder="Type a value"
               value=""
             />,
+            "labelFor": 0,
             "value": "Value (Optional)",
           },
           "ref": null,
