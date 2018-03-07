@@ -36,6 +36,7 @@
     "cypress:open": "node_modules/.bin/cypress open",
     "cypress:run": "node_modules/.bin/cypress run",
     "ci": "node_modules/.bin/start-server-and-test start http://localhost:3000 cypress:run",
+    "lint": "node_modules/@aam/eslint-config-aam/node_modules/eslint/bin/eslint.js src",
     "json-server": "json-server data-generator.js --port 3002 --routes ./routes.json"
   },
   "proxy": "http://localhost:3002",
