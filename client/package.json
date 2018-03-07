@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@react/react-spectrum": "^2.3.2",
+    "@react/react-spectrum": "^2.4.0",
     "classnames": "^2.2.5",
     "cypress": "^1.4.2",
     "enzyme": "^3.3.0",
@@ -26,7 +26,7 @@
     "start-server-and-test": "^1.0.1"
   },
   "scripts": {
-    "start": "node_modules/serve/bin/serve.js -C -S -n -l -p 3000 build",
+    "start": "node_modules/serve/bin/serve.js -C -n -l -p 3000 build",
     "start:dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

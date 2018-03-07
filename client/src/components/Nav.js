@@ -14,10 +14,14 @@ function Nav(props) {
             variant="anchored"
             onChange={noOp}>
             <NavLink to="/">
-                <Tab selected={props.location.pathname === '/'}>Dashboard</Tab>
+                <Tab className="nav--dashboard" selected={props.location.pathname === '/'}>
+                    Dashboard
+                </Tab>
             </NavLink>
             <NavLink to="/search">
-                <Tab selected={props.location.pathname === '/search'}>Search</Tab>
+                <Tab className="nav--search" selected={props.location.pathname === '/search'}>
+                    Search
+                </Tab>
             </NavLink>
         </TabList>
     );
