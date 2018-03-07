@@ -14,12 +14,6 @@ ShallowWrapper {
           "operator": "=",
           "value": "",
         },
-        Object {
-          "id": 1,
-          "key": "",
-          "operator": "=",
-          "value": "",
-        },
       ]
     }
     minCount={1000}
@@ -29,6 +23,7 @@ ShallowWrapper {
     onKeyChange={[MockFunction]}
     onMinCountChange={[MockFunction]}
     onOperatorChange={[MockFunction]}
+    onRemoveClick={[MockFunction]}
     onSearch={[MockFunction]}
     onStatusChange={[MockFunction]}
     onValueChange={[MockFunction]}
@@ -67,7 +62,7 @@ ShallowWrapper {
                 valign="bottom"
               >
                 <GridColumn
-                  size={7}
+                  size={4}
                 >
                   <KeyValuePair
                     onKeyChange={[MockFunction]}
@@ -84,30 +79,14 @@ ShallowWrapper {
                   />
                 </GridColumn>
                 <GridColumn
-                  size={7}
-                >
-                  <KeyValuePair
-                    onKeyChange={[MockFunction]}
-                    onOperatorChange={[MockFunction]}
-                    onValueChange={[MockFunction]}
-                    pair={
-                      Object {
-                        "id": 1,
-                        "key": "",
-                        "operator": "=",
-                        "value": "",
-                      }
-                    }
-                  />
-                </GridColumn>
-                <GridColumn
                   size={2}
                 >
                   <Button
                     block={false}
+                    className="add-button"
                     disabled={false}
                     element="button"
-                    icon={<Add />}
+                    icon={<AddCircle />}
                     invalid={false}
                     label="Add"
                     logic={false}
@@ -257,7 +236,7 @@ ShallowWrapper {
                 valign="bottom"
               >
                 <GridColumn
-                  size={7}
+                  size={4}
                 >
                   <KeyValuePair
                     onKeyChange={[MockFunction]}
@@ -274,30 +253,14 @@ ShallowWrapper {
                   />
                 </GridColumn>
                 <GridColumn
-                  size={7}
-                >
-                  <KeyValuePair
-                    onKeyChange={[MockFunction]}
-                    onOperatorChange={[MockFunction]}
-                    onValueChange={[MockFunction]}
-                    pair={
-                      Object {
-                        "id": 1,
-                        "key": "",
-                        "operator": "=",
-                        "value": "",
-                      }
-                    }
-                  />
-                </GridColumn>
-                <GridColumn
                   size={2}
                 >
                   <Button
                     block={false}
+                    className="add-button"
                     disabled={false}
                     element="button"
-                    icon={<Add />}
+                    icon={<AddCircle />}
                     invalid={false}
                     label="Add"
                     logic={false}
@@ -446,7 +409,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -463,30 +426,14 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
-                  >
-                    <KeyValuePair
-                      onKeyChange={[MockFunction]}
-                      onOperatorChange={[MockFunction]}
-                      onValueChange={[MockFunction]}
-                      pair={
-                        Object {
-                          "id": 1,
-                          "key": "",
-                          "operator": "=",
-                          "value": "",
-                        }
-                      }
-                    />
-                  </GridColumn>
-                  <GridColumn
                     size={2}
                   >
                     <Button
                       block={false}
+                      className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<Add />}
+                      icon={<AddCircle />}
                       invalid={false}
                       label="Add"
                       logic={false}
@@ -639,7 +586,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -656,30 +603,14 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
-                  >
-                    <KeyValuePair
-                      onKeyChange={[MockFunction]}
-                      onOperatorChange={[MockFunction]}
-                      onValueChange={[MockFunction]}
-                      pair={
-                        Object {
-                          "id": 1,
-                          "key": "",
-                          "operator": "=",
-                          "value": "",
-                        }
-                      }
-                    />
-                  </GridColumn>
-                  <GridColumn
                     size={2}
                   >
                     <Button
                       block={false}
+                      className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<Add />}
+                      icon={<AddCircle />}
                       invalid={false}
                       label="Add"
                       logic={false}
@@ -811,62 +742,48 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  <GridRow
-                    reverse={false}
-                    valign="bottom"
-                  >
-                    <GridColumn
-                      size={7}
+                  Array [
+                    <GridRow
+                      reverse={false}
+                      valign="bottom"
                     >
-                      <KeyValuePair
-                        onKeyChange={[MockFunction]}
-                        onOperatorChange={[MockFunction]}
-                        onValueChange={[MockFunction]}
-                        pair={
-                          Object {
-                            "id": 0,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeyChange={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
+                            }
                           }
-                        }
-                      />
-                    </GridColumn>
-                    <GridColumn
-                      size={7}
-                    >
-                      <KeyValuePair
-                        onKeyChange={[MockFunction]}
-                        onOperatorChange={[MockFunction]}
-                        onValueChange={[MockFunction]}
-                        pair={
-                          Object {
-                            "id": 1,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
-                          }
-                        }
-                      />
-                    </GridColumn>
-                    <GridColumn
-                      size={2}
-                    >
-                      <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        icon={<Add />}
-                        invalid={false}
-                        label="Add"
-                        logic={false}
-                        onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
-                        variant="quiet"
-                      />
-                    </GridColumn>
-                  </GridRow>,
+                        />
+                      </GridColumn>
+                      <GridColumn
+                        size={2}
+                      >
+                        <Button
+                          block={false}
+                          className="add-button"
+                          disabled={false}
+                          element="button"
+                          icon={<AddCircle />}
+                          invalid={false}
+                          label="Add"
+                          logic={false}
+                          onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
+                          variant="quiet"
+                        />
+                      </GridColumn>
+                    </GridRow>,
+                  ],
                   <GridRow
                     reverse={false}
                     valign="bottom"
@@ -985,54 +902,36 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "0",
                   "nodeType": "class",
                   "props": Object {
                     "children": Array [
-                      Array [
-                        <GridColumn
-                          size={7}
-                        >
-                          <KeyValuePair
-                            onKeyChange={[MockFunction]}
-                            onOperatorChange={[MockFunction]}
-                            onValueChange={[MockFunction]}
-                            pair={
-                              Object {
-                                "id": 0,
-                                "key": "",
-                                "operator": "=",
-                                "value": "",
-                              }
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeyChange={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
                             }
-                          />
-                        </GridColumn>,
-                        <GridColumn
-                          size={7}
-                        >
-                          <KeyValuePair
-                            onKeyChange={[MockFunction]}
-                            onOperatorChange={[MockFunction]}
-                            onValueChange={[MockFunction]}
-                            pair={
-                              Object {
-                                "id": 1,
-                                "key": "",
-                                "operator": "=",
-                                "value": "",
-                              }
-                            }
-                          />
-                        </GridColumn>,
-                      ],
+                          }
+                        />
+                      </GridColumn>,
                       <GridColumn
                         size={2}
                       >
                         <Button
                           block={false}
+                          className="add-button"
                           disabled={false}
                           element="button"
-                          icon={<Add />}
+                          icon={<AddCircle />}
                           invalid={false}
                           label="Add"
                           logic={false}
@@ -1050,7 +949,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": "0",
+                      "key": undefined,
                       "nodeType": "class",
                       "props": Object {
                         "children": <KeyValuePair
@@ -1066,12 +965,12 @@ ShallowWrapper {
                             }
                           }
                         />,
-                        "size": 7,
+                        "size": 4,
                       },
                       "ref": null,
                       "rendered": Object {
                         "instance": null,
-                        "key": undefined,
+                        "key": "0",
                         "nodeType": "class",
                         "props": Object {
                           "onKeyChange": [MockFunction],
@@ -1092,88 +991,54 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": "1",
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 1,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
-                            }
-                          }
-                        />,
-                        "size": 7,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "onKeyChange": [MockFunction],
-                          "onOperatorChange": [MockFunction],
-                          "onValueChange": [MockFunction],
-                          "pair": Object {
-                            "id": 1,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          icon={<Add />}
-                          invalid={false}
-                          label="Add"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
-                          variant="quiet"
-                        />,
+                        "children": Array [
+                          <Button
+                            block={false}
+                            className="add-button"
+                            disabled={false}
+                            element="button"
+                            icon={<AddCircle />}
+                            invalid={false}
+                            label="Add"
+                            logic={false}
+                            onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
+                            variant="quiet"
+                          />,
+                          false,
+                        ],
                         "size": 2,
                       },
                       "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "block": false,
-                          "disabled": false,
-                          "element": "button",
-                          "icon": <Add />,
-                          "invalid": false,
-                          "label": "Add",
-                          "logic": false,
-                          "onClick": [MockFunction],
-                          "quiet": false,
-                          "selected": false,
-                          "variant": "quiet",
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "block": false,
+                            "className": "add-button",
+                            "disabled": false,
+                            "element": "button",
+                            "icon": <AddCircle />,
+                            "invalid": false,
+                            "label": "Add",
+                            "logic": false,
+                            "onClick": [MockFunction],
+                            "quiet": false,
+                            "selected": false,
+                            "variant": "quiet",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
                         },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
+                        false,
+                      ],
                       "type": [Function],
                     },
                   ],
@@ -1677,7 +1542,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -1694,30 +1559,14 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
-                  >
-                    <KeyValuePair
-                      onKeyChange={[MockFunction]}
-                      onOperatorChange={[MockFunction]}
-                      onValueChange={[MockFunction]}
-                      pair={
-                        Object {
-                          "id": 1,
-                          "key": "",
-                          "operator": "=",
-                          "value": "",
-                        }
-                      }
-                    />
-                  </GridColumn>
-                  <GridColumn
                     size={2}
                   >
                     <Button
                       block={false}
+                      className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<Add />}
+                      icon={<AddCircle />}
                       invalid={false}
                       label="Add"
                       logic={false}
@@ -1867,7 +1716,7 @@ ShallowWrapper {
                   valign="bottom"
                 >
                   <GridColumn
-                    size={7}
+                    size={4}
                   >
                     <KeyValuePair
                       onKeyChange={[MockFunction]}
@@ -1884,30 +1733,14 @@ ShallowWrapper {
                     />
                   </GridColumn>
                   <GridColumn
-                    size={7}
-                  >
-                    <KeyValuePair
-                      onKeyChange={[MockFunction]}
-                      onOperatorChange={[MockFunction]}
-                      onValueChange={[MockFunction]}
-                      pair={
-                        Object {
-                          "id": 1,
-                          "key": "",
-                          "operator": "=",
-                          "value": "",
-                        }
-                      }
-                    />
-                  </GridColumn>
-                  <GridColumn
                     size={2}
                   >
                     <Button
                       block={false}
+                      className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<Add />}
+                      icon={<AddCircle />}
                       invalid={false}
                       label="Add"
                       logic={false}
@@ -2056,7 +1889,7 @@ ShallowWrapper {
                     valign="bottom"
                   >
                     <GridColumn
-                      size={7}
+                      size={4}
                     >
                       <KeyValuePair
                         onKeyChange={[MockFunction]}
@@ -2073,30 +1906,14 @@ ShallowWrapper {
                       />
                     </GridColumn>
                     <GridColumn
-                      size={7}
-                    >
-                      <KeyValuePair
-                        onKeyChange={[MockFunction]}
-                        onOperatorChange={[MockFunction]}
-                        onValueChange={[MockFunction]}
-                        pair={
-                          Object {
-                            "id": 1,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
-                          }
-                        }
-                      />
-                    </GridColumn>
-                    <GridColumn
                       size={2}
                     >
                       <Button
                         block={false}
+                        className="add-button"
                         disabled={false}
                         element="button"
-                        icon={<Add />}
+                        icon={<AddCircle />}
                         invalid={false}
                         label="Add"
                         logic={false}
@@ -2249,7 +2066,7 @@ ShallowWrapper {
                     valign="bottom"
                   >
                     <GridColumn
-                      size={7}
+                      size={4}
                     >
                       <KeyValuePair
                         onKeyChange={[MockFunction]}
@@ -2266,30 +2083,14 @@ ShallowWrapper {
                       />
                     </GridColumn>
                     <GridColumn
-                      size={7}
-                    >
-                      <KeyValuePair
-                        onKeyChange={[MockFunction]}
-                        onOperatorChange={[MockFunction]}
-                        onValueChange={[MockFunction]}
-                        pair={
-                          Object {
-                            "id": 1,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
-                          }
-                        }
-                      />
-                    </GridColumn>
-                    <GridColumn
                       size={2}
                     >
                       <Button
                         block={false}
+                        className="add-button"
                         disabled={false}
                         element="button"
-                        icon={<Add />}
+                        icon={<AddCircle />}
                         invalid={false}
                         label="Add"
                         logic={false}
@@ -2421,62 +2222,48 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": Array [
-                    <GridRow
-                      reverse={false}
-                      valign="bottom"
-                    >
-                      <GridColumn
-                        size={7}
+                    Array [
+                      <GridRow
+                        reverse={false}
+                        valign="bottom"
                       >
-                        <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 0,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
+                        <GridColumn
+                          size={4}
+                        >
+                          <KeyValuePair
+                            onKeyChange={[MockFunction]}
+                            onOperatorChange={[MockFunction]}
+                            onValueChange={[MockFunction]}
+                            pair={
+                              Object {
+                                "id": 0,
+                                "key": "",
+                                "operator": "=",
+                                "value": "",
+                              }
                             }
-                          }
-                        />
-                      </GridColumn>
-                      <GridColumn
-                        size={7}
-                      >
-                        <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 1,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
-                            }
-                          }
-                        />
-                      </GridColumn>
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          icon={<Add />}
-                          invalid={false}
-                          label="Add"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
-                          variant="quiet"
-                        />
-                      </GridColumn>
-                    </GridRow>,
+                          />
+                        </GridColumn>
+                        <GridColumn
+                          size={2}
+                        >
+                          <Button
+                            block={false}
+                            className="add-button"
+                            disabled={false}
+                            element="button"
+                            icon={<AddCircle />}
+                            invalid={false}
+                            label="Add"
+                            logic={false}
+                            onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
+                            variant="quiet"
+                          />
+                        </GridColumn>
+                      </GridRow>,
+                    ],
                     <GridRow
                       reverse={false}
                       valign="bottom"
@@ -2595,54 +2382,36 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "0",
                     "nodeType": "class",
                     "props": Object {
                       "children": Array [
-                        Array [
-                          <GridColumn
-                            size={7}
-                          >
-                            <KeyValuePair
-                              onKeyChange={[MockFunction]}
-                              onOperatorChange={[MockFunction]}
-                              onValueChange={[MockFunction]}
-                              pair={
-                                Object {
-                                  "id": 0,
-                                  "key": "",
-                                  "operator": "=",
-                                  "value": "",
-                                }
+                        <GridColumn
+                          size={4}
+                        >
+                          <KeyValuePair
+                            onKeyChange={[MockFunction]}
+                            onOperatorChange={[MockFunction]}
+                            onValueChange={[MockFunction]}
+                            pair={
+                              Object {
+                                "id": 0,
+                                "key": "",
+                                "operator": "=",
+                                "value": "",
                               }
-                            />
-                          </GridColumn>,
-                          <GridColumn
-                            size={7}
-                          >
-                            <KeyValuePair
-                              onKeyChange={[MockFunction]}
-                              onOperatorChange={[MockFunction]}
-                              onValueChange={[MockFunction]}
-                              pair={
-                                Object {
-                                  "id": 1,
-                                  "key": "",
-                                  "operator": "=",
-                                  "value": "",
-                                }
-                              }
-                            />
-                          </GridColumn>,
-                        ],
+                            }
+                          />
+                        </GridColumn>,
                         <GridColumn
                           size={2}
                         >
                           <Button
                             block={false}
+                            className="add-button"
                             disabled={false}
                             element="button"
-                            icon={<Add />}
+                            icon={<AddCircle />}
                             invalid={false}
                             label="Add"
                             logic={false}
@@ -2660,7 +2429,7 @@ ShallowWrapper {
                     "rendered": Array [
                       Object {
                         "instance": null,
-                        "key": "0",
+                        "key": undefined,
                         "nodeType": "class",
                         "props": Object {
                           "children": <KeyValuePair
@@ -2676,12 +2445,12 @@ ShallowWrapper {
                               }
                             }
                           />,
-                          "size": 7,
+                          "size": 4,
                         },
                         "ref": null,
                         "rendered": Object {
                           "instance": null,
-                          "key": undefined,
+                          "key": "0",
                           "nodeType": "class",
                           "props": Object {
                             "onKeyChange": [MockFunction],
@@ -2702,88 +2471,54 @@ ShallowWrapper {
                       },
                       Object {
                         "instance": null,
-                        "key": "1",
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": <KeyValuePair
-                            onKeyChange={[MockFunction]}
-                            onOperatorChange={[MockFunction]}
-                            onValueChange={[MockFunction]}
-                            pair={
-                              Object {
-                                "id": 1,
-                                "key": "",
-                                "operator": "=",
-                                "value": "",
-                              }
-                            }
-                          />,
-                          "size": 7,
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "onKeyChange": [MockFunction],
-                            "onOperatorChange": [MockFunction],
-                            "onValueChange": [MockFunction],
-                            "pair": Object {
-                              "id": 1,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
-                            },
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                        "type": [Function],
-                      },
-                      Object {
-                        "instance": null,
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            icon={<Add />}
-                            invalid={false}
-                            label="Add"
-                            logic={false}
-                            onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
-                            variant="quiet"
-                          />,
+                          "children": Array [
+                            <Button
+                              block={false}
+                              className="add-button"
+                              disabled={false}
+                              element="button"
+                              icon={<AddCircle />}
+                              invalid={false}
+                              label="Add"
+                              logic={false}
+                              onClick={[MockFunction]}
+                              quiet={false}
+                              selected={false}
+                              variant="quiet"
+                            />,
+                            false,
+                          ],
                           "size": 2,
                         },
                         "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "block": false,
-                            "disabled": false,
-                            "element": "button",
-                            "icon": <Add />,
-                            "invalid": false,
-                            "label": "Add",
-                            "logic": false,
-                            "onClick": [MockFunction],
-                            "quiet": false,
-                            "selected": false,
-                            "variant": "quiet",
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "block": false,
+                              "className": "add-button",
+                              "disabled": false,
+                              "element": "button",
+                              "icon": <AddCircle />,
+                              "invalid": false,
+                              "label": "Add",
+                              "logic": false,
+                              "onClick": [MockFunction],
+                              "quiet": false,
+                              "selected": false,
+                              "variant": "quiet",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
                           },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
+                          false,
+                        ],
                         "type": [Function],
                       },
                     ],

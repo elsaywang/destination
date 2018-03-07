@@ -31,19 +31,19 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Label
-          labelFor="key"
+          labelFor="key0"
           value="Key"
         >
           <Autocomplete
             allowCreate={false}
             className="key-search"
+            data-id={0}
             getCompletions={[Function]}
-            id={0}
-            onSelect={[Function]}
+            onSelect={undefined}
           >
             <Textfield
               disabled={false}
-              id="key"
+              id="key0"
               invalid={false}
               placeholder="Type a key or key name"
               readOnly={false}
@@ -85,13 +85,14 @@ ShallowWrapper {
           value="="
         />,
         <Label
-          labelFor={0}
+          labelFor="value0"
           value="Value (Optional)"
         >
           <Search
             className="value-search"
+            data-id={0}
             icon={<SearchMagGlass />}
-            id={0}
+            id="value0"
             onChange={[MockFunction]}
             onSubmit={[Function]}
             placeholder="Type a value"
@@ -110,20 +111,20 @@ ShallowWrapper {
           "children": <Autocomplete
             allowCreate={false}
             className="key-search"
+            data-id={0}
             getCompletions={[Function]}
-            id={0}
-            onSelect={[Function]}
+            onSelect={undefined}
           >
             <Textfield
               disabled={false}
-              id="key"
+              id="key0"
               invalid={false}
               placeholder="Type a key or key name"
               readOnly={false}
               required={false}
             />
           </Autocomplete>,
-          "labelFor": "key",
+          "labelFor": "key0",
           "value": "Key",
         },
         "ref": null,
@@ -135,16 +136,16 @@ ShallowWrapper {
             "allowCreate": false,
             "children": <Textfield
               disabled={false}
-              id="key"
+              id="key0"
               invalid={false}
               placeholder="Type a key or key name"
               readOnly={false}
               required={false}
             />,
             "className": "key-search",
+            "data-id": 0,
             "getCompletions": [Function],
-            "id": 0,
-            "onSelect": [Function],
+            "onSelect": undefined,
           },
           "ref": null,
           "rendered": Object {
@@ -153,7 +154,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "disabled": false,
-              "id": "key",
+              "id": "key0",
               "invalid": false,
               "placeholder": "Type a key or key name",
               "readOnly": false,
@@ -213,14 +214,15 @@ ShallowWrapper {
         "props": Object {
           "children": <Search
             className="value-search"
+            data-id={0}
             icon={<SearchMagGlass />}
-            id={0}
+            id="value0"
             onChange={[MockFunction]}
             onSubmit={[Function]}
             placeholder="Type a value"
             value=""
           />,
-          "labelFor": 0,
+          "labelFor": "value0",
           "value": "Value (Optional)",
         },
         "ref": null,
@@ -230,8 +232,9 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "className": "value-search",
+            "data-id": 0,
             "icon": <SearchMagGlass />,
-            "id": 0,
+            "id": "value0",
             "onChange": [MockFunction],
             "onSubmit": [Function],
             "placeholder": "Type a value",
@@ -254,19 +257,19 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Label
-            labelFor="key"
+            labelFor="key0"
             value="Key"
           >
             <Autocomplete
               allowCreate={false}
               className="key-search"
+              data-id={0}
               getCompletions={[Function]}
-              id={0}
-              onSelect={[Function]}
+              onSelect={undefined}
             >
               <Textfield
                 disabled={false}
-                id="key"
+                id="key0"
                 invalid={false}
                 placeholder="Type a key or key name"
                 readOnly={false}
@@ -308,13 +311,14 @@ ShallowWrapper {
             value="="
           />,
           <Label
-            labelFor={0}
+            labelFor="value0"
             value="Value (Optional)"
           >
             <Search
               className="value-search"
+              data-id={0}
               icon={<SearchMagGlass />}
-              id={0}
+              id="value0"
               onChange={[MockFunction]}
               onSubmit={[Function]}
               placeholder="Type a value"
@@ -333,20 +337,20 @@ ShallowWrapper {
             "children": <Autocomplete
               allowCreate={false}
               className="key-search"
+              data-id={0}
               getCompletions={[Function]}
-              id={0}
-              onSelect={[Function]}
+              onSelect={undefined}
             >
               <Textfield
                 disabled={false}
-                id="key"
+                id="key0"
                 invalid={false}
                 placeholder="Type a key or key name"
                 readOnly={false}
                 required={false}
               />
             </Autocomplete>,
-            "labelFor": "key",
+            "labelFor": "key0",
             "value": "Key",
           },
           "ref": null,
@@ -358,16 +362,16 @@ ShallowWrapper {
               "allowCreate": false,
               "children": <Textfield
                 disabled={false}
-                id="key"
+                id="key0"
                 invalid={false}
                 placeholder="Type a key or key name"
                 readOnly={false}
                 required={false}
               />,
               "className": "key-search",
+              "data-id": 0,
               "getCompletions": [Function],
-              "id": 0,
-              "onSelect": [Function],
+              "onSelect": undefined,
             },
             "ref": null,
             "rendered": Object {
@@ -376,7 +380,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "disabled": false,
-                "id": "key",
+                "id": "key0",
                 "invalid": false,
                 "placeholder": "Type a key or key name",
                 "readOnly": false,
@@ -436,14 +440,15 @@ ShallowWrapper {
           "props": Object {
             "children": <Search
               className="value-search"
+              data-id={0}
               icon={<SearchMagGlass />}
-              id={0}
+              id="value0"
               onChange={[MockFunction]}
               onSubmit={[Function]}
               placeholder="Type a value"
               value=""
             />,
-            "labelFor": 0,
+            "labelFor": "value0",
             "value": "Value (Optional)",
           },
           "ref": null,
@@ -453,8 +458,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "className": "value-search",
+              "data-id": 0,
               "icon": <SearchMagGlass />,
-              "id": 0,
+              "id": "value0",
               "onChange": [MockFunction],
               "onSubmit": [Function],
               "placeholder": "Type a value",
