@@ -16,7 +16,7 @@ import statusOptions from '../constants/signalStatusOptions';
 class Search extends Component {
     renderKVPFields = () => {
         return this.props.keyValuePairs.map(pair => (
-            <GridRow valign="bottom">
+            <GridRow key={pair.id} valign="bottom">
                 <GridColumn size={4}>
                     <KeyValuePair
                         key={pair.id}
