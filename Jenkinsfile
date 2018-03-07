@@ -25,7 +25,7 @@ node ("docker") {
         stage ('Running Unit Tests') {
             parallel 'run UI tests': {
                 uiImage.inside("-u root -v ${workspace}/artifacts:/usr/src/app/artifacts") {
-                    sh '(cd /usr/src/app/client && CI=true npm test -- --coverage --bail)'
+                    sh '(cd /usr/src/app/client && CI=true npm test -- --coverage --bail --testResultsProcessor=./node_modules/jest-junit-reporter)'
                     sh '(cd /usr/src/app/artifacts && rm -rf ui-build && mkdir ui-build)'
                     sh 'cp -R /usr/src/app/client/* /usr/src/app/artifacts/ui-build'
                 }
@@ -45,17 +45,20 @@ node ("docker") {
             }
         }
 
-        stage ('Publish Images') {
-            parallel 'Publish UI Image':  {
-                docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
-                    uiImage.push('latest')
-                }
-            }, 'Publish API aggregator Image': {
-                docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
-                    apiImage.push('latest')
+        if (env.BRANCH_NAME == "master") {
+            stage ('Publish Images') {
+                parallel 'Publish UI Image':  {
+                    docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
+                        uiImage.push('latest')
+                    }
+                }, 'Publish API aggregator Image': {
+                    docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
+                        apiImage.push('latest')
+                    }
                 }
             }
         }
+
     } catch (e) {
         // fail the build if an exception is thrown
         currentBuild.result = "FAILED"
@@ -75,6 +78,9 @@ node ("docker") {
             reportFiles: 'index.html',
             reportName: "UI Coverage Report"
         ])
+
+        //publish unit test
+        junit '**/test-report.xml'
 
         archiveArtifacts artifacts: "**/*.mp4", fingerprint: true, allowEmptyArchive: true
 

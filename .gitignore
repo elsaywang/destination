@@ -8,6 +8,10 @@ build
 **/cypress/screenshots
 **/cypress/videos
 
+#jest
+**/coverage/
+test-report.xml
+
 # misc
 .DS_Store
 .env.local
