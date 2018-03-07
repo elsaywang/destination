@@ -60,7 +60,6 @@ ShallowWrapper {
                 "title": "Description",
               },
             ],
-            "domain": null,
             "items": Array [
               Object {
                 "description": "Good dog",
@@ -103,7 +102,6 @@ ShallowWrapper {
               "title": "Description",
             },
           ],
-          "domain": null,
           "items": Array [
             Object {
               "description": "Good dog",
@@ -148,7 +146,6 @@ ShallowWrapper {
                   "title": "Description",
                 },
               ],
-              "domain": null,
               "items": Array [
                 Object {
                   "description": "Good dog",
@@ -191,7 +188,6 @@ ShallowWrapper {
                 "title": "Description",
               },
             ],
-            "domain": null,
             "items": Array [
               Object {
                 "description": "Good dog",
