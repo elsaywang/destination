@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@react/react-spectrum": "^2.3.2",
+    "@react/react-spectrum": "^2.4.0",
     "classnames": "^2.2.5",
     "cypress": "^1.4.2",
     "enzyme": "^3.3.0",
