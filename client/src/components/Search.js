@@ -7,7 +7,7 @@ import NumberInput from '@react/react-spectrum/NumberInput';
 import Add from '@react/react-spectrum/Icon/Add';
 import AdvancedSearch from './AdvancedSearch';
 import KeyValuePair from './KeyValuePair';
-import Label from './Label';
+import Label from './common/Label';
 
 import viewRecordsOptions from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
@@ -15,9 +15,8 @@ import statusOptions from '../constants/signalStatusOptions';
 function Search(props) {
     const renderKVPFields = () =>
         props.keyValuePairs.map(pair => (
-            <GridColumn size={7}>
+            <GridColumn size={7} key={pair.id}>
                 <KeyValuePair
-                    key={pair.id}
                     pair={pair}
                     onKeyChange={props.onKeyChange}
                     onOperatorChange={props.onOperatorChange}

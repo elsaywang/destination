@@ -3,7 +3,7 @@ import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
 import Search from '@react/react-spectrum/Search';
 import Textfield from '@react/react-spectrum/Textfield';
-import Label from './Label';
+import Label from './common/Label';
 import operatorOptions from '../constants/operatorOptions';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';

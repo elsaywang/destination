@@ -94,7 +94,7 @@ ShallowWrapper {
             >
               Search Results for
             </Heading>
-            <Table
+            <SignalsTable
               items={
                 Array [
                   Object {
@@ -194,7 +194,7 @@ ShallowWrapper {
               >
                 Search Results for
               </Heading>
-              <Table
+              <SignalsTable
                 items={
                   Array [
                     Object {
@@ -277,7 +277,7 @@ ShallowWrapper {
                 >
                   Search Results for
                 </Heading>,
-                <Table
+                <SignalsTable
                   items={
                     Array [
                       Object {
@@ -319,7 +319,7 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "items": Array [
                     Object {
@@ -403,7 +403,7 @@ ShallowWrapper {
               >
                 Search Results for
               </Heading>
-              <Table
+              <SignalsTable
                 items={
                   Array [
                     Object {
@@ -503,7 +503,7 @@ ShallowWrapper {
                 >
                   Search Results for
                 </Heading>
-                <Table
+                <SignalsTable
                   items={
                     Array [
                       Object {
@@ -586,7 +586,7 @@ ShallowWrapper {
                   >
                     Search Results for
                   </Heading>,
-                  <Table
+                  <SignalsTable
                     items={
                       Array [
                         Object {
@@ -628,7 +628,7 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "items": Array [
                       Object {
