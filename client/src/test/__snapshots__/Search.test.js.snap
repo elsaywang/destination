@@ -86,14 +86,14 @@ ShallowWrapper {
                     className="add-button"
                     disabled={false}
                     element="button"
-                    icon={<AddCircle />}
+                    icon={<Add />}
                     invalid={false}
                     label="Add"
                     logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
+                    quiet={true}
                     selected={false}
-                    variant="quiet"
+                    variant="action"
                   />
                 </GridColumn>
               </GridRow>
@@ -263,14 +263,14 @@ ShallowWrapper {
                     className="add-button"
                     disabled={false}
                     element="button"
-                    icon={<AddCircle />}
+                    icon={<Add />}
                     invalid={false}
                     label="Add"
                     logic={false}
                     onClick={[MockFunction]}
-                    quiet={false}
+                    quiet={true}
                     selected={false}
-                    variant="quiet"
+                    variant="action"
                   />
                 </GridColumn>
               </GridRow>
@@ -439,14 +439,14 @@ ShallowWrapper {
                       className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<AddCircle />}
+                      icon={<Add />}
                       invalid={false}
                       label="Add"
                       logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
+                      quiet={true}
                       selected={false}
-                      variant="quiet"
+                      variant="action"
                     />
                   </GridColumn>
                 </GridRow>
@@ -619,14 +619,14 @@ ShallowWrapper {
                       className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<AddCircle />}
+                      icon={<Add />}
                       invalid={false}
                       label="Add"
                       logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
+                      quiet={true}
                       selected={false}
-                      variant="quiet"
+                      variant="action"
                     />
                   </GridColumn>
                 </GridRow>
@@ -784,14 +784,14 @@ ShallowWrapper {
                           className="add-button"
                           disabled={false}
                           element="button"
-                          icon={<AddCircle />}
+                          icon={<Add />}
                           invalid={false}
                           label="Add"
                           logic={false}
                           onClick={[MockFunction]}
-                          quiet={false}
+                          quiet={true}
                           selected={false}
-                          variant="quiet"
+                          variant="action"
                         />
                       </GridColumn>
                     </GridRow>,
@@ -946,14 +946,14 @@ ShallowWrapper {
                           className="add-button"
                           disabled={false}
                           element="button"
-                          icon={<AddCircle />}
+                          icon={<Add />}
                           invalid={false}
                           label="Add"
                           logic={false}
                           onClick={[MockFunction]}
-                          quiet={false}
+                          quiet={true}
                           selected={false}
-                          variant="quiet"
+                          variant="action"
                         />
                       </GridColumn>,
                     ],
@@ -1015,14 +1015,14 @@ ShallowWrapper {
                             className="add-button"
                             disabled={false}
                             element="button"
-                            icon={<AddCircle />}
+                            icon={<Add />}
                             invalid={false}
                             label="Add"
                             logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
+                            quiet={true}
                             selected={false}
-                            variant="quiet"
+                            variant="action"
                           />,
                           false,
                         ],
@@ -1039,14 +1039,14 @@ ShallowWrapper {
                             "className": "add-button",
                             "disabled": false,
                             "element": "button",
-                            "icon": <AddCircle />,
+                            "icon": <Add />,
                             "invalid": false,
                             "label": "Add",
                             "logic": false,
                             "onClick": [MockFunction],
-                            "quiet": false,
+                            "quiet": true,
                             "selected": false,
-                            "variant": "quiet",
+                            "variant": "action",
                           },
                           "ref": null,
                           "rendered": null,
@@ -1593,14 +1593,14 @@ ShallowWrapper {
                       className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<AddCircle />}
+                      icon={<Add />}
                       invalid={false}
                       label="Add"
                       logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
+                      quiet={true}
                       selected={false}
-                      variant="quiet"
+                      variant="action"
                     />
                   </GridColumn>
                 </GridRow>
@@ -1770,14 +1770,14 @@ ShallowWrapper {
                       className="add-button"
                       disabled={false}
                       element="button"
-                      icon={<AddCircle />}
+                      icon={<Add />}
                       invalid={false}
                       label="Add"
                       logic={false}
                       onClick={[MockFunction]}
-                      quiet={false}
+                      quiet={true}
                       selected={false}
-                      variant="quiet"
+                      variant="action"
                     />
                   </GridColumn>
                 </GridRow>
@@ -1946,14 +1946,14 @@ ShallowWrapper {
                         className="add-button"
                         disabled={false}
                         element="button"
-                        icon={<AddCircle />}
+                        icon={<Add />}
                         invalid={false}
                         label="Add"
                         logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
+                        quiet={true}
                         selected={false}
-                        variant="quiet"
+                        variant="action"
                       />
                     </GridColumn>
                   </GridRow>
@@ -2126,14 +2126,14 @@ ShallowWrapper {
                         className="add-button"
                         disabled={false}
                         element="button"
-                        icon={<AddCircle />}
+                        icon={<Add />}
                         invalid={false}
                         label="Add"
                         logic={false}
                         onClick={[MockFunction]}
-                        quiet={false}
+                        quiet={true}
                         selected={false}
-                        variant="quiet"
+                        variant="action"
                       />
                     </GridColumn>
                   </GridRow>
@@ -2291,14 +2291,14 @@ ShallowWrapper {
                             className="add-button"
                             disabled={false}
                             element="button"
-                            icon={<AddCircle />}
+                            icon={<Add />}
                             invalid={false}
                             label="Add"
                             logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
+                            quiet={true}
                             selected={false}
-                            variant="quiet"
+                            variant="action"
                           />
                         </GridColumn>
                       </GridRow>,
@@ -2453,14 +2453,14 @@ ShallowWrapper {
                             className="add-button"
                             disabled={false}
                             element="button"
-                            icon={<AddCircle />}
+                            icon={<Add />}
                             invalid={false}
                             label="Add"
                             logic={false}
                             onClick={[MockFunction]}
-                            quiet={false}
+                            quiet={true}
                             selected={false}
-                            variant="quiet"
+                            variant="action"
                           />
                         </GridColumn>,
                       ],
@@ -2522,14 +2522,14 @@ ShallowWrapper {
                               className="add-button"
                               disabled={false}
                               element="button"
-                              icon={<AddCircle />}
+                              icon={<Add />}
                               invalid={false}
                               label="Add"
                               logic={false}
                               onClick={[MockFunction]}
-                              quiet={false}
+                              quiet={true}
                               selected={false}
-                              variant="quiet"
+                              variant="action"
                             />,
                             false,
                           ],
@@ -2546,14 +2546,14 @@ ShallowWrapper {
                               "className": "add-button",
                               "disabled": false,
                               "element": "button",
-                              "icon": <AddCircle />,
+                              "icon": <Add />,
                               "invalid": false,
                               "label": "Add",
                               "logic": false,
                               "onClick": [MockFunction],
-                              "quiet": false,
+                              "quiet": true,
                               "selected": false,
-                              "variant": "quiet",
+                              "variant": "action",
                             },
                             "ref": null,
                             "rendered": null,
