@@ -47,10 +47,8 @@ class SearchContainer extends Component {
         // TODO: API call to getCounts and set state
     }
 
-    handleSignalTypeChange = value => {
-        this.setState({
-            signalType: value,
-        });
+    handleSignalTypeChange = signalType => {
+        this.setState({ signalType });
         // TODO: API call to update items in table results
     };
 
@@ -65,14 +63,14 @@ class SearchContainer extends Component {
                 <div style={{ display: 'flex' }}>
                     <div className={styles.filterListContainer}>
                         <SignalTypeFilter
-                            handleSignalTypeChange={this.handleSignalTypeChange}
+                            onSignalTypeChange={this.handleSignalTypeChange}
                             counts={this.state.counts}
                             signalType={this.state.signalType}
                         />
                     </div>
                     <div className={styles.tableContainer}>
                         <Heading size={3}>Search Results for</Heading>
-                        <SignalsTable items={items} />
+                        <SignalsTable items={items} signalType={this.state.signalType} />
                     </div>
                 </div>
             </Fragment>
