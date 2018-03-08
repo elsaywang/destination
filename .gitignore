@@ -12,6 +12,9 @@ build
 **/coverage/
 test-report.xml
 
+#root only
+./package-lock.json
+
 # misc
 .DS_Store
 .env.local
