@@ -81,6 +81,53 @@ describe('<Search /> component', () => {
             );
         });
 
+        it('should not render Add <Button /> when there are 3 keyValuePairs', () => {
+            const newState = {
+                ...state,
+                keyValuePairs: [
+                    {
+                        id: 0,
+                        key: '',
+                        operator: '=',
+                        value: '',
+                    },
+                    {
+                        id: 1,
+                        key: '',
+                        operator: '=',
+                        value: '',
+                    },
+                    {
+                        id: 2,
+                        key: '',
+                        operator: '=',
+                        value: '',
+                    },
+                ],
+            };
+
+            const newWrapper = shallow(
+                <Search
+                    {...newState}
+                    onAdvancedSearchChange={mockFn}
+                    onKeyChange={mockFn}
+                    onValueChange={mockFn}
+                    onOperatorChange={mockFn}
+                    onAddClick={mockFn}
+                    onRemoveClick={mockFn}
+                    onStatusChange={mockFn}
+                    onViewRecordsChange={mockFn}
+                    onMinCountChange={mockFn}
+                    onSearch={mockFn}
+                    onClearAll={mockFn}
+                />,
+            );
+
+            expect(
+                newWrapper.find(Button).someWhere(button => button.props().label === 'Add'),
+            ).toBe(false);
+        });
+
         it('renders <Button /> with label "Remove" when there is more than one keyValuePair passed in', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Remove'),

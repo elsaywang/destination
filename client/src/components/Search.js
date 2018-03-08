@@ -15,7 +15,11 @@ import statusOptions from '../constants/signalStatusOptions';
 
 class Search extends Component {
     renderKVPFields = () => {
-        return this.props.keyValuePairs.map(pair => (
+        const { keyValuePairs } = this.props;
+        const validKeyValuePairsLimit = keyValuePairs.length < 3;
+        const isLastPair = id => keyValuePairs[keyValuePairs.length - 1].id === id;
+
+        return keyValuePairs.map(pair => (
             <GridRow key={pair.id} valign="bottom">
                 <GridColumn size={4}>
                     <KeyValuePair
@@ -27,13 +31,16 @@ class Search extends Component {
                     />
                 </GridColumn>
                 <GridColumn size={2}>
-                    <Button
-                        className="add-button"
-                        label="Add"
-                        onClick={this.props.onAddClick}
-                        icon={<AddCircle />}
-                        variant="quiet"
-                    />
+                    {isLastPair(pair.id) &&
+                        validKeyValuePairsLimit && (
+                            <Button
+                                className="add-button"
+                                label="Add"
+                                onClick={this.props.onAddClick}
+                                icon={<AddCircle />}
+                                variant="quiet"
+                            />
+                        )}
                     {pair.id !== 0 && (
                         <Button
                             className="remove-button"
