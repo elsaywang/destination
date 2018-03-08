@@ -82,8 +82,8 @@ ShallowWrapper {
                   "onboardedRecords": 37407,
                 }
               }
-              filter="all"
               handleSignalTypeChange={[Function]}
+              signalType="all"
             />
           </div>
           <div
@@ -182,8 +182,8 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                filter="all"
                 handleSignalTypeChange={[Function]}
+                signalType="all"
               />
             </div>,
             <div
@@ -239,8 +239,8 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                filter="all"
                 handleSignalTypeChange={[Function]}
+                signalType="all"
               />,
               "className": undefined,
             },
@@ -257,8 +257,8 @@ ShallowWrapper {
                   "generalOnlineData": 27,
                   "onboardedRecords": 37407,
                 },
-                "filter": "all",
                 "handleSignalTypeChange": [Function],
+                "signalType": "all",
               },
               "ref": null,
               "rendered": null,
@@ -391,8 +391,8 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                filter="all"
                 handleSignalTypeChange={[Function]}
+                signalType="all"
               />
             </div>
             <div
@@ -491,8 +491,8 @@ ShallowWrapper {
                       "onboardedRecords": 37407,
                     }
                   }
-                  filter="all"
                   handleSignalTypeChange={[Function]}
+                  signalType="all"
                 />
               </div>,
               <div
@@ -548,8 +548,8 @@ ShallowWrapper {
                       "onboardedRecords": 37407,
                     }
                   }
-                  filter="all"
                   handleSignalTypeChange={[Function]}
+                  signalType="all"
                 />,
                 "className": undefined,
               },
@@ -566,8 +566,8 @@ ShallowWrapper {
                     "generalOnlineData": 27,
                     "onboardedRecords": 37407,
                   },
-                  "filter": "all",
                   "handleSignalTypeChange": [Function],
+                  "signalType": "all",
                 },
                 "ref": null,
                 "rendered": null,

@@ -14,8 +14,8 @@ ShallowWrapper {
         "onboardedRecords": 37407,
       }
     }
-    filter="all"
     handleSignalTypeChange={[MockFunction]}
+    signalType="all"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -472,8 +472,8 @@ ShallowWrapper {
         "onboardedRecords": 0,
       }
     }
-    filter="adobeAnalytics"
     handleSignalTypeChange={[MockFunction]}
+    signalType="adobeAnalytics"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -916,7 +916,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`<SignalTypeFilter /> component rendering renders correctly selected <Tab /> component when props.filter change 1`] = `
+exports[`<SignalTypeFilter /> component rendering renders correctly selected <Tab /> component when props.signalType change 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -930,8 +930,8 @@ ShallowWrapper {
         "onboardedRecords": 37407,
       }
     }
-    filter="adobeAnalytics"
     handleSignalTypeChange={[MockFunction]}
+    signalType="adobeAnalytics"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

@@ -39,7 +39,7 @@ class SearchContainer extends Component {
                 generalOnlineData: 27,
                 onboardedRecords: 37407,
             },
-            filter: 'all',
+            signalType: 'all',
         };
     }
 
@@ -49,7 +49,7 @@ class SearchContainer extends Component {
 
     handleSignalTypeChange = value => {
         this.setState({
-            filter: value,
+            signalType: value,
         });
         // TODO: API call to update items in table results
     };
@@ -67,7 +67,7 @@ class SearchContainer extends Component {
                         <SignalTypeFilter
                             handleSignalTypeChange={this.handleSignalTypeChange}
                             counts={this.state.counts}
-                            filter={this.state.filter}
+                            signalType={this.state.signalType}
                         />
                     </div>
                     <div className={styles.tableContainer}>

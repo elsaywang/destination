@@ -16,7 +16,7 @@ describe('<SearchContainer /> component', () => {
             generalOnlineData: 27,
             onboardedRecords: 37407,
         },
-        filter: 'all',
+        signalType: 'all',
     };
     const wrapper = shallow(<SearchContainer store={configureStore()} />).dive();
 
@@ -39,12 +39,12 @@ describe('<SearchContainer /> component', () => {
     });
 
     describe('state changes based on events', () => {
-        it('.handleSignalTypeChange() changes state.filter', () => {
-            const newFilter = 'adobeAnalytics';
+        it('.handleSignalTypeChange() changes state.signalType', () => {
+            const newSignalType = 'adobeAnalytics';
 
-            expect(wrapper.state('filter')).toBe(initialState.filter);
-            wrapper.instance().handleSignalTypeChange(newFilter);
-            expect(wrapper.state('filter')).toBe(newFilter);
+            expect(wrapper.state('signalType')).toBe(initialState.signalType);
+            wrapper.instance().handleSignalTypeChange(newSignalType);
+            expect(wrapper.state('signalType')).toBe(newSignalType);
         });
     });
 });

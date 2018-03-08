@@ -15,13 +15,13 @@ describe('<SignalTypeFilter /> component', () => {
             generalOnlineData: 27,
             onboardedRecords: 37407,
         },
-        filter: 'all',
+        signalType: 'all',
     };
     let wrapper = shallow(
         <SignalTypeFilter
             handleSignalTypeChange={mockFn}
             counts={initialState.counts}
-            filter={initialState.filter}
+            signalType={initialState.signalType}
         />,
     );
     const signalTypeOptions = getSignalTypeOptions(initialState.counts);
@@ -40,19 +40,20 @@ describe('<SignalTypeFilter /> component', () => {
             expect(wrapper.find(Tab).length).toBe(signalTypeOptions.length);
         });
 
-        it('renders correctly selected <Tab /> component when props.filter change', () => {
-            const filter = 'adobeAnalytics';
-            const optionMatchingFilter = signalTypeOptions.find(option => option.value === filter)
-                .label;
+        it('renders correctly selected <Tab /> component when props.signalType change', () => {
+            const signalType = 'adobeAnalytics';
+            const optionMatchingSignalType = signalTypeOptions.find(
+                option => option.value === signalType,
+            ).label;
 
-            wrapper.setProps({ filter });
+            wrapper.setProps({ signalType });
 
             expect(
                 wrapper
                     .find(Tab)
                     .filterWhere(tab => tab.props().selected)
                     .html(),
-            ).toContain(optionMatchingFilter);
+            ).toContain(optionMatchingSignalType);
             expect(wrapper).toMatchSnapshot();
         });
 

@@ -4,11 +4,11 @@ import Heading from '@react/react-spectrum/Heading';
 import styles from './SignalTypeFilter.css';
 import getSignalTypeOptions from '../constants/getSignalTypeOptions';
 
-function SignalTypeFilter({ filter, counts, handleSignalTypeChange }) {
+function SignalTypeFilter({ signalType, counts, handleSignalTypeChange }) {
     const signalTypeOptions = getSignalTypeOptions(counts);
     const renderTabs = () =>
         signalTypeOptions.map(option => (
-            <Tab key={option.value} selected={filter === option.value}>
+            <Tab key={option.value} selected={signalType === option.value}>
                 {option.label}
             </Tab>
         ));
@@ -22,7 +22,7 @@ function SignalTypeFilter({ filter, counts, handleSignalTypeChange }) {
                 className={styles.signalType}
                 orientation="vertical"
                 onChange={handleSignalTypeChange}
-                value={filter}>
+                value={signalType}>
                 {renderTabs()}
             </TabList>
         </Fragment>
