@@ -4,8 +4,8 @@ import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
 import NumberInput from '@react/react-spectrum/NumberInput';
-import AddCircle from '@react/react-spectrum/Icon/AddCircle';
-import RemoveCircle from '@react/react-spectrum/Icon/RemoveCircle';
+import Add from '@react/react-spectrum/Icon/Add';
+import Remove from '@react/react-spectrum/Icon/Remove';
 import AdvancedSearch from './AdvancedSearch';
 import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
@@ -15,7 +15,11 @@ import statusOptions from '../constants/signalStatusOptions';
 
 class Search extends Component {
     renderKVPFields = () => {
-        return this.props.keyValuePairs.map(pair => (
+        const { keyValuePairs } = this.props;
+        const validKeyValuePairsLimit = keyValuePairs.length < 3;
+        const isLastPair = id => keyValuePairs[keyValuePairs.length - 1].id === id;
+
+        return keyValuePairs.map(pair => (
             <GridRow key={pair.id} valign="bottom">
                 <GridColumn size={4}>
                     <KeyValuePair
@@ -27,21 +31,26 @@ class Search extends Component {
                     />
                 </GridColumn>
                 <GridColumn size={2}>
-                    <Button
-                        className="add-button"
-                        label="Add"
-                        onClick={this.props.onAddClick}
-                        icon={<AddCircle />}
-                        variant="quiet"
-                    />
+                    {isLastPair(pair.id) &&
+                        validKeyValuePairsLimit && (
+                            <Button
+                                className="add-button"
+                                label="Add"
+                                onClick={this.props.onAddClick}
+                                icon={<Add />}
+                                variant="action"
+                                quiet
+                            />
+                        )}
                     {pair.id !== 0 && (
                         <Button
                             className="remove-button"
                             data-id={pair.id}
                             label="Remove"
                             onClick={this.props.onRemoveClick}
-                            icon={<RemoveCircle />}
-                            variant="quiet"
+                            icon={<Remove />}
+                            variant="action"
+                            quiet
                         />
                     )}
                 </GridColumn>
