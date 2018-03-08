@@ -1,5 +1,5 @@
 import React from 'react';
-import DataSource from '../components/common/Table/DataSource';
+import DataSource from '../DataSource';
 
 describe('<DataSource /> component', () => {
     it('should not define `getColumns`, so that the `withColumns` HOC can', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import withColumns from '../components/common/Table/withColumns';
+import withColumns from '../withColumns';
 
 describe('withColumns HOC', () => {
     it('should define `getColumns` on a DataSource argument by extending it', () => {

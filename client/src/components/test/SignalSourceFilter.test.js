@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignalSourceFilter from '../components/SignalSourceFilter';
+import SignalSourceFilter from '../SignalSourceFilter';
 import Heading from '@react/react-spectrum/Heading';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
-import getSignalSourceOptions from '../constants/getSignalSourceOptions';
+import getSignalSourceOptions from '../../constants/getSignalSourceOptions';
 
 describe('<SignalSourceFilter /> component', () => {
     const mockFn = jest.fn();

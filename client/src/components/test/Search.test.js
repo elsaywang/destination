@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Search from '../components/Search';
-import AdvancedSearch from '../components/AdvancedSearch';
-import KeyValuePair from '../components/KeyValuePair';
+import Search from '../Search';
+import AdvancedSearch from '../AdvancedSearch';
+import KeyValuePair from '../KeyValuePair';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
-import signalStatuses from '../constants/signalStatusOptions';
-import dateRangeOptions from '../constants/dateRangeOptions';
+import signalStatuses from '../../constants/signalStatusOptions';
+import dateRangeOptions from '../../constants/dateRangeOptions';
 
 describe('<Search /> component', () => {
     const state = {

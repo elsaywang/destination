@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import operators from '../constants/operatorOptions';
-import KeyValuePair from '../components/KeyValuePair';
+import operators from '../../constants/operatorOptions';
+import KeyValuePair from '../KeyValuePair';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
 import Search from '@react/react-spectrum/Search';

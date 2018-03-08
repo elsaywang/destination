@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SearchContainer from '../containers/SearchContainer';
-import SearchFilters from '../containers/SearchFilters';
+import SearchContainer from '../SearchContainer';
+import SearchFilters from '../SearchFilters';
 import SelectList from '@react/react-spectrum/SelectList';
-import SignalSourceFilter from '../components/SignalSourceFilter';
-import SignalsTable from '../components/SignalsTable';
-import configureStore from '../configureStore';
+import SignalSourceFilter from '../../components/SignalSourceFilter';
+import SignalsTable from '../../components/SignalsTable';
+import configureStore from '../../configureStore';
 
 describe('<SearchContainer /> component', () => {
     const initialState = {
