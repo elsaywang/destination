@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { TableView } from '@react/react-spectrum/TableView';
-import Table from '../components/common/Table';
+import Table from '../Table';
 
 describe('<Table /> component', () => {
     const items = [

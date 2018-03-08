@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AdvancedSearch from '../components/AdvancedSearch';
+import AdvancedSearch from '../AdvancedSearch';
 import Select from '@react/react-spectrum/Select';
 import Switch from '@react/react-spectrum/Switch';
 

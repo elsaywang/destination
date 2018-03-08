@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SearchFilters from '../containers/SearchFilters';
-import Search from '../components/Search';
+import SearchFilters from '../SearchFilters';
+import Search from '../../components/Search';
 
 describe('<SearchFilters /> component', () => {
     const mockFn = jest.fn();
