@@ -28,11 +28,14 @@ ShallowWrapper {
           label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
           onChange={[MockFunction]}
         />,
-        <Select
+        <ComboBox
           disabled={true}
+          invalid={false}
           onChange={[MockFunction]}
           options={Array []}
           placeholder="Filter by report suite"
+          quiet={true}
+          required={false}
         />,
       ],
     },
@@ -58,9 +61,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "disabled": true,
+          "invalid": false,
           "onChange": [MockFunction],
           "options": Array [],
           "placeholder": "Filter by report suite",
+          "quiet": true,
+          "required": false,
         },
         "ref": null,
         "rendered": null,
@@ -82,11 +88,14 @@ ShallowWrapper {
             label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
             onChange={[MockFunction]}
           />,
-          <Select
+          <ComboBox
             disabled={true}
+            invalid={false}
             onChange={[MockFunction]}
             options={Array []}
             placeholder="Filter by report suite"
+            quiet={true}
+            required={false}
           />,
         ],
       },
@@ -112,9 +121,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "disabled": true,
+            "invalid": false,
             "onChange": [MockFunction],
             "options": Array [],
             "placeholder": "Filter by report suite",
+            "quiet": true,
+            "required": false,
           },
           "ref": null,
           "rendered": null,

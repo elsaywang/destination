@@ -1,5 +1,5 @@
 import React from 'react';
-import Select from '@react/react-spectrum/Select';
+import ComboBox from '@react/react-spectrum/ComboBox';
 import Switch from '@react/react-spectrum/Switch';
 
 function AdvancedSearch({ enabled, onAdvancedSearchChange, onFilterChange }) {
@@ -13,11 +13,12 @@ function AdvancedSearch({ enabled, onAdvancedSearchChange, onFilterChange }) {
                 aria-label="Advanced Search"
                 label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
             />
-            <Select
+            <ComboBox
                 placeholder="Filter by report suite"
                 onChange={onFilterChange}
                 options={filterOptions}
                 disabled={!enabled}
+                quiet
             />
         </div>
     );

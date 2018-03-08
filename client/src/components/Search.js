@@ -78,6 +78,7 @@ class Search extends Component {
                                                 value={this.props.status}
                                                 onChange={this.props.onStatusChange}
                                                 options={statusOptions}
+                                                quiet
                                             />
                                         </Label>
 
@@ -87,6 +88,7 @@ class Search extends Component {
                                                 value={this.props.viewRecordsFor}
                                                 onChange={this.props.onViewRecordsChange}
                                                 options={viewRecordsOptions}
+                                                quiet
                                             />
                                         </Label>
 
@@ -95,6 +97,7 @@ class Search extends Component {
                                                 className="min-counts"
                                                 onChange={this.props.onMinCountChange}
                                                 value={this.props.minCount}
+                                                quiet
                                             />
                                         </Label>
                                     </GridColumn>
