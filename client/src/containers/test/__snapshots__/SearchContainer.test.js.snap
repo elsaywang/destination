@@ -72,7 +72,7 @@ ShallowWrapper {
           <div
             className={undefined}
           >
-            <SignalSourceFilter
+            <SignalTypeFilter
               counts={
                 Object {
                   "actionableLogFiles": 359,
@@ -83,7 +83,7 @@ ShallowWrapper {
                 }
               }
               filter="all"
-              handleSignalSourceChange={[Function]}
+              handleSignalTypeChange={[Function]}
             />
           </div>
           <div
@@ -172,7 +172,7 @@ ShallowWrapper {
             <div
               className={undefined}
             >
-              <SignalSourceFilter
+              <SignalTypeFilter
                 counts={
                   Object {
                     "actionableLogFiles": 359,
@@ -183,7 +183,7 @@ ShallowWrapper {
                   }
                 }
                 filter="all"
-                handleSignalSourceChange={[Function]}
+                handleSignalTypeChange={[Function]}
               />
             </div>,
             <div
@@ -229,7 +229,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <SignalSourceFilter
+              "children": <SignalTypeFilter
                 counts={
                   Object {
                     "actionableLogFiles": 359,
@@ -240,7 +240,7 @@ ShallowWrapper {
                   }
                 }
                 filter="all"
-                handleSignalSourceChange={[Function]}
+                handleSignalTypeChange={[Function]}
               />,
               "className": undefined,
             },
@@ -258,7 +258,7 @@ ShallowWrapper {
                   "onboardedRecords": 37407,
                 },
                 "filter": "all",
-                "handleSignalSourceChange": [Function],
+                "handleSignalTypeChange": [Function],
               },
               "ref": null,
               "rendered": null,
@@ -381,7 +381,7 @@ ShallowWrapper {
             <div
               className={undefined}
             >
-              <SignalSourceFilter
+              <SignalTypeFilter
                 counts={
                   Object {
                     "actionableLogFiles": 359,
@@ -392,7 +392,7 @@ ShallowWrapper {
                   }
                 }
                 filter="all"
-                handleSignalSourceChange={[Function]}
+                handleSignalTypeChange={[Function]}
               />
             </div>
             <div
@@ -481,7 +481,7 @@ ShallowWrapper {
               <div
                 className={undefined}
               >
-                <SignalSourceFilter
+                <SignalTypeFilter
                   counts={
                     Object {
                       "actionableLogFiles": 359,
@@ -492,7 +492,7 @@ ShallowWrapper {
                     }
                   }
                   filter="all"
-                  handleSignalSourceChange={[Function]}
+                  handleSignalTypeChange={[Function]}
                 />
               </div>,
               <div
@@ -538,7 +538,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <SignalSourceFilter
+                "children": <SignalTypeFilter
                   counts={
                     Object {
                       "actionableLogFiles": 359,
@@ -549,7 +549,7 @@ ShallowWrapper {
                     }
                   }
                   filter="all"
-                  handleSignalSourceChange={[Function]}
+                  handleSignalTypeChange={[Function]}
                 />,
                 "className": undefined,
               },
@@ -567,7 +567,7 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   },
                   "filter": "all",
-                  "handleSignalSourceChange": [Function],
+                  "handleSignalTypeChange": [Function],
                 },
                 "ref": null,
                 "rendered": null,

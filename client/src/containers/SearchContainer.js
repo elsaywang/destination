@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
-import SignalSourceFilter from '../components/SignalSourceFilter';
+import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
 
@@ -47,7 +47,7 @@ class SearchContainer extends Component {
         // TODO: API call to getCounts and set state
     }
 
-    handleSignalSourceChange = value => {
+    handleSignalTypeChange = value => {
         this.setState({
             filter: value,
         });
@@ -64,8 +64,8 @@ class SearchContainer extends Component {
                 </GridRow>
                 <div style={{ display: 'flex' }}>
                     <div className={styles.filterListContainer}>
-                        <SignalSourceFilter
-                            handleSignalSourceChange={this.handleSignalSourceChange}
+                        <SignalTypeFilter
+                            handleSignalTypeChange={this.handleSignalTypeChange}
                             counts={this.state.counts}
                             filter={this.state.filter}
                         />

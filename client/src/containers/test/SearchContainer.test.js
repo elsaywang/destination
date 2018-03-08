@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import SearchContainer from '../SearchContainer';
 import SearchFilters from '../SearchFilters';
 import SelectList from '@react/react-spectrum/SelectList';
-import SignalSourceFilter from '../../components/SignalSourceFilter';
+import SignalTypeFilter from '../../components/SignalTypeFilter';
 import SignalsTable from '../../components/SignalsTable';
 import configureStore from '../../configureStore';
 
@@ -29,8 +29,8 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(SearchFilters).exists()).toBe(true);
         });
 
-        it('renders <SignalSourceFilter /> component', () => {
-            expect(wrapper.find(SignalSourceFilter).exists()).toBe(true);
+        it('renders <SignalTypeFilter /> component', () => {
+            expect(wrapper.find(SignalTypeFilter).exists()).toBe(true);
         });
 
         it('renders <SignalsTable /> component', () => {
@@ -39,11 +39,11 @@ describe('<SearchContainer /> component', () => {
     });
 
     describe('state changes based on events', () => {
-        it('.handleSignalSourceChange() changes state.filter', () => {
+        it('.handleSignalTypeChange() changes state.filter', () => {
             const newFilter = 'adobeAnalytics';
 
             expect(wrapper.state('filter')).toBe(initialState.filter);
-            wrapper.instance().handleSignalSourceChange(newFilter);
+            wrapper.instance().handleSignalTypeChange(newFilter);
             expect(wrapper.state('filter')).toBe(newFilter);
         });
     });

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SignalSourceFilter /> component rendering matches snapshot 1`] = `
+exports[`<SignalTypeFilter /> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignalSourceFilter
+  Symbol(enzyme.__unrendered__): <SignalTypeFilter
     counts={
       Object {
         "actionableLogFiles": 359,
@@ -15,7 +15,7 @@ ShallowWrapper {
       }
     }
     filter="all"
-    handleSignalSourceChange={[MockFunction]}
+    handleSignalTypeChange={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -34,7 +34,7 @@ ShallowWrapper {
           className={undefined}
           size={3}
         >
-          Filter By Signal Source:
+          Filter By Signal Type:
         </Heading>,
         <TabList
           className={undefined}
@@ -92,12 +92,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Source:",
+          "children": "Filter By Signal Type:",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Source:",
+        "rendered": "Filter By Signal Type:",
         "type": [Function],
       },
       Object {
@@ -246,7 +246,7 @@ ShallowWrapper {
             className={undefined}
             size={3}
           >
-            Filter By Signal Source:
+            Filter By Signal Type:
           </Heading>,
           <TabList
             className={undefined}
@@ -304,12 +304,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Source:",
+            "children": "Filter By Signal Type:",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Source:",
+          "rendered": "Filter By Signal Type:",
           "type": [Function],
         },
         Object {
@@ -458,11 +458,11 @@ ShallowWrapper {
 }
 `;
 
-exports[`<SignalSourceFilter /> component rendering renders <Tab /> component with correct label when props.count change 1`] = `
+exports[`<SignalTypeFilter /> component rendering renders <Tab /> component with correct label when props.count change 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignalSourceFilter
+  Symbol(enzyme.__unrendered__): <SignalTypeFilter
     counts={
       Object {
         "actionableLogFiles": 100,
@@ -473,7 +473,7 @@ ShallowWrapper {
       }
     }
     filter="adobeAnalytics"
-    handleSignalSourceChange={[MockFunction]}
+    handleSignalTypeChange={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -492,7 +492,7 @@ ShallowWrapper {
           className={undefined}
           size={3}
         >
-          Filter By Signal Source:
+          Filter By Signal Type:
         </Heading>,
         <TabList
           className={undefined}
@@ -550,12 +550,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Source:",
+          "children": "Filter By Signal Type:",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Source:",
+        "rendered": "Filter By Signal Type:",
         "type": [Function],
       },
       Object {
@@ -704,7 +704,7 @@ ShallowWrapper {
             className={undefined}
             size={3}
           >
-            Filter By Signal Source:
+            Filter By Signal Type:
           </Heading>,
           <TabList
             className={undefined}
@@ -762,12 +762,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Source:",
+            "children": "Filter By Signal Type:",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Source:",
+          "rendered": "Filter By Signal Type:",
           "type": [Function],
         },
         Object {
@@ -916,11 +916,11 @@ ShallowWrapper {
 }
 `;
 
-exports[`<SignalSourceFilter /> component rendering renders correctly selected <Tab /> component when props.filter change 1`] = `
+exports[`<SignalTypeFilter /> component rendering renders correctly selected <Tab /> component when props.filter change 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignalSourceFilter
+  Symbol(enzyme.__unrendered__): <SignalTypeFilter
     counts={
       Object {
         "actionableLogFiles": 359,
@@ -931,7 +931,7 @@ ShallowWrapper {
       }
     }
     filter="adobeAnalytics"
-    handleSignalSourceChange={[MockFunction]}
+    handleSignalTypeChange={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -950,7 +950,7 @@ ShallowWrapper {
           className={undefined}
           size={3}
         >
-          Filter By Signal Source:
+          Filter By Signal Type:
         </Heading>,
         <TabList
           className={undefined}
@@ -1008,12 +1008,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Source:",
+          "children": "Filter By Signal Type:",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Source:",
+        "rendered": "Filter By Signal Type:",
         "type": [Function],
       },
       Object {
@@ -1162,7 +1162,7 @@ ShallowWrapper {
             className={undefined}
             size={3}
           >
-            Filter By Signal Source:
+            Filter By Signal Type:
           </Heading>,
           <TabList
             className={undefined}
@@ -1220,12 +1220,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Source:",
+            "children": "Filter By Signal Type:",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Source:",
+          "rendered": "Filter By Signal Type:",
           "type": [Function],
         },
         Object {

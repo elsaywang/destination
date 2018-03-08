@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
 import Heading from '@react/react-spectrum/Heading';
-import styles from './SignalSourceFilter.css';
-import getSignalSourceOptions from '../constants/getSignalSourceOptions';
+import styles from './SignalTypeFilter.css';
+import getSignalTypeOptions from '../constants/getSignalTypeOptions';
 
-function SignalSourceFilter({ filter, counts, handleSignalSourceChange }) {
-    const signalSourceOptions = getSignalSourceOptions(counts);
+function SignalTypeFilter({ filter, counts, handleSignalTypeChange }) {
+    const signalTypeOptions = getSignalTypeOptions(counts);
     const renderTabs = () =>
-        signalSourceOptions.map(option => (
+        signalTypeOptions.map(option => (
             <Tab key={option.value} selected={filter === option.value}>
                 {option.label}
             </Tab>
@@ -16,12 +16,12 @@ function SignalSourceFilter({ filter, counts, handleSignalSourceChange }) {
     return (
         <Fragment>
             <Heading size={3} className={styles.heading}>
-                Filter By Signal Source:
+                Filter By Signal Type:
             </Heading>
             <TabList
-                className={styles.signalSource}
+                className={styles.signalType}
                 orientation="vertical"
-                onChange={handleSignalSourceChange}
+                onChange={handleSignalTypeChange}
                 value={filter}>
                 {renderTabs()}
             </TabList>
@@ -29,4 +29,4 @@ function SignalSourceFilter({ filter, counts, handleSignalSourceChange }) {
     );
 }
 
-export default SignalSourceFilter;
+export default SignalTypeFilter;

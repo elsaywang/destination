@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignalSourceFilter from '../SignalSourceFilter';
+import SignalTypeFilter from '../SignalTypeFilter';
 import Heading from '@react/react-spectrum/Heading';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
-import getSignalSourceOptions from '../../constants/getSignalSourceOptions';
+import getSignalTypeOptions from '../../constants/getSignalTypeOptions';
 
-describe('<SignalSourceFilter /> component', () => {
+describe('<SignalTypeFilter /> component', () => {
     const mockFn = jest.fn();
     const initialState = {
         counts: {
@@ -18,13 +18,13 @@ describe('<SignalSourceFilter /> component', () => {
         filter: 'all',
     };
     let wrapper = shallow(
-        <SignalSourceFilter
-            handleSignalSourceChange={mockFn}
+        <SignalTypeFilter
+            handleSignalTypeChange={mockFn}
             counts={initialState.counts}
             filter={initialState.filter}
         />,
     );
-    const signalSourceOptions = getSignalSourceOptions(initialState.counts);
+    const signalTypeOptions = getSignalTypeOptions(initialState.counts);
 
     describe('rendering', () => {
         it('matches snapshot', () => {
@@ -37,12 +37,12 @@ describe('<SignalSourceFilter /> component', () => {
 
         it('renders <TabList /> component with correct number of <Tab />s', () => {
             expect(wrapper.find(TabList).exists()).toBe(true);
-            expect(wrapper.find(Tab).length).toBe(signalSourceOptions.length);
+            expect(wrapper.find(Tab).length).toBe(signalTypeOptions.length);
         });
 
         it('renders correctly selected <Tab /> component when props.filter change', () => {
             const filter = 'adobeAnalytics';
-            const optionMatchingFilter = signalSourceOptions.find(option => option.value === filter)
+            const optionMatchingFilter = signalTypeOptions.find(option => option.value === filter)
                 .label;
 
             wrapper.setProps({ filter });
@@ -59,9 +59,7 @@ describe('<SignalSourceFilter /> component', () => {
         it('renders <Tab /> component with correct label when props.count change', () => {
             wrapper
                 .find(Tab)
-                .map((tab, index) =>
-                    expect(tab.html()).toContain(signalSourceOptions[index].label),
-                );
+                .map((tab, index) => expect(tab.html()).toContain(signalTypeOptions[index].label));
 
             const newState = {
                 counts: {
@@ -72,7 +70,7 @@ describe('<SignalSourceFilter /> component', () => {
                     onboardedRecords: 0,
                 },
             };
-            const newSignalSourceOptions = getSignalSourceOptions(newState.counts);
+            const newSignalTypeOptions = getSignalTypeOptions(newState.counts);
 
             wrapper.setProps({
                 ...newState,
@@ -81,7 +79,7 @@ describe('<SignalSourceFilter /> component', () => {
             wrapper
                 .find(Tab)
                 .map((tab, index) =>
-                    expect(tab.html()).toContain(newSignalSourceOptions[index].label),
+                    expect(tab.html()).toContain(newSignalTypeOptions[index].label),
                 );
             expect(wrapper).toMatchSnapshot();
         });
