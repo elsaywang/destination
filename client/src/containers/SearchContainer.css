@@ -1,10 +1,14 @@
 :local(.filterListContainer),
 :local(.tableContainer) {
-    display: inline-block;
     padding: 20px;
 }
 
 :local(.filterListContainer) {
     composes: borderRight from global;
     padding-left: 0;
+}
+
+:local(.tableContainer) {
+    flex: 1;
+    padding-right: 0;
 }

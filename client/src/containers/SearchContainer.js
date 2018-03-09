@@ -11,17 +11,23 @@ import styles from './SearchContainer.css';
 const items = [
     {
         keyValuePair: 'eVar1=acb382hfj',
+        keyName: 'Page Title',
+        valueName: 'Good dogs',
         signalType: 'Actionable Log Files',
         signalSource: '—',
         totalCounts: '4,194,138',
+        totalEventFires: '4,194,138',
         percentageChange: '+ 24.41%',
         includedInTraits: '2 Traits',
     },
     {
         keyValuePair: 'eVar4=CRM12345',
+        keyName: 'Product SKU',
+        valueName: 'pup',
         signalType: 'Onboarded Records',
         signalSource: 'Data Source ABC DEF GHI JKL MNO',
         totalCounts: '1,139,451',
+        totalEventFires: '1,139,451',
         percentageChange: '- 7.82%',
         includedInTraits: '3 Traits',
     },
