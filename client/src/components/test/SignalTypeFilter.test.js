@@ -19,7 +19,7 @@ describe('<SignalTypeFilter /> component', () => {
     };
     let wrapper = shallow(
         <SignalTypeFilter
-            handleSignalTypeChange={mockFn}
+            onSignalTypeChange={mockFn}
             counts={initialState.counts}
             signalType={initialState.signalType}
         />,
@@ -83,6 +83,29 @@ describe('<SignalTypeFilter /> component', () => {
                     expect(tab.html()).toContain(newSignalTypeOptions[index].label),
                 );
             expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe('event handlers', () => {
+        it('.handleSignalTypeChange() calls `onSignalTypeChange` prop with a signalType that corresponds to index of the signal type tab clicked', () => {
+            wrapper.instance().handleSignalTypeChange(0);
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('all');
+            wrapper.instance().handleSignalTypeChange(1);
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
+                'adobeAnalytics',
+            );
+            wrapper.instance().handleSignalTypeChange(2);
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
+                'actionableLogFiles',
+            );
+            wrapper.instance().handleSignalTypeChange(3);
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
+                'generalOnlineData',
+            );
+            wrapper.instance().handleSignalTypeChange(4);
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
+                'onboardedRecords',
+            );
         });
     });
 });

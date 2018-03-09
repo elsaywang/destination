@@ -14,7 +14,7 @@ ShallowWrapper {
         "onboardedRecords": 37407,
       }
     }
-    handleSignalTypeChange={[MockFunction]}
+    onSignalTypeChange={[MockFunction]}
     signalType="all"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -472,7 +472,7 @@ ShallowWrapper {
         "onboardedRecords": 0,
       }
     }
-    handleSignalTypeChange={[MockFunction]}
+    onSignalTypeChange={[MockFunction]}
     signalType="adobeAnalytics"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -930,7 +930,7 @@ ShallowWrapper {
         "onboardedRecords": 37407,
       }
     }
-    handleSignalTypeChange={[MockFunction]}
+    onSignalTypeChange={[MockFunction]}
     signalType="adobeAnalytics"
   />,
   Symbol(enzyme.__renderer__): Object {
