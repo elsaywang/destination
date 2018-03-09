@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
 import Heading from '@react/react-spectrum/Heading';
 import styles from './SignalTypeFilter.css';
@@ -41,5 +42,11 @@ class SignalTypeFilter extends Component {
         onSignalTypeChange(value);
     };
 }
+
+SignalTypeFilter.propTypes = {
+    counts: PropTypes.object,
+    onSignalTypeChange: PropTypes.func,
+    signalType: PropTypes.string,
+};
 
 export default SignalTypeFilter;

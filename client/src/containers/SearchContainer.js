@@ -69,8 +69,8 @@ class SearchContainer extends Component {
                 <div style={{ display: 'flex' }}>
                     <div className={styles.filterListContainer}>
                         <SignalTypeFilter
-                            onSignalTypeChange={this.handleSignalTypeChange}
                             counts={this.state.counts}
+                            onSignalTypeChange={this.handleSignalTypeChange}
                             signalType={this.state.signalType}
                         />
                     </div>
