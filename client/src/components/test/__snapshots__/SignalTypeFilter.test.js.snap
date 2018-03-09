@@ -38,7 +38,7 @@ ShallowWrapper {
         </Heading>,
         <TabList
           className={undefined}
-          onChange={[MockFunction]}
+          onChange={[Function]}
           orientation="vertical"
           value="all"
         >
@@ -148,7 +148,7 @@ ShallowWrapper {
             </Tab>,
           ],
           "className": undefined,
-          "onChange": [MockFunction],
+          "onChange": [Function],
           "orientation": "vertical",
           "value": "all",
         },
@@ -250,7 +250,7 @@ ShallowWrapper {
           </Heading>,
           <TabList
             className={undefined}
-            onChange={[MockFunction]}
+            onChange={[Function]}
             orientation="vertical"
             value="all"
           >
@@ -360,7 +360,7 @@ ShallowWrapper {
               </Tab>,
             ],
             "className": undefined,
-            "onChange": [MockFunction],
+            "onChange": [Function],
             "orientation": "vertical",
             "value": "all",
           },
@@ -496,7 +496,7 @@ ShallowWrapper {
         </Heading>,
         <TabList
           className={undefined}
-          onChange={[MockFunction]}
+          onChange={[Function]}
           orientation="vertical"
           value="adobeAnalytics"
         >
@@ -606,7 +606,7 @@ ShallowWrapper {
             </Tab>,
           ],
           "className": undefined,
-          "onChange": [MockFunction],
+          "onChange": [Function],
           "orientation": "vertical",
           "value": "adobeAnalytics",
         },
@@ -708,7 +708,7 @@ ShallowWrapper {
           </Heading>,
           <TabList
             className={undefined}
-            onChange={[MockFunction]}
+            onChange={[Function]}
             orientation="vertical"
             value="adobeAnalytics"
           >
@@ -818,7 +818,7 @@ ShallowWrapper {
               </Tab>,
             ],
             "className": undefined,
-            "onChange": [MockFunction],
+            "onChange": [Function],
             "orientation": "vertical",
             "value": "adobeAnalytics",
           },
@@ -954,7 +954,7 @@ ShallowWrapper {
         </Heading>,
         <TabList
           className={undefined}
-          onChange={[MockFunction]}
+          onChange={[Function]}
           orientation="vertical"
           value="adobeAnalytics"
         >
@@ -1064,7 +1064,7 @@ ShallowWrapper {
             </Tab>,
           ],
           "className": undefined,
-          "onChange": [MockFunction],
+          "onChange": [Function],
           "orientation": "vertical",
           "value": "adobeAnalytics",
         },
@@ -1166,7 +1166,7 @@ ShallowWrapper {
           </Heading>,
           <TabList
             className={undefined}
-            onChange={[MockFunction]}
+            onChange={[Function]}
             orientation="vertical"
             value="adobeAnalytics"
           >
@@ -1276,7 +1276,7 @@ ShallowWrapper {
               </Tab>,
             ],
             "className": undefined,
-            "onChange": [MockFunction],
+            "onChange": [Function],
             "orientation": "vertical",
             "value": "adobeAnalytics",
           },

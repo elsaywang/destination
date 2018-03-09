@@ -82,7 +82,7 @@ ShallowWrapper {
                   "onboardedRecords": 37407,
                 }
               }
-              handleSignalTypeChange={[Function]}
+              onSignalTypeChange={[Function]}
               signalType="all"
             />
           </div>
@@ -115,6 +115,7 @@ ShallowWrapper {
                   },
                 ]
               }
+              signalType="all"
             />
           </div>
         </div>,
@@ -182,7 +183,7 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                handleSignalTypeChange={[Function]}
+                onSignalTypeChange={[Function]}
                 signalType="all"
               />
             </div>,
@@ -215,6 +216,7 @@ ShallowWrapper {
                     },
                   ]
                 }
+                signalType="all"
               />
             </div>,
           ],
@@ -239,7 +241,7 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                handleSignalTypeChange={[Function]}
+                onSignalTypeChange={[Function]}
                 signalType="all"
               />,
               "className": undefined,
@@ -248,7 +250,7 @@ ShallowWrapper {
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "counts": Object {
                   "actionableLogFiles": 359,
@@ -257,7 +259,7 @@ ShallowWrapper {
                   "generalOnlineData": 27,
                   "onboardedRecords": 37407,
                 },
-                "handleSignalTypeChange": [Function],
+                "onSignalTypeChange": [Function],
                 "signalType": "all",
               },
               "ref": null,
@@ -298,6 +300,7 @@ ShallowWrapper {
                       },
                     ]
                   }
+                  signalType="all"
                 />,
               ],
               "className": undefined,
@@ -339,6 +342,7 @@ ShallowWrapper {
                       "totalCounts": "1,139,451",
                     },
                   ],
+                  "signalType": "all",
                 },
                 "ref": null,
                 "rendered": null,
@@ -391,7 +395,7 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                handleSignalTypeChange={[Function]}
+                onSignalTypeChange={[Function]}
                 signalType="all"
               />
             </div>
@@ -424,6 +428,7 @@ ShallowWrapper {
                     },
                   ]
                 }
+                signalType="all"
               />
             </div>
           </div>,
@@ -491,7 +496,7 @@ ShallowWrapper {
                       "onboardedRecords": 37407,
                     }
                   }
-                  handleSignalTypeChange={[Function]}
+                  onSignalTypeChange={[Function]}
                   signalType="all"
                 />
               </div>,
@@ -524,6 +529,7 @@ ShallowWrapper {
                       },
                     ]
                   }
+                  signalType="all"
                 />
               </div>,
             ],
@@ -548,7 +554,7 @@ ShallowWrapper {
                       "onboardedRecords": 37407,
                     }
                   }
-                  handleSignalTypeChange={[Function]}
+                  onSignalTypeChange={[Function]}
                   signalType="all"
                 />,
                 "className": undefined,
@@ -557,7 +563,7 @@ ShallowWrapper {
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "counts": Object {
                     "actionableLogFiles": 359,
@@ -566,7 +572,7 @@ ShallowWrapper {
                     "generalOnlineData": 27,
                     "onboardedRecords": 37407,
                   },
-                  "handleSignalTypeChange": [Function],
+                  "onSignalTypeChange": [Function],
                   "signalType": "all",
                 },
                 "ref": null,
@@ -607,6 +613,7 @@ ShallowWrapper {
                         },
                       ]
                     }
+                    signalType="all"
                   />,
                 ],
                 "className": undefined,
@@ -648,6 +655,7 @@ ShallowWrapper {
                         "totalCounts": "1,139,451",
                       },
                     ],
+                    "signalType": "all",
                   },
                   "ref": null,
                   "rendered": null,

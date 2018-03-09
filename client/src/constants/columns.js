@@ -1,66 +1,86 @@
-const columns = {
-    keyValuePair: {
-        title: 'Key-Value Pair',
-        key: 'keyValuePair',
-        minWidth: 150,
-    },
-    keyName: {
-        title: 'Key Name',
-        key: 'keyName',
-        width: 150,
-    },
-    valueName: {
-        title: 'Value Name',
-        key: 'valueName',
-        width: 150,
-    },
-    signalType: {
-        title: 'Signal Type',
-        key: 'signalType',
-        width: 140,
-    },
-    signalSource: {
-        title: 'Signal Source',
-        key: 'signalSource',
-        width: 180,
-    },
-    totalCounts: {
-        title: 'Total Counts',
-        key: 'totalCounts',
-        width: 100,
-    },
-    totalEventFires: {
-        title: 'Total Event Fires',
-        key: 'totalEventFires',
-        width: 100,
-    },
-    percentageChange: {
-        title: 'Percentage Change',
-        key: 'percentageChange',
-        width: 120,
-    },
-    includedInTraits: {
-        title: 'Included In Traits',
-        key: 'includedInTraits',
-        width: 120,
-    },
+/**
+ * Individual columns
+ */
+const keyValuePair = {
+    title: 'Key-Value Pair',
+    key: 'keyValuePair',
+    minWidth: 150,
+};
+const keyName = {
+    title: 'Key Name',
+    key: 'keyName',
+    width: 150,
+};
+const valueName = {
+    title: 'Value Name',
+    key: 'valueName',
+    width: 150,
+};
+const signalType = {
+    title: 'Signal Type',
+    key: 'signalType',
+    width: 140,
+};
+const signalSource = {
+    title: 'Signal Source',
+    key: 'signalSource',
+    width: 180,
+};
+const totalCounts = {
+    title: 'Total Counts',
+    key: 'totalCounts',
+    width: 100,
+};
+const totalEventFires = {
+    title: 'Total Event Fires',
+    key: 'totalEventFires',
+    width: 100,
+};
+const percentageChange = {
+    title: 'Percentage Change',
+    key: 'percentageChange',
+    width: 120,
+};
+const includedInTraits = {
+    title: 'Included In Traits',
+    key: 'includedInTraits',
+    width: 120,
 };
 
-// TODO: Actionable Log Files and General Online Data don't show Signal Source
-export const basicColumns = [
-    columns.keyValuePair,
-    columns.signalType,
-    columns.signalSource,
-    columns.totalCounts,
-    columns.percentageChange,
-    columns.includedInTraits,
+/**
+ * Column groups by signal type
+ */
+export const allSignalsColumns = [
+    keyValuePair,
+    signalType,
+    signalSource,
+    totalCounts,
+    percentageChange,
+    includedInTraits,
 ];
 
-export const analyticsColumns = [
-    columns.keyValuePair,
-    columns.keyName,
-    columns.valueName,
-    columns.totalEventFires,
-    columns.percentageChange,
-    columns.includedInTraits,
+// These are the same for now
+export const analyticsColumns = [...allSignalsColumns];
+
+export const advancedAnalyticsColumns = [
+    keyValuePair,
+    keyName,
+    valueName,
+    totalEventFires,
+    percentageChange,
+    includedInTraits,
 ];
+
+export const actionableLogFilesColumns = [
+    keyValuePair,
+    signalType,
+    totalCounts,
+    percentageChange,
+    includedInTraits,
+];
+
+// These are the same for now
+export const generalOnlineDataColumns = [...actionableLogFilesColumns];
+
+// These are the same for now
+export const onboardedRecordsColumns = [...allSignalsColumns];
