@@ -12,8 +12,8 @@ import {
 
 class SignalsTable extends Component {
     render() {
-        const { items, signalType } = this.props;
-        const columns = this.getColumns(signalType);
+        const { items, signalType, isAdvancedSearchEnabled } = this.props;
+        const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
 
         return <Table items={items} columns={columns} renderCell={this.renderCell} />;
     }
@@ -27,7 +27,7 @@ class SignalsTable extends Component {
             case 'all':
                 return allSignalsColumns;
             case 'adobeAnalytics':
-                return isAdvancedSearchEnabled ? analyticsColumns : advancedAnalyticsColumns;
+                return isAdvancedSearchEnabled ? advancedAnalyticsColumns : analyticsColumns;
             case 'actionableLogFiles':
                 return actionableLogFilesColumns;
             case 'generalOnlineData':
@@ -43,6 +43,7 @@ class SignalsTable extends Component {
 SignalsTable.propTypes = {
     items: PropTypes.array,
     signalType: PropTypes.string,
+    isAdvancedSearchEnabled: PropTypes.bool,
 };
 
 export default SignalsTable;

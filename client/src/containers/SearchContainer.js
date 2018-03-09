@@ -76,7 +76,11 @@ class SearchContainer extends Component {
                     </div>
                     <div className={styles.tableContainer}>
                         <Heading size={3}>Search Results for</Heading>
-                        <SignalsTable items={items} signalType={this.state.signalType} />
+                        <SignalsTable
+                            items={items}
+                            signalType={this.state.signalType}
+                            isAdvancedSearchEnabled={false} // TODO: hook this up
+                        />
                     </div>
                 </div>
             </Fragment>

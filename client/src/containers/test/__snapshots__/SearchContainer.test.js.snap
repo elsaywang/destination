@@ -95,6 +95,7 @@ ShallowWrapper {
               Search Results for
             </Heading>
             <SignalsTable
+              isAdvancedSearchEnabled={false}
               items={
                 Array [
                   Object {
@@ -202,6 +203,7 @@ ShallowWrapper {
                 Search Results for
               </Heading>
               <SignalsTable
+                isAdvancedSearchEnabled={false}
                 items={
                   Array [
                     Object {
@@ -292,6 +294,7 @@ ShallowWrapper {
                   Search Results for
                 </Heading>,
                 <SignalsTable
+                  isAdvancedSearchEnabled={false}
                   items={
                     Array [
                       Object {
@@ -342,6 +345,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "isAdvancedSearchEnabled": false,
                   "items": Array [
                     Object {
                       "includedInTraits": "2 Traits",
@@ -432,6 +436,7 @@ ShallowWrapper {
                 Search Results for
               </Heading>
               <SignalsTable
+                isAdvancedSearchEnabled={false}
                 items={
                   Array [
                     Object {
@@ -539,6 +544,7 @@ ShallowWrapper {
                   Search Results for
                 </Heading>
                 <SignalsTable
+                  isAdvancedSearchEnabled={false}
                   items={
                     Array [
                       Object {
@@ -629,6 +635,7 @@ ShallowWrapper {
                     Search Results for
                   </Heading>,
                   <SignalsTable
+                    isAdvancedSearchEnabled={false}
                     items={
                       Array [
                         Object {
@@ -679,6 +686,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "isAdvancedSearchEnabled": false,
                     "items": Array [
                       Object {
                         "includedInTraits": "2 Traits",
