@@ -5,7 +5,7 @@ import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 
 describe('<SignalsTable /> component', () => {
-    const wrapper = shallow(<SignalsTable items={[]} signalType="all" />);
+    const wrapper = shallow(<SignalsTable results={{ list: [] }} signalType="all" />);
 
     describe('rendering', () => {
         it('matches snapshot', () => {
@@ -127,6 +127,43 @@ describe('<SignalsTable /> component', () => {
             expect(actualOnboardedRecordsColumnsIncludes(keyName)).toBeFalsy();
             expect(actualOnboardedRecordsColumnsIncludes(valueName)).toBeFalsy();
             expect(actualOnboardedRecordsColumnsIncludes(totalEventFires)).toBeFalsy();
+        });
+    });
+
+    describe('Rendering cells', () => {
+        const instance = wrapper.instance();
+
+        afterEach(() => {
+            jest.restoreAllMocks();
+        });
+
+        describe('renderCell', () => {
+            it('should call `renderKeyValuePairs` for cells in the `keyValuePairs` column', () => {
+                jest.spyOn(instance, 'renderKeyValuePairs');
+
+                const { renderCell, renderKeyValuePairs } = instance;
+
+                renderCell({ key: 'keyValuePairs' }, []);
+                expect(instance.renderKeyValuePairs).toHaveBeenCalledWith([]);
+            });
+        });
+
+        describe('renderKeyValuePairs', () => {
+            const { renderKeyValuePairs } = wrapper.instance();
+
+            it('should render one key-value pair as `${key}=${value}` inside a div', () => {
+                const oneKeyValuePair = [{ signalKey: 'k', signalValue: 'v' }];
+
+                expect(renderKeyValuePairs(oneKeyValuePair)).toMatchSnapshot();
+            });
+            it('should render two key-value pairs on separate lines', () => {
+                const twoKeyValuePairs = [
+                    { signalKey: 'k1', signalValue: 'v1' },
+                    { signalKey: 'k2', signalValue: 'v2' },
+                ];
+
+                expect(renderKeyValuePairs(twoKeyValuePairs)).toMatchSnapshot();
+            });
         });
     });
 });

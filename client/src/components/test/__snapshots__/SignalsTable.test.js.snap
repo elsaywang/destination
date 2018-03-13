@@ -1,11 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render one key-value pair as \`\${key}=\${value}\` inside a div 1`] = `
+<div>
+  <div>
+    k=v
+  </div>
+</div>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render two key-value pairs on separate lines 1`] = `
+<div>
+  <div>
+    k1=v1
+  </div>
+  <div>
+    k2=v2
+  </div>
+</div>
+`;
+
 exports[`<SignalsTable /> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalsTable
-    items={Array []}
+    results={
+      Object {
+        "list": Array [],
+      }
+    }
     signalType="all"
   />,
   Symbol(enzyme.__renderer__): Object {

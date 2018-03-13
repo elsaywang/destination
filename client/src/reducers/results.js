@@ -18,7 +18,6 @@ const list = handleActions(
 const results = handleActions(
     {
         [CALL_SEARCH_FULFILLED]: (state, action) => {
-            debugger;
             return {
                 ...state,
                 list: list(getList(state), action),

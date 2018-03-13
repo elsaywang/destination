@@ -6,7 +6,14 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
-    results={Array []}
+    results={
+      Object {
+        "list": Array [],
+        "page": 0,
+        "pageSize": 0,
+        "total": 0,
+      }
+    }
     savedSearches={Array []}
     store={
       Object {
@@ -96,7 +103,14 @@ ShallowWrapper {
             </Heading>
             <SignalsTable
               isAdvancedSearchEnabled={false}
-              items={Array []}
+              results={
+                Object {
+                  "list": Array [],
+                  "page": 0,
+                  "pageSize": 0,
+                  "total": 0,
+                }
+              }
               signalType="all"
             />
           </div>
@@ -179,7 +193,14 @@ ShallowWrapper {
               </Heading>
               <SignalsTable
                 isAdvancedSearchEnabled={false}
-                items={Array []}
+                results={
+                  Object {
+                    "list": Array [],
+                    "page": 0,
+                    "pageSize": 0,
+                    "total": 0,
+                  }
+                }
                 signalType="all"
               />
             </div>,
@@ -245,7 +266,14 @@ ShallowWrapper {
                 </Heading>,
                 <SignalsTable
                   isAdvancedSearchEnabled={false}
-                  items={Array []}
+                  results={
+                    Object {
+                      "list": Array [],
+                      "page": 0,
+                      "pageSize": 0,
+                      "total": 0,
+                    }
+                  }
                   signalType="all"
                 />,
               ],
@@ -271,7 +299,12 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "isAdvancedSearchEnabled": false,
-                  "items": Array [],
+                  "results": Object {
+                    "list": Array [],
+                    "page": 0,
+                    "pageSize": 0,
+                    "total": 0,
+                  },
                   "signalType": "all",
                 },
                 "ref": null,
@@ -339,7 +372,14 @@ ShallowWrapper {
               </Heading>
               <SignalsTable
                 isAdvancedSearchEnabled={false}
-                items={Array []}
+                results={
+                  Object {
+                    "list": Array [],
+                    "page": 0,
+                    "pageSize": 0,
+                    "total": 0,
+                  }
+                }
                 signalType="all"
               />
             </div>
@@ -422,7 +462,14 @@ ShallowWrapper {
                 </Heading>
                 <SignalsTable
                   isAdvancedSearchEnabled={false}
-                  items={Array []}
+                  results={
+                    Object {
+                      "list": Array [],
+                      "page": 0,
+                      "pageSize": 0,
+                      "total": 0,
+                    }
+                  }
                   signalType="all"
                 />
               </div>,
@@ -488,7 +535,14 @@ ShallowWrapper {
                   </Heading>,
                   <SignalsTable
                     isAdvancedSearchEnabled={false}
-                    items={Array []}
+                    results={
+                      Object {
+                        "list": Array [],
+                        "page": 0,
+                        "pageSize": 0,
+                        "total": 0,
+                      }
+                    }
                     signalType="all"
                   />,
                 ],
@@ -514,7 +568,12 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "isAdvancedSearchEnabled": false,
-                    "items": Array [],
+                    "results": Object {
+                      "list": Array [],
+                      "page": 0,
+                      "pageSize": 0,
+                      "total": 0,
+                    },
                     "signalType": "all",
                   },
                   "ref": null,
