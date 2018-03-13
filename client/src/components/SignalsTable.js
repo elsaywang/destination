@@ -32,16 +32,29 @@ class SignalsTable extends Component {
         }
     }
 
+    // These new methods will live somewhere else
+    parseSignalsList(signals) {
+        return signals.map(signal => ({
+            ...signal,
+        }));
+    }
+
     render() {
-        const { items, signalType, isAdvancedSearchEnabled } = this.props;
+        const { results, signalType, isAdvancedSearchEnabled } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
 
-        return <Table items={items} columns={columns} renderCell={this.renderCell} />;
+        return (
+            <Table
+                items={this.parseSignalsList(results.list)}
+                columns={columns}
+                renderCell={this.renderCell}
+            />
+        );
     }
 }
 
 SignalsTable.propTypes = {
-    items: PropTypes.array,
+    results: PropTypes.array,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
 };

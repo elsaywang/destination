@@ -22,7 +22,7 @@ ShallowWrapper {
     "props": Object {
       "columns": Array [
         Object {
-          "key": "keyValuePair",
+          "key": "keyValuePairs",
           "minWidth": 150,
           "title": "Key-Value Pair",
         },
@@ -67,7 +67,7 @@ ShallowWrapper {
       "props": Object {
         "columns": Array [
           Object {
-            "key": "keyValuePair",
+            "key": "keyValuePairs",
             "minWidth": 150,
             "title": "Key-Value Pair",
           },

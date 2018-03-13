@@ -11,7 +11,7 @@ var operators = [
 module.exports = () => {
     const data = {
         savedSearches: [],
-        results: [],
+        results: {},
     };
 
     const randomGenerateArray = item => {
@@ -53,6 +53,86 @@ module.exports = () => {
         }
     }
 
+    const mockResults = {
+        list: [
+            {
+                keyValuePairs: [
+                    {
+                        signalKey: 'k-alf1',
+                        signalValue: 'v-alf1',
+                    },
+                    {
+                        signalKey: 'k-alf2',
+                        signalValue: 'v-alf2',
+                    },
+                ],
+                source: {
+                    dataSourceId: 1234,
+                    reportSuiteId: null,
+                    sourceType: 'REALTIME',
+                },
+                totalCounts: 1234,
+                percentageChange: 15.4,
+                includedInTraits: [1, 2, 3],
+                signalStatus: 'USED',
+            },
+            {
+                keyValuePairs: [
+                    {
+                        signalKey: 'k-god',
+                        signalValue: 'v-god',
+                    },
+                ],
+                source: {
+                    dataSourceId: null,
+                    reportSuiteId: null,
+                    sourceType: 'REALTIME',
+                },
+                totalCounts: 7592,
+                percentageChange: -7.11,
+                includedInTraits: [],
+                signalStatus: 'UNUSED',
+            },
+            {
+                keyValuePairs: [
+                    {
+                        signalKey: 'k-onb',
+                        signalValue: 'v-onb',
+                    },
+                ],
+                source: {
+                    dataSourceId: 1234,
+                    reportSuiteId: null,
+                    sourceType: 'ONBOARDED',
+                },
+                totalCounts: 7592,
+                percentageChange: -7.11,
+                includedInTraits: [131, 838],
+                signalStatus: 'USED',
+            },
+            {
+                keyValuePairs: [
+                    {
+                        signalKey: 'k-an',
+                        signalValue: 'v-an',
+                    },
+                ],
+                source: {
+                    dataSourceId: null,
+                    reportSuiteId: 5678,
+                    sourceType: 'ANALYTICS',
+                },
+                totalCounts: 7592,
+                percentageChange: -7.11,
+                includedInTraits: [],
+                signalStatus: 'UNUSED',
+            },
+        ],
+        page: 0,
+        pageSize: 0,
+        total: 4,
+    };
+
     // Create 100 savedSearches
     for (let i = 0; i < 100; i++) {
         data.savedSearches.push({
@@ -60,8 +140,9 @@ module.exports = () => {
             name: faker.name.findName(),
             ...new Results(),
         });
-        data.results.push(new Results());
+        // data.results.push(new Results()); TODO: update fake Results
     }
+    data.results = mockResults;
 
     return data;
 };

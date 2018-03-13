@@ -22,7 +22,7 @@ describe('<SignalsTable /> component', () => {
         const includesColumn = (columns, columnKey) =>
             columns.map(column => column.key).includes(columnKey);
         const {
-            keyValuePair,
+            keyValuePairs,
             keyName,
             valueName,
             signalType,
@@ -37,7 +37,7 @@ describe('<SignalsTable /> component', () => {
             const actualAllSignalsColumnsIncludes = columnKey =>
                 includesColumn(getColumns('all'), columnKey);
 
-            expect(actualAllSignalsColumnsIncludes(keyValuePair)).toBeTruthy();
+            expect(actualAllSignalsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(signalSource)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(totalCounts)).toBeTruthy();
@@ -53,7 +53,7 @@ describe('<SignalsTable /> component', () => {
             const actualAnalyticsColumnsIncludes = columnKey =>
                 includesColumn(getColumns('adobeAnalytics'), columnKey);
 
-            expect(actualAnalyticsColumnsIncludes(keyValuePair)).toBeTruthy();
+            expect(actualAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(signalSource)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(totalCounts)).toBeTruthy();
@@ -69,7 +69,7 @@ describe('<SignalsTable /> component', () => {
             const actualAdvancedAnalyticsColumnsIncludes = columnKey =>
                 includesColumn(getColumns('adobeAnalytics', true), columnKey);
 
-            expect(actualAdvancedAnalyticsColumnsIncludes(keyValuePair)).toBeTruthy();
+            expect(actualAdvancedAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(keyName)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(valueName)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(totalEventFires)).toBeTruthy();
@@ -85,7 +85,7 @@ describe('<SignalsTable /> component', () => {
             const actualActionableLogFilesColumnsIncludes = columnKey =>
                 includesColumn(getColumns('actionableLogFiles'), columnKey);
 
-            expect(actualActionableLogFilesColumnsIncludes(keyValuePair)).toBeTruthy();
+            expect(actualActionableLogFilesColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(signalType)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(totalCounts)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(percentageChange)).toBeTruthy();
@@ -101,7 +101,7 @@ describe('<SignalsTable /> component', () => {
             const actualGeneralOnlineDataColumnsIncludes = columnKey =>
                 includesColumn(getColumns('generalOnlineData'), columnKey);
 
-            expect(actualGeneralOnlineDataColumnsIncludes(keyValuePair)).toBeTruthy();
+            expect(actualGeneralOnlineDataColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(signalType)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(totalCounts)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(percentageChange)).toBeTruthy();
@@ -117,7 +117,7 @@ describe('<SignalsTable /> component', () => {
             const actualOnboardedRecordsColumnsIncludes = columnKey =>
                 includesColumn(getColumns('onboardedRecords'), columnKey);
 
-            expect(actualOnboardedRecordsColumnsIncludes(keyValuePair)).toBeTruthy();
+            expect(actualOnboardedRecordsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(signalSource)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(totalCounts)).toBeTruthy();
