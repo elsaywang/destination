@@ -23,7 +23,7 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-promise-middleware": "^5.0.0",
     "redux-thunk": "^2.2.0",
-    "serve": "^6.5.0",
+    "serve": "^6.5.3",
     "start-server-and-test": "^1.0.1"
   },
   "scripts": {
