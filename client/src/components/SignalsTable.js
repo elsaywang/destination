@@ -11,13 +11,6 @@ import {
 } from '../constants/columns';
 
 class SignalsTable extends Component {
-    render() {
-        const { items, signalType, isAdvancedSearchEnabled } = this.props;
-        const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
-
-        return <Table items={items} columns={columns} renderCell={this.renderCell} />;
-    }
-
     renderCell(column, data) {
         return <span>{data}</span>;
     }
@@ -37,6 +30,13 @@ class SignalsTable extends Component {
             default:
                 return allSignalsColumns;
         }
+    }
+
+    render() {
+        const { items, signalType, isAdvancedSearchEnabled } = this.props;
+        const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
+
+        return <Table items={items} columns={columns} renderCell={this.renderCell} />;
     }
 }
 
