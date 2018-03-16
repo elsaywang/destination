@@ -11,13 +11,7 @@ import {
 } from '../constants/columns';
 
 class SignalsTable extends Component {
-    constructor() {
-        super();
-
-        this.renderCell = this.renderCell.bind(this);
-    }
-
-    renderCell(column, data) {
+    renderCell = (column, data) => {
         switch (column.key) {
             case 'keyValuePairs':
                 return this.renderKeyValuePairs(data);
@@ -26,7 +20,7 @@ class SignalsTable extends Component {
             default:
                 return <span>{data}</span>;
         }
-    }
+    };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
         switch (signalType) {
