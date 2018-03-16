@@ -72,7 +72,7 @@ ShallowWrapper {
           <div
             className={undefined}
           >
-            <SignalSourceFilter
+            <SignalTypeFilter
               counts={
                 Object {
                   "actionableLogFiles": 359,
@@ -82,8 +82,8 @@ ShallowWrapper {
                   "onboardedRecords": 37407,
                 }
               }
-              filter="all"
-              handleSignalSourceChange={[Function]}
+              onSignalTypeChange={[Function]}
+              signalType="all"
             />
           </div>
           <div
@@ -95,26 +95,34 @@ ShallowWrapper {
               Search Results for
             </Heading>
             <SignalsTable
+              isAdvancedSearchEnabled={false}
               items={
                 Array [
                   Object {
                     "includedInTraits": "2 Traits",
+                    "keyName": "Page Title",
                     "keyValuePair": "eVar1=acb382hfj",
                     "percentageChange": "+ 24.41%",
                     "signalSource": "—",
                     "signalType": "Actionable Log Files",
                     "totalCounts": "4,194,138",
+                    "totalEventFires": "4,194,138",
+                    "valueName": "Good dogs",
                   },
                   Object {
                     "includedInTraits": "3 Traits",
+                    "keyName": "Product SKU",
                     "keyValuePair": "eVar4=CRM12345",
                     "percentageChange": "- 7.82%",
                     "signalSource": "Data Source ABC DEF GHI JKL MNO",
                     "signalType": "Onboarded Records",
                     "totalCounts": "1,139,451",
+                    "totalEventFires": "1,139,451",
+                    "valueName": "pup",
                   },
                 ]
               }
+              signalType="all"
             />
           </div>
         </div>,
@@ -172,7 +180,7 @@ ShallowWrapper {
             <div
               className={undefined}
             >
-              <SignalSourceFilter
+              <SignalTypeFilter
                 counts={
                   Object {
                     "actionableLogFiles": 359,
@@ -182,8 +190,8 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                filter="all"
-                handleSignalSourceChange={[Function]}
+                onSignalTypeChange={[Function]}
+                signalType="all"
               />
             </div>,
             <div
@@ -195,26 +203,34 @@ ShallowWrapper {
                 Search Results for
               </Heading>
               <SignalsTable
+                isAdvancedSearchEnabled={false}
                 items={
                   Array [
                     Object {
                       "includedInTraits": "2 Traits",
+                      "keyName": "Page Title",
                       "keyValuePair": "eVar1=acb382hfj",
                       "percentageChange": "+ 24.41%",
                       "signalSource": "—",
                       "signalType": "Actionable Log Files",
                       "totalCounts": "4,194,138",
+                      "totalEventFires": "4,194,138",
+                      "valueName": "Good dogs",
                     },
                     Object {
                       "includedInTraits": "3 Traits",
+                      "keyName": "Product SKU",
                       "keyValuePair": "eVar4=CRM12345",
                       "percentageChange": "- 7.82%",
                       "signalSource": "Data Source ABC DEF GHI JKL MNO",
                       "signalType": "Onboarded Records",
                       "totalCounts": "1,139,451",
+                      "totalEventFires": "1,139,451",
+                      "valueName": "pup",
                     },
                   ]
                 }
+                signalType="all"
               />
             </div>,
           ],
@@ -229,7 +245,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <SignalSourceFilter
+              "children": <SignalTypeFilter
                 counts={
                   Object {
                     "actionableLogFiles": 359,
@@ -239,8 +255,8 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                filter="all"
-                handleSignalSourceChange={[Function]}
+                onSignalTypeChange={[Function]}
+                signalType="all"
               />,
               "className": undefined,
             },
@@ -248,7 +264,7 @@ ShallowWrapper {
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "counts": Object {
                   "actionableLogFiles": 359,
@@ -257,8 +273,8 @@ ShallowWrapper {
                   "generalOnlineData": 27,
                   "onboardedRecords": 37407,
                 },
-                "filter": "all",
-                "handleSignalSourceChange": [Function],
+                "onSignalTypeChange": [Function],
+                "signalType": "all",
               },
               "ref": null,
               "rendered": null,
@@ -278,26 +294,34 @@ ShallowWrapper {
                   Search Results for
                 </Heading>,
                 <SignalsTable
+                  isAdvancedSearchEnabled={false}
                   items={
                     Array [
                       Object {
                         "includedInTraits": "2 Traits",
+                        "keyName": "Page Title",
                         "keyValuePair": "eVar1=acb382hfj",
                         "percentageChange": "+ 24.41%",
                         "signalSource": "—",
                         "signalType": "Actionable Log Files",
                         "totalCounts": "4,194,138",
+                        "totalEventFires": "4,194,138",
+                        "valueName": "Good dogs",
                       },
                       Object {
                         "includedInTraits": "3 Traits",
+                        "keyName": "Product SKU",
                         "keyValuePair": "eVar4=CRM12345",
                         "percentageChange": "- 7.82%",
                         "signalSource": "Data Source ABC DEF GHI JKL MNO",
                         "signalType": "Onboarded Records",
                         "totalCounts": "1,139,451",
+                        "totalEventFires": "1,139,451",
+                        "valueName": "pup",
                       },
                     ]
                   }
+                  signalType="all"
                 />,
               ],
               "className": undefined,
@@ -321,24 +345,32 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "isAdvancedSearchEnabled": false,
                   "items": Array [
                     Object {
                       "includedInTraits": "2 Traits",
+                      "keyName": "Page Title",
                       "keyValuePair": "eVar1=acb382hfj",
                       "percentageChange": "+ 24.41%",
                       "signalSource": "—",
                       "signalType": "Actionable Log Files",
                       "totalCounts": "4,194,138",
+                      "totalEventFires": "4,194,138",
+                      "valueName": "Good dogs",
                     },
                     Object {
                       "includedInTraits": "3 Traits",
+                      "keyName": "Product SKU",
                       "keyValuePair": "eVar4=CRM12345",
                       "percentageChange": "- 7.82%",
                       "signalSource": "Data Source ABC DEF GHI JKL MNO",
                       "signalType": "Onboarded Records",
                       "totalCounts": "1,139,451",
+                      "totalEventFires": "1,139,451",
+                      "valueName": "pup",
                     },
                   ],
+                  "signalType": "all",
                 },
                 "ref": null,
                 "rendered": null,
@@ -381,7 +413,7 @@ ShallowWrapper {
             <div
               className={undefined}
             >
-              <SignalSourceFilter
+              <SignalTypeFilter
                 counts={
                   Object {
                     "actionableLogFiles": 359,
@@ -391,8 +423,8 @@ ShallowWrapper {
                     "onboardedRecords": 37407,
                   }
                 }
-                filter="all"
-                handleSignalSourceChange={[Function]}
+                onSignalTypeChange={[Function]}
+                signalType="all"
               />
             </div>
             <div
@@ -404,26 +436,34 @@ ShallowWrapper {
                 Search Results for
               </Heading>
               <SignalsTable
+                isAdvancedSearchEnabled={false}
                 items={
                   Array [
                     Object {
                       "includedInTraits": "2 Traits",
+                      "keyName": "Page Title",
                       "keyValuePair": "eVar1=acb382hfj",
                       "percentageChange": "+ 24.41%",
                       "signalSource": "—",
                       "signalType": "Actionable Log Files",
                       "totalCounts": "4,194,138",
+                      "totalEventFires": "4,194,138",
+                      "valueName": "Good dogs",
                     },
                     Object {
                       "includedInTraits": "3 Traits",
+                      "keyName": "Product SKU",
                       "keyValuePair": "eVar4=CRM12345",
                       "percentageChange": "- 7.82%",
                       "signalSource": "Data Source ABC DEF GHI JKL MNO",
                       "signalType": "Onboarded Records",
                       "totalCounts": "1,139,451",
+                      "totalEventFires": "1,139,451",
+                      "valueName": "pup",
                     },
                   ]
                 }
+                signalType="all"
               />
             </div>
           </div>,
@@ -481,7 +521,7 @@ ShallowWrapper {
               <div
                 className={undefined}
               >
-                <SignalSourceFilter
+                <SignalTypeFilter
                   counts={
                     Object {
                       "actionableLogFiles": 359,
@@ -491,8 +531,8 @@ ShallowWrapper {
                       "onboardedRecords": 37407,
                     }
                   }
-                  filter="all"
-                  handleSignalSourceChange={[Function]}
+                  onSignalTypeChange={[Function]}
+                  signalType="all"
                 />
               </div>,
               <div
@@ -504,26 +544,34 @@ ShallowWrapper {
                   Search Results for
                 </Heading>
                 <SignalsTable
+                  isAdvancedSearchEnabled={false}
                   items={
                     Array [
                       Object {
                         "includedInTraits": "2 Traits",
+                        "keyName": "Page Title",
                         "keyValuePair": "eVar1=acb382hfj",
                         "percentageChange": "+ 24.41%",
                         "signalSource": "—",
                         "signalType": "Actionable Log Files",
                         "totalCounts": "4,194,138",
+                        "totalEventFires": "4,194,138",
+                        "valueName": "Good dogs",
                       },
                       Object {
                         "includedInTraits": "3 Traits",
+                        "keyName": "Product SKU",
                         "keyValuePair": "eVar4=CRM12345",
                         "percentageChange": "- 7.82%",
                         "signalSource": "Data Source ABC DEF GHI JKL MNO",
                         "signalType": "Onboarded Records",
                         "totalCounts": "1,139,451",
+                        "totalEventFires": "1,139,451",
+                        "valueName": "pup",
                       },
                     ]
                   }
+                  signalType="all"
                 />
               </div>,
             ],
@@ -538,7 +586,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <SignalSourceFilter
+                "children": <SignalTypeFilter
                   counts={
                     Object {
                       "actionableLogFiles": 359,
@@ -548,8 +596,8 @@ ShallowWrapper {
                       "onboardedRecords": 37407,
                     }
                   }
-                  filter="all"
-                  handleSignalSourceChange={[Function]}
+                  onSignalTypeChange={[Function]}
+                  signalType="all"
                 />,
                 "className": undefined,
               },
@@ -557,7 +605,7 @@ ShallowWrapper {
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "counts": Object {
                     "actionableLogFiles": 359,
@@ -566,8 +614,8 @@ ShallowWrapper {
                     "generalOnlineData": 27,
                     "onboardedRecords": 37407,
                   },
-                  "filter": "all",
-                  "handleSignalSourceChange": [Function],
+                  "onSignalTypeChange": [Function],
+                  "signalType": "all",
                 },
                 "ref": null,
                 "rendered": null,
@@ -587,26 +635,34 @@ ShallowWrapper {
                     Search Results for
                   </Heading>,
                   <SignalsTable
+                    isAdvancedSearchEnabled={false}
                     items={
                       Array [
                         Object {
                           "includedInTraits": "2 Traits",
+                          "keyName": "Page Title",
                           "keyValuePair": "eVar1=acb382hfj",
                           "percentageChange": "+ 24.41%",
                           "signalSource": "—",
                           "signalType": "Actionable Log Files",
                           "totalCounts": "4,194,138",
+                          "totalEventFires": "4,194,138",
+                          "valueName": "Good dogs",
                         },
                         Object {
                           "includedInTraits": "3 Traits",
+                          "keyName": "Product SKU",
                           "keyValuePair": "eVar4=CRM12345",
                           "percentageChange": "- 7.82%",
                           "signalSource": "Data Source ABC DEF GHI JKL MNO",
                           "signalType": "Onboarded Records",
                           "totalCounts": "1,139,451",
+                          "totalEventFires": "1,139,451",
+                          "valueName": "pup",
                         },
                       ]
                     }
+                    signalType="all"
                   />,
                 ],
                 "className": undefined,
@@ -630,24 +686,32 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "isAdvancedSearchEnabled": false,
                     "items": Array [
                       Object {
                         "includedInTraits": "2 Traits",
+                        "keyName": "Page Title",
                         "keyValuePair": "eVar1=acb382hfj",
                         "percentageChange": "+ 24.41%",
                         "signalSource": "—",
                         "signalType": "Actionable Log Files",
                         "totalCounts": "4,194,138",
+                        "totalEventFires": "4,194,138",
+                        "valueName": "Good dogs",
                       },
                       Object {
                         "includedInTraits": "3 Traits",
+                        "keyName": "Product SKU",
                         "keyValuePair": "eVar4=CRM12345",
                         "percentageChange": "- 7.82%",
                         "signalSource": "Data Source ABC DEF GHI JKL MNO",
                         "signalType": "Onboarded Records",
                         "totalCounts": "1,139,451",
+                        "totalEventFires": "1,139,451",
+                        "valueName": "pup",
                       },
                     ],
+                    "signalType": "all",
                   },
                   "ref": null,
                   "rendered": null,

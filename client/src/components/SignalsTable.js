@@ -1,20 +1,40 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Table from './common/Table';
-import { analyticsColumns, basicColumns } from '../constants/columns';
+import {
+    allSignalsColumns,
+    analyticsColumns,
+    advancedAnalyticsColumns,
+    actionableLogFilesColumns,
+    generalOnlineDataColumns,
+    onboardedRecordsColumns,
+} from '../constants/columns';
 
 class SignalsTable extends Component {
-    getColumns(signalType) {
-        return signalType === 'analytics' ? analyticsColumns : basicColumns;
-    }
-
     renderCell(column, data) {
         return <span>{data}</span>;
     }
 
+    getColumns(signalType, isAdvancedSearchEnabled = false) {
+        switch (signalType) {
+            case 'all':
+                return allSignalsColumns;
+            case 'adobeAnalytics':
+                return isAdvancedSearchEnabled ? advancedAnalyticsColumns : analyticsColumns;
+            case 'actionableLogFiles':
+                return actionableLogFilesColumns;
+            case 'generalOnlineData':
+                return generalOnlineDataColumns;
+            case 'onboardedRecords':
+                return onboardedRecordsColumns;
+            default:
+                return allSignalsColumns;
+        }
+    }
+
     render() {
-        const { items, signalType } = this.props; // TODO: hook up signalType to real filters
-        const columns = this.getColumns(signalType);
+        const { items, signalType, isAdvancedSearchEnabled } = this.props;
+        const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
 
         return <Table items={items} columns={columns} renderCell={this.renderCell} />;
     }
@@ -22,7 +42,8 @@ class SignalsTable extends Component {
 
 SignalsTable.propTypes = {
     items: PropTypes.array,
-    // signalType: PropTypes.string,
+    signalType: PropTypes.string,
+    isAdvancedSearchEnabled: PropTypes.bool,
 };
 
 export default SignalsTable;

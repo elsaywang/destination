@@ -5,6 +5,6 @@
     font-weight: lighter;
 }
 
-:local(.signalSource) {
+:local(.signalType) {
     padding: 0 20px;
 }

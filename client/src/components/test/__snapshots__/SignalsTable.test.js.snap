@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignalsTable /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SignalsTable
+    items={Array []}
+    signalType="all"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "columns": Array [
+        Object {
+          "key": "keyValuePair",
+          "minWidth": 150,
+          "title": "Key-Value Pair",
+        },
+        Object {
+          "key": "signalType",
+          "title": "Signal Type",
+          "width": 140,
+        },
+        Object {
+          "key": "signalSource",
+          "title": "Signal Source",
+          "width": 180,
+        },
+        Object {
+          "key": "totalCounts",
+          "title": "Total Counts",
+          "width": 100,
+        },
+        Object {
+          "key": "percentageChange",
+          "title": "Percentage Change",
+          "width": 120,
+        },
+        Object {
+          "key": "includedInTraits",
+          "title": "Included In Traits",
+          "width": 120,
+        },
+      ],
+      "items": Array [],
+      "renderCell": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "columns": Array [
+          Object {
+            "key": "keyValuePair",
+            "minWidth": 150,
+            "title": "Key-Value Pair",
+          },
+          Object {
+            "key": "signalType",
+            "title": "Signal Type",
+            "width": 140,
+          },
+          Object {
+            "key": "signalSource",
+            "title": "Signal Source",
+            "width": 180,
+          },
+          Object {
+            "key": "totalCounts",
+            "title": "Total Counts",
+            "width": 100,
+          },
+          Object {
+            "key": "percentageChange",
+            "title": "Percentage Change",
+            "width": 120,
+          },
+          Object {
+            "key": "includedInTraits",
+            "title": "Included In Traits",
+            "width": 120,
+          },
+        ],
+        "items": Array [],
+        "renderCell": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

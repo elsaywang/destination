@@ -4,24 +4,30 @@ import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
-import SignalSourceFilter from '../components/SignalSourceFilter';
+import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
 
 const items = [
     {
         keyValuePair: 'eVar1=acb382hfj',
+        keyName: 'Page Title',
+        valueName: 'Good dogs',
         signalType: 'Actionable Log Files',
         signalSource: '—',
         totalCounts: '4,194,138',
+        totalEventFires: '4,194,138',
         percentageChange: '+ 24.41%',
         includedInTraits: '2 Traits',
     },
     {
         keyValuePair: 'eVar4=CRM12345',
+        keyName: 'Product SKU',
+        valueName: 'pup',
         signalType: 'Onboarded Records',
         signalSource: 'Data Source ABC DEF GHI JKL MNO',
         totalCounts: '1,139,451',
+        totalEventFires: '1,139,451',
         percentageChange: '- 7.82%',
         includedInTraits: '3 Traits',
     },
@@ -39,7 +45,7 @@ class SearchContainer extends Component {
                 generalOnlineData: 27,
                 onboardedRecords: 37407,
             },
-            filter: 'all',
+            signalType: 'all',
         };
     }
 
@@ -47,10 +53,8 @@ class SearchContainer extends Component {
         // TODO: API call to getCounts and set state
     }
 
-    handleSignalSourceChange = value => {
-        this.setState({
-            filter: value,
-        });
+    handleSignalTypeChange = signalType => {
+        this.setState({ signalType });
         // TODO: API call to update items in table results
     };
 
@@ -64,15 +68,19 @@ class SearchContainer extends Component {
                 </GridRow>
                 <div style={{ display: 'flex' }}>
                     <div className={styles.filterListContainer}>
-                        <SignalSourceFilter
-                            handleSignalSourceChange={this.handleSignalSourceChange}
+                        <SignalTypeFilter
                             counts={this.state.counts}
-                            filter={this.state.filter}
+                            onSignalTypeChange={this.handleSignalTypeChange}
+                            signalType={this.state.signalType}
                         />
                     </div>
                     <div className={styles.tableContainer}>
                         <Heading size={3}>Search Results for</Heading>
-                        <SignalsTable items={items} />
+                        <SignalsTable
+                            items={items}
+                            signalType={this.state.signalType}
+                            isAdvancedSearchEnabled={false} // TODO: hook this up
+                        />
                     </div>
                 </div>
             </Fragment>

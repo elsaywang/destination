@@ -1,4 +1,4 @@
-const getSignalSourceOptions = counts => [
+const getSignalTypeOptions = counts => [
     { label: `All (${counts.all})`, value: 'all' },
     { label: `Adobe Analytics (${counts.adobeAnalytics})`, value: 'adobeAnalytics' },
     { label: `Actionable Log Files (${counts.actionableLogFiles})`, value: 'actionableLogFiles' },
@@ -6,4 +6,4 @@ const getSignalSourceOptions = counts => [
     { label: `Onboarded Records (${counts.onboardedRecords})`, value: 'onboardedRecords' },
 ];
 
-export default getSignalSourceOptions;
+export default getSignalTypeOptions;
