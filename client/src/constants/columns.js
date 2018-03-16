@@ -2,7 +2,7 @@
  * All column keys
  */
 export const columnKeys = {
-    keyValuePair: 'keyValuePair',
+    keyValuePairs: 'keyValuePairs',
     keyName: 'keyName',
     valueName: 'valueName',
     signalType: 'signalType',
@@ -16,9 +16,9 @@ export const columnKeys = {
 /**
  * Individual columns
  */
-const keyValuePair = {
+const keyValuePairs = {
     title: 'Key-Value Pair',
-    key: columnKeys.keyValuePair,
+    key: columnKeys.keyValuePairs,
     minWidth: 150,
 };
 const keyName = {
@@ -66,7 +66,7 @@ const includedInTraits = {
  * Column groups by signal type
  */
 export const allSignalsColumns = [
-    keyValuePair,
+    keyValuePairs,
     signalType,
     signalSource,
     totalCounts,
@@ -78,7 +78,7 @@ export const allSignalsColumns = [
 export const analyticsColumns = [...allSignalsColumns];
 
 export const advancedAnalyticsColumns = [
-    keyValuePair,
+    keyValuePairs,
     keyName,
     valueName,
     totalEventFires,
@@ -87,7 +87,7 @@ export const advancedAnalyticsColumns = [
 ];
 
 export const actionableLogFilesColumns = [
-    keyValuePair,
+    keyValuePairs,
     signalType,
     totalCounts,
     percentageChange,

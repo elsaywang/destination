@@ -20,10 +20,10 @@ class KeyValuePair extends Component {
         return fetch(`http://localhost:3002/api/results`)
             .then(response => response.json())
             .then(json =>
-                json.reduce((curr, signal) => {
+                json.list.reduce((curr, signal) => {
                     signal.keyValuePairs.forEach(kvp => {
-                        if (kvp.key.includes(key)) {
-                            curr.push(kvp.key);
+                        if (kvp.signalKey.includes(key)) {
+                            curr.push(kvp.signalKey);
                         }
                     });
 

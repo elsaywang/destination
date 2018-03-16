@@ -11,9 +11,16 @@ import {
 } from '../constants/columns';
 
 class SignalsTable extends Component {
-    renderCell(column, data) {
-        return <span>{data}</span>;
-    }
+    renderCell = (column, data) => {
+        switch (column.key) {
+            case 'keyValuePairs':
+                return this.renderKeyValuePairs(data);
+            case 'includedInTraits':
+                return this.renderIncludedInTraits(data);
+            default:
+                return <span>{data}</span>;
+        }
+    };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
         switch (signalType) {
@@ -32,16 +39,82 @@ class SignalsTable extends Component {
         }
     }
 
+    // These new methods will live somewhere else
+    formatSignalsList(signals) {
+        return signals.map(signal => ({
+            ...signal,
+            signalType: this.formatSignalType(signal),
+            signalSource: this.formatSignalSource(signal),
+        }));
+    }
+
+    // TEMP: ALF signals will soon have their own signal type
+    isALF(signal) {
+        const { dataSourceId } = signal.source;
+        const isNumeric = val => Number(parseFloat(val)) === val;
+
+        return isNumeric(dataSourceId);
+    }
+
+    formatSignalType(signal) {
+        const { sourceType } = signal.source;
+
+        switch (sourceType) {
+            case 'ANALYTICS':
+                return 'Adobe Analytics';
+            case 'REALTIME':
+                return this.isALF(signal) ? 'Actionable Log Files' : 'General Online Data';
+            case 'ONBOARDED':
+                return 'Onboarded Records';
+            default:
+                return '';
+        }
+    }
+
+    formatSignalSource(signal) {
+        const { sourceType, dataSourceId, reportSuiteId } = signal.source;
+
+        switch (sourceType) {
+            case 'ANALYTICS':
+                return reportSuiteId;
+            case 'REALTIME':
+                return '—';
+            case 'ONBOARDED':
+                return dataSourceId;
+            default:
+                return '—';
+        }
+    }
+
+    renderKeyValuePairs(keyValuePairs) {
+        return (
+            <div>
+                {keyValuePairs.map(({ signalKey, signalValue }) => {
+                    return (
+                        <div key={`${signalKey}-${signalValue}`}>
+                            {`${signalKey}=${signalValue}`}
+                        </div>
+                    );
+                })}
+            </div>
+        );
+    }
+
+    renderIncludedInTraits(sids) {
+        return <span>{`${sids.length} Traits`}</span>;
+    }
+
     render() {
-        const { items, signalType, isAdvancedSearchEnabled } = this.props;
+        const { results, signalType, isAdvancedSearchEnabled } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
+        const items = this.formatSignalsList(results.list);
 
         return <Table items={items} columns={columns} renderCell={this.renderCell} />;
     }
 }
 
 SignalsTable.propTypes = {
-    items: PropTypes.array,
+    results: PropTypes.object,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
 };

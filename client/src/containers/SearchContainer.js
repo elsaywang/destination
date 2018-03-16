@@ -8,31 +8,6 @@ import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
 
-const items = [
-    {
-        keyValuePair: 'eVar1=acb382hfj',
-        keyName: 'Page Title',
-        valueName: 'Good dogs',
-        signalType: 'Actionable Log Files',
-        signalSource: '—',
-        totalCounts: '4,194,138',
-        totalEventFires: '4,194,138',
-        percentageChange: '+ 24.41%',
-        includedInTraits: '2 Traits',
-    },
-    {
-        keyValuePair: 'eVar4=CRM12345',
-        keyName: 'Product SKU',
-        valueName: 'pup',
-        signalType: 'Onboarded Records',
-        signalSource: 'Data Source ABC DEF GHI JKL MNO',
-        totalCounts: '1,139,451',
-        totalEventFires: '1,139,451',
-        percentageChange: '- 7.82%',
-        includedInTraits: '3 Traits',
-    },
-];
-
 class SearchContainer extends Component {
     constructor() {
         super();
@@ -77,7 +52,7 @@ class SearchContainer extends Component {
                     <div className={styles.tableContainer}>
                         <Heading size={3}>Search Results for</Heading>
                         <SignalsTable
-                            items={items}
+                            results={this.props.results}
                             signalType={this.state.signalType}
                             isAdvancedSearchEnabled={false} // TODO: hook this up
                         />
@@ -88,9 +63,9 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    results: state.results,
-    savedSearches: state.savedSearches,
+const mapStateToProps = ({ results, savedSearches }) => ({
+    results,
+    savedSearches,
 });
 
 export default connect(mapStateToProps, actionCreators)(SearchContainer);
