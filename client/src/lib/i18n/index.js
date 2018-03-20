@@ -1,23 +1,22 @@
 import { addLocaleData } from 'react-intl';
 
 import en from 'react-intl/locale-data/en';
-import enUs from './messages/en-US.json';
+import enMessages from './messages/en.json';
 
 import es from 'react-intl/locale-data/es';
-import esEs from './messages/es-ES.json';
+import esMessages from './messages/es.json';
 
 const locales = {
-    'en-US': {
+    en: {
         locale: 'en',
-        messages: enUs,
+        messages: enMessages,
     },
-    'es-ES': {
+    es: {
         locale: 'es',
-        messages: esEs,
+        messages: esMessages,
     },
 };
 
 addLocaleData([...en, ...es]);
 
-export const getLocaleData = (locale = 'en-US') =>
-    locales[locale] ? locales[locale] : locales['en-US'];
+export const getLocaleData = (locale = 'en') => (locales[locale] ? locales[locale] : locales['en']);
