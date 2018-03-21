@@ -38,26 +38,32 @@ class SearchContainer extends Component {
             <Fragment>
                 <GridRow>
                     <GridColumn size={12}>
-                        <SearchFilters onSearch={this.props.callSearch} />
+                        <SearchFilters
+                            onSearch={this.props.callSearch}
+                            onClearAll={this.props.clearSearch}
+                        />
                     </GridColumn>
                 </GridRow>
-                <div style={{ display: 'flex' }}>
-                    <div className={styles.filterListContainer}>
-                        <SignalTypeFilter
-                            counts={this.state.counts}
-                            onSignalTypeChange={this.handleSignalTypeChange}
-                            signalType={this.state.signalType}
-                        />
+
+                {Object.keys(this.props.results.list).length > 0 && (
+                    <div style={{ display: 'flex' }}>
+                        <div className={styles.filterListContainer}>
+                            <SignalTypeFilter
+                                counts={this.state.counts}
+                                onSignalTypeChange={this.handleSignalTypeChange}
+                                signalType={this.state.signalType}
+                            />
+                        </div>
+                        <div className={styles.tableContainer}>
+                            <Heading size={3}>Search Results for</Heading>
+                            <SignalsTable
+                                results={this.props.results}
+                                signalType={this.state.signalType}
+                                isAdvancedSearchEnabled={false} // TODO: hook this up
+                            />
+                        </div>
                     </div>
-                    <div className={styles.tableContainer}>
-                        <Heading size={3}>Search Results for</Heading>
-                        <SignalsTable
-                            results={this.props.results}
-                            signalType={this.state.signalType}
-                            isAdvancedSearchEnabled={false} // TODO: hook this up
-                        />
-                    </div>
-                </div>
+                )}
             </Fragment>
         );
     }

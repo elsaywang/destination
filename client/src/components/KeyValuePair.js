@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
 import Search from '@react/react-spectrum/Search';
@@ -13,11 +13,13 @@ class KeyValuePair extends Component {
         super(props);
 
         this.onSelectOperatorChange = this.props.onOperatorChange.bind(this, this.props.pair.id);
+        this.onKeySelect = this.props.onKeySelect.bind(this, this.props.pair.id);
+        this.onValueChange = this.props.onValueChange.bind(this, this.props.pair.id);
     }
 
     getCompletions = key => {
         // TODO: implement `/api/signals/keys?search=${key}` endpoint when API is ready
-        return fetch(`http://localhost:3002/api/results`)
+        return fetch(`api/results`)
             .then(response => response.json())
             .then(json =>
                 json.list.reduce((curr, signal) => {
@@ -29,24 +31,27 @@ class KeyValuePair extends Component {
 
                     return curr;
                 }, []),
-            );
+            )
+            .catch(() => []);
     };
 
     render() {
-        const { onValueChange, onKeySelect, pair } = this.props;
-        const { id, value, operator } = pair;
+        const { id, value, operator } = this.props.pair;
         const forKey = `key${id}`;
         const forValue = `value${id}`;
 
         return (
-            <Fragment>
+            <div data-test="key-value-pair">
                 <Label value="Key" labelFor={forKey}>
                     <Autocomplete
-                        data-id={id}
                         className={classNames(styles['key-search'], 'key-search')}
                         getCompletions={this.getCompletions}
-                        onSelect={onKeySelect}>
-                        <Textfield id={forKey} placeholder="Type a key or key name" />
+                        onSelect={this.onKeySelect}>
+                        <Textfield
+                            data-test="key-search-field"
+                            id={forKey}
+                            placeholder="Type a key or key name"
+                        />
                     </Autocomplete>
                 </Label>
                 <Select
@@ -58,14 +63,14 @@ class KeyValuePair extends Component {
                 <Label value="Value (Optional)" labelFor={forValue}>
                     <Search
                         className="value-search"
+                        data-test="value-search"
                         id={forValue}
-                        data-id={id}
                         value={value}
                         placeholder="Type a value"
-                        onChange={onValueChange}
+                        onChange={this.onValueChange}
                     />
                 </Label>
-            </Fragment>
+            </div>
         );
     }
 }

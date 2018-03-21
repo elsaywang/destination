@@ -5,7 +5,12 @@ import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 
 describe('<SignalsTable /> component', () => {
-    const wrapper = shallow(<SignalsTable results={{ list: [] }} signalType="all" />);
+    const wrapper = shallow(
+        <SignalsTable
+            results={{ list: [{ id: 0, name: 'test', source: { sourceType: 'ANALYTICS' } }] }}
+            signalType="all"
+        />,
+    );
 
     describe('rendering', () => {
         it('matches snapshot', () => {

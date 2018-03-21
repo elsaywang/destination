@@ -11,6 +11,7 @@ const initialSearchState = {
     ],
     status: 'all',
     advanced: false,
+    filter: '',
     viewRecordsFor: 7,
     minCount: 1000,
 };
@@ -25,29 +26,34 @@ class SearchFilters extends Component {
     onAdvancedSearchChange = value => {
         this.setState({
             advanced: value,
+            filter: '',
         });
     };
 
-    onKeyChange = (value, event) => {
-        let keyValuePairs = [...this.state.keyValuePairs];
-        const id = event.target.closest('.key-search').children[0].getAttribute('data-id');
+    onFilterChange = value => {
+        this.setState({
+            filter: value,
+        });
+    };
 
-        keyValuePairs.find(kvp => kvp.id === Number(id)).key = value;
+    onKeySelect = (id, value) => {
+        let keyValuePairs = [...this.state.keyValuePairs];
+
+        keyValuePairs.find(kvp => kvp.id === id).key = value;
         this.setState({ keyValuePairs });
     };
 
-    onValueChange = (value, event) => {
+    onValueChange = (id, value) => {
         let keyValuePairs = [...this.state.keyValuePairs];
-        const id = event.target.closest('.value-search').children[0].getAttribute('data-id');
 
-        keyValuePairs.find(kvp => kvp.id === Number(id)).value = value;
+        keyValuePairs.find(kvp => kvp.id === id).value = value;
         this.setState({ keyValuePairs });
     };
 
     onOperatorChange = (id, value) => {
         let keyValuePairs = [...this.state.keyValuePairs];
 
-        keyValuePairs.find(kvp => kvp.id === Number(id)).operator = value;
+        keyValuePairs.find(kvp => kvp.id === id).operator = value;
         this.setState({ keyValuePairs });
     };
 
@@ -65,17 +71,15 @@ class SearchFilters extends Component {
         }));
     };
 
-    removeKeyValuePair = (id, keyValuePairs) => {
+    onRemoveClick = id => {
+        const { keyValuePairs } = this.state;
         const index = keyValuePairs.findIndex(kvp => kvp.id === Number(id));
+        const newKeyValuePairs = [
+            ...keyValuePairs.slice(0, index),
+            ...keyValuePairs.slice(index + 1),
+        ];
 
-        return [...keyValuePairs.slice(0, index), ...keyValuePairs.slice(index + 1)];
-    };
-
-    onRemoveClick = event => {
-        const id = event.target.closest('button').getAttribute('data-id');
-        const keyValuePairs = this.removeKeyValuePair(id, this.state.keyValuePairs);
-
-        this.setState({ keyValuePairs });
+        this.setState({ keyValuePairs: newKeyValuePairs });
     };
 
     onStatusChange = value => {
@@ -107,6 +111,7 @@ class SearchFilters extends Component {
     };
 
     onClearAll = () => {
+        this.props.onClearAll();
         this.setState({
             keyValuePairs: [
                 {
@@ -118,6 +123,7 @@ class SearchFilters extends Component {
             ],
             status: 'all',
             advanced: false,
+            filter: '',
             viewRecordsFor: 7,
             minCount: 1000,
         });
@@ -128,7 +134,8 @@ class SearchFilters extends Component {
             <Search
                 {...this.state}
                 onAdvancedSearchChange={this.onAdvancedSearchChange}
-                onKeyChange={this.onKeyChange}
+                onFilterChange={this.onFilterChange}
+                onKeySelect={this.onKeySelect}
                 onValueChange={this.onValueChange}
                 onOperatorChange={this.onOperatorChange}
                 onAddClick={this.onAddClick}

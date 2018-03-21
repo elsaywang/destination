@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdvancedSearch
     enabled={false}
+    filter="test"
     onAdvancedSearchChange={[MockFunction]}
     onFilterChange={[MockFunction]}
   />,
@@ -25,19 +26,29 @@ ShallowWrapper {
         <Switch
           aria-label="Advanced Search"
           checked={false}
+          data-test="advanced-search-toggle"
           label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
           onChange={[MockFunction]}
         />,
         <ComboBox
+          data-test="advanced-search-filter"
           disabled={true}
           invalid={false}
           onChange={[MockFunction]}
-          options={Array []}
+          options={
+            Array [
+              "test",
+              "test2",
+              "test3",
+            ]
+          }
           placeholder="Filter by report suite"
           quiet={true}
           required={false}
+          value="test"
         />,
       ],
+      "data-test": "advanced-search",
     },
     "ref": null,
     "rendered": Array [
@@ -48,6 +59,7 @@ ShallowWrapper {
         "props": Object {
           "aria-label": "Advanced Search",
           "checked": false,
+          "data-test": "advanced-search-toggle",
           "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
           "onChange": [MockFunction],
         },
@@ -60,13 +72,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "data-test": "advanced-search-filter",
           "disabled": true,
           "invalid": false,
           "onChange": [MockFunction],
-          "options": Array [],
+          "options": Array [
+            "test",
+            "test2",
+            "test3",
+          ],
           "placeholder": "Filter by report suite",
           "quiet": true,
           "required": false,
+          "value": "test",
         },
         "ref": null,
         "rendered": null,
@@ -85,19 +103,29 @@ ShallowWrapper {
           <Switch
             aria-label="Advanced Search"
             checked={false}
+            data-test="advanced-search-toggle"
             label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
             onChange={[MockFunction]}
           />,
           <ComboBox
+            data-test="advanced-search-filter"
             disabled={true}
             invalid={false}
             onChange={[MockFunction]}
-            options={Array []}
+            options={
+              Array [
+                "test",
+                "test2",
+                "test3",
+              ]
+            }
             placeholder="Filter by report suite"
             quiet={true}
             required={false}
+            value="test"
           />,
         ],
+        "data-test": "advanced-search",
       },
       "ref": null,
       "rendered": Array [
@@ -108,6 +136,7 @@ ShallowWrapper {
           "props": Object {
             "aria-label": "Advanced Search",
             "checked": false,
+            "data-test": "advanced-search-toggle",
             "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
             "onChange": [MockFunction],
           },
@@ -120,13 +149,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "data-test": "advanced-search-filter",
             "disabled": true,
             "invalid": false,
             "onChange": [MockFunction],
-            "options": Array [],
+            "options": Array [
+              "test",
+              "test2",
+              "test3",
+            ],
             "placeholder": "Filter by report suite",
             "quiet": true,
             "required": false,
+            "value": "test",
           },
           "ref": null,
           "rendered": null,

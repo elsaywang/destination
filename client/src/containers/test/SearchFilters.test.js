@@ -5,7 +5,7 @@ import Search from '../../components/Search';
 
 describe('<SearchFilters /> component', () => {
     const mockFn = jest.fn();
-    const wrapper = shallow(<SearchFilters onSearch={mockFn} />);
+    const wrapper = shallow(<SearchFilters onSearch={mockFn} onClearAll={mockFn} />);
 
     describe('rendering', () => {
         it('matches snapshot', () => {
@@ -29,6 +29,7 @@ describe('<SearchFilters /> component', () => {
             ],
             status: 'all',
             advanced: false,
+            filter: '',
             viewRecordsFor: 7,
             minCount: 1000,
         };
@@ -50,7 +51,17 @@ describe('<SearchFilters /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('.removeKeyValuePair() removes a keyValuePair at a given id in given keyValuePairs[] and returns a new array without it', () => {
+        it('.onRemoveClick() adds another keyValuePair to state.keyValuePairs', () => {
+            const id = 1;
+            const keyValuePairs = wrapper.state().keyValuePairs;
+            const expected = [keyValuePairs[0]];
+
+            wrapper.props().onRemoveClick(id);
+            expect(wrapper.state('keyValuePairs')).toEqual(expected);
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        xit('.removeKeyValuePair() removes a keyValuePair at a given id in given keyValuePairs[] and returns a new array without it', () => {
             const searchFilters = new SearchFilters();
             const id = 1;
             const keyValuePairs = [
@@ -73,49 +84,38 @@ describe('<SearchFilters /> component', () => {
             expect(newKeyValuePairs).toEqual(expected);
         });
 
-        it('.onAdvancedSearchChange() changes advanced state to given value', () => {
+        it('.onAdvancedSearchChange() changes advanced state to given value and clears filter', () => {
             expect(wrapper.state('advanced')).toBe(initialState.advanced);
 
             wrapper.props().onAdvancedSearchChange(true);
             expect(wrapper.state('advanced')).toBe(true);
+            expect(wrapper.state('filter')).toBe('');
         });
 
-        // TODO: test click handler in child component(s) instead
-        xit('.onKeyChange() changes key state to given value at corresponding id in keyValuePairs[]', () => {
+        xit('.onKeySelect() changes key state to given value at corresponding id in keyValuePairs[]', () => {
             const value = 'test';
-            const event = {
-                target: {
-                    id: 0,
-                },
-            };
+            const id = 0;
 
-            expect(wrapper.state('keyValuePairs')[event.target.id].key).toBe(
-                initialState.keyValuePairs[event.target.id].key,
-            );
+            expect(wrapper.state('keyValuePairs')[id].key).toBe(initialState.keyValuePairs[id].key);
 
-            wrapper.props().onKeyChange(value, event);
+            wrapper.props().onKeySelect(id, value);
             const newKeyValuePairs = [...initialState.keyValuePairs];
 
-            newKeyValuePairs[event.target.id].key = value;
+            newKeyValuePairs[id].key = value;
 
-            expect(wrapper.state('keyValuePairs')[event.target.id].key).toBe(value);
+            expect(wrapper.state('keyValuePairs')[id].key).toBe(value);
         });
 
-        // TODO: test click handler in child component(s) instead
         xit('.onValueChange() changes value state to given value at corresponding id in keyValuePairs[]', () => {
             const value = 'test value';
-            const event = {
-                target: {
-                    id: 0,
-                },
-            };
+            const id = 0;
 
-            expect(wrapper.state('keyValuePairs')[event.target.id].value).toBe(
-                initialState.keyValuePairs[event.target.id].value,
+            expect(wrapper.state('keyValuePairs')[id].value).toBe(
+                initialState.keyValuePairs[id].value,
             );
 
-            wrapper.props().onValueChange(value, event);
-            expect(wrapper.state('keyValuePairs')[event.target.id].value).toBe(value);
+            wrapper.props().onValueChange(id, value);
+            expect(wrapper.state('keyValuePairs')[id].value).toBe(value);
         });
 
         it('.onOperatorChange() changes operator state to given value at given id in keyValuePairs[]', () => {
@@ -169,6 +169,7 @@ describe('<SearchFilters /> component', () => {
                 ],
                 status: 'all',
                 advanced: false,
+                filter: '',
                 viewRecordsFor: 7,
                 minCount: 1000,
             });
