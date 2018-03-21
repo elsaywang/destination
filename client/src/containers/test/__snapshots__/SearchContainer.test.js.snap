@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
+    clearSearch={[Function]}
     results={
       Object {
         "list": Array [],
@@ -65,56 +66,12 @@ ShallowWrapper {
             size={12}
           >
             <SearchFilters
+              onClearAll={[Function]}
               onSearch={[Function]}
             />
           </GridColumn>
         </GridRow>,
-        <div
-          style={
-            Object {
-              "display": "flex",
-            }
-          }
-        >
-          <div
-            className={undefined}
-          >
-            <SignalTypeFilter
-              counts={
-                Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
-                }
-              }
-              onSignalTypeChange={[Function]}
-              signalType="all"
-            />
-          </div>
-          <div
-            className={undefined}
-          >
-            <Heading
-              size={3}
-            >
-              Search Results for
-            </Heading>
-            <SignalsTable
-              isAdvancedSearchEnabled={false}
-              results={
-                Object {
-                  "list": Array [],
-                  "page": 0,
-                  "pageSize": 0,
-                  "total": 0,
-                }
-              }
-              signalType="all"
-            />
-          </div>
-        </div>,
+        false,
       ],
     },
     "ref": null,
@@ -128,6 +85,7 @@ ShallowWrapper {
             size={12}
           >
             <SearchFilters
+              onClearAll={[Function]}
               onSearch={[Function]}
             />
           </GridColumn>,
@@ -140,6 +98,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <SearchFilters
+              onClearAll={[Function]}
               onSearch={[Function]}
             />,
             "size": 12,
@@ -150,6 +109,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "onClearAll": [Function],
               "onSearch": [Function],
             },
             "ref": null,
@@ -160,163 +120,7 @@ ShallowWrapper {
         },
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className={undefined}
-            >
-              <SignalTypeFilter
-                counts={
-                  Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
-                  }
-                }
-                onSignalTypeChange={[Function]}
-                signalType="all"
-              />
-            </div>,
-            <div
-              className={undefined}
-            >
-              <Heading
-                size={3}
-              >
-                Search Results for
-              </Heading>
-              <SignalsTable
-                isAdvancedSearchEnabled={false}
-                results={
-                  Object {
-                    "list": Array [],
-                    "page": 0,
-                    "pageSize": 0,
-                    "total": 0,
-                  }
-                }
-                signalType="all"
-              />
-            </div>,
-          ],
-          "style": Object {
-            "display": "flex",
-          },
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <SignalTypeFilter
-                counts={
-                  Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
-                  }
-                }
-                onSignalTypeChange={[Function]}
-                signalType="all"
-              />,
-              "className": undefined,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "counts": Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
-                },
-                "onSignalTypeChange": [Function],
-                "signalType": "all",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <Heading
-                  size={3}
-                >
-                  Search Results for
-                </Heading>,
-                <SignalsTable
-                  isAdvancedSearchEnabled={false}
-                  results={
-                    Object {
-                      "list": Array [],
-                      "page": 0,
-                      "pageSize": 0,
-                      "total": 0,
-                    }
-                  }
-                  signalType="all"
-                />,
-              ],
-              "className": undefined,
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "Search Results for",
-                  "size": 3,
-                },
-                "ref": null,
-                "rendered": "Search Results for",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "isAdvancedSearchEnabled": false,
-                  "results": Object {
-                    "list": Array [],
-                    "page": 0,
-                    "pageSize": 0,
-                    "total": 0,
-                  },
-                  "signalType": "all",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
+      false,
     ],
     "type": Symbol(react.fragment),
   },
@@ -334,56 +138,12 @@ ShallowWrapper {
               size={12}
             >
               <SearchFilters
+                onClearAll={[Function]}
                 onSearch={[Function]}
               />
             </GridColumn>
           </GridRow>,
-          <div
-            style={
-              Object {
-                "display": "flex",
-              }
-            }
-          >
-            <div
-              className={undefined}
-            >
-              <SignalTypeFilter
-                counts={
-                  Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
-                  }
-                }
-                onSignalTypeChange={[Function]}
-                signalType="all"
-              />
-            </div>
-            <div
-              className={undefined}
-            >
-              <Heading
-                size={3}
-              >
-                Search Results for
-              </Heading>
-              <SignalsTable
-                isAdvancedSearchEnabled={false}
-                results={
-                  Object {
-                    "list": Array [],
-                    "page": 0,
-                    "pageSize": 0,
-                    "total": 0,
-                  }
-                }
-                signalType="all"
-              />
-            </div>
-          </div>,
+          false,
         ],
       },
       "ref": null,
@@ -397,6 +157,7 @@ ShallowWrapper {
               size={12}
             >
               <SearchFilters
+                onClearAll={[Function]}
                 onSearch={[Function]}
               />
             </GridColumn>,
@@ -409,6 +170,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <SearchFilters
+                onClearAll={[Function]}
                 onSearch={[Function]}
               />,
               "size": 12,
@@ -419,6 +181,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "onClearAll": [Function],
                 "onSearch": [Function],
               },
               "ref": null,
@@ -429,163 +192,7 @@ ShallowWrapper {
           },
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className={undefined}
-              >
-                <SignalTypeFilter
-                  counts={
-                    Object {
-                      "actionableLogFiles": 359,
-                      "adobeAnalytics": 34300,
-                      "all": 72093,
-                      "generalOnlineData": 27,
-                      "onboardedRecords": 37407,
-                    }
-                  }
-                  onSignalTypeChange={[Function]}
-                  signalType="all"
-                />
-              </div>,
-              <div
-                className={undefined}
-              >
-                <Heading
-                  size={3}
-                >
-                  Search Results for
-                </Heading>
-                <SignalsTable
-                  isAdvancedSearchEnabled={false}
-                  results={
-                    Object {
-                      "list": Array [],
-                      "page": 0,
-                      "pageSize": 0,
-                      "total": 0,
-                    }
-                  }
-                  signalType="all"
-                />
-              </div>,
-            ],
-            "style": Object {
-              "display": "flex",
-            },
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <SignalTypeFilter
-                  counts={
-                    Object {
-                      "actionableLogFiles": 359,
-                      "adobeAnalytics": 34300,
-                      "all": 72093,
-                      "generalOnlineData": 27,
-                      "onboardedRecords": 37407,
-                    }
-                  }
-                  onSignalTypeChange={[Function]}
-                  signalType="all"
-                />,
-                "className": undefined,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "counts": Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
-                  },
-                  "onSignalTypeChange": [Function],
-                  "signalType": "all",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <Heading
-                    size={3}
-                  >
-                    Search Results for
-                  </Heading>,
-                  <SignalsTable
-                    isAdvancedSearchEnabled={false}
-                    results={
-                      Object {
-                        "list": Array [],
-                        "page": 0,
-                        "pageSize": 0,
-                        "total": 0,
-                      }
-                    }
-                    signalType="all"
-                  />,
-                ],
-                "className": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": "Search Results for",
-                    "size": 3,
-                  },
-                  "ref": null,
-                  "rendered": "Search Results for",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "isAdvancedSearchEnabled": false,
-                    "results": Object {
-                      "list": Array [],
-                      "page": 0,
-                      "pageSize": 0,
-                      "total": 0,
-                    },
-                    "signalType": "all",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
+        false,
       ],
       "type": Symbol(react.fragment),
     },

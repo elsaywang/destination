@@ -18,7 +18,7 @@ describe('<KeyValuePair /> component', () => {
     const wrapper = shallow(
         <KeyValuePair
             pair={pair}
-            onKeyChange={mockFn}
+            onKeySelect={mockFn}
             onOperatorChange={mockFn}
             onValueChange={mockFn}
         />,

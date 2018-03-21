@@ -14,11 +14,11 @@ describe('Integration Tests for routing', function() {
         });
 
         // Visit signal Dashboard (home) URL
-        cy.visit('http://localhost:3000');
+        cy.visit('/');
         // Verify - it is signal Dashboard (home) page
         cy.title().should('contain', 'Signals');
         // Visit signal Search page URL
-        cy.visit('http://localhost:3000/#/search');
+        cy.visit('#/search');
         // Verify - it is signal Search page
 
         cy

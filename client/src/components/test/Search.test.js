@@ -28,7 +28,7 @@ describe('<Search /> component', () => {
         <Search
             {...state}
             onAdvancedSearchChange={mockFn}
-            onKeyChange={mockFn}
+            onKeySelect={mockFn}
             onValueChange={mockFn}
             onOperatorChange={mockFn}
             onAddClick={mockFn}
@@ -75,10 +75,13 @@ describe('<Search /> component', () => {
             expect(wrapper.find('.min-counts').exists()).toBe(true);
         });
 
-        it('renders <Button /> with label "Add"', () => {
+        it('renders <Button /> with label "Add" and not render <Button /> with label "Remove" when there is only one keyValuePair', () => {
             expect(wrapper.find(Button).someWhere(button => button.props().label === 'Add')).toBe(
                 true,
             );
+            expect(
+                wrapper.find(Button).someWhere(button => button.props().label === 'Remove'),
+            ).toBe(false);
         });
 
         it('should not render Add <Button /> when there are 3 keyValuePairs', () => {
@@ -110,7 +113,7 @@ describe('<Search /> component', () => {
                 <Search
                     {...newState}
                     onAdvancedSearchChange={mockFn}
-                    onKeyChange={mockFn}
+                    onKeySelect={mockFn}
                     onValueChange={mockFn}
                     onOperatorChange={mockFn}
                     onAddClick={mockFn}
@@ -150,7 +153,7 @@ describe('<Search /> component', () => {
                 <Search
                     {...newState}
                     onAdvancedSearchChange={mockFn}
-                    onKeyChange={mockFn}
+                    onKeySelect={mockFn}
                     onValueChange={mockFn}
                     onOperatorChange={mockFn}
                     onAddClick={mockFn}

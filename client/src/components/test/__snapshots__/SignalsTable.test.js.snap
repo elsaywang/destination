@@ -26,7 +26,15 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SignalsTable
     results={
       Object {
-        "list": Array [],
+        "list": Array [
+          Object {
+            "id": 0,
+            "name": "test",
+            "source": Object {
+              "sourceType": "ANALYTICS",
+            },
+          },
+        ],
       }
     }
     signalType="all"
@@ -75,7 +83,17 @@ ShallowWrapper {
           "width": 120,
         },
       ],
-      "items": Array [],
+      "items": Array [
+        Object {
+          "id": 0,
+          "name": "test",
+          "signalSource": undefined,
+          "signalType": "Adobe Analytics",
+          "source": Object {
+            "sourceType": "ANALYTICS",
+          },
+        },
+      ],
       "renderCell": [Function],
     },
     "ref": null,
@@ -120,7 +138,17 @@ ShallowWrapper {
             "width": 120,
           },
         ],
-        "items": Array [],
+        "items": Array [
+          Object {
+            "id": 0,
+            "name": "test",
+            "signalSource": undefined,
+            "signalType": "Adobe Analytics",
+            "source": Object {
+              "sourceType": "ANALYTICS",
+            },
+          },
+        ],
         "renderCell": [Function],
       },
       "ref": null,

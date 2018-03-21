@@ -14,29 +14,39 @@ import viewRecordsOptions from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
 
 class Search extends Component {
-    renderKVPFields = () => {
-        const { keyValuePairs } = this.props;
+    renderKVPFields = pair => {
+        const {
+            keyValuePairs,
+            onRemoveClick,
+            onAddClick,
+            onKeySelect,
+            onOperatorChange,
+            onValueChange,
+        } = this.props;
         const validKeyValuePairsLimit = keyValuePairs.length < 3;
         const isLastPair = id => keyValuePairs[keyValuePairs.length - 1].id === id;
+        const onRemove = () => {
+            onRemoveClick(pair.id);
+        };
 
-        return keyValuePairs.map(pair => (
+        return (
             <GridRow key={pair.id} valign="bottom">
                 <GridColumn size={4}>
                     <KeyValuePair
                         key={pair.id}
                         pair={pair}
-                        onKeyChange={this.props.onKeyChange}
-                        onOperatorChange={this.props.onOperatorChange}
-                        onValueChange={this.props.onValueChange}
+                        onKeySelect={onKeySelect}
+                        onOperatorChange={onOperatorChange}
+                        onValueChange={onValueChange}
                     />
                 </GridColumn>
                 <GridColumn size={2}>
                     {isLastPair(pair.id) &&
                         validKeyValuePairsLimit && (
                             <Button
-                                className="add-button"
                                 label="Add"
-                                onClick={this.props.onAddClick}
+                                data-test="add-button"
+                                onClick={onAddClick}
                                 icon={<Add />}
                                 variant="action"
                                 quiet
@@ -44,10 +54,9 @@ class Search extends Component {
                         )}
                     {pair.id !== 0 && (
                         <Button
-                            className="remove-button"
-                            data-id={pair.id}
+                            data-test="remove-button"
                             label="Remove"
-                            onClick={this.props.onRemoveClick}
+                            onClick={onRemove}
                             icon={<Remove />}
                             variant="action"
                             quiet
@@ -55,13 +64,23 @@ class Search extends Component {
                     )}
                 </GridColumn>
             </GridRow>
-        ));
+        );
     };
 
     renderCTAs = () => (
         <GridColumn size={3}>
-            <Button label="Search" onClick={this.props.onSearch} variant="cta" />
-            <Button label="Clear All" onClick={this.props.onClearAll} variant="secondary" />
+            <Button
+                label="Search"
+                data-test="search-button"
+                onClick={this.props.onSearch}
+                variant="cta"
+            />
+            <Button
+                label="Clear All"
+                data-test="clear-all-button"
+                onClick={this.props.onClearAll}
+                variant="secondary"
+            />
         </GridColumn>
     );
 
@@ -70,51 +89,58 @@ class Search extends Component {
             <GridRow>
                 <GridColumn size={12}>
                     <Well>
-                        <AdvancedSearch
-                            enabled={this.props.advanced}
-                            onAdvancedSearchChange={this.props.onAdvancedSearchChange}
-                        />
+                        <div data-test="search-form">
+                            <AdvancedSearch
+                                enabled={this.props.advanced}
+                                onAdvancedSearchChange={this.props.onAdvancedSearchChange}
+                                onFilterChange={this.props.onFilterChange}
+                                filter={this.props.filter}
+                            />
 
-                        <GridRow>
-                            <GridColumn size={12}>
-                                {this.renderKVPFields()}
+                            <GridRow>
+                                <GridColumn size={12}>
+                                    {this.props.keyValuePairs.map(this.renderKVPFields)}
 
-                                <GridRow valign="bottom">
-                                    <GridColumn size={7}>
-                                        <Label value="Signal Status">
-                                            <Select
-                                                className="signal-status"
-                                                value={this.props.status}
-                                                onChange={this.props.onStatusChange}
-                                                options={statusOptions}
-                                                quiet
-                                            />
-                                        </Label>
+                                    <GridRow valign="bottom">
+                                        <GridColumn size={7}>
+                                            <Label value="Signal Status">
+                                                <Select
+                                                    className="signal-status"
+                                                    data-test="signal-status"
+                                                    value={this.props.status}
+                                                    onChange={this.props.onStatusChange}
+                                                    options={statusOptions}
+                                                    quiet
+                                                />
+                                            </Label>
 
-                                        <Label value="View Records For">
-                                            <Select
-                                                className="view-records"
-                                                value={this.props.viewRecordsFor}
-                                                onChange={this.props.onViewRecordsChange}
-                                                options={viewRecordsOptions}
-                                                quiet
-                                            />
-                                        </Label>
+                                            <Label value="View Records For">
+                                                <Select
+                                                    className="view-records"
+                                                    data-test="view-records"
+                                                    value={this.props.viewRecordsFor}
+                                                    onChange={this.props.onViewRecordsChange}
+                                                    options={viewRecordsOptions}
+                                                    quiet
+                                                />
+                                            </Label>
 
-                                        <Label value="Minimum Counts">
-                                            <NumberInput
-                                                className="min-counts"
-                                                onChange={this.props.onMinCountChange}
-                                                value={this.props.minCount}
-                                                quiet
-                                            />
-                                        </Label>
-                                    </GridColumn>
+                                            <Label value="Minimum Counts">
+                                                <NumberInput
+                                                    className="min-counts"
+                                                    data-test="min-counts"
+                                                    onChange={this.props.onMinCountChange}
+                                                    value={this.props.minCount}
+                                                    quiet
+                                                />
+                                            </Label>
+                                        </GridColumn>
 
-                                    {this.renderCTAs()}
-                                </GridRow>
-                            </GridColumn>
-                        </GridRow>
+                                        {this.renderCTAs()}
+                                    </GridRow>
+                                </GridColumn>
+                            </GridRow>
+                        </div>
                     </Well>
                 </GridColumn>
             </GridRow>

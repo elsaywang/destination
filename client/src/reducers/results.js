@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { CALL_SEARCH_FULFILLED } from '../actions';
+import { CALL_SEARCH_FULFILLED, CLEAR_SEARCH } from '../actions';
 
 const initialState = {
     list: [],
@@ -23,6 +23,12 @@ const results = handleActions(
                 list: list(getList(state), action),
             };
         },
+        [CLEAR_SEARCH]: (state) => (
+            {
+                ...state,
+                list: [],
+            }
+        ),
     },
     initialState,
 );

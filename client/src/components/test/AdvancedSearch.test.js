@@ -7,7 +7,12 @@ import Switch from '@react/react-spectrum/Switch';
 describe('Advanced Search', () => {
     const mockFn = jest.fn();
     const wrapper = shallow(
-        <AdvancedSearch enabled={false} onFilterChange={mockFn} onAdvancedSearchChange={mockFn} />,
+        <AdvancedSearch
+            filter="test"
+            enabled={false}
+            onFilterChange={mockFn}
+            onAdvancedSearchChange={mockFn}
+        />,
     );
 
     describe('rendering', () => {
@@ -31,6 +36,11 @@ describe('Advanced Search', () => {
         it('renders <ComboBox /> with disabled: false when <AdvancedSearch /> is passed enabled: true', () => {
             wrapper.setProps({ enabled: true });
             expect(wrapper.find(ComboBox).props().disabled).toBe(false);
+        });
+
+        it('renders <ComboBox /> with value passed in', () => {
+            wrapper.setProps({ filter: 'abc' });
+            expect(wrapper.find(ComboBox).props().value).toBe('abc');
         });
     });
 });

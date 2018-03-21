@@ -20,7 +20,7 @@ ShallowWrapper {
     onAddClick={[MockFunction]}
     onAdvancedSearchChange={[MockFunction]}
     onClearAll={[MockFunction]}
-    onKeyChange={[MockFunction]}
+    onKeySelect={[MockFunction]}
     onMinCountChange={[MockFunction]}
     onOperatorChange={[MockFunction]}
     onRemoveClick={[MockFunction]}
@@ -47,172 +47,183 @@ ShallowWrapper {
         size={12}
       >
         <Well>
-          <AdvancedSearch
-            enabled={false}
-            onAdvancedSearchChange={[MockFunction]}
-          />
-          <GridRow
-            reverse={false}
+          <div
+            data-test="search-form"
           >
-            <GridColumn
-              size={12}
+            <AdvancedSearch
+              enabled={false}
+              filter={undefined}
+              onAdvancedSearchChange={[MockFunction]}
+              onFilterChange={undefined}
+            />
+            <GridRow
+              reverse={false}
             >
-              <GridRow
-                reverse={false}
-                valign="bottom"
+              <GridColumn
+                size={12}
               >
-                <GridColumn
-                  size={4}
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
                 >
-                  <KeyValuePair
-                    onKeyChange={[MockFunction]}
-                    onOperatorChange={[MockFunction]}
-                    onValueChange={[MockFunction]}
-                    pair={
-                      Object {
-                        "id": 0,
-                        "key": "",
-                        "operator": "=",
-                        "value": "",
-                      }
-                    }
-                  />
-                </GridColumn>
-                <GridColumn
-                  size={2}
-                >
-                  <Button
-                    block={false}
-                    className="add-button"
-                    disabled={false}
-                    element="button"
-                    icon={<Add />}
-                    invalid={false}
-                    label="Add"
-                    logic={false}
-                    onClick={[MockFunction]}
-                    quiet={true}
-                    selected={false}
-                    variant="action"
-                  />
-                </GridColumn>
-              </GridRow>
-              <GridRow
-                reverse={false}
-                valign="bottom"
-              >
-                <GridColumn
-                  size={7}
-                >
-                  <Label
-                    value="Signal Status"
+                  <GridColumn
+                    size={4}
                   >
-                    <Select
-                      className="signal-status"
-                      onChange={[MockFunction]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "All",
-                            "value": "all",
-                          },
-                          Object {
-                            "label": "Unused Signals",
-                            "value": "unused",
-                          },
-                          Object {
-                            "label": "Signals Included in Traits",
-                            "value": "includedInTraits",
-                          },
-                        ]
+                    <KeyValuePair
+                      onKeySelect={[MockFunction]}
+                      onOperatorChange={[MockFunction]}
+                      onValueChange={[MockFunction]}
+                      pair={
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "=",
+                          "value": "",
+                        }
                       }
-                      quiet={true}
-                      value="all"
                     />
-                  </Label>
-                  <Label
-                    value="View Records For"
+                  </GridColumn>
+                  <GridColumn
+                    size={2}
                   >
-                    <Select
-                      className="view-records"
-                      onChange={[MockFunction]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "Last 1 Day",
-                            "value": 1,
-                          },
-                          Object {
-                            "label": "Last 7 Days",
-                            "value": 7,
-                          },
-                          Object {
-                            "label": "Last 14 Days",
-                            "value": 14,
-                          },
-                          Object {
-                            "label": "Last 30 Days",
-                            "value": 30,
-                          },
-                          Object {
-                            "label": "Custom",
-                            "value": "custom",
-                          },
-                        ]
-                      }
-                      quiet={true}
-                      value={7}
-                    />
-                  </Label>
-                  <Label
-                    value="Minimum Counts"
-                  >
-                    <NumberInput
-                      className="min-counts"
-                      decrementTitle="Decrement"
+                    <Button
+                      block={false}
+                      data-test="add-button"
                       disabled={false}
-                      incrementTitle="Increment"
+                      element="button"
+                      icon={<Add />}
                       invalid={false}
-                      onChange={[MockFunction]}
-                      placeholder="Enter a number"
+                      label="Add"
+                      logic={false}
+                      onClick={[MockFunction]}
                       quiet={true}
-                      readOnly={false}
-                      step={1}
-                      value={1000}
+                      selected={false}
+                      variant="action"
                     />
-                  </Label>
-                </GridColumn>
-                <GridColumn
-                  size={3}
+                  </GridColumn>
+                </GridRow>
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
                 >
-                  <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
-                    label="Search"
-                    logic={false}
-                    onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
-                    variant="cta"
-                  />
-                  <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
-                    label="Clear All"
-                    logic={false}
-                    onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
-                    variant="secondary"
-                  />
-                </GridColumn>
-              </GridRow>
-            </GridColumn>
-          </GridRow>
+                  <GridColumn
+                    size={7}
+                  >
+                    <Label
+                      value="Signal Status"
+                    >
+                      <Select
+                        className="signal-status"
+                        data-test="signal-status"
+                        onChange={[MockFunction]}
+                        options={
+                          Array [
+                            Object {
+                              "label": "All",
+                              "value": "all",
+                            },
+                            Object {
+                              "label": "Unused Signals",
+                              "value": "unused",
+                            },
+                            Object {
+                              "label": "Signals Included in Traits",
+                              "value": "includedInTraits",
+                            },
+                          ]
+                        }
+                        quiet={true}
+                        value="all"
+                      />
+                    </Label>
+                    <Label
+                      value="View Records For"
+                    >
+                      <Select
+                        className="view-records"
+                        data-test="view-records"
+                        onChange={[MockFunction]}
+                        options={
+                          Array [
+                            Object {
+                              "label": "Last 1 Day",
+                              "value": 1,
+                            },
+                            Object {
+                              "label": "Last 7 Days",
+                              "value": 7,
+                            },
+                            Object {
+                              "label": "Last 14 Days",
+                              "value": 14,
+                            },
+                            Object {
+                              "label": "Last 30 Days",
+                              "value": 30,
+                            },
+                            Object {
+                              "label": "Custom",
+                              "value": "custom",
+                            },
+                          ]
+                        }
+                        quiet={true}
+                        value={7}
+                      />
+                    </Label>
+                    <Label
+                      value="Minimum Counts"
+                    >
+                      <NumberInput
+                        className="min-counts"
+                        data-test="min-counts"
+                        decrementTitle="Decrement"
+                        disabled={false}
+                        incrementTitle="Increment"
+                        invalid={false}
+                        onChange={[MockFunction]}
+                        placeholder="Enter a number"
+                        quiet={true}
+                        readOnly={false}
+                        step={1}
+                        value={1000}
+                      />
+                    </Label>
+                  </GridColumn>
+                  <GridColumn
+                    size={3}
+                  >
+                    <Button
+                      block={false}
+                      data-test="search-button"
+                      disabled={false}
+                      element="button"
+                      invalid={false}
+                      label="Search"
+                      logic={false}
+                      onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
+                      variant="cta"
+                    />
+                    <Button
+                      block={false}
+                      data-test="clear-all-button"
+                      disabled={false}
+                      element="button"
+                      invalid={false}
+                      label="Clear All"
+                      logic={false}
+                      onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
+                      variant="secondary"
+                    />
+                  </GridColumn>
+                </GridRow>
+              </GridColumn>
+            </GridRow>
+          </div>
         </Well>
       </GridColumn>,
       "reverse": false,
@@ -224,172 +235,183 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": <Well>
-          <AdvancedSearch
-            enabled={false}
-            onAdvancedSearchChange={[MockFunction]}
-          />
-          <GridRow
-            reverse={false}
+          <div
+            data-test="search-form"
           >
-            <GridColumn
-              size={12}
+            <AdvancedSearch
+              enabled={false}
+              filter={undefined}
+              onAdvancedSearchChange={[MockFunction]}
+              onFilterChange={undefined}
+            />
+            <GridRow
+              reverse={false}
             >
-              <GridRow
-                reverse={false}
-                valign="bottom"
+              <GridColumn
+                size={12}
               >
-                <GridColumn
-                  size={4}
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
                 >
-                  <KeyValuePair
-                    onKeyChange={[MockFunction]}
-                    onOperatorChange={[MockFunction]}
-                    onValueChange={[MockFunction]}
-                    pair={
-                      Object {
-                        "id": 0,
-                        "key": "",
-                        "operator": "=",
-                        "value": "",
-                      }
-                    }
-                  />
-                </GridColumn>
-                <GridColumn
-                  size={2}
-                >
-                  <Button
-                    block={false}
-                    className="add-button"
-                    disabled={false}
-                    element="button"
-                    icon={<Add />}
-                    invalid={false}
-                    label="Add"
-                    logic={false}
-                    onClick={[MockFunction]}
-                    quiet={true}
-                    selected={false}
-                    variant="action"
-                  />
-                </GridColumn>
-              </GridRow>
-              <GridRow
-                reverse={false}
-                valign="bottom"
-              >
-                <GridColumn
-                  size={7}
-                >
-                  <Label
-                    value="Signal Status"
+                  <GridColumn
+                    size={4}
                   >
-                    <Select
-                      className="signal-status"
-                      onChange={[MockFunction]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "All",
-                            "value": "all",
-                          },
-                          Object {
-                            "label": "Unused Signals",
-                            "value": "unused",
-                          },
-                          Object {
-                            "label": "Signals Included in Traits",
-                            "value": "includedInTraits",
-                          },
-                        ]
+                    <KeyValuePair
+                      onKeySelect={[MockFunction]}
+                      onOperatorChange={[MockFunction]}
+                      onValueChange={[MockFunction]}
+                      pair={
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "=",
+                          "value": "",
+                        }
                       }
-                      quiet={true}
-                      value="all"
                     />
-                  </Label>
-                  <Label
-                    value="View Records For"
+                  </GridColumn>
+                  <GridColumn
+                    size={2}
                   >
-                    <Select
-                      className="view-records"
-                      onChange={[MockFunction]}
-                      options={
-                        Array [
-                          Object {
-                            "label": "Last 1 Day",
-                            "value": 1,
-                          },
-                          Object {
-                            "label": "Last 7 Days",
-                            "value": 7,
-                          },
-                          Object {
-                            "label": "Last 14 Days",
-                            "value": 14,
-                          },
-                          Object {
-                            "label": "Last 30 Days",
-                            "value": 30,
-                          },
-                          Object {
-                            "label": "Custom",
-                            "value": "custom",
-                          },
-                        ]
-                      }
-                      quiet={true}
-                      value={7}
-                    />
-                  </Label>
-                  <Label
-                    value="Minimum Counts"
-                  >
-                    <NumberInput
-                      className="min-counts"
-                      decrementTitle="Decrement"
+                    <Button
+                      block={false}
+                      data-test="add-button"
                       disabled={false}
-                      incrementTitle="Increment"
+                      element="button"
+                      icon={<Add />}
                       invalid={false}
-                      onChange={[MockFunction]}
-                      placeholder="Enter a number"
+                      label="Add"
+                      logic={false}
+                      onClick={[MockFunction]}
                       quiet={true}
-                      readOnly={false}
-                      step={1}
-                      value={1000}
+                      selected={false}
+                      variant="action"
                     />
-                  </Label>
-                </GridColumn>
-                <GridColumn
-                  size={3}
+                  </GridColumn>
+                </GridRow>
+                <GridRow
+                  reverse={false}
+                  valign="bottom"
                 >
-                  <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
-                    label="Search"
-                    logic={false}
-                    onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
-                    variant="cta"
-                  />
-                  <Button
-                    block={false}
-                    disabled={false}
-                    element="button"
-                    invalid={false}
-                    label="Clear All"
-                    logic={false}
-                    onClick={[MockFunction]}
-                    quiet={false}
-                    selected={false}
-                    variant="secondary"
-                  />
-                </GridColumn>
-              </GridRow>
-            </GridColumn>
-          </GridRow>
+                  <GridColumn
+                    size={7}
+                  >
+                    <Label
+                      value="Signal Status"
+                    >
+                      <Select
+                        className="signal-status"
+                        data-test="signal-status"
+                        onChange={[MockFunction]}
+                        options={
+                          Array [
+                            Object {
+                              "label": "All",
+                              "value": "all",
+                            },
+                            Object {
+                              "label": "Unused Signals",
+                              "value": "unused",
+                            },
+                            Object {
+                              "label": "Signals Included in Traits",
+                              "value": "includedInTraits",
+                            },
+                          ]
+                        }
+                        quiet={true}
+                        value="all"
+                      />
+                    </Label>
+                    <Label
+                      value="View Records For"
+                    >
+                      <Select
+                        className="view-records"
+                        data-test="view-records"
+                        onChange={[MockFunction]}
+                        options={
+                          Array [
+                            Object {
+                              "label": "Last 1 Day",
+                              "value": 1,
+                            },
+                            Object {
+                              "label": "Last 7 Days",
+                              "value": 7,
+                            },
+                            Object {
+                              "label": "Last 14 Days",
+                              "value": 14,
+                            },
+                            Object {
+                              "label": "Last 30 Days",
+                              "value": 30,
+                            },
+                            Object {
+                              "label": "Custom",
+                              "value": "custom",
+                            },
+                          ]
+                        }
+                        quiet={true}
+                        value={7}
+                      />
+                    </Label>
+                    <Label
+                      value="Minimum Counts"
+                    >
+                      <NumberInput
+                        className="min-counts"
+                        data-test="min-counts"
+                        decrementTitle="Decrement"
+                        disabled={false}
+                        incrementTitle="Increment"
+                        invalid={false}
+                        onChange={[MockFunction]}
+                        placeholder="Enter a number"
+                        quiet={true}
+                        readOnly={false}
+                        step={1}
+                        value={1000}
+                      />
+                    </Label>
+                  </GridColumn>
+                  <GridColumn
+                    size={3}
+                  >
+                    <Button
+                      block={false}
+                      data-test="search-button"
+                      disabled={false}
+                      element="button"
+                      invalid={false}
+                      label="Search"
+                      logic={false}
+                      onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
+                      variant="cta"
+                    />
+                    <Button
+                      block={false}
+                      data-test="clear-all-button"
+                      disabled={false}
+                      element="button"
+                      invalid={false}
+                      label="Clear All"
+                      logic={false}
+                      onClick={[MockFunction]}
+                      quiet={false}
+                      selected={false}
+                      variant="secondary"
+                    />
+                  </GridColumn>
+                </GridRow>
+              </GridColumn>
+            </GridRow>
+          </div>
         </Well>,
         "size": 12,
       },
@@ -399,1164 +421,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": Array [
+          "children": <div
+            data-test="search-form"
+          >
             <AdvancedSearch
               enabled={false}
+              filter={undefined}
               onAdvancedSearchChange={[MockFunction]}
-            />,
-            <GridRow
-              reverse={false}
-            >
-              <GridColumn
-                size={12}
-              >
-                <GridRow
-                  reverse={false}
-                  valign="bottom"
-                >
-                  <GridColumn
-                    size={4}
-                  >
-                    <KeyValuePair
-                      onKeyChange={[MockFunction]}
-                      onOperatorChange={[MockFunction]}
-                      onValueChange={[MockFunction]}
-                      pair={
-                        Object {
-                          "id": 0,
-                          "key": "",
-                          "operator": "=",
-                          "value": "",
-                        }
-                      }
-                    />
-                  </GridColumn>
-                  <GridColumn
-                    size={2}
-                  >
-                    <Button
-                      block={false}
-                      className="add-button"
-                      disabled={false}
-                      element="button"
-                      icon={<Add />}
-                      invalid={false}
-                      label="Add"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={true}
-                      selected={false}
-                      variant="action"
-                    />
-                  </GridColumn>
-                </GridRow>
-                <GridRow
-                  reverse={false}
-                  valign="bottom"
-                >
-                  <GridColumn
-                    size={7}
-                  >
-                    <Label
-                      value="Signal Status"
-                    >
-                      <Select
-                        className="signal-status"
-                        onChange={[MockFunction]}
-                        options={
-                          Array [
-                            Object {
-                              "label": "All",
-                              "value": "all",
-                            },
-                            Object {
-                              "label": "Unused Signals",
-                              "value": "unused",
-                            },
-                            Object {
-                              "label": "Signals Included in Traits",
-                              "value": "includedInTraits",
-                            },
-                          ]
-                        }
-                        quiet={true}
-                        value="all"
-                      />
-                    </Label>
-                    <Label
-                      value="View Records For"
-                    >
-                      <Select
-                        className="view-records"
-                        onChange={[MockFunction]}
-                        options={
-                          Array [
-                            Object {
-                              "label": "Last 1 Day",
-                              "value": 1,
-                            },
-                            Object {
-                              "label": "Last 7 Days",
-                              "value": 7,
-                            },
-                            Object {
-                              "label": "Last 14 Days",
-                              "value": 14,
-                            },
-                            Object {
-                              "label": "Last 30 Days",
-                              "value": 30,
-                            },
-                            Object {
-                              "label": "Custom",
-                              "value": "custom",
-                            },
-                          ]
-                        }
-                        quiet={true}
-                        value={7}
-                      />
-                    </Label>
-                    <Label
-                      value="Minimum Counts"
-                    >
-                      <NumberInput
-                        className="min-counts"
-                        decrementTitle="Decrement"
-                        disabled={false}
-                        incrementTitle="Increment"
-                        invalid={false}
-                        onChange={[MockFunction]}
-                        placeholder="Enter a number"
-                        quiet={true}
-                        readOnly={false}
-                        step={1}
-                        value={1000}
-                      />
-                    </Label>
-                  </GridColumn>
-                  <GridColumn
-                    size={3}
-                  >
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Search"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
-                      variant="cta"
-                    />
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Clear All"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
-                      variant="secondary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "enabled": false,
-              "onAdvancedSearchChange": [MockFunction],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <GridColumn
-                size={12}
-              >
-                <GridRow
-                  reverse={false}
-                  valign="bottom"
-                >
-                  <GridColumn
-                    size={4}
-                  >
-                    <KeyValuePair
-                      onKeyChange={[MockFunction]}
-                      onOperatorChange={[MockFunction]}
-                      onValueChange={[MockFunction]}
-                      pair={
-                        Object {
-                          "id": 0,
-                          "key": "",
-                          "operator": "=",
-                          "value": "",
-                        }
-                      }
-                    />
-                  </GridColumn>
-                  <GridColumn
-                    size={2}
-                  >
-                    <Button
-                      block={false}
-                      className="add-button"
-                      disabled={false}
-                      element="button"
-                      icon={<Add />}
-                      invalid={false}
-                      label="Add"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={true}
-                      selected={false}
-                      variant="action"
-                    />
-                  </GridColumn>
-                </GridRow>
-                <GridRow
-                  reverse={false}
-                  valign="bottom"
-                >
-                  <GridColumn
-                    size={7}
-                  >
-                    <Label
-                      value="Signal Status"
-                    >
-                      <Select
-                        className="signal-status"
-                        onChange={[MockFunction]}
-                        options={
-                          Array [
-                            Object {
-                              "label": "All",
-                              "value": "all",
-                            },
-                            Object {
-                              "label": "Unused Signals",
-                              "value": "unused",
-                            },
-                            Object {
-                              "label": "Signals Included in Traits",
-                              "value": "includedInTraits",
-                            },
-                          ]
-                        }
-                        quiet={true}
-                        value="all"
-                      />
-                    </Label>
-                    <Label
-                      value="View Records For"
-                    >
-                      <Select
-                        className="view-records"
-                        onChange={[MockFunction]}
-                        options={
-                          Array [
-                            Object {
-                              "label": "Last 1 Day",
-                              "value": 1,
-                            },
-                            Object {
-                              "label": "Last 7 Days",
-                              "value": 7,
-                            },
-                            Object {
-                              "label": "Last 14 Days",
-                              "value": 14,
-                            },
-                            Object {
-                              "label": "Last 30 Days",
-                              "value": 30,
-                            },
-                            Object {
-                              "label": "Custom",
-                              "value": "custom",
-                            },
-                          ]
-                        }
-                        quiet={true}
-                        value={7}
-                      />
-                    </Label>
-                    <Label
-                      value="Minimum Counts"
-                    >
-                      <NumberInput
-                        className="min-counts"
-                        decrementTitle="Decrement"
-                        disabled={false}
-                        incrementTitle="Increment"
-                        invalid={false}
-                        onChange={[MockFunction]}
-                        placeholder="Enter a number"
-                        quiet={true}
-                        readOnly={false}
-                        step={1}
-                        value={1000}
-                      />
-                    </Label>
-                  </GridColumn>
-                  <GridColumn
-                    size={3}
-                  >
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Search"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
-                      variant="cta"
-                    />
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Clear All"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
-                      variant="secondary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>,
-              "reverse": false,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  Array [
-                    <GridRow
-                      reverse={false}
-                      valign="bottom"
-                    >
-                      <GridColumn
-                        size={4}
-                      >
-                        <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 0,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
-                            }
-                          }
-                        />
-                      </GridColumn>
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          block={false}
-                          className="add-button"
-                          disabled={false}
-                          element="button"
-                          icon={<Add />}
-                          invalid={false}
-                          label="Add"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={true}
-                          selected={false}
-                          variant="action"
-                        />
-                      </GridColumn>
-                    </GridRow>,
-                  ],
-                  <GridRow
-                    reverse={false}
-                    valign="bottom"
-                  >
-                    <GridColumn
-                      size={7}
-                    >
-                      <Label
-                        value="Signal Status"
-                      >
-                        <Select
-                          className="signal-status"
-                          onChange={[MockFunction]}
-                          options={
-                            Array [
-                              Object {
-                                "label": "All",
-                                "value": "all",
-                              },
-                              Object {
-                                "label": "Unused Signals",
-                                "value": "unused",
-                              },
-                              Object {
-                                "label": "Signals Included in Traits",
-                                "value": "includedInTraits",
-                              },
-                            ]
-                          }
-                          quiet={true}
-                          value="all"
-                        />
-                      </Label>
-                      <Label
-                        value="View Records For"
-                      >
-                        <Select
-                          className="view-records"
-                          onChange={[MockFunction]}
-                          options={
-                            Array [
-                              Object {
-                                "label": "Last 1 Day",
-                                "value": 1,
-                              },
-                              Object {
-                                "label": "Last 7 Days",
-                                "value": 7,
-                              },
-                              Object {
-                                "label": "Last 14 Days",
-                                "value": 14,
-                              },
-                              Object {
-                                "label": "Last 30 Days",
-                                "value": 30,
-                              },
-                              Object {
-                                "label": "Custom",
-                                "value": "custom",
-                              },
-                            ]
-                          }
-                          quiet={true}
-                          value={7}
-                        />
-                      </Label>
-                      <Label
-                        value="Minimum Counts"
-                      >
-                        <NumberInput
-                          className="min-counts"
-                          decrementTitle="Decrement"
-                          disabled={false}
-                          incrementTitle="Increment"
-                          invalid={false}
-                          onChange={[MockFunction]}
-                          placeholder="Enter a number"
-                          quiet={true}
-                          readOnly={false}
-                          step={1}
-                          value={1000}
-                        />
-                      </Label>
-                    </GridColumn>
-                    <GridColumn
-                      size={3}
-                    >
-                      <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
-                        label="Search"
-                        logic={false}
-                        onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
-                        variant="cta"
-                      />
-                      <Button
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
-                        label="Clear All"
-                        logic={false}
-                        onClick={[MockFunction]}
-                        quiet={false}
-                        selected={false}
-                        variant="secondary"
-                      />
-                    </GridColumn>
-                  </GridRow>,
-                ],
-                "size": 12,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "0",
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      <GridColumn
-                        size={4}
-                      >
-                        <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 0,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
-                            }
-                          }
-                        />
-                      </GridColumn>,
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          block={false}
-                          className="add-button"
-                          disabled={false}
-                          element="button"
-                          icon={<Add />}
-                          invalid={false}
-                          label="Add"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={true}
-                          selected={false}
-                          variant="action"
-                        />
-                      </GridColumn>,
-                    ],
-                    "reverse": false,
-                    "valign": "bottom",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <KeyValuePair
-                          onKeyChange={[MockFunction]}
-                          onOperatorChange={[MockFunction]}
-                          onValueChange={[MockFunction]}
-                          pair={
-                            Object {
-                              "id": 0,
-                              "key": "",
-                              "operator": "=",
-                              "value": "",
-                            }
-                          }
-                        />,
-                        "size": 4,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": "0",
-                        "nodeType": "class",
-                        "props": Object {
-                          "onKeyChange": [MockFunction],
-                          "onOperatorChange": [MockFunction],
-                          "onValueChange": [MockFunction],
-                          "pair": Object {
-                            "id": 0,
-                            "key": "",
-                            "operator": "=",
-                            "value": "",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          <Button
-                            block={false}
-                            className="add-button"
-                            disabled={false}
-                            element="button"
-                            icon={<Add />}
-                            invalid={false}
-                            label="Add"
-                            logic={false}
-                            onClick={[MockFunction]}
-                            quiet={true}
-                            selected={false}
-                            variant="action"
-                          />,
-                          false,
-                        ],
-                        "size": 2,
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "block": false,
-                            "className": "add-button",
-                            "disabled": false,
-                            "element": "button",
-                            "icon": <Add />,
-                            "invalid": false,
-                            "label": "Add",
-                            "logic": false,
-                            "onClick": [MockFunction],
-                            "quiet": true,
-                            "selected": false,
-                            "variant": "action",
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                        false,
-                      ],
-                      "type": [Function],
-                    },
-                  ],
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      <GridColumn
-                        size={7}
-                      >
-                        <Label
-                          value="Signal Status"
-                        >
-                          <Select
-                            className="signal-status"
-                            onChange={[MockFunction]}
-                            options={
-                              Array [
-                                Object {
-                                  "label": "All",
-                                  "value": "all",
-                                },
-                                Object {
-                                  "label": "Unused Signals",
-                                  "value": "unused",
-                                },
-                                Object {
-                                  "label": "Signals Included in Traits",
-                                  "value": "includedInTraits",
-                                },
-                              ]
-                            }
-                            quiet={true}
-                            value="all"
-                          />
-                        </Label>
-                        <Label
-                          value="View Records For"
-                        >
-                          <Select
-                            className="view-records"
-                            onChange={[MockFunction]}
-                            options={
-                              Array [
-                                Object {
-                                  "label": "Last 1 Day",
-                                  "value": 1,
-                                },
-                                Object {
-                                  "label": "Last 7 Days",
-                                  "value": 7,
-                                },
-                                Object {
-                                  "label": "Last 14 Days",
-                                  "value": 14,
-                                },
-                                Object {
-                                  "label": "Last 30 Days",
-                                  "value": 30,
-                                },
-                                Object {
-                                  "label": "Custom",
-                                  "value": "custom",
-                                },
-                              ]
-                            }
-                            quiet={true}
-                            value={7}
-                          />
-                        </Label>
-                        <Label
-                          value="Minimum Counts"
-                        >
-                          <NumberInput
-                            className="min-counts"
-                            decrementTitle="Decrement"
-                            disabled={false}
-                            incrementTitle="Increment"
-                            invalid={false}
-                            onChange={[MockFunction]}
-                            placeholder="Enter a number"
-                            quiet={true}
-                            readOnly={false}
-                            step={1}
-                            value={1000}
-                          />
-                        </Label>
-                      </GridColumn>,
-                      <GridColumn
-                        size={3}
-                      >
-                        <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
-                          label="Search"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
-                          variant="cta"
-                        />
-                        <Button
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
-                          label="Clear All"
-                          logic={false}
-                          onClick={[MockFunction]}
-                          quiet={false}
-                          selected={false}
-                          variant="secondary"
-                        />
-                      </GridColumn>,
-                    ],
-                    "reverse": false,
-                    "valign": "bottom",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          <Label
-                            value="Signal Status"
-                          >
-                            <Select
-                              className="signal-status"
-                              onChange={[MockFunction]}
-                              options={
-                                Array [
-                                  Object {
-                                    "label": "All",
-                                    "value": "all",
-                                  },
-                                  Object {
-                                    "label": "Unused Signals",
-                                    "value": "unused",
-                                  },
-                                  Object {
-                                    "label": "Signals Included in Traits",
-                                    "value": "includedInTraits",
-                                  },
-                                ]
-                              }
-                              quiet={true}
-                              value="all"
-                            />
-                          </Label>,
-                          <Label
-                            value="View Records For"
-                          >
-                            <Select
-                              className="view-records"
-                              onChange={[MockFunction]}
-                              options={
-                                Array [
-                                  Object {
-                                    "label": "Last 1 Day",
-                                    "value": 1,
-                                  },
-                                  Object {
-                                    "label": "Last 7 Days",
-                                    "value": 7,
-                                  },
-                                  Object {
-                                    "label": "Last 14 Days",
-                                    "value": 14,
-                                  },
-                                  Object {
-                                    "label": "Last 30 Days",
-                                    "value": 30,
-                                  },
-                                  Object {
-                                    "label": "Custom",
-                                    "value": "custom",
-                                  },
-                                ]
-                              }
-                              quiet={true}
-                              value={7}
-                            />
-                          </Label>,
-                          <Label
-                            value="Minimum Counts"
-                          >
-                            <NumberInput
-                              className="min-counts"
-                              decrementTitle="Decrement"
-                              disabled={false}
-                              incrementTitle="Increment"
-                              invalid={false}
-                              onChange={[MockFunction]}
-                              placeholder="Enter a number"
-                              quiet={true}
-                              readOnly={false}
-                              step={1}
-                              value={1000}
-                            />
-                          </Label>,
-                        ],
-                        "size": 7,
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "function",
-                          "props": Object {
-                            "children": <Select
-                              className="signal-status"
-                              onChange={[MockFunction]}
-                              options={
-                                Array [
-                                  Object {
-                                    "label": "All",
-                                    "value": "all",
-                                  },
-                                  Object {
-                                    "label": "Unused Signals",
-                                    "value": "unused",
-                                  },
-                                  Object {
-                                    "label": "Signals Included in Traits",
-                                    "value": "includedInTraits",
-                                  },
-                                ]
-                              }
-                              quiet={true}
-                              value="all"
-                            />,
-                            "value": "Signal Status",
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "className": "signal-status",
-                              "onChange": [MockFunction],
-                              "options": Array [
-                                Object {
-                                  "label": "All",
-                                  "value": "all",
-                                },
-                                Object {
-                                  "label": "Unused Signals",
-                                  "value": "unused",
-                                },
-                                Object {
-                                  "label": "Signals Included in Traits",
-                                  "value": "includedInTraits",
-                                },
-                              ],
-                              "quiet": true,
-                              "value": "all",
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
-                          },
-                          "type": [Function],
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "function",
-                          "props": Object {
-                            "children": <Select
-                              className="view-records"
-                              onChange={[MockFunction]}
-                              options={
-                                Array [
-                                  Object {
-                                    "label": "Last 1 Day",
-                                    "value": 1,
-                                  },
-                                  Object {
-                                    "label": "Last 7 Days",
-                                    "value": 7,
-                                  },
-                                  Object {
-                                    "label": "Last 14 Days",
-                                    "value": 14,
-                                  },
-                                  Object {
-                                    "label": "Last 30 Days",
-                                    "value": 30,
-                                  },
-                                  Object {
-                                    "label": "Custom",
-                                    "value": "custom",
-                                  },
-                                ]
-                              }
-                              quiet={true}
-                              value={7}
-                            />,
-                            "value": "View Records For",
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "className": "view-records",
-                              "onChange": [MockFunction],
-                              "options": Array [
-                                Object {
-                                  "label": "Last 1 Day",
-                                  "value": 1,
-                                },
-                                Object {
-                                  "label": "Last 7 Days",
-                                  "value": 7,
-                                },
-                                Object {
-                                  "label": "Last 14 Days",
-                                  "value": 14,
-                                },
-                                Object {
-                                  "label": "Last 30 Days",
-                                  "value": 30,
-                                },
-                                Object {
-                                  "label": "Custom",
-                                  "value": "custom",
-                                },
-                              ],
-                              "quiet": true,
-                              "value": 7,
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
-                          },
-                          "type": [Function],
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "function",
-                          "props": Object {
-                            "children": <NumberInput
-                              className="min-counts"
-                              decrementTitle="Decrement"
-                              disabled={false}
-                              incrementTitle="Increment"
-                              invalid={false}
-                              onChange={[MockFunction]}
-                              placeholder="Enter a number"
-                              quiet={true}
-                              readOnly={false}
-                              step={1}
-                              value={1000}
-                            />,
-                            "value": "Minimum Counts",
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "className": "min-counts",
-                              "decrementTitle": "Decrement",
-                              "disabled": false,
-                              "incrementTitle": "Increment",
-                              "invalid": false,
-                              "onChange": [MockFunction],
-                              "placeholder": "Enter a number",
-                              "quiet": true,
-                              "readOnly": false,
-                              "step": 1,
-                              "value": 1000,
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
-                          },
-                          "type": [Function],
-                        },
-                      ],
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Search"
-                            logic={false}
-                            onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
-                            variant="cta"
-                          />,
-                          <Button
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Clear All"
-                            logic={false}
-                            onClick={[MockFunction]}
-                            quiet={false}
-                            selected={false}
-                            variant="secondary"
-                          />,
-                        ],
-                        "size": 3,
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "block": false,
-                            "disabled": false,
-                            "element": "button",
-                            "invalid": false,
-                            "label": "Search",
-                            "logic": false,
-                            "onClick": [MockFunction],
-                            "quiet": false,
-                            "selected": false,
-                            "variant": "cta",
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "block": false,
-                            "disabled": false,
-                            "element": "button",
-                            "invalid": false,
-                            "label": "Clear All",
-                            "logic": false,
-                            "onClick": [MockFunction],
-                            "quiet": false,
-                            "selected": false,
-                            "variant": "secondary",
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                      ],
-                      "type": [Function],
-                    },
-                  ],
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <GridColumn
-          size={12}
-        >
-          <Well>
-            <AdvancedSearch
-              enabled={false}
-              onAdvancedSearchChange={[MockFunction]}
+              onFilterChange={undefined}
             />
             <GridRow
               reverse={false}
@@ -1572,7 +444,7 @@ ShallowWrapper {
                     size={4}
                   >
                     <KeyValuePair
-                      onKeyChange={[MockFunction]}
+                      onKeySelect={[MockFunction]}
                       onOperatorChange={[MockFunction]}
                       onValueChange={[MockFunction]}
                       pair={
@@ -1590,7 +462,7 @@ ShallowWrapper {
                   >
                     <Button
                       block={false}
-                      className="add-button"
+                      data-test="add-button"
                       disabled={false}
                       element="button"
                       icon={<Add />}
@@ -1616,6 +488,7 @@ ShallowWrapper {
                     >
                       <Select
                         className="signal-status"
+                        data-test="signal-status"
                         onChange={[MockFunction]}
                         options={
                           Array [
@@ -1642,6 +515,7 @@ ShallowWrapper {
                     >
                       <Select
                         className="view-records"
+                        data-test="view-records"
                         onChange={[MockFunction]}
                         options={
                           Array [
@@ -1676,6 +550,7 @@ ShallowWrapper {
                     >
                       <NumberInput
                         className="min-counts"
+                        data-test="min-counts"
                         decrementTitle="Decrement"
                         disabled={false}
                         incrementTitle="Increment"
@@ -1694,6 +569,7 @@ ShallowWrapper {
                   >
                     <Button
                       block={false}
+                      data-test="search-button"
                       disabled={false}
                       element="button"
                       invalid={false}
@@ -1706,6 +582,7 @@ ShallowWrapper {
                     />
                     <Button
                       block={false}
+                      data-test="clear-all-button"
                       disabled={false}
                       element="button"
                       invalid={false}
@@ -1720,196 +597,20 @@ ShallowWrapper {
                 </GridRow>
               </GridColumn>
             </GridRow>
-          </Well>
-        </GridColumn>,
-        "reverse": false,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Well>
-            <AdvancedSearch
-              enabled={false}
-              onAdvancedSearchChange={[MockFunction]}
-            />
-            <GridRow
-              reverse={false}
-            >
-              <GridColumn
-                size={12}
-              >
-                <GridRow
-                  reverse={false}
-                  valign="bottom"
-                >
-                  <GridColumn
-                    size={4}
-                  >
-                    <KeyValuePair
-                      onKeyChange={[MockFunction]}
-                      onOperatorChange={[MockFunction]}
-                      onValueChange={[MockFunction]}
-                      pair={
-                        Object {
-                          "id": 0,
-                          "key": "",
-                          "operator": "=",
-                          "value": "",
-                        }
-                      }
-                    />
-                  </GridColumn>
-                  <GridColumn
-                    size={2}
-                  >
-                    <Button
-                      block={false}
-                      className="add-button"
-                      disabled={false}
-                      element="button"
-                      icon={<Add />}
-                      invalid={false}
-                      label="Add"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={true}
-                      selected={false}
-                      variant="action"
-                    />
-                  </GridColumn>
-                </GridRow>
-                <GridRow
-                  reverse={false}
-                  valign="bottom"
-                >
-                  <GridColumn
-                    size={7}
-                  >
-                    <Label
-                      value="Signal Status"
-                    >
-                      <Select
-                        className="signal-status"
-                        onChange={[MockFunction]}
-                        options={
-                          Array [
-                            Object {
-                              "label": "All",
-                              "value": "all",
-                            },
-                            Object {
-                              "label": "Unused Signals",
-                              "value": "unused",
-                            },
-                            Object {
-                              "label": "Signals Included in Traits",
-                              "value": "includedInTraits",
-                            },
-                          ]
-                        }
-                        quiet={true}
-                        value="all"
-                      />
-                    </Label>
-                    <Label
-                      value="View Records For"
-                    >
-                      <Select
-                        className="view-records"
-                        onChange={[MockFunction]}
-                        options={
-                          Array [
-                            Object {
-                              "label": "Last 1 Day",
-                              "value": 1,
-                            },
-                            Object {
-                              "label": "Last 7 Days",
-                              "value": 7,
-                            },
-                            Object {
-                              "label": "Last 14 Days",
-                              "value": 14,
-                            },
-                            Object {
-                              "label": "Last 30 Days",
-                              "value": 30,
-                            },
-                            Object {
-                              "label": "Custom",
-                              "value": "custom",
-                            },
-                          ]
-                        }
-                        quiet={true}
-                        value={7}
-                      />
-                    </Label>
-                    <Label
-                      value="Minimum Counts"
-                    >
-                      <NumberInput
-                        className="min-counts"
-                        decrementTitle="Decrement"
-                        disabled={false}
-                        incrementTitle="Increment"
-                        invalid={false}
-                        onChange={[MockFunction]}
-                        placeholder="Enter a number"
-                        quiet={true}
-                        readOnly={false}
-                        step={1}
-                        value={1000}
-                      />
-                    </Label>
-                  </GridColumn>
-                  <GridColumn
-                    size={3}
-                  >
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Search"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
-                      variant="cta"
-                    />
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Clear All"
-                      logic={false}
-                      onClick={[MockFunction]}
-                      quiet={false}
-                      selected={false}
-                      variant="secondary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-          </Well>,
-          "size": 12,
+          </div>,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
             "children": Array [
               <AdvancedSearch
                 enabled={false}
+                filter={undefined}
                 onAdvancedSearchChange={[MockFunction]}
+                onFilterChange={undefined}
               />,
               <GridRow
                 reverse={false}
@@ -1925,7 +626,7 @@ ShallowWrapper {
                       size={4}
                     >
                       <KeyValuePair
-                        onKeyChange={[MockFunction]}
+                        onKeySelect={[MockFunction]}
                         onOperatorChange={[MockFunction]}
                         onValueChange={[MockFunction]}
                         pair={
@@ -1943,7 +644,7 @@ ShallowWrapper {
                     >
                       <Button
                         block={false}
-                        className="add-button"
+                        data-test="add-button"
                         disabled={false}
                         element="button"
                         icon={<Add />}
@@ -1969,6 +670,7 @@ ShallowWrapper {
                       >
                         <Select
                           className="signal-status"
+                          data-test="signal-status"
                           onChange={[MockFunction]}
                           options={
                             Array [
@@ -1995,6 +697,7 @@ ShallowWrapper {
                       >
                         <Select
                           className="view-records"
+                          data-test="view-records"
                           onChange={[MockFunction]}
                           options={
                             Array [
@@ -2029,6 +732,7 @@ ShallowWrapper {
                       >
                         <NumberInput
                           className="min-counts"
+                          data-test="min-counts"
                           decrementTitle="Decrement"
                           disabled={false}
                           incrementTitle="Increment"
@@ -2047,6 +751,7 @@ ShallowWrapper {
                     >
                       <Button
                         block={false}
+                        data-test="search-button"
                         disabled={false}
                         element="button"
                         invalid={false}
@@ -2059,6 +764,7 @@ ShallowWrapper {
                       />
                       <Button
                         block={false}
+                        data-test="clear-all-button"
                         disabled={false}
                         element="button"
                         invalid={false}
@@ -2074,6 +780,7 @@ ShallowWrapper {
                 </GridColumn>
               </GridRow>,
             ],
+            "data-test": "search-form",
           },
           "ref": null,
           "rendered": Array [
@@ -2083,7 +790,9 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "enabled": false,
+                "filter": undefined,
                 "onAdvancedSearchChange": [MockFunction],
+                "onFilterChange": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -2105,7 +814,7 @@ ShallowWrapper {
                       size={4}
                     >
                       <KeyValuePair
-                        onKeyChange={[MockFunction]}
+                        onKeySelect={[MockFunction]}
                         onOperatorChange={[MockFunction]}
                         onValueChange={[MockFunction]}
                         pair={
@@ -2123,7 +832,7 @@ ShallowWrapper {
                     >
                       <Button
                         block={false}
-                        className="add-button"
+                        data-test="add-button"
                         disabled={false}
                         element="button"
                         icon={<Add />}
@@ -2149,6 +858,7 @@ ShallowWrapper {
                       >
                         <Select
                           className="signal-status"
+                          data-test="signal-status"
                           onChange={[MockFunction]}
                           options={
                             Array [
@@ -2175,6 +885,7 @@ ShallowWrapper {
                       >
                         <Select
                           className="view-records"
+                          data-test="view-records"
                           onChange={[MockFunction]}
                           options={
                             Array [
@@ -2209,6 +920,7 @@ ShallowWrapper {
                       >
                         <NumberInput
                           className="min-counts"
+                          data-test="min-counts"
                           decrementTitle="Decrement"
                           disabled={false}
                           incrementTitle="Increment"
@@ -2227,6 +939,7 @@ ShallowWrapper {
                     >
                       <Button
                         block={false}
+                        data-test="search-button"
                         disabled={false}
                         element="button"
                         invalid={false}
@@ -2239,6 +952,7 @@ ShallowWrapper {
                       />
                       <Button
                         block={false}
+                        data-test="clear-all-button"
                         disabled={false}
                         element="button"
                         invalid={false}
@@ -2270,7 +984,7 @@ ShallowWrapper {
                           size={4}
                         >
                           <KeyValuePair
-                            onKeyChange={[MockFunction]}
+                            onKeySelect={[MockFunction]}
                             onOperatorChange={[MockFunction]}
                             onValueChange={[MockFunction]}
                             pair={
@@ -2288,7 +1002,7 @@ ShallowWrapper {
                         >
                           <Button
                             block={false}
-                            className="add-button"
+                            data-test="add-button"
                             disabled={false}
                             element="button"
                             icon={<Add />}
@@ -2315,6 +1029,7 @@ ShallowWrapper {
                         >
                           <Select
                             className="signal-status"
+                            data-test="signal-status"
                             onChange={[MockFunction]}
                             options={
                               Array [
@@ -2341,6 +1056,7 @@ ShallowWrapper {
                         >
                           <Select
                             className="view-records"
+                            data-test="view-records"
                             onChange={[MockFunction]}
                             options={
                               Array [
@@ -2375,6 +1091,7 @@ ShallowWrapper {
                         >
                           <NumberInput
                             className="min-counts"
+                            data-test="min-counts"
                             decrementTitle="Decrement"
                             disabled={false}
                             incrementTitle="Increment"
@@ -2393,6 +1110,7 @@ ShallowWrapper {
                       >
                         <Button
                           block={false}
+                          data-test="search-button"
                           disabled={false}
                           element="button"
                           invalid={false}
@@ -2405,6 +1123,7 @@ ShallowWrapper {
                         />
                         <Button
                           block={false}
+                          data-test="clear-all-button"
                           disabled={false}
                           element="button"
                           invalid={false}
@@ -2432,7 +1151,7 @@ ShallowWrapper {
                           size={4}
                         >
                           <KeyValuePair
-                            onKeyChange={[MockFunction]}
+                            onKeySelect={[MockFunction]}
                             onOperatorChange={[MockFunction]}
                             onValueChange={[MockFunction]}
                             pair={
@@ -2450,7 +1169,7 @@ ShallowWrapper {
                         >
                           <Button
                             block={false}
-                            className="add-button"
+                            data-test="add-button"
                             disabled={false}
                             element="button"
                             icon={<Add />}
@@ -2475,7 +1194,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": <KeyValuePair
-                            onKeyChange={[MockFunction]}
+                            onKeySelect={[MockFunction]}
                             onOperatorChange={[MockFunction]}
                             onValueChange={[MockFunction]}
                             pair={
@@ -2495,7 +1214,7 @@ ShallowWrapper {
                           "key": "0",
                           "nodeType": "class",
                           "props": Object {
-                            "onKeyChange": [MockFunction],
+                            "onKeySelect": [MockFunction],
                             "onOperatorChange": [MockFunction],
                             "onValueChange": [MockFunction],
                             "pair": Object {
@@ -2519,7 +1238,7 @@ ShallowWrapper {
                           "children": Array [
                             <Button
                               block={false}
-                              className="add-button"
+                              data-test="add-button"
                               disabled={false}
                               element="button"
                               icon={<Add />}
@@ -2543,7 +1262,7 @@ ShallowWrapper {
                             "nodeType": "class",
                             "props": Object {
                               "block": false,
-                              "className": "add-button",
+                              "data-test": "add-button",
                               "disabled": false,
                               "element": "button",
                               "icon": <Add />,
@@ -2580,6 +1299,7 @@ ShallowWrapper {
                           >
                             <Select
                               className="signal-status"
+                              data-test="signal-status"
                               onChange={[MockFunction]}
                               options={
                                 Array [
@@ -2606,6 +1326,7 @@ ShallowWrapper {
                           >
                             <Select
                               className="view-records"
+                              data-test="view-records"
                               onChange={[MockFunction]}
                               options={
                                 Array [
@@ -2640,6 +1361,7 @@ ShallowWrapper {
                           >
                             <NumberInput
                               className="min-counts"
+                              data-test="min-counts"
                               decrementTitle="Decrement"
                               disabled={false}
                               incrementTitle="Increment"
@@ -2658,6 +1380,7 @@ ShallowWrapper {
                         >
                           <Button
                             block={false}
+                            data-test="search-button"
                             disabled={false}
                             element="button"
                             invalid={false}
@@ -2670,6 +1393,7 @@ ShallowWrapper {
                           />
                           <Button
                             block={false}
+                            data-test="clear-all-button"
                             disabled={false}
                             element="button"
                             invalid={false}
@@ -2698,6 +1422,7 @@ ShallowWrapper {
                             >
                               <Select
                                 className="signal-status"
+                                data-test="signal-status"
                                 onChange={[MockFunction]}
                                 options={
                                   Array [
@@ -2724,6 +1449,7 @@ ShallowWrapper {
                             >
                               <Select
                                 className="view-records"
+                                data-test="view-records"
                                 onChange={[MockFunction]}
                                 options={
                                   Array [
@@ -2758,6 +1484,7 @@ ShallowWrapper {
                             >
                               <NumberInput
                                 className="min-counts"
+                                data-test="min-counts"
                                 decrementTitle="Decrement"
                                 disabled={false}
                                 incrementTitle="Increment"
@@ -2782,6 +1509,7 @@ ShallowWrapper {
                             "props": Object {
                               "children": <Select
                                 className="signal-status"
+                                data-test="signal-status"
                                 onChange={[MockFunction]}
                                 options={
                                   Array [
@@ -2811,6 +1539,7 @@ ShallowWrapper {
                               "nodeType": "class",
                               "props": Object {
                                 "className": "signal-status",
+                                "data-test": "signal-status",
                                 "onChange": [MockFunction],
                                 "options": Array [
                                   Object {
@@ -2842,6 +1571,7 @@ ShallowWrapper {
                             "props": Object {
                               "children": <Select
                                 className="view-records"
+                                data-test="view-records"
                                 onChange={[MockFunction]}
                                 options={
                                   Array [
@@ -2879,6 +1609,7 @@ ShallowWrapper {
                               "nodeType": "class",
                               "props": Object {
                                 "className": "view-records",
+                                "data-test": "view-records",
                                 "onChange": [MockFunction],
                                 "options": Array [
                                   Object {
@@ -2918,6 +1649,7 @@ ShallowWrapper {
                             "props": Object {
                               "children": <NumberInput
                                 className="min-counts"
+                                data-test="min-counts"
                                 decrementTitle="Decrement"
                                 disabled={false}
                                 incrementTitle="Increment"
@@ -2938,6 +1670,7 @@ ShallowWrapper {
                               "nodeType": "class",
                               "props": Object {
                                 "className": "min-counts",
+                                "data-test": "min-counts",
                                 "decrementTitle": "Decrement",
                                 "disabled": false,
                                 "incrementTitle": "Increment",
@@ -2966,6 +1699,7 @@ ShallowWrapper {
                           "children": Array [
                             <Button
                               block={false}
+                              data-test="search-button"
                               disabled={false}
                               element="button"
                               invalid={false}
@@ -2978,6 +1712,7 @@ ShallowWrapper {
                             />,
                             <Button
                               block={false}
+                              data-test="clear-all-button"
                               disabled={false}
                               element="button"
                               invalid={false}
@@ -2999,6 +1734,7 @@ ShallowWrapper {
                             "nodeType": "class",
                             "props": Object {
                               "block": false,
+                              "data-test": "search-button",
                               "disabled": false,
                               "element": "button",
                               "invalid": false,
@@ -3019,6 +1755,7 @@ ShallowWrapper {
                             "nodeType": "class",
                             "props": Object {
                               "block": false,
+                              "data-test": "clear-all-button",
                               "disabled": false,
                               "element": "button",
                               "invalid": false,
@@ -3045,6 +1782,1761 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <GridColumn
+          size={12}
+        >
+          <Well>
+            <div
+              data-test="search-form"
+            >
+              <AdvancedSearch
+                enabled={false}
+                filter={undefined}
+                onAdvancedSearchChange={[MockFunction]}
+                onFilterChange={undefined}
+              />
+              <GridRow
+                reverse={false}
+              >
+                <GridColumn
+                  size={12}
+                >
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={4}
+                    >
+                      <KeyValuePair
+                        onKeySelect={[MockFunction]}
+                        onOperatorChange={[MockFunction]}
+                        onValueChange={[MockFunction]}
+                        pair={
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "=",
+                            "value": "",
+                          }
+                        }
+                      />
+                    </GridColumn>
+                    <GridColumn
+                      size={2}
+                    >
+                      <Button
+                        block={false}
+                        data-test="add-button"
+                        disabled={false}
+                        element="button"
+                        icon={<Add />}
+                        invalid={false}
+                        label="Add"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={true}
+                        selected={false}
+                        variant="action"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={7}
+                    >
+                      <Label
+                        value="Signal Status"
+                      >
+                        <Select
+                          className="signal-status"
+                          data-test="signal-status"
+                          onChange={[MockFunction]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "All",
+                                "value": "all",
+                              },
+                              Object {
+                                "label": "Unused Signals",
+                                "value": "unused",
+                              },
+                              Object {
+                                "label": "Signals Included in Traits",
+                                "value": "includedInTraits",
+                              },
+                            ]
+                          }
+                          quiet={true}
+                          value="all"
+                        />
+                      </Label>
+                      <Label
+                        value="View Records For"
+                      >
+                        <Select
+                          className="view-records"
+                          data-test="view-records"
+                          onChange={[MockFunction]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "Last 1 Day",
+                                "value": 1,
+                              },
+                              Object {
+                                "label": "Last 7 Days",
+                                "value": 7,
+                              },
+                              Object {
+                                "label": "Last 14 Days",
+                                "value": 14,
+                              },
+                              Object {
+                                "label": "Last 30 Days",
+                                "value": 30,
+                              },
+                              Object {
+                                "label": "Custom",
+                                "value": "custom",
+                              },
+                            ]
+                          }
+                          quiet={true}
+                          value={7}
+                        />
+                      </Label>
+                      <Label
+                        value="Minimum Counts"
+                      >
+                        <NumberInput
+                          className="min-counts"
+                          data-test="min-counts"
+                          decrementTitle="Decrement"
+                          disabled={false}
+                          incrementTitle="Increment"
+                          invalid={false}
+                          onChange={[MockFunction]}
+                          placeholder="Enter a number"
+                          quiet={true}
+                          readOnly={false}
+                          step={1}
+                          value={1000}
+                        />
+                      </Label>
+                    </GridColumn>
+                    <GridColumn
+                      size={3}
+                    >
+                      <Button
+                        block={false}
+                        data-test="search-button"
+                        disabled={false}
+                        element="button"
+                        invalid={false}
+                        label="Search"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
+                        variant="cta"
+                      />
+                      <Button
+                        block={false}
+                        data-test="clear-all-button"
+                        disabled={false}
+                        element="button"
+                        invalid={false}
+                        label="Clear All"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
+                        variant="secondary"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                </GridColumn>
+              </GridRow>
+            </div>
+          </Well>
+        </GridColumn>,
+        "reverse": false,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Well>
+            <div
+              data-test="search-form"
+            >
+              <AdvancedSearch
+                enabled={false}
+                filter={undefined}
+                onAdvancedSearchChange={[MockFunction]}
+                onFilterChange={undefined}
+              />
+              <GridRow
+                reverse={false}
+              >
+                <GridColumn
+                  size={12}
+                >
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={4}
+                    >
+                      <KeyValuePair
+                        onKeySelect={[MockFunction]}
+                        onOperatorChange={[MockFunction]}
+                        onValueChange={[MockFunction]}
+                        pair={
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "=",
+                            "value": "",
+                          }
+                        }
+                      />
+                    </GridColumn>
+                    <GridColumn
+                      size={2}
+                    >
+                      <Button
+                        block={false}
+                        data-test="add-button"
+                        disabled={false}
+                        element="button"
+                        icon={<Add />}
+                        invalid={false}
+                        label="Add"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={true}
+                        selected={false}
+                        variant="action"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={7}
+                    >
+                      <Label
+                        value="Signal Status"
+                      >
+                        <Select
+                          className="signal-status"
+                          data-test="signal-status"
+                          onChange={[MockFunction]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "All",
+                                "value": "all",
+                              },
+                              Object {
+                                "label": "Unused Signals",
+                                "value": "unused",
+                              },
+                              Object {
+                                "label": "Signals Included in Traits",
+                                "value": "includedInTraits",
+                              },
+                            ]
+                          }
+                          quiet={true}
+                          value="all"
+                        />
+                      </Label>
+                      <Label
+                        value="View Records For"
+                      >
+                        <Select
+                          className="view-records"
+                          data-test="view-records"
+                          onChange={[MockFunction]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "Last 1 Day",
+                                "value": 1,
+                              },
+                              Object {
+                                "label": "Last 7 Days",
+                                "value": 7,
+                              },
+                              Object {
+                                "label": "Last 14 Days",
+                                "value": 14,
+                              },
+                              Object {
+                                "label": "Last 30 Days",
+                                "value": 30,
+                              },
+                              Object {
+                                "label": "Custom",
+                                "value": "custom",
+                              },
+                            ]
+                          }
+                          quiet={true}
+                          value={7}
+                        />
+                      </Label>
+                      <Label
+                        value="Minimum Counts"
+                      >
+                        <NumberInput
+                          className="min-counts"
+                          data-test="min-counts"
+                          decrementTitle="Decrement"
+                          disabled={false}
+                          incrementTitle="Increment"
+                          invalid={false}
+                          onChange={[MockFunction]}
+                          placeholder="Enter a number"
+                          quiet={true}
+                          readOnly={false}
+                          step={1}
+                          value={1000}
+                        />
+                      </Label>
+                    </GridColumn>
+                    <GridColumn
+                      size={3}
+                    >
+                      <Button
+                        block={false}
+                        data-test="search-button"
+                        disabled={false}
+                        element="button"
+                        invalid={false}
+                        label="Search"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
+                        variant="cta"
+                      />
+                      <Button
+                        block={false}
+                        data-test="clear-all-button"
+                        disabled={false}
+                        element="button"
+                        invalid={false}
+                        label="Clear All"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
+                        variant="secondary"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                </GridColumn>
+              </GridRow>
+            </div>
+          </Well>,
+          "size": 12,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <div
+              data-test="search-form"
+            >
+              <AdvancedSearch
+                enabled={false}
+                filter={undefined}
+                onAdvancedSearchChange={[MockFunction]}
+                onFilterChange={undefined}
+              />
+              <GridRow
+                reverse={false}
+              >
+                <GridColumn
+                  size={12}
+                >
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={4}
+                    >
+                      <KeyValuePair
+                        onKeySelect={[MockFunction]}
+                        onOperatorChange={[MockFunction]}
+                        onValueChange={[MockFunction]}
+                        pair={
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "=",
+                            "value": "",
+                          }
+                        }
+                      />
+                    </GridColumn>
+                    <GridColumn
+                      size={2}
+                    >
+                      <Button
+                        block={false}
+                        data-test="add-button"
+                        disabled={false}
+                        element="button"
+                        icon={<Add />}
+                        invalid={false}
+                        label="Add"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={true}
+                        selected={false}
+                        variant="action"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                  <GridRow
+                    reverse={false}
+                    valign="bottom"
+                  >
+                    <GridColumn
+                      size={7}
+                    >
+                      <Label
+                        value="Signal Status"
+                      >
+                        <Select
+                          className="signal-status"
+                          data-test="signal-status"
+                          onChange={[MockFunction]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "All",
+                                "value": "all",
+                              },
+                              Object {
+                                "label": "Unused Signals",
+                                "value": "unused",
+                              },
+                              Object {
+                                "label": "Signals Included in Traits",
+                                "value": "includedInTraits",
+                              },
+                            ]
+                          }
+                          quiet={true}
+                          value="all"
+                        />
+                      </Label>
+                      <Label
+                        value="View Records For"
+                      >
+                        <Select
+                          className="view-records"
+                          data-test="view-records"
+                          onChange={[MockFunction]}
+                          options={
+                            Array [
+                              Object {
+                                "label": "Last 1 Day",
+                                "value": 1,
+                              },
+                              Object {
+                                "label": "Last 7 Days",
+                                "value": 7,
+                              },
+                              Object {
+                                "label": "Last 14 Days",
+                                "value": 14,
+                              },
+                              Object {
+                                "label": "Last 30 Days",
+                                "value": 30,
+                              },
+                              Object {
+                                "label": "Custom",
+                                "value": "custom",
+                              },
+                            ]
+                          }
+                          quiet={true}
+                          value={7}
+                        />
+                      </Label>
+                      <Label
+                        value="Minimum Counts"
+                      >
+                        <NumberInput
+                          className="min-counts"
+                          data-test="min-counts"
+                          decrementTitle="Decrement"
+                          disabled={false}
+                          incrementTitle="Increment"
+                          invalid={false}
+                          onChange={[MockFunction]}
+                          placeholder="Enter a number"
+                          quiet={true}
+                          readOnly={false}
+                          step={1}
+                          value={1000}
+                        />
+                      </Label>
+                    </GridColumn>
+                    <GridColumn
+                      size={3}
+                    >
+                      <Button
+                        block={false}
+                        data-test="search-button"
+                        disabled={false}
+                        element="button"
+                        invalid={false}
+                        label="Search"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
+                        variant="cta"
+                      />
+                      <Button
+                        block={false}
+                        data-test="clear-all-button"
+                        disabled={false}
+                        element="button"
+                        invalid={false}
+                        label="Clear All"
+                        logic={false}
+                        onClick={[MockFunction]}
+                        quiet={false}
+                        selected={false}
+                        variant="secondary"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                </GridColumn>
+              </GridRow>
+            </div>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <AdvancedSearch
+                  enabled={false}
+                  filter={undefined}
+                  onAdvancedSearchChange={[MockFunction]}
+                  onFilterChange={undefined}
+                />,
+                <GridRow
+                  reverse={false}
+                >
+                  <GridColumn
+                    size={12}
+                  >
+                    <GridRow
+                      reverse={false}
+                      valign="bottom"
+                    >
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeySelect={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
+                            }
+                          }
+                        />
+                      </GridColumn>
+                      <GridColumn
+                        size={2}
+                      >
+                        <Button
+                          block={false}
+                          data-test="add-button"
+                          disabled={false}
+                          element="button"
+                          icon={<Add />}
+                          invalid={false}
+                          label="Add"
+                          logic={false}
+                          onClick={[MockFunction]}
+                          quiet={true}
+                          selected={false}
+                          variant="action"
+                        />
+                      </GridColumn>
+                    </GridRow>
+                    <GridRow
+                      reverse={false}
+                      valign="bottom"
+                    >
+                      <GridColumn
+                        size={7}
+                      >
+                        <Label
+                          value="Signal Status"
+                        >
+                          <Select
+                            className="signal-status"
+                            data-test="signal-status"
+                            onChange={[MockFunction]}
+                            options={
+                              Array [
+                                Object {
+                                  "label": "All",
+                                  "value": "all",
+                                },
+                                Object {
+                                  "label": "Unused Signals",
+                                  "value": "unused",
+                                },
+                                Object {
+                                  "label": "Signals Included in Traits",
+                                  "value": "includedInTraits",
+                                },
+                              ]
+                            }
+                            quiet={true}
+                            value="all"
+                          />
+                        </Label>
+                        <Label
+                          value="View Records For"
+                        >
+                          <Select
+                            className="view-records"
+                            data-test="view-records"
+                            onChange={[MockFunction]}
+                            options={
+                              Array [
+                                Object {
+                                  "label": "Last 1 Day",
+                                  "value": 1,
+                                },
+                                Object {
+                                  "label": "Last 7 Days",
+                                  "value": 7,
+                                },
+                                Object {
+                                  "label": "Last 14 Days",
+                                  "value": 14,
+                                },
+                                Object {
+                                  "label": "Last 30 Days",
+                                  "value": 30,
+                                },
+                                Object {
+                                  "label": "Custom",
+                                  "value": "custom",
+                                },
+                              ]
+                            }
+                            quiet={true}
+                            value={7}
+                          />
+                        </Label>
+                        <Label
+                          value="Minimum Counts"
+                        >
+                          <NumberInput
+                            className="min-counts"
+                            data-test="min-counts"
+                            decrementTitle="Decrement"
+                            disabled={false}
+                            incrementTitle="Increment"
+                            invalid={false}
+                            onChange={[MockFunction]}
+                            placeholder="Enter a number"
+                            quiet={true}
+                            readOnly={false}
+                            step={1}
+                            value={1000}
+                          />
+                        </Label>
+                      </GridColumn>
+                      <GridColumn
+                        size={3}
+                      >
+                        <Button
+                          block={false}
+                          data-test="search-button"
+                          disabled={false}
+                          element="button"
+                          invalid={false}
+                          label="Search"
+                          logic={false}
+                          onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
+                          variant="cta"
+                        />
+                        <Button
+                          block={false}
+                          data-test="clear-all-button"
+                          disabled={false}
+                          element="button"
+                          invalid={false}
+                          label="Clear All"
+                          logic={false}
+                          onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
+                          variant="secondary"
+                        />
+                      </GridColumn>
+                    </GridRow>
+                  </GridColumn>
+                </GridRow>,
+              ],
+              "data-test": "search-form",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "enabled": false,
+                  "filter": undefined,
+                  "onAdvancedSearchChange": [MockFunction],
+                  "onFilterChange": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <GridColumn
+                    size={12}
+                  >
+                    <GridRow
+                      reverse={false}
+                      valign="bottom"
+                    >
+                      <GridColumn
+                        size={4}
+                      >
+                        <KeyValuePair
+                          onKeySelect={[MockFunction]}
+                          onOperatorChange={[MockFunction]}
+                          onValueChange={[MockFunction]}
+                          pair={
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "=",
+                              "value": "",
+                            }
+                          }
+                        />
+                      </GridColumn>
+                      <GridColumn
+                        size={2}
+                      >
+                        <Button
+                          block={false}
+                          data-test="add-button"
+                          disabled={false}
+                          element="button"
+                          icon={<Add />}
+                          invalid={false}
+                          label="Add"
+                          logic={false}
+                          onClick={[MockFunction]}
+                          quiet={true}
+                          selected={false}
+                          variant="action"
+                        />
+                      </GridColumn>
+                    </GridRow>
+                    <GridRow
+                      reverse={false}
+                      valign="bottom"
+                    >
+                      <GridColumn
+                        size={7}
+                      >
+                        <Label
+                          value="Signal Status"
+                        >
+                          <Select
+                            className="signal-status"
+                            data-test="signal-status"
+                            onChange={[MockFunction]}
+                            options={
+                              Array [
+                                Object {
+                                  "label": "All",
+                                  "value": "all",
+                                },
+                                Object {
+                                  "label": "Unused Signals",
+                                  "value": "unused",
+                                },
+                                Object {
+                                  "label": "Signals Included in Traits",
+                                  "value": "includedInTraits",
+                                },
+                              ]
+                            }
+                            quiet={true}
+                            value="all"
+                          />
+                        </Label>
+                        <Label
+                          value="View Records For"
+                        >
+                          <Select
+                            className="view-records"
+                            data-test="view-records"
+                            onChange={[MockFunction]}
+                            options={
+                              Array [
+                                Object {
+                                  "label": "Last 1 Day",
+                                  "value": 1,
+                                },
+                                Object {
+                                  "label": "Last 7 Days",
+                                  "value": 7,
+                                },
+                                Object {
+                                  "label": "Last 14 Days",
+                                  "value": 14,
+                                },
+                                Object {
+                                  "label": "Last 30 Days",
+                                  "value": 30,
+                                },
+                                Object {
+                                  "label": "Custom",
+                                  "value": "custom",
+                                },
+                              ]
+                            }
+                            quiet={true}
+                            value={7}
+                          />
+                        </Label>
+                        <Label
+                          value="Minimum Counts"
+                        >
+                          <NumberInput
+                            className="min-counts"
+                            data-test="min-counts"
+                            decrementTitle="Decrement"
+                            disabled={false}
+                            incrementTitle="Increment"
+                            invalid={false}
+                            onChange={[MockFunction]}
+                            placeholder="Enter a number"
+                            quiet={true}
+                            readOnly={false}
+                            step={1}
+                            value={1000}
+                          />
+                        </Label>
+                      </GridColumn>
+                      <GridColumn
+                        size={3}
+                      >
+                        <Button
+                          block={false}
+                          data-test="search-button"
+                          disabled={false}
+                          element="button"
+                          invalid={false}
+                          label="Search"
+                          logic={false}
+                          onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
+                          variant="cta"
+                        />
+                        <Button
+                          block={false}
+                          data-test="clear-all-button"
+                          disabled={false}
+                          element="button"
+                          invalid={false}
+                          label="Clear All"
+                          logic={false}
+                          onClick={[MockFunction]}
+                          quiet={false}
+                          selected={false}
+                          variant="secondary"
+                        />
+                      </GridColumn>
+                    </GridRow>
+                  </GridColumn>,
+                  "reverse": false,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      Array [
+                        <GridRow
+                          reverse={false}
+                          valign="bottom"
+                        >
+                          <GridColumn
+                            size={4}
+                          >
+                            <KeyValuePair
+                              onKeySelect={[MockFunction]}
+                              onOperatorChange={[MockFunction]}
+                              onValueChange={[MockFunction]}
+                              pair={
+                                Object {
+                                  "id": 0,
+                                  "key": "",
+                                  "operator": "=",
+                                  "value": "",
+                                }
+                              }
+                            />
+                          </GridColumn>
+                          <GridColumn
+                            size={2}
+                          >
+                            <Button
+                              block={false}
+                              data-test="add-button"
+                              disabled={false}
+                              element="button"
+                              icon={<Add />}
+                              invalid={false}
+                              label="Add"
+                              logic={false}
+                              onClick={[MockFunction]}
+                              quiet={true}
+                              selected={false}
+                              variant="action"
+                            />
+                          </GridColumn>
+                        </GridRow>,
+                      ],
+                      <GridRow
+                        reverse={false}
+                        valign="bottom"
+                      >
+                        <GridColumn
+                          size={7}
+                        >
+                          <Label
+                            value="Signal Status"
+                          >
+                            <Select
+                              className="signal-status"
+                              data-test="signal-status"
+                              onChange={[MockFunction]}
+                              options={
+                                Array [
+                                  Object {
+                                    "label": "All",
+                                    "value": "all",
+                                  },
+                                  Object {
+                                    "label": "Unused Signals",
+                                    "value": "unused",
+                                  },
+                                  Object {
+                                    "label": "Signals Included in Traits",
+                                    "value": "includedInTraits",
+                                  },
+                                ]
+                              }
+                              quiet={true}
+                              value="all"
+                            />
+                          </Label>
+                          <Label
+                            value="View Records For"
+                          >
+                            <Select
+                              className="view-records"
+                              data-test="view-records"
+                              onChange={[MockFunction]}
+                              options={
+                                Array [
+                                  Object {
+                                    "label": "Last 1 Day",
+                                    "value": 1,
+                                  },
+                                  Object {
+                                    "label": "Last 7 Days",
+                                    "value": 7,
+                                  },
+                                  Object {
+                                    "label": "Last 14 Days",
+                                    "value": 14,
+                                  },
+                                  Object {
+                                    "label": "Last 30 Days",
+                                    "value": 30,
+                                  },
+                                  Object {
+                                    "label": "Custom",
+                                    "value": "custom",
+                                  },
+                                ]
+                              }
+                              quiet={true}
+                              value={7}
+                            />
+                          </Label>
+                          <Label
+                            value="Minimum Counts"
+                          >
+                            <NumberInput
+                              className="min-counts"
+                              data-test="min-counts"
+                              decrementTitle="Decrement"
+                              disabled={false}
+                              incrementTitle="Increment"
+                              invalid={false}
+                              onChange={[MockFunction]}
+                              placeholder="Enter a number"
+                              quiet={true}
+                              readOnly={false}
+                              step={1}
+                              value={1000}
+                            />
+                          </Label>
+                        </GridColumn>
+                        <GridColumn
+                          size={3}
+                        >
+                          <Button
+                            block={false}
+                            data-test="search-button"
+                            disabled={false}
+                            element="button"
+                            invalid={false}
+                            label="Search"
+                            logic={false}
+                            onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
+                            variant="cta"
+                          />
+                          <Button
+                            block={false}
+                            data-test="clear-all-button"
+                            disabled={false}
+                            element="button"
+                            invalid={false}
+                            label="Clear All"
+                            logic={false}
+                            onClick={[MockFunction]}
+                            quiet={false}
+                            selected={false}
+                            variant="secondary"
+                          />
+                        </GridColumn>
+                      </GridRow>,
+                    ],
+                    "size": 12,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": "0",
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <GridColumn
+                            size={4}
+                          >
+                            <KeyValuePair
+                              onKeySelect={[MockFunction]}
+                              onOperatorChange={[MockFunction]}
+                              onValueChange={[MockFunction]}
+                              pair={
+                                Object {
+                                  "id": 0,
+                                  "key": "",
+                                  "operator": "=",
+                                  "value": "",
+                                }
+                              }
+                            />
+                          </GridColumn>,
+                          <GridColumn
+                            size={2}
+                          >
+                            <Button
+                              block={false}
+                              data-test="add-button"
+                              disabled={false}
+                              element="button"
+                              icon={<Add />}
+                              invalid={false}
+                              label="Add"
+                              logic={false}
+                              onClick={[MockFunction]}
+                              quiet={true}
+                              selected={false}
+                              variant="action"
+                            />
+                          </GridColumn>,
+                        ],
+                        "reverse": false,
+                        "valign": "bottom",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": <KeyValuePair
+                              onKeySelect={[MockFunction]}
+                              onOperatorChange={[MockFunction]}
+                              onValueChange={[MockFunction]}
+                              pair={
+                                Object {
+                                  "id": 0,
+                                  "key": "",
+                                  "operator": "=",
+                                  "value": "",
+                                }
+                              }
+                            />,
+                            "size": 4,
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": "0",
+                            "nodeType": "class",
+                            "props": Object {
+                              "onKeySelect": [MockFunction],
+                              "onOperatorChange": [MockFunction],
+                              "onValueChange": [MockFunction],
+                              "pair": Object {
+                                "id": 0,
+                                "key": "",
+                                "operator": "=",
+                                "value": "",
+                              },
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": Array [
+                              <Button
+                                block={false}
+                                data-test="add-button"
+                                disabled={false}
+                                element="button"
+                                icon={<Add />}
+                                invalid={false}
+                                label="Add"
+                                logic={false}
+                                onClick={[MockFunction]}
+                                quiet={true}
+                                selected={false}
+                                variant="action"
+                              />,
+                              false,
+                            ],
+                            "size": 2,
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "block": false,
+                                "data-test": "add-button",
+                                "disabled": false,
+                                "element": "button",
+                                "icon": <Add />,
+                                "invalid": false,
+                                "label": "Add",
+                                "logic": false,
+                                "onClick": [MockFunction],
+                                "quiet": true,
+                                "selected": false,
+                                "variant": "action",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            false,
+                          ],
+                          "type": [Function],
+                        },
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <GridColumn
+                            size={7}
+                          >
+                            <Label
+                              value="Signal Status"
+                            >
+                              <Select
+                                className="signal-status"
+                                data-test="signal-status"
+                                onChange={[MockFunction]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "label": "All",
+                                      "value": "all",
+                                    },
+                                    Object {
+                                      "label": "Unused Signals",
+                                      "value": "unused",
+                                    },
+                                    Object {
+                                      "label": "Signals Included in Traits",
+                                      "value": "includedInTraits",
+                                    },
+                                  ]
+                                }
+                                quiet={true}
+                                value="all"
+                              />
+                            </Label>
+                            <Label
+                              value="View Records For"
+                            >
+                              <Select
+                                className="view-records"
+                                data-test="view-records"
+                                onChange={[MockFunction]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "label": "Last 1 Day",
+                                      "value": 1,
+                                    },
+                                    Object {
+                                      "label": "Last 7 Days",
+                                      "value": 7,
+                                    },
+                                    Object {
+                                      "label": "Last 14 Days",
+                                      "value": 14,
+                                    },
+                                    Object {
+                                      "label": "Last 30 Days",
+                                      "value": 30,
+                                    },
+                                    Object {
+                                      "label": "Custom",
+                                      "value": "custom",
+                                    },
+                                  ]
+                                }
+                                quiet={true}
+                                value={7}
+                              />
+                            </Label>
+                            <Label
+                              value="Minimum Counts"
+                            >
+                              <NumberInput
+                                className="min-counts"
+                                data-test="min-counts"
+                                decrementTitle="Decrement"
+                                disabled={false}
+                                incrementTitle="Increment"
+                                invalid={false}
+                                onChange={[MockFunction]}
+                                placeholder="Enter a number"
+                                quiet={true}
+                                readOnly={false}
+                                step={1}
+                                value={1000}
+                              />
+                            </Label>
+                          </GridColumn>,
+                          <GridColumn
+                            size={3}
+                          >
+                            <Button
+                              block={false}
+                              data-test="search-button"
+                              disabled={false}
+                              element="button"
+                              invalid={false}
+                              label="Search"
+                              logic={false}
+                              onClick={[MockFunction]}
+                              quiet={false}
+                              selected={false}
+                              variant="cta"
+                            />
+                            <Button
+                              block={false}
+                              data-test="clear-all-button"
+                              disabled={false}
+                              element="button"
+                              invalid={false}
+                              label="Clear All"
+                              logic={false}
+                              onClick={[MockFunction]}
+                              quiet={false}
+                              selected={false}
+                              variant="secondary"
+                            />
+                          </GridColumn>,
+                        ],
+                        "reverse": false,
+                        "valign": "bottom",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": Array [
+                              <Label
+                                value="Signal Status"
+                              >
+                                <Select
+                                  className="signal-status"
+                                  data-test="signal-status"
+                                  onChange={[MockFunction]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "label": "All",
+                                        "value": "all",
+                                      },
+                                      Object {
+                                        "label": "Unused Signals",
+                                        "value": "unused",
+                                      },
+                                      Object {
+                                        "label": "Signals Included in Traits",
+                                        "value": "includedInTraits",
+                                      },
+                                    ]
+                                  }
+                                  quiet={true}
+                                  value="all"
+                                />
+                              </Label>,
+                              <Label
+                                value="View Records For"
+                              >
+                                <Select
+                                  className="view-records"
+                                  data-test="view-records"
+                                  onChange={[MockFunction]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "label": "Last 1 Day",
+                                        "value": 1,
+                                      },
+                                      Object {
+                                        "label": "Last 7 Days",
+                                        "value": 7,
+                                      },
+                                      Object {
+                                        "label": "Last 14 Days",
+                                        "value": 14,
+                                      },
+                                      Object {
+                                        "label": "Last 30 Days",
+                                        "value": 30,
+                                      },
+                                      Object {
+                                        "label": "Custom",
+                                        "value": "custom",
+                                      },
+                                    ]
+                                  }
+                                  quiet={true}
+                                  value={7}
+                                />
+                              </Label>,
+                              <Label
+                                value="Minimum Counts"
+                              >
+                                <NumberInput
+                                  className="min-counts"
+                                  data-test="min-counts"
+                                  decrementTitle="Decrement"
+                                  disabled={false}
+                                  incrementTitle="Increment"
+                                  invalid={false}
+                                  onChange={[MockFunction]}
+                                  placeholder="Enter a number"
+                                  quiet={true}
+                                  readOnly={false}
+                                  step={1}
+                                  value={1000}
+                                />
+                              </Label>,
+                            ],
+                            "size": 7,
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "function",
+                              "props": Object {
+                                "children": <Select
+                                  className="signal-status"
+                                  data-test="signal-status"
+                                  onChange={[MockFunction]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "label": "All",
+                                        "value": "all",
+                                      },
+                                      Object {
+                                        "label": "Unused Signals",
+                                        "value": "unused",
+                                      },
+                                      Object {
+                                        "label": "Signals Included in Traits",
+                                        "value": "includedInTraits",
+                                      },
+                                    ]
+                                  }
+                                  quiet={true}
+                                  value="all"
+                                />,
+                                "value": "Signal Status",
+                              },
+                              "ref": null,
+                              "rendered": Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "className": "signal-status",
+                                  "data-test": "signal-status",
+                                  "onChange": [MockFunction],
+                                  "options": Array [
+                                    Object {
+                                      "label": "All",
+                                      "value": "all",
+                                    },
+                                    Object {
+                                      "label": "Unused Signals",
+                                      "value": "unused",
+                                    },
+                                    Object {
+                                      "label": "Signals Included in Traits",
+                                      "value": "includedInTraits",
+                                    },
+                                  ],
+                                  "quiet": true,
+                                  "value": "all",
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              "type": [Function],
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "function",
+                              "props": Object {
+                                "children": <Select
+                                  className="view-records"
+                                  data-test="view-records"
+                                  onChange={[MockFunction]}
+                                  options={
+                                    Array [
+                                      Object {
+                                        "label": "Last 1 Day",
+                                        "value": 1,
+                                      },
+                                      Object {
+                                        "label": "Last 7 Days",
+                                        "value": 7,
+                                      },
+                                      Object {
+                                        "label": "Last 14 Days",
+                                        "value": 14,
+                                      },
+                                      Object {
+                                        "label": "Last 30 Days",
+                                        "value": 30,
+                                      },
+                                      Object {
+                                        "label": "Custom",
+                                        "value": "custom",
+                                      },
+                                    ]
+                                  }
+                                  quiet={true}
+                                  value={7}
+                                />,
+                                "value": "View Records For",
+                              },
+                              "ref": null,
+                              "rendered": Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "className": "view-records",
+                                  "data-test": "view-records",
+                                  "onChange": [MockFunction],
+                                  "options": Array [
+                                    Object {
+                                      "label": "Last 1 Day",
+                                      "value": 1,
+                                    },
+                                    Object {
+                                      "label": "Last 7 Days",
+                                      "value": 7,
+                                    },
+                                    Object {
+                                      "label": "Last 14 Days",
+                                      "value": 14,
+                                    },
+                                    Object {
+                                      "label": "Last 30 Days",
+                                      "value": 30,
+                                    },
+                                    Object {
+                                      "label": "Custom",
+                                      "value": "custom",
+                                    },
+                                  ],
+                                  "quiet": true,
+                                  "value": 7,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              "type": [Function],
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "function",
+                              "props": Object {
+                                "children": <NumberInput
+                                  className="min-counts"
+                                  data-test="min-counts"
+                                  decrementTitle="Decrement"
+                                  disabled={false}
+                                  incrementTitle="Increment"
+                                  invalid={false}
+                                  onChange={[MockFunction]}
+                                  placeholder="Enter a number"
+                                  quiet={true}
+                                  readOnly={false}
+                                  step={1}
+                                  value={1000}
+                                />,
+                                "value": "Minimum Counts",
+                              },
+                              "ref": null,
+                              "rendered": Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "className": "min-counts",
+                                  "data-test": "min-counts",
+                                  "decrementTitle": "Decrement",
+                                  "disabled": false,
+                                  "incrementTitle": "Increment",
+                                  "invalid": false,
+                                  "onChange": [MockFunction],
+                                  "placeholder": "Enter a number",
+                                  "quiet": true,
+                                  "readOnly": false,
+                                  "step": 1,
+                                  "value": 1000,
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              "type": [Function],
+                            },
+                          ],
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": Array [
+                              <Button
+                                block={false}
+                                data-test="search-button"
+                                disabled={false}
+                                element="button"
+                                invalid={false}
+                                label="Search"
+                                logic={false}
+                                onClick={[MockFunction]}
+                                quiet={false}
+                                selected={false}
+                                variant="cta"
+                              />,
+                              <Button
+                                block={false}
+                                data-test="clear-all-button"
+                                disabled={false}
+                                element="button"
+                                invalid={false}
+                                label="Clear All"
+                                logic={false}
+                                onClick={[MockFunction]}
+                                quiet={false}
+                                selected={false}
+                                variant="secondary"
+                              />,
+                            ],
+                            "size": 3,
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "block": false,
+                                "data-test": "search-button",
+                                "disabled": false,
+                                "element": "button",
+                                "invalid": false,
+                                "label": "Search",
+                                "logic": false,
+                                "onClick": [MockFunction],
+                                "quiet": false,
+                                "selected": false,
+                                "variant": "cta",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "block": false,
+                                "data-test": "clear-all-button",
+                                "disabled": false,
+                                "element": "button",
+                                "invalid": false,
+                                "label": "Clear All",
+                                "logic": false,
+                                "onClick": [MockFunction],
+                                "quiet": false,
+                                "selected": false,
+                                "variant": "secondary",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                          ],
+                          "type": [Function],
+                        },
+                      ],
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
           "type": [Function],
         },
         "type": [Function],
