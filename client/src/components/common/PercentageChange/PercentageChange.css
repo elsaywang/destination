@@ -1,0 +1,40 @@
+:local(.percentageChange) {
+    display: flex;
+}
+
+:local(.percentage) {
+    flex: 1;
+    text-align: right;
+}
+
+:local(.barContainer) {
+    width: 4rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+:local(.middleDivider) {
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid gray;
+}
+
+:local(.bar) {
+    height: 50%;
+    top: 25%;
+    position: absolute;
+}
+
+:local(.bar--positive) {
+    composes: bar;
+    background: green;
+    left: 50%;
+}
+
+:local(.bar--negative) {
+    composes: bar;
+    background: red;
+    right: 50%;
+}

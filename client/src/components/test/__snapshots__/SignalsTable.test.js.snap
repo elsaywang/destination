@@ -75,7 +75,7 @@ ShallowWrapper {
         Object {
           "key": "percentageChange",
           "title": "Percentage Change",
-          "width": 120,
+          "width": 160,
         },
         Object {
           "key": "includedInTraits",
@@ -130,7 +130,7 @@ ShallowWrapper {
           Object {
             "key": "percentageChange",
             "title": "Percentage Change",
-            "width": 120,
+            "width": 160,
           },
           Object {
             "key": "includedInTraits",
