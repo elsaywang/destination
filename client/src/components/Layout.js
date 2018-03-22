@@ -3,6 +3,7 @@ import Heading from '@react/react-spectrum/Heading';
 import { Grid } from '@react/react-spectrum/Grid';
 import { defineMessages, FormattedMessage } from 'react-intl';
 import '@react/react-spectrum/page';
+import '@spectrum/spectrum-variables/css/spectrum-light.css';
 import './Layout.css';
 
 const messages = defineMessages({

@@ -18,7 +18,7 @@
     left: 50%;
     width: 0;
     height: 100%;
-    border-left: 1px solid gray;
+    border-left: 1px solid var(--spectrum-alias-border-color-dark);
 }
 
 :local(.bar) {
@@ -29,12 +29,12 @@
 
 :local(.bar--positive) {
     composes: bar;
-    background: green;
+    background: var(--spectrum-semantic-positive-color-default);
     left: 50%;
 }
 
 :local(.bar--negative) {
     composes: bar;
-    background: red;
+    background: var(--spectrum-semantic-negative-color-default);
     right: 50%;
 }
