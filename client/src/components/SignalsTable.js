@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PercentageChange from './common/PercentageChange';
 import Table from './common/Table';
 import {
     allSignalsColumns,
@@ -15,6 +16,8 @@ class SignalsTable extends Component {
         switch (column.key) {
             case 'keyValuePairs':
                 return this.renderKeyValuePairs(data);
+            case 'percentageChange':
+                return this.renderPercentageChange(data);
             case 'includedInTraits':
                 return this.renderIncludedInTraits(data);
             default:
@@ -98,6 +101,10 @@ class SignalsTable extends Component {
                 })}
             </div>
         );
+    }
+
+    renderPercentageChange(percentageChange) {
+        return <PercentageChange percentageChange={percentageChange} />;
     }
 
     renderIncludedInTraits(sids) {
