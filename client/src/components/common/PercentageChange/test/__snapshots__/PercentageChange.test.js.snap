@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PercentageChange
     maxPercentageMagnitude={0.5678}
-    percentageChange={0.1234}
+    percentageChange={0.12345}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -24,7 +24,7 @@ ShallowWrapper {
         <FormattedNumber
           minimumFractionDigits={2}
           style="percent"
-          value={0.1234}
+          value={0.12345}
         >
           [Function]
         </FormattedNumber>,
@@ -56,7 +56,7 @@ ShallowWrapper {
           "children": [Function],
           "minimumFractionDigits": 2,
           "style": "percent",
-          "value": 0.1234,
+          "value": 0.12345,
         },
         "ref": null,
         "rendered": [Function],
@@ -125,7 +125,7 @@ ShallowWrapper {
           <FormattedNumber
             minimumFractionDigits={2}
             style="percent"
-            value={0.1234}
+            value={0.12345}
           >
             [Function]
           </FormattedNumber>,
@@ -157,7 +157,7 @@ ShallowWrapper {
             "children": [Function],
             "minimumFractionDigits": 2,
             "style": "percent",
-            "value": 0.1234,
+            "value": 0.12345,
           },
           "ref": null,
           "rendered": [Function],

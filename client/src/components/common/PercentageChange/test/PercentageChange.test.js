@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { FormattedNumber } from 'react-intl';
+import { createMountedIntlComponent } from '../../../../lib/i18n/testHelpers';
 import PercentageChange from '../PercentageChange';
 import { barContainer } from '../PercentageChange.css';
 
 describe('<PercentageChange /> component', () => {
     const wrapper = shallow(
-        <PercentageChange percentageChange={0.1234} maxPercentageMagnitude={0.5678} />,
+        <PercentageChange percentageChange={0.12345} maxPercentageMagnitude={0.5678} />,
     );
 
     describe('rendering', () => {
@@ -15,6 +16,47 @@ describe('<PercentageChange /> component', () => {
         });
         it('renders <FormattedNumber /> for the percentage', () => {
             expect(wrapper.find(FormattedNumber).exists()).toBeTruthy();
+        });
+    });
+
+    describe('percentage number in default English locale', () => {
+        it('should be rounded to two decimal places', () => {
+            const hasTwoDecimalPlaces = text => Boolean(text.match(/\d{2}\.\d{2}/));
+            const mounted = createMountedIntlComponent(
+                <PercentageChange percentageChange={0.12345} maxPercentageMagnitude={0.5678} />,
+            );
+
+            expect(hasTwoDecimalPlaces(mounted.text())).toBeTruthy();
+
+            mounted.setProps({ percentageChange: 1 });
+
+            expect(hasTwoDecimalPlaces(mounted.text())).toBeTruthy();
+        });
+        describe('positive/negative sign', () => {
+            it('should have a plus sign in front of positive percentages', () => {
+                const mounted = createMountedIntlComponent(
+                    <PercentageChange percentageChange={0.12345} maxPercentageMagnitude={0.5678} />,
+                );
+
+                expect(mounted.text().match(/^\+ /)).toBeTruthy();
+            });
+            it('should have a plus sign in front of 0 percent', () => {
+                const mounted = createMountedIntlComponent(
+                    <PercentageChange percentageChange={0} maxPercentageMagnitude={0.5678} />,
+                );
+
+                expect(mounted.text().match(/^\+ /)).toBeTruthy();
+            });
+            it('should have an endash in front of negative percentages', () => {
+                const mounted = createMountedIntlComponent(
+                    <PercentageChange
+                        percentageChange={-0.12345}
+                        maxPercentageMagnitude={0.5678}
+                    />,
+                );
+
+                expect(mounted.text().match(/^\– /)).toBeTruthy();
+            });
         });
     });
 

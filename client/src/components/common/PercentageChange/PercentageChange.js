@@ -47,9 +47,7 @@ class PercentageChange extends Component {
                     style="percent"
                     minimumFractionDigits={2}>
                     {percentage => (
-                        <span className={styles.percentage}>
-                            {sign} {percentage}
-                        </span>
+                        <span className={styles.percentage}>{`${sign} ${percentage}`}</span>
                     )}
                 </FormattedNumber>
                 <span className={styles.barContainer}>
