@@ -79,7 +79,7 @@ ShallowWrapper {
         Object {
           "key": "totalCounts",
           "title": "Total Counts",
-          "width": 100,
+          "width": 82,
         },
         Object {
           "key": "percentageChange",
@@ -145,7 +145,7 @@ ShallowWrapper {
           Object {
             "key": "totalCounts",
             "title": "Total Counts",
-            "width": 100,
+            "width": 82,
           },
           Object {
             "key": "percentageChange",

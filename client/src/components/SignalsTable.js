@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { FormattedNumber } from 'react-intl';
 import PercentageChange from './common/PercentageChange';
 import Table from './common/Table';
 import {
@@ -16,6 +17,8 @@ class SignalsTable extends Component {
         switch (column.key) {
             case 'keyValuePairs':
                 return this.renderKeyValuePairs(data);
+            case 'totalCounts':
+                return this.renderTotalCounts(data);
             case 'percentageChange':
                 return this.renderPercentageChange(data);
             case 'includedInTraits':
@@ -100,6 +103,14 @@ class SignalsTable extends Component {
                     );
                 })}
             </div>
+        );
+    }
+
+    renderTotalCounts(totalCounts) {
+        return (
+            <FormattedNumber value={totalCounts}>
+                {counts => <div style={{ 'text-align': 'right' }}>{counts}</div>}
+            </FormattedNumber>
         );
     }
 

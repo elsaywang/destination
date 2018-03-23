@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { FormattedNumber } from 'react-intl';
 import { columnKeys } from '../../constants/columns';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
@@ -169,6 +170,9 @@ describe('<SignalsTable /> component', () => {
             it('should call `renderKeyValuePairs` for cells in the `keyValuePairs` column', () => {
                 verifyRenderMethodInColumn('renderKeyValuePairs', 'keyValuePairs', []);
             });
+            it('should call `renderTotalCounts` for cells in the `totalCounts` column', () => {
+                verifyRenderMethodInColumn('renderTotalCounts', 'totalCounts', 123456789);
+            });
             it('should call `renderPercentageChange` for cells in the `percentageChange` column', () => {
                 verifyRenderMethodInColumn('renderPercentageChange', 'percentageChange', 0.1234);
             });
@@ -189,6 +193,15 @@ describe('<SignalsTable /> component', () => {
                 ];
 
                 expect(renderKeyValuePairs(twoKeyValuePairs)).toMatchSnapshot();
+            });
+        });
+
+        describe('renderTotalCounts', () => {
+            const { renderTotalCounts } = wrapper.instance();
+            const totalCountsWrapper = shallow(<div>{renderTotalCounts(123456789)}</div>);
+
+            it('renders <FormattedNumber />', () => {
+                expect(totalCountsWrapper.find(FormattedNumber).exists()).toBeTruthy();
             });
         });
 
