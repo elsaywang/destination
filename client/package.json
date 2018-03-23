@@ -39,6 +39,7 @@
     "lint": "node_modules/@aam/eslint-config-aam/node_modules/eslint/bin/eslint.js src",
     "json-server": "json-server data-generator.js --port 3002 --routes ./routes.json"
   },
+  "homepage": "./",
   "proxy": "http://localhost:3002",
   "devDependencies": {
     "@aam/eslint-config-aam": "^1.2.0",
