@@ -54,7 +54,7 @@ const totalEventFires = {
 const percentageChange = {
     title: 'Percentage Change',
     key: columnKeys.percentageChange,
-    width: 160,
+    width: 165,
 };
 const includedInTraits = {
     title: 'Included In Traits',

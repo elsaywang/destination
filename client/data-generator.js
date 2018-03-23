@@ -106,7 +106,7 @@ module.exports = () => {
                     sourceType: 'ONBOARDED',
                 },
                 totalCounts: 7592,
-                percentageChange: -0.0711,
+                percentageChange: -0.9711,
                 includedInTraits: [131, 838],
                 signalStatus: 'USED',
             },
