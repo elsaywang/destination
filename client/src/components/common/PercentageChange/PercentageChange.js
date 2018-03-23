@@ -34,6 +34,7 @@ class PercentageChange extends Component {
             styles.percentageChange,
             styles[this.getClassVariant(percentageChange)],
         );
+        const sign = percentageChange >= 0 ? '+' : '–';
         const barWidth = this.getBarWidth({
             percentageChange,
             maxPercentageMagnitude,
@@ -41,8 +42,15 @@ class PercentageChange extends Component {
 
         return (
             <div className={percentageChangeClass}>
-                <FormattedNumber value={percentageChange} style="percent" minimumFractionDigits={2}>
-                    {percentage => <span className={styles.percentage}>{percentage}</span>}
+                <FormattedNumber
+                    value={Math.abs(percentageChange)}
+                    style="percent"
+                    minimumFractionDigits={2}>
+                    {percentage => (
+                        <span className={styles.percentage}>
+                            {sign} {percentage}
+                        </span>
+                    )}
                 </FormattedNumber>
                 <span className={styles.barContainer}>
                     <span className={styles.middleDivider} />
