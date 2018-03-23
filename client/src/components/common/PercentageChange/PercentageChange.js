@@ -24,26 +24,29 @@ class PercentageChange extends Component {
         return `${barWidth}rem`;
     }
 
-    getBarClass(percentageChange) {
-        return percentageChange >= 0 ? 'bar--positive' : 'bar--negative';
+    getClassVariant(percentageChange) {
+        return percentageChange >= 0 ? 'percentageChange--positive' : 'percentageChange--negative';
     }
 
     render() {
         const { percentageChange, maxPercentageMagnitude } = this.props;
-        const barClass = styles[this.getBarClass(percentageChange)];
+        const percentageChangeClass = classNames(
+            styles.percentageChange,
+            styles[this.getClassVariant(percentageChange)],
+        );
         const barWidth = this.getBarWidth({
             percentageChange,
             maxPercentageMagnitude,
         });
 
         return (
-            <div className={styles.percentageChange}>
+            <div className={percentageChangeClass}>
                 <FormattedNumber value={percentageChange} style="percent" minimumFractionDigits={2}>
                     {percentage => <span className={styles.percentage}>{percentage}</span>}
                 </FormattedNumber>
                 <span className={styles.barContainer}>
                     <span className={styles.middleDivider} />
-                    <span style={{ width: barWidth }} className={barClass} />
+                    <span style={{ width: barWidth }} className={styles.bar} />
                 </span>
             </div>
         );

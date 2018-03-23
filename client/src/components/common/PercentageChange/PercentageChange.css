@@ -27,14 +27,20 @@
     position: absolute;
 }
 
-:local(.bar--positive) {
-    composes: bar;
+:local(.percentageChange--positive) :local(.percentage) {
+    color: var(--spectrum-semantic-positive-color-default);
+}
+
+:local(.percentageChange--negative) :local(.percentage) {
+    color: var(--spectrum-semantic-negative-color-default);
+}
+
+:local(.percentageChange--positive) :local(.bar) {
     background: var(--spectrum-semantic-positive-color-default);
     left: 50%;
 }
 
-:local(.bar--negative) {
-    composes: bar;
+:local(.percentageChange--negative) :local(.bar) {
     background: var(--spectrum-semantic-negative-color-default);
     right: 50%;
 }

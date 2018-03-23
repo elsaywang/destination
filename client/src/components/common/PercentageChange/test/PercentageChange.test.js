@@ -76,15 +76,15 @@ describe('<PercentageChange /> component', () => {
         });
     });
 
-    describe('getBarClass', () => {
-        const { getBarClass } = wrapper.instance();
+    describe('getClassVariant', () => {
+        const { getClassVariant } = wrapper.instance();
 
         it('should return the class for a positive percentage change if the percentage change is greater than or equal to 0', () => {
-            expect(getBarClass(0.5)).toEqual('bar--positive');
-            expect(getBarClass(0)).toEqual('bar--positive');
+            expect(getClassVariant(0.5)).toEqual('percentageChange--positive');
+            expect(getClassVariant(0)).toEqual('percentageChange--positive');
         });
         it('should return the class for a positive percentage change if the percentage change is less than 0', () => {
-            expect(getBarClass(-0.5)).toEqual('bar--negative');
+            expect(getClassVariant(-0.5)).toEqual('percentageChange--negative');
         });
     });
 });
