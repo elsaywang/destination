@@ -103,7 +103,7 @@ class SignalsTable extends Component {
         );
     }
 
-    renderPercentageChange(percentageChange) {
+    renderPercentageChange = percentageChange => {
         const maxPercentageMagnitude = Math.max(
             ...this.props.results.list.map(item => Math.abs(item.percentageChange)),
         );
@@ -114,7 +114,7 @@ class SignalsTable extends Component {
                 maxPercentageMagnitude={maxPercentageMagnitude}
             />
         );
-    }
+    };
 
     renderIncludedInTraits(sids) {
         return <span>{`${sids.length} Traits`}</span>;

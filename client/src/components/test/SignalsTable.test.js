@@ -3,11 +3,27 @@ import { shallow } from 'enzyme';
 import { columnKeys } from '../../constants/columns';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
+import PercentageChange from '../../components/common/PercentageChange';
 
 describe('<SignalsTable /> component', () => {
     const wrapper = shallow(
         <SignalsTable
-            results={{ list: [{ id: 0, name: 'test', source: { sourceType: 'ANALYTICS' } }] }}
+            results={{
+                list: [
+                    {
+                        id: 0,
+                        name: 'test1',
+                        source: { sourceType: 'ANALYTICS' },
+                        percentageChange: 0.1234,
+                    },
+                    {
+                        id: 1,
+                        name: 'test2',
+                        source: { sourceType: 'ONBOARDED' },
+                        percentageChange: -0.5678,
+                    },
+                ],
+            }}
             signalType="all"
         />,
     );
@@ -143,13 +159,18 @@ describe('<SignalsTable /> component', () => {
         });
 
         describe('renderCell', () => {
+            const verifyRenderMethodInColumn = (renderMethodName, columnKey, data) => {
+                jest.spyOn(instance, renderMethodName);
+                instance.renderCell({ key: columnKey }, data);
+
+                expect(instance[renderMethodName]).toHaveBeenCalledWith(data);
+            };
+
             it('should call `renderKeyValuePairs` for cells in the `keyValuePairs` column', () => {
-                jest.spyOn(instance, 'renderKeyValuePairs');
-
-                const { renderCell, renderKeyValuePairs } = instance;
-
-                renderCell({ key: 'keyValuePairs' }, []);
-                expect(instance.renderKeyValuePairs).toHaveBeenCalledWith([]);
+                verifyRenderMethodInColumn('renderKeyValuePairs', 'keyValuePairs', []);
+            });
+            it('should call `renderPercentageChange` for cells in the `percentageChange` column', () => {
+                verifyRenderMethodInColumn('renderPercentageChange', 'percentageChange', 0.1234);
             });
         });
 
@@ -168,6 +189,25 @@ describe('<SignalsTable /> component', () => {
                 ];
 
                 expect(renderKeyValuePairs(twoKeyValuePairs)).toMatchSnapshot();
+            });
+        });
+
+        describe('renderPercentageChange', () => {
+            const { renderPercentageChange } = wrapper.instance();
+            const percentageChangeWrapper = shallow(<div>{renderPercentageChange(0.1234)}</div>);
+
+            it('renders <PercentageChange />', () => {
+                expect(percentageChangeWrapper.find(PercentageChange).exists()).toBeTruthy();
+            });
+            it('passes `percentageChange` prop', () => {
+                expect(
+                    percentageChangeWrapper.find(PercentageChange).props().percentageChange,
+                ).toEqual(0.1234);
+            });
+            it('passes the largest percentageChange magnitude from all results as `maxPercentageMagnitude` prop', () => {
+                expect(
+                    percentageChangeWrapper.find(PercentageChange).props().maxPercentageMagnitude,
+                ).toEqual(0.5678);
             });
         });
     });

@@ -29,9 +29,18 @@ ShallowWrapper {
         "list": Array [
           Object {
             "id": 0,
-            "name": "test",
+            "name": "test1",
+            "percentageChange": 0.1234,
             "source": Object {
               "sourceType": "ANALYTICS",
+            },
+          },
+          Object {
+            "id": 1,
+            "name": "test2",
+            "percentageChange": -0.5678,
+            "source": Object {
+              "sourceType": "ONBOARDED",
             },
           },
         ],
@@ -86,11 +95,22 @@ ShallowWrapper {
       "items": Array [
         Object {
           "id": 0,
-          "name": "test",
+          "name": "test1",
+          "percentageChange": 0.1234,
           "signalSource": undefined,
           "signalType": "Adobe Analytics",
           "source": Object {
             "sourceType": "ANALYTICS",
+          },
+        },
+        Object {
+          "id": 1,
+          "name": "test2",
+          "percentageChange": -0.5678,
+          "signalSource": undefined,
+          "signalType": "Onboarded Records",
+          "source": Object {
+            "sourceType": "ONBOARDED",
           },
         },
       ],
@@ -141,11 +161,22 @@ ShallowWrapper {
         "items": Array [
           Object {
             "id": 0,
-            "name": "test",
+            "name": "test1",
+            "percentageChange": 0.1234,
             "signalSource": undefined,
             "signalType": "Adobe Analytics",
             "source": Object {
               "sourceType": "ANALYTICS",
+            },
+          },
+          Object {
+            "id": 1,
+            "name": "test2",
+            "percentageChange": -0.5678,
+            "signalSource": undefined,
+            "signalType": "Onboarded Records",
+            "source": Object {
+              "sourceType": "ONBOARDED",
             },
           },
         ],
