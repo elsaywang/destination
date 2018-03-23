@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 import classNames from 'classnames';
 import styles from './PercentageChange.css';
@@ -13,25 +14,26 @@ class PercentageChange extends Component {
      * @param  {maxBarWidth} maxBarWidth       constant, used as scaling factor
      * @return {string}                        width of colored bar in `rem`
      */
-    getBarWidth({ percentageChange, maxPercentageMagnitude, maxBarWidth }) {
+    getBarWidth({ percentageChange, maxPercentageMagnitude }) {
         const minWidth = 0.1 * maxPercentageMagnitude;
         const normalizedBarWidth =
             (Math.abs(percentageChange) + minWidth) / (maxPercentageMagnitude + minWidth);
         const scaledBarWidth = normalizedBarWidth * maxBarWidth;
+        const barWidth = Math.round(scaledBarWidth * 100) / 100;
 
-        return `${scaledBarWidth}rem`;
+        return `${barWidth}rem`;
+    }
+
+    getBarClass(percentageChange) {
+        return percentageChange >= 0 ? 'bar--positive' : 'bar--negative';
     }
 
     render() {
         const { percentageChange, maxPercentageMagnitude } = this.props;
-        const barClass = classNames({
-            [styles['bar--positive']]: percentageChange >= 0,
-            [styles['bar--negative']]: percentageChange < 0,
-        });
+        const barClass = styles[this.getBarClass(percentageChange)];
         const barWidth = this.getBarWidth({
             percentageChange,
             maxPercentageMagnitude,
-            maxBarWidth,
         });
 
         return (
@@ -47,5 +49,10 @@ class PercentageChange extends Component {
         );
     }
 }
+
+PercentageChange.propTypes = {
+    percentageChange: PropTypes.number.isRequired,
+    maxPercentageMagnitude: PropTypes.number.isRequired,
+};
 
 export default PercentageChange;
