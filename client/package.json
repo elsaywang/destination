@@ -30,7 +30,7 @@
     "start-server-and-test": "^1.0.1"
   },
   "scripts": {
-    "start": "node_modules/serve/bin/serve.js -C -n -l -p 3000 build",
+    "start": "node_modules/serve/bin/serve.js -C -n -p 3000 build",
     "start:dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

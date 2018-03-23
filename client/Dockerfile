@@ -15,4 +15,5 @@ ADD public /usr/src/app/client/public
 ADD src /usr/src/app/client/src
 RUN npm run build
 
+EXPOSE 3000
 CMD [ "npm", "start" ]
