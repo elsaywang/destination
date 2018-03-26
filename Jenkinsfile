@@ -47,11 +47,11 @@ node ("docker") {
 
         stage ('Publish Images') {
             parallel 'Publish UI Image':  {
-                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'Artifactory') {
+                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
                     uiImage.push('latest')
                 }
             }, 'Publish API aggregator Image': {
-                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'Artifactory') {
+                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
                     apiImage.push('latest')
                 }
             }
