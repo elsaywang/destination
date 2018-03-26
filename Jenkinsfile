@@ -47,9 +47,9 @@ node ("docker") {
 
         stage ('Publish Images') {
             if (env.BRANCH_NAME == "master") {
-              def dockerName = 'latest'
+              dockerName = 'latest'
             } else {
-              def dockerName = env.BRANCH_NAME
+              dockerName = env.BRANCH_NAME
             }
             parallel 'Publish UI Image':  {
                 docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
