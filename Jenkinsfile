@@ -4,6 +4,11 @@ def uiImageName = "signal-center-ui:${env.BUILD_ID}"
 def apiImageName = "signal-center-api-aggregator:${env.BUILD_ID}"
 def cypressBaseImage = "cypress/base:8"
 def workspace
+if (env.BRANCH_NAME == "master") {
+  def dockerName = 'latest'
+} else {
+  def dockerName = env.BRANCH_NAME
+}
 
 node ("docker") {
     try {
@@ -48,11 +53,11 @@ node ("docker") {
         stage ('Publish Images') {
             parallel 'Publish UI Image':  {
                 docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
-                    uiImage.push('latest')
+                    uiImage.push(dockerName)
                 }
             }, 'Publish API aggregator Image': {
                 docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
-                    apiImage.push('latest')
+                    apiImage.push(dockerName)
                 }
             }
         }
