@@ -45,20 +45,22 @@ node ("docker") {
             }
         }
 
-        if (env.BRANCH_NAME == "master") {
-            stage ('Publish Images') {
-                parallel 'Publish UI Image':  {
-                    docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
-                        uiImage.push('latest')
-                    }
-                }, 'Publish API aggregator Image': {
-                    docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
-                        apiImage.push('latest')
-                    }
+        stage ('Publish Images') {
+            if (env.BRANCH_NAME == "master") {
+              dockerName = 'latest'
+            } else {
+              dockerName = env.BRANCH_NAME
+            }
+            parallel 'Publish UI Image':  {
+                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
+                    uiImage.push(dockerName)
+                }
+            }, 'Publish API aggregator Image': {
+                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
+                    apiImage.push(dockerName)
                 }
             }
         }
-
     } catch (e) {
         // fail the build if an exception is thrown
         currentBuild.result = "FAILED"
