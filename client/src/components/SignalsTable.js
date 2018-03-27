@@ -12,7 +12,8 @@ import {
     onboardedRecordsColumns,
 } from '../constants/columns';
 import Add from '@react/react-spectrum/Icon/Add';
-import Button from '@react/react-spectrum/Button';
+import Link from '@react/react-spectrum/Link';
+import styles from './SignalsTable.css';
 import TraitsPopover from '../containers/TraitsPopover';
 
 class SignalsTable extends Component {
@@ -54,6 +55,7 @@ class SignalsTable extends Component {
             ...signal,
             signalType: this.formatSignalType(signal),
             signalSource: this.formatSignalSource(signal),
+            includedInTraits: this.formatIncludedInTraits(signal),
         }));
     }
 
@@ -95,6 +97,27 @@ class SignalsTable extends Component {
         }
     }
 
+    formatIncludedInTraits(signal) {
+        const { keyValuePairs, includedInTraits, source } = signal;
+        const { sourceType } = source;
+        return { keyValuePairs, sids: includedInTraits, sourceType };
+    }
+
+    displayLinkText(context) {
+        return <span className={styles.linkText}>{context}</span>;
+    }
+
+    formatTraitLinkText(sourceType) {
+        switch (sourceType) {
+            case 'ANALYTICS':
+                return this.displayLinkText('Create Rule-Based Trait');
+            case 'ONBOARDED':
+                return this.displayLinkText('Create Onboarded Trait');
+            default:
+                return this.displayLinkText('Create A Trait');
+        }
+    }
+
     renderKeyValuePairs(keyValuePairs) {
         return (
             <div>
@@ -130,18 +153,24 @@ class SignalsTable extends Component {
         );
     };
 
-    renderIncludedInTraits(sids) {
+    renderIncludedInTraits(data) {
+        const { sids, sourceType } = data;
         const number = sids.length;
 
         if (number === 0) {
             return (
-                <Button variant="action" icon={<Add />}>
-                    Create A Trait
-                </Button>
+                <Link href="#">
+                    <Add size="XS" className={styles.link} />
+                    {this.formatTraitLinkText(sourceType)}
+                </Link>
             );
         }
 
-        return <TraitsPopover sids={sids} />;
+        return (
+            <div className={styles.traitsPopover}>
+                <TraitsPopover sids={sids} />
+            </div>
+        );
     }
 
     render() {

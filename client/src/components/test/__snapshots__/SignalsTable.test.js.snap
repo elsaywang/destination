@@ -95,6 +95,11 @@ ShallowWrapper {
       "items": Array [
         Object {
           "id": 0,
+          "includedInTraits": Object {
+            "keyValuePairs": undefined,
+            "sids": undefined,
+            "sourceType": "ANALYTICS",
+          },
           "name": "test1",
           "percentageChange": 0.1234,
           "signalSource": undefined,
@@ -105,6 +110,11 @@ ShallowWrapper {
         },
         Object {
           "id": 1,
+          "includedInTraits": Object {
+            "keyValuePairs": undefined,
+            "sids": undefined,
+            "sourceType": "ONBOARDED",
+          },
           "name": "test2",
           "percentageChange": -0.5678,
           "signalSource": undefined,
@@ -161,6 +171,11 @@ ShallowWrapper {
         "items": Array [
           Object {
             "id": 0,
+            "includedInTraits": Object {
+              "keyValuePairs": undefined,
+              "sids": undefined,
+              "sourceType": "ANALYTICS",
+            },
             "name": "test1",
             "percentageChange": 0.1234,
             "signalSource": undefined,
@@ -171,6 +186,11 @@ ShallowWrapper {
           },
           Object {
             "id": 1,
+            "includedInTraits": Object {
+              "keyValuePairs": undefined,
+              "sids": undefined,
+              "sourceType": "ONBOARDED",
+            },
             "name": "test2",
             "percentageChange": -0.5678,
             "signalSource": undefined,

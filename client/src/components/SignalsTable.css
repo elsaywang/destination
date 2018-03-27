@@ -1,0 +1,9 @@
+:local(.link) {
+    margin-left: -0.15em;
+}
+:local(.linkText) {
+    margin-left: 0.6em;
+}
+:local(.traitsPopover) {
+    margin-left: -1em;
+}
