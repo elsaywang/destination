@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PercentageChange /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PercentageChange
+    maxPercentageMagnitude={0.5678}
+    percentageChange={0.12345}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <FormattedNumber
+          minimumFractionDigits={2}
+          style="percent"
+          value={0.12345}
+        >
+          [Function]
+        </FormattedNumber>,
+        <span
+          className={undefined}
+        >
+          <span
+            className={undefined}
+          />
+          <span
+            className={undefined}
+            style={
+              Object {
+                "width": "0.58rem",
+              }
+            }
+          />
+        </span>,
+      ],
+      "className": "",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": [Function],
+          "minimumFractionDigits": 2,
+          "style": "percent",
+          "value": 0.12345,
+        },
+        "ref": null,
+        "rendered": [Function],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className={undefined}
+            />,
+            <span
+              className={undefined}
+              style={
+                Object {
+                  "width": "0.58rem",
+                }
+              }
+            />,
+          ],
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": undefined,
+              "style": Object {
+                "width": "0.58rem",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+        ],
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <FormattedNumber
+            minimumFractionDigits={2}
+            style="percent"
+            value={0.12345}
+          >
+            [Function]
+          </FormattedNumber>,
+          <span
+            className={undefined}
+          >
+            <span
+              className={undefined}
+            />
+            <span
+              className={undefined}
+              style={
+                Object {
+                  "width": "0.58rem",
+                }
+              }
+            />
+          </span>,
+        ],
+        "className": "",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": [Function],
+            "minimumFractionDigits": 2,
+            "style": "percent",
+            "value": 0.12345,
+          },
+          "ref": null,
+          "rendered": [Function],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className={undefined}
+              />,
+              <span
+                className={undefined}
+                style={
+                  Object {
+                    "width": "0.58rem",
+                  }
+                }
+              />,
+            ],
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": undefined,
+                "style": Object {
+                  "width": "0.58rem",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+          ],
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

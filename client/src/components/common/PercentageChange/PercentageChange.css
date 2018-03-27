@@ -1,0 +1,46 @@
+:local(.percentageChange) {
+    display: flex;
+}
+
+:local(.percentage) {
+    flex: 1;
+    text-align: right;
+}
+
+:local(.barContainer) {
+    width: 4rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+:local(.middleDivider) {
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid var(--spectrum-alias-border-color-dark);
+}
+
+:local(.bar) {
+    height: 50%;
+    top: 25%;
+    position: absolute;
+}
+
+:local(.percentageChange--positive) :local(.percentage) {
+    color: var(--spectrum-semantic-positive-color-default);
+}
+
+:local(.percentageChange--negative) :local(.percentage) {
+    color: var(--spectrum-semantic-negative-color-default);
+}
+
+:local(.percentageChange--positive) :local(.bar) {
+    background: var(--spectrum-semantic-positive-color-default);
+    left: 50%;
+}
+
+:local(.percentageChange--negative) :local(.bar) {
+    background: var(--spectrum-semantic-negative-color-default);
+    right: 50%;
+}

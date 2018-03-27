@@ -44,7 +44,7 @@ const signalSource = {
 const totalCounts = {
     title: 'Total Counts',
     key: columnKeys.totalCounts,
-    width: 100,
+    width: 82,
 };
 const totalEventFires = {
     title: 'Total Event Fires',
@@ -54,7 +54,7 @@ const totalEventFires = {
 const percentageChange = {
     title: 'Percentage Change',
     key: columnKeys.percentageChange,
-    width: 120,
+    width: 165,
 };
 const includedInTraits = {
     title: 'Included In Traits',

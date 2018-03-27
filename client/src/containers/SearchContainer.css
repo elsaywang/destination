@@ -4,7 +4,7 @@
 }
 
 :local(.filterListContainer) {
-    composes: borderRight from global;
+    border-right: 1px solid var(--spectrum-alias-border-color-dark);
     padding-left: 0;
 }
 
