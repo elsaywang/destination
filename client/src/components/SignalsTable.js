@@ -11,6 +11,9 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
+import Add from '@react/react-spectrum/Icon/Add';
+import Button from '@react/react-spectrum/Button';
+import TraitsPopover from '../containers/TraitsPopover';
 
 class SignalsTable extends Component {
     renderCell = (column, data) => {
@@ -128,7 +131,17 @@ class SignalsTable extends Component {
     };
 
     renderIncludedInTraits(sids) {
-        return <span>{`${sids.length} Traits`}</span>;
+        const number = sids.length;
+
+        if (number === 0) {
+            return (
+                <Button variant="action" icon={<Add />}>
+                    Create A Trait
+                </Button>
+            );
+        }
+
+        return <TraitsPopover sids={sids} />;
     }
 
     render() {

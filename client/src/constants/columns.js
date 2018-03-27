@@ -59,7 +59,7 @@ const percentageChange = {
 const includedInTraits = {
     title: 'Included In Traits',
     key: columnKeys.includedInTraits,
-    width: 120,
+    width: 150,
 };
 
 /**

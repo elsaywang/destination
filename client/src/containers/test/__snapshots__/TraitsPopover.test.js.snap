@@ -1,0 +1,307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TraitsPopover /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TraitsPopover
+    sids={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <OverlayTrigger
+        boundariesElement="container"
+        crossOffset={0}
+        data-test="overlay-trigger"
+        defaultShow={false}
+        flip={true}
+        offset={0}
+        onShow={[Function]}
+        placement="bottom"
+        trigger="click"
+      >
+        <Button
+          block={false}
+          data-test="overlay-trigger-button"
+          disabled={false}
+          element="button"
+          icon={<ChevronDown />}
+          invalid={false}
+          label=""
+          logic={false}
+          quiet={true}
+          selected={false}
+          variant="action"
+        >
+          3 Traits
+        </Button>
+        <Popover
+          data-test="overlay-trigger-popover"
+          open={true}
+          placement="bottom"
+          title="Included in 3 Traits"
+          variant="default"
+        >
+          <Wait />
+        </Popover>
+      </OverlayTrigger>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "boundariesElement": "container",
+        "children": Array [
+          <Button
+            block={false}
+            data-test="overlay-trigger-button"
+            disabled={false}
+            element="button"
+            icon={<ChevronDown />}
+            invalid={false}
+            label=""
+            logic={false}
+            quiet={true}
+            selected={false}
+            variant="action"
+          >
+            3 Traits
+          </Button>,
+          <Popover
+            data-test="overlay-trigger-popover"
+            open={true}
+            placement="bottom"
+            title="Included in 3 Traits"
+            variant="default"
+          >
+            <Wait />
+          </Popover>,
+        ],
+        "crossOffset": 0,
+        "data-test": "overlay-trigger",
+        "defaultShow": false,
+        "flip": true,
+        "offset": 0,
+        "onShow": [Function],
+        "placement": "bottom",
+        "trigger": "click",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": false,
+            "children": "3 Traits",
+            "data-test": "overlay-trigger-button",
+            "disabled": false,
+            "element": "button",
+            "icon": <ChevronDown />,
+            "invalid": false,
+            "label": "",
+            "logic": false,
+            "quiet": true,
+            "selected": false,
+            "variant": "action",
+          },
+          "ref": null,
+          "rendered": "3 Traits",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Wait />,
+            "data-test": "overlay-trigger-popover",
+            "open": true,
+            "placement": "bottom",
+            "title": "Included in 3 Traits",
+            "variant": "default",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <OverlayTrigger
+          boundariesElement="container"
+          crossOffset={0}
+          data-test="overlay-trigger"
+          defaultShow={false}
+          flip={true}
+          offset={0}
+          onShow={[Function]}
+          placement="bottom"
+          trigger="click"
+        >
+          <Button
+            block={false}
+            data-test="overlay-trigger-button"
+            disabled={false}
+            element="button"
+            icon={<ChevronDown />}
+            invalid={false}
+            label=""
+            logic={false}
+            quiet={true}
+            selected={false}
+            variant="action"
+          >
+            3 Traits
+          </Button>
+          <Popover
+            data-test="overlay-trigger-popover"
+            open={true}
+            placement="bottom"
+            title="Included in 3 Traits"
+            variant="default"
+          >
+            <Wait />
+          </Popover>
+        </OverlayTrigger>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "boundariesElement": "container",
+          "children": Array [
+            <Button
+              block={false}
+              data-test="overlay-trigger-button"
+              disabled={false}
+              element="button"
+              icon={<ChevronDown />}
+              invalid={false}
+              label=""
+              logic={false}
+              quiet={true}
+              selected={false}
+              variant="action"
+            >
+              3 Traits
+            </Button>,
+            <Popover
+              data-test="overlay-trigger-popover"
+              open={true}
+              placement="bottom"
+              title="Included in 3 Traits"
+              variant="default"
+            >
+              <Wait />
+            </Popover>,
+          ],
+          "crossOffset": 0,
+          "data-test": "overlay-trigger",
+          "defaultShow": false,
+          "flip": true,
+          "offset": 0,
+          "onShow": [Function],
+          "placement": "bottom",
+          "trigger": "click",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "block": false,
+              "children": "3 Traits",
+              "data-test": "overlay-trigger-button",
+              "disabled": false,
+              "element": "button",
+              "icon": <ChevronDown />,
+              "invalid": false,
+              "label": "",
+              "logic": false,
+              "quiet": true,
+              "selected": false,
+              "variant": "action",
+            },
+            "ref": null,
+            "rendered": "3 Traits",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Wait />,
+              "data-test": "overlay-trigger-popover",
+              "open": true,
+              "placement": "bottom",
+              "title": "Included in 3 Traits",
+              "variant": "default",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

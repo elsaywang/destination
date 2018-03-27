@@ -89,7 +89,7 @@ ShallowWrapper {
         Object {
           "key": "includedInTraits",
           "title": "Included In Traits",
-          "width": 120,
+          "width": 150,
         },
       ],
       "items": Array [
@@ -155,7 +155,7 @@ ShallowWrapper {
           Object {
             "key": "includedInTraits",
             "title": "Included In Traits",
-            "width": 120,
+            "width": 150,
           },
         ],
         "items": Array [

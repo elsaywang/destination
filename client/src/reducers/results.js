@@ -17,18 +17,14 @@ const list = handleActions(
 
 const results = handleActions(
     {
-        [CALL_SEARCH_FULFILLED]: (state, action) => {
-            return {
-                ...state,
-                list: list(getList(state), action),
-            };
-        },
-        [CLEAR_SEARCH]: (state) => (
-            {
-                ...state,
-                list: [],
-            }
-        ),
+        [CALL_SEARCH_FULFILLED]: (state, action) => ({
+            ...state,
+            list: list(getList(state), action),
+        }),
+        [CLEAR_SEARCH]: state => ({
+            ...state,
+            list: [],
+        }),
     },
     initialState,
 );

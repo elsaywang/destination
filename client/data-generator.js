@@ -12,12 +12,13 @@ module.exports = () => {
     const data = {
         savedSearches: [],
         results: {},
+        traits: [],
     };
 
-    const randomGenerateArray = item => {
+    const randomGenerateArray = (item, max = 5) => {
         const array = [];
 
-        for (let i = 0; i < Math.floor(Math.random() * 5); i++) {
+        for (let i = 0; i < Math.floor(Math.random() * max + 1); i++) {
             array.push(new item());
         }
 
@@ -26,16 +27,15 @@ module.exports = () => {
 
     class Kvp {
         constructor() {
-            this.id = faker.random.number();
-            this.key = faker.random.uuid();
+            this.signalKey = 'k-' + faker.random.word();
             this.operator = operators[Math.floor(Math.random() * operators.length)].value;
-            this.value = faker.random.word();
+            this.signalValue = 'v-' + faker.random.word();
         }
     }
 
     class Trait {
-        constructor() {
-            this.id = faker.random.number();
+        constructor(id) {
+            this.id = id;
             this.name = faker.random.words();
             this.value = faker.random.number();
         }
@@ -44,85 +44,54 @@ module.exports = () => {
     class Results {
         constructor() {
             this.id = faker.random.number();
-            this.keyValuePairs = randomGenerateArray(Kvp);
+            this.keyValuePairs = randomGenerateArray(Kvp, 2);
             this.type = faker.random.word();
             this.source = faker.random.word();
-            this.total = faker.random.number();
+            this.totalCounts = faker.random.number();
             this.percentageChange = faker.random.number();
             this.includedTraits = randomGenerateArray(Trait);
+            this.signalStatus = 'USED';
+        }
+    }
+
+    class Source {
+        constructor(dataSourceId, reportSuiteId, sourceType) {
+            this.dataSourceId = dataSourceId || faker.random.number();
+            this.reportSuiteId = reportSuiteId || null;
+            this.sourceType = sourceType || 'REALTIME';
         }
     }
 
     const mockResults = {
         list: [
             {
-                keyValuePairs: [
-                    {
-                        signalKey: 'k-alf1',
-                        signalValue: 'v-alf1',
-                    },
-                    {
-                        signalKey: 'k-alf2',
-                        signalValue: 'v-alf2',
-                    },
-                ],
-                source: {
-                    dataSourceId: 1234,
-                    reportSuiteId: null,
-                    sourceType: 'REALTIME',
-                },
-                totalCounts: 1234,
+                keyValuePairs: randomGenerateArray(Kvp, 2),
+                source: new Source(),
+                totalCounts: faker.random.number(),
                 percentageChange: 0.154,
                 includedInTraits: [1, 2, 3],
                 signalStatus: 'USED',
             },
             {
-                keyValuePairs: [
-                    {
-                        signalKey: 'k-god',
-                        signalValue: 'v-god',
-                    },
-                ],
-                source: {
-                    dataSourceId: null,
-                    reportSuiteId: null,
-                    sourceType: 'REALTIME',
-                },
-                totalCounts: 7592,
+                keyValuePairs: randomGenerateArray(Kvp, 2),
+                source: new Source(),
+                totalCounts: faker.random.number(),
                 percentageChange: -0.3711,
                 includedInTraits: [],
                 signalStatus: 'UNUSED',
             },
             {
-                keyValuePairs: [
-                    {
-                        signalKey: 'k-onb',
-                        signalValue: 'v-onb',
-                    },
-                ],
-                source: {
-                    dataSourceId: 1234,
-                    reportSuiteId: null,
-                    sourceType: 'ONBOARDED',
-                },
-                totalCounts: 7592,
+                keyValuePairs: randomGenerateArray(Kvp, 2),
+                source: new Source(1234, null, 'ONBOARDED'),
+                totalCounts: faker.random.number(),
                 percentageChange: -0.9711,
                 includedInTraits: [131, 838],
                 signalStatus: 'USED',
             },
             {
-                keyValuePairs: [
-                    {
-                        signalKey: 'k-an',
-                        signalValue: 'v-an',
-                    },
-                ],
-                source: {
-                    dataSourceId: null,
-                    reportSuiteId: 5678,
-                    sourceType: 'ANALYTICS',
-                },
-                totalCounts: 7592,
+                keyValuePairs: randomGenerateArray(Kvp, 2),
+                source: new Source(null, 5678, 'ANALYTICS'),
+                totalCounts: faker.random.number(),
                 percentageChange: 0.8711,
                 includedInTraits: [],
                 signalStatus: 'UNUSED',
@@ -139,6 +108,9 @@ module.exports = () => {
             id: i,
             name: faker.name.findName(),
             ...new Results(),
+        });
+        data.traits.push({
+            ...new Trait(i),
         });
         // data.results.push(new Results()); TODO: update fake Results
     }
