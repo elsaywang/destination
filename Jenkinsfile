@@ -41,7 +41,7 @@ node ("docker") {
                 sh '(cd /usr/src/app/ui-build && mkdir cypress)'
                 sh 'cp -R /usr/src/app/client/cypress/* /usr/src/app/ui-build/cypress/'
                 sh 'cp -R /usr/src/app/client/cypress.json /usr/src/app/ui-build/cypress.json'
-                sh '(cd /usr/src/app/ui-build && npm run ci)'
+                sh '(cd /usr/src/app/ui-build && npm run cypress:ci)'
             }
         }
 
@@ -84,6 +84,12 @@ node ("docker") {
         //publish unit test
         junit '**/test-report.xml'
 
+        // publish screenshots in a zip file if they are generated.
+        if (fileExists("${workspace}/artifacts/ui-build/cypress/screenshots")) {
+            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/cypress/screenshots", glob: '*.png', zipFile: 'cypress_errors_ss.zip'
+        }
+
+        // publish video if there is videos to publish
         archiveArtifacts artifacts: "**/*.mp4", fingerprint: true, allowEmptyArchive: true
 
     }

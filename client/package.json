@@ -38,7 +38,7 @@
     "precommit": "pretty-quick --staged",
     "cypress:open": "node_modules/.bin/cypress open",
     "cypress:run": "node_modules/.bin/cypress run",
-    "ci": "node_modules/.bin/start-server-and-test start http://localhost:3000 cypress:run",
+    "cypress:ci": "node_modules/.bin/start-server-and-test start http://localhost:3000 cypress:run",
     "lint": "node_modules/@aam/eslint-config-aam/node_modules/eslint/bin/eslint.js src",
     "json-server": "json-server data-generator.js --port 3002 --routes ./routes.json",
     "externalize": "rm -f ./src/lib/i18n/messages/en.json && NODE_ENV=development node_modules/.bin/extract-messages -l=en --flat true -o ./src/lib/i18n/messages './src/**/!(*.test).js'"
