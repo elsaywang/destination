@@ -1,5 +1,3 @@
-@value maxBarWidth: 2; /* Max width of colored bar in one direction */
-
 :local(.percentageChange) {
     display: flex;
 }
@@ -10,7 +8,7 @@
 }
 
 :local(.barContainer) {
-    width: calc(maxBarWidth * 2 * 1rem); /* maxBarWidth x 2, in rem units */
+    width: 4rem;
     position: relative;
     padding: 0 1rem;
 }
