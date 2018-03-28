@@ -258,7 +258,7 @@ describe('<SignalsTable /> component', () => {
                     ).toBeTruthy(),
                 );
             });
-            it('has formated trait link text with `${context}` inside a span based on `${sourceType}`', () => {
+            it('has formated trait link text with `${context}` inside a div based on `${sourceType}`', () => {
                 signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
             });
         });

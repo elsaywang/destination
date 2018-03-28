@@ -1,66 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 1`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 1`] = `
 <Link
   href="#"
 >
-  <Add
-    className={undefined}
-    size="XS"
-  />
-  <span
+  <div
     className={undefined}
   >
-    Create Rule-Based Trait
-  </span>
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create Rule-Based Trait
+    </div>
+  </div>
 </Link>
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 2`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 2`] = `
 <Link
   href="#"
 >
-  <Add
-    className={undefined}
-    size="XS"
-  />
-  <span
+  <div
     className={undefined}
   >
-    Create Onboarded Trait
-  </span>
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create Onboarded Trait
+    </div>
+  </div>
 </Link>
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 3`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 3`] = `
 <Link
   href="#"
 >
-  <Add
-    className={undefined}
-    size="XS"
-  />
-  <span
+  <div
     className={undefined}
   >
-    Create A Trait
-  </span>
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create A Trait
+    </div>
+  </div>
 </Link>
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 4`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 4`] = `
 <Link
   href="#"
 >
-  <Add
-    className={undefined}
-    size="XS"
-  />
-  <span
+  <div
     className={undefined}
   >
-    Create A Trait
-  </span>
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create A Trait
+    </div>
+  </div>
 </Link>
 `;
 

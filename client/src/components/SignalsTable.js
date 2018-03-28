@@ -104,7 +104,7 @@ class SignalsTable extends Component {
     }
 
     renderCreateTraitLink(context) {
-        return <span className={styles.linkText}>{context}</span>;
+        return <div className={styles.linkText}>{context}</div>;
     }
 
     formatTraitLinkText(sourceType) {
@@ -160,8 +160,10 @@ class SignalsTable extends Component {
         if (number === 0) {
             return (
                 <Link href="#">
-                    <Add size="XS" className={styles.link} />
-                    {this.formatTraitLinkText(sourceType)}
+                    <div className={styles.link}>
+                        <Add size="S" />
+                        {this.formatTraitLinkText(sourceType)}
+                    </div>
                 </Link>
             );
         }
