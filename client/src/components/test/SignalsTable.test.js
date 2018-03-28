@@ -232,48 +232,54 @@ describe('<SignalsTable /> component', () => {
             });
         });
 
-        describe('renderIncludedInTraits when signals are not included in traits', () => {
-            const { renderIncludedInTraits } = wrapper.instance();
-            const signals = [
-                { sids: [], sourceType: 'ANALYTICS' },
-                { sids: [], sourceType: 'ONBOARDED' },
-                { sids: [], sourceType: 'REALTIME' },
-                { sids: [], sourceType: '-' },
-            ];
-            it('should render <Link/>', () => {
-                signals.map(data =>
-                    expect(
-                        shallow(<div>{renderIncludedInTraits(data)}</div>)
-                            .find(Link)
-                            .exists(),
-                    ).toBeTruthy(),
-                );
-            });
-            it('includes <Add/> icon ', () => {
-                signals.map(data =>
-                    expect(
-                        shallow(<div>{renderIncludedInTraits(data)}</div>)
-                            .find(Add)
-                            .exists(),
-                    ).toBeTruthy(),
-                );
-            });
-            it('has formated trait link text with `${context}` inside a div based on `${sourceType}`', () => {
-                signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
-            });
-        });
-
-        describe('renderIncludedInTraits when signals are included in traits', () => {
-            const { renderIncludedInTraits } = wrapper.instance();
-            const data = { sids: [1, 2, 3], sourceType: 'ANALYTICS' };
-            const includedInTraitsWrapper = shallow(<div>{renderIncludedInTraits(data)}</div>);
-
-            it('should render <TraitsPopover />', () => {
-                expect(includedInTraitsWrapper.find(TraitsPopover).exists()).toBeTruthy();
+        describe('renderIncludedInTraits', () => {
+            describe('when signals are not included in traits', () => {
+                const { renderIncludedInTraits } = wrapper.instance();
+                const signals = [
+                    { sids: [], sourceType: 'ANALYTICS' },
+                    { sids: [], sourceType: 'ONBOARDED' },
+                    { sids: [], sourceType: 'REALTIME' },
+                    { sids: [], sourceType: '-' },
+                ];
+                it('should render <Link/>', () => {
+                    signals.map(data =>
+                        expect(
+                            shallow(<div>{renderIncludedInTraits(data)}</div>)
+                                .find(Link)
+                                .exists(),
+                        ).toBeTruthy(),
+                    );
+                });
+                it('includes <Add/> icon ', () => {
+                    signals.map(data =>
+                        expect(
+                            shallow(<div>{renderIncludedInTraits(data)}</div>)
+                                .find(Add)
+                                .exists(),
+                        ).toBeTruthy(),
+                    );
+                });
+                it('has formated trait link text with `${context}` inside a div based on `${sourceType}`', () => {
+                    signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
+                });
             });
 
-            it('passes `sids` prop', () => {
-                expect(includedInTraitsWrapper.find(TraitsPopover).props().sids).toEqual([1, 2, 3]);
+            describe('when signals are included in traits', () => {
+                const { renderIncludedInTraits } = wrapper.instance();
+                const data = { sids: [1, 2, 3], sourceType: 'ANALYTICS' };
+                const includedInTraitsWrapper = shallow(<div>{renderIncludedInTraits(data)}</div>);
+
+                it('should render <TraitsPopover />', () => {
+                    expect(includedInTraitsWrapper.find(TraitsPopover).exists()).toBeTruthy();
+                });
+
+                it('passes `sids` prop', () => {
+                    expect(includedInTraitsWrapper.find(TraitsPopover).props().sids).toEqual([
+                        1,
+                        2,
+                        3,
+                    ]);
+                });
             });
         });
     });
