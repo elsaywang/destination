@@ -1,5 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 1`] = `
+<Link
+  href="#"
+>
+  <div
+    className={undefined}
+  >
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create Rule-based Trait
+    </div>
+  </div>
+</Link>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 2`] = `
+<Link
+  href="#"
+>
+  <div
+    className={undefined}
+  >
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create Onboarded Trait
+    </div>
+  </div>
+</Link>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 3`] = `
+<Link
+  href="#"
+>
+  <div
+    className={undefined}
+  >
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create Rule-based Trait
+    </div>
+  </div>
+</Link>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a div based on \`\${sourceType}\` 4`] = `
+<Link
+  href="#"
+>
+  <div
+    className={undefined}
+  >
+    <Add
+      size="S"
+    />
+    <div
+      className={undefined}
+    >
+      Create Rule-based Trait
+    </div>
+  </div>
+</Link>
+`;
+
 exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render one key-value pair as \`\${key}=\${value}\` inside a div 1`] = `
 <div>
   <div>
@@ -95,6 +171,11 @@ ShallowWrapper {
       "items": Array [
         Object {
           "id": 0,
+          "includedInTraits": Object {
+            "keyValuePairs": undefined,
+            "sids": undefined,
+            "sourceType": "ANALYTICS",
+          },
           "name": "test1",
           "percentageChange": 0.1234,
           "signalSource": undefined,
@@ -105,6 +186,11 @@ ShallowWrapper {
         },
         Object {
           "id": 1,
+          "includedInTraits": Object {
+            "keyValuePairs": undefined,
+            "sids": undefined,
+            "sourceType": "ONBOARDED",
+          },
           "name": "test2",
           "percentageChange": -0.5678,
           "signalSource": undefined,
@@ -161,6 +247,11 @@ ShallowWrapper {
         "items": Array [
           Object {
             "id": 0,
+            "includedInTraits": Object {
+              "keyValuePairs": undefined,
+              "sids": undefined,
+              "sourceType": "ANALYTICS",
+            },
             "name": "test1",
             "percentageChange": 0.1234,
             "signalSource": undefined,
@@ -171,6 +262,11 @@ ShallowWrapper {
           },
           Object {
             "id": 1,
+            "includedInTraits": Object {
+              "keyValuePairs": undefined,
+              "sids": undefined,
+              "sourceType": "ONBOARDED",
+            },
             "name": "test2",
             "percentageChange": -0.5678,
             "signalSource": undefined,
