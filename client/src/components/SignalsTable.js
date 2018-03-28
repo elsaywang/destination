@@ -108,14 +108,11 @@ class SignalsTable extends Component {
     }
 
     formatTraitLinkText(sourceType) {
-        switch (sourceType) {
-            case 'ANALYTICS':
-                return this.renderCreateTraitLink('Create Rule-Based Trait');
-            case 'ONBOARDED':
-                return this.renderCreateTraitLink('Create Onboarded Trait');
-            default:
-                return this.renderCreateTraitLink('Create A Trait');
+        if (sourceType === 'ONBOARDED') {
+            return this.renderCreateTraitLink('Create Onboarded Trait');
         }
+
+        return this.renderCreateTraitLink('Create Rule-based Trait');
     }
 
     renderKeyValuePairs(keyValuePairs) {
