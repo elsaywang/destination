@@ -1,5 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 1`] = `
+<Link
+  href="#"
+>
+  <Add
+    className={undefined}
+    size="XS"
+  />
+  <span
+    className={undefined}
+  >
+    Create Rule-Based Trait
+  </span>
+</Link>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 2`] = `
+<Link
+  href="#"
+>
+  <Add
+    className={undefined}
+    size="XS"
+  />
+  <span
+    className={undefined}
+  >
+    Create Onboarded Trait
+  </span>
+</Link>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 3`] = `
+<Link
+  href="#"
+>
+  <Add
+    className={undefined}
+    size="XS"
+  />
+  <span
+    className={undefined}
+  >
+    Create A Trait
+  </span>
+</Link>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits has formated trait link text with \`\${context}\` inside a span based on \`\${sourceType}\` 4`] = `
+<Link
+  href="#"
+>
+  <Add
+    className={undefined}
+    size="XS"
+  />
+  <span
+    className={undefined}
+  >
+    Create A Trait
+  </span>
+</Link>
+`;
+
 exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render one key-value pair as \`\${key}=\${value}\` inside a div 1`] = `
 <div>
   <div>

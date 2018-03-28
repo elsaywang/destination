@@ -5,6 +5,9 @@ import { columnKeys } from '../../constants/columns';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 import PercentageChange from '../../components/common/PercentageChange';
+import TraitsPopover from '../../containers/TraitsPopover';
+import Add from '@react/react-spectrum/Icon/Add';
+import Link from '@react/react-spectrum/Link';
 
 describe('<SignalsTable /> component', () => {
     const wrapper = shallow(
@@ -163,7 +166,6 @@ describe('<SignalsTable /> component', () => {
             const verifyRenderMethodInColumn = (renderMethodName, columnKey, data) => {
                 jest.spyOn(instance, renderMethodName);
                 instance.renderCell({ key: columnKey }, data);
-
                 expect(instance[renderMethodName]).toHaveBeenCalledWith(data);
             };
 
@@ -175,6 +177,12 @@ describe('<SignalsTable /> component', () => {
             });
             it('should call `renderPercentageChange` for cells in the `percentageChange` column', () => {
                 verifyRenderMethodInColumn('renderPercentageChange', 'percentageChange', 0.1234);
+            });
+            it('should call `renderIncludedInTraits` for cells in the `includedInTraits` column', () => {
+                verifyRenderMethodInColumn('renderIncludedInTraits', 'includedInTraits', {
+                    sids: [],
+                    keyValuePairs: [],
+                });
             });
         });
 
@@ -221,6 +229,51 @@ describe('<SignalsTable /> component', () => {
                 expect(
                     percentageChangeWrapper.find(PercentageChange).props().maxPercentageMagnitude,
                 ).toEqual(0.5678);
+            });
+        });
+
+        describe('renderIncludedInTraits when signals are not included in traits', () => {
+            const { renderIncludedInTraits } = wrapper.instance();
+            const signals = [
+                { sids: [], sourceType: 'ANALYTICS' },
+                { sids: [], sourceType: 'ONBOARDED' },
+                { sids: [], sourceType: 'REALTIME' },
+                { sids: [], sourceType: '-' },
+            ];
+            it('should render <Link/>', () => {
+                signals.map(data =>
+                    expect(
+                        shallow(<div>{renderIncludedInTraits(data)}</div>)
+                            .find(Link)
+                            .exists(),
+                    ).toBeTruthy(),
+                );
+            });
+            it('includes <Add/> icon ', () => {
+                signals.map(data =>
+                    expect(
+                        shallow(<div>{renderIncludedInTraits(data)}</div>)
+                            .find(Add)
+                            .exists(),
+                    ).toBeTruthy(),
+                );
+            });
+            it('has formated trait link text with `${context}` inside a span based on `${sourceType}`', () => {
+                signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
+            });
+        });
+
+        describe('renderIncludedInTraits when signals are included in traits', () => {
+            const { renderIncludedInTraits } = wrapper.instance();
+            const data = { sids: [1, 2, 3], sourceType: 'ANALYTICS' };
+            const includedInTraitsWrapper = shallow(<div>{renderIncludedInTraits(data)}</div>);
+
+            it('should render <TraitsPopover />', () => {
+                expect(includedInTraitsWrapper.find(TraitsPopover).exists()).toBeTruthy();
+            });
+
+            it('passes `sids` prop', () => {
+                expect(includedInTraitsWrapper.find(TraitsPopover).props().sids).toEqual([1, 2, 3]);
             });
         });
     });

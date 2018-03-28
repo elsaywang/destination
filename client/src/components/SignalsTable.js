@@ -153,7 +153,7 @@ class SignalsTable extends Component {
         );
     };
 
-    renderIncludedInTraits(data) {
+    renderIncludedInTraits = data => {
         const { sids, sourceType } = data;
         const number = sids.length;
 
@@ -171,7 +171,7 @@ class SignalsTable extends Component {
                 <TraitsPopover sids={sids} />
             </div>
         );
-    }
+    };
 
     render() {
         const { results, signalType, isAdvancedSearchEnabled } = this.props;
