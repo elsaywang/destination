@@ -103,18 +103,18 @@ class SignalsTable extends Component {
         return { keyValuePairs, sids: includedInTraits, sourceType };
     }
 
-    displayLinkText(context) {
+    renderCreateTraitLink(context) {
         return <span className={styles.linkText}>{context}</span>;
     }
 
     formatTraitLinkText(sourceType) {
         switch (sourceType) {
             case 'ANALYTICS':
-                return this.displayLinkText('Create Rule-Based Trait');
+                return this.renderCreateTraitLink('Create Rule-Based Trait');
             case 'ONBOARDED':
-                return this.displayLinkText('Create Onboarded Trait');
+                return this.renderCreateTraitLink('Create Onboarded Trait');
             default:
-                return this.displayLinkText('Create A Trait');
+                return this.renderCreateTraitLink('Create A Trait');
         }
     }
 
