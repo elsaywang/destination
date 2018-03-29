@@ -24,7 +24,7 @@ class Table extends Component {
     }
 
     render() {
-        const { items, columns, renderCell, sortSearch } = this.props;
+        const { items, columns, renderCell, sortSearch, onSelectionChange } = this.props;
         const DataSourceWithColumns = withColumns(DataSource, columns);
         const dataSource = new DataSourceWithColumns({
             items,
@@ -34,7 +34,11 @@ class Table extends Component {
 
         return (
             <div className="table-wrapper" style={{ height }}>
-                <TableView dataSource={dataSource} renderCell={renderCell} />
+                <TableView
+                    dataSource={dataSource}
+                    renderCell={renderCell}
+                    onSelectionChange={onSelectionChange}
+                />
             </div>
         );
     }
@@ -44,6 +48,7 @@ Table.propTypes = {
     items: PropTypes.array.isRequired,
     columns: PropTypes.array.isRequired,
     renderCell: PropTypes.func.isRequired,
+    onSelectionChange: PropTypes.func,
     sortSearch: PropTypes.func,
 };
 

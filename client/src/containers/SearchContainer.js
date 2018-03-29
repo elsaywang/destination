@@ -2,8 +2,10 @@ import * as actionCreators from '../actions';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
+import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
+import BulkCreation from './BulkCreation';
 import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
@@ -55,12 +57,27 @@ class SearchContainer extends Component {
                             />
                         </div>
                         <div className={styles.tableContainer}>
-                            <Heading size={3}>Search Results for</Heading>
+                            <GridRow valign="middle">
+                                <GridColumn size={4}>
+                                    <Heading size={3}>Search Results for</Heading>
+                                </GridColumn>
+                                <GridColumn size={8}>
+                                    <GridRow>
+                                        <GridColumn size={10}>
+                                            <BulkCreation />
+                                        </GridColumn>
+                                        <GridColumn size={2}>
+                                            <Button label="Export.csv" variant="primary" />
+                                        </GridColumn>
+                                    </GridRow>
+                                </GridColumn>
+                            </GridRow>
                             <SignalsTable
                                 results={this.props.results}
                                 signalType={this.state.signalType}
                                 isAdvancedSearchEnabled={false} // TODO: hook this up
                                 sortSearch={this.props.sortSearch}
+                                onSignalRecordsSelection={this.props.selectSignals}
                             />
                         </div>
                     </div>

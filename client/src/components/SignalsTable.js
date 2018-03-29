@@ -11,6 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
+import { renderSelectedSignalsContext } from '../utils/index';
 import Add from '@react/react-spectrum/Icon/Add';
 import Link from '@react/react-spectrum/Link';
 import styles from './SignalsTable.css';
@@ -30,6 +31,20 @@ class SignalsTable extends Component {
             default:
                 return <span>{data}</span>;
         }
+    };
+
+    onSelectionChange = selectedItems => {
+        const { onSignalRecordsSelection, results } = this.props;
+        const items = this.formatSignalsList(results.list);
+        const selectedRowIndexSet = [];
+        //selectedItems is iterable
+        for (let indexPath of selectedItems) {
+            selectedRowIndexSet.push(indexPath.index);
+        }
+        const records = selectedRowIndexSet.map(i => ({ rowIndex: i, ...items[i] }));
+        const displayContext = renderSelectedSignalsContext(records);
+
+        onSignalRecordsSelection({ records, displayContext });
     };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
@@ -164,7 +179,6 @@ class SignalsTable extends Component {
                 </Link>
             );
         }
-
         return (
             <div className={styles.traitsPopover}>
                 <TraitsPopover sids={sids} />
@@ -183,6 +197,7 @@ class SignalsTable extends Component {
                 columns={columns}
                 renderCell={this.renderCell}
                 sortSearch={sortSearch}
+                onSelectionChange={this.onSelectionChange}
             />
         );
     }
@@ -192,6 +207,7 @@ SignalsTable.propTypes = {
     results: PropTypes.object,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
+    onSignalRecordsSelection: PropTypes.func,
     sortSearch: PropTypes.func,
 };
 

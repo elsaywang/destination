@@ -23,3 +23,5 @@ export const sortSearch = createAction(SORT_SEARCH, (sortColumn, sortDir) => {
 
 export const CLEAR_SEARCH = 'CLEAR_SEARCH';
 export const clearSearch = createAction(CLEAR_SEARCH);
+
+export * from './selectSignals.action.js';

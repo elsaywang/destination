@@ -1,0 +1,9 @@
+:local(.bulkCreation) {
+    display: flex;
+    justify-content: flex-end;
+}
+:local(.context) {
+    display: flex;
+    padding: 0.5em;
+    font-weight: 800;
+}

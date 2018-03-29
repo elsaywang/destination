@@ -26,9 +26,15 @@ describe('<Table /> component', () => {
     ];
     const renderCell = (column, data) => <span>{data}</span>;
     const sortSearch = jest.fn();
-
+    const onSelectionChange = jest.fn();
     const wrapper = shallow(
-        <Table items={items} columns={columns} renderCell={renderCell} sortSearch={sortSearch} />,
+        <Table
+            items={items}
+            columns={columns}
+            renderCell={renderCell}
+            sortSearch={sortSearch}
+            onSelectionChange={onSelectionChange}
+        />,
     );
 
     describe('rendering', () => {
@@ -40,6 +46,9 @@ describe('<Table /> component', () => {
         });
         it('passes the `renderCell` prop to the <TableView />', () => {
             expect(wrapper.find(TableView).prop('renderCell')).toEqual(renderCell);
+        });
+        it('passes the `onSelectionChange` prop to the <TableView />', () => {
+            expect(wrapper.find(TableView).prop('onSelectionChange')).toEqual(onSelectionChange);
         });
     });
     describe('created data source for the table', () => {
