@@ -16,6 +16,7 @@ ShallowWrapper {
       }
     }
     savedSearches={Array []}
+    sortSearch={[Function]}
     store={
       Object {
         "dispatch": [Function],

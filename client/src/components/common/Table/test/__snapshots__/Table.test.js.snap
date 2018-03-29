@@ -30,6 +30,7 @@ ShallowWrapper {
       ]
     }
     renderCell={[Function]}
+    sortSearch={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -72,6 +73,7 @@ ShallowWrapper {
             ],
             "sortColumn": null,
             "sortDir": -1,
+            "sortSearch": [MockFunction],
           }
         }
         renderCell={[Function]}
@@ -114,6 +116,7 @@ ShallowWrapper {
           ],
           "sortColumn": null,
           "sortDir": -1,
+          "sortSearch": [MockFunction],
         },
         "renderCell": [Function],
       },
@@ -158,6 +161,7 @@ ShallowWrapper {
               ],
               "sortColumn": null,
               "sortDir": -1,
+              "sortSearch": [MockFunction],
             }
           }
           renderCell={[Function]}
@@ -200,6 +204,7 @@ ShallowWrapper {
             ],
             "sortColumn": null,
             "sortDir": -1,
+            "sortSearch": [MockFunction],
           },
           "renderCell": [Function],
         },

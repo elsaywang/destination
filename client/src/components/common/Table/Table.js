@@ -11,19 +11,6 @@ import withColumns from './withColumns';
  * TODO: nice empty state
  */
 class Table extends Component {
-    render() {
-        const { items, columns, renderCell } = this.props;
-        const DataSourceWithColumns = withColumns(DataSource, columns);
-        const dataSource = new DataSourceWithColumns({ items });
-        const height = this.getTableHeight(items);
-
-        return (
-            <div className="table-wrapper" style={{ height }}>
-                <TableView dataSource={dataSource} renderCell={renderCell} />
-            </div>
-        );
-    }
-
     /**
      * Dynamically set the height of the table's container to show up to a
      * certain number of rows.
@@ -35,12 +22,29 @@ class Table extends Component {
 
         return `${headHeight + bodyHeight}px`;
     }
+
+    render() {
+        const { items, columns, renderCell, sortSearch } = this.props;
+        const DataSourceWithColumns = withColumns(DataSource, columns);
+        const dataSource = new DataSourceWithColumns({
+            items,
+            sortSearch,
+        });
+        const height = this.getTableHeight(items);
+
+        return (
+            <div className="table-wrapper" style={{ height }}>
+                <TableView dataSource={dataSource} renderCell={renderCell} />
+            </div>
+        );
+    }
 }
 
 Table.propTypes = {
     items: PropTypes.array.isRequired,
     columns: PropTypes.array.isRequired,
     renderCell: PropTypes.func.isRequired,
+    sortSearch: PropTypes.func,
 };
 
 export default Table;

@@ -60,6 +60,7 @@ class SearchContainer extends Component {
                                 results={this.props.results}
                                 signalType={this.state.signalType}
                                 isAdvancedSearchEnabled={false} // TODO: hook this up
+                                sortSearch={this.props.sortSearch}
                             />
                         </div>
                     </div>

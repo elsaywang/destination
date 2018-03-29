@@ -7,6 +7,7 @@ import SignalsTable from '../../components/SignalsTable';
 import configureStore from '../../configureStore';
 
 describe('<SearchContainer /> component', () => {
+    const mockFn = jest.fn();
     const initialState = {
         counts: {
             all: 72093,
@@ -16,6 +17,7 @@ describe('<SearchContainer /> component', () => {
             onboardedRecords: 37407,
         },
         signalType: 'all',
+        sortSearch: mockFn,
     };
     const wrapper = shallow(<SearchContainer store={configureStore()} />).dive();
 

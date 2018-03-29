@@ -25,8 +25,11 @@ describe('<Table /> component', () => {
         },
     ];
     const renderCell = (column, data) => <span>{data}</span>;
+    const sortSearch = jest.fn();
 
-    const wrapper = shallow(<Table items={items} columns={columns} renderCell={renderCell} />);
+    const wrapper = shallow(
+        <Table items={items} columns={columns} renderCell={renderCell} sortSearch={sortSearch} />,
+    );
 
     describe('rendering', () => {
         it('matches snapshot', () => {

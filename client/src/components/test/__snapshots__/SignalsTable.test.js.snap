@@ -123,6 +123,7 @@ ShallowWrapper {
       }
     }
     signalType="all"
+    sortSearch={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -140,30 +141,36 @@ ShallowWrapper {
         Object {
           "key": "keyValuePairs",
           "minWidth": 150,
+          "sortable": true,
           "title": "Key-Value Pair",
         },
         Object {
           "key": "signalType",
+          "sortable": true,
           "title": "Signal Type",
           "width": 140,
         },
         Object {
           "key": "signalSource",
+          "sortable": true,
           "title": "Signal Source",
           "width": 180,
         },
         Object {
           "key": "totalCounts",
+          "sortable": true,
           "title": "Total Counts",
-          "width": 82,
+          "width": 100,
         },
         Object {
           "key": "percentageChange",
+          "sortable": true,
           "title": "Percentage Change",
           "width": 165,
         },
         Object {
           "key": "includedInTraits",
+          "sortable": true,
           "title": "Included In Traits",
           "width": 150,
         },
@@ -201,6 +208,7 @@ ShallowWrapper {
         },
       ],
       "renderCell": [Function],
+      "sortSearch": [MockFunction],
     },
     "ref": null,
     "rendered": null,
@@ -216,30 +224,36 @@ ShallowWrapper {
           Object {
             "key": "keyValuePairs",
             "minWidth": 150,
+            "sortable": true,
             "title": "Key-Value Pair",
           },
           Object {
             "key": "signalType",
+            "sortable": true,
             "title": "Signal Type",
             "width": 140,
           },
           Object {
             "key": "signalSource",
+            "sortable": true,
             "title": "Signal Source",
             "width": 180,
           },
           Object {
             "key": "totalCounts",
+            "sortable": true,
             "title": "Total Counts",
-            "width": 82,
+            "width": 100,
           },
           Object {
             "key": "percentageChange",
+            "sortable": true,
             "title": "Percentage Change",
             "width": 165,
           },
           Object {
             "key": "includedInTraits",
+            "sortable": true,
             "title": "Included In Traits",
             "width": 150,
           },
@@ -277,6 +291,7 @@ ShallowWrapper {
           },
         ],
         "renderCell": [Function],
+        "sortSearch": [MockFunction],
       },
       "ref": null,
       "rendered": null,

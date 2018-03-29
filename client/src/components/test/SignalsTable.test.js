@@ -10,6 +10,7 @@ import Add from '@react/react-spectrum/Icon/Add';
 import Link from '@react/react-spectrum/Link';
 
 describe('<SignalsTable /> component', () => {
+    const mockFn = jest.fn();
     const wrapper = shallow(
         <SignalsTable
             results={{
@@ -29,6 +30,7 @@ describe('<SignalsTable /> component', () => {
                 ],
             }}
             signalType="all"
+            sortSearch={mockFn}
         />,
     );
 
