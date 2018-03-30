@@ -41,24 +41,26 @@ node ("docker") {
                 sh '(cd /usr/src/app/ui-build && mkdir cypress)'
                 sh 'cp -R /usr/src/app/client/cypress/* /usr/src/app/ui-build/cypress/'
                 sh 'cp -R /usr/src/app/client/cypress.json /usr/src/app/ui-build/cypress.json'
-                sh '(cd /usr/src/app/ui-build && npm run ci)'
+                sh '(cd /usr/src/app/ui-build && npm run cypress:ci)'
             }
         }
 
-        if (env.BRANCH_NAME == "master") {
-            stage ('Publish Images') {
-                parallel 'Publish UI Image':  {
-                    docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
-                        uiImage.push('latest')
-                    }
-                }, 'Publish API aggregator Image': {
-                    docker.withRegistry('https://docker-aam-portal-ui-release.dr.corp.adobe.com', 'Artifactory') {
-                        apiImage.push('latest')
-                    }
+        stage ('Publish Images') {
+            if (env.BRANCH_NAME == "master") {
+              dockerName = 'latest'
+            } else {
+              dockerName = env.BRANCH_NAME
+            }
+            parallel 'Publish UI Image':  {
+                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
+                    uiImage.push(dockerName)
+                }
+            }, 'Publish API aggregator Image': {
+                docker.withRegistry('https://docker2-aam-portal-ui-release-local.dr-uw2.adobeitc.com', 'artifactory_usw2') {
+                    apiImage.push(dockerName)
                 }
             }
         }
-
     } catch (e) {
         // fail the build if an exception is thrown
         currentBuild.result = "FAILED"
@@ -82,6 +84,12 @@ node ("docker") {
         //publish unit test
         junit '**/test-report.xml'
 
+        // publish screenshots in a zip file if they are generated.
+        if (fileExists("${workspace}/artifacts/ui-build/cypress/screenshots")) {
+            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/cypress/screenshots", glob: '*.png', zipFile: 'cypress_errors_ss.zip'
+        }
+
+        // publish video if there is videos to publish
         archiveArtifacts artifacts: "**/*.mp4", fingerprint: true, allowEmptyArchive: true
 
     }
