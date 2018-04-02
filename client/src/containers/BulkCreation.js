@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Add from '@react/react-spectrum/Icon/Add';
 import Button from '@react/react-spectrum/Button';
