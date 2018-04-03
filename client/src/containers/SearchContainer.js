@@ -74,7 +74,9 @@ class SearchContainer extends Component {
                                 </GridColumn>
                             </GridRow>
                             <GridRow>
-                                <SignalSelectionWarning />
+                                <GridColumn size={8} offsetSize={4}>
+                                    <SignalSelectionWarning />
+                                </GridColumn>
                             </GridRow>
                             <SignalsTable
                                 results={this.props.results}

@@ -43,10 +43,10 @@ export const formatSelectedSignalsSelectionMessage = (
 };
 
 export const getTotalOnboardedRecords = rowRecords =>
-    rowRecords.filter(t => t.signalType === onboardedRecords).length;
+    rowRecords.filter(record => record.signalType === onboardedRecords).length;
 
 export const getTotalRealTimeRecords = rowRecords =>
-    rowRecords.filter(t => t.signalType !== onboardedRecords).length;
+    rowRecords.filter(record => record.signalType !== onboardedRecords).length;
 
 export const renderSelectedSignalsMessage = rowRecords => {
     if (!rowRecords.length) {

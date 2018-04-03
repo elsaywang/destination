@@ -11,7 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { renderSelectedSignalsMessage, hasWarning } from '../utils/';
+import { renderSelectedSignalsMessage, hasWarning, WARNING_MESSAGE } from '../utils/';
 import Add from '@react/react-spectrum/Icon/Add';
 import Link from '@react/react-spectrum/Link';
 import styles from './SignalsTable.css';
@@ -41,10 +41,11 @@ class SignalsTable extends Component {
         for (let indexPath of selectedItems) {
             selectedRowIndexSet.push(indexPath.index);
         }
-        const records = selectedRowIndexSet.map(i => ({ rowIndex: i, ...items[i] }));
+        const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
         const warning = hasWarning(records);
+        const warningType = warning ? 'signalsSelection' : '';
         const selectionMessage = renderSelectedSignalsMessage(records);
-        onSignalRecordsSelection({ records, displayContext, warning });
+        onSignalRecordsSelection({ records, selectionMessage, warning, warningType });
     };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
