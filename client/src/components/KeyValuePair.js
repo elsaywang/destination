@@ -50,7 +50,7 @@ class KeyValuePair extends Component {
                         <Textfield
                             data-test="key-search-field"
                             id={forKey}
-                            placeholder="Type a key or key name"
+                            placeholder="Type a key"
                         />
                     </Autocomplete>
                 </Label>

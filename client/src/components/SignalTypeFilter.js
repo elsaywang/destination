@@ -29,7 +29,7 @@ class SignalTypeFilter extends Component {
         return (
             <Fragment>
                 <Heading size={3} className={styles.heading}>
-                    Filter By Signal Type:
+                    Filter by Signal Type
                 </Heading>
                 <TabList
                     className={styles.signalType}

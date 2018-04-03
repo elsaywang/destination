@@ -4,8 +4,8 @@ import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
 import NumberInput from '@react/react-spectrum/NumberInput';
-import Add from '@react/react-spectrum/Icon/Add';
-import Remove from '@react/react-spectrum/Icon/Remove';
+import AddCircle from '@react/react-spectrum/Icon/AddCircle';
+import RemoveCircle from '@react/react-spectrum/Icon/RemoveCircle';
 import AdvancedSearch from './AdvancedSearch';
 import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
@@ -47,17 +47,17 @@ class Search extends Component {
                                 label="Add"
                                 data-test="add-button"
                                 onClick={onAddClick}
-                                icon={<Add />}
+                                icon={<AddCircle />}
                                 variant="action"
                                 quiet
                             />
                         )}
                     {pair.id !== 0 && (
                         <Button
-                            data-test="remove-button"
                             label="Remove"
+                            data-test="remove-button"
                             onClick={onRemove}
-                            icon={<Remove />}
+                            icon={<RemoveCircle />}
                             variant="action"
                             quiet
                         />
