@@ -9,10 +9,10 @@ describe('<BulkCreation/> component', () => {
         const mockFn = jest.fn();
         const initialprops = {
             selectedSignals: {
-                displayContext: '',
+                selectionMessage: '',
                 createTraitFromMultiSignals: mockFn,
                 records: [],
-                warning: '',
+                warning: false,
             },
         };
         const wrapper = shallow(<BulkCreation {...initialprops} />);
@@ -29,9 +29,9 @@ describe('<BulkCreation/> component', () => {
     describe('rendering when there are selectedSignals.records pass in props ', () => {
         const props = {
             selectedSignals: {
-                displayContext: '1 Real-time signal selected ',
+                selectionMessage: '1 Real-time signal selected ',
                 records: [{ rowIndex: 0, signalType: 'Adobe Analytics' }],
-                warning: '',
+                warning: false,
             },
         };
         const wrapper = shallow(<BulkCreation {...props} />);
@@ -40,10 +40,10 @@ describe('<BulkCreation/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders the displayContext passed from selectedSignals prop into a <span/>', () => {
+        it('renders the selectionMessage passed from selectedSignals prop into a <span/>', () => {
             expect(
                 wrapper.containsMatchingElement(
-                    <span>{props.selectedSignals.displayContext}</span>,
+                    <span>{props.selectedSignals.selectionMessage}</span>,
                 ),
             ).toBeTruthy();
         });
@@ -65,12 +65,12 @@ describe('<BulkCreation/> component', () => {
         it('renders disabled <Button /> with "action" variant when warning message passes from props', () => {
             const propsWithWarning = {
                 selectedSignals: {
-                    displayContext: '1 Real-time signal , 1 Onboarded signal selected ',
+                    selectionMessage: '1 Real-time signal , 1 Onboarded signal selected ',
                     records: [
                         { rowIndex: 0, signalType: 'Adobe Analytics' },
                         { rowIndex: 1, signalType: 'Onboarded Records' },
                     ],
-                    warning: 'There is error in your selected signals ! ',
+                    warning: true,
                 },
             };
             wrapper.setProps({ ...propsWithWarning });

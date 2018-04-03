@@ -1,11 +1,10 @@
 import {
-    OnboardedRecords,
     equalize,
-    formatDisplayContextByType,
-    formatSelectedSignalsDisplayContext,
+    formatSelectionMessageBySignalCategory,
+    formatSelectedSignalsSelectionMessage,
     getTotalOnboardedRecords,
     getTotalRealTimeRecords,
-    renderSelectedSignalsContext,
+    renderSelectedSignalsMessage,
 } from '../signalSelection.utils.js';
 
 describe('signalSelection Utils', () => {
@@ -17,7 +16,7 @@ describe('signalSelection Utils', () => {
                 { number: 0, name: 'result' },
                 { number: 0, name: 'trait' },
             ];
-            sets.map(v => expect(equalize(v.number, v.name)).toEqual(v.name));
+            sets.map(({ number, name }) => expect(equalize(number, name)).toEqual(name));
         });
         it('should return plural string when total number is greater than 1', () => {
             const sets = [
@@ -26,62 +25,60 @@ describe('signalSelection Utils', () => {
                 { number: 6, name: 'result' },
                 { number: 10, name: 'signal' },
             ];
-            sets.map(v => expect(equalize(v.number, v.name)).toEqual(`${v.name}s`));
+            sets.map(({ number, name }) => expect(equalize(number, name)).toEqual(`${name}s`));
         });
     });
 
-    describe('test on "formatSelectedSignalsDisplayContext" function to get the correct display context based on input', () => {
-        it('should render context "1 Onboarded signal " ', () => {
-            expect(formatDisplayContextByType(1, 'Onboarded', 'signal')).toEqual(
+    describe('test on "formatSelectedSignalsSelectionMessage" function to get the correct selection message based on input', () => {
+        it('should render message "1 Onboarded signal " ', () => {
+            expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal')).toEqual(
                 `1 Onboarded signal `,
             );
         });
-        it('should render context "1 Onboarded signal ," when "," is the suffix', () => {
-            expect(formatDisplayContextByType(1, 'Onboarded', 'signal', ',')).toEqual(
+        it('should render message "1 Onboarded signal ," when "," is the suffix', () => {
+            expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal', ',')).toEqual(
                 `1 Onboarded signal ,`,
             );
         });
-        it('should render context "1 Onboarded signal ," when "selected" is the suffix', () => {
-            expect(formatDisplayContextByType(1, 'Onboarded', 'signal', 'selected')).toEqual(
-                `1 Onboarded signal selected`,
-            );
+        it('should render message "1 Onboarded signal ," when "selected" is the suffix', () => {
+            expect(
+                formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal', 'selected'),
+            ).toEqual(`1 Onboarded signal selected`);
         });
-        it('should render context "2 Onboarded signals ," when input number is great than 1 and suffix is "," ', () => {
-            expect(formatDisplayContextByType(2, 'Onboarded', 'signal', ',')).toEqual(
+        it('should render message "2 Onboarded signals ," when input number is great than 1 and suffix is "," ', () => {
+            expect(formatSelectionMessageBySignalCategory(2, 'Onboarded', 'signal', ',')).toEqual(
                 `2 Onboarded signals ,`,
             );
         });
-        it('should render context "2 Onboarded signals selected" when input number is great than 1 and suffix is "selected" ', () => {
-            expect(formatDisplayContextByType(2, 'Onboarded', 'signal', 'selected')).toEqual(
-                `2 Onboarded signals selected`,
-            );
+        it('should render message "2 Onboarded signals selected" when input number is great than 1 and suffix is "selected" ', () => {
+            expect(
+                formatSelectionMessageBySignalCategory(2, 'Onboarded', 'signal', 'selected'),
+            ).toEqual(`2 Onboarded signals selected`);
         });
     });
 
-    describe('test on "formatSelectedSignalsDisplayContext" function to get correct Signal Selection Context based on input', () => {
-        it('should render empty context when both total RealTime and Onboarded record are 0', () => {
-            expect(formatSelectedSignalsDisplayContext()).toEqual('');
+    describe('test on "formatSelectedSignalsSelectionMessage" function to get correct Signal Selection Context based on input', () => {
+        it('should render empty message when both total RealTime and Onboarded record are 0', () => {
+            expect(formatSelectedSignalsSelectionMessage()).toEqual('');
         });
 
-        it('should render correct `${totalOnboardedRecords} Onboarded signal(s), ${totalRealTimeRecords} Real-time signal(s) selected` context when both Real-time and Onboarded have record', () => {
+        it('should render correct `${totalOnboardedRecords} Onboarded signal(s), ${totalRealTimeRecords} Real-time signal(s) selected` message when both Real-time and Onboarded have record', () => {
             const numberSets = [
                 { totalOnboardedRecords: 3, totalRealTimeRecords: 1 },
                 { totalOnboardedRecords: 2, totalRealTimeRecords: 2 },
                 { totalOnboardedRecords: 1, totalRealTimeRecords: 3 },
                 { totalOnboardedRecords: 1, totalRealTimeRecords: 1 },
             ];
-            numberSets.map(v => {
-                const correctOnboardedSignal = equalize(v.totalOnboardedRecords, 'signal');
-                const correctRealTimeSignal = equalize(v.totalRealTimeRecords, 'signal');
+            numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
+                const correctOnboardedSignal = equalize(totalOnboardedRecords, 'signal');
+                const correctRealTimeSignal = equalize(totalRealTimeRecords, 'signal');
                 expect(
-                    formatSelectedSignalsDisplayContext(
-                        v.totalOnboardedRecords,
-                        v.totalRealTimeRecords,
+                    formatSelectedSignalsSelectionMessage(
+                        totalOnboardedRecords,
+                        totalRealTimeRecords,
                     ),
                 ).toEqual(
-                    `${v.totalOnboardedRecords} Onboarded ${correctOnboardedSignal} , ${
-                        v.totalRealTimeRecords
-                    } Real-time ${correctRealTimeSignal} selected`,
+                    `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} , ${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
                 );
             });
         });
@@ -96,20 +93,20 @@ describe('signalSelection Utils', () => {
                 { totalOnboardedRecords: 1 },
                 { totalOnboardedRecords: 2 },
             ];
-            numberSets.map(v => {
-                const correctOnboardedSignal = equalize(v.totalOnboardedRecords, 'signal');
-                if (v.totalRealTimeRecords) {
+            numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
+                const correctOnboardedSignal = equalize(totalOnboardedRecords, 'signal');
+                if (totalRealTimeRecords) {
                     expect(
-                        formatSelectedSignalsDisplayContext(
-                            v.totalOnboardedRecords,
-                            v.totalRealTimeRecords,
+                        formatSelectedSignalsSelectionMessage(
+                            totalOnboardedRecords,
+                            totalRealTimeRecords,
                         ),
                     ).toEqual(
-                        `${v.totalOnboardedRecords} Onboarded ${correctOnboardedSignal} selected`,
+                        `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} selected`,
                     );
                 } else {
-                    expect(formatSelectedSignalsDisplayContext(v.totalOnboardedRecords)).toEqual(
-                        `${v.totalOnboardedRecords} Onboarded ${correctOnboardedSignal} selected`,
+                    expect(formatSelectedSignalsSelectionMessage(totalOnboardedRecords)).toEqual(
+                        `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} selected`,
                     );
                 }
             });
@@ -125,29 +122,29 @@ describe('signalSelection Utils', () => {
                 { totalRealTimeRecords: 1 },
                 { totalRealTimeRecords: 2 },
             ];
-            numberSets.map(v => {
-                const correctRealTimeSignal = equalize(v.totalRealTimeRecords, 'signal');
-                if (v.totalOnboardedRecords) {
+            numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
+                const correctRealTimeSignal = equalize(totalRealTimeRecords, 'signal');
+                if (totalOnboardedRecords) {
                     expect(
-                        formatSelectedSignalsDisplayContext(
-                            v.totalOnboardedRecords,
-                            v.totalRealTimeRecords,
+                        formatSelectedSignalsSelectionMessage(
+                            totalOnboardedRecords,
+                            totalRealTimeRecords,
                         ),
                     ).toEqual(
-                        `${v.totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
+                        `${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
                     );
                 } else {
-                    expect(formatSelectedSignalsDisplayContext('', v.totalRealTimeRecords)).toEqual(
-                        `${v.totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
+                    expect(formatSelectedSignalsSelectionMessage('', totalRealTimeRecords)).toEqual(
+                        `${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
                     );
                 }
             });
         });
     });
 
-    describe('test on "renderSelectedSignalsContext" function to render the finalized Signal Selection Context based on rowRecords', () => {
-        it('should render empty context when no row record is selected', () => {
-            expect(renderSelectedSignalsContext([])).toEqual('');
+    describe('test on "renderSelectedSignalsMessage" function to render the finalized Signal Selection Context based on rowRecords', () => {
+        it('should render empty message when no row record is selected', () => {
+            expect(renderSelectedSignalsMessage([])).toEqual('');
         });
 
         it('should render correct `${totalOnboardedRecords} Onboarded signal(s), ${totalRealTimeRecords} Real-time signal(s) selected` when rowRecords contains both types', () => {
@@ -163,7 +160,7 @@ describe('signalSelection Utils', () => {
 
             expect(totalOnboardedRecords + totalRealTimeRecords).toEqual(rowRecords.length);
 
-            expect(renderSelectedSignalsContext(rowRecords)).toEqual(
+            expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
                 `${totalOnboardedRecords} Onboarded signals , ${totalRealTimeRecords} Real-time signals selected`,
             );
         });
@@ -178,7 +175,7 @@ describe('signalSelection Utils', () => {
 
             expect(totalOnboardedRecords).toEqual(rowRecords.length);
 
-            expect(renderSelectedSignalsContext(rowRecords)).toEqual(
+            expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
                 `${totalOnboardedRecords} Onboarded signals selected`,
             );
         });
@@ -199,7 +196,7 @@ describe('signalSelection Utils', () => {
 
             expect(totalRealTimeRecords).toEqual(rowRecords.length);
 
-            expect(renderSelectedSignalsContext(rowRecords)).toEqual(
+            expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
                 `${totalRealTimeRecords} Real-time signals selected`,
             );
         });

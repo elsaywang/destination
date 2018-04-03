@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
 import { SELECT_SIGNALS } from '../actions';
 
-const initialState = { records: [], displayContext: '', warning: '' };
+const initialState = { records: [], selectionMessage: '', warning: false };
 
 export default handleActions(
     {

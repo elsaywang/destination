@@ -11,7 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { renderSelectedSignalsContext } from '../utils/index';
+import { renderSelectedSignalsMessage } from '../utils/index';
 import Add from '@react/react-spectrum/Icon/Add';
 import Link from '@react/react-spectrum/Link';
 import styles from './SignalsTable.css';
@@ -33,7 +33,7 @@ class SignalsTable extends Component {
         }
     };
 
-    onSelectionChange = selectedItems => {
+    handleSelectionChange = selectedItems => {
         const { onSignalRecordsSelection, results } = this.props;
         const items = this.formatSignalsList(results.list);
         const selectedRowIndexSet = [];
@@ -42,9 +42,9 @@ class SignalsTable extends Component {
             selectedRowIndexSet.push(indexPath.index);
         }
         const records = selectedRowIndexSet.map(i => ({ rowIndex: i, ...items[i] }));
-        const displayContext = renderSelectedSignalsContext(records);
+        const selectionMessage = renderSelectedSignalsMessage(records);
 
-        onSignalRecordsSelection({ records, displayContext });
+        onSignalRecordsSelection({ records, selectionMessage });
     };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
@@ -197,7 +197,7 @@ class SignalsTable extends Component {
                 columns={columns}
                 renderCell={this.renderCell}
                 sortSearch={sortSearch}
-                onSelectionChange={this.onSelectionChange}
+                onSelectionChange={this.handleSelectionChange}
             />
         );
     }

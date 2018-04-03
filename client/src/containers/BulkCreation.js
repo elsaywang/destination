@@ -10,17 +10,17 @@ export class BulkCreation extends Component {
     render() {
         const { createTraitFromMultiSignals, selectedSignals } = this.props;
 
-        const { displayContext, records, warning } = selectedSignals;
+        const { selectionMessage, records, warning } = selectedSignals;
 
         return records.length ? (
             <div className={styles.bulkCreation}>
-                <span className={styles.context}>{displayContext}</span>
+                <span className={styles.message}>{selectionMessage}</span>
                 <Button
                     label="Create Trait From Multi Signals"
                     icon={<Add />}
                     onClick={createTraitFromMultiSignals}
                     variant="action"
-                    disabled={warning ? true : false}
+                    disabled={warning}
                 />
             </div>
         ) : null;

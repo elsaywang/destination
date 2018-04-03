@@ -1,37 +1,58 @@
-export const OnboardedRecords = 'Onboarded Records';
+const onboardedRecords = 'Onboarded Records';
 
 export const equalize = (number, name) => (number > 1 ? `${name}s` : name);
 
-export const formatDisplayContextByType = (number, type, name, suffix = '') =>
-    `${number} ${type} ${equalize(number, name)} ${suffix}`;
+export const formatSelectionMessageBySignalCategory = (number, category, name, suffix = '') =>
+    `${number} ${category} ${equalize(number, name)} ${suffix}`;
 
-export const formatSelectedSignalsDisplayContext = (
+export const formatSelectedSignalsSelectionMessage = (
     totalOnboardedRecords = 0,
     totalRealTimeRecords = 0,
 ) => {
     if (totalRealTimeRecords && totalOnboardedRecords) {
         return (
-            formatDisplayContextByType(totalOnboardedRecords, 'Onboarded', 'signal', ', ') +
-            formatDisplayContextByType(totalRealTimeRecords, 'Real-time', 'signal', 'selected')
+            formatSelectionMessageBySignalCategory(
+                totalOnboardedRecords,
+                'Onboarded',
+                'signal',
+                ', ',
+            ) +
+            formatSelectionMessageBySignalCategory(
+                totalRealTimeRecords,
+                'Real-time',
+                'signal',
+                'selected',
+            )
         );
     } else if (totalOnboardedRecords) {
-        return formatDisplayContextByType(totalOnboardedRecords, 'Onboarded', 'signal', 'selected');
+        return formatSelectionMessageBySignalCategory(
+            totalOnboardedRecords,
+            'Onboarded',
+            'signal',
+            'selected',
+        );
     } else if (totalRealTimeRecords) {
-        return formatDisplayContextByType(totalRealTimeRecords, 'Real-time', 'signal', 'selected');
+        return formatSelectionMessageBySignalCategory(
+            totalRealTimeRecords,
+            'Real-time',
+            'signal',
+            'selected',
+        );
     }
     return '';
 };
 
 export const getTotalOnboardedRecords = rowRecords =>
-    rowRecords.filter(t => t.signalType === OnboardedRecords).length;
+    rowRecords.filter(t => t.signalType === onboardedRecords).length;
 
 export const getTotalRealTimeRecords = rowRecords =>
-    rowRecords.filter(t => t.signalType !== OnboardedRecords).length;
+    rowRecords.filter(t => t.signalType !== onboardedRecords).length;
 
-export const renderSelectedSignalsContext = rowRecords => {
-    const totalSelectedRecords = rowRecords.length;
-    if (!totalSelectedRecords) return '';
+export const renderSelectedSignalsMessage = rowRecords => {
+    if (!rowRecords.length) {
+        return '';
+    }
     const totalOnboardedRecords = getTotalOnboardedRecords(rowRecords);
     const totalRealTimeRecords = getTotalRealTimeRecords(rowRecords);
-    return formatSelectedSignalsDisplayContext(totalOnboardedRecords, totalRealTimeRecords);
+    return formatSelectedSignalsSelectionMessage(totalOnboardedRecords, totalRealTimeRecords);
 };
