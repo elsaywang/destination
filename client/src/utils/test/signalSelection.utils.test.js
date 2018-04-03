@@ -5,6 +5,7 @@ import {
     getTotalOnboardedRecords,
     getTotalRealTimeRecords,
     renderSelectedSignalsMessage,
+    hasWarning,
 } from '../signalSelection.utils.js';
 
 describe('signalSelection Utils', () => {
@@ -199,6 +200,59 @@ describe('signalSelection Utils', () => {
             expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
                 `${totalRealTimeRecords} Real-time signals selected`,
             );
+        });
+    });
+
+    describe('test on hasWarning function to validate selected records signal types', () => {
+        it('hasWarning should return true when 1 Onboarded and 1 Real-time are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Adobe Analytics', rowIndex: 2 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(true);
+        });
+
+        it('hasWarning should return true when multiple Onboarded and 1 Real-time are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Onboarded Records', rowIndex: 3 },
+                { signalType: 'Onboarded Records', rowIndex: 9 },
+                { signalType: 'Actionable Log Files', rowIndex: 2 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(true);
+        });
+
+        it('hasWarning should return true when 1 Onboarded and multiple Real-time are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Adobe Analytics', rowIndex: 12 },
+                { signalType: 'General Online Data', rowIndex: 14 },
+                { signalType: 'Actionable Log Files', rowIndex: 0 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(true);
+        });
+
+        it('hasWarning should return false when no record is selected', () => {
+            const rowRecords = [];
+            expect(hasWarning(rowRecords)).toBe(false);
+        });
+
+        it('hasWarning should return false when only Onboarded records are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Onboarded Records', rowIndex: 1 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(false);
+        });
+
+        it('hasWarning should return false when only Real-time records are selected', () => {
+            const rowRecords = [
+                { signalType: 'Adobe Analytics', rowIndex: 12 },
+                { signalType: 'General Online Data', rowIndex: 14 },
+                { signalType: 'Actionable Log Files', rowIndex: 0 },
+                { signalType: 'Adobe Analytics', rowIndex: 1 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(false);
         });
     });
 });

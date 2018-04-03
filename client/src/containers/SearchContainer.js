@@ -6,6 +6,7 @@ import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
 import BulkCreation from './BulkCreation';
+import SignalSelectionWarning from './SignalSelectionWarning';
 import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
@@ -71,6 +72,9 @@ class SearchContainer extends Component {
                                         </GridColumn>
                                     </GridRow>
                                 </GridColumn>
+                            </GridRow>
+                            <GridRow>
+                                <SignalSelectionWarning />
                             </GridRow>
                             <SignalsTable
                                 results={this.props.results}

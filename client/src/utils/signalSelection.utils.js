@@ -56,3 +56,6 @@ export const renderSelectedSignalsMessage = rowRecords => {
     const totalRealTimeRecords = getTotalRealTimeRecords(rowRecords);
     return formatSelectedSignalsSelectionMessage(totalOnboardedRecords, totalRealTimeRecords);
 };
+
+export const hasWarning = rowRecords =>
+    Boolean(getTotalOnboardedRecords(rowRecords) && getTotalRealTimeRecords(rowRecords));
