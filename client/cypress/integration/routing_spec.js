@@ -37,5 +37,6 @@ describe('Integration Tests for routing', function() {
             .get('button')
             .contains('Search')
             .should('be.exist');
+        done();
     });
 });
