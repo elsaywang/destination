@@ -34,7 +34,7 @@ ShallowWrapper {
           className={undefined}
           size={3}
         >
-          Filter By Signal Type:
+          Filter by Signal Type
         </Heading>,
         <TabList
           className={undefined}
@@ -92,12 +92,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Type:",
+          "children": "Filter by Signal Type",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Type:",
+        "rendered": "Filter by Signal Type",
         "type": [Function],
       },
       Object {
@@ -246,7 +246,7 @@ ShallowWrapper {
             className={undefined}
             size={3}
           >
-            Filter By Signal Type:
+            Filter by Signal Type
           </Heading>,
           <TabList
             className={undefined}
@@ -304,12 +304,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Type:",
+            "children": "Filter by Signal Type",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Type:",
+          "rendered": "Filter by Signal Type",
           "type": [Function],
         },
         Object {
@@ -492,7 +492,7 @@ ShallowWrapper {
           className={undefined}
           size={3}
         >
-          Filter By Signal Type:
+          Filter by Signal Type
         </Heading>,
         <TabList
           className={undefined}
@@ -550,12 +550,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Type:",
+          "children": "Filter by Signal Type",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Type:",
+        "rendered": "Filter by Signal Type",
         "type": [Function],
       },
       Object {
@@ -704,7 +704,7 @@ ShallowWrapper {
             className={undefined}
             size={3}
           >
-            Filter By Signal Type:
+            Filter by Signal Type
           </Heading>,
           <TabList
             className={undefined}
@@ -762,12 +762,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Type:",
+            "children": "Filter by Signal Type",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Type:",
+          "rendered": "Filter by Signal Type",
           "type": [Function],
         },
         Object {
@@ -950,7 +950,7 @@ ShallowWrapper {
           className={undefined}
           size={3}
         >
-          Filter By Signal Type:
+          Filter by Signal Type
         </Heading>,
         <TabList
           className={undefined}
@@ -1008,12 +1008,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Type:",
+          "children": "Filter by Signal Type",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Type:",
+        "rendered": "Filter by Signal Type",
         "type": [Function],
       },
       Object {
@@ -1162,7 +1162,7 @@ ShallowWrapper {
             className={undefined}
             size={3}
           >
-            Filter By Signal Type:
+            Filter by Signal Type
           </Heading>,
           <TabList
             className={undefined}
@@ -1220,12 +1220,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Type:",
+            "children": "Filter by Signal Type",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Type:",
+          "rendered": "Filter by Signal Type",
           "type": [Function],
         },
         Object {

@@ -45,7 +45,7 @@ ShallowWrapper {
               disabled={false}
               id="key0"
               invalid={false}
-              placeholder="Type a key or key name"
+              placeholder="Type a key"
               readOnly={false}
               required={false}
             />
@@ -120,7 +120,7 @@ ShallowWrapper {
               disabled={false}
               id="key0"
               invalid={false}
-              placeholder="Type a key or key name"
+              placeholder="Type a key"
               readOnly={false}
               required={false}
             />
@@ -140,7 +140,7 @@ ShallowWrapper {
               disabled={false}
               id="key0"
               invalid={false}
-              placeholder="Type a key or key name"
+              placeholder="Type a key"
               readOnly={false}
               required={false}
             />,
@@ -158,7 +158,7 @@ ShallowWrapper {
               "disabled": false,
               "id": "key0",
               "invalid": false,
-              "placeholder": "Type a key or key name",
+              "placeholder": "Type a key",
               "readOnly": false,
               "required": false,
             },
@@ -273,7 +273,7 @@ ShallowWrapper {
                 disabled={false}
                 id="key0"
                 invalid={false}
-                placeholder="Type a key or key name"
+                placeholder="Type a key"
                 readOnly={false}
                 required={false}
               />
@@ -348,7 +348,7 @@ ShallowWrapper {
                 disabled={false}
                 id="key0"
                 invalid={false}
-                placeholder="Type a key or key name"
+                placeholder="Type a key"
                 readOnly={false}
                 required={false}
               />
@@ -368,7 +368,7 @@ ShallowWrapper {
                 disabled={false}
                 id="key0"
                 invalid={false}
-                placeholder="Type a key or key name"
+                placeholder="Type a key"
                 readOnly={false}
                 required={false}
               />,
@@ -386,7 +386,7 @@ ShallowWrapper {
                 "disabled": false,
                 "id": "key0",
                 "invalid": false,
-                "placeholder": "Type a key or key name",
+                "placeholder": "Type a key",
                 "readOnly": false,
                 "required": false,
               },
