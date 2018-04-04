@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TraitsCreation from '../components/TraitsCreation';
 import { connect } from 'react-redux';
-import { createTraitFromMultiSignals } from '../actions';
+import { createTraitFromMultiSignals } from '../actions/selectSignals';
 
 export class TraitsCreationContainer extends Component {
     render() {
@@ -30,4 +30,4 @@ const mapStateToProps = ({ selectedSignals }) => ({
     selectedSignals,
 });
 
-export default connect(mapStateToProps, createTraitFromMultiSignals)(TraitsCreationContainer);
+export default connect(mapStateToProps, { createTraitFromMultiSignals })(TraitsCreationContainer);

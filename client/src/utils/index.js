@@ -4,7 +4,6 @@ const andDelimiter = ';';
 // TODO: export this and use it in SignalsTable
 const isNumeric = val => Number(parseFloat(val)) === val;
 
-export * from './signalSelection.utils.js';
 export const fetchTraits = sids => {
     // fetch(`/api/traits/${sids}`
     return fetch('/api/traits/');

@@ -1,4 +1,5 @@
-import * as actionCreators from '../actions';
+import * as searchFormActionCreators from '../actions/searchForm';
+import { selectSignals } from '../actions/selectSignals';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
@@ -91,5 +92,5 @@ const mapStateToProps = ({ results, savedSearches }) => ({
     results,
     savedSearches,
 });
-
+const actionCreators = { ...searchFormActionCreators, selectSignals };
 export default connect(mapStateToProps, actionCreators)(SearchContainer);
