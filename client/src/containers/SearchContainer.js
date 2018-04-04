@@ -5,7 +5,7 @@ import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
-import BulkCreation from './BulkCreation';
+import TraitsCreationContainer from './TraitsCreationContainer';
 import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
@@ -64,7 +64,7 @@ class SearchContainer extends Component {
                                 <GridColumn size={8}>
                                     <GridRow>
                                         <GridColumn size={10}>
-                                            <BulkCreation />
+                                            <TraitsCreationContainer />
                                         </GridColumn>
                                         <GridColumn size={2}>
                                             <Button label="Export.csv" variant="primary" />

@@ -6,8 +6,7 @@ import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 import PercentageChange from '../../components/common/PercentageChange';
 import TraitsPopover from '../../containers/TraitsPopover';
-import Add from '@react/react-spectrum/Icon/Add';
-import Link from '@react/react-spectrum/Link';
+import TraitsCreation from '../TraitsCreation';
 
 describe('<SignalsTable /> component', () => {
     const mockFn = jest.fn();
@@ -243,25 +242,18 @@ describe('<SignalsTable /> component', () => {
                     { sids: [], sourceType: 'REALTIME' },
                     { sids: [], sourceType: '-' },
                 ];
-                it('should render <Link/>', () => {
+
+                it('should render <TraitsCreation />', () => {
                     signals.map(data =>
                         expect(
                             shallow(<div>{renderIncludedInTraits(data)}</div>)
-                                .find(Link)
+                                .find(TraitsCreation)
                                 .exists(),
                         ).toBeTruthy(),
                     );
                 });
-                it('includes <Add/> icon ', () => {
-                    signals.map(data =>
-                        expect(
-                            shallow(<div>{renderIncludedInTraits(data)}</div>)
-                                .find(Add)
-                                .exists(),
-                        ).toBeTruthy(),
-                    );
-                });
-                it('has formated trait link text with `${context}` inside a div based on `${sourceType}`', () => {
+
+                it('passes `traitsCreationLabelText` prop, which formats trait creation link text inside a div based on `${sourceType}`', () => {
                     signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
                 });
             });

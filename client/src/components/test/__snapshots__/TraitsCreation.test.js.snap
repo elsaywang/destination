@@ -1,22 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BulkCreation/> component rendering when there are selectedSignals.records pass in props  matches snapshot 1`] = `
+exports[`<TraitsCreation/> component rendering when it is used in Multi-Signals Traits Creation matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <BulkCreation
+  Symbol(enzyme.__unrendered__): <TraitsCreation
+    handleTraitsCreation={[MockFunction]}
+    multiCreation={true}
     selectedSignals={
       Object {
-        "records": Array [
-          Object {
-            "rowIndex": 0,
-            "signalType": "Adobe Analytics",
-          },
-        ],
-        "selectionMessage": "1 Real-time signal selected ",
+        "selectionMessage": "",
         "warning": false,
       }
     }
+    traitsCreationLabelText="Create Trait From Multi Signals"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -34,7 +31,7 @@ ShallowWrapper {
         <span
           className={undefined}
         >
-          1 Real-time signal selected 
+          
         </span>,
         <Button
           block={false}
@@ -44,7 +41,7 @@ ShallowWrapper {
           invalid={false}
           label="Create Trait From Multi Signals"
           logic={false}
-          onClick={undefined}
+          onClick={[MockFunction]}
           quiet={false}
           selected={false}
           variant="action"
@@ -59,11 +56,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "1 Real-time signal selected ",
+          "children": "",
           "className": undefined,
         },
         "ref": null,
-        "rendered": "1 Real-time signal selected ",
+        "rendered": "",
         "type": "span",
       },
       Object {
@@ -78,7 +75,7 @@ ShallowWrapper {
           "invalid": false,
           "label": "Create Trait From Multi Signals",
           "logic": false,
-          "onClick": undefined,
+          "onClick": [MockFunction],
           "quiet": false,
           "selected": false,
           "variant": "action",
@@ -100,7 +97,7 @@ ShallowWrapper {
           <span
             className={undefined}
           >
-            1 Real-time signal selected 
+            
           </span>,
           <Button
             block={false}
@@ -110,7 +107,7 @@ ShallowWrapper {
             invalid={false}
             label="Create Trait From Multi Signals"
             logic={false}
-            onClick={undefined}
+            onClick={[MockFunction]}
             quiet={false}
             selected={false}
             variant="action"
@@ -125,11 +122,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "1 Real-time signal selected ",
+            "children": "",
             "className": undefined,
           },
           "ref": null,
-          "rendered": "1 Real-time signal selected ",
+          "rendered": "",
           "type": "span",
         },
         Object {
@@ -144,7 +141,7 @@ ShallowWrapper {
             "invalid": false,
             "label": "Create Trait From Multi Signals",
             "logic": false,
-            "onClick": undefined,
+            "onClick": [MockFunction],
             "quiet": false,
             "selected": false,
             "variant": "action",
@@ -167,19 +164,20 @@ ShallowWrapper {
 }
 `;
 
-exports[`<BulkCreation/> component rendering when there is no signal selected matches snapshot 1`] = `
+exports[`<TraitsCreation/> component rendering when it is used in Single-Signal Traits Creation matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <BulkCreation
+  Symbol(enzyme.__unrendered__): <TraitsCreation
+    handleTraitsCreation={[MockFunction]}
+    multiCreation={false}
     selectedSignals={
       Object {
-        "createTraitFromMultiSignals": [MockFunction],
-        "records": Array [],
         "selectionMessage": "",
         "warning": false,
       }
     }
+    traitsCreationLabelText="Create Onboarded Trait"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -188,9 +186,141 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): null,
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <div
+        className={undefined}
+      >
+        <Add
+          size="S"
+        />
+        <div
+          className={undefined}
+        >
+          Create Onboarded Trait
+        </div>
+      </div>,
+      "href": "#",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Add
+            size="S"
+          />,
+          <div
+            className={undefined}
+          >
+            Create Onboarded Trait
+          </div>,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "size": "S",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Create Onboarded Trait",
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": "Create Onboarded Trait",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
   Symbol(enzyme.__nodes__): Array [
-    null,
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <div
+          className={undefined}
+        >
+          <Add
+            size="S"
+          />
+          <div
+            className={undefined}
+          >
+            Create Onboarded Trait
+          </div>
+        </div>,
+        "href": "#",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Add
+              size="S"
+            />,
+            <div
+              className={undefined}
+            >
+              Create Onboarded Trait
+            </div>,
+          ],
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "size": "S",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Create Onboarded Trait",
+              "className": undefined,
+            },
+            "ref": null,
+            "rendered": "Create Onboarded Trait",
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

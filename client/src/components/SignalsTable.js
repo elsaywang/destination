@@ -11,10 +11,9 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { renderSelectedSignalsMessage } from '../utils/index';
-import Add from '@react/react-spectrum/Icon/Add';
-import Link from '@react/react-spectrum/Link';
+import { renderSelectedSignalsMessage } from '../utils/';
 import styles from './SignalsTable.css';
+import TraitsCreation from './TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
 
 class SignalsTable extends Component {
@@ -118,16 +117,8 @@ class SignalsTable extends Component {
         return { keyValuePairs, sids: includedInTraits, sourceType };
     }
 
-    renderCreateTraitLink(context) {
-        return <div className={styles.linkText}>{context}</div>;
-    }
-
     formatTraitLinkText(sourceType) {
-        if (sourceType === 'ONBOARDED') {
-            return this.renderCreateTraitLink('Create Onboarded Trait');
-        }
-
-        return this.renderCreateTraitLink('Create Rule-based Trait');
+        return sourceType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-based Trait';
     }
 
     renderKeyValuePairs(keyValuePairs) {
@@ -171,12 +162,7 @@ class SignalsTable extends Component {
 
         if (number === 0) {
             return (
-                <Link href="#">
-                    <div className={styles.link}>
-                        <Add size="S" />
-                        {this.formatTraitLinkText(sourceType)}
-                    </div>
-                </Link>
+                <TraitsCreation traitsCreationLabelText={this.formatTraitLinkText(sourceType)} />
             );
         }
         return (

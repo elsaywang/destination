@@ -1,4 +1,4 @@
-:local(.bulkCreation) {
+:local(.TraitsCreationContainer) {
     display: flex;
     justify-content: flex-end;
 }
