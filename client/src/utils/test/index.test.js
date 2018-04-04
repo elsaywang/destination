@@ -1,9 +1,9 @@
-import { encodeKeyValuePairs } from '../';
+import { stringifySignals } from '../stringifySignals';
 
 describe('Utils', () => {
-    describe('Encoding and decoding signal key-value pairs', () => {
-        describe('encodeKeyValuePairs', () => {
-            it('should encode a single key-value pair from a single signal', () => {
+    describe('Stringifying signals and their key-value pairs', () => {
+        describe('stringifySignals', () => {
+            it('should stringify a single key-value pair from a single signal', () => {
                 const signals = [
                     {
                         keyValuePairs: [
@@ -15,9 +15,9 @@ describe('Utils', () => {
                     },
                 ];
 
-                expect(encodeKeyValuePairs(signals)).toEqual('eVar1%3D%22xyz123%22');
+                expect(stringifySignals(signals)).toEqual('eVar1=="xyz123"');
             });
-            it('should encode multiple key-value pairs from a single signal', () => {
+            it('should stringify multiple key-value pairs from a single signal', () => {
                 const signals = [
                     {
                         keyValuePairs: [
@@ -27,15 +27,15 @@ describe('Utils', () => {
                             },
                             {
                                 key: 'abc123',
-                                value: 2,
+                                value: 'cba321',
                             },
                         ],
                     },
                 ];
 
-                expect(encodeKeyValuePairs(signals)).toEqual('eVar1%3D%22xyz123%22%3Babc123%3D2');
+                expect(stringifySignals(signals)).toEqual('eVar1=="xyz123" AND abc123=="cba321"');
             });
-            it('should encode single key-value pairs from multiple signals', () => {
+            it('should stringify single key-value pairs from multiple signals', () => {
                 const signals = [
                     {
                         keyValuePairs: [
@@ -55,11 +55,9 @@ describe('Utils', () => {
                     },
                 ];
 
-                expect(encodeKeyValuePairs(signals)).toEqual(
-                    'eVar1%3D%22xyz123%22%2Cdef456%3D%22qrs789%22',
-                );
+                expect(stringifySignals(signals)).toEqual('eVar1=="xyz123" OR def456=="qrs789"');
             });
-            it('should encode multiple key-value pairs from multiple signals', () => {
+            it('should stringify multiple key-value pairs from multiple signals', () => {
                 const signals = [
                     {
                         keyValuePairs: [
@@ -69,7 +67,7 @@ describe('Utils', () => {
                             },
                             {
                                 key: 'eVar2',
-                                value: 1234,
+                                value: 'zyx321',
                             },
                         ],
                     },
@@ -81,56 +79,48 @@ describe('Utils', () => {
                             },
                             {
                                 key: 'ghi000',
-                                value: -1,
+                                value: 'ihg000',
                             },
                         ],
                     },
                 ];
 
-                expect(encodeKeyValuePairs(signals)).toEqual(
-                    'eVar1%3D%22xyz123%22%3BeVar2%3D1234%2Cdef456%3D%22qrs789%22%3Bghi000%3D-1',
+                expect(stringifySignals(signals)).toEqual(
+                    'eVar1=="xyz123" AND eVar2=="zyx321" OR def456=="qrs789" AND ghi000=="ihg000"',
                 );
             });
-            it('should encode empty key-value pairs as an empty string', () => {
-                expect(encodeKeyValuePairs([])).toEqual('');
+            it('should stringify empty key-value pairs as an empty string', () => {
+                expect(stringifySignals([])).toEqual('');
             });
-            it('should encode quotation marks, equals signs, or-delimiters, and and-delimiters to make key-value pairs safe to include in query string params', () => {
-                const signals = [
-                    {
-                        keyValuePairs: [
-                            {
-                                key: 'eVar1',
-                                value: 'xyz123',
-                            },
-                            {
-                                key: 'eVar2',
-                                value: 1234,
-                            },
-                        ],
-                    },
-                    {
-                        keyValuePairs: [
-                            {
-                                key: 'def456',
-                                value: 'qrs789',
-                            },
-                            {
-                                key: 'ghi000',
-                                value: -1,
-                            },
-                        ],
-                    },
-                ];
+            describe('value formatting', () => {
+                it('should wrap the value with double quotes if it is a string', () => {
+                    const signals = [
+                        {
+                            keyValuePairs: [
+                                {
+                                    key: 'eVar1',
+                                    value: 'xyz123',
+                                },
+                            ],
+                        },
+                    ];
 
-                expect(encodeKeyValuePairs(signals).includes('"')).toBeFalsy();
-                expect(encodeKeyValuePairs(signals).includes('=')).toBeFalsy();
-                expect(encodeKeyValuePairs(signals).includes(',')).toBeFalsy();
-                expect(encodeKeyValuePairs(signals).includes(';')).toBeFalsy();
+                    expect(stringifySignals(signals).includes('"xyz123"')).toBeTruthy();
+                });
+                it('should not wrap the value with double quotes if it is a number', () => {
+                    const signals = [
+                        {
+                            keyValuePairs: [
+                                {
+                                    key: 'eVar1',
+                                    value: 123,
+                                },
+                            ],
+                        },
+                    ];
 
-                expect(encodeKeyValuePairs(signals).includes('%22')).toBeTruthy();
-                expect(encodeKeyValuePairs(signals).includes('%3D')).toBeTruthy();
-                expect(encodeKeyValuePairs(signals).includes('%2C')).toBeTruthy();
-                expect(encodeKeyValuePairs(signals).includes('%3B')).toBeTruthy();
+                    expect(stringifySignals(signals).includes('"123"')).toBeFalsy();
+                });
             });
         });
     });
