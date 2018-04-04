@@ -38,7 +38,7 @@ class TraitsCreation extends Component {
     };
 
     render() {
-        const { multiCreation, handleTraitsCreation } = this.props;
+        const { multiCreation } = this.props;
         return multiCreation ? this.multiRowsTraitsCreation() : this.singleRowTraitsCreation();
     }
 }

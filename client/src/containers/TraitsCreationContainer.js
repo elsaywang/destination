@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Add from '@react/react-spectrum/Icon/Add';
-import Button from '@react/react-spectrum/Button';
 import TraitsCreation from '../components/TraitsCreation';
 import { connect } from 'react-redux';
 import { createTraitFromMultiSignals } from '../actions';
@@ -10,7 +8,7 @@ export class TraitsCreationContainer extends Component {
     render() {
         const { createTraitFromMultiSignals, selectedSignals } = this.props;
 
-        const { selectionMessage, records, warning } = selectedSignals;
+        const { records } = selectedSignals;
 
         return records.length ? (
             <TraitsCreation
