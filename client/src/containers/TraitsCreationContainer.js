@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Add from '@react/react-spectrum/Icon/Add';
 import Button from '@react/react-spectrum/Button';
 import TraitsCreation from '../components/TraitsCreation';
-import styles from './TraitsCreationContainer.css';
 import { connect } from 'react-redux';
 import { createTraitFromMultiSignals } from '../actions';
 
