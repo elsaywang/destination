@@ -1,31 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Warning from '../components/common/Warning';
-import { SignalsSelectionWarning } from '../components/common/Warning/WarningTemplates.js';
+import { SignalsSelectionWarningMessage } from '../components/common/Warning/WarningTemplates';
 import { connect } from 'react-redux';
 
 export class TraitsCreationWarning extends Component {
     render() {
-        const { warning } = this.props.selectedSignals;
+        const { warning } = this.props;
 
         return warning ? (
             <Warning>
-                <SignalsSelectionWarning />
+                <SignalsSelectionWarningMessage />
             </Warning>
         ) : null;
     }
 }
 
 TraitsCreationWarning.propTypes = {
-    selectedSignals: PropTypes.shape({
-        selectionMessage: PropTypes.string,
-        warning: PropTypes.bool,
-        records: PropTypes.array,
-    }),
+    warning: PropTypes.bool,
 };
 
-const mapStateToProps = ({ selectedSignals }) => ({
-    selectedSignals,
+const mapStateToProps = ({ selectedSignals: { warning } }) => ({
+    warning,
 });
 
 export default connect(mapStateToProps, null)(TraitsCreationWarning);

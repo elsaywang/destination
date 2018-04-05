@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Warning from '../Warning';
 import WarningMessage from '../WarningMessage';
-import { SignalsSelectionWarning } from '../WarningTemplates';
+import { SignalsSelectionWarningMessage } from '../WarningTemplates';
 import Alert from '@react/react-spectrum/Icon/Alert';
 
 describe('<Warning/> component', () => {
@@ -38,11 +38,11 @@ describe('<Warning/> component', () => {
         });
     });
 
-    describe('rendering when it includes <SignalsSelectionWarning/> as children component', () => {
+    describe('rendering when it includes <SignalsSelectionWarningMessage/> as children component', () => {
         const { content } = 'there is a warning';
         const wrapper = shallow(
             <Warning>
-                <SignalsSelectionWarning />
+                <SignalsSelectionWarningMessage />
             </Warning>,
         );
 
@@ -50,8 +50,8 @@ describe('<Warning/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <SignalsSelectionWarning/> component ', () => {
-            expect(wrapper.find(SignalsSelectionWarning).exists()).toBe(true);
+        it('renders <SignalsSelectionWarningMessage/> component ', () => {
+            expect(wrapper.find(SignalsSelectionWarningMessage).exists()).toBe(true);
         });
     });
 });

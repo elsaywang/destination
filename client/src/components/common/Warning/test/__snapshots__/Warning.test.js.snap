@@ -88,7 +88,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`<Warning/> component rendering when it includes <SignalsSelectionWarning/> as children component matches snapshot 1`] = `
+exports[`<Warning/> component rendering when it includes <SignalsSelectionWarningMessage/> as children component matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
