@@ -7,7 +7,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
     clearSearch={[Function]}
-    createTraitFromMultiSignals={[Function]}
     results={
       Object {
         "list": Array [],

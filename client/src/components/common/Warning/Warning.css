@@ -1,0 +1,13 @@
+:local(.warning) {
+    display: flex;
+    margin-left: 0.5em;
+    padding: 0.15em;
+    color: var(--spectrum-semantic-notice-color-status);
+    justify-content: flex-end;
+}
+:local(.messageBody) {
+    margin-left: 0.5em;
+    font-size: var(--spectrum-global-font-size-medium);
+    font-weight: var(--spectrum-global-font-weight-regular);
+    font-style: italic;
+}

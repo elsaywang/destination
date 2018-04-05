@@ -22,5 +22,3 @@ export const encodeKeyValuePairs = signals => {
     // `key=value` and the equals signs need to get encoded.
     return encodeURIComponent(formatSignals(signals));
 };
-
-export * from './signalSelection.utils.js';

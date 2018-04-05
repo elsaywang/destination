@@ -1,12 +1,13 @@
-import * as actionCreators from '../actions';
+import * as searchFormActionCreators from '../actions/searchForm';
+import { selectSignals } from '../actions/selectSignals';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
-import BulkCreation from './BulkCreation';
-import SignalSelectionWarning from './SignalSelectionWarning';
+import TraitsCreationContainer from './TraitsCreationContainer';
+import TraitsCreationWarning from './TraitsCreationWarning';
 import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
@@ -65,7 +66,7 @@ class SearchContainer extends Component {
                                 <GridColumn size={8}>
                                     <GridRow>
                                         <GridColumn size={10}>
-                                            <BulkCreation />
+                                            <TraitsCreationContainer />
                                         </GridColumn>
                                         <GridColumn size={2}>
                                             <Button label="Export.csv" variant="primary" />
@@ -74,8 +75,8 @@ class SearchContainer extends Component {
                                 </GridColumn>
                             </GridRow>
                             <GridRow>
-                                <GridColumn size={8} offsetSize={4}>
-                                    <SignalSelectionWarning />
+                                <GridColumn size={7} offsetSize={5}>
+                                    <TraitsCreationWarning />
                                 </GridColumn>
                             </GridRow>
                             <SignalsTable
@@ -97,5 +98,5 @@ const mapStateToProps = ({ results, savedSearches }) => ({
     results,
     savedSearches,
 });
-
+const actionCreators = { ...searchFormActionCreators, selectSignals };
 export default connect(mapStateToProps, actionCreators)(SearchContainer);

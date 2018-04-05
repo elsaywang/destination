@@ -1,9 +1,0 @@
-:local(.bulkCreation) {
-    display: flex;
-    justify-content: flex-end;
-}
-:local(.message) {
-    display: flex;
-    padding: 0.5em;
-    font-weight: 800;
-}
