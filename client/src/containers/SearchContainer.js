@@ -7,6 +7,7 @@ import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
 import TraitsCreationContainer from './TraitsCreationContainer';
+import TraitsCreationWarning from './TraitsCreationWarning';
 import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
@@ -71,6 +72,11 @@ class SearchContainer extends Component {
                                             <Button label="Export.csv" variant="primary" />
                                         </GridColumn>
                                     </GridRow>
+                                </GridColumn>
+                            </GridRow>
+                            <GridRow>
+                                <GridColumn size={7} offsetSize={5}>
+                                    <TraitsCreationWarning />
                                 </GridColumn>
                             </GridRow>
                             <SignalsTable
