@@ -11,7 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { renderSelectedSignalsMessage } from '../utils/signalSelection.utils';
+import { renderSelectedSignalsMessage } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';

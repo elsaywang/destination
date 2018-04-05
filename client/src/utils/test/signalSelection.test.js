@@ -5,7 +5,7 @@ import {
     getTotalOnboardedRecords,
     getTotalRealTimeRecords,
     renderSelectedSignalsMessage,
-} from '../signalSelection.utils.js';
+} from '../signalSelection.js';
 
 describe('signalSelection Utils', () => {
     describe('test on "equalize" function to generate signular or plural based on total number', () => {
