@@ -11,6 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
+import { isNumeric } from '../utils/isNumeric';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
@@ -74,10 +75,7 @@ class SignalsTable extends Component {
 
     // TEMP: ALF signals will soon have their own signal type
     isALF(signal) {
-        const { dataSourceId } = signal.source;
-        const isNumeric = val => Number(parseFloat(val)) === val;
-
-        return isNumeric(dataSourceId);
+        return isNumeric(signal.source.dataSourceId);
     }
 
     formatSignalType(signal) {

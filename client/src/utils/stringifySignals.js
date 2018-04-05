@@ -1,4 +1,4 @@
-import { isNumeric } from './';
+import { isNumeric } from './isNumeric';
 
 const orDelimiter = ' OR ';
 const andDelimiter = ' AND ';
