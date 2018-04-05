@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TraitsCreation from '../components/TraitsCreation';
+import TraitsCreation from '../components/common/TraitsCreation/';
 import { connect } from 'react-redux';
 import { createTraitFromMultiSignals } from '../actions/selectSignals';
 
@@ -22,7 +22,11 @@ export class TraitsCreationContainer extends Component {
 }
 
 TraitsCreationContainer.propTypes = {
-    selectedSignals: PropTypes.object,
+    selectedSignals: PropTypes.shape({
+        selectionMessage: PropTypes.string,
+        warning: PropTypes.bool,
+        records: PropTypes.array,
+    }),
     createTraitFromMultiSignals: PropTypes.func,
 };
 

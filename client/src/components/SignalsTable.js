@@ -13,7 +13,7 @@ import {
 } from '../constants/columns';
 import { renderSelectedSignalsMessage } from '../utils/signalSelection.utils';
 import styles from './SignalsTable.css';
-import TraitsCreation from './TraitsCreation';
+import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
 
 class SignalsTable extends Component {

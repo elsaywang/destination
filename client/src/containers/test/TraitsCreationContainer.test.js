@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { TraitsCreationContainer } from '../TraitsCreationContainer';
-import TraitsCreation from '../../components/TraitsCreation';
+import TraitsCreation from '../../components/common/TraitsCreation';
 
 describe('<TraitsCreationContainer/> component', () => {
     describe('rendering when there is no signal selected', () => {

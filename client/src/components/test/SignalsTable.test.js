@@ -6,7 +6,7 @@ import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 import PercentageChange from '../../components/common/PercentageChange';
 import TraitsPopover from '../../containers/TraitsPopover';
-import TraitsCreation from '../TraitsCreation';
+import TraitsCreation from '../../components/common/TraitsCreation';
 
 describe('<SignalsTable /> component', () => {
     const mockFn = jest.fn();
