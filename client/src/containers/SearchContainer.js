@@ -75,7 +75,7 @@ class SearchContainer extends Component {
                                 </GridColumn>
                             </GridRow>
                             <GridRow>
-                                <GridColumn size={7} offsetSize={5}>
+                                <GridColumn size={9} offsetSize={3}>
                                     <TraitsCreationWarning />
                                 </GridColumn>
                             </GridRow>
