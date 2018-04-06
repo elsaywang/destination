@@ -14,29 +14,29 @@ export const formatSelectedSignalsSelectionMessage = (
             formatSelectionMessageBySignalCategory(
                 totalOnboardedRecords,
                 'Onboarded',
-                'signal',
+                'Signal',
                 ', ',
             ) +
             formatSelectionMessageBySignalCategory(
                 totalRealTimeRecords,
-                'Real-time',
-                'signal',
-                ' selected',
+                'Real-Time',
+                'Signal',
+                ' Selected',
             )
         );
     } else if (totalOnboardedRecords) {
         return formatSelectionMessageBySignalCategory(
             totalOnboardedRecords,
             'Onboarded',
-            'signal',
-            ' selected',
+            'Signal',
+            ' Selected',
         );
     } else if (totalRealTimeRecords) {
         return formatSelectionMessageBySignalCategory(
             totalRealTimeRecords,
-            'Real-time',
-            'signal',
-            ' selected',
+            'Real-Time',
+            'Signal',
+            ' Selected',
         );
     }
     return '';
