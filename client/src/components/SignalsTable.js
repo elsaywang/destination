@@ -11,7 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { renderSelectedSignalsMessage } from '../utils/signalSelection';
+import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
@@ -40,10 +40,9 @@ class SignalsTable extends Component {
         for (let indexPath of selectedItems) {
             selectedRowIndexSet.push(indexPath.index);
         }
-        const records = selectedRowIndexSet.map(i => ({ rowIndex: i, ...items[i] }));
+        const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
         const selectionMessage = renderSelectedSignalsMessage(records);
-
-        onSignalRecordsSelection({ records, selectionMessage });
+        onSignalRecordsSelection({ records, selectionMessage, hasWarning: hasWarning(records) });
     };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {

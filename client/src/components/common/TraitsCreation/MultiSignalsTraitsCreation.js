@@ -9,7 +9,7 @@ const MultiSignalsTraitsCreation = ({
     selectedSignals,
     traitsCreationLabelText,
 }) => {
-    const { selectionMessage, warning } = selectedSignals;
+    const { selectionMessage, hasWarning } = selectedSignals;
 
     return (
         <div className={styles.multiCreation}>
@@ -19,7 +19,7 @@ const MultiSignalsTraitsCreation = ({
                 icon={<Add />}
                 onClick={handleTraitsCreation}
                 variant="action"
-                disabled={warning}
+                disabled={hasWarning}
             />
         </div>
     );
@@ -28,7 +28,7 @@ const MultiSignalsTraitsCreation = ({
 MultiSignalsTraitsCreation.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        warning: PropTypes.bool,
+        hasWarning: PropTypes.bool,
         records: PropTypes.array,
     }),
     traitsCreationLabelText: PropTypes.string,

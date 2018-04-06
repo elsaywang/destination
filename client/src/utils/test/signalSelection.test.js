@@ -5,6 +5,7 @@ import {
     getTotalOnboardedRecords,
     getTotalRealTimeRecords,
     renderSelectedSignalsMessage,
+    hasWarning,
 } from '../signalSelection.js';
 
 describe('signalSelection Utils', () => {
@@ -30,30 +31,30 @@ describe('signalSelection Utils', () => {
     });
 
     describe('test on "formatSelectedSignalsSelectionMessage" function to get the correct selection message based on input', () => {
-        it('should render message "1 Onboarded signal " ', () => {
-            expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal')).toEqual(
-                `1 Onboarded signal `,
+        it('should render message "1 Onboarded Signal" ', () => {
+            expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'Signal')).toEqual(
+                `1 Onboarded Signal`,
             );
         });
-        it('should render message "1 Onboarded signal ," when "," is the suffix', () => {
-            expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal', ',')).toEqual(
-                `1 Onboarded signal ,`,
+        it('should render message "1 Onboarded Signal," when "," is the suffix', () => {
+            expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'Signal', ',')).toEqual(
+                `1 Onboarded Signal,`,
             );
         });
-        it('should render message "1 Onboarded signal ," when "selected" is the suffix', () => {
+        it('should render message "1 Onboarded Signal Selected" when " Selected" is the suffix', () => {
             expect(
-                formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal', 'selected'),
-            ).toEqual(`1 Onboarded signal selected`);
+                formatSelectionMessageBySignalCategory(1, 'Onboarded', 'Signal', ' Selected'),
+            ).toEqual(`1 Onboarded Signal Selected`);
         });
-        it('should render message "2 Onboarded signals ," when input number is great than 1 and suffix is "," ', () => {
-            expect(formatSelectionMessageBySignalCategory(2, 'Onboarded', 'signal', ',')).toEqual(
-                `2 Onboarded signals ,`,
+        it('should render message "2 Onboarded Signals," when input number is great than 1 and suffix is "," ', () => {
+            expect(formatSelectionMessageBySignalCategory(2, 'Onboarded', 'Signal', ',')).toEqual(
+                `2 Onboarded Signals,`,
             );
         });
-        it('should render message "2 Onboarded signals selected" when input number is great than 1 and suffix is "selected" ', () => {
+        it('should render message "2 Onboarded Signals Selected" when input number is great than 1 and suffix is " Selected" ', () => {
             expect(
-                formatSelectionMessageBySignalCategory(2, 'Onboarded', 'signal', 'selected'),
-            ).toEqual(`2 Onboarded signals selected`);
+                formatSelectionMessageBySignalCategory(2, 'Onboarded', 'Signal', ' Selected'),
+            ).toEqual(`2 Onboarded Signals Selected`);
         });
     });
 
@@ -62,7 +63,7 @@ describe('signalSelection Utils', () => {
             expect(formatSelectedSignalsSelectionMessage()).toEqual('');
         });
 
-        it('should render correct `${totalOnboardedRecords} Onboarded signal(s), ${totalRealTimeRecords} Real-time signal(s) selected` message when both Real-time and Onboarded have record', () => {
+        it('should render correct `${totalOnboardedRecords} Onboarded Signal(s), ${totalRealTimeRecords} Real-Time Signal(s) Selected` message when both Real-Time and Onboarded have record', () => {
             const numberSets = [
                 { totalOnboardedRecords: 3, totalRealTimeRecords: 1 },
                 { totalOnboardedRecords: 2, totalRealTimeRecords: 2 },
@@ -70,20 +71,20 @@ describe('signalSelection Utils', () => {
                 { totalOnboardedRecords: 1, totalRealTimeRecords: 1 },
             ];
             numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
-                const correctOnboardedSignal = equalize(totalOnboardedRecords, 'signal');
-                const correctRealTimeSignal = equalize(totalRealTimeRecords, 'signal');
+                const expectedOnboardedSignal = equalize(totalOnboardedRecords, 'Signal');
+                const expectedRealTimeSignal = equalize(totalRealTimeRecords, 'Signal');
                 expect(
                     formatSelectedSignalsSelectionMessage(
                         totalOnboardedRecords,
                         totalRealTimeRecords,
                     ),
                 ).toEqual(
-                    `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} , ${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
+                    `${totalOnboardedRecords} Onboarded ${expectedOnboardedSignal}, ${totalRealTimeRecords} Real-Time ${expectedRealTimeSignal} Selected`,
                 );
             });
         });
 
-        it('should render only `${totalOnboardedRecords} Onboarded signal(s) selected` when Onboarded has record(s) but Real-time has not record', () => {
+        it('should render only `${totalOnboardedRecords} Onboarded Signal(s) Selected` when Onboarded has record(s) but Real-Time has not record', () => {
             const numberSets = [
                 { totalOnboardedRecords: 3, totalRealTimeRecords: 0 },
                 { totalOnboardedRecords: 2, totalRealTimeRecords: 0 },
@@ -94,7 +95,7 @@ describe('signalSelection Utils', () => {
                 { totalOnboardedRecords: 2 },
             ];
             numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
-                const correctOnboardedSignal = equalize(totalOnboardedRecords, 'signal');
+                const expectedOnboardedSignal = equalize(totalOnboardedRecords, 'Signal');
                 if (totalRealTimeRecords) {
                     expect(
                         formatSelectedSignalsSelectionMessage(
@@ -102,17 +103,17 @@ describe('signalSelection Utils', () => {
                             totalRealTimeRecords,
                         ),
                     ).toEqual(
-                        `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} selected`,
+                        `${totalOnboardedRecords} Onboarded ${expectedOnboardedSignal} Selected`,
                     );
                 } else {
                     expect(formatSelectedSignalsSelectionMessage(totalOnboardedRecords)).toEqual(
-                        `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} selected`,
+                        `${totalOnboardedRecords} Onboarded ${expectedOnboardedSignal} Selected`,
                     );
                 }
             });
         });
 
-        it('should render only `${totalRealTimeRecords} Real-time signal(s) selected` when Real-time has record(s) but Onboarded has not record', () => {
+        it('should render only `${totalRealTimeRecords} Real-Time Signal(s) Selected` when Real-Time has record(s) but Onboarded has no record', () => {
             const numberSets = [
                 { totalOnboardedRecords: 0, totalRealTimeRecords: 3 },
                 { totalOnboardedRecords: 0, totalRealTimeRecords: 2 },
@@ -123,7 +124,7 @@ describe('signalSelection Utils', () => {
                 { totalRealTimeRecords: 2 },
             ];
             numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
-                const correctRealTimeSignal = equalize(totalRealTimeRecords, 'signal');
+                const expectedRealTimeSignal = equalize(totalRealTimeRecords, 'Signal');
                 if (totalOnboardedRecords) {
                     expect(
                         formatSelectedSignalsSelectionMessage(
@@ -131,11 +132,11 @@ describe('signalSelection Utils', () => {
                             totalRealTimeRecords,
                         ),
                     ).toEqual(
-                        `${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
+                        `${totalRealTimeRecords} Real-Time ${expectedRealTimeSignal} Selected`,
                     );
                 } else {
                     expect(formatSelectedSignalsSelectionMessage('', totalRealTimeRecords)).toEqual(
-                        `${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
+                        `${totalRealTimeRecords} Real-Time ${expectedRealTimeSignal} Selected`,
                     );
                 }
             });
@@ -147,7 +148,7 @@ describe('signalSelection Utils', () => {
             expect(renderSelectedSignalsMessage([])).toEqual('');
         });
 
-        it('should render correct `${totalOnboardedRecords} Onboarded signal(s), ${totalRealTimeRecords} Real-time signal(s) selected` when rowRecords contains both types', () => {
+        it('should render correct `${totalOnboardedRecords} Onboarded signal(s), ${totalRealTimeRecords} Real-Time Signal(s) Selected` when rowRecords contains both types', () => {
             const rowRecords = [
                 { signalType: 'Onboarded Records', rowIndex: 4 },
                 { signalType: 'Onboarded Records', rowIndex: 3 },
@@ -161,11 +162,11 @@ describe('signalSelection Utils', () => {
             expect(totalOnboardedRecords + totalRealTimeRecords).toEqual(rowRecords.length);
 
             expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
-                `${totalOnboardedRecords} Onboarded signals , ${totalRealTimeRecords} Real-time signals selected`,
+                `${totalOnboardedRecords} Onboarded Signals, ${totalRealTimeRecords} Real-Time Signals Selected`,
             );
         });
 
-        it('should render only `${totalOnboardedRecords} Onboarded signal(s) selected` when rowRecords contains only Onboarded type ', () => {
+        it('should render only `${totalOnboardedRecords} Onboarded Signal(s) Selected` when rowRecords contains only Onboarded type ', () => {
             const rowRecords = [
                 { signalType: 'Onboarded Records', rowIndex: 6 },
                 { signalType: 'Onboarded Records', rowIndex: 2 },
@@ -176,11 +177,11 @@ describe('signalSelection Utils', () => {
             expect(totalOnboardedRecords).toEqual(rowRecords.length);
 
             expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
-                `${totalOnboardedRecords} Onboarded signals selected`,
+                `${totalOnboardedRecords} Onboarded Signals Selected`,
             );
         });
 
-        it('should render only `${totalRealTimeRecords} Real-time signal(s) selected` when rowRecords does not contain Onboarded type', () => {
+        it('should render only `${totalRealTimeRecords} Real-Time Signal(s) Selected` when rowRecords does not contain Onboarded type', () => {
             const rowRecords = [
                 { signalType: 'Adobe Analytics', rowIndex: 12 },
                 { signalType: 'General Online Data', rowIndex: 14 },
@@ -197,8 +198,61 @@ describe('signalSelection Utils', () => {
             expect(totalRealTimeRecords).toEqual(rowRecords.length);
 
             expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
-                `${totalRealTimeRecords} Real-time signals selected`,
+                `${totalRealTimeRecords} Real-Time Signals Selected`,
             );
+        });
+    });
+
+    describe('test on hasWarning function to validate selected records signal types', () => {
+        it('should return true when 1 Onboarded and 1 Real-Time are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Adobe Analytics', rowIndex: 2 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(true);
+        });
+
+        it('should return true when multiple Onboarded and 1 Real-Time are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Onboarded Records', rowIndex: 3 },
+                { signalType: 'Onboarded Records', rowIndex: 9 },
+                { signalType: 'Actionable Log Files', rowIndex: 2 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(true);
+        });
+
+        it('should return true when 1 Onboarded and multiple Real-Time are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Adobe Analytics', rowIndex: 12 },
+                { signalType: 'General Online Data', rowIndex: 14 },
+                { signalType: 'Actionable Log Files', rowIndex: 0 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(true);
+        });
+
+        it('should return false when no record is selected', () => {
+            const rowRecords = [];
+            expect(hasWarning(rowRecords)).toBe(false);
+        });
+
+        it('should return false when only Onboarded records are selected', () => {
+            const rowRecords = [
+                { signalType: 'Onboarded Records', rowIndex: 4 },
+                { signalType: 'Onboarded Records', rowIndex: 1 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(false);
+        });
+
+        it('should return false when only Real-Time records are selected', () => {
+            const rowRecords = [
+                { signalType: 'Adobe Analytics', rowIndex: 12 },
+                { signalType: 'General Online Data', rowIndex: 14 },
+                { signalType: 'Actionable Log Files', rowIndex: 0 },
+                { signalType: 'Adobe Analytics', rowIndex: 1 },
+            ];
+            expect(hasWarning(rowRecords)).toBe(false);
         });
     });
 });

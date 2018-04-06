@@ -7,7 +7,7 @@ import Add from '@react/react-spectrum/Icon/Add';
 describe('<MultiSignalsTraitsCreation/> component', () => {
     const mockFn = jest.fn();
     const props = {
-        selectedSignals: { selectionMessage: '', warning: false },
+        selectedSignals: { selectionMessage: '', hasWarning: false },
         traitsCreationLabelText: 'Create Trait From Multi Signals',
         handleTraitsCreation: mockFn,
     };
@@ -24,7 +24,7 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
     });
 
     it('renders <Button /> component has correct labeling passed from `traitsCreationLabelText` prop', () => {
-        expect(wrapper.find(Button).exists()).toBe(true);
+        expect(wrapper.find(Button).exists()).toBeTruthy();
         expect(wrapper.find(Button).props().label).toEqual(props.traitsCreationLabelText);
     });
 
@@ -45,11 +45,11 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
                     { rowIndex: 0, signalType: 'Adobe Analytics' },
                     { rowIndex: 1, signalType: 'Onboarded Records' },
                 ],
-                warning: true,
+                hasWarning: true,
             },
         };
         wrapper.setProps({ ...propsWithWarning });
         expect(wrapper.find(Button).props().variant).toEqual('action');
-        expect(wrapper.find(Button).props().disabled).toBe(true);
+        expect(wrapper.find(Button).props().disabled).toBeTruthy();
     });
 });

@@ -10,7 +10,7 @@ describe('<TraitsCreationContainer/> component', () => {
             selectedSignals: {
                 selectionMessage: '',
                 records: [],
-                warning: false,
+                hasWarning: false,
             },
             createTraitFromMultiSignals: mockFn,
         };
@@ -30,7 +30,7 @@ describe('<TraitsCreationContainer/> component', () => {
             selectedSignals: {
                 selectionMessage: '1 Real-time signal selected ',
                 records: [{ rowIndex: 0, signalType: 'Adobe Analytics' }],
-                warning: false,
+                hasWarning: false,
             },
         };
         const wrapper = shallow(<TraitsCreationContainer {...props} />);

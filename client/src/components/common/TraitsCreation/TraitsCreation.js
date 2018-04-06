@@ -25,7 +25,7 @@ TraitsCreation.propTypes = {
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        warning: PropTypes.bool,
+        hasWarning: PropTypes.bool,
         records: PropTypes.array,
     }),
     traitsCreationLabelText: PropTypes.string,

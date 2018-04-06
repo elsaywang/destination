@@ -24,7 +24,7 @@ export class TraitsCreationContainer extends Component {
 TraitsCreationContainer.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        warning: PropTypes.bool,
+        hasWarning: PropTypes.bool,
         records: PropTypes.array,
     }),
     createTraitFromMultiSignals: PropTypes.func,
