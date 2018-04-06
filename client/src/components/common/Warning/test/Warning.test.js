@@ -14,7 +14,7 @@ describe('<Warning/> component', () => {
         });
 
         it('renders `warning` <Alert/> icon with size=`S`', () => {
-            expect(wrapper.find(Alert).exists()).toBe(true);
+            expect(wrapper.find(Alert).exists()).toBeTruthy();
             expect(wrapper.find(Alert).props().size).toEqual('S');
             expect(wrapper.find(Alert).props().variant).toEqual('warning');
         });
@@ -33,7 +33,7 @@ describe('<Warning/> component', () => {
         });
 
         it('renders <WarningMessage /> component with correct `content` props', () => {
-            expect(wrapper.find(WarningMessage).exists()).toBe(true);
+            expect(wrapper.find(WarningMessage).exists()).toBeTruthy();
             expect(wrapper.find(WarningMessage).props().content).toEqual(content);
         });
     });
@@ -51,7 +51,7 @@ describe('<Warning/> component', () => {
         });
 
         it('renders <SignalsSelectionWarningMessage/> component ', () => {
-            expect(wrapper.find(SignalsSelectionWarningMessage).exists()).toBe(true);
+            expect(wrapper.find(SignalsSelectionWarningMessage).exists()).toBeTruthy();
         });
     });
 });
