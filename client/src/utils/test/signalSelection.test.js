@@ -33,27 +33,27 @@ describe('signalSelection Utils', () => {
     describe('test on "formatSelectedSignalsSelectionMessage" function to get the correct selection message based on input', () => {
         it('should render message "1 Onboarded signal " ', () => {
             expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal')).toEqual(
-                `1 Onboarded signal `,
+                `1 Onboarded signal`,
             );
         });
         it('should render message "1 Onboarded signal ," when "," is the suffix', () => {
             expect(formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal', ',')).toEqual(
-                `1 Onboarded signal ,`,
+                `1 Onboarded signal,`,
             );
         });
         it('should render message "1 Onboarded signal ," when "selected" is the suffix', () => {
             expect(
-                formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal', 'selected'),
+                formatSelectionMessageBySignalCategory(1, 'Onboarded', 'signal', ' selected'),
             ).toEqual(`1 Onboarded signal selected`);
         });
         it('should render message "2 Onboarded signals ," when input number is great than 1 and suffix is "," ', () => {
             expect(formatSelectionMessageBySignalCategory(2, 'Onboarded', 'signal', ',')).toEqual(
-                `2 Onboarded signals ,`,
+                `2 Onboarded signals,`,
             );
         });
         it('should render message "2 Onboarded signals selected" when input number is great than 1 and suffix is "selected" ', () => {
             expect(
-                formatSelectionMessageBySignalCategory(2, 'Onboarded', 'signal', 'selected'),
+                formatSelectionMessageBySignalCategory(2, 'Onboarded', 'signal', ' selected'),
             ).toEqual(`2 Onboarded signals selected`);
         });
     });
@@ -79,7 +79,7 @@ describe('signalSelection Utils', () => {
                         totalRealTimeRecords,
                     ),
                 ).toEqual(
-                    `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} , ${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
+                    `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal}, ${totalRealTimeRecords} Real-time ${correctRealTimeSignal} selected`,
                 );
             });
         });
@@ -162,7 +162,7 @@ describe('signalSelection Utils', () => {
             expect(totalOnboardedRecords + totalRealTimeRecords).toEqual(rowRecords.length);
 
             expect(renderSelectedSignalsMessage(rowRecords)).toEqual(
-                `${totalOnboardedRecords} Onboarded signals , ${totalRealTimeRecords} Real-time signals selected`,
+                `${totalOnboardedRecords} Onboarded signals, ${totalRealTimeRecords} Real-time signals selected`,
             );
         });
 

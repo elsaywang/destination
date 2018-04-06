@@ -3,7 +3,7 @@ const onboardedRecords = 'Onboarded Records';
 export const equalize = (number, name) => (number > 1 ? `${name}s` : name);
 
 export const formatSelectionMessageBySignalCategory = (number, category, name, suffix = '') =>
-    `${number} ${category} ${equalize(number, name)} ${suffix}`;
+    `${number} ${category} ${equalize(number, name)}${suffix}`;
 
 export const formatSelectedSignalsSelectionMessage = (
     totalOnboardedRecords = 0,
@@ -21,7 +21,7 @@ export const formatSelectedSignalsSelectionMessage = (
                 totalRealTimeRecords,
                 'Real-time',
                 'signal',
-                'selected',
+                ' selected',
             )
         );
     } else if (totalOnboardedRecords) {
@@ -29,14 +29,14 @@ export const formatSelectedSignalsSelectionMessage = (
             totalOnboardedRecords,
             'Onboarded',
             'signal',
-            'selected',
+            ' selected',
         );
     } else if (totalRealTimeRecords) {
         return formatSelectionMessageBySignalCategory(
             totalRealTimeRecords,
             'Real-time',
             'signal',
-            'selected',
+            ' selected',
         );
     }
     return '';
