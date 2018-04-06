@@ -9,8 +9,8 @@ ShallowWrapper {
     multiCreation={true}
     selectedSignals={
       Object {
+        "hasWarning": false,
         "selectionMessage": "",
-        "warning": false,
       }
     }
     traitsCreationLabelText="Create Trait From Multi Signals"
@@ -29,8 +29,8 @@ ShallowWrapper {
     "props": Object {
       "handleTraitsCreation": [MockFunction],
       "selectedSignals": Object {
+        "hasWarning": false,
         "selectionMessage": "",
-        "warning": false,
       },
       "traitsCreationLabelText": "Create Trait From Multi Signals",
     },
@@ -46,8 +46,8 @@ ShallowWrapper {
       "props": Object {
         "handleTraitsCreation": [MockFunction],
         "selectedSignals": Object {
+          "hasWarning": false,
           "selectionMessage": "",
-          "warning": false,
         },
         "traitsCreationLabelText": "Create Trait From Multi Signals",
       },
@@ -75,8 +75,8 @@ ShallowWrapper {
     multiCreation={false}
     selectedSignals={
       Object {
+        "hasWarning": false,
         "selectionMessage": "",
-        "warning": false,
       }
     }
     traitsCreationLabelText="Create Onboarded Trait"

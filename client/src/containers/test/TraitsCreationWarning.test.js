@@ -10,11 +10,11 @@ describe('<TraitsCreationWarning/> component', () => {
             selectedSignals: {
                 selectionMessage: '',
                 records: [],
-                warning: false,
+                hasWarning: false,
             },
         };
-        const { warning } = initialprops.selectedSignals;
-        const wrapper = shallow(<TraitsCreationWarning warning={warning} />);
+        const { hasWarning } = initialprops.selectedSignals;
+        const wrapper = shallow(<TraitsCreationWarning hasWarning={hasWarning} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
@@ -30,11 +30,11 @@ describe('<TraitsCreationWarning/> component', () => {
             selectedSignals: {
                 selectionMessage: '1 Real-time signal selected ',
                 records: [{ rowIndex: 0, signalType: 'Adobe Analytics' }],
-                warning: false,
+                hasWarning: false,
             },
         };
-        const { warning } = props.selectedSignals;
-        const wrapper = shallow(<TraitsCreationWarning warning={warning} />);
+        const { hasWarning } = props.selectedSignals;
+        const wrapper = shallow(<TraitsCreationWarning hasWarning={hasWarning} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
@@ -53,11 +53,11 @@ describe('<TraitsCreationWarning/> component', () => {
                     { rowIndex: 0, signalType: 'Adobe Analytics' },
                     { rowIndex: 4, signalType: 'Onboarded Records' },
                 ],
-                warning: true,
+                hasWarning: true,
             },
         };
-        const { warning } = props.selectedSignals;
-        const wrapper = shallow(<TraitsCreationWarning warning={warning} />);
+        const { hasWarning } = props.selectedSignals;
+        const wrapper = shallow(<TraitsCreationWarning hasWarning={hasWarning} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();

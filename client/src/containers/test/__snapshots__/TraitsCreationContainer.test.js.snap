@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <TraitsCreationContainer
     selectedSignals={
       Object {
+        "hasWarning": false,
         "records": Array [
           Object {
             "rowIndex": 0,
@@ -14,7 +15,6 @@ ShallowWrapper {
           },
         ],
         "selectionMessage": "1 Real-time signal selected ",
-        "warning": false,
       }
     }
   />,
@@ -33,6 +33,7 @@ ShallowWrapper {
       "handleTraitsCreation": undefined,
       "multiCreation": true,
       "selectedSignals": Object {
+        "hasWarning": false,
         "records": Array [
           Object {
             "rowIndex": 0,
@@ -40,7 +41,6 @@ ShallowWrapper {
           },
         ],
         "selectionMessage": "1 Real-time signal selected ",
-        "warning": false,
       },
       "traitsCreationLabelText": "Create Trait From Multi Signals",
     },
@@ -57,6 +57,7 @@ ShallowWrapper {
         "handleTraitsCreation": undefined,
         "multiCreation": true,
         "selectedSignals": Object {
+          "hasWarning": false,
           "records": Array [
             Object {
               "rowIndex": 0,
@@ -64,7 +65,6 @@ ShallowWrapper {
             },
           ],
           "selectionMessage": "1 Real-time signal selected ",
-          "warning": false,
         },
         "traitsCreationLabelText": "Create Trait From Multi Signals",
       },
@@ -91,9 +91,9 @@ ShallowWrapper {
     createTraitFromMultiSignals={[MockFunction]}
     selectedSignals={
       Object {
+        "hasWarning": false,
         "records": Array [],
         "selectionMessage": "",
-        "warning": false,
       }
     }
   />,

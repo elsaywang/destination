@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 
 export class TraitsCreationWarning extends Component {
     render() {
-        const { warning } = this.props;
+        const { hasWarning } = this.props;
 
-        return warning ? (
+        return hasWarning ? (
             <Warning>
                 <SignalsSelectionWarningMessage />
             </Warning>
@@ -17,11 +17,11 @@ export class TraitsCreationWarning extends Component {
 }
 
 TraitsCreationWarning.propTypes = {
-    warning: PropTypes.bool,
+    hasWarning: PropTypes.bool,
 };
 
-const mapStateToProps = ({ selectedSignals: { warning } }) => ({
-    warning,
+const mapStateToProps = ({ selectedSignals: { hasWarning } }) => ({
+    hasWarning,
 });
 
 export default connect(mapStateToProps, null)(TraitsCreationWarning);

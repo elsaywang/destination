@@ -41,9 +41,8 @@ class SignalsTable extends Component {
             selectedRowIndexSet.push(indexPath.index);
         }
         const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
-        const warning = hasWarning(records);
         const selectionMessage = renderSelectedSignalsMessage(records);
-        onSignalRecordsSelection({ records, selectionMessage, warning });
+        onSignalRecordsSelection({ records, selectionMessage, hasWarning: hasWarning(records) });
     };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {

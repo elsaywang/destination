@@ -11,7 +11,7 @@ describe('<TraitsCreation/> component', () => {
         const mockFn = jest.fn();
         const props = {
             multiCreation: false,
-            selectedSignals: { selectionMessage: '', warning: false },
+            selectedSignals: { selectionMessage: '', hasWarning: false },
             traitsCreationLabelText: 'Create Onboarded Trait',
             handleTraitsCreation: mockFn,
         };
@@ -42,7 +42,7 @@ describe('<TraitsCreation/> component', () => {
         const mockFn = jest.fn();
         const props = {
             multiCreation: true,
-            selectedSignals: { selectionMessage: '', warning: false },
+            selectedSignals: { selectionMessage: '', hasWarning: false },
             traitsCreationLabelText: 'Create Trait From Multi Signals',
             handleTraitsCreation: mockFn,
         };
