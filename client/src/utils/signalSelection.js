@@ -57,5 +57,8 @@ export const renderSelectedSignalsMessage = rowRecords => {
     return formatSelectedSignalsSelectionMessage(totalOnboardedRecords, totalRealTimeRecords);
 };
 
-export const hasWarning = rowRecords =>
-    Boolean(getTotalOnboardedRecords(rowRecords) && getTotalRealTimeRecords(rowRecords));
+export const hasWarning = rowRecords => {
+    const totalOnboardedRecords = getTotalOnboardedRecords(rowRecords);
+    const totalRealTimeRecords = getTotalRealTimeRecords(rowRecords);
+    return totalOnboardedRecords > 0 && totalRealTimeRecords > 0;
+};
