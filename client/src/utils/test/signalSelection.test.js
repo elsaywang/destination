@@ -71,15 +71,15 @@ describe('signalSelection Utils', () => {
                 { totalOnboardedRecords: 1, totalRealTimeRecords: 1 },
             ];
             numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
-                const correctOnboardedSignal = equalize(totalOnboardedRecords, 'Signal');
-                const correctRealTimeSignal = equalize(totalRealTimeRecords, 'Signal');
+                const expectedOnboardedSignal = equalize(totalOnboardedRecords, 'Signal');
+                const expectedRealTimeSignal = equalize(totalRealTimeRecords, 'Signal');
                 expect(
                     formatSelectedSignalsSelectionMessage(
                         totalOnboardedRecords,
                         totalRealTimeRecords,
                     ),
                 ).toEqual(
-                    `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal}, ${totalRealTimeRecords} Real-Time ${correctRealTimeSignal} Selected`,
+                    `${totalOnboardedRecords} Onboarded ${expectedOnboardedSignal}, ${totalRealTimeRecords} Real-Time ${expectedRealTimeSignal} Selected`,
                 );
             });
         });
@@ -95,7 +95,7 @@ describe('signalSelection Utils', () => {
                 { totalOnboardedRecords: 2 },
             ];
             numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
-                const correctOnboardedSignal = equalize(totalOnboardedRecords, 'Signal');
+                const expectedOnboardedSignal = equalize(totalOnboardedRecords, 'Signal');
                 if (totalRealTimeRecords) {
                     expect(
                         formatSelectedSignalsSelectionMessage(
@@ -103,11 +103,11 @@ describe('signalSelection Utils', () => {
                             totalRealTimeRecords,
                         ),
                     ).toEqual(
-                        `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} Selected`,
+                        `${totalOnboardedRecords} Onboarded ${expectedOnboardedSignal} Selected`,
                     );
                 } else {
                     expect(formatSelectedSignalsSelectionMessage(totalOnboardedRecords)).toEqual(
-                        `${totalOnboardedRecords} Onboarded ${correctOnboardedSignal} Selected`,
+                        `${totalOnboardedRecords} Onboarded ${expectedOnboardedSignal} Selected`,
                     );
                 }
             });
@@ -124,7 +124,7 @@ describe('signalSelection Utils', () => {
                 { totalRealTimeRecords: 2 },
             ];
             numberSets.map(({ totalOnboardedRecords, totalRealTimeRecords }) => {
-                const correctRealTimeSignal = equalize(totalRealTimeRecords, 'Signal');
+                const expectedRealTimeSignal = equalize(totalRealTimeRecords, 'Signal');
                 if (totalOnboardedRecords) {
                     expect(
                         formatSelectedSignalsSelectionMessage(
@@ -132,11 +132,11 @@ describe('signalSelection Utils', () => {
                             totalRealTimeRecords,
                         ),
                     ).toEqual(
-                        `${totalRealTimeRecords} Real-Time ${correctRealTimeSignal} Selected`,
+                        `${totalRealTimeRecords} Real-Time ${expectedRealTimeSignal} Selected`,
                     );
                 } else {
                     expect(formatSelectedSignalsSelectionMessage('', totalRealTimeRecords)).toEqual(
-                        `${totalRealTimeRecords} Real-Time ${correctRealTimeSignal} Selected`,
+                        `${totalRealTimeRecords} Real-Time ${expectedRealTimeSignal} Selected`,
                     );
                 }
             });
