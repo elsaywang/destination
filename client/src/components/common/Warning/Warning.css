@@ -5,7 +5,7 @@
     color: var(--spectrum-semantic-notice-color-status);
     justify-content: flex-end;
 }
-:local(.messageBody) {
+:local(.warningMessage) {
     margin-left: 0.5em;
     font-size: var(--spectrum-global-font-size-medium);
     font-weight: var(--spectrum-global-font-weight-regular);

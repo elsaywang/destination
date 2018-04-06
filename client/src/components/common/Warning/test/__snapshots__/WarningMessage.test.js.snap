@@ -18,7 +18,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": undefined,
-      "className": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -31,7 +30,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": undefined,
-        "className": undefined,
       },
       "ref": null,
       "rendered": null,

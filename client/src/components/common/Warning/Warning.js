@@ -6,7 +6,7 @@ const Warning = props => {
     return (
         <div className={styles.warning}>
             <Alert size="S" variant="warning" />
-            {props.children}
+            <div className={styles.warningMessage}>{props.children}</div>
         </div>
     );
 };

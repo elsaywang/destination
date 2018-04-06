@@ -22,7 +22,9 @@ ShallowWrapper {
           size="S"
           variant="warning"
         />,
-        undefined,
+        <div
+          className={undefined}
+        />,
       ],
       "className": undefined,
     },
@@ -40,7 +42,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -55,7 +68,9 @@ ShallowWrapper {
             size="S"
             variant="warning"
           />,
-          undefined,
+          <div
+            className={undefined}
+          />,
         ],
         "className": undefined,
       },
@@ -73,7 +88,18 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
       ],
       "type": "div",
     },
@@ -112,7 +138,11 @@ ShallowWrapper {
           size="S"
           variant="warning"
         />,
-        <Unknown />,
+        <div
+          className={undefined}
+        >
+          <Unknown />
+        </div>,
       ],
       "className": undefined,
     },
@@ -133,11 +163,22 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": <Unknown />,
+          "className": undefined,
+        },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -153,7 +194,11 @@ ShallowWrapper {
             size="S"
             variant="warning"
           />,
-          <Unknown />,
+          <div
+            className={undefined}
+          >
+            <Unknown />
+          </div>,
         ],
         "className": undefined,
       },
@@ -174,11 +219,22 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": <Unknown />,
+            "className": undefined,
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
         },
       ],
       "type": "div",
@@ -218,7 +274,11 @@ ShallowWrapper {
           size="S"
           variant="warning"
         />,
-        <WarningMessage />,
+        <div
+          className={undefined}
+        >
+          <WarningMessage />
+        </div>,
       ],
       "className": undefined,
     },
@@ -239,11 +299,22 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": <WarningMessage />,
+          "className": undefined,
+        },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
       },
     ],
     "type": "div",
@@ -259,7 +330,11 @@ ShallowWrapper {
             size="S"
             variant="warning"
           />,
-          <WarningMessage />,
+          <div
+            className={undefined}
+          >
+            <WarningMessage />
+          </div>,
         ],
         "className": undefined,
       },
@@ -280,11 +355,22 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": <WarningMessage />,
+            "className": undefined,
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
         },
       ],
       "type": "div",
