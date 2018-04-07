@@ -4,14 +4,14 @@ import styles from './TraitsCreation.css';
 import Add from '@react/react-spectrum/Icon/Add';
 import Link from '@react/react-spectrum/Link';
 
-const SingleSignalTraitsCreation = ({ traitsCreationLabelText }) => {
+const SingleSignalTraitsCreation = ({ createTraitUrl, traitsCreationLabelText }) => {
     return (
-        <Link href="#">
+        <a className="spectrum-Link" href={createTraitUrl}>
             <div className={styles.singleCreation}>
                 <Add size="S" />
                 <div className={styles.singleCreationlinkText}>{traitsCreationLabelText}</div>
             </div>
-        </Link>
+        </a>
     );
 };
 

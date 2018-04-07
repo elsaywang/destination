@@ -150,12 +150,15 @@ class SignalsTable extends Component {
     };
 
     renderIncludedInTraits = data => {
-        const { sids, sourceType } = data;
+        const { keyValuePairs, sids, sourceType } = data;
         const number = sids.length;
 
         if (number === 0) {
             return (
-                <TraitsCreation traitsCreationLabelText={this.formatTraitLinkText(sourceType)} />
+                <TraitsCreation
+                    keyValuePairs={keyValuePairs}
+                    traitsCreationLabelText={this.formatTraitLinkText(sourceType)}
+                />
             );
         }
         return (

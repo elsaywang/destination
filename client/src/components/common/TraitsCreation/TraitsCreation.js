@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MultiSignalsTraitsCreation from './MultiSignalsTraitsCreation';
 import SingleSignalTraitsCreation from './SingleSignalTraitsCreation';
+import { createOnboardedTraitUrl, createRuleBasedTraitUrl } from '../../../utils/urls';
+import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
+    getCreateTraitUrl() {
+        const { keyValuePairs, multiCreation, selectedSignals } = this.props;
+        const signals = multiCreation ? selectedSignals.records : [{ keyValuePairs }];
+        const signalsParams = {
+            signals: stringifySignals(signals),
+        };
+
+        // TODO: go to Rule-based or Onboarded trait create page based on selected signals
+        return createRuleBasedTraitUrl(signalsParams);
+    }
+
     render() {
         const {
             multiCreation,
@@ -14,14 +27,19 @@ class TraitsCreation extends Component {
         return multiCreation ? (
             <MultiSignalsTraitsCreation
                 {...{ handleTraitsCreation, selectedSignals, traitsCreationLabelText }}
+                createTraitUrl={this.getCreateTraitUrl()}
             />
         ) : (
-            <SingleSignalTraitsCreation {...{ traitsCreationLabelText }} />
+            <SingleSignalTraitsCreation
+                {...{ traitsCreationLabelText }}
+                createTraitUrl={this.getCreateTraitUrl()}
+            />
         );
     }
 }
 
 TraitsCreation.propTypes = {
+    keyValuePairs: PropTypes.array,
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
