@@ -6,7 +6,7 @@ import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import SearchFilters from './SearchFilters';
-import TraitsCreationContainer from './TraitsCreationContainer';
+import MultiSignalsTraitsCreationContainer from './MultiSignalsTraitsCreationContainer';
 import TraitsCreationWarning from './TraitsCreationWarning';
 import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
@@ -66,7 +66,7 @@ class SearchContainer extends Component {
                                 <GridColumn size={8}>
                                     <GridRow>
                                         <GridColumn size={10}>
-                                            <TraitsCreationContainer />
+                                            <MultiSignalsTraitsCreationContainer />
                                         </GridColumn>
                                         <GridColumn size={2}>
                                             <Button label="Export.csv" variant="primary" />

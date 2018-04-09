@@ -4,7 +4,7 @@ import TraitsCreation from '../components/common/TraitsCreation/';
 import { connect } from 'react-redux';
 import { createTraitFromMultiSignals } from '../actions/selectSignals';
 
-export class TraitsCreationContainer extends Component {
+export class MultiSignalsTraitsCreationContainer extends Component {
     render() {
         const { createTraitFromMultiSignals, selectedSignals } = this.props;
 
@@ -21,7 +21,7 @@ export class TraitsCreationContainer extends Component {
     }
 }
 
-TraitsCreationContainer.propTypes = {
+MultiSignalsTraitsCreationContainer.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,
@@ -34,4 +34,6 @@ const mapStateToProps = ({ selectedSignals }) => ({
     selectedSignals,
 });
 
-export default connect(mapStateToProps, { createTraitFromMultiSignals })(TraitsCreationContainer);
+export default connect(mapStateToProps, { createTraitFromMultiSignals })(
+    MultiSignalsTraitsCreationContainer,
+);

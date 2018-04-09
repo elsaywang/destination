@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { TraitsCreationContainer } from '../TraitsCreationContainer';
+import { MultiSignalsTraitsCreationContainer } from '../MultiSignalsTraitsCreationContainer';
 import TraitsCreation from '../../components/common/TraitsCreation';
 
-describe('<TraitsCreationContainer/> component', () => {
+describe('<MultiSignalsTraitsCreationContainer/> component', () => {
     describe('rendering when there is no signal selected', () => {
         const mockFn = jest.fn();
         const initialprops = {
@@ -14,7 +14,7 @@ describe('<TraitsCreationContainer/> component', () => {
             },
             createTraitFromMultiSignals: mockFn,
         };
-        const wrapper = shallow(<TraitsCreationContainer {...initialprops} />);
+        const wrapper = shallow(<MultiSignalsTraitsCreationContainer {...initialprops} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
@@ -33,7 +33,7 @@ describe('<TraitsCreationContainer/> component', () => {
                 hasWarning: false,
             },
         };
-        const wrapper = shallow(<TraitsCreationContainer {...props} />);
+        const wrapper = shallow(<MultiSignalsTraitsCreationContainer {...props} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();

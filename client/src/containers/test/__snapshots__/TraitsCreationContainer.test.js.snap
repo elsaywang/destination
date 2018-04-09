@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TraitsCreationContainer/> component rendering when there are signals selected matches snapshot 1`] = `
+exports[`<MultiSignalsTraitsCreationContainer/> component rendering when there are signals selected matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TraitsCreationContainer
+  Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreationContainer
     selectedSignals={
       Object {
         "hasWarning": false,
@@ -83,11 +83,11 @@ ShallowWrapper {
 }
 `;
 
-exports[`<TraitsCreationContainer/> component rendering when there is no signal selected matches snapshot 1`] = `
+exports[`<MultiSignalsTraitsCreationContainer/> component rendering when there is no signal selected matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TraitsCreationContainer
+  Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreationContainer
     createTraitFromMultiSignals={[MockFunction]}
     selectedSignals={
       Object {
