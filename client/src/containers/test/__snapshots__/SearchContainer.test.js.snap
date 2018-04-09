@@ -16,6 +16,7 @@ ShallowWrapper {
       }
     }
     savedSearches={Array []}
+    selectSignals={[Function]}
     sortSearch={[Function]}
     store={
       Object {

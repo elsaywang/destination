@@ -11,9 +11,9 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import Add from '@react/react-spectrum/Icon/Add';
-import Link from '@react/react-spectrum/Link';
+import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
+import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
 
 class SignalsTable extends Component {
@@ -30,6 +30,19 @@ class SignalsTable extends Component {
             default:
                 return <span>{data}</span>;
         }
+    };
+
+    handleSelectionChange = selectedItems => {
+        const { onSignalRecordsSelection, results } = this.props;
+        const items = this.formatSignalsList(results.list);
+        const selectedRowIndexSet = [];
+        //selectedItems is iterable
+        for (let indexPath of selectedItems) {
+            selectedRowIndexSet.push(indexPath.index);
+        }
+        const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
+        const selectionMessage = renderSelectedSignalsMessage(records);
+        onSignalRecordsSelection({ records, selectionMessage, hasWarning: hasWarning(records) });
     };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
@@ -103,16 +116,8 @@ class SignalsTable extends Component {
         return { keyValuePairs, sids: includedInTraits, sourceType };
     }
 
-    renderCreateTraitLink(context) {
-        return <div className={styles.linkText}>{context}</div>;
-    }
-
     formatTraitLinkText(sourceType) {
-        if (sourceType === 'ONBOARDED') {
-            return this.renderCreateTraitLink('Create Onboarded Trait');
-        }
-
-        return this.renderCreateTraitLink('Create Rule-based Trait');
+        return sourceType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-based Trait';
     }
 
     renderKeyValuePairs(keyValuePairs) {
@@ -156,15 +161,9 @@ class SignalsTable extends Component {
 
         if (number === 0) {
             return (
-                <Link href="#">
-                    <div className={styles.link}>
-                        <Add size="S" />
-                        {this.formatTraitLinkText(sourceType)}
-                    </div>
-                </Link>
+                <TraitsCreation traitsCreationLabelText={this.formatTraitLinkText(sourceType)} />
             );
         }
-
         return (
             <div className={styles.traitsPopover}>
                 <TraitsPopover sids={sids} />
@@ -183,6 +182,7 @@ class SignalsTable extends Component {
                 columns={columns}
                 renderCell={this.renderCell}
                 sortSearch={sortSearch}
+                onSelectionChange={this.handleSelectionChange}
             />
         );
     }
@@ -192,6 +192,7 @@ SignalsTable.propTypes = {
     results: PropTypes.object,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
+    onSignalRecordsSelection: PropTypes.func,
     sortSearch: PropTypes.func,
 };
 

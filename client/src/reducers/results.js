@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { CALL_SEARCH_FULFILLED, CLEAR_SEARCH, SORT_SEARCH_FULFILLED } from '../actions';
+import { CALL_SEARCH_FULFILLED, CLEAR_SEARCH, SORT_SEARCH_FULFILLED } from '../actions/searchForm';
 
 const initialState = {
     list: [],

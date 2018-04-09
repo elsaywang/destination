@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TraitsCreation/> component rendering when it is used in Multi-Signals Traits Creation matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TraitsCreation
+    handleTraitsCreation={[MockFunction]}
+    multiCreation={true}
+    selectedSignals={
+      Object {
+        "hasWarning": false,
+        "selectionMessage": "",
+      }
+    }
+    traitsCreationLabelText="Create Trait From Multi Signals"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "handleTraitsCreation": [MockFunction],
+      "selectedSignals": Object {
+        "hasWarning": false,
+        "selectionMessage": "",
+      },
+      "traitsCreationLabelText": "Create Trait From Multi Signals",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "handleTraitsCreation": [MockFunction],
+        "selectedSignals": Object {
+          "hasWarning": false,
+          "selectionMessage": "",
+        },
+        "traitsCreationLabelText": "Create Trait From Multi Signals",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<TraitsCreation/> component rendering when it is used in Single-Signal Traits Creation matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TraitsCreation
+    handleTraitsCreation={[MockFunction]}
+    multiCreation={false}
+    selectedSignals={
+      Object {
+        "hasWarning": false,
+        "selectionMessage": "",
+      }
+    }
+    traitsCreationLabelText="Create Onboarded Trait"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "traitsCreationLabelText": "Create Onboarded Trait",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "traitsCreationLabelText": "Create Onboarded Trait",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

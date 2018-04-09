@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiSignalsTraitsCreation/> component matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreation
+    handleTraitsCreation={[MockFunction]}
+    selectedSignals={
+      Object {
+        "hasWarning": false,
+        "selectionMessage": "",
+      }
+    }
+    traitsCreationLabelText="Create Trait From Multi Signals"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className={undefined}
+        >
+          
+        </span>,
+        <Button
+          block={false}
+          disabled={false}
+          element="button"
+          icon={<Add />}
+          invalid={false}
+          label="Create Trait From Multi Signals"
+          logic={false}
+          onClick={[MockFunction]}
+          quiet={false}
+          selected={false}
+          variant="action"
+        />,
+      ],
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "block": false,
+          "disabled": false,
+          "element": "button",
+          "icon": <Add />,
+          "invalid": false,
+          "label": "Create Trait From Multi Signals",
+          "logic": false,
+          "onClick": [MockFunction],
+          "quiet": false,
+          "selected": false,
+          "variant": "action",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className={undefined}
+          >
+            
+          </span>,
+          <Button
+            block={false}
+            disabled={false}
+            element="button"
+            icon={<Add />}
+            invalid={false}
+            label="Create Trait From Multi Signals"
+            logic={false}
+            onClick={[MockFunction]}
+            quiet={false}
+            selected={false}
+            variant="action"
+          />,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "block": false,
+            "disabled": false,
+            "element": "button",
+            "icon": <Add />,
+            "invalid": false,
+            "label": "Create Trait From Multi Signals",
+            "logic": false,
+            "onClick": [MockFunction],
+            "quiet": false,
+            "selected": false,
+            "variant": "action",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
