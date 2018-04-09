@@ -40,7 +40,7 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
     it('renders disabled <Button /> with "action" variant when warning message passes from props', () => {
         const propsWithWarning = {
             selectedSignals: {
-                selectionMessage: '1 Real-time signal , 1 Onboarded signal selected ',
+                selectionMessage: '1 Real-time signal, 1 Onboarded signal selected',
                 records: [
                     { rowIndex: 0, signalType: 'Adobe Analytics' },
                     { rowIndex: 1, signalType: 'Onboarded Records' },
