@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
-import Search from '@react/react-spectrum/Search';
 import Textfield from '@react/react-spectrum/Textfield';
 import Label from './common/Label';
 import operatorOptions from '../constants/operatorOptions';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';
+import { isValueValid } from '../utils/searchValidation';
 
 class KeyValuePair extends Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class KeyValuePair extends Component {
     };
 
     render() {
-        const { id, value, operator } = this.props.pair;
+        const { id, key, value, operator } = this.props.pair;
         const forKey = `key${id}`;
         const forValue = `value${id}`;
 
@@ -49,6 +49,7 @@ class KeyValuePair extends Component {
                         onSelect={this.onKeySelect}>
                         <Textfield
                             data-test="key-search-field"
+                            value={key}
                             id={forKey}
                             placeholder="Type a key"
                         />
@@ -60,14 +61,15 @@ class KeyValuePair extends Component {
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
                 />
-                <Label value="Value (Optional)" labelFor={forValue}>
-                    <Search
+                <Label value="Value" labelFor={forValue}>
+                    <Textfield
                         className="value-search"
                         data-test="value-search"
                         id={forValue}
                         value={value}
                         placeholder="Type a value"
                         onChange={this.onValueChange}
+                        invalid={!isValueValid(this.props.pair)}
                     />
                 </Label>
             </div>

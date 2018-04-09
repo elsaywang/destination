@@ -24,7 +24,7 @@ class Table extends Component {
     }
 
     render() {
-        const { items, columns, renderCell, sortSearch, onSelectionChange } = this.props;
+        const { items, columns, renderCell, sortSearch, onSelectionChange, dataTest } = this.props;
         const DataSourceWithColumns = withColumns(DataSource, columns);
         const dataSource = new DataSourceWithColumns({
             items,
@@ -33,7 +33,7 @@ class Table extends Component {
         const height = this.getTableHeight(items);
 
         return (
-            <div className="table-wrapper" style={{ height }}>
+            <div data-test={dataTest} className="table-wrapper" style={{ height }}>
                 <TableView
                     dataSource={dataSource}
                     renderCell={renderCell}
@@ -50,6 +50,7 @@ Table.propTypes = {
     renderCell: PropTypes.func.isRequired,
     onSelectionChange: PropTypes.func,
     sortSearch: PropTypes.func,
+    dataTest: PropTypes.string,
 };
 
 export default Table;

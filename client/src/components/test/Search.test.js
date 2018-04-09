@@ -7,6 +7,7 @@ import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
 import signalStatuses from '../../constants/signalStatusOptions';
 import dateRangeOptions from '../../constants/dateRangeOptions';
+import { isFormValid } from '../../utils/searchValidation';
 
 describe('<Search /> component', () => {
     const state = {
@@ -14,7 +15,7 @@ describe('<Search /> component', () => {
             {
                 id: 0,
                 key: '',
-                operator: '=',
+                operator: '==',
                 value: '',
             },
         ],
@@ -91,19 +92,19 @@ describe('<Search /> component', () => {
                     {
                         id: 0,
                         key: '',
-                        operator: '=',
+                        operator: '==',
                         value: '',
                     },
                     {
                         id: 1,
                         key: '',
-                        operator: '=',
+                        operator: '==',
                         value: '',
                     },
                     {
                         id: 2,
                         key: '',
-                        operator: '=',
+                        operator: '==',
                         value: '',
                     },
                 ],
@@ -175,6 +176,39 @@ describe('<Search /> component', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Search'),
             ).toBe(true);
+        });
+
+        it('renders <Button /> with label "Search" as disabled when form is invalid', () => {
+            const newState = {
+                ...state,
+                keyValuePairs: [
+                    {
+                        id: 0,
+                        key: 'new',
+                        operator: '==',
+                        value: 'abc',
+                    },
+                ],
+            };
+
+            const newWrapper = shallow(
+                <Search
+                    {...newState}
+                    onAdvancedSearchChange={mockFn}
+                    onKeySelect={mockFn}
+                    onValueChange={mockFn}
+                    onOperatorChange={mockFn}
+                    onAddClick={mockFn}
+                    onRemoveClick={mockFn}
+                    onStatusChange={mockFn}
+                    onViewRecordsChange={mockFn}
+                    onMinCountChange={mockFn}
+                    onSearch={mockFn}
+                    onClearAll={mockFn}
+                />,
+            );
+
+            expect(newWrapper.find('[data-test="search-button"]').is('[disabled]')).toBe(true);
         });
 
         it('renders <Button /> with label "Clear All"', () => {

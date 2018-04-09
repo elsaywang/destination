@@ -42,42 +42,42 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    //describe('when typing in text in Key input', function() {
-    //    beforeEach(function() {
-    //        cy.get('[data-test="key-search-field"]').as('keyInput');
-    //        cy.server({ force404: true });
-    //        cy
-    //            .route({
-    //                method: 'GET',
-    //                url: 'api/results',
-    //                response: 'fixture:results.json',
-    //            })
-    //            .as('getResults');
-    //    });
-    //
-    //    it('should show autocomplete with suggestions', function() {
-    //        cy
-    //            .get('@keyInput')
-    //            .type('a')
-    //            .wait('@getResults');
-    //
-    //        cy.get('.spectrum-Popover.is-open').should('have.length', 1);
-    //    });
-    //
-    //    describe('when an option is clicked', function() {
-    //        it('should have the same key value as clicked option', function() {
-    //            cy.wait('@getResults');
-    //            cy
-    //                .get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
-    //                .click()
-    //                .then(function($item) {
-    //                    cy.get('@keyInput').should(function($keyInput) {
-    //                        expect($keyInput.val()).to.eq($item.text());
-    //                    });
-    //                });
-    //        });
-    //    });
-    //});
+    // describe('when typing in text in Key input', function() {
+    //     beforeEach(function() {
+    //         cy.get('[data-test="key-search-field"]').as('keyInput');
+    //         cy.server();
+    //         cy
+    //             .route({
+    //                 method: 'GET',
+    //                 url: 'api/results',
+    //                 response: 'fixture:results.json',
+    //             })
+    //             .as('getResults');
+    //     });
+
+    //     it('should show autocomplete with suggestions', function() {
+    //         cy
+    //             .get('@keyInput')
+    //             .type('k')
+    //             .wait('@getResults');
+
+    //         cy.get('.spectrum-Popover.is-open').should('have.length', 1);
+    //     });
+
+    //     describe('when an option is clicked', function() {
+    //         it('should have the same key value as clicked option', function() {
+    //             cy.wait('@getResults');
+    //             cy
+    //                 .get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
+    //                 .click()
+    //                 .then(function($item) {
+    //                     cy.get('@keyInput').should(function($keyInput) {
+    //                         expect($keyInput.val()).to.eq($item.text());
+    //                     });
+    //                 });
+    //         });
+    //     });
+    // });
 
     describe('when Operator select is changed', function() {
         it('should change the value to selected option', function() {
@@ -96,23 +96,12 @@ describe('Search Form Integration Tests', function() {
 
     describe('when typing in text in Value input', function() {
         it('should allow you to type a value in the field', function() {
-            const value = 'test';
+            const value = '1';
 
             cy.get('[data-test="value-search"]').type(value);
 
             cy.get('[data-test="value-search"]').should(function($text) {
                 expect($text.val()).to.eq(value);
-            });
-        });
-
-        it('should allow you to clear the value when you click on the x', function() {
-            cy
-                .get('[data-test="value-search"]')
-                .siblings('button')
-                .click();
-
-            cy.get('[data-test="value-search"]').should(function($text) {
-                expect($text.val()).to.be.empty;
             });
         });
     });
@@ -199,16 +188,22 @@ describe('Search Form Integration Tests', function() {
     });
 
     // TODO: need to mock server and server response
-    //describe('when Search button is clicked', function() {
-    //    before(function() {
-    //        cy.get('[data-test="search-button"]').click();
-    //    });
-    //
-    //    it('should render results table', function() {
-    //        // TODO: should add data-test attribute to results table when SignalsTable is complete
-    //        cy.get('.table-wrapper').should('have.length', 1);
-    //    });
-    //});
+    // describe('when Search button is clicked', function() {
+    //     it('should render results table', function () {
+    //         cy.get('[data-test="search-button"]').click();
+    //         cy.get('[data-test="signals-table"]').should('have.length', 1);
+    //     });
+
+    //     describe('with multiple key value pairs that are empty', function() {
+    //         it('should clean up empty key value pairs except the first and make a request with cleaned up key value pairs to API', function() {
+    //             cy.get('[data-test="add-button"]').click();
+    //             cy.get('[data-test="add-button"]').click();
+    //             cy.get('[data-test="search-button"]').click();
+    //             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
+    //             // TODO: expect fetch to have been called with cleaned up key value pairs
+    //         });
+    //     });
+    // });
 
     describe('when Clear All button is clicked', function() {
         before(function() {
@@ -219,13 +214,12 @@ describe('Search Form Integration Tests', function() {
             cy.get('[data-test="advanced-search-filter"]').should('be.disabled');
             // TODO: uncomment when we can clear this value on Textfield component
             // cy.get('[data-test="key-search-field"]').should('have.value', '');
-            cy.get('.operator').should('have.text', '=');
+            cy.get('.operator').should('have.text', '==');
             cy.get('[data-test="value-search"]').should('have.value', '');
             cy.get('.signal-status').should('contain', 'All');
             cy.get('.view-records').should('contain', '7 Days');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
-            // TODO: should add data-test attribute to results table when SignalsTable is complete
-            cy.get('.table-wrapper').should('have.length', 0);
+            cy.get('[data-test="signals-table"]').should('have.length', 0);
         });
     });
 });

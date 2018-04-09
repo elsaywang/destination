@@ -4,7 +4,6 @@ import operators from '../../constants/operatorOptions';
 import KeyValuePair from '../KeyValuePair';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
-import Search from '@react/react-spectrum/Search';
 import Textfield from '@react/react-spectrum/Textfield';
 
 describe('<KeyValuePair /> component', () => {
@@ -12,7 +11,7 @@ describe('<KeyValuePair /> component', () => {
     const pair = {
         id: 0,
         key: '',
-        operator: '=',
+        operator: '==',
         value: '',
     };
     const wrapper = shallow(
@@ -44,12 +43,31 @@ describe('<KeyValuePair /> component', () => {
             expect(operatorOptions).toMatchObject(operators);
         });
 
-        it('renders <Search /> for value search', () => {
+        it('renders <Textfield /> for value search', () => {
             expect(
                 wrapper
-                    .find(Search)
-                    .filter('.value-search')
+                    .find(Textfield)
+                    .filter('[data-test="value-search"]')
                     .exists(),
+            ).toBe(true);
+        });
+
+        it('renders <Textfield /> as invalid if value is invalid', () => {
+            const newPair = {
+                key: '',
+                operator: '>',
+                value: 'a',
+            };
+
+            wrapper.setProps({
+                pair: newPair,
+            });
+
+            expect(
+                wrapper
+                    .find(Textfield)
+                    .filter('[data-test="value-search"]')
+                    .props().invalid,
             ).toBe(true);
         });
     });

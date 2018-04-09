@@ -5,7 +5,7 @@ const initialSearchState = {
         {
             id: 0,
             key: '',
-            operator: '=',
+            operator: '==',
             value: '',
         },
     ],
@@ -62,7 +62,7 @@ class SearchFilters extends Component {
         const newKeyValuePair = {
             id: maxId + 1,
             key: '',
-            operator: '=',
+            operator: '==',
             value: '',
         };
 
@@ -117,7 +117,7 @@ class SearchFilters extends Component {
                 {
                     id: 0,
                     key: '',
-                    operator: '=',
+                    operator: '==',
                     value: '',
                 },
             ],

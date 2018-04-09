@@ -12,6 +12,7 @@ import Label from './common/Label';
 
 import viewRecordsOptions from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
+import { isFormValid } from '../utils/searchValidation';
 
 class Search extends Component {
     renderKVPFields = pair => {
@@ -25,9 +26,7 @@ class Search extends Component {
         } = this.props;
         const validKeyValuePairsLimit = keyValuePairs.length < 3;
         const isLastPair = id => keyValuePairs[keyValuePairs.length - 1].id === id;
-        const onRemove = () => {
-            onRemoveClick(pair.id);
-        };
+        const onRemove = () => onRemoveClick(pair.id);
 
         return (
             <GridRow key={pair.id} valign="bottom">
@@ -74,6 +73,7 @@ class Search extends Component {
                 data-test="search-button"
                 onClick={this.props.onSearch}
                 variant="cta"
+                disabled={!isFormValid(this.props)}
             />
             <Button
                 label="Clear All"

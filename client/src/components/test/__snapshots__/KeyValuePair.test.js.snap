@@ -12,7 +12,7 @@ ShallowWrapper {
       Object {
         "id": 0,
         "key": "",
-        "operator": "=",
+        "operator": "==",
         "value": "",
       }
     }
@@ -48,6 +48,7 @@ ShallowWrapper {
               placeholder="Type a key"
               readOnly={false}
               required={false}
+              value=""
             />
           </Autocomplete>
         </Label>,
@@ -57,8 +58,8 @@ ShallowWrapper {
           options={
             Array [
               Object {
-                "label": "=",
-                "value": "=",
+                "label": "==",
+                "value": "==",
               },
               Object {
                 "label": ">",
@@ -82,20 +83,22 @@ ShallowWrapper {
               },
             ]
           }
-          value="="
+          value="=="
         />,
         <Label
           labelFor="value0"
-          value="Value (Optional)"
+          value="Value"
         >
-          <Search
+          <Textfield
             className="value-search"
             data-test="value-search"
-            icon={<SearchMagGlass />}
+            disabled={false}
             id="value0"
+            invalid={false}
             onChange={[Function]}
-            onSubmit={[Function]}
             placeholder="Type a value"
+            readOnly={false}
+            required={false}
             value=""
           />
         </Label>,
@@ -123,6 +126,7 @@ ShallowWrapper {
               placeholder="Type a key"
               readOnly={false}
               required={false}
+              value=""
             />
           </Autocomplete>,
           "labelFor": "key0",
@@ -143,6 +147,7 @@ ShallowWrapper {
               placeholder="Type a key"
               readOnly={false}
               required={false}
+              value=""
             />,
             "className": "key-search",
             "getCompletions": [Function],
@@ -161,6 +166,7 @@ ShallowWrapper {
               "placeholder": "Type a key",
               "readOnly": false,
               "required": false,
+              "value": "",
             },
             "ref": null,
             "rendered": null,
@@ -179,8 +185,8 @@ ShallowWrapper {
           "onChange": [Function],
           "options": Array [
             Object {
-              "label": "=",
-              "value": "=",
+              "label": "==",
+              "value": "==",
             },
             Object {
               "label": ">",
@@ -203,7 +209,7 @@ ShallowWrapper {
               "value": "contains",
             },
           ],
-          "value": "=",
+          "value": "==",
         },
         "ref": null,
         "rendered": null,
@@ -214,18 +220,20 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Search
+          "children": <Textfield
             className="value-search"
             data-test="value-search"
-            icon={<SearchMagGlass />}
+            disabled={false}
             id="value0"
+            invalid={false}
             onChange={[Function]}
-            onSubmit={[Function]}
             placeholder="Type a value"
+            readOnly={false}
+            required={false}
             value=""
           />,
           "labelFor": "value0",
-          "value": "Value (Optional)",
+          "value": "Value",
         },
         "ref": null,
         "rendered": Object {
@@ -235,11 +243,13 @@ ShallowWrapper {
           "props": Object {
             "className": "value-search",
             "data-test": "value-search",
-            "icon": <SearchMagGlass />,
+            "disabled": false,
             "id": "value0",
+            "invalid": false,
             "onChange": [Function],
-            "onSubmit": [Function],
             "placeholder": "Type a value",
+            "readOnly": false,
+            "required": false,
             "value": "",
           },
           "ref": null,
@@ -276,6 +286,7 @@ ShallowWrapper {
                 placeholder="Type a key"
                 readOnly={false}
                 required={false}
+                value=""
               />
             </Autocomplete>
           </Label>,
@@ -285,8 +296,8 @@ ShallowWrapper {
             options={
               Array [
                 Object {
-                  "label": "=",
-                  "value": "=",
+                  "label": "==",
+                  "value": "==",
                 },
                 Object {
                   "label": ">",
@@ -310,20 +321,22 @@ ShallowWrapper {
                 },
               ]
             }
-            value="="
+            value="=="
           />,
           <Label
             labelFor="value0"
-            value="Value (Optional)"
+            value="Value"
           >
-            <Search
+            <Textfield
               className="value-search"
               data-test="value-search"
-              icon={<SearchMagGlass />}
+              disabled={false}
               id="value0"
+              invalid={false}
               onChange={[Function]}
-              onSubmit={[Function]}
               placeholder="Type a value"
+              readOnly={false}
+              required={false}
               value=""
             />
           </Label>,
@@ -351,6 +364,7 @@ ShallowWrapper {
                 placeholder="Type a key"
                 readOnly={false}
                 required={false}
+                value=""
               />
             </Autocomplete>,
             "labelFor": "key0",
@@ -371,6 +385,7 @@ ShallowWrapper {
                 placeholder="Type a key"
                 readOnly={false}
                 required={false}
+                value=""
               />,
               "className": "key-search",
               "getCompletions": [Function],
@@ -389,6 +404,7 @@ ShallowWrapper {
                 "placeholder": "Type a key",
                 "readOnly": false,
                 "required": false,
+                "value": "",
               },
               "ref": null,
               "rendered": null,
@@ -407,8 +423,8 @@ ShallowWrapper {
             "onChange": [Function],
             "options": Array [
               Object {
-                "label": "=",
-                "value": "=",
+                "label": "==",
+                "value": "==",
               },
               Object {
                 "label": ">",
@@ -431,7 +447,7 @@ ShallowWrapper {
                 "value": "contains",
               },
             ],
-            "value": "=",
+            "value": "==",
           },
           "ref": null,
           "rendered": null,
@@ -442,18 +458,20 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Search
+            "children": <Textfield
               className="value-search"
               data-test="value-search"
-              icon={<SearchMagGlass />}
+              disabled={false}
               id="value0"
+              invalid={false}
               onChange={[Function]}
-              onSubmit={[Function]}
               placeholder="Type a value"
+              readOnly={false}
+              required={false}
               value=""
             />,
             "labelFor": "value0",
-            "value": "Value (Optional)",
+            "value": "Value",
           },
           "ref": null,
           "rendered": Object {
@@ -463,11 +481,13 @@ ShallowWrapper {
             "props": Object {
               "className": "value-search",
               "data-test": "value-search",
-              "icon": <SearchMagGlass />,
+              "disabled": false,
               "id": "value0",
+              "invalid": false,
               "onChange": [Function],
-              "onSubmit": [Function],
               "placeholder": "Type a value",
+              "readOnly": false,
+              "required": false,
               "value": "",
             },
             "ref": null,

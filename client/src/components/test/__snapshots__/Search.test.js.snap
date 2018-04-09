@@ -11,7 +11,7 @@ ShallowWrapper {
         Object {
           "id": 0,
           "key": "",
-          "operator": "=",
+          "operator": "==",
           "value": "",
         },
       ]
@@ -77,7 +77,7 @@ ShallowWrapper {
                         Object {
                           "id": 0,
                           "key": "",
-                          "operator": "=",
+                          "operator": "==",
                           "value": "",
                         }
                       }
@@ -265,7 +265,7 @@ ShallowWrapper {
                         Object {
                           "id": 0,
                           "key": "",
-                          "operator": "=",
+                          "operator": "==",
                           "value": "",
                         }
                       }
@@ -451,7 +451,7 @@ ShallowWrapper {
                         Object {
                           "id": 0,
                           "key": "",
-                          "operator": "=",
+                          "operator": "==",
                           "value": "",
                         }
                       }
@@ -633,7 +633,7 @@ ShallowWrapper {
                           Object {
                             "id": 0,
                             "key": "",
-                            "operator": "=",
+                            "operator": "==",
                             "value": "",
                           }
                         }
@@ -821,7 +821,7 @@ ShallowWrapper {
                           Object {
                             "id": 0,
                             "key": "",
-                            "operator": "=",
+                            "operator": "==",
                             "value": "",
                           }
                         }
@@ -991,7 +991,7 @@ ShallowWrapper {
                               Object {
                                 "id": 0,
                                 "key": "",
-                                "operator": "=",
+                                "operator": "==",
                                 "value": "",
                               }
                             }
@@ -1158,7 +1158,7 @@ ShallowWrapper {
                               Object {
                                 "id": 0,
                                 "key": "",
-                                "operator": "=",
+                                "operator": "==",
                                 "value": "",
                               }
                             }
@@ -1201,7 +1201,7 @@ ShallowWrapper {
                               Object {
                                 "id": 0,
                                 "key": "",
-                                "operator": "=",
+                                "operator": "==",
                                 "value": "",
                               }
                             }
@@ -1220,7 +1220,7 @@ ShallowWrapper {
                             "pair": Object {
                               "id": 0,
                               "key": "",
-                              "operator": "=",
+                              "operator": "==",
                               "value": "",
                             },
                           },
@@ -1830,7 +1830,7 @@ ShallowWrapper {
                           Object {
                             "id": 0,
                             "key": "",
-                            "operator": "=",
+                            "operator": "==",
                             "value": "",
                           }
                         }
@@ -2018,7 +2018,7 @@ ShallowWrapper {
                           Object {
                             "id": 0,
                             "key": "",
-                            "operator": "=",
+                            "operator": "==",
                             "value": "",
                           }
                         }
@@ -2204,7 +2204,7 @@ ShallowWrapper {
                           Object {
                             "id": 0,
                             "key": "",
-                            "operator": "=",
+                            "operator": "==",
                             "value": "",
                           }
                         }
@@ -2386,7 +2386,7 @@ ShallowWrapper {
                             Object {
                               "id": 0,
                               "key": "",
-                              "operator": "=",
+                              "operator": "==",
                               "value": "",
                             }
                           }
@@ -2574,7 +2574,7 @@ ShallowWrapper {
                             Object {
                               "id": 0,
                               "key": "",
-                              "operator": "=",
+                              "operator": "==",
                               "value": "",
                             }
                           }
@@ -2744,7 +2744,7 @@ ShallowWrapper {
                                 Object {
                                   "id": 0,
                                   "key": "",
-                                  "operator": "=",
+                                  "operator": "==",
                                   "value": "",
                                 }
                               }
@@ -2911,7 +2911,7 @@ ShallowWrapper {
                                 Object {
                                   "id": 0,
                                   "key": "",
-                                  "operator": "=",
+                                  "operator": "==",
                                   "value": "",
                                 }
                               }
@@ -2954,7 +2954,7 @@ ShallowWrapper {
                                 Object {
                                   "id": 0,
                                   "key": "",
-                                  "operator": "=",
+                                  "operator": "==",
                                   "value": "",
                                 }
                               }
@@ -2973,7 +2973,7 @@ ShallowWrapper {
                               "pair": Object {
                                 "id": 0,
                                 "key": "",
-                                "operator": "=",
+                                "operator": "==",
                                 "value": "",
                               },
                             },

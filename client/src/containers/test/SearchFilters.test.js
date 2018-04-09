@@ -23,7 +23,7 @@ describe('<SearchFilters /> component', () => {
                 {
                     id: 0,
                     key: '',
-                    operator: '=',
+                    operator: '==',
                     value: '',
                 },
             ],
@@ -41,7 +41,7 @@ describe('<SearchFilters /> component', () => {
                 {
                     id: keyValuePairs[keyValuePairs.length - 1].id + 1,
                     key: '',
-                    operator: '=',
+                    operator: '==',
                     value: '',
                 },
             ];
@@ -61,29 +61,6 @@ describe('<SearchFilters /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        xit('.removeKeyValuePair() removes a keyValuePair at a given id in given keyValuePairs[] and returns a new array without it', () => {
-            const searchFilters = new SearchFilters();
-            const id = 1;
-            const keyValuePairs = [
-                {
-                    id: 0,
-                    key: '',
-                    operator: '=',
-                    value: '',
-                },
-                {
-                    id: 1,
-                    key: '',
-                    operator: '=',
-                    value: '',
-                },
-            ];
-            const newKeyValuePairs = searchFilters.removeKeyValuePair(id, keyValuePairs);
-            const expected = [keyValuePairs[0]];
-
-            expect(newKeyValuePairs).toEqual(expected);
-        });
-
         it('.onAdvancedSearchChange() changes advanced state to given value and clears filter', () => {
             expect(wrapper.state('advanced')).toBe(initialState.advanced);
 
@@ -92,7 +69,7 @@ describe('<SearchFilters /> component', () => {
             expect(wrapper.state('filter')).toBe('');
         });
 
-        xit('.onKeySelect() changes key state to given value at corresponding id in keyValuePairs[]', () => {
+        it('.onKeySelect() changes key state to given value at corresponding id in keyValuePairs[]', () => {
             const value = 'test';
             const id = 0;
 
@@ -106,7 +83,7 @@ describe('<SearchFilters /> component', () => {
             expect(wrapper.state('keyValuePairs')[id].key).toBe(value);
         });
 
-        xit('.onValueChange() changes value state to given value at corresponding id in keyValuePairs[]', () => {
+        it('.onValueChange() changes value state to given value at corresponding id in keyValuePairs[]', () => {
             const value = 'test value';
             const id = 0;
 
@@ -163,7 +140,7 @@ describe('<SearchFilters /> component', () => {
                     {
                         id: 0,
                         key: '',
-                        operator: '=',
+                        operator: '==',
                         value: '',
                     },
                 ],

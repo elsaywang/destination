@@ -178,6 +178,7 @@ class SignalsTable extends Component {
 
         return (
             <Table
+                dataTest="signals-table"
                 items={items}
                 columns={columns}
                 renderCell={this.renderCell}
