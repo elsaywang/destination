@@ -9,7 +9,6 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
     const props = {
         createTraitUrl: 'testUrl',
         selectedSignals: { selectionMessage: '', hasWarning: false },
-        handleTraitsCreation: mockFn,
     };
     const wrapper = shallow(<MultiSignalsTraitsCreation {...props} />);
 

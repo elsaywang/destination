@@ -34,7 +34,6 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "dataType": undefined,
-      "handleTraitsCreation": undefined,
       "multiCreation": true,
       "selectedSignals": Object {
         "hasWarning": false,
@@ -61,7 +60,6 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "dataType": undefined,
-        "handleTraitsCreation": undefined,
         "multiCreation": true,
         "selectedSignals": Object {
           "hasWarning": false,
@@ -97,7 +95,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreationContainer
-    createTraitFromMultiSignals={[MockFunction]}
     selectedSignals={
       Object {
         "hasWarning": false,

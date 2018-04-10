@@ -12,7 +12,6 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
                 records: [],
                 hasWarning: false,
             },
-            createTraitFromMultiSignals: mockFn,
         };
         const wrapper = shallow(<MultiSignalsTraitsCreationContainer {...initialprops} />);
 

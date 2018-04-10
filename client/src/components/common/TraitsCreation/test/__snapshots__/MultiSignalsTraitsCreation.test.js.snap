@@ -6,7 +6,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreation
     createTraitUrl="testUrl"
-    handleTraitsCreation={[MockFunction]}
     selectedSignals={
       Object {
         "hasWarning": false,
@@ -43,7 +42,6 @@ ShallowWrapper {
             invalid={false}
             label="Create Trait From Multiple Signals"
             logic={false}
-            onClick={[MockFunction]}
             quiet={false}
             selected={false}
             variant="action"
@@ -79,7 +77,6 @@ ShallowWrapper {
             invalid={false}
             label="Create Trait From Multiple Signals"
             logic={false}
-            onClick={[MockFunction]}
             quiet={false}
             selected={false}
             variant="action"
@@ -99,7 +96,6 @@ ShallowWrapper {
             "invalid": false,
             "label": "Create Trait From Multiple Signals",
             "logic": false,
-            "onClick": [MockFunction],
             "quiet": false,
             "selected": false,
             "variant": "action",
@@ -136,7 +132,6 @@ ShallowWrapper {
               invalid={false}
               label="Create Trait From Multiple Signals"
               logic={false}
-              onClick={[MockFunction]}
               quiet={false}
               selected={false}
               variant="action"
@@ -172,7 +167,6 @@ ShallowWrapper {
               invalid={false}
               label="Create Trait From Multiple Signals"
               logic={false}
-              onClick={[MockFunction]}
               quiet={false}
               selected={false}
               variant="action"
@@ -192,7 +186,6 @@ ShallowWrapper {
               "invalid": false,
               "label": "Create Trait From Multiple Signals",
               "logic": false,
-              "onClick": [MockFunction],
               "quiet": false,
               "selected": false,
               "variant": "action",

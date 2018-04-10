@@ -16,7 +16,6 @@ describe('<TraitsCreation/> component', () => {
         const props = {
             dataType: 'ONBOARDED',
             keyValuePairs: [],
-            handleTraitsCreation: mockFn,
         };
 
         const wrapper = shallow(<TraitsCreation {...props} />);
@@ -58,7 +57,6 @@ describe('<TraitsCreation/> component', () => {
         const props = {
             multiCreation: true,
             selectedSignals: { selectionMessage: '', hasWarning: false, records: [] },
-            handleTraitsCreation: mockFn,
         };
 
         const wrapper = shallow(<TraitsCreation {...props} />);
