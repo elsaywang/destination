@@ -250,7 +250,7 @@ describe('<SignalsTable /> component', () => {
                     );
                 });
 
-                it('passes `traitsCreationLabelText` prop, which formats trait creation link text inside a div based on `${sourceType}`', () => {
+                it('passes `dataType` prop`', () => {
                     signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
                 });
             });

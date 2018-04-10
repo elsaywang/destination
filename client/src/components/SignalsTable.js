@@ -111,11 +111,8 @@ class SignalsTable extends Component {
     formatIncludedInTraits(signal) {
         const { keyValuePairs, includedInTraits, source } = signal;
         const { sourceType } = source;
-        return { keyValuePairs, sids: includedInTraits, sourceType };
-    }
 
-    formatTraitLinkText(sourceType) {
-        return sourceType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-based Trait';
+        return { keyValuePairs, sids: includedInTraits, sourceType };
     }
 
     renderKeyValuePairs(keyValuePairs) {
@@ -152,15 +149,12 @@ class SignalsTable extends Component {
     renderIncludedInTraits = data => {
         const { keyValuePairs, sids, sourceType } = data;
         const number = sids.length;
+        const dataType = sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME';
 
         if (number === 0) {
-            return (
-                <TraitsCreation
-                    keyValuePairs={keyValuePairs}
-                    traitsCreationLabelText={this.formatTraitLinkText(sourceType)}
-                />
-            );
+            return <TraitsCreation keyValuePairs={keyValuePairs} dataType={dataType} />;
         }
+
         return (
             <div className={styles.traitsPopover}>
                 <TraitsPopover sids={sids} />

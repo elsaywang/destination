@@ -16,6 +16,7 @@ const SingleSignalTraitsCreation = ({ createTraitUrl, traitsCreationLabelText })
 };
 
 SingleSignalTraitsCreation.propTypes = {
+    createTraitUrl: PropTypes.string,
     traitsCreationLabelText: PropTypes.string,
 };
 

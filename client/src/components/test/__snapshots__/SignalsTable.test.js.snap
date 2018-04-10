@@ -1,26 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`traitsCreationLabelText\` prop, which formats trait creation link text inside a div based on \`\${sourceType}\` 1`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 1`] = `
 <TraitsCreation
-  traitsCreationLabelText="Create Rule-based Trait"
+  dataType="REALTIME"
+  keyValuePairs={undefined}
 />
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`traitsCreationLabelText\` prop, which formats trait creation link text inside a div based on \`\${sourceType}\` 2`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 2`] = `
 <TraitsCreation
-  traitsCreationLabelText="Create Onboarded Trait"
+  dataType="ONBOARDED"
+  keyValuePairs={undefined}
 />
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`traitsCreationLabelText\` prop, which formats trait creation link text inside a div based on \`\${sourceType}\` 3`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 3`] = `
 <TraitsCreation
-  traitsCreationLabelText="Create Rule-based Trait"
+  dataType="REALTIME"
+  keyValuePairs={undefined}
 />
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`traitsCreationLabelText\` prop, which formats trait creation link text inside a div based on \`\${sourceType}\` 4`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 4`] = `
 <TraitsCreation
-  traitsCreationLabelText="Create Rule-based Trait"
+  dataType="REALTIME"
+  keyValuePairs={undefined}
 />
 `;
 

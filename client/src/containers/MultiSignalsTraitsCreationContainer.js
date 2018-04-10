@@ -7,15 +7,16 @@ import { createTraitFromMultiSignals } from '../actions/selectSignals';
 export class MultiSignalsTraitsCreationContainer extends Component {
     render() {
         const { createTraitFromMultiSignals, selectedSignals } = this.props;
-
         const { records } = selectedSignals;
+        const dataType = records.every(signal => signal.source.sourceType === 'ONBOARDED')
+            ? 'ONBOARDED'
+            : 'REALTIME';
 
         return records.length ? (
             <TraitsCreation
                 multiCreation
-                traitsCreationLabelText="Create Trait From Multi Signals"
                 handleTraitsCreation={createTraitFromMultiSignals}
-                {...{ selectedSignals }}
+                {...{ selectedSignals, dataType }}
             />
         ) : null;
     }

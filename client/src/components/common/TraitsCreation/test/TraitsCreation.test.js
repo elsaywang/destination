@@ -10,9 +10,8 @@ describe('<TraitsCreation/> component', () => {
     describe('rendering when it is used in Single-Signal Traits Creation', () => {
         const mockFn = jest.fn();
         const props = {
-            multiCreation: false,
-            selectedSignals: { selectionMessage: '', hasWarning: false },
-            traitsCreationLabelText: 'Create Onboarded Trait',
+            dataType: 'ONBOARDED',
+            keyValuePairs: [],
             handleTraitsCreation: mockFn,
         };
 
@@ -23,8 +22,8 @@ describe('<TraitsCreation/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders with prop `multiCreation` is false', () => {
-            expect(creationWrapper.props.multiCreation).toEqual(false);
+        it('renders with prop `multiCreation` is undefined', () => {
+            expect(creationWrapper.props.multiCreation).toBeUndefined();
         });
 
         it('renders <SingleSignalTraitsCreation/> component', () => {
@@ -34,7 +33,7 @@ describe('<TraitsCreation/> component', () => {
         it('<SingleSignalTraitsCreation/> has `traitsCreationLabelText` props with correct text', () => {
             expect(
                 wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
-            ).toEqual(props.traitsCreationLabelText);
+            ).toEqual('Create Onboarded Trait');
         });
     });
 
@@ -42,8 +41,7 @@ describe('<TraitsCreation/> component', () => {
         const mockFn = jest.fn();
         const props = {
             multiCreation: true,
-            selectedSignals: { selectionMessage: '', hasWarning: false },
-            traitsCreationLabelText: 'Create Trait From Multi Signals',
+            selectedSignals: { selectionMessage: '', hasWarning: false, records: [] },
             handleTraitsCreation: mockFn,
         };
 
@@ -60,12 +58,6 @@ describe('<TraitsCreation/> component', () => {
 
         it('renders <MultiSignalsTraitsCreation/> component', () => {
             expect(wrapper.find(MultiSignalsTraitsCreation).exists()).toBe(true);
-        });
-
-        it('<MultiSignalsTraitsCreation/> has `traitsCreationLabelText` props with correct text', () => {
-            expect(
-                wrapper.find(MultiSignalsTraitsCreation).props().traitsCreationLabelText,
-            ).toEqual(props.traitsCreationLabelText);
         });
     });
 });

@@ -4,12 +4,7 @@ import styles from './TraitsCreation.css';
 import Button from '@react/react-spectrum/Button';
 import Add from '@react/react-spectrum/Icon/Add';
 
-const MultiSignalsTraitsCreation = ({
-    createTraitUrl,
-    handleTraitsCreation,
-    selectedSignals,
-    traitsCreationLabelText,
-}) => {
+const MultiSignalsTraitsCreation = ({ createTraitUrl, handleTraitsCreation, selectedSignals }) => {
     const { selectionMessage, hasWarning } = selectedSignals;
 
     return (
@@ -17,7 +12,7 @@ const MultiSignalsTraitsCreation = ({
             <span className={styles.message}>{selectionMessage}</span>
             <a href={createTraitUrl}>
                 <Button
-                    label={traitsCreationLabelText}
+                    label="Create Trait From Multiple Signals"
                     icon={<Add />}
                     onClick={handleTraitsCreation}
                     variant="action"
@@ -34,7 +29,6 @@ MultiSignalsTraitsCreation.propTypes = {
         hasWarning: PropTypes.bool,
         records: PropTypes.array,
     }),
-    traitsCreationLabelText: PropTypes.string,
     handleTraitsCreation: PropTypes.func,
 };
 

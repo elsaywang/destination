@@ -7,38 +7,45 @@ import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
     getCreateTraitUrl() {
-        const { keyValuePairs, multiCreation, selectedSignals } = this.props;
+        const { dataType, keyValuePairs, multiCreation, selectedSignals } = this.props;
         const signals = multiCreation ? selectedSignals.records : [{ keyValuePairs }];
         const signalsParams = {
             signals: stringifySignals(signals),
         };
 
-        // TODO: go to Rule-based or Onboarded trait create page based on selected signals
-        return createRuleBasedTraitUrl(signalsParams);
+        return dataType === 'ONBOARDED'
+            ? createOnboardedTraitUrl(signalsParams)
+            : createRuleBasedTraitUrl(signalsParams);
+    }
+
+    getLinkText() {
+        const { dataType } = this.props;
+
+        return dataType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-Based Trait';
     }
 
     render() {
-        const {
-            multiCreation,
-            traitsCreationLabelText,
-            selectedSignals,
-            handleTraitsCreation,
-        } = this.props;
+        const { dataType, multiCreation, selectedSignals, handleTraitsCreation } = this.props;
+
+        const createTraitUrl = this.getCreateTraitUrl();
+
         return multiCreation ? (
             <MultiSignalsTraitsCreation
-                {...{ handleTraitsCreation, selectedSignals, traitsCreationLabelText }}
+                {...{ handleTraitsCreation, selectedSignals }}
                 createTraitUrl={this.getCreateTraitUrl()}
             />
         ) : (
             <SingleSignalTraitsCreation
-                {...{ traitsCreationLabelText }}
+                {...{ dataType }}
                 createTraitUrl={this.getCreateTraitUrl()}
+                traitsCreationLabelText={this.getLinkText()}
             />
         );
     }
 }
 
 TraitsCreation.propTypes = {
+    dataType: PropTypes.string,
     keyValuePairs: PropTypes.array,
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({
@@ -46,7 +53,6 @@ TraitsCreation.propTypes = {
         hasWarning: PropTypes.bool,
         records: PropTypes.array,
     }),
-    traitsCreationLabelText: PropTypes.string,
     handleTraitsCreation: PropTypes.func,
 };
 

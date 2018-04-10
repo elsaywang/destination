@@ -8,7 +8,6 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
     const mockFn = jest.fn();
     const props = {
         selectedSignals: { selectionMessage: '', hasWarning: false },
-        traitsCreationLabelText: 'Create Trait From Multi Signals',
         handleTraitsCreation: mockFn,
     };
     const wrapper = shallow(<MultiSignalsTraitsCreation {...props} />);
@@ -25,7 +24,6 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
 
     it('renders <Button /> component has correct labeling passed from `traitsCreationLabelText` prop', () => {
         expect(wrapper.find(Button).exists()).toBeTruthy();
-        expect(wrapper.find(Button).props().label).toEqual(props.traitsCreationLabelText);
     });
 
     it('renders <Button /> component includes <Add/> as an icon prop', () => {

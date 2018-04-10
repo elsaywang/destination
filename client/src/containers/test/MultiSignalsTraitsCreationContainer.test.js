@@ -29,7 +29,13 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
         const props = {
             selectedSignals: {
                 selectionMessage: '1 Real-time signal selected ',
-                records: [{ rowIndex: 0, signalType: 'Adobe Analytics' }],
+                records: [
+                    {
+                        rowIndex: 0,
+                        signalType: 'Adobe Analytics',
+                        source: { sourceType: 'ANALYTICS' },
+                    },
+                ],
                 hasWarning: false,
             },
         };
@@ -47,13 +53,13 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
             expect(wrapper.find(TraitsCreation).props().multiCreation).toBe(true);
         });
 
-        it('<TraitsCreation/> with correct `traitsCreationLabelText` value in prop ', () => {
-            expect(wrapper.find(TraitsCreation).props().traitsCreationLabelText).toEqual(
-                'Create Trait From Multi Signals',
+        it('<TraitsCreation/> passes props `selectedSignals`', () => {
+            expect(wrapper.find(TraitsCreation).props().selectedSignals).toMatchObject(
+                props.selectedSignals,
             );
         });
 
-        it('<TraitsCreation/> passes props `selectedSignals`', () => {
+        it('<TraitsCreation/> passes props `dataType`', () => {
             expect(wrapper.find(TraitsCreation).props().selectedSignals).toMatchObject(
                 props.selectedSignals,
             );

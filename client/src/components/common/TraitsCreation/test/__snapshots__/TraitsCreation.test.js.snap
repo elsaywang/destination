@@ -10,10 +10,10 @@ ShallowWrapper {
     selectedSignals={
       Object {
         "hasWarning": false,
+        "records": Array [],
         "selectionMessage": "",
       }
     }
-    traitsCreationLabelText="Create Trait From Multi Signals"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -27,12 +27,13 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
+      "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/rule",
       "handleTraitsCreation": [MockFunction],
       "selectedSignals": Object {
         "hasWarning": false,
+        "records": Array [],
         "selectionMessage": "",
       },
-      "traitsCreationLabelText": "Create Trait From Multi Signals",
     },
     "ref": null,
     "rendered": null,
@@ -44,12 +45,13 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/rule",
         "handleTraitsCreation": [MockFunction],
         "selectedSignals": Object {
           "hasWarning": false,
+          "records": Array [],
           "selectionMessage": "",
         },
-        "traitsCreationLabelText": "Create Trait From Multi Signals",
       },
       "ref": null,
       "rendered": null,
@@ -71,15 +73,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreation
+    dataType="ONBOARDED"
     handleTraitsCreation={[MockFunction]}
-    multiCreation={false}
-    selectedSignals={
-      Object {
-        "hasWarning": false,
-        "selectionMessage": "",
-      }
-    }
-    traitsCreationLabelText="Create Onboarded Trait"
+    keyValuePairs={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -93,6 +89,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
+      "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/onboarded",
+      "dataType": "ONBOARDED",
       "traitsCreationLabelText": "Create Onboarded Trait",
     },
     "ref": null,
@@ -105,6 +103,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/onboarded",
+        "dataType": "ONBOARDED",
         "traitsCreationLabelText": "Create Onboarded Trait",
       },
       "ref": null,

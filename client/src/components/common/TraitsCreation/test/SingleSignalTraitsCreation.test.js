@@ -7,7 +7,7 @@ import SingleSignalTraitsCreation from '../SingleSignalTraitsCreation';
 describe('<SingleSignalTraitsCreation/> component', () => {
     const mockFn = jest.fn();
     const props = {
-        traitsCreationLabelText: 'Create Trait From Multi Signals',
+        traitsCreationLabelText: 'Create Rule-Based Trait',
     };
     const wrapper = shallow(<SingleSignalTraitsCreation {...props} />);
 

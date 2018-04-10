@@ -12,6 +12,9 @@ ShallowWrapper {
           Object {
             "rowIndex": 0,
             "signalType": "Adobe Analytics",
+            "source": Object {
+              "sourceType": "ANALYTICS",
+            },
           },
         ],
         "selectionMessage": "1 Real-time signal selected ",
@@ -30,6 +33,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "dataType": "REALTIME",
       "handleTraitsCreation": undefined,
       "multiCreation": true,
       "selectedSignals": Object {
@@ -38,11 +42,13 @@ ShallowWrapper {
           Object {
             "rowIndex": 0,
             "signalType": "Adobe Analytics",
+            "source": Object {
+              "sourceType": "ANALYTICS",
+            },
           },
         ],
         "selectionMessage": "1 Real-time signal selected ",
       },
-      "traitsCreationLabelText": "Create Trait From Multi Signals",
     },
     "ref": null,
     "rendered": null,
@@ -54,6 +60,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "dataType": "REALTIME",
         "handleTraitsCreation": undefined,
         "multiCreation": true,
         "selectedSignals": Object {
@@ -62,11 +69,13 @@ ShallowWrapper {
             Object {
               "rowIndex": 0,
               "signalType": "Adobe Analytics",
+              "source": Object {
+                "sourceType": "ANALYTICS",
+              },
             },
           ],
           "selectionMessage": "1 Real-time signal selected ",
         },
-        "traitsCreationLabelText": "Create Trait From Multi Signals",
       },
       "ref": null,
       "rendered": null,
