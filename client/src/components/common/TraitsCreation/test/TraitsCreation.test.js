@@ -5,6 +5,10 @@ import Add from '@react/react-spectrum/Icon/Add';
 import Link from '@react/react-spectrum/Link';
 import MultiSignalsTraitsCreation from '../MultiSignalsTraitsCreation';
 import SingleSignalTraitsCreation from '../SingleSignalTraitsCreation';
+import { stringifySignals } from '../../../../utils/stringifySignals';
+
+jest.mock('../../../../utils/stringifySignals');
+stringifySignals.mockImplementation(() => '');
 
 describe('<TraitsCreation/> component', () => {
     describe('rendering when it is used in Single-Signal Traits Creation', () => {
@@ -30,10 +34,22 @@ describe('<TraitsCreation/> component', () => {
             expect(wrapper.find(SingleSignalTraitsCreation).exists()).toBe(true);
         });
 
-        it('<SingleSignalTraitsCreation/> has `traitsCreationLabelText` props with correct text', () => {
-            expect(
-                wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
-            ).toEqual('Create Onboarded Trait');
+        describe('Trait creation label', () => {
+            it('is for creaitng an onboarded trait when the single signal is an onboarded signal', () => {
+                const wrapper = shallow(<TraitsCreation dataType={'ONBOARDED'} />);
+
+                expect(
+                    wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
+                ).toEqual('Create Onboarded Trait');
+            });
+
+            it('is for creating a rule-based trait when the single signal is a real-time signal', () => {
+                const wrapper = shallow(<TraitsCreation dataType={'REALTIME'} />);
+
+                expect(
+                    wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
+                ).toEqual('Create Rule-Based Trait');
+            });
         });
     });
 

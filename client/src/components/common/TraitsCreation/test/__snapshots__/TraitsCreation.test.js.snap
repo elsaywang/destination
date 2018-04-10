@@ -27,7 +27,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/rule",
+      "createTraitUrl": "http://localhost:8080/portal/Traits/Traits.ddx?signals=#new/rule",
       "handleTraitsCreation": [MockFunction],
       "selectedSignals": Object {
         "hasWarning": false,
@@ -45,7 +45,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/rule",
+        "createTraitUrl": "http://localhost:8080/portal/Traits/Traits.ddx?signals=#new/rule",
         "handleTraitsCreation": [MockFunction],
         "selectedSignals": Object {
           "hasWarning": false,
@@ -89,8 +89,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/onboarded",
-      "dataType": "ONBOARDED",
+      "createTraitUrl": "http://localhost:8080/portal/Traits/Traits.ddx?signals=#new/onboarded",
       "traitsCreationLabelText": "Create Onboarded Trait",
     },
     "ref": null,
@@ -103,8 +102,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "createTraitUrl": "undefined/Traits/Traits.ddx?signals=#new/onboarded",
-        "dataType": "ONBOARDED",
+        "createTraitUrl": "http://localhost:8080/portal/Traits/Traits.ddx?signals=#new/onboarded",
         "traitsCreationLabelText": "Create Onboarded Trait",
       },
       "ref": null,

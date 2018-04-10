@@ -36,7 +36,6 @@ class TraitsCreation extends Component {
             />
         ) : (
             <SingleSignalTraitsCreation
-                {...{ dataType }}
                 createTraitUrl={this.getCreateTraitUrl()}
                 traitsCreationLabelText={this.getLinkText()}
             />
