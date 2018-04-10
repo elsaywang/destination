@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
+    createTraitUrl="testUrl"
     traitsCreationLabelText="Create Rule-Based Trait"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -32,7 +33,7 @@ ShallowWrapper {
         </div>
       </div>,
       "className": "spectrum-Link",
-      "href": undefined,
+      "href": "testUrl",
     },
     "ref": null,
     "rendered": Object {
@@ -101,7 +102,7 @@ ShallowWrapper {
           </div>
         </div>,
         "className": "spectrum-Link",
-        "href": undefined,
+        "href": "testUrl",
       },
       "ref": null,
       "rendered": Object {

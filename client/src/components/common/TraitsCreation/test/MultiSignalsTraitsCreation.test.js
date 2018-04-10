@@ -7,6 +7,7 @@ import Add from '@react/react-spectrum/Icon/Add';
 describe('<MultiSignalsTraitsCreation/> component', () => {
     const mockFn = jest.fn();
     const props = {
+        createTraitUrl: 'testUrl',
         selectedSignals: { selectionMessage: '', hasWarning: false },
         handleTraitsCreation: mockFn,
     };
@@ -22,32 +23,62 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
         ).toBeTruthy();
     });
 
-    it('renders <Button /> component has correct labeling passed from `traitsCreationLabelText` prop', () => {
-        expect(wrapper.find(Button).exists()).toBeTruthy();
+    describe('<a> child element that hyperlinks to trait create page', () => {
+        const anchor = wrapper.find('a');
+
+        it('renders', () => {
+            expect(anchor.exists()).toBeTruthy();
+        });
+
+        it('has the `createTraitUrl` prop as its href', () => {
+            expect(anchor.props().href).toEqual('testUrl');
+        });
+
+        it('has a <Button /> child element', () => {
+            expect(
+                anchor
+                    .shallow()
+                    .find(Button)
+                    .exists(),
+            ).toBeTruthy();
+        });
     });
 
-    it('renders <Button /> component includes <Add/> as an icon prop', () => {
-        expect(wrapper.find(Button).props().icon).toEqual(<Add />);
-    });
+    describe('<Button /> child component', () => {
+        const button = wrapper.find(Button);
 
-    it('renders non-disabled <Button /> with "action" variant when no warning message passes from props', () => {
-        expect(wrapper.find(Button).props().variant).toEqual('action');
-        expect('disabled' in wrapper.props()).toBeFalsy();
-    });
+        it('renders', () => {
+            expect(button.exists()).toBeTruthy();
+        });
 
-    it('renders disabled <Button /> with "action" variant when warning message passes from props', () => {
-        const propsWithWarning = {
-            selectedSignals: {
-                selectionMessage: '1 Real-time signal, 1 Onboarded signal selected',
-                records: [
-                    { rowIndex: 0, signalType: 'Adobe Analytics' },
-                    { rowIndex: 1, signalType: 'Onboarded Records' },
-                ],
-                hasWarning: true,
-            },
-        };
-        wrapper.setProps({ ...propsWithWarning });
-        expect(wrapper.find(Button).props().variant).toEqual('action');
-        expect(wrapper.find(Button).props().disabled).toBeTruthy();
+        it('includes <Add/> as an icon prop', () => {
+            expect(button.props().icon).toEqual(<Add />);
+        });
+
+        it('has the correct hardcoded label', () => {
+            expect(button.props().label).toEqual('Create Trait From Multiple Signals');
+        });
+
+        it('has "action" variant when no warning message is passed from props', () => {
+            expect(button.props().variant).toEqual('action');
+            expect('disabled' in wrapper.props()).toBeFalsy();
+        });
+
+        it('is disabled <Button /> with "action" variant when warning message is passed from props', () => {
+            const propsWithWarning = {
+                selectedSignals: {
+                    selectionMessage: '1 Real-time signal, 1 Onboarded signal selected',
+                    records: [
+                        { rowIndex: 0, signalType: 'Adobe Analytics' },
+                        { rowIndex: 1, signalType: 'Onboarded Records' },
+                    ],
+                    hasWarning: true,
+                },
+            };
+
+            wrapper.setProps({ ...propsWithWarning });
+            expect(wrapper.find(Button).props().variant).toEqual('action');
+            expect(wrapper.find(Button).props().disabled).toBeTruthy();
+        });
     });
 });

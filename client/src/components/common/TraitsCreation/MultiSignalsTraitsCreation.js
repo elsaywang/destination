@@ -24,6 +24,7 @@ const MultiSignalsTraitsCreation = ({ createTraitUrl, handleTraitsCreation, sele
 };
 
 MultiSignalsTraitsCreation.propTypes = {
+    createTraitUrl: PropTypes.string,
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,

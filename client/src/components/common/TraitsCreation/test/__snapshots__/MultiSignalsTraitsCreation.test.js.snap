@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreation
+    createTraitUrl="testUrl"
     handleTraitsCreation={[MockFunction]}
     selectedSignals={
       Object {
@@ -32,7 +33,7 @@ ShallowWrapper {
           
         </span>,
         <a
-          href={undefined}
+          href="testUrl"
         >
           <Button
             block={false}
@@ -83,7 +84,7 @@ ShallowWrapper {
             selected={false}
             variant="action"
           />,
-          "href": undefined,
+          "href": "testUrl",
         },
         "ref": null,
         "rendered": Object {
@@ -125,7 +126,7 @@ ShallowWrapper {
             
           </span>,
           <a
-            href={undefined}
+            href="testUrl"
           >
             <Button
               block={false}
@@ -176,7 +177,7 @@ ShallowWrapper {
               selected={false}
               variant="action"
             />,
-            "href": undefined,
+            "href": "testUrl",
           },
           "ref": null,
           "rendered": Object {
