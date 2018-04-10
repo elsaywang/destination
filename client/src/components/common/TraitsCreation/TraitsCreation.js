@@ -6,7 +6,7 @@ import { createOnboardedTraitUrl, createRuleBasedTraitUrl } from '../../../utils
 import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
-    getCreateTraitUrl() {
+    getCreateTraitURL() {
         const { dataType, keyValuePairs, multiCreation, selectedSignals } = this.props;
         const signals = multiCreation ? selectedSignals.records : [{ keyValuePairs }];
         const signalsParams = {
@@ -27,16 +27,15 @@ class TraitsCreation extends Component {
     render() {
         const { dataType, multiCreation, selectedSignals, handleTraitsCreation } = this.props;
 
-        const createTraitUrl = this.getCreateTraitUrl();
+        const createTraitUrl = this.getCreateTraitURL();
 
         return multiCreation ? (
             <MultiSignalsTraitsCreation
-                {...{ handleTraitsCreation, selectedSignals }}
-                createTraitUrl={this.getCreateTraitUrl()}
+                {...{ createTraitUrl, handleTraitsCreation, selectedSignals }}
             />
         ) : (
             <SingleSignalTraitsCreation
-                createTraitUrl={this.getCreateTraitUrl()}
+                {...{ createTraitUrl }}
                 traitsCreationLabelText={this.getLinkText()}
             />
         );

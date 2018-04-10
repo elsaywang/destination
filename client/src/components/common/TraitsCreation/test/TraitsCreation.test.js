@@ -76,4 +76,47 @@ describe('<TraitsCreation/> component', () => {
             expect(wrapper.find(MultiSignalsTraitsCreation).exists()).toBe(true);
         });
     });
+
+    describe('getCreateTraitURL', () => {
+        stringifySignals.mockClear();
+
+        it('for single-signal trait creation, calls `stringifySignals` on an array of an object containing the `keyValuePairs` prop', () => {
+            const keyValuePairs = [{ key: 'key1', value: 'value1' }];
+            const wrapper = shallow(<TraitsCreation keyValuePairs={keyValuePairs} />);
+            const expectedSignals = [{ keyValuePairs }];
+
+            expect(stringifySignals).toBeCalledWith(expectedSignals);
+        });
+
+        it("for multi-signal trait creation, calls `stringifySignals` on the `selectedSignals` prop's `records`", () => {
+            const selectedSignals = {
+                records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
+            };
+            const wrapper = shallow(<TraitsCreation selectedSignals={selectedSignals} />);
+
+            expect(stringifySignals).toBeCalledWith(selectedSignals.records);
+        });
+
+        it('returns the Create Rule-Based Trait URL when the `dataType` is "REALTIME"', () => {
+            const wrapper = shallow(<TraitsCreation dataType={'REALTIME'} keyValuePairs={[]} />);
+
+            expect(
+                wrapper
+                    .instance()
+                    .getCreateTraitURL()
+                    .endsWith('#new/rule'),
+            ).toBeTruthy();
+        });
+
+        it('returns the Create Onboarded Trait URL when the `dataType` is "ONBOARDED"', () => {
+            const wrapper = shallow(<TraitsCreation dataType={'ONBOARDED'} keyValuePairs={[]} />);
+
+            expect(
+                wrapper
+                    .instance()
+                    .getCreateTraitURL()
+                    .endsWith('#new/onboarded'),
+            ).toBeTruthy();
+        });
+    });
 });
