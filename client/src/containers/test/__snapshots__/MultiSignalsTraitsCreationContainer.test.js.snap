@@ -33,7 +33,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "dataType": "REALTIME",
+      "dataType": undefined,
       "handleTraitsCreation": undefined,
       "multiCreation": true,
       "selectedSignals": Object {
@@ -60,7 +60,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "dataType": "REALTIME",
+        "dataType": undefined,
         "handleTraitsCreation": undefined,
         "multiCreation": true,
         "selectedSignals": Object {

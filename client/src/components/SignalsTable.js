@@ -109,10 +109,9 @@ class SignalsTable extends Component {
     }
 
     formatIncludedInTraits(signal) {
-        const { keyValuePairs, includedInTraits, source } = signal;
-        const { sourceType } = source;
+        const { keyValuePairs, includedInTraits, dataType } = signal;
 
-        return { keyValuePairs, sids: includedInTraits, sourceType };
+        return { keyValuePairs, sids: includedInTraits, dataType };
     }
 
     renderKeyValuePairs(keyValuePairs) {
@@ -147,9 +146,8 @@ class SignalsTable extends Component {
     };
 
     renderIncludedInTraits = data => {
-        const { keyValuePairs, sids, sourceType } = data;
+        const { keyValuePairs, sids, dataType } = data;
         const number = sids.length;
-        const dataType = sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME';
 
         if (number === 0) {
             return <TraitsCreation keyValuePairs={keyValuePairs} dataType={dataType} />;

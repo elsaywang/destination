@@ -12,3 +12,14 @@ export default handleActions(
     },
     initialState,
 );
+
+export const getRecords = state => state.records;
+export const getSelectedSignalsDataType = state => {
+    if (!getRecords(state).length) {
+        return null;
+    }
+
+    return state.records.every(signal => signal.dataType === 'ONBOARDED')
+        ? 'ONBOARDED'
+        : 'REALTIME';
+};

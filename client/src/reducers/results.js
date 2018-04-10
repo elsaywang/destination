@@ -8,9 +8,13 @@ const initialState = {
     total: 0,
 };
 
-const list = handleActions(
+export const list = handleActions(
     {
-        [CALL_SEARCH_FULFILLED]: (state, action) => action.payload.list,
+        [CALL_SEARCH_FULFILLED]: (state, action) =>
+            action.payload.list.map(signal => ({
+                ...signal,
+                dataType: signal.source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
+            })),
     },
     initialState.list,
 );
