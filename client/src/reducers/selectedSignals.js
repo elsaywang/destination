@@ -1,4 +1,5 @@
 import { handleActions } from 'redux-actions';
+import { CLEAR_SEARCH } from '../actions/searchForm';
 import { SELECT_SIGNALS } from '../actions/selectSignals';
 
 const initialState = { records: [], selectionMessage: '', hasWarning: false };
@@ -9,6 +10,7 @@ export default handleActions(
             ...state,
             ...action.payload,
         }),
+        [CLEAR_SEARCH]: () => initialState,
     },
     initialState,
 );
