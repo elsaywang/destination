@@ -113,11 +113,16 @@ describe('stringifySignals', () => {
                             key: 'eVar1',
                             value: 123,
                         },
+                        {
+                            key: 'eVar1',
+                            value: -0.123,
+                        },
                     ],
                 },
             ];
 
             expect(stringifySignals(signals).includes('"123"')).toBeFalsy();
+            expect(stringifySignals(signals).includes('"-0.123"')).toBeFalsy();
         });
     });
 });
