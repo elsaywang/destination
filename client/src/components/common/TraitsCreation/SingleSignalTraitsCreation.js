@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TraitsCreation.css';
 import Add from '@react/react-spectrum/Icon/Add';
-import Link from '@react/react-spectrum/Link';
 
 const SingleSignalTraitsCreation = ({ createTraitUrl, traitsCreationLabelText }) => {
     return (

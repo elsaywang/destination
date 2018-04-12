@@ -25,7 +25,7 @@ class TraitsCreation extends Component {
     }
 
     render() {
-        const { dataType, multiCreation, selectedSignals } = this.props;
+        const { multiCreation, selectedSignals } = this.props;
 
         const createTraitUrl = this.getCreateTraitURL();
 
