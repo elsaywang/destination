@@ -191,15 +191,12 @@ describe('<SignalsTable /> component', () => {
             const { renderKeyValuePairs } = wrapper.instance();
 
             it('should render one key-value pair as `${key}=${value}` inside a div', () => {
-                const oneKeyValuePair = [{ signalKey: 'k', signalValue: 'v' }];
+                const oneKeyValuePair = [{ key: 'k', value: 'v' }];
 
                 expect(renderKeyValuePairs(oneKeyValuePair)).toMatchSnapshot();
             });
             it('should render two key-value pairs on separate lines', () => {
-                const twoKeyValuePairs = [
-                    { signalKey: 'k1', signalValue: 'v1' },
-                    { signalKey: 'k2', signalValue: 'v2' },
-                ];
+                const twoKeyValuePairs = [{ key: 'k1', value: 'v1' }, { key: 'k2', value: 'v2' }];
 
                 expect(renderKeyValuePairs(twoKeyValuePairs)).toMatchSnapshot();
             });
@@ -253,7 +250,7 @@ describe('<SignalsTable /> component', () => {
                     );
                 });
 
-                it('passes `traitsCreationLabelText` prop, which formats trait creation link text inside a div based on `${sourceType}`', () => {
+                it('passes `dataType` prop`', () => {
                     signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
                 });
             });

@@ -1,4 +1,4 @@
-export const isG6Compliant = value =>
+export const isG6CompliantNumber = value =>
     !(/[^-.0-9]/.test(value) || /.+[-]+$/.test(value) || /\..*\.+$/.test(value));
 
 export const isEmpty = prop => prop.length === 0;
@@ -19,7 +19,7 @@ export const isValueValid = ({ operator, value }) => {
     return (
         (isComparisonOperator(operator) &&
             !isEmpty(normalizedValue) &&
-            isG6Compliant(normalizedValue)) ||
+            isG6CompliantNumber(normalizedValue)) ||
         (operator === '==' || operator === 'contains')
     );
 };

@@ -11,9 +11,9 @@ describe('<SavedSearchTagList /> component', () => {
             name: 'Germaine Wiza',
             keyValuePairs: [
                 {
-                    signalKey: 'k-monitor',
+                    key: 'k-monitor',
                     operator: '>',
-                    signalValue: 'v-programming',
+                    value: 'v-programming',
                 },
             ],
             type: 'Lek',

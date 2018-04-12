@@ -11,6 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
+import { isNumeric } from '../utils/isNumeric';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
@@ -74,10 +75,7 @@ class SignalsTable extends Component {
 
     // TEMP: ALF signals will soon have their own signal type
     isALF(signal) {
-        const { dataSourceId } = signal.source;
-        const isNumeric = val => Number(parseFloat(val)) === val;
-
-        return isNumeric(dataSourceId);
+        return isNumeric(signal.source.dataSourceId);
     }
 
     formatSignalType(signal) {
@@ -111,24 +109,16 @@ class SignalsTable extends Component {
     }
 
     formatIncludedInTraits(signal) {
-        const { keyValuePairs, includedInTraits, source } = signal;
-        const { sourceType } = source;
-        return { keyValuePairs, sids: includedInTraits, sourceType };
-    }
+        const { keyValuePairs, includedInTraits, dataType } = signal;
 
-    formatTraitLinkText(sourceType) {
-        return sourceType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-based Trait';
+        return { keyValuePairs, sids: includedInTraits, dataType };
     }
 
     renderKeyValuePairs(keyValuePairs) {
         return (
             <div>
-                {keyValuePairs.map(({ signalKey, signalValue }) => {
-                    return (
-                        <div key={`${signalKey}-${signalValue}`}>
-                            {`${signalKey}=${signalValue}`}
-                        </div>
-                    );
+                {keyValuePairs.map(({ key, value }) => {
+                    return <div key={`${key}-${value}`}>{`${key}=${value}`}</div>;
                 })}
             </div>
         );
@@ -156,14 +146,13 @@ class SignalsTable extends Component {
     };
 
     renderIncludedInTraits = data => {
-        const { sids, sourceType } = data;
+        const { keyValuePairs, sids, dataType } = data;
         const number = sids.length;
 
         if (number === 0) {
-            return (
-                <TraitsCreation traitsCreationLabelText={this.formatTraitLinkText(sourceType)} />
-            );
+            return <TraitsCreation keyValuePairs={keyValuePairs} dataType={dataType} />;
         }
+
         return (
             <div className={styles.traitsPopover}>
                 <TraitsPopover sids={sids} />

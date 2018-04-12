@@ -5,15 +5,17 @@ import Add from '@react/react-spectrum/Icon/Add';
 import Link from '@react/react-spectrum/Link';
 import MultiSignalsTraitsCreation from '../MultiSignalsTraitsCreation';
 import SingleSignalTraitsCreation from '../SingleSignalTraitsCreation';
+import { stringifySignals } from '../../../../utils/stringifySignals';
+
+jest.mock('../../../../utils/stringifySignals');
+stringifySignals.mockImplementation(() => '');
 
 describe('<TraitsCreation/> component', () => {
     describe('rendering when it is used in Single-Signal Traits Creation', () => {
         const mockFn = jest.fn();
         const props = {
-            multiCreation: false,
-            selectedSignals: { selectionMessage: '', hasWarning: false },
-            traitsCreationLabelText: 'Create Onboarded Trait',
-            handleTraitsCreation: mockFn,
+            dataType: 'ONBOARDED',
+            keyValuePairs: [],
         };
 
         const wrapper = shallow(<TraitsCreation {...props} />);
@@ -23,18 +25,30 @@ describe('<TraitsCreation/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders with prop `multiCreation` is false', () => {
-            expect(creationWrapper.props.multiCreation).toEqual(false);
+        it('renders with prop `multiCreation` is undefined', () => {
+            expect(creationWrapper.props.multiCreation).toBeUndefined();
         });
 
         it('renders <SingleSignalTraitsCreation/> component', () => {
             expect(wrapper.find(SingleSignalTraitsCreation).exists()).toBe(true);
         });
 
-        it('<SingleSignalTraitsCreation/> has `traitsCreationLabelText` props with correct text', () => {
-            expect(
-                wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
-            ).toEqual(props.traitsCreationLabelText);
+        describe('Trait creation label', () => {
+            it('is for creaitng an onboarded trait when the single signal is an onboarded signal', () => {
+                const wrapper = shallow(<TraitsCreation dataType={'ONBOARDED'} />);
+
+                expect(
+                    wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
+                ).toEqual('Create Onboarded Trait');
+            });
+
+            it('is for creating a rule-based trait when the single signal is a real-time signal', () => {
+                const wrapper = shallow(<TraitsCreation dataType={'REALTIME'} />);
+
+                expect(
+                    wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
+                ).toEqual('Create Rule-Based Trait');
+            });
         });
     });
 
@@ -42,9 +56,7 @@ describe('<TraitsCreation/> component', () => {
         const mockFn = jest.fn();
         const props = {
             multiCreation: true,
-            selectedSignals: { selectionMessage: '', hasWarning: false },
-            traitsCreationLabelText: 'Create Trait From Multi Signals',
-            handleTraitsCreation: mockFn,
+            selectedSignals: { selectionMessage: '', hasWarning: false, records: [] },
         };
 
         const wrapper = shallow(<TraitsCreation {...props} />);
@@ -61,11 +73,48 @@ describe('<TraitsCreation/> component', () => {
         it('renders <MultiSignalsTraitsCreation/> component', () => {
             expect(wrapper.find(MultiSignalsTraitsCreation).exists()).toBe(true);
         });
+    });
 
-        it('<MultiSignalsTraitsCreation/> has `traitsCreationLabelText` props with correct text', () => {
+    describe('getCreateTraitURL', () => {
+        stringifySignals.mockClear();
+
+        it('for single-signal trait creation, calls `stringifySignals` on an array of an object containing the `keyValuePairs` prop', () => {
+            const keyValuePairs = [{ key: 'key1', value: 'value1' }];
+            const wrapper = shallow(<TraitsCreation keyValuePairs={keyValuePairs} />);
+            const expectedSignals = [{ keyValuePairs }];
+
+            expect(stringifySignals).toBeCalledWith(expectedSignals);
+        });
+
+        it("for multi-signal trait creation, calls `stringifySignals` on the `selectedSignals` prop's `records`", () => {
+            const selectedSignals = {
+                records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
+            };
+            const wrapper = shallow(<TraitsCreation selectedSignals={selectedSignals} />);
+
+            expect(stringifySignals).toBeCalledWith(selectedSignals.records);
+        });
+
+        it('returns the Create Rule-Based Trait URL when the `dataType` is "REALTIME"', () => {
+            const wrapper = shallow(<TraitsCreation dataType={'REALTIME'} keyValuePairs={[]} />);
+
             expect(
-                wrapper.find(MultiSignalsTraitsCreation).props().traitsCreationLabelText,
-            ).toEqual(props.traitsCreationLabelText);
+                wrapper
+                    .instance()
+                    .getCreateTraitURL()
+                    .endsWith('#new/rule'),
+            ).toBeTruthy();
+        });
+
+        it('returns the Create Onboarded Trait URL when the `dataType` is "ONBOARDED"', () => {
+            const wrapper = shallow(<TraitsCreation dataType={'ONBOARDED'} keyValuePairs={[]} />);
+
+            expect(
+                wrapper
+                    .instance()
+                    .getCreateTraitURL()
+                    .endsWith('#new/onboarded'),
+            ).toBeTruthy();
         });
     });
 });

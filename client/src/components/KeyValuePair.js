@@ -24,8 +24,8 @@ class KeyValuePair extends Component {
             .then(json =>
                 json.list.reduce((curr, signal) => {
                     signal.keyValuePairs.forEach(kvp => {
-                        if (kvp.signalKey.includes(key)) {
-                            curr.push(kvp.signalKey);
+                        if (kvp.key.includes(key)) {
+                            curr.push(kvp.key);
                         }
                     });
 

@@ -27,9 +27,9 @@ module.exports = () => {
 
     class Kvp {
         constructor() {
-            this.signalKey = 'k-' + faker.random.word();
+            this.key = 'k-' + faker.random.word();
             this.operator = operators[Math.floor(Math.random() * operators.length)].value;
-            this.signalValue = 'v-' + faker.random.word();
+            this.value = 'v-' + faker.random.word();
         }
     }
 

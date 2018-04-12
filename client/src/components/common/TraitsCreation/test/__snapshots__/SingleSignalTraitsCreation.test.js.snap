@@ -5,7 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
-    traitsCreationLabelText="Create Trait From Multi Signals"
+    createTraitUrl="testUrl"
+    traitsCreationLabelText="Create Rule-Based Trait"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -17,7 +18,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
       "children": <div
         className={undefined}
@@ -28,10 +29,11 @@ ShallowWrapper {
         <div
           className={undefined}
         >
-          Create Trait From Multi Signals
+          Create Rule-Based Trait
         </div>
       </div>,
-      "href": "#",
+      "className": "spectrum-Link",
+      "href": "testUrl",
     },
     "ref": null,
     "rendered": Object {
@@ -46,7 +48,7 @@ ShallowWrapper {
           <div
             className={undefined}
           >
-            Create Trait From Multi Signals
+            Create Rule-Based Trait
           </div>,
         ],
         "className": undefined,
@@ -69,23 +71,23 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Create Trait From Multi Signals",
+            "children": "Create Rule-Based Trait",
             "className": undefined,
           },
           "ref": null,
-          "rendered": "Create Trait From Multi Signals",
+          "rendered": "Create Rule-Based Trait",
           "type": "div",
         },
       ],
       "type": "div",
     },
-    "type": [Function],
+    "type": "a",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
         "children": <div
           className={undefined}
@@ -96,10 +98,11 @@ ShallowWrapper {
           <div
             className={undefined}
           >
-            Create Trait From Multi Signals
+            Create Rule-Based Trait
           </div>
         </div>,
-        "href": "#",
+        "className": "spectrum-Link",
+        "href": "testUrl",
       },
       "ref": null,
       "rendered": Object {
@@ -114,7 +117,7 @@ ShallowWrapper {
             <div
               className={undefined}
             >
-              Create Trait From Multi Signals
+              Create Rule-Based Trait
             </div>,
           ],
           "className": undefined,
@@ -137,17 +140,17 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Create Trait From Multi Signals",
+              "children": "Create Rule-Based Trait",
               "className": undefined,
             },
             "ref": null,
-            "rendered": "Create Trait From Multi Signals",
+            "rendered": "Create Rule-Based Trait",
             "type": "div",
           },
         ],
         "type": "div",
       },
-      "type": [Function],
+      "type": "a",
     },
   ],
   Symbol(enzyme.__options__): Object {

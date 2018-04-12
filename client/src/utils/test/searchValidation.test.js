@@ -1,18 +1,18 @@
 import * as validationUtils from '../searchValidation';
 
 describe('Search Validation Utils', () => {
-    describe('isG6Compliant() should check if string is G6 compliant', () => {
+    describe('isG6CompliantNumber() should check if string is G6 compliant', () => {
         it('given a number, it should return true', () => {
-            expect(validationUtils.isG6Compliant('1234')).toBe(true);
-            expect(validationUtils.isG6Compliant('-1234')).toBe(true);
-            expect(validationUtils.isG6Compliant('0.1234')).toBe(true);
-            expect(validationUtils.isG6Compliant('-0.1234')).toBe(true);
+            expect(validationUtils.isG6CompliantNumber('1234')).toBe(true);
+            expect(validationUtils.isG6CompliantNumber('-1234')).toBe(true);
+            expect(validationUtils.isG6CompliantNumber('0.1234')).toBe(true);
+            expect(validationUtils.isG6CompliantNumber('-0.1234')).toBe(true);
         });
 
         it('given any value with an alphabetical letter, it should return false', () => {
-            expect(validationUtils.isG6Compliant('a')).toBe(false);
-            expect(validationUtils.isG6Compliant('a123')).toBe(false);
-            expect(validationUtils.isG6Compliant('-a123')).toBe(false);
+            expect(validationUtils.isG6CompliantNumber('a')).toBe(false);
+            expect(validationUtils.isG6CompliantNumber('a123')).toBe(false);
+            expect(validationUtils.isG6CompliantNumber('-a123')).toBe(false);
         });
     });
 
