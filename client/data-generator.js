@@ -10,7 +10,7 @@ var operators = [
 
 module.exports = () => {
     const data = {
-        savedSearches: [],
+        savedSearch: [],
         results: {},
         traits: [],
     };
@@ -102,13 +102,17 @@ module.exports = () => {
         total: 4,
     };
 
-    // Create 100 savedSearches
-    for (let i = 0; i < 100; i++) {
-        data.savedSearches.push({
+    // Create 5 saved search
+    for (let i = 0; i < 5; i++) {
+        data.savedSearch.push({
             id: i,
             name: faker.name.findName(),
             ...new Results(),
         });
+    }
+
+    // Create 100 traits
+    for (let i = 0; i < 100; i++) {
         data.traits.push({
             ...new Trait(i),
         });

@@ -4,6 +4,10 @@ describe('Search Form Integration Tests', function() {
         cy.get('[data-test="search-form"]').should('exist');
     });
 
+    it("should show user's saved search", function() {
+        cy.get('[data-test="saved-search"]').should('exist');
+    });
+
     describe('when Advanced toggle is clicked', function() {
         beforeEach(function() {
             cy.get('[data-test="advanced-search-filter"]').as('advancedFilter');
@@ -165,7 +169,7 @@ describe('Search Form Integration Tests', function() {
                 .get('.view-records')
                 .click()
                 .wait(300)
-                .get('[role=option]:first')
+                .get('.spectrum-SelectList-item:first')
                 .click()
                 .then(function($option) {
                     cy.get('.view-records').should(function($viewRecords) {

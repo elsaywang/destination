@@ -32,7 +32,7 @@ describe('Validation Spec', function() {
                 cy
                     .get('.operator:eq(1)')
                     .click()
-                    .get('[role=option]:nth-child(2)')
+                    .get('.spectrum-SelectList-item:nth-child(2)')
                     .click();
                 cy.get('[data-test="value-search"]:eq(1)').type('a');
             });

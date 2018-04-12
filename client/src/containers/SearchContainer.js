@@ -1,5 +1,6 @@
 import * as searchFormActionCreators from '../actions/searchForm';
 import { selectSignals } from '../actions/selectSignals';
+import { getSavedSearch } from '../actions/savedSearch';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
@@ -11,6 +12,7 @@ import TraitsCreationWarning from './TraitsCreationWarning';
 import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import styles from './SearchContainer.css';
+import SavedSearch from './SavedSearch';
 
 class SearchContainer extends Component {
     constructor() {
@@ -45,6 +47,15 @@ class SearchContainer extends Component {
                         <SearchFilters
                             onSearch={this.props.callSearch}
                             onClearAll={this.props.clearSearch}
+                        />
+                    </GridColumn>
+                </GridRow>
+
+                <GridRow>
+                    <GridColumn size={12}>
+                        <SavedSearch
+                            getSavedSearch={this.props.getSavedSearch}
+                            list={this.props.savedSearch}
                         />
                     </GridColumn>
                 </GridRow>
@@ -94,9 +105,14 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearches }) => ({
+const mapStateToProps = ({ results, savedSearch }) => ({
     results,
-    savedSearches,
+    savedSearch,
 });
-const actionCreators = { ...searchFormActionCreators, selectSignals };
+const actionCreators = {
+    ...searchFormActionCreators,
+    selectSignals,
+    getSavedSearch,
+};
+
 export default connect(mapStateToProps, actionCreators)(SearchContainer);
