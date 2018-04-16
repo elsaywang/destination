@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Search
     advanced={false}
+    filter=""
     keyValuePairs={
       Array [
         Object {
@@ -16,19 +17,19 @@ ShallowWrapper {
         },
       ]
     }
-    minCount={1000}
+    minEventFires={1000}
     onAddClick={[MockFunction]}
     onAdvancedSearchChange={[MockFunction]}
     onClearAll={[MockFunction]}
     onKeySelect={[MockFunction]}
-    onMinCountChange={[MockFunction]}
+    onMinEventFiresChange={[MockFunction]}
     onOperatorChange={[MockFunction]}
     onRemoveClick={[MockFunction]}
     onSearch={[MockFunction]}
-    onStatusChange={[MockFunction]}
+    onSignalStatusChange={[MockFunction]}
     onValueChange={[MockFunction]}
     onViewRecordsChange={[MockFunction]}
-    status="all"
+    signalStatus="ALL"
     viewRecordsFor={7}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -52,7 +53,7 @@ ShallowWrapper {
           >
             <AdvancedSearch
               enabled={false}
-              filter={undefined}
+              filter=""
               onAdvancedSearchChange={[MockFunction]}
               onFilterChange={undefined}
             />
@@ -120,20 +121,20 @@ ShallowWrapper {
                           Array [
                             Object {
                               "label": "All",
-                              "value": "all",
+                              "value": "ALL",
                             },
                             Object {
                               "label": "Unused Signals",
-                              "value": "unused",
+                              "value": "UNUSED",
                             },
                             Object {
                               "label": "Signals Included in Traits",
-                              "value": "includedInTraits",
+                              "value": "USED",
                             },
                           ]
                         }
                         quiet={true}
-                        value="all"
+                        value="ALL"
                       />
                     </Label>
                     <Label
@@ -240,7 +241,7 @@ ShallowWrapper {
           >
             <AdvancedSearch
               enabled={false}
-              filter={undefined}
+              filter=""
               onAdvancedSearchChange={[MockFunction]}
               onFilterChange={undefined}
             />
@@ -308,20 +309,20 @@ ShallowWrapper {
                           Array [
                             Object {
                               "label": "All",
-                              "value": "all",
+                              "value": "ALL",
                             },
                             Object {
                               "label": "Unused Signals",
-                              "value": "unused",
+                              "value": "UNUSED",
                             },
                             Object {
                               "label": "Signals Included in Traits",
-                              "value": "includedInTraits",
+                              "value": "USED",
                             },
                           ]
                         }
                         quiet={true}
-                        value="all"
+                        value="ALL"
                       />
                     </Label>
                     <Label
@@ -426,7 +427,7 @@ ShallowWrapper {
           >
             <AdvancedSearch
               enabled={false}
-              filter={undefined}
+              filter=""
               onAdvancedSearchChange={[MockFunction]}
               onFilterChange={undefined}
             />
@@ -494,20 +495,20 @@ ShallowWrapper {
                           Array [
                             Object {
                               "label": "All",
-                              "value": "all",
+                              "value": "ALL",
                             },
                             Object {
                               "label": "Unused Signals",
-                              "value": "unused",
+                              "value": "UNUSED",
                             },
                             Object {
                               "label": "Signals Included in Traits",
-                              "value": "includedInTraits",
+                              "value": "USED",
                             },
                           ]
                         }
                         quiet={true}
-                        value="all"
+                        value="ALL"
                       />
                     </Label>
                     <Label
@@ -608,7 +609,7 @@ ShallowWrapper {
             "children": Array [
               <AdvancedSearch
                 enabled={false}
-                filter={undefined}
+                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
               />,
@@ -676,20 +677,20 @@ ShallowWrapper {
                             Array [
                               Object {
                                 "label": "All",
-                                "value": "all",
+                                "value": "ALL",
                               },
                               Object {
                                 "label": "Unused Signals",
-                                "value": "unused",
+                                "value": "UNUSED",
                               },
                               Object {
                                 "label": "Signals Included in Traits",
-                                "value": "includedInTraits",
+                                "value": "USED",
                               },
                             ]
                           }
                           quiet={true}
-                          value="all"
+                          value="ALL"
                         />
                       </Label>
                       <Label
@@ -790,7 +791,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "enabled": false,
-                "filter": undefined,
+                "filter": "",
                 "onAdvancedSearchChange": [MockFunction],
                 "onFilterChange": undefined,
               },
@@ -864,20 +865,20 @@ ShallowWrapper {
                             Array [
                               Object {
                                 "label": "All",
-                                "value": "all",
+                                "value": "ALL",
                               },
                               Object {
                                 "label": "Unused Signals",
-                                "value": "unused",
+                                "value": "UNUSED",
                               },
                               Object {
                                 "label": "Signals Included in Traits",
-                                "value": "includedInTraits",
+                                "value": "USED",
                               },
                             ]
                           }
                           quiet={true}
-                          value="all"
+                          value="ALL"
                         />
                       </Label>
                       <Label
@@ -1035,20 +1036,20 @@ ShallowWrapper {
                               Array [
                                 Object {
                                   "label": "All",
-                                  "value": "all",
+                                  "value": "ALL",
                                 },
                                 Object {
                                   "label": "Unused Signals",
-                                  "value": "unused",
+                                  "value": "UNUSED",
                                 },
                                 Object {
                                   "label": "Signals Included in Traits",
-                                  "value": "includedInTraits",
+                                  "value": "USED",
                                 },
                               ]
                             }
                             quiet={true}
-                            value="all"
+                            value="ALL"
                           />
                         </Label>
                         <Label
@@ -1305,20 +1306,20 @@ ShallowWrapper {
                                 Array [
                                   Object {
                                     "label": "All",
-                                    "value": "all",
+                                    "value": "ALL",
                                   },
                                   Object {
                                     "label": "Unused Signals",
-                                    "value": "unused",
+                                    "value": "UNUSED",
                                   },
                                   Object {
                                     "label": "Signals Included in Traits",
-                                    "value": "includedInTraits",
+                                    "value": "USED",
                                   },
                                 ]
                               }
                               quiet={true}
-                              value="all"
+                              value="ALL"
                             />
                           </Label>
                           <Label
@@ -1428,20 +1429,20 @@ ShallowWrapper {
                                   Array [
                                     Object {
                                       "label": "All",
-                                      "value": "all",
+                                      "value": "ALL",
                                     },
                                     Object {
                                       "label": "Unused Signals",
-                                      "value": "unused",
+                                      "value": "UNUSED",
                                     },
                                     Object {
                                       "label": "Signals Included in Traits",
-                                      "value": "includedInTraits",
+                                      "value": "USED",
                                     },
                                   ]
                                 }
                                 quiet={true}
-                                value="all"
+                                value="ALL"
                               />
                             </Label>,
                             <Label
@@ -1515,20 +1516,20 @@ ShallowWrapper {
                                   Array [
                                     Object {
                                       "label": "All",
-                                      "value": "all",
+                                      "value": "ALL",
                                     },
                                     Object {
                                       "label": "Unused Signals",
-                                      "value": "unused",
+                                      "value": "UNUSED",
                                     },
                                     Object {
                                       "label": "Signals Included in Traits",
-                                      "value": "includedInTraits",
+                                      "value": "USED",
                                     },
                                   ]
                                 }
                                 quiet={true}
-                                value="all"
+                                value="ALL"
                               />,
                               "value": "Signal Status",
                             },
@@ -1544,19 +1545,19 @@ ShallowWrapper {
                                 "options": Array [
                                   Object {
                                     "label": "All",
-                                    "value": "all",
+                                    "value": "ALL",
                                   },
                                   Object {
                                     "label": "Unused Signals",
-                                    "value": "unused",
+                                    "value": "UNUSED",
                                   },
                                   Object {
                                     "label": "Signals Included in Traits",
-                                    "value": "includedInTraits",
+                                    "value": "USED",
                                   },
                                 ],
                                 "quiet": true,
-                                "value": "all",
+                                "value": "ALL",
                               },
                               "ref": null,
                               "rendered": null,
@@ -1805,7 +1806,7 @@ ShallowWrapper {
             >
               <AdvancedSearch
                 enabled={false}
-                filter={undefined}
+                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
               />
@@ -1873,20 +1874,20 @@ ShallowWrapper {
                             Array [
                               Object {
                                 "label": "All",
-                                "value": "all",
+                                "value": "ALL",
                               },
                               Object {
                                 "label": "Unused Signals",
-                                "value": "unused",
+                                "value": "UNUSED",
                               },
                               Object {
                                 "label": "Signals Included in Traits",
-                                "value": "includedInTraits",
+                                "value": "USED",
                               },
                             ]
                           }
                           quiet={true}
-                          value="all"
+                          value="ALL"
                         />
                       </Label>
                       <Label
@@ -1993,7 +1994,7 @@ ShallowWrapper {
             >
               <AdvancedSearch
                 enabled={false}
-                filter={undefined}
+                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
               />
@@ -2061,20 +2062,20 @@ ShallowWrapper {
                             Array [
                               Object {
                                 "label": "All",
-                                "value": "all",
+                                "value": "ALL",
                               },
                               Object {
                                 "label": "Unused Signals",
-                                "value": "unused",
+                                "value": "UNUSED",
                               },
                               Object {
                                 "label": "Signals Included in Traits",
-                                "value": "includedInTraits",
+                                "value": "USED",
                               },
                             ]
                           }
                           quiet={true}
-                          value="all"
+                          value="ALL"
                         />
                       </Label>
                       <Label
@@ -2179,7 +2180,7 @@ ShallowWrapper {
             >
               <AdvancedSearch
                 enabled={false}
-                filter={undefined}
+                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
               />
@@ -2247,20 +2248,20 @@ ShallowWrapper {
                             Array [
                               Object {
                                 "label": "All",
-                                "value": "all",
+                                "value": "ALL",
                               },
                               Object {
                                 "label": "Unused Signals",
-                                "value": "unused",
+                                "value": "UNUSED",
                               },
                               Object {
                                 "label": "Signals Included in Traits",
-                                "value": "includedInTraits",
+                                "value": "USED",
                               },
                             ]
                           }
                           quiet={true}
-                          value="all"
+                          value="ALL"
                         />
                       </Label>
                       <Label
@@ -2361,7 +2362,7 @@ ShallowWrapper {
               "children": Array [
                 <AdvancedSearch
                   enabled={false}
-                  filter={undefined}
+                  filter=""
                   onAdvancedSearchChange={[MockFunction]}
                   onFilterChange={undefined}
                 />,
@@ -2429,20 +2430,20 @@ ShallowWrapper {
                               Array [
                                 Object {
                                   "label": "All",
-                                  "value": "all",
+                                  "value": "ALL",
                                 },
                                 Object {
                                   "label": "Unused Signals",
-                                  "value": "unused",
+                                  "value": "UNUSED",
                                 },
                                 Object {
                                   "label": "Signals Included in Traits",
-                                  "value": "includedInTraits",
+                                  "value": "USED",
                                 },
                               ]
                             }
                             quiet={true}
-                            value="all"
+                            value="ALL"
                           />
                         </Label>
                         <Label
@@ -2543,7 +2544,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "enabled": false,
-                  "filter": undefined,
+                  "filter": "",
                   "onAdvancedSearchChange": [MockFunction],
                   "onFilterChange": undefined,
                 },
@@ -2617,20 +2618,20 @@ ShallowWrapper {
                               Array [
                                 Object {
                                   "label": "All",
-                                  "value": "all",
+                                  "value": "ALL",
                                 },
                                 Object {
                                   "label": "Unused Signals",
-                                  "value": "unused",
+                                  "value": "UNUSED",
                                 },
                                 Object {
                                   "label": "Signals Included in Traits",
-                                  "value": "includedInTraits",
+                                  "value": "USED",
                                 },
                               ]
                             }
                             quiet={true}
-                            value="all"
+                            value="ALL"
                           />
                         </Label>
                         <Label
@@ -2788,20 +2789,20 @@ ShallowWrapper {
                                 Array [
                                   Object {
                                     "label": "All",
-                                    "value": "all",
+                                    "value": "ALL",
                                   },
                                   Object {
                                     "label": "Unused Signals",
-                                    "value": "unused",
+                                    "value": "UNUSED",
                                   },
                                   Object {
                                     "label": "Signals Included in Traits",
-                                    "value": "includedInTraits",
+                                    "value": "USED",
                                   },
                                 ]
                               }
                               quiet={true}
-                              value="all"
+                              value="ALL"
                             />
                           </Label>
                           <Label
@@ -3058,20 +3059,20 @@ ShallowWrapper {
                                   Array [
                                     Object {
                                       "label": "All",
-                                      "value": "all",
+                                      "value": "ALL",
                                     },
                                     Object {
                                       "label": "Unused Signals",
-                                      "value": "unused",
+                                      "value": "UNUSED",
                                     },
                                     Object {
                                       "label": "Signals Included in Traits",
-                                      "value": "includedInTraits",
+                                      "value": "USED",
                                     },
                                   ]
                                 }
                                 quiet={true}
-                                value="all"
+                                value="ALL"
                               />
                             </Label>
                             <Label
@@ -3181,20 +3182,20 @@ ShallowWrapper {
                                     Array [
                                       Object {
                                         "label": "All",
-                                        "value": "all",
+                                        "value": "ALL",
                                       },
                                       Object {
                                         "label": "Unused Signals",
-                                        "value": "unused",
+                                        "value": "UNUSED",
                                       },
                                       Object {
                                         "label": "Signals Included in Traits",
-                                        "value": "includedInTraits",
+                                        "value": "USED",
                                       },
                                     ]
                                   }
                                   quiet={true}
-                                  value="all"
+                                  value="ALL"
                                 />
                               </Label>,
                               <Label
@@ -3268,20 +3269,20 @@ ShallowWrapper {
                                     Array [
                                       Object {
                                         "label": "All",
-                                        "value": "all",
+                                        "value": "ALL",
                                       },
                                       Object {
                                         "label": "Unused Signals",
-                                        "value": "unused",
+                                        "value": "UNUSED",
                                       },
                                       Object {
                                         "label": "Signals Included in Traits",
-                                        "value": "includedInTraits",
+                                        "value": "USED",
                                       },
                                     ]
                                   }
                                   quiet={true}
-                                  value="all"
+                                  value="ALL"
                                 />,
                                 "value": "Signal Status",
                               },
@@ -3297,19 +3298,19 @@ ShallowWrapper {
                                   "options": Array [
                                     Object {
                                       "label": "All",
-                                      "value": "all",
+                                      "value": "ALL",
                                     },
                                     Object {
                                       "label": "Unused Signals",
-                                      "value": "unused",
+                                      "value": "UNUSED",
                                     },
                                     Object {
                                       "label": "Signals Included in Traits",
-                                      "value": "includedInTraits",
+                                      "value": "USED",
                                     },
                                   ],
                                   "quiet": true,
-                                  "value": "all",
+                                  "value": "ALL",
                                 },
                                 "ref": null,
                                 "rendered": null,

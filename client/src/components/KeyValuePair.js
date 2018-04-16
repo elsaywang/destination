@@ -46,6 +46,7 @@ class KeyValuePair extends Component {
                     <Autocomplete
                         className={classNames(styles['key-search'], 'key-search')}
                         getCompletions={this.getCompletions}
+                        value={key}
                         onSelect={this.onKeySelect}>
                         <Textfield
                             data-test="key-search-field"

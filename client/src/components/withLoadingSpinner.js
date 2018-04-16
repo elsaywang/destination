@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Wait from '@react/react-spectrum/Wait';
 
 function withLoadingSpinner(Component) {

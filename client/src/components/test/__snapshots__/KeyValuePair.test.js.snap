@@ -39,6 +39,7 @@ ShallowWrapper {
             className="key-search"
             getCompletions={[Function]}
             onSelect={[Function]}
+            value=""
           >
             <Textfield
               data-test="key-search-field"
@@ -117,6 +118,7 @@ ShallowWrapper {
             className="key-search"
             getCompletions={[Function]}
             onSelect={[Function]}
+            value=""
           >
             <Textfield
               data-test="key-search-field"
@@ -152,6 +154,7 @@ ShallowWrapper {
             "className": "key-search",
             "getCompletions": [Function],
             "onSelect": [Function],
+            "value": "",
           },
           "ref": null,
           "rendered": Object {
@@ -277,6 +280,7 @@ ShallowWrapper {
               className="key-search"
               getCompletions={[Function]}
               onSelect={[Function]}
+              value=""
             >
               <Textfield
                 data-test="key-search-field"
@@ -355,6 +359,7 @@ ShallowWrapper {
               className="key-search"
               getCompletions={[Function]}
               onSelect={[Function]}
+              value=""
             >
               <Textfield
                 data-test="key-search-field"
@@ -390,6 +395,7 @@ ShallowWrapper {
               "className": "key-search",
               "getCompletions": [Function],
               "onSelect": [Function],
+              "value": "",
             },
             "ref": null,
             "rendered": Object {

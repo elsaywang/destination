@@ -37,6 +37,13 @@ ShallowWrapper {
         },
       ]
     }
+    onSavedSearchClick={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -82,6 +89,13 @@ ShallowWrapper {
                 "type": "Lek",
               },
             ]
+          }
+          onSavedSearchClick={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+            }
           }
         />,
       ],
@@ -130,6 +144,11 @@ ShallowWrapper {
               "type": "Lek",
             },
           ],
+          "onSavedSearchClick": [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+          },
         },
         "ref": null,
         "rendered": null,
@@ -176,6 +195,13 @@ ShallowWrapper {
                   "type": "Lek",
                 },
               ]
+            }
+            onSavedSearchClick={
+              [MockFunction] {
+                "calls": Array [
+                  Array [],
+                ],
+              }
             }
           />,
         ],
@@ -224,6 +250,11 @@ ShallowWrapper {
                 "type": "Lek",
               },
             ],
+            "onSavedSearchClick": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+            },
           },
           "ref": null,
           "rendered": null,

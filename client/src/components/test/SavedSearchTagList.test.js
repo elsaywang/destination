@@ -5,6 +5,7 @@ import { TagList, Tag } from '@react/react-spectrum/TagList';
 import Heading from '@react/react-spectrum/Heading';
 
 describe('<SavedSearchTagList /> component', () => {
+    const mockFn = jest.fn();
     const list = [
         {
             id: 17966,
@@ -24,7 +25,7 @@ describe('<SavedSearchTagList /> component', () => {
             signalStatus: 'USED',
         },
     ];
-    const wrapper = shallow(<SavedSearchTagList list={list} />);
+    const wrapper = shallow(<SavedSearchTagList list={list} onSavedSearchClick={mockFn} />);
 
     describe('rendering', () => {
         it('renders <TagList /> with a list of <Tag /> rendered according to the list passed in', () => {

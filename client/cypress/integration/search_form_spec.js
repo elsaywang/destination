@@ -152,7 +152,6 @@ describe('Search Form Integration Tests', function() {
             cy
                 .get('.signal-status')
                 .click()
-                .wait(300)
                 .get('[role=option]:last')
                 .click()
                 .then(function($option) {
@@ -168,7 +167,6 @@ describe('Search Form Integration Tests', function() {
             cy
                 .get('.view-records')
                 .click()
-                .wait(300)
                 .get('.spectrum-SelectList-item:first')
                 .click()
                 .then(function($option) {
@@ -216,14 +214,26 @@ describe('Search Form Integration Tests', function() {
 
         it('should reset the form and clear the results', function() {
             cy.get('[data-test="advanced-search-filter"]').should('be.disabled');
-            // TODO: uncomment when we can clear this value on Textfield component
-            // cy.get('[data-test="key-search-field"]').should('have.value', '');
+            cy.get('[data-test="key-search-field"]').should('have.value', '');
             cy.get('.operator').should('have.text', '==');
             cy.get('[data-test="value-search"]').should('have.value', '');
             cy.get('.signal-status').should('contain', 'All');
             cy.get('.view-records').should('contain', '7 Days');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
             cy.get('[data-test="signals-table"]').should('have.length', 0);
+        });
+    });
+
+    describe.skip('when a Saved Search tag is clicked', function() {
+        before(function() {
+            cy.get('[data-test="saved-search-tag"]:first').click();
+        });
+
+        // TODO: when API call is hooked up, this should check for the mocked call to pre-fill the values
+        it.skip('should pre-fill the key-value pair fields', function() {});
+
+        it('should execute the saved search and show results', function() {
+            cy.get('[data-test="signals-table"]').should('have.length', 1);
         });
     });
 });

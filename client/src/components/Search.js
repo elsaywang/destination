@@ -107,8 +107,8 @@ class Search extends Component {
                                                 <Select
                                                     className="signal-status"
                                                     data-test="signal-status"
-                                                    value={this.props.status}
-                                                    onChange={this.props.onStatusChange}
+                                                    value={this.props.signalStatus}
+                                                    onChange={this.props.onSignalStatusChange}
                                                     options={statusOptions}
                                                     quiet
                                                 />
@@ -129,8 +129,8 @@ class Search extends Component {
                                                 <NumberInput
                                                     className="min-counts"
                                                     data-test="min-counts"
-                                                    onChange={this.props.onMinCountChange}
-                                                    value={this.props.minCount}
+                                                    onChange={this.props.onMinEventFiresChange}
+                                                    value={this.props.minEventFires}
                                                     quiet
                                                 />
                                             </Label>

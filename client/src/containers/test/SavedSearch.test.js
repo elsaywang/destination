@@ -26,7 +26,9 @@ describe('<SavedSearch /> component', () => {
             signalStatus: 'USED',
         },
     ];
-    const wrapper = shallow(<SavedSearch list={list} getSavedSearch={mockFn} />);
+    const wrapper = shallow(
+        <SavedSearch list={list} getSavedSearch={mockFn} onSavedSearchClick={mockFn} />,
+    );
 
     describe('rendering', () => {
         it('matches snapshot', () => {

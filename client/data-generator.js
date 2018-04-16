@@ -1,6 +1,6 @@
 var faker = require('faker');
 var operators = [
-    { label: '=', value: '=' },
+    { label: '==', value: '==' },
     { label: '>', value: '>' },
     { label: '<', value: '<' },
     { label: '>=', value: '>=' },
@@ -27,30 +27,28 @@ module.exports = () => {
 
     class Kvp {
         constructor() {
+            const operator = operators[Math.floor(Math.random() * operators.length)].value;
+
             this.key = 'k-' + faker.random.word();
-            this.operator = operators[Math.floor(Math.random() * operators.length)].value;
-            this.value = 'v-' + faker.random.word();
+            this.operator = operator;
+            this.value = operator === '==' ? 'v-' + faker.random.word() : faker.random.number();
         }
     }
 
     class Trait {
         constructor(id) {
             this.id = id;
-            this.name = faker.random.words();
-            this.value = faker.random.number();
         }
     }
 
-    class Results {
+    class SavedSearch {
         constructor() {
-            this.id = faker.random.number();
             this.keyValuePairs = randomGenerateArray(Kvp, 2);
-            this.type = faker.random.word();
-            this.source = faker.random.word();
-            this.totalCounts = faker.random.number();
-            this.percentageChange = faker.random.number();
-            this.includedTraits = randomGenerateArray(Trait);
+            this.source = new Source();
+            this.minEventFires = faker.random.number();
             this.signalStatus = 'USED';
+            this.startDate = faker.date.recent();
+            this.endDate = faker.date.recent();
         }
     }
 
@@ -105,9 +103,8 @@ module.exports = () => {
     // Create 5 saved search
     for (let i = 0; i < 5; i++) {
         data.savedSearch.push({
-            id: i,
             name: faker.name.findName(),
-            ...new Results(),
+            ...new SavedSearch(),
         });
     }
 
@@ -116,7 +113,6 @@ module.exports = () => {
         data.traits.push({
             ...new Trait(i),
         });
-        // data.results.push(new Results()); TODO: update fake Results
     }
     data.results = mockResults;
 

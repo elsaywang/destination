@@ -19,10 +19,11 @@ describe('<Search /> component', () => {
                 value: '',
             },
         ],
-        status: 'all',
+        signalStatus: 'ALL',
         advanced: false,
+        filter: '',
         viewRecordsFor: 7,
-        minCount: 1000,
+        minEventFires: 1000,
     };
     const mockFn = jest.fn();
     const wrapper = shallow(
@@ -34,9 +35,9 @@ describe('<Search /> component', () => {
             onOperatorChange={mockFn}
             onAddClick={mockFn}
             onRemoveClick={mockFn}
-            onStatusChange={mockFn}
+            onSignalStatusChange={mockFn}
             onViewRecordsChange={mockFn}
-            onMinCountChange={mockFn}
+            onMinEventFiresChange={mockFn}
             onSearch={mockFn}
             onClearAll={mockFn}
         />,
@@ -119,9 +120,9 @@ describe('<Search /> component', () => {
                     onOperatorChange={mockFn}
                     onAddClick={mockFn}
                     onRemoveClick={mockFn}
-                    onStatusChange={mockFn}
+                    onSignalStatusChange={mockFn}
                     onViewRecordsChange={mockFn}
-                    onMinCountChange={mockFn}
+                    onMinEventFiresChange={mockFn}
                     onSearch={mockFn}
                     onClearAll={mockFn}
                 />,
@@ -159,9 +160,9 @@ describe('<Search /> component', () => {
                     onOperatorChange={mockFn}
                     onAddClick={mockFn}
                     onRemoveClick={mockFn}
-                    onStatusChange={mockFn}
+                    onSignalStatusChange={mockFn}
                     onViewRecordsChange={mockFn}
-                    onMinCountChange={mockFn}
+                    onMinEventFiresChange={mockFn}
                     onSearch={mockFn}
                     onClearAll={mockFn}
                 />,
@@ -200,9 +201,9 @@ describe('<Search /> component', () => {
                     onOperatorChange={mockFn}
                     onAddClick={mockFn}
                     onRemoveClick={mockFn}
-                    onStatusChange={mockFn}
+                    onSignalStatusChange={mockFn}
                     onViewRecordsChange={mockFn}
-                    onMinCountChange={mockFn}
+                    onMinEventFiresChange={mockFn}
                     onSearch={mockFn}
                     onClearAll={mockFn}
                 />,

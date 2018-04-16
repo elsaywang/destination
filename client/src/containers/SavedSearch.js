@@ -18,6 +18,7 @@ class SavedSearch extends Component {
                 <WrappedSavedSearchTagList
                     isLoaded={Boolean(this.props.list.length)}
                     list={this.props.list}
+                    onSavedSearchClick={this.props.onSavedSearchClick}
                 />
             </div>
         );
@@ -27,6 +28,7 @@ class SavedSearch extends Component {
 SavedSearch.propTypes = {
     list: PropTypes.array.isRequired,
     getSavedSearch: PropTypes.func.isRequired,
+    onSavedSearchClick: PropTypes.func.isRequired,
 };
 
 export default SavedSearch;
