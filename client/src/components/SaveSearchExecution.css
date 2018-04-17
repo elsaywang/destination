@@ -1,0 +1,18 @@
+:local(.trigger) {
+    margin: 2.75em 0 0 0.25em;
+}
+:local(.triggerDialog) {
+    padding: 1em 1em 1em 2em;
+}
+:local(.contentFooter) {
+    border-radius: 0 0 0.5em 0.5em;
+    margin: 2em 0.5em 0 0;
+    text-align: right;
+    flex: 0 1 auto;
+}
+:local(.contentCheckBox) {
+    margin: 0.5em 0 0 0.75em;
+}
+:local(.contentRadioGroup) {
+    margin-top: 0.5em;
+}

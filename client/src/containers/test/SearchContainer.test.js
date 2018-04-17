@@ -6,6 +6,7 @@ import Search from '../../components/Search';
 import SignalTypeFilter from '../../components/SignalTypeFilter';
 import SignalsTable from '../../components/SignalsTable';
 import SavedSearch from '../../containers/SavedSearch';
+import SaveSearchExecution from '../../components/SaveSearchExecution';
 import configureStore from '../../configureStore';
 
 describe('<SearchContainer /> component', () => {
@@ -27,10 +28,6 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(Search).exists()).toBe(true);
         });
 
-        it('renders <SavedSearch /> component', () => {
-            expect(wrapper.find(SavedSearch).exists()).toBe(true);
-        });
-
         it('does not render <SignalSourceFilter /> component when there are no props.results passed in', () => {
             wrapper.setProps({
                 results: {
@@ -49,6 +46,24 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(SignalsTable).exists()).toBe(false);
         });
 
+        it('does not render <SavedSearch /> component when there are no props.results passed in', () => {
+            wrapper.setProps({
+                results: {
+                    list: [],
+                },
+            });
+            expect(wrapper.find(SavedSearch).exists()).toBe(false);
+        });
+
+        it('does not render <SaveSearchExecution /> component when there are no props.results passed in', () => {
+            wrapper.setProps({
+                results: {
+                    list: [],
+                },
+            });
+            expect(wrapper.find(SaveSearchExecution).exists()).toBe(false);
+        });
+
         describe('when table results are passed in as a prop', () => {
             beforeAll(() => {
                 wrapper.setProps({
@@ -64,6 +79,14 @@ describe('<SearchContainer /> component', () => {
 
             it('renders <SignalsTable /> component', () => {
                 expect(wrapper.find(SignalsTable).exists()).toBe(true);
+            });
+
+            it('renders <SavedSearch /> component', () => {
+                expect(wrapper.find(SavedSearch).exists()).toBe(true);
+            });
+
+            it('renders <SaveSearchExecution /> component', () => {
+                expect(wrapper.find(SaveSearchExecution).exists()).toBe(true);
             });
         });
     });
