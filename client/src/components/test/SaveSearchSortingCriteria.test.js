@@ -7,7 +7,7 @@ import Select from '@react/react-spectrum/Select';
 import styles from '../SaveSearchExecution.css';
 import { defaultSorting, radioGroupOptions, sortingOptions } from '../../utils/saveSearch';
 
-describe('when CheckBox is checked', () => {
+describe('<SaveSearchSortingCriteria/> component', () => {
     const mockFn = jest.fn();
     const wrapper = shallow(
         <SaveSearchSortingCriteria
