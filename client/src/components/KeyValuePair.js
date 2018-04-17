@@ -47,10 +47,9 @@ class KeyValuePair extends Component {
                         className={classNames(styles['key-search'], 'key-search')}
                         getCompletions={this.getCompletions}
                         value={key}
-                        onSelect={this.onKeySelect}>
+                        onChange={this.onKeySelect}>
                         <Textfield
                             data-test="key-search-field"
-                            value={key}
                             id={forKey}
                             placeholder="Type a key"
                         />
