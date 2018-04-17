@@ -22,8 +22,8 @@ export const SAVE_THIS_SEARCH_REJECTED = 'SAVE_THIS_SEARCH_REJECTED';
 export const saveCurrentSearch = createAction(SAVE_THIS_SEARCH, async payload => {
     // TODO: normalize this request to api expected request
     try {
-        const result = await fetch('/api/saveThisSearch', {
-            method: 'post',
+        const result = await fetch('/v1/users/self/annotations/aam-portal', {
+            method: 'put',
             body: JSON.stringify(payload),
         });
         //TODO: handle response as correct payload to pass to reducer.
