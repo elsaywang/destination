@@ -150,9 +150,9 @@ class SearchContainer extends Component {
         this.props.callSearch(this.state);
     };
 
-    onSaveThisSearchConfirmed = () => {
-        const { savedThisSearch, saveCurrentSearch } = this.props;
-        saveCurrentSearch({ ...this.state, ...savedThisSearch });
+    handleSaveThisSearchConfirm = () => {
+        const { saveThisSearch, saveCurrentSearch } = this.props;
+        saveCurrentSearch({ ...this.state, ...saveThisSearch });
     };
 
     onClearAll = () => {
@@ -207,16 +207,18 @@ class SearchContainer extends Component {
                                         list={this.props.savedSearch}
                                         onSavedSearchClick={this.onSavedSearchClick}
                                     />
-                                    <SaveSearchExecution
-                                        confirmSaveThisSearch={this.onSaveThisSearchConfirmed}
-                                        cancleSaveSearch={this.props.cancleSaveSearch}
-                                        updateSaveSearchName={this.props.updateSaveSearchName}
-                                        trackSearchResultInDashboard={
-                                            this.props.trackSearchResultInDashboard
-                                        }
-                                        selectDefaultSorting={this.props.selectDefaultSorting}
-                                        changeSortingOrder={this.props.changeSortingOrder}
-                                    />
+                                    <div className={styles.saveSearchExecution}>
+                                        <SaveSearchExecution
+                                            confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
+                                            cancelSaveSearch={this.props.cancelSaveSearch}
+                                            updateSaveSearchName={this.props.updateSaveSearchName}
+                                            trackSearchResultInDashboard={
+                                                this.props.trackSearchResultInDashboard
+                                            }
+                                            selectDefaultSorting={this.props.selectDefaultSorting}
+                                            changeSortingOrder={this.props.changeSortingOrder}
+                                        />
+                                    </div>
                                 </div>
                             </GridColumn>
                         </GridRow>
@@ -265,10 +267,10 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearch, savedThisSearch }) => ({
+const mapStateToProps = ({ results, savedSearch, saveThisSearch }) => ({
     results,
     savedSearch,
-    savedThisSearch,
+    saveThisSearch,
 });
 const actionCreators = {
     ...searchFormActionCreators,

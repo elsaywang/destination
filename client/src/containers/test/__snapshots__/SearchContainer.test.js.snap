@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
-    cancleSaveSearch={[Function]}
+    cancelSaveSearch={[Function]}
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     getSavedSearch={[Function]}
@@ -19,8 +19,7 @@ ShallowWrapper {
       }
     }
     saveCurrentSearch={[Function]}
-    savedSearch={Array []}
-    savedThisSearch={
+    saveThisSearch={
       Object {
         "descending": false,
         "includeInDashboard": false,
@@ -28,6 +27,7 @@ ShallowWrapper {
         "sortBy": "",
       }
     }
+    savedSearch={Array []}
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
@@ -482,7 +482,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
-    cancleSaveSearch={[Function]}
+    cancelSaveSearch={[Function]}
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     getSavedSearch={[Function]}
@@ -497,8 +497,7 @@ ShallowWrapper {
       }
     }
     saveCurrentSearch={[Function]}
-    savedSearch={Array []}
-    savedThisSearch={
+    saveThisSearch={
       Object {
         "descending": false,
         "includeInDashboard": false,
@@ -506,6 +505,7 @@ ShallowWrapper {
         "sortBy": "",
       }
     }
+    savedSearch={Array []}
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
@@ -588,14 +588,18 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <SaveSearchExecution
-                  cancleSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
               </div>
             </GridColumn>
           </GridRow>
@@ -867,14 +871,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>
               </GridColumn>
             </GridRow>,
@@ -995,14 +1003,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>
               </GridColumn>,
               "reverse": false,
@@ -1022,14 +1034,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>,
                 "size": 12,
               },
@@ -1045,14 +1061,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />,
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />,
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>,
                   ],
                   "className": undefined,
                 },
@@ -1074,18 +1094,36 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "host",
                     "props": Object {
-                      "cancleSaveSearch": [Function],
-                      "changeSortingOrder": [Function],
-                      "confirmSaveThisSearch": [Function],
-                      "selectDefaultSorting": [Function],
-                      "trackSearchResultInDashboard": [Function],
-                      "updateSaveSearchName": [Function],
+                      "children": <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />,
+                      "className": undefined,
                     },
                     "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "cancelSaveSearch": [Function],
+                        "changeSortingOrder": [Function],
+                        "confirmSaveThisSearch": [Function],
+                        "selectDefaultSorting": [Function],
+                        "trackSearchResultInDashboard": [Function],
+                        "updateSaveSearchName": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "div",
                   },
                 ],
                 "type": "div",
@@ -1665,14 +1703,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>
               </GridColumn>
             </GridRow>
@@ -1944,14 +1986,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>
                   </div>
                 </GridColumn>
               </GridRow>,
@@ -2072,14 +2118,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>
                   </div>
                 </GridColumn>,
                 "reverse": false,
@@ -2099,14 +2149,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>
                   </div>,
                   "size": 12,
                 },
@@ -2122,14 +2176,18 @@ ShallowWrapper {
                         list={Array []}
                         onSavedSearchClick={[Function]}
                       />,
-                      <SaveSearchExecution
-                        cancleSaveSearch={[Function]}
-                        changeSortingOrder={[Function]}
-                        confirmSaveThisSearch={[Function]}
-                        selectDefaultSorting={[Function]}
-                        trackSearchResultInDashboard={[Function]}
-                        updateSaveSearchName={[Function]}
-                      />,
+                      <div
+                        className={undefined}
+                      >
+                        <SaveSearchExecution
+                          cancelSaveSearch={[Function]}
+                          changeSortingOrder={[Function]}
+                          confirmSaveThisSearch={[Function]}
+                          selectDefaultSorting={[Function]}
+                          trackSearchResultInDashboard={[Function]}
+                          updateSaveSearchName={[Function]}
+                        />
+                      </div>,
                     ],
                     "className": undefined,
                   },
@@ -2151,18 +2209,36 @@ ShallowWrapper {
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "class",
+                      "nodeType": "host",
                       "props": Object {
-                        "cancleSaveSearch": [Function],
-                        "changeSortingOrder": [Function],
-                        "confirmSaveThisSearch": [Function],
-                        "selectDefaultSorting": [Function],
-                        "trackSearchResultInDashboard": [Function],
-                        "updateSaveSearchName": [Function],
+                        "children": <SaveSearchExecution
+                          cancelSaveSearch={[Function]}
+                          changeSortingOrder={[Function]}
+                          confirmSaveThisSearch={[Function]}
+                          selectDefaultSorting={[Function]}
+                          trackSearchResultInDashboard={[Function]}
+                          updateSaveSearchName={[Function]}
+                        />,
+                        "className": undefined,
                       },
                       "ref": null,
-                      "rendered": null,
-                      "type": [Function],
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "cancelSaveSearch": [Function],
+                          "changeSortingOrder": [Function],
+                          "confirmSaveThisSearch": [Function],
+                          "selectDefaultSorting": [Function],
+                          "trackSearchResultInDashboard": [Function],
+                          "updateSaveSearchName": [Function],
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "div",
                     },
                   ],
                   "type": "div",
@@ -2698,7 +2774,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
-    cancleSaveSearch={[Function]}
+    cancelSaveSearch={[Function]}
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     getSavedSearch={[Function]}
@@ -2713,8 +2789,7 @@ ShallowWrapper {
       }
     }
     saveCurrentSearch={[Function]}
-    savedSearch={Array []}
-    savedThisSearch={
+    saveThisSearch={
       Object {
         "descending": false,
         "includeInDashboard": false,
@@ -2722,6 +2797,7 @@ ShallowWrapper {
         "sortBy": "",
       }
     }
+    savedSearch={Array []}
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
@@ -2804,14 +2880,18 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <SaveSearchExecution
-                  cancleSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
               </div>
             </GridColumn>
           </GridRow>
@@ -3083,14 +3163,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>
               </GridColumn>
             </GridRow>,
@@ -3211,14 +3295,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>
               </GridColumn>,
               "reverse": false,
@@ -3238,14 +3326,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>,
                 "size": 12,
               },
@@ -3261,14 +3353,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />,
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />,
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>,
                   ],
                   "className": undefined,
                 },
@@ -3290,18 +3386,36 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "host",
                     "props": Object {
-                      "cancleSaveSearch": [Function],
-                      "changeSortingOrder": [Function],
-                      "confirmSaveThisSearch": [Function],
-                      "selectDefaultSorting": [Function],
-                      "trackSearchResultInDashboard": [Function],
-                      "updateSaveSearchName": [Function],
+                      "children": <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />,
+                      "className": undefined,
                     },
                     "ref": null,
-                    "rendered": null,
-                    "type": [Function],
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "cancelSaveSearch": [Function],
+                        "changeSortingOrder": [Function],
+                        "confirmSaveThisSearch": [Function],
+                        "selectDefaultSorting": [Function],
+                        "trackSearchResultInDashboard": [Function],
+                        "updateSaveSearchName": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": "div",
                   },
                 ],
                 "type": "div",
@@ -3881,14 +3995,18 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />
-                  <SaveSearchExecution
-                    cancleSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>
                 </div>
               </GridColumn>
             </GridRow>
@@ -4160,14 +4278,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>
                   </div>
                 </GridColumn>
               </GridRow>,
@@ -4288,14 +4410,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>
                   </div>
                 </GridColumn>,
                 "reverse": false,
@@ -4315,14 +4441,18 @@ ShallowWrapper {
                       list={Array []}
                       onSavedSearchClick={[Function]}
                     />
-                    <SaveSearchExecution
-                      cancleSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
+                    <div
+                      className={undefined}
+                    >
+                      <SaveSearchExecution
+                        cancelSaveSearch={[Function]}
+                        changeSortingOrder={[Function]}
+                        confirmSaveThisSearch={[Function]}
+                        selectDefaultSorting={[Function]}
+                        trackSearchResultInDashboard={[Function]}
+                        updateSaveSearchName={[Function]}
+                      />
+                    </div>
                   </div>,
                   "size": 12,
                 },
@@ -4338,14 +4468,18 @@ ShallowWrapper {
                         list={Array []}
                         onSavedSearchClick={[Function]}
                       />,
-                      <SaveSearchExecution
-                        cancleSaveSearch={[Function]}
-                        changeSortingOrder={[Function]}
-                        confirmSaveThisSearch={[Function]}
-                        selectDefaultSorting={[Function]}
-                        trackSearchResultInDashboard={[Function]}
-                        updateSaveSearchName={[Function]}
-                      />,
+                      <div
+                        className={undefined}
+                      >
+                        <SaveSearchExecution
+                          cancelSaveSearch={[Function]}
+                          changeSortingOrder={[Function]}
+                          confirmSaveThisSearch={[Function]}
+                          selectDefaultSorting={[Function]}
+                          trackSearchResultInDashboard={[Function]}
+                          updateSaveSearchName={[Function]}
+                        />
+                      </div>,
                     ],
                     "className": undefined,
                   },
@@ -4367,18 +4501,36 @@ ShallowWrapper {
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "class",
+                      "nodeType": "host",
                       "props": Object {
-                        "cancleSaveSearch": [Function],
-                        "changeSortingOrder": [Function],
-                        "confirmSaveThisSearch": [Function],
-                        "selectDefaultSorting": [Function],
-                        "trackSearchResultInDashboard": [Function],
-                        "updateSaveSearchName": [Function],
+                        "children": <SaveSearchExecution
+                          cancelSaveSearch={[Function]}
+                          changeSortingOrder={[Function]}
+                          confirmSaveThisSearch={[Function]}
+                          selectDefaultSorting={[Function]}
+                          trackSearchResultInDashboard={[Function]}
+                          updateSaveSearchName={[Function]}
+                        />,
+                        "className": undefined,
                       },
                       "ref": null,
-                      "rendered": null,
-                      "type": [Function],
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "cancelSaveSearch": [Function],
+                          "changeSortingOrder": [Function],
+                          "confirmSaveThisSearch": [Function],
+                          "selectDefaultSorting": [Function],
+                          "trackSearchResultInDashboard": [Function],
+                          "updateSaveSearchName": [Function],
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": "div",
                     },
                   ],
                   "type": "div",

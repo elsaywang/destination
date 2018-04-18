@@ -31,7 +31,6 @@ export default handleActions(
         }),
         [CHANGE_SORTING_ORDER]: (state, action) => ({ ...state, descending: action.payload }),
         [CANCEL_SAVE_SEARCH]: (state, action) => ({
-            ...state,
             ...initialState,
         }),
         [SAVE_THIS_SEARCH_FULFILLED]: (state, action) => ({ ...state, ...action.payload }),

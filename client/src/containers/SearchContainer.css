@@ -16,3 +16,7 @@
 :local(.saveSearch) {
     display: inline-flex;
 }
+
+:local(.saveSearchExecution) {
+    margin-top: 2.75em;
+}

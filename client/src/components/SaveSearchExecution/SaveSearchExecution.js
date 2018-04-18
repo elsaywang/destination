@@ -9,61 +9,57 @@ import styles from './SaveSearchExecution.css';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
 import Dialog from '@react/react-spectrum/Dialog';
 import SaveSearchExecutionContent from './SaveSearchExecutionContent';
-import { saveThisSearch } from '../utils/saveSearch';
+import { saveThisSearch } from './saveSearchExecutionMessages';
 
 class SaveSearchExecution extends Component {
     render() {
         const {
             confirmSaveThisSearch,
             updateSaveSearchName,
-            cancleSaveSearch,
+            cancelSaveSearch,
             trackSearchResultInDashboard,
             selectDefaultSorting,
             changeSortingOrder,
         } = this.props;
         return (
             // TODO: switch back to OverlayTrigger once PopOver is fixed
-            // <div className={styles.trigger}>
-            //     <OverlayTrigger trigger="click" placement="bottom" onHide={cancleSaveSearch}>
+            //     <OverlayTrigger trigger="click" placement="bottom" onHide={cancelSaveSearch}>
             //         <Button label={saveThisSearch} variant="action" quiet icon={<Add />} />
             //         <Popover className={styles.triggerDialog}>
             //             <SaveSearchExecutionContent
             //                 onSaveSearchNameChange={updateSaveSearchName}
-            //                 onTrackResultInDashBoardChange={trackSearchResultInDashboard}
+            //                 onTrackResultInDashboardChange={trackSearchResultInDashboard}
             //                 onDefaultSortingChange={selectDefaultSorting}
             //                 onSortingOrderChange={changeSortingOrder}
             //             />
             //         </Popover>
             //     </OverlayTrigger>
-            // </div>
-            <div className={styles.trigger}>
-                <ModalTrigger>
-                    <Button label={saveThisSearch} variant="action" quiet icon={<Add />} />
-                    <Dialog
-                        className={styles.triggerDialog}
-                        modalcontent
-                        confirmLabel="Save"
-                        size="S"
-                        variant="information"
-                        cancelLabel="Cancel"
-                        onConfirm={confirmSaveThisSearch}
-                        onCancel={cancleSaveSearch}>
-                        <SaveSearchExecutionContent
-                            onSaveSearchNameChange={updateSaveSearchName}
-                            onTrackResultInDashBoardChange={trackSearchResultInDashboard}
-                            onDefaultSortingChange={selectDefaultSorting}
-                            onSortingOrderChange={changeSortingOrder}
-                        />
-                    </Dialog>
-                </ModalTrigger>
-            </div>
+            <ModalTrigger>
+                <Button label={saveThisSearch} variant="action" quiet icon={<Add />} />
+                <Dialog
+                    className={styles.triggerDialog}
+                    modalcontent
+                    confirmLabel="Save"
+                    size="S"
+                    variant="information"
+                    cancelLabel="Cancel"
+                    onConfirm={confirmSaveThisSearch}
+                    onCancel={cancelSaveSearch}>
+                    <SaveSearchExecutionContent
+                        onSaveSearchNameChange={updateSaveSearchName}
+                        onTrackResultInDashboardChange={trackSearchResultInDashboard}
+                        onDefaultSortingChange={selectDefaultSorting}
+                        onSortingOrderChange={changeSortingOrder}
+                    />
+                </Dialog>
+            </ModalTrigger>
         );
     }
 }
 
 SaveSearchExecution.propTypes = {
     confirmSaveThisSearch: PropTypes.func,
-    cancleSaveSearch: PropTypes.func,
+    cancelSaveSearch: PropTypes.func,
     updateSaveSearchName: PropTypes.func,
     trackSearchResultInDashboard: PropTypes.func,
     selectDefaultSorting: PropTypes.func,

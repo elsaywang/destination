@@ -13,7 +13,7 @@ export const CHANGE_SORTING_ORDER = 'CHANGE_SORTING_ORDER';
 export const changeSortingOrder = createAction(CHANGE_SORTING_ORDER);
 
 export const CANCEL_SAVE_SEARCH = 'CANCEL_SAVE_SEARCH';
-export const cancleSaveSearch = createAction(CANCEL_SAVE_SEARCH);
+export const cancelSaveSearch = createAction(CANCEL_SAVE_SEARCH);
 
 export const SAVE_THIS_SEARCH = 'SAVE_THIS_SEARCH';
 export const SAVE_THIS_SEARCH_FULFILLED = 'SAVE_THIS_SEARCH_FULFILLED';
@@ -22,7 +22,7 @@ export const SAVE_THIS_SEARCH_REJECTED = 'SAVE_THIS_SEARCH_REJECTED';
 export const saveCurrentSearch = createAction(SAVE_THIS_SEARCH, async payload => {
     // TODO: normalize this request to api expected request
     try {
-        const result = await fetch('/v1/users/self/annotations/aam-portal', {
+        const result = await fetch('/api/v1/users/self/annotations/aam-portal', {
             method: 'put',
             body: JSON.stringify(payload),
         });

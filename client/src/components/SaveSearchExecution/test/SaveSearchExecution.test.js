@@ -40,35 +40,43 @@ describe('<SaveSearchExecution/>', () => {
                 .exists(),
         ).toBeTruthy();
     });
+});
 
-    //TODO:ADD BACK once OverlayTrigger and PopOver are updated
-    // xit('renders <OverlayTrigger/>', () => {
-    //     expect(wrapper.find(OverlayTrigger).exists()).toBeTruthy();
-    // });
-    //
-    // xit('<OverlayTrigger/> passes correct props `trigger, placement`', () => {
-    //     expect(wrapper.find(OverlayTrigger).props().trigger).toEqual('click');
-    //     expect(wrapper.find(OverlayTrigger).props().placement).toEqual('bottom');
-    // });
-    //
-    // xit('<OverlayTrigger/> including children <Button/> and <Popover/>', () => {
-    //     expect(children.find(Button).exists()).toBeTruthy();
-    //     expect(children.find(Popover).exists()).toBeTruthy();
-    // });
-    //
-    // xit('child <Button/> passes corrent props `label,variant,quiet,icon`', () => {
-    //     expect(children.find(Button).props().label).toEqual('Save This Search');
-    //     expect(children.find(Button).props().variant).toEqual('action');
-    //     expect(children.find(Button).props().quiet).toBeTruthy();
-    //     expect(children.find(Button).props().icon).toEqual(<Add />);
-    // });
-    //
-    // xit('child <Popover/> includes corrent content <SaveSearchExecutionContent/>', () => {
-    //     expect(
-    //         children
-    //             .find(Popover)
-    //             .find(SaveSearchExecutionContent)
-    //             .exists(),
-    //     ).toBeTruthy();
-    // });
+//TODO:ADD BACK once OverlayTrigger and PopOver are updated
+xdescribe('<SaveSearchExecution/>', () => {
+    const wrapper = shallow(<SaveSearchExecution />);
+    const children = wrapper.find(OverlayTrigger).children();
+    it('matches the snapshot', () => {
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it('renders <OverlayTrigger/>', () => {
+        expect(wrapper.find(OverlayTrigger).exists()).toBeTruthy();
+    });
+
+    it('<OverlayTrigger/> passes correct props `trigger, placement`', () => {
+        expect(wrapper.find(OverlayTrigger).props().trigger).toEqual('click');
+        expect(wrapper.find(OverlayTrigger).props().placement).toEqual('bottom');
+    });
+
+    it('<OverlayTrigger/> including children <Button/> and <Popover/>', () => {
+        expect(children.find(Button).exists()).toBeTruthy();
+        expect(children.find(Popover).exists()).toBeTruthy();
+    });
+
+    it('child <Button/> passes corrent props `label,variant,quiet,icon`', () => {
+        expect(children.find(Button).props().label).toEqual('Save This Search');
+        expect(children.find(Button).props().variant).toEqual('action');
+        expect(children.find(Button).props().quiet).toBeTruthy();
+        expect(children.find(Button).props().icon).toEqual(<Add />);
+    });
+
+    it('child <Popover/> includes corrent content <SaveSearchExecutionContent/>', () => {
+        expect(
+            children
+                .find(Popover)
+                .find(SaveSearchExecutionContent)
+                .exists(),
+        ).toBeTruthy();
+    });
 });
