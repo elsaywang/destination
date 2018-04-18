@@ -73,11 +73,6 @@ describe('<SaveSearchExecutionContent /> component', () => {
             expect(wrapper.find(Radio).length).toBe(2);
         });
 
-        it('renders <Select/> with correct option list', () => {
-            expect(wrapper.find(Select).props().options.length).toBe(sortingOptions.length);
-            expect(wrapper.find(Select).props().options).toBe(sortingOptions);
-        });
-
         it(`renders <RadioGroup/> including 2 <Radio/> with correct label and value`, () => {
             radioGroupOptions.map(({ label, value }, index) => {
                 expect(

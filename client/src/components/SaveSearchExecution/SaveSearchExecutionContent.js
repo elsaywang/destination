@@ -21,11 +21,11 @@ class SaveSearchExecutionContent extends Component {
         isTrackInDashboardChecked: false,
     };
 
-    toggleCheckbox = isChecked => {
+    toggleCheckbox = isTrackInDashboardChecked => {
         this.setState(prevState => ({
             isTrackInDashboardChecked: !prevState.isTrackInDashboardChecked,
         }));
-        this.props.onTrackResultInDashboardChange(!isChecked);
+        this.props.onTrackResultInDashboardChange(!isTrackInDashboardChecked);
     };
 
     handleRadioChange = value => {
