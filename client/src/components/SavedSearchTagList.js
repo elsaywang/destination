@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TagList, Tag } from '@react/react-spectrum/TagList';
 
 function SavedSearchTagList({ list, onSavedSearchClick }) {
-    const boundClick = search => onSavedSearchClick.bind(this, search);
+    const boundClick = search => onSavedSearchClick(search);
     const renderTag = search => (
         <Tag
             data-test="saved-search-tag"
