@@ -117,7 +117,7 @@ describe('saveThisSearch reducer', () => {
             descending: false,
         };
         const action = {
-            type: SAVE_THIS_SEARCH_FULFILLED,
+            type: CANCEL_SAVE_SEARCH,
             payload: initialState,
         };
         expect(saveThisSearchReducer(currentState, action)).toEqual(initialState);
