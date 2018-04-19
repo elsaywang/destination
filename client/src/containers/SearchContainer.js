@@ -197,70 +197,71 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
 
-                {Object.keys(this.props.results.list).length > 0 && (
-                    <Fragment>
-                        <GridRow valign="bottom">
-                            <GridColumn size={12}>
-                                <div className={styles.saveSearch}>
-                                    <SavedSearch
-                                        getSavedSearch={this.props.getSavedSearch}
-                                        list={this.props.savedSearch}
-                                        onSavedSearchClick={this.onSavedSearchClick}
+                <GridRow valign="bottom">
+                    <GridColumn size={12}>
+                        <div className={styles.saveSearch}>
+                            <SavedSearch
+                                getSavedSearch={this.props.getSavedSearch}
+                                list={this.props.savedSearch}
+                                onSavedSearchClick={this.onSavedSearchClick}
+                            />
+                            {Object.keys(this.props.results.list).length > 0 && (
+                                <div className={styles.saveSearchExecution}>
+                                    <SaveSearchExecution
+                                        confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
+                                        cancelSaveSearch={this.props.cancelSaveSearch}
+                                        updateSaveSearchName={this.props.updateSaveSearchName}
+                                        trackSearchResultInDashboard={
+                                            this.props.trackSearchResultInDashboard
+                                        }
+                                        selectDefaultSorting={this.props.selectDefaultSorting}
+                                        changeSortingOrder={this.props.changeSortingOrder}
                                     />
-                                    <div className={styles.saveSearchExecution}>
-                                        <SaveSearchExecution
-                                            confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
-                                            cancelSaveSearch={this.props.cancelSaveSearch}
-                                            updateSaveSearchName={this.props.updateSaveSearchName}
-                                            trackSearchResultInDashboard={
-                                                this.props.trackSearchResultInDashboard
-                                            }
-                                            selectDefaultSorting={this.props.selectDefaultSorting}
-                                            changeSortingOrder={this.props.changeSortingOrder}
-                                        />
-                                    </div>
                                 </div>
-                            </GridColumn>
-                        </GridRow>
-                        <div style={{ display: 'flex' }}>
-                            <div className={styles.filterListContainer}>
-                                <SignalTypeFilter
-                                    counts={this.state.counts}
-                                    onSignalTypeChange={this.handleSignalTypeChange}
-                                    signalType={this.state.signalType}
-                                />
-                            </div>
-                            <div className={styles.tableContainer}>
-                                <GridRow valign="middle">
-                                    <GridColumn size={4}>
-                                        <Heading size={3}>Search Results for</Heading>
-                                    </GridColumn>
-                                    <GridColumn size={8}>
-                                        <GridRow>
-                                            <GridColumn size={10}>
-                                                <MultiSignalsTraitsCreationContainer />
-                                            </GridColumn>
-                                            <GridColumn size={2}>
-                                                <Button label="Export.csv" variant="primary" />
-                                            </GridColumn>
-                                        </GridRow>
-                                    </GridColumn>
-                                </GridRow>
-                                <GridRow>
-                                    <GridColumn size={9} offsetSize={3}>
-                                        <TraitsCreationWarning />
-                                    </GridColumn>
-                                </GridRow>
-                                <SignalsTable
-                                    results={this.props.results}
-                                    signalType={this.state.signalType}
-                                    isAdvancedSearchEnabled={false} // TODO: hook this up
-                                    sortSearch={this.props.sortSearch}
-                                    onSignalRecordsSelection={this.props.selectSignals}
-                                />
-                            </div>
+                            )}
                         </div>
-                    </Fragment>
+                    </GridColumn>
+                </GridRow>
+
+                {Object.keys(this.props.results.list).length > 0 && (
+                    <div style={{ display: 'flex' }}>
+                        <div className={styles.filterListContainer}>
+                            <SignalTypeFilter
+                                counts={this.state.counts}
+                                onSignalTypeChange={this.handleSignalTypeChange}
+                                signalType={this.state.signalType}
+                            />
+                        </div>
+                        <div className={styles.tableContainer}>
+                            <GridRow valign="middle">
+                                <GridColumn size={4}>
+                                    <Heading size={3}>Search Results for</Heading>
+                                </GridColumn>
+                                <GridColumn size={8}>
+                                    <GridRow>
+                                        <GridColumn size={10}>
+                                            <MultiSignalsTraitsCreationContainer />
+                                        </GridColumn>
+                                        <GridColumn size={2}>
+                                            <Button label="Export.csv" variant="primary" />
+                                        </GridColumn>
+                                    </GridRow>
+                                </GridColumn>
+                            </GridRow>
+                            <GridRow>
+                                <GridColumn size={9} offsetSize={3}>
+                                    <TraitsCreationWarning />
+                                </GridColumn>
+                            </GridRow>
+                            <SignalsTable
+                                results={this.props.results}
+                                signalType={this.state.signalType}
+                                isAdvancedSearchEnabled={false} // TODO: hook this up
+                                sortSearch={this.props.sortSearch}
+                                onSignalRecordsSelection={this.props.selectSignals}
+                            />
+                        </div>
+                    </div>
                 )}
             </Fragment>
         );

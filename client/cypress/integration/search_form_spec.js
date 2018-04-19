@@ -4,8 +4,8 @@ describe('Search Form Integration Tests', function() {
         cy.get('[data-test="search-form"]').should('exist');
     });
 
-    it("shoud not show user's saved search ", function() {
-        cy.get('[data-test="saved-search"]').should('not.exist');
+    it("should show user's saved search", function() {
+        cy.get('[data-test="saved-search"]').should('exist');
     });
 
     describe('when Advanced toggle is clicked', function() {

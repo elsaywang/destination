@@ -28,6 +28,15 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(Search).exists()).toBe(true);
         });
 
+        it('renders <SavedSearch /> component', () => {
+            wrapper.setProps({
+                results: {
+                    list: [],
+                },
+            });
+            expect(wrapper.find(SavedSearch).exists()).toBe(true);
+        });
+
         it('does not render <SignalSourceFilter /> component when there are no props.results passed in', () => {
             wrapper.setProps({
                 results: {
@@ -44,15 +53,6 @@ describe('<SearchContainer /> component', () => {
                 },
             });
             expect(wrapper.find(SignalsTable).exists()).toBe(false);
-        });
-
-        it('does not render <SavedSearch /> component when there are no props.results passed in', () => {
-            wrapper.setProps({
-                results: {
-                    list: [],
-                },
-            });
-            expect(wrapper.find(SavedSearch).exists()).toBe(false);
         });
 
         it('does not render <SaveSearchExecution /> component when there are no props.results passed in', () => {
