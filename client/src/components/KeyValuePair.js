@@ -18,21 +18,7 @@ class KeyValuePair extends Component {
     }
 
     getCompletions = key => {
-        // TODO: implement `/api/signals/keys?search=${key}` endpoint when API is ready
-        return fetch(`api/results`)
-            .then(response => response.json())
-            .then(json =>
-                json.list.reduce((curr, signal) => {
-                    signal.keyValuePairs.forEach(kvp => {
-                        if (kvp.key.includes(key)) {
-                            curr.push(kvp.key);
-                        }
-                    });
-
-                    return curr;
-                }, []),
-            )
-            .catch(() => []);
+        return fetch(`/api/signals/keys?search=${key}`).then(response => response.json());
     };
 
     render() {

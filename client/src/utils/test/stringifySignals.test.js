@@ -1,4 +1,40 @@
-import { stringifySignals } from '../stringifySignals';
+import { stringifyKeyValuePair, stringifySignals } from '../stringifySignals';
+
+describe('stringifyKeyValuePair', () => {
+    it('should stringify a single key-value pair', () => {
+        const keyValuePair = {
+            key: 'eVar1',
+            operator: '>',
+            value: 'xyz123',
+        };
+
+        expect(stringifyKeyValuePair(keyValuePair)).toEqual('eVar1>"xyz123"');
+    });
+    it('should stingify empty key in quotation marks', () => {
+        const keyValuePair = {
+            key: '',
+            value: 'xyz123',
+        };
+
+        expect(stringifyKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"=="xyz123"`);
+    });
+    it('should stingify empty value in quotation marks', () => {
+        const keyValuePair = {
+            key: 'eVar1',
+            value: '',
+        };
+
+        expect(stringifyKeyValuePair(keyValuePair)).toEqual(String.raw`eVar1==\"\"`);
+    });
+    it('should stingify empty key and value in quotation marks', () => {
+        const keyValuePair = {
+            key: '',
+            value: '',
+        };
+
+        expect(stringifyKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"==\"\"`);
+    });
+});
 
 describe('stringifySignals', () => {
     it('should stringify a single key-value pair from a single signal', () => {
