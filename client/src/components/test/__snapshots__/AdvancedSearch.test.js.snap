@@ -6,7 +6,11 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdvancedSearch
     enabled={false}
-    filter="test"
+    filter={
+      Object {
+        "label": "test",
+      }
+    }
     onAdvancedSearchChange={[MockFunction]}
     onFilterChange={[MockFunction]}
   />,
@@ -37,9 +41,21 @@ ShallowWrapper {
           onChange={[MockFunction]}
           options={
             Array [
-              "test",
-              "test2",
-              "test3",
+              Object {
+                "dataSourceId": 1,
+                "label": "test",
+                "reportSuiteId": 1,
+              },
+              Object {
+                "dataSourceId": 2,
+                "label": "test2",
+                "reportSuiteId": 2,
+              },
+              Object {
+                "dataSourceId": 3,
+                "label": "test3",
+                "reportSuiteId": 3,
+              },
             ]
           }
           placeholder="Filter by report suite"
@@ -77,9 +93,21 @@ ShallowWrapper {
           "invalid": false,
           "onChange": [MockFunction],
           "options": Array [
-            "test",
-            "test2",
-            "test3",
+            Object {
+              "dataSourceId": 1,
+              "label": "test",
+              "reportSuiteId": 1,
+            },
+            Object {
+              "dataSourceId": 2,
+              "label": "test2",
+              "reportSuiteId": 2,
+            },
+            Object {
+              "dataSourceId": 3,
+              "label": "test3",
+              "reportSuiteId": 3,
+            },
           ],
           "placeholder": "Filter by report suite",
           "quiet": true,
@@ -114,9 +142,21 @@ ShallowWrapper {
             onChange={[MockFunction]}
             options={
               Array [
-                "test",
-                "test2",
-                "test3",
+                Object {
+                  "dataSourceId": 1,
+                  "label": "test",
+                  "reportSuiteId": 1,
+                },
+                Object {
+                  "dataSourceId": 2,
+                  "label": "test2",
+                  "reportSuiteId": 2,
+                },
+                Object {
+                  "dataSourceId": 3,
+                  "label": "test3",
+                  "reportSuiteId": 3,
+                },
               ]
             }
             placeholder="Filter by report suite"
@@ -154,9 +194,21 @@ ShallowWrapper {
             "invalid": false,
             "onChange": [MockFunction],
             "options": Array [
-              "test",
-              "test2",
-              "test3",
+              Object {
+                "dataSourceId": 1,
+                "label": "test",
+                "reportSuiteId": 1,
+              },
+              Object {
+                "dataSourceId": 2,
+                "label": "test2",
+                "reportSuiteId": 2,
+              },
+              Object {
+                "dataSourceId": 3,
+                "label": "test3",
+                "reportSuiteId": 3,
+              },
             ],
             "placeholder": "Filter by report suite",
             "quiet": true,

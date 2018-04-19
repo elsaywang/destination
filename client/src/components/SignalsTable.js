@@ -48,15 +48,15 @@ class SignalsTable extends Component {
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
         switch (signalType) {
-            case 'all':
+            case 'ALL':
                 return allSignalsColumns;
-            case 'adobeAnalytics':
+            case 'ANALYTICS':
                 return isAdvancedSearchEnabled ? advancedAnalyticsColumns : analyticsColumns;
-            case 'actionableLogFiles':
+            case 'ALF':
                 return actionableLogFilesColumns;
-            case 'generalOnlineData':
+            case 'REALTIME':
                 return generalOnlineDataColumns;
-            case 'onboardedRecords':
+            case 'ONBOARDED':
                 return onboardedRecordsColumns;
             default:
                 return allSignalsColumns;

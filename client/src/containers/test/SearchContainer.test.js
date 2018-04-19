@@ -80,17 +80,21 @@ describe('<SearchContainer /> component', () => {
             ],
             signalStatus: 'ALL',
             advanced: false,
-            filter: '',
+            filter: {
+                label: '',
+                dataSourceId: 0,
+                reportSuiteId: 0,
+            },
             viewRecordsFor: 7,
             minEventFires: 1000,
             counts: {
-                all: 72093,
-                adobeAnalytics: 34300,
-                actionableLogFiles: 359,
-                generalOnlineData: 27,
-                onboardedRecords: 37407,
+                ALL: 72093,
+                ANALYTICS: 34300,
+                ALF: 359,
+                REALTIME: 27,
+                ONBOARDED: 37407,
             },
-            signalType: 'all',
+            signalType: 'ALL',
         };
 
         it('.onAddClick() adds another keyValuePair to state.keyValuePairs', () => {
@@ -125,7 +129,7 @@ describe('<SearchContainer /> component', () => {
 
             wrapper.instance().onAdvancedSearchChange(true);
             expect(wrapper.state('advanced')).toBe(true);
-            expect(wrapper.state('filter')).toBe('');
+            expect(wrapper.state('filter').label).toBe('');
         });
 
         it('.onKeySelect() changes key state to given value at corresponding id in keyValuePairs[]', () => {
@@ -204,13 +208,13 @@ describe('<SearchContainer /> component', () => {
             ]);
             expect(wrapper.state('signalStatus')).toEqual('ALL');
             expect(wrapper.state('advanced')).toEqual(false);
-            expect(wrapper.state('filter')).toEqual('');
+            expect(wrapper.state('filter').label).toEqual('');
             expect(wrapper.state('viewRecordsFor')).toEqual(7);
             expect(wrapper.state('minEventFires')).toEqual(1000);
         });
 
         it('.handleSignalTypeChange() changes state.signalType', () => {
-            const newSignalType = 'adobeAnalytics';
+            const newSignalType = 'ANALYTICS';
 
             expect(wrapper.state('signalType')).toBe(initialState.signalType);
             wrapper.instance().handleSignalTypeChange(newSignalType);

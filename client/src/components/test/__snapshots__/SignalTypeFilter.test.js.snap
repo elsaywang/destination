@@ -7,15 +7,15 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
     counts={
       Object {
-        "actionableLogFiles": 359,
-        "adobeAnalytics": 34300,
-        "all": 72093,
-        "generalOnlineData": 27,
-        "onboardedRecords": 37407,
+        "ALF": 359,
+        "ALL": 72093,
+        "ANALYTICS": 34300,
+        "ONBOARDED": 37407,
+        "REALTIME": 27,
       }
     }
     onSignalTypeChange={[MockFunction]}
-    signalType="all"
+    signalType="ALL"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -40,7 +40,7 @@ ShallowWrapper {
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
-          value="all"
+          value="ALL"
         >
           <Tab
             disabled={false}
@@ -150,13 +150,13 @@ ShallowWrapper {
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
-          "value": "all",
+          "value": "ALL",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "all",
+            "key": "ALL",
             "nodeType": "class",
             "props": Object {
               "children": "All (72093)",
@@ -171,7 +171,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "adobeAnalytics",
+            "key": "ANALYTICS",
             "nodeType": "class",
             "props": Object {
               "children": "Adobe Analytics (34300)",
@@ -186,7 +186,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "actionableLogFiles",
+            "key": "ALF",
             "nodeType": "class",
             "props": Object {
               "children": "Actionable Log Files (359)",
@@ -201,7 +201,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "generalOnlineData",
+            "key": "REALTIME",
             "nodeType": "class",
             "props": Object {
               "children": "General Online Data (27)",
@@ -216,7 +216,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "onboardedRecords",
+            "key": "ONBOARDED",
             "nodeType": "class",
             "props": Object {
               "children": "Onboarded Records (37407)",
@@ -252,7 +252,7 @@ ShallowWrapper {
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
-            value="all"
+            value="ALL"
           >
             <Tab
               disabled={false}
@@ -362,13 +362,13 @@ ShallowWrapper {
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
-            "value": "all",
+            "value": "ALL",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "all",
+              "key": "ALL",
               "nodeType": "class",
               "props": Object {
                 "children": "All (72093)",
@@ -383,7 +383,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "adobeAnalytics",
+              "key": "ANALYTICS",
               "nodeType": "class",
               "props": Object {
                 "children": "Adobe Analytics (34300)",
@@ -398,7 +398,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "actionableLogFiles",
+              "key": "ALF",
               "nodeType": "class",
               "props": Object {
                 "children": "Actionable Log Files (359)",
@@ -413,7 +413,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "generalOnlineData",
+              "key": "REALTIME",
               "nodeType": "class",
               "props": Object {
                 "children": "General Online Data (27)",
@@ -428,7 +428,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "onboardedRecords",
+              "key": "ONBOARDED",
               "nodeType": "class",
               "props": Object {
                 "children": "Onboarded Records (37407)",
@@ -465,15 +465,15 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
     counts={
       Object {
-        "actionableLogFiles": 100,
-        "adobeAnalytics": 1000,
-        "all": 1100,
-        "generalOnlineData": 0,
-        "onboardedRecords": 0,
+        "ALF": 100,
+        "ALL": 1100,
+        "ANALYTICS": 1000,
+        "ONBOARDED": 0,
+        "REALTIME": 0,
       }
     }
     onSignalTypeChange={[MockFunction]}
-    signalType="adobeAnalytics"
+    signalType="ANALYTICS"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -498,7 +498,7 @@ ShallowWrapper {
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
-          value="adobeAnalytics"
+          value="ANALYTICS"
         >
           <Tab
             disabled={false}
@@ -608,13 +608,13 @@ ShallowWrapper {
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
-          "value": "adobeAnalytics",
+          "value": "ANALYTICS",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "all",
+            "key": "ALL",
             "nodeType": "class",
             "props": Object {
               "children": "All (1100)",
@@ -629,7 +629,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "adobeAnalytics",
+            "key": "ANALYTICS",
             "nodeType": "class",
             "props": Object {
               "children": "Adobe Analytics (1000)",
@@ -644,7 +644,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "actionableLogFiles",
+            "key": "ALF",
             "nodeType": "class",
             "props": Object {
               "children": "Actionable Log Files (100)",
@@ -659,7 +659,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "generalOnlineData",
+            "key": "REALTIME",
             "nodeType": "class",
             "props": Object {
               "children": "General Online Data (0)",
@@ -674,7 +674,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "onboardedRecords",
+            "key": "ONBOARDED",
             "nodeType": "class",
             "props": Object {
               "children": "Onboarded Records (0)",
@@ -710,7 +710,7 @@ ShallowWrapper {
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
-            value="adobeAnalytics"
+            value="ANALYTICS"
           >
             <Tab
               disabled={false}
@@ -820,13 +820,13 @@ ShallowWrapper {
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
-            "value": "adobeAnalytics",
+            "value": "ANALYTICS",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "all",
+              "key": "ALL",
               "nodeType": "class",
               "props": Object {
                 "children": "All (1100)",
@@ -841,7 +841,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "adobeAnalytics",
+              "key": "ANALYTICS",
               "nodeType": "class",
               "props": Object {
                 "children": "Adobe Analytics (1000)",
@@ -856,7 +856,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "actionableLogFiles",
+              "key": "ALF",
               "nodeType": "class",
               "props": Object {
                 "children": "Actionable Log Files (100)",
@@ -871,7 +871,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "generalOnlineData",
+              "key": "REALTIME",
               "nodeType": "class",
               "props": Object {
                 "children": "General Online Data (0)",
@@ -886,7 +886,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "onboardedRecords",
+              "key": "ONBOARDED",
               "nodeType": "class",
               "props": Object {
                 "children": "Onboarded Records (0)",
@@ -923,15 +923,15 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
     counts={
       Object {
-        "actionableLogFiles": 359,
-        "adobeAnalytics": 34300,
-        "all": 72093,
-        "generalOnlineData": 27,
-        "onboardedRecords": 37407,
+        "ALF": 359,
+        "ALL": 72093,
+        "ANALYTICS": 34300,
+        "ONBOARDED": 37407,
+        "REALTIME": 27,
       }
     }
     onSignalTypeChange={[MockFunction]}
-    signalType="adobeAnalytics"
+    signalType="ANALYTICS"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -956,7 +956,7 @@ ShallowWrapper {
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
-          value="adobeAnalytics"
+          value="ANALYTICS"
         >
           <Tab
             disabled={false}
@@ -1066,13 +1066,13 @@ ShallowWrapper {
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
-          "value": "adobeAnalytics",
+          "value": "ANALYTICS",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "all",
+            "key": "ALL",
             "nodeType": "class",
             "props": Object {
               "children": "All (72093)",
@@ -1087,7 +1087,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "adobeAnalytics",
+            "key": "ANALYTICS",
             "nodeType": "class",
             "props": Object {
               "children": "Adobe Analytics (34300)",
@@ -1102,7 +1102,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "actionableLogFiles",
+            "key": "ALF",
             "nodeType": "class",
             "props": Object {
               "children": "Actionable Log Files (359)",
@@ -1117,7 +1117,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "generalOnlineData",
+            "key": "REALTIME",
             "nodeType": "class",
             "props": Object {
               "children": "General Online Data (27)",
@@ -1132,7 +1132,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "onboardedRecords",
+            "key": "ONBOARDED",
             "nodeType": "class",
             "props": Object {
               "children": "Onboarded Records (37407)",
@@ -1168,7 +1168,7 @@ ShallowWrapper {
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
-            value="adobeAnalytics"
+            value="ANALYTICS"
           >
             <Tab
               disabled={false}
@@ -1278,13 +1278,13 @@ ShallowWrapper {
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
-            "value": "adobeAnalytics",
+            "value": "ANALYTICS",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "all",
+              "key": "ALL",
               "nodeType": "class",
               "props": Object {
                 "children": "All (72093)",
@@ -1299,7 +1299,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "adobeAnalytics",
+              "key": "ANALYTICS",
               "nodeType": "class",
               "props": Object {
                 "children": "Adobe Analytics (34300)",
@@ -1314,7 +1314,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "actionableLogFiles",
+              "key": "ALF",
               "nodeType": "class",
               "props": Object {
                 "children": "Actionable Log Files (359)",
@@ -1329,7 +1329,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "generalOnlineData",
+              "key": "REALTIME",
               "nodeType": "class",
               "props": Object {
                 "children": "General Online Data (27)",
@@ -1344,7 +1344,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "onboardedRecords",
+              "key": "ONBOARDED",
               "nodeType": "class",
               "props": Object {
                 "children": "Onboarded Records (37407)",

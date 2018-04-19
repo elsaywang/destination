@@ -6,9 +6,12 @@ import Switch from '@react/react-spectrum/Switch';
 
 describe('Advanced Search', () => {
     const mockFn = jest.fn();
+    const filter = {
+        label: 'test',
+    };
     const wrapper = shallow(
         <AdvancedSearch
-            filter="test"
+            filter={filter}
             enabled={false}
             onFilterChange={mockFn}
             onAdvancedSearchChange={mockFn}
@@ -39,7 +42,7 @@ describe('Advanced Search', () => {
         });
 
         it('renders <ComboBox /> with value passed in', () => {
-            wrapper.setProps({ filter: 'abc' });
+            wrapper.setProps({ filter: { label: 'abc' } });
             expect(wrapper.find(ComboBox).props().value).toBe('abc');
         });
     });

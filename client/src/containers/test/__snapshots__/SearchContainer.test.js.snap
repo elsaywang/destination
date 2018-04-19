@@ -43,14 +43,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -75,7 +81,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />
           </GridColumn>
@@ -110,14 +116,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -142,7 +154,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />
           </GridColumn>,
@@ -158,14 +170,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -190,7 +208,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />,
             "size": 12,
@@ -203,13 +221,17 @@ ShallowWrapper {
             "props": Object {
               "advanced": false,
               "counts": Object {
-                "actionableLogFiles": 359,
-                "adobeAnalytics": 34300,
-                "all": 72093,
-                "generalOnlineData": 27,
-                "onboardedRecords": 37407,
+                "ALF": 359,
+                "ALL": 72093,
+                "ANALYTICS": 34300,
+                "ONBOARDED": 37407,
+                "REALTIME": 27,
               },
-              "filter": "",
+              "filter": Object {
+                "dataSourceId": 0,
+                "label": "",
+                "reportSuiteId": 0,
+              },
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -232,7 +254,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "signalStatus": "ALL",
-              "signalType": "all",
+              "signalType": "ALL",
               "viewRecordsFor": 7,
             },
             "ref": null,
@@ -311,14 +333,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -343,7 +371,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />
             </GridColumn>
@@ -378,14 +406,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -410,7 +444,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />
             </GridColumn>,
@@ -426,14 +460,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -458,7 +498,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />,
               "size": 12,
@@ -471,13 +511,17 @@ ShallowWrapper {
               "props": Object {
                 "advanced": false,
                 "counts": Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 },
-                "filter": "",
+                "filter": Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                },
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -500,7 +544,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "signalStatus": "ALL",
-                "signalType": "all",
+                "signalType": "ALL",
                 "viewRecordsFor": 7,
               },
               "ref": null,
@@ -627,14 +671,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -659,7 +709,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />
           </GridColumn>
@@ -690,15 +740,15 @@ ShallowWrapper {
             <SignalTypeFilter
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
               onSignalTypeChange={[Function]}
-              signalType="all"
+              signalType="ALL"
             />
           </div>
           <div
@@ -769,7 +819,7 @@ ShallowWrapper {
                   ],
                 }
               }
-              signalType="all"
+              signalType="ALL"
               sortSearch={[Function]}
             />
           </div>
@@ -790,14 +840,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -822,7 +878,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />
           </GridColumn>,
@@ -838,14 +894,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -870,7 +932,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />,
             "size": 12,
@@ -883,13 +945,17 @@ ShallowWrapper {
             "props": Object {
               "advanced": false,
               "counts": Object {
-                "actionableLogFiles": 359,
-                "adobeAnalytics": 34300,
-                "all": 72093,
-                "generalOnlineData": 27,
-                "onboardedRecords": 37407,
+                "ALF": 359,
+                "ALL": 72093,
+                "ANALYTICS": 34300,
+                "ONBOARDED": 37407,
+                "REALTIME": 27,
               },
-              "filter": "",
+              "filter": Object {
+                "dataSourceId": 0,
+                "label": "",
+                "reportSuiteId": 0,
+              },
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -912,7 +978,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "signalStatus": "ALL",
-              "signalType": "all",
+              "signalType": "ALL",
               "viewRecordsFor": 7,
             },
             "ref": null,
@@ -982,15 +1048,15 @@ ShallowWrapper {
               <SignalTypeFilter
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
                 onSignalTypeChange={[Function]}
-                signalType="all"
+                signalType="ALL"
               />
             </div>,
             <div
@@ -1061,7 +1127,7 @@ ShallowWrapper {
                     ],
                   }
                 }
-                signalType="all"
+                signalType="ALL"
                 sortSearch={[Function]}
               />
             </div>,
@@ -1080,15 +1146,15 @@ ShallowWrapper {
               "children": <SignalTypeFilter
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
                 onSignalTypeChange={[Function]}
-                signalType="all"
+                signalType="ALL"
               />,
               "className": undefined,
             },
@@ -1099,14 +1165,14 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "counts": Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 },
                 "onSignalTypeChange": [Function],
-                "signalType": "all",
+                "signalType": "ALL",
               },
               "ref": null,
               "rendered": null,
@@ -1185,7 +1251,7 @@ ShallowWrapper {
                       ],
                     }
                   }
-                  signalType="all"
+                  signalType="ALL"
                   sortSearch={[Function]}
                 />,
               ],
@@ -1452,7 +1518,7 @@ ShallowWrapper {
                       },
                     ],
                   },
-                  "signalType": "all",
+                  "signalType": "ALL",
                   "sortSearch": [Function],
                 },
                 "ref": null,
@@ -1485,14 +1551,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -1517,7 +1589,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />
             </GridColumn>
@@ -1548,15 +1620,15 @@ ShallowWrapper {
               <SignalTypeFilter
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
                 onSignalTypeChange={[Function]}
-                signalType="all"
+                signalType="ALL"
               />
             </div>
             <div
@@ -1627,7 +1699,7 @@ ShallowWrapper {
                     ],
                   }
                 }
-                signalType="all"
+                signalType="ALL"
                 sortSearch={[Function]}
               />
             </div>
@@ -1648,14 +1720,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -1680,7 +1758,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />
             </GridColumn>,
@@ -1696,14 +1774,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -1728,7 +1812,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />,
               "size": 12,
@@ -1741,13 +1825,17 @@ ShallowWrapper {
               "props": Object {
                 "advanced": false,
                 "counts": Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 },
-                "filter": "",
+                "filter": Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                },
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -1770,7 +1858,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "signalStatus": "ALL",
-                "signalType": "all",
+                "signalType": "ALL",
                 "viewRecordsFor": 7,
               },
               "ref": null,
@@ -1840,15 +1928,15 @@ ShallowWrapper {
                 <SignalTypeFilter
                   counts={
                     Object {
-                      "actionableLogFiles": 359,
-                      "adobeAnalytics": 34300,
-                      "all": 72093,
-                      "generalOnlineData": 27,
-                      "onboardedRecords": 37407,
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
                     }
                   }
                   onSignalTypeChange={[Function]}
-                  signalType="all"
+                  signalType="ALL"
                 />
               </div>,
               <div
@@ -1919,7 +2007,7 @@ ShallowWrapper {
                       ],
                     }
                   }
-                  signalType="all"
+                  signalType="ALL"
                   sortSearch={[Function]}
                 />
               </div>,
@@ -1938,15 +2026,15 @@ ShallowWrapper {
                 "children": <SignalTypeFilter
                   counts={
                     Object {
-                      "actionableLogFiles": 359,
-                      "adobeAnalytics": 34300,
-                      "all": 72093,
-                      "generalOnlineData": 27,
-                      "onboardedRecords": 37407,
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
                     }
                   }
                   onSignalTypeChange={[Function]}
-                  signalType="all"
+                  signalType="ALL"
                 />,
                 "className": undefined,
               },
@@ -1957,14 +2045,14 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "counts": Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   },
                   "onSignalTypeChange": [Function],
-                  "signalType": "all",
+                  "signalType": "ALL",
                 },
                 "ref": null,
                 "rendered": null,
@@ -2043,7 +2131,7 @@ ShallowWrapper {
                         ],
                       }
                     }
-                    signalType="all"
+                    signalType="ALL"
                     sortSearch={[Function]}
                   />,
                 ],
@@ -2310,7 +2398,7 @@ ShallowWrapper {
                         },
                       ],
                     },
-                    "signalType": "all",
+                    "signalType": "ALL",
                     "sortSearch": [Function],
                   },
                   "ref": null,
@@ -2391,14 +2479,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -2423,7 +2517,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />
           </GridColumn>
@@ -2454,15 +2548,15 @@ ShallowWrapper {
             <SignalTypeFilter
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
               onSignalTypeChange={[Function]}
-              signalType="all"
+              signalType="ALL"
             />
           </div>
           <div
@@ -2533,7 +2627,7 @@ ShallowWrapper {
                   ],
                 }
               }
-              signalType="all"
+              signalType="ALL"
               sortSearch={[Function]}
             />
           </div>
@@ -2554,14 +2648,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -2586,7 +2686,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />
           </GridColumn>,
@@ -2602,14 +2702,20 @@ ShallowWrapper {
               advanced={false}
               counts={
                 Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 }
               }
-              filter=""
+              filter={
+                Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                }
+              }
               keyValuePairs={
                 Array [
                   Object {
@@ -2634,7 +2740,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               signalStatus="ALL"
-              signalType="all"
+              signalType="ALL"
               viewRecordsFor={7}
             />,
             "size": 12,
@@ -2647,13 +2753,17 @@ ShallowWrapper {
             "props": Object {
               "advanced": false,
               "counts": Object {
-                "actionableLogFiles": 359,
-                "adobeAnalytics": 34300,
-                "all": 72093,
-                "generalOnlineData": 27,
-                "onboardedRecords": 37407,
+                "ALF": 359,
+                "ALL": 72093,
+                "ANALYTICS": 34300,
+                "ONBOARDED": 37407,
+                "REALTIME": 27,
               },
-              "filter": "",
+              "filter": Object {
+                "dataSourceId": 0,
+                "label": "",
+                "reportSuiteId": 0,
+              },
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -2676,7 +2786,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "signalStatus": "ALL",
-              "signalType": "all",
+              "signalType": "ALL",
               "viewRecordsFor": 7,
             },
             "ref": null,
@@ -2746,15 +2856,15 @@ ShallowWrapper {
               <SignalTypeFilter
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
                 onSignalTypeChange={[Function]}
-                signalType="all"
+                signalType="ALL"
               />
             </div>,
             <div
@@ -2825,7 +2935,7 @@ ShallowWrapper {
                     ],
                   }
                 }
-                signalType="all"
+                signalType="ALL"
                 sortSearch={[Function]}
               />
             </div>,
@@ -2844,15 +2954,15 @@ ShallowWrapper {
               "children": <SignalTypeFilter
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
                 onSignalTypeChange={[Function]}
-                signalType="all"
+                signalType="ALL"
               />,
               "className": undefined,
             },
@@ -2863,14 +2973,14 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "counts": Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 },
                 "onSignalTypeChange": [Function],
-                "signalType": "all",
+                "signalType": "ALL",
               },
               "ref": null,
               "rendered": null,
@@ -2949,7 +3059,7 @@ ShallowWrapper {
                       ],
                     }
                   }
-                  signalType="all"
+                  signalType="ALL"
                   sortSearch={[Function]}
                 />,
               ],
@@ -3216,7 +3326,7 @@ ShallowWrapper {
                       },
                     ],
                   },
-                  "signalType": "all",
+                  "signalType": "ALL",
                   "sortSearch": [Function],
                 },
                 "ref": null,
@@ -3249,14 +3359,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -3281,7 +3397,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />
             </GridColumn>
@@ -3312,15 +3428,15 @@ ShallowWrapper {
               <SignalTypeFilter
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
                 onSignalTypeChange={[Function]}
-                signalType="all"
+                signalType="ALL"
               />
             </div>
             <div
@@ -3391,7 +3507,7 @@ ShallowWrapper {
                     ],
                   }
                 }
-                signalType="all"
+                signalType="ALL"
                 sortSearch={[Function]}
               />
             </div>
@@ -3412,14 +3528,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -3444,7 +3566,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />
             </GridColumn>,
@@ -3460,14 +3582,20 @@ ShallowWrapper {
                 advanced={false}
                 counts={
                   Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   }
                 }
-                filter=""
+                filter={
+                  Object {
+                    "dataSourceId": 0,
+                    "label": "",
+                    "reportSuiteId": 0,
+                  }
+                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -3492,7 +3620,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 signalStatus="ALL"
-                signalType="all"
+                signalType="ALL"
                 viewRecordsFor={7}
               />,
               "size": 12,
@@ -3505,13 +3633,17 @@ ShallowWrapper {
               "props": Object {
                 "advanced": false,
                 "counts": Object {
-                  "actionableLogFiles": 359,
-                  "adobeAnalytics": 34300,
-                  "all": 72093,
-                  "generalOnlineData": 27,
-                  "onboardedRecords": 37407,
+                  "ALF": 359,
+                  "ALL": 72093,
+                  "ANALYTICS": 34300,
+                  "ONBOARDED": 37407,
+                  "REALTIME": 27,
                 },
-                "filter": "",
+                "filter": Object {
+                  "dataSourceId": 0,
+                  "label": "",
+                  "reportSuiteId": 0,
+                },
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -3534,7 +3666,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "signalStatus": "ALL",
-                "signalType": "all",
+                "signalType": "ALL",
                 "viewRecordsFor": 7,
               },
               "ref": null,
@@ -3604,15 +3736,15 @@ ShallowWrapper {
                 <SignalTypeFilter
                   counts={
                     Object {
-                      "actionableLogFiles": 359,
-                      "adobeAnalytics": 34300,
-                      "all": 72093,
-                      "generalOnlineData": 27,
-                      "onboardedRecords": 37407,
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
                     }
                   }
                   onSignalTypeChange={[Function]}
-                  signalType="all"
+                  signalType="ALL"
                 />
               </div>,
               <div
@@ -3683,7 +3815,7 @@ ShallowWrapper {
                       ],
                     }
                   }
-                  signalType="all"
+                  signalType="ALL"
                   sortSearch={[Function]}
                 />
               </div>,
@@ -3702,15 +3834,15 @@ ShallowWrapper {
                 "children": <SignalTypeFilter
                   counts={
                     Object {
-                      "actionableLogFiles": 359,
-                      "adobeAnalytics": 34300,
-                      "all": 72093,
-                      "generalOnlineData": 27,
-                      "onboardedRecords": 37407,
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
                     }
                   }
                   onSignalTypeChange={[Function]}
-                  signalType="all"
+                  signalType="ALL"
                 />,
                 "className": undefined,
               },
@@ -3721,14 +3853,14 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "counts": Object {
-                    "actionableLogFiles": 359,
-                    "adobeAnalytics": 34300,
-                    "all": 72093,
-                    "generalOnlineData": 27,
-                    "onboardedRecords": 37407,
+                    "ALF": 359,
+                    "ALL": 72093,
+                    "ANALYTICS": 34300,
+                    "ONBOARDED": 37407,
+                    "REALTIME": 27,
                   },
                   "onSignalTypeChange": [Function],
-                  "signalType": "all",
+                  "signalType": "ALL",
                 },
                 "ref": null,
                 "rendered": null,
@@ -3807,7 +3939,7 @@ ShallowWrapper {
                         ],
                       }
                     }
-                    signalType="all"
+                    signalType="ALL"
                     sortSearch={[Function]}
                   />,
                 ],
@@ -4074,7 +4206,7 @@ ShallowWrapper {
                         },
                       ],
                     },
-                    "signalType": "all",
+                    "signalType": "ALL",
                     "sortSearch": [Function],
                   },
                   "ref": null,

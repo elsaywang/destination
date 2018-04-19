@@ -9,13 +9,13 @@ describe('<SignalTypeFilter /> component', () => {
     const mockFn = jest.fn();
     const initialState = {
         counts: {
-            all: 72093,
-            adobeAnalytics: 34300,
-            actionableLogFiles: 359,
-            generalOnlineData: 27,
-            onboardedRecords: 37407,
+            ALL: 72093,
+            ANALYTICS: 34300,
+            ALF: 359,
+            REALTIME: 27,
+            ONBOARDED: 37407,
         },
-        signalType: 'all',
+        signalType: 'ALL',
     };
     let wrapper = shallow(
         <SignalTypeFilter
@@ -41,7 +41,7 @@ describe('<SignalTypeFilter /> component', () => {
         });
 
         it('renders correctly selected <Tab /> component when props.signalType change', () => {
-            const signalType = 'adobeAnalytics';
+            const signalType = 'ANALYTICS';
             const optionMatchingSignalType = signalTypeOptions.find(
                 option => option.value === signalType,
             ).label;
@@ -64,11 +64,11 @@ describe('<SignalTypeFilter /> component', () => {
 
             const newState = {
                 counts: {
-                    all: 1100,
-                    adobeAnalytics: 1000,
-                    actionableLogFiles: 100,
-                    generalOnlineData: 0,
-                    onboardedRecords: 0,
+                    ALL: 1100,
+                    ANALYTICS: 1000,
+                    ALF: 100,
+                    REALTIME: 0,
+                    ONBOARDED: 0,
                 },
             };
             const newSignalTypeOptions = getSignalTypeOptions(newState.counts);
@@ -89,23 +89,15 @@ describe('<SignalTypeFilter /> component', () => {
     describe('event handlers', () => {
         it('.handleSignalTypeChange() calls `onSignalTypeChange` prop with a signalType that corresponds to index of the signal type tab clicked', () => {
             wrapper.instance().handleSignalTypeChange(0);
-            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('all');
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ALL');
             wrapper.instance().handleSignalTypeChange(1);
-            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
-                'adobeAnalytics',
-            );
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ANALYTICS');
             wrapper.instance().handleSignalTypeChange(2);
-            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
-                'actionableLogFiles',
-            );
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ALF');
             wrapper.instance().handleSignalTypeChange(3);
-            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
-                'generalOnlineData',
-            );
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('REALTIME');
             wrapper.instance().handleSignalTypeChange(4);
-            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith(
-                'onboardedRecords',
-            );
+            expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ONBOARDED');
         });
     });
 });

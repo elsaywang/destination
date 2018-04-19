@@ -29,18 +29,22 @@ class SearchContainer extends Component {
             ],
             signalStatus: 'ALL',
             advanced: false,
-            filter: '',
+            filter: {
+                label: '',
+                dataSourceId: 0,
+                reportSuiteId: 0,
+            },
             viewRecordsFor: 7,
             minEventFires: 1000,
             // TODO: counts and signalType should be extracted to redux and come through props
             counts: {
-                all: 72093,
-                adobeAnalytics: 34300,
-                actionableLogFiles: 359,
-                generalOnlineData: 27,
-                onboardedRecords: 37407,
+                ALL: 72093,
+                ANALYTICS: 34300,
+                ALF: 359,
+                REALTIME: 27,
+                ONBOARDED: 37407,
             },
-            signalType: 'all',
+            signalType: 'ALL',
         };
     }
 
@@ -56,13 +60,22 @@ class SearchContainer extends Component {
     onAdvancedSearchChange = value => {
         this.setState({
             advanced: value,
-            filter: '',
+            filter: {
+                label: '',
+                dataSourceId: 0,
+                reportSuiteId: 0,
+            },
         });
     };
 
     onFilterChange = value => {
         this.setState({
-            filter: value,
+            // TODO: figure out how to populate dataSourceId && reportSuiteId for AAM-35130
+            filter: {
+                label: value,
+                dataSourceId: 0,
+                reportSuiteId: 0,
+            },
         });
     };
 
@@ -161,7 +174,11 @@ class SearchContainer extends Component {
             ],
             signalStatus: 'ALL',
             advanced: false,
-            filter: '',
+            filter: {
+                label: '',
+                dataSourceId: 0,
+                reportSuiteId: 0,
+            },
             viewRecordsFor: 7,
             minEventFires: 1000,
         });
