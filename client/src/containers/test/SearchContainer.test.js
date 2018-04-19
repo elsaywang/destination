@@ -29,11 +29,6 @@ describe('<SearchContainer /> component', () => {
         });
 
         it('renders <SavedSearch /> component', () => {
-            wrapper.setProps({
-                results: {
-                    list: [],
-                },
-            });
             expect(wrapper.find(SavedSearch).exists()).toBe(true);
         });
 
