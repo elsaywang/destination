@@ -1,3 +1,6 @@
 {
-    "/api/*": "/$1"
+    "/api/traits": "/traits",
+    "/api/signals/list": "/list",
+    "/api/signals/keys": "/keys",
+    "/api/v1/users/self/annotations/aam-portal": "/savedSearch"
 }
