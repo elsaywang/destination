@@ -25,13 +25,6 @@ describe('<SaveSearchExecution/>', () => {
         expect(children.find(Dialog).exists()).toBeTruthy();
     });
 
-    it('child <Button/> passes corrent props `label,variant,quiet,icon`', () => {
-        expect(children.find(Button).props().label).toEqual('Save This Search');
-        expect(children.find(Button).props().variant).toEqual('action');
-        expect(children.find(Button).props().quiet).toBeTruthy();
-        expect(children.find(Button).props().icon).toEqual(<Add />);
-    });
-
     it('child <Dialog/> includes corrent content <SaveSearchExecutionContent/>', () => {
         expect(
             children
@@ -54,21 +47,9 @@ xdescribe('<SaveSearchExecution/>', () => {
         expect(wrapper.find(OverlayTrigger).exists()).toBeTruthy();
     });
 
-    it('<OverlayTrigger/> passes correct props `trigger, placement`', () => {
-        expect(wrapper.find(OverlayTrigger).props().trigger).toEqual('click');
-        expect(wrapper.find(OverlayTrigger).props().placement).toEqual('bottom');
-    });
-
     it('<OverlayTrigger/> including children <Button/> and <Popover/>', () => {
         expect(children.find(Button).exists()).toBeTruthy();
         expect(children.find(Popover).exists()).toBeTruthy();
-    });
-
-    it('child <Button/> passes corrent props `label,variant,quiet,icon`', () => {
-        expect(children.find(Button).props().label).toEqual('Save This Search');
-        expect(children.find(Button).props().variant).toEqual('action');
-        expect(children.find(Button).props().quiet).toBeTruthy();
-        expect(children.find(Button).props().icon).toEqual(<Add />);
     });
 
     it('child <Popover/> includes corrent content <SaveSearchExecutionContent/>', () => {

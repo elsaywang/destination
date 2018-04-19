@@ -33,27 +33,16 @@ describe('<SaveSearchExecutionContent /> component', () => {
 
         it(`renders <Label/> with correct label and value and it's child <Textfield> with correct placeholder name`, () => {
             expect(wrapper.find(Label).exists()).toBeTruthy();
-            expect(wrapper.find(Label).props().value).toEqual(textFieldLabelName);
-            expect(wrapper.find(Label).props().labelFor).toEqual(saveThisSearch);
             expect(
                 wrapper
                     .find(Label)
                     .children()
                     .find(Textfield),
             ).toBeTruthy();
-            expect(
-                wrapper
-                    .find(Label)
-                    .children()
-                    .find(Textfield)
-                    .props().placeholder,
-            ).toEqual(textFieldPlaceHolder);
         });
         it(`renders <Checkbox/> with correct label and default is unchecked`, () => {
             expect(wrapper.state('isTrackInDashboardChecked')).toBeFalsy();
             expect(wrapper.find(Checkbox).exists()).toBeTruthy();
-            expect(wrapper.find(Checkbox).props().label).toEqual(checkBoxLabel);
-            expect(wrapper.find(Checkbox).props().checked).toBeFalsy();
         });
     });
 
@@ -66,34 +55,11 @@ describe('<SaveSearchExecutionContent /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <Label/> with correct label/value and children of <Select/> and <RadioGroup/> including 2 <Radio/>', () => {
+        it('renders <Label/> children of <Select/> and <RadioGroup/> including 2 <Radio/>', () => {
             wrapper.setState({ isTrackInDashboardChecked: true });
             expect(wrapper.find(Select)).toBeTruthy();
             expect(wrapper.find(RadioGroup).exists()).toBeTruthy();
             expect(wrapper.find(Radio).length).toBe(2);
-        });
-
-        it(`renders <RadioGroup/> including 2 <Radio/> with correct label and value`, () => {
-            radioGroupOptions.map(({ label, value }, index) => {
-                expect(
-                    wrapper
-                        .find(Radio)
-                        .at(index)
-                        .props().label,
-                ).toEqual(label);
-                expect(
-                    wrapper
-                        .find(Radio)
-                        .at(index)
-                        .props().value,
-                ).toEqual(value);
-                expect(
-                    wrapper
-                        .find(Radio)
-                        .at(index)
-                        .props().checked,
-                ).toEqual(value === descending);
-            });
         });
     });
 });
