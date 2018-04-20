@@ -256,7 +256,7 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [
-            false,
+            true,
           ],
         ],
       }
@@ -265,7 +265,7 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [
-            false,
+            true,
           ],
         ],
       }
@@ -274,7 +274,7 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [
-            false,
+            true,
           ],
         ],
       }
@@ -283,7 +283,7 @@ ShallowWrapper {
       [MockFunction] {
         "calls": Array [
           Array [
-            false,
+            true,
           ],
         ],
       }
@@ -314,7 +314,7 @@ ShallowWrapper {
               [MockFunction] {
                 "calls": Array [
                   Array [
-                    false,
+                    true,
                   ],
                 ],
               }
@@ -353,7 +353,7 @@ ShallowWrapper {
               [MockFunction] {
                 "calls": Array [
                   Array [
-                    false,
+                    true,
                   ],
                 ],
               }
@@ -378,7 +378,7 @@ ShallowWrapper {
             "onChange": [MockFunction] {
               "calls": Array [
                 Array [
-                  false,
+                  true,
                 ],
               ],
             },
@@ -446,7 +446,7 @@ ShallowWrapper {
                 [MockFunction] {
                   "calls": Array [
                     Array [
-                      false,
+                      true,
                     ],
                   ],
                 }
@@ -485,7 +485,7 @@ ShallowWrapper {
                 [MockFunction] {
                   "calls": Array [
                     Array [
-                      false,
+                      true,
                     ],
                   ],
                 }
@@ -510,7 +510,7 @@ ShallowWrapper {
               "onChange": [MockFunction] {
                 "calls": Array [
                   Array [
-                    false,
+                    true,
                   ],
                 ],
               },
