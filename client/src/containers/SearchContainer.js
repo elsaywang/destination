@@ -1,4 +1,5 @@
 import * as searchFormActionCreators from '../actions/searchForm';
+import * as saveThisSearchActionCreators from '../actions/saveThisSearch';
 import { selectSignals } from '../actions/selectSignals';
 import { getSavedSearch } from '../actions/savedSearch';
 import React, { Component, Fragment } from 'react';
@@ -12,6 +13,7 @@ import SignalTypeFilter from '../components/SignalTypeFilter';
 import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
+import SaveSearchExecution from '../components/SaveSearchExecution';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
@@ -148,6 +150,11 @@ class SearchContainer extends Component {
         this.props.callSearch(this.state);
     };
 
+    handleSaveThisSearchConfirm = () => {
+        const { saveThisSearch, saveCurrentSearch } = this.props;
+        saveCurrentSearch({ ...this.state, ...saveThisSearch });
+    };
+
     onClearAll = () => {
         // this.props.onClearAll();
         this.setState({
@@ -190,13 +197,29 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
 
-                <GridRow>
+                <GridRow valign="bottom">
                     <GridColumn size={12}>
-                        <SavedSearch
-                            getSavedSearch={this.props.getSavedSearch}
-                            list={this.props.savedSearch}
-                            onSavedSearchClick={this.onSavedSearchClick}
-                        />
+                        <div className={styles.saveSearch}>
+                            <SavedSearch
+                                getSavedSearch={this.props.getSavedSearch}
+                                list={this.props.savedSearch}
+                                onSavedSearchClick={this.onSavedSearchClick}
+                            />
+                            {Object.keys(this.props.results.list).length > 0 && (
+                                <div className={styles.saveSearchExecution}>
+                                    <SaveSearchExecution
+                                        confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
+                                        cancelSaveSearch={this.props.cancelSaveSearch}
+                                        updateSaveSearchName={this.props.updateSaveSearchName}
+                                        trackSearchResultInDashboard={
+                                            this.props.trackSearchResultInDashboard
+                                        }
+                                        selectDefaultSorting={this.props.selectDefaultSorting}
+                                        changeSortingOrder={this.props.changeSortingOrder}
+                                    />
+                                </div>
+                            )}
+                        </div>
                     </GridColumn>
                 </GridRow>
 
@@ -245,12 +268,14 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearch }) => ({
+const mapStateToProps = ({ results, savedSearch, saveThisSearch }) => ({
     results,
     savedSearch,
+    saveThisSearch,
 });
 const actionCreators = {
     ...searchFormActionCreators,
+    ...saveThisSearchActionCreators,
     selectSignals,
     getSavedSearch,
 };

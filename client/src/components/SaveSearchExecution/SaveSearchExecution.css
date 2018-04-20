@@ -1,0 +1,12 @@
+:local(.triggerDialog) {
+    padding: 0.75em 1.75em 1.75em 2em;
+}
+:local(.contentTextField) {
+    min-width: 230px;
+}
+:local(.contentCheckBox) {
+    margin: 0.5em 0 0 0.75em;
+}
+:local(.contentRadioGroup) {
+    margin-top: 0.5em;
+}

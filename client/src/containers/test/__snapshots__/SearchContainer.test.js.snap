@@ -6,6 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
+    cancelSaveSearch={[Function]}
+    changeSortingOrder={[Function]}
     clearSearch={[Function]}
     getSavedSearch={[Function]}
     results={
@@ -16,9 +18,21 @@ ShallowWrapper {
         "total": 0,
       }
     }
+    saveCurrentSearch={[Function]}
+    saveThisSearch={
+      Object {
+        "descending": false,
+        "includeInDashboard": false,
+        "name": "",
+        "sortBy": "",
+      }
+    }
     savedSearch={Array []}
+    selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
+    trackSearchResultInDashboard={[Function]}
+    updateSaveSearchName={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -82,15 +96,20 @@ ShallowWrapper {
         </GridRow>,
         <GridRow
           reverse={false}
+          valign="bottom"
         >
           <GridColumn
             size={12}
           >
-            <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />
+            <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+            </div>
           </GridColumn>
         </GridRow>,
         false,
@@ -251,13 +270,18 @@ ShallowWrapper {
           "children": <GridColumn
             size={12}
           >
-            <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />
+            <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+            </div>
           </GridColumn>,
           "reverse": false,
+          "valign": "bottom",
         },
         "ref": null,
         "rendered": Object {
@@ -265,26 +289,51 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />,
+            "children": <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+            </div>,
             "size": 12,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "getSavedSearch": [Function],
-              "list": Array [],
-              "onSavedSearchClick": [Function],
+              "children": Array [
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />,
+                false,
+              ],
+              "className": undefined,
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "getSavedSearch": [Function],
+                  "list": Array [],
+                  "onSavedSearchClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              false,
+            ],
+            "type": "div",
           },
           "type": [Function],
         },
@@ -350,15 +399,20 @@ ShallowWrapper {
           </GridRow>,
           <GridRow
             reverse={false}
+            valign="bottom"
           >
             <GridColumn
               size={12}
             >
-              <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />
+              <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+              </div>
             </GridColumn>
           </GridRow>,
           false,
@@ -519,13 +573,18 @@ ShallowWrapper {
             "children": <GridColumn
               size={12}
             >
-              <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />
+              <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+              </div>
             </GridColumn>,
             "reverse": false,
+            "valign": "bottom",
           },
           "ref": null,
           "rendered": Object {
@@ -533,26 +592,51 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />,
+              "children": <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+              </div>,
               "size": 12,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "getSavedSearch": [Function],
-                "list": Array [],
-                "onSavedSearchClick": [Function],
+                "children": Array [
+                  <SavedSearch
+                    getSavedSearch={[Function]}
+                    list={Array []}
+                    onSavedSearchClick={[Function]}
+                  />,
+                  false,
+                ],
+                "className": undefined,
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "getSavedSearch": [Function],
+                    "list": Array [],
+                    "onSavedSearchClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                false,
+              ],
+              "type": "div",
             },
             "type": [Function],
           },
@@ -588,6 +672,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
+    cancelSaveSearch={[Function]}
+    changeSortingOrder={[Function]}
     clearSearch={[Function]}
     getSavedSearch={[Function]}
     results={
@@ -600,9 +686,21 @@ ShallowWrapper {
         ],
       }
     }
+    saveCurrentSearch={[Function]}
+    saveThisSearch={
+      Object {
+        "descending": false,
+        "includeInDashboard": false,
+        "name": "",
+        "sortBy": "",
+      }
+    }
     savedSearch={Array []}
+    selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
+    trackSearchResultInDashboard={[Function]}
+    updateSaveSearchName={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -666,15 +764,32 @@ ShallowWrapper {
         </GridRow>,
         <GridRow
           reverse={false}
+          valign="bottom"
         >
           <GridColumn
             size={12}
           >
-            <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />
+            <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+              <div
+                className={undefined}
+              >
+                <SaveSearchExecution
+                  cancelSaveSearch={[Function]}
+                  changeSortingOrder={[Function]}
+                  confirmSaveThisSearch={[Function]}
+                  selectDefaultSorting={[Function]}
+                  trackSearchResultInDashboard={[Function]}
+                  updateSaveSearchName={[Function]}
+                />
+              </div>
+            </div>
           </GridColumn>
         </GridRow>,
         <div
@@ -931,13 +1046,30 @@ ShallowWrapper {
           "children": <GridColumn
             size={12}
           >
-            <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />
+            <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+              <div
+                className={undefined}
+              >
+                <SaveSearchExecution
+                  cancelSaveSearch={[Function]}
+                  changeSortingOrder={[Function]}
+                  confirmSaveThisSearch={[Function]}
+                  selectDefaultSorting={[Function]}
+                  trackSearchResultInDashboard={[Function]}
+                  updateSaveSearchName={[Function]}
+                />
+              </div>
+            </div>
           </GridColumn>,
           "reverse": false,
+          "valign": "bottom",
         },
         "ref": null,
         "rendered": Object {
@@ -945,26 +1077,107 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />,
+            "children": <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+              <div
+                className={undefined}
+              >
+                <SaveSearchExecution
+                  cancelSaveSearch={[Function]}
+                  changeSortingOrder={[Function]}
+                  confirmSaveThisSearch={[Function]}
+                  selectDefaultSorting={[Function]}
+                  trackSearchResultInDashboard={[Function]}
+                  updateSaveSearchName={[Function]}
+                />
+              </div>
+            </div>,
             "size": 12,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "getSavedSearch": [Function],
-              "list": Array [],
-              "onSavedSearchClick": [Function],
+              "children": Array [
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />,
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>,
+              ],
+              "className": undefined,
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "getSavedSearch": [Function],
+                  "list": Array [],
+                  "onSavedSearchClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />,
+                  "className": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "cancelSaveSearch": [Function],
+                    "changeSortingOrder": [Function],
+                    "confirmSaveThisSearch": [Function],
+                    "selectDefaultSorting": [Function],
+                    "trackSearchResultInDashboard": [Function],
+                    "updateSaveSearchName": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
           },
           "type": [Function],
         },
@@ -1524,15 +1737,32 @@ ShallowWrapper {
           </GridRow>,
           <GridRow
             reverse={false}
+            valign="bottom"
           >
             <GridColumn
               size={12}
             >
-              <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />
+              <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
+              </div>
             </GridColumn>
           </GridRow>,
           <div
@@ -1789,13 +2019,30 @@ ShallowWrapper {
             "children": <GridColumn
               size={12}
             >
-              <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />
+              <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
+              </div>
             </GridColumn>,
             "reverse": false,
+            "valign": "bottom",
           },
           "ref": null,
           "rendered": Object {
@@ -1803,26 +2050,107 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />,
+              "children": <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
+              </div>,
               "size": 12,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "getSavedSearch": [Function],
-                "list": Array [],
-                "onSavedSearchClick": [Function],
+                "children": Array [
+                  <SavedSearch
+                    getSavedSearch={[Function]}
+                    list={Array []}
+                    onSavedSearchClick={[Function]}
+                  />,
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>,
+                ],
+                "className": undefined,
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "getSavedSearch": [Function],
+                    "list": Array [],
+                    "onSavedSearchClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />,
+                    "className": undefined,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "cancelSaveSearch": [Function],
+                      "changeSortingOrder": [Function],
+                      "confirmSaveThisSearch": [Function],
+                      "selectDefaultSorting": [Function],
+                      "trackSearchResultInDashboard": [Function],
+                      "updateSaveSearchName": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
             },
             "type": [Function],
           },
@@ -2352,6 +2680,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
+    cancelSaveSearch={[Function]}
+    changeSortingOrder={[Function]}
     clearSearch={[Function]}
     getSavedSearch={[Function]}
     results={
@@ -2364,9 +2694,21 @@ ShallowWrapper {
         ],
       }
     }
+    saveCurrentSearch={[Function]}
+    saveThisSearch={
+      Object {
+        "descending": false,
+        "includeInDashboard": false,
+        "name": "",
+        "sortBy": "",
+      }
+    }
     savedSearch={Array []}
+    selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
+    trackSearchResultInDashboard={[Function]}
+    updateSaveSearchName={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -2430,15 +2772,32 @@ ShallowWrapper {
         </GridRow>,
         <GridRow
           reverse={false}
+          valign="bottom"
         >
           <GridColumn
             size={12}
           >
-            <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />
+            <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+              <div
+                className={undefined}
+              >
+                <SaveSearchExecution
+                  cancelSaveSearch={[Function]}
+                  changeSortingOrder={[Function]}
+                  confirmSaveThisSearch={[Function]}
+                  selectDefaultSorting={[Function]}
+                  trackSearchResultInDashboard={[Function]}
+                  updateSaveSearchName={[Function]}
+                />
+              </div>
+            </div>
           </GridColumn>
         </GridRow>,
         <div
@@ -2695,13 +3054,30 @@ ShallowWrapper {
           "children": <GridColumn
             size={12}
           >
-            <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />
+            <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+              <div
+                className={undefined}
+              >
+                <SaveSearchExecution
+                  cancelSaveSearch={[Function]}
+                  changeSortingOrder={[Function]}
+                  confirmSaveThisSearch={[Function]}
+                  selectDefaultSorting={[Function]}
+                  trackSearchResultInDashboard={[Function]}
+                  updateSaveSearchName={[Function]}
+                />
+              </div>
+            </div>
           </GridColumn>,
           "reverse": false,
+          "valign": "bottom",
         },
         "ref": null,
         "rendered": Object {
@@ -2709,26 +3085,107 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <SavedSearch
-              getSavedSearch={[Function]}
-              list={Array []}
-              onSavedSearchClick={[Function]}
-            />,
+            "children": <div
+              className={undefined}
+            >
+              <SavedSearch
+                getSavedSearch={[Function]}
+                list={Array []}
+                onSavedSearchClick={[Function]}
+              />
+              <div
+                className={undefined}
+              >
+                <SaveSearchExecution
+                  cancelSaveSearch={[Function]}
+                  changeSortingOrder={[Function]}
+                  confirmSaveThisSearch={[Function]}
+                  selectDefaultSorting={[Function]}
+                  trackSearchResultInDashboard={[Function]}
+                  updateSaveSearchName={[Function]}
+                />
+              </div>
+            </div>,
             "size": 12,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "getSavedSearch": [Function],
-              "list": Array [],
-              "onSavedSearchClick": [Function],
+              "children": Array [
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />,
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>,
+              ],
+              "className": undefined,
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "getSavedSearch": [Function],
+                  "list": Array [],
+                  "onSavedSearchClick": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />,
+                  "className": undefined,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "cancelSaveSearch": [Function],
+                    "changeSortingOrder": [Function],
+                    "confirmSaveThisSearch": [Function],
+                    "selectDefaultSorting": [Function],
+                    "trackSearchResultInDashboard": [Function],
+                    "updateSaveSearchName": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
           },
           "type": [Function],
         },
@@ -3288,15 +3745,32 @@ ShallowWrapper {
           </GridRow>,
           <GridRow
             reverse={false}
+            valign="bottom"
           >
             <GridColumn
               size={12}
             >
-              <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />
+              <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
+              </div>
             </GridColumn>
           </GridRow>,
           <div
@@ -3553,13 +4027,30 @@ ShallowWrapper {
             "children": <GridColumn
               size={12}
             >
-              <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />
+              <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
+              </div>
             </GridColumn>,
             "reverse": false,
+            "valign": "bottom",
           },
           "ref": null,
           "rendered": Object {
@@ -3567,26 +4058,107 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <SavedSearch
-                getSavedSearch={[Function]}
-                list={Array []}
-                onSavedSearchClick={[Function]}
-              />,
+              "children": <div
+                className={undefined}
+              >
+                <SavedSearch
+                  getSavedSearch={[Function]}
+                  list={Array []}
+                  onSavedSearchClick={[Function]}
+                />
+                <div
+                  className={undefined}
+                >
+                  <SaveSearchExecution
+                    cancelSaveSearch={[Function]}
+                    changeSortingOrder={[Function]}
+                    confirmSaveThisSearch={[Function]}
+                    selectDefaultSorting={[Function]}
+                    trackSearchResultInDashboard={[Function]}
+                    updateSaveSearchName={[Function]}
+                  />
+                </div>
+              </div>,
               "size": 12,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "getSavedSearch": [Function],
-                "list": Array [],
-                "onSavedSearchClick": [Function],
+                "children": Array [
+                  <SavedSearch
+                    getSavedSearch={[Function]}
+                    list={Array []}
+                    onSavedSearchClick={[Function]}
+                  />,
+                  <div
+                    className={undefined}
+                  >
+                    <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />
+                  </div>,
+                ],
+                "className": undefined,
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "getSavedSearch": [Function],
+                    "list": Array [],
+                    "onSavedSearchClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <SaveSearchExecution
+                      cancelSaveSearch={[Function]}
+                      changeSortingOrder={[Function]}
+                      confirmSaveThisSearch={[Function]}
+                      selectDefaultSorting={[Function]}
+                      trackSearchResultInDashboard={[Function]}
+                      updateSaveSearchName={[Function]}
+                    />,
+                    "className": undefined,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "cancelSaveSearch": [Function],
+                      "changeSortingOrder": [Function],
+                      "confirmSaveThisSearch": [Function],
+                      "selectDefaultSorting": [Function],
+                      "trackSearchResultInDashboard": [Function],
+                      "updateSaveSearchName": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
             },
             "type": [Function],
           },

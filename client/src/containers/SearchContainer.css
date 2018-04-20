@@ -12,3 +12,11 @@
     flex: 1;
     padding-right: 0;
 }
+
+:local(.saveSearch) {
+    display: inline-flex;
+}
+
+:local(.saveSearchExecution) {
+    margin-top: 2.85em;
+}
