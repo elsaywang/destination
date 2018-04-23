@@ -169,7 +169,7 @@ class SearchContainer extends Component {
     };
 
     onClearAll = () => {
-        // this.props.onClearAll();
+        this.props.clearSearch();
         this.setState({
             keyValuePairs: [
                 {
