@@ -1,7 +1,7 @@
+import { isEmpty } from './index';
+
 export const isG6CompliantNumber = value =>
     !(/[^-.0-9]/.test(value) || /.+[-]+$/.test(value) || /\..*\.+$/.test(value));
-
-export const isEmpty = prop => prop.length === 0;
 
 export const isComparisonOperator = operator =>
     operator === '>' || operator === '>=' || operator === '<' || operator === '<=';

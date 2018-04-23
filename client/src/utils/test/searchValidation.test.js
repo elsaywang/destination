@@ -16,24 +16,6 @@ describe('Search Validation Utils', () => {
         });
     });
 
-    describe('isEmpty() should check if string or array passed in is empty', () => {
-        it('given an empty string, it should return true', () => {
-            expect(validationUtils.isEmpty('')).toBe(true);
-        });
-
-        it('given a string value, it should return false', () => {
-            expect(validationUtils.isEmpty('123')).toBe(false);
-        });
-
-        it('given an empty array, it should return true', () => {
-            expect(validationUtils.isEmpty([])).toBe(true);
-        });
-
-        it('given an array of items, it should return false', () => {
-            expect(validationUtils.isEmpty([1, 2, 3])).toBe(false);
-        });
-    });
-
     describe('isValueValid() should check if a value is valid based on passed in operator and value', () => {
         it('should return true when given operator of "==" or "contains" and any value', () => {
             expect(validationUtils.isValueValid({ operator: '==', value: '' })).toBe(true);

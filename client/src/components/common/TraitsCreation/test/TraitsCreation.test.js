@@ -12,7 +12,6 @@ stringifySignals.mockImplementation(() => '');
 
 describe('<TraitsCreation/> component', () => {
     describe('rendering when it is used in Single-Signal Traits Creation', () => {
-        const mockFn = jest.fn();
         const props = {
             dataType: 'ONBOARDED',
             keyValuePairs: [],
@@ -35,7 +34,7 @@ describe('<TraitsCreation/> component', () => {
 
         describe('Trait creation label', () => {
             it('is for creaitng an onboarded trait when the single signal is an onboarded signal', () => {
-                const wrapper = shallow(<TraitsCreation dataType={'ONBOARDED'} />);
+                wrapper.setProps({ dataType: 'ONBOARDED' });
 
                 expect(
                     wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
@@ -43,7 +42,7 @@ describe('<TraitsCreation/> component', () => {
             });
 
             it('is for creating a rule-based trait when the single signal is a real-time signal', () => {
-                const wrapper = shallow(<TraitsCreation dataType={'REALTIME'} />);
+                wrapper.setProps({ dataType: 'REALTIME' });
 
                 expect(
                     wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
@@ -53,7 +52,6 @@ describe('<TraitsCreation/> component', () => {
     });
 
     describe('rendering when it is used in Multi-Signals Traits Creation', () => {
-        const mockFn = jest.fn();
         const props = {
             multiCreation: true,
             selectedSignals: { selectionMessage: '', hasWarning: false, records: [] },
@@ -77,11 +75,17 @@ describe('<TraitsCreation/> component', () => {
 
     describe('getCreateTraitURL', () => {
         stringifySignals.mockClear();
+        const props = {
+            dataType: 'ONBOARDED',
+            keyValuePairs: [],
+        };
+        const wrapper = shallow(<TraitsCreation {...props} />);
 
         it('for single-signal trait creation, calls `stringifySignals` on an array of an object containing the `keyValuePairs` prop', () => {
             const keyValuePairs = [{ key: 'key1', value: 'value1' }];
-            const wrapper = shallow(<TraitsCreation keyValuePairs={keyValuePairs} />);
             const expectedSignals = [{ keyValuePairs }];
+
+            wrapper.setProps({ keyValuePairs });
 
             expect(stringifySignals).toBeCalledWith(expectedSignals);
         });
@@ -90,13 +94,17 @@ describe('<TraitsCreation/> component', () => {
             const selectedSignals = {
                 records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
             };
-            const wrapper = shallow(<TraitsCreation selectedSignals={selectedSignals} />);
+
+            wrapper.setProps({ selectedSignals });
 
             expect(stringifySignals).toBeCalledWith(selectedSignals.records);
         });
 
         it('returns the Create Rule-Based Trait URL when the `dataType` is "REALTIME"', () => {
-            const wrapper = shallow(<TraitsCreation dataType={'REALTIME'} keyValuePairs={[]} />);
+            wrapper.setProps({
+                dataType: 'REALTIME',
+                keyValuePairs: [],
+            });
 
             expect(
                 wrapper
@@ -107,7 +115,10 @@ describe('<TraitsCreation/> component', () => {
         });
 
         it('returns the Create Onboarded Trait URL when the `dataType` is "ONBOARDED"', () => {
-            const wrapper = shallow(<TraitsCreation dataType={'ONBOARDED'} keyValuePairs={[]} />);
+            wrapper.setProps({
+                dataType: 'ONBOARDED',
+                keyValuePairs: [],
+            });
 
             expect(
                 wrapper

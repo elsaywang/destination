@@ -1,9 +1,9 @@
 const getSignalTypeOptions = counts => [
-    { label: `All (${counts.all})`, value: 'all' },
-    { label: `Adobe Analytics (${counts.adobeAnalytics})`, value: 'adobeAnalytics' },
-    { label: `Actionable Log Files (${counts.actionableLogFiles})`, value: 'actionableLogFiles' },
-    { label: `General Online Data (${counts.generalOnlineData})`, value: 'generalOnlineData' },
-    { label: `Onboarded Records (${counts.onboardedRecords})`, value: 'onboardedRecords' },
+    { label: `All (${counts.ALL})`, value: 'ALL' },
+    { label: `Adobe Analytics (${counts.ANALYTICS})`, value: 'ANALYTICS' },
+    { label: `Actionable Log Files (${counts.ALF})`, value: 'ALF' },
+    { label: `General Online Data (${counts.REALTIME})`, value: 'REALTIME' },
+    { label: `Onboarded Records (${counts.ONBOARDED})`, value: 'ONBOARDED' },
 ];
 
 export default getSignalTypeOptions;

@@ -74,7 +74,7 @@ ShallowWrapper {
         ],
       }
     }
-    signalType="all"
+    signalType="ALL"
     sortSearch={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {

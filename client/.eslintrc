@@ -1,11 +1,7 @@
 {
     "extends": "@aam/eslint-config-aam",
-    "plugins": [
-        "prettier"
-    ],
     "rules": {
-        "react/jsx-filename-extension": 0,
-        "prettier/prettier": "error"
+        "react/jsx-filename-extension": 0
     },
     "env": {
         "jest": true

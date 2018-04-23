@@ -28,7 +28,7 @@ describe('<SignalsTable /> component', () => {
                     },
                 ],
             }}
-            signalType="all"
+            signalType="ALL"
             sortSearch={mockFn}
         />,
     );
@@ -61,7 +61,7 @@ describe('<SignalsTable /> component', () => {
 
         it('should return the correct columns when the "All" signal type filter is selected', () => {
             const actualAllSignalsColumnsIncludes = columnKey =>
-                includesColumn(getColumns('all'), columnKey);
+                includesColumn(getColumns('ALL'), columnKey);
 
             expect(actualAllSignalsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(signalType)).toBeTruthy();
@@ -77,7 +77,7 @@ describe('<SignalsTable /> component', () => {
 
         it('should return the correct columns when the "Adobe Analytics" signal type filter is selected and Advanced Search is disabled', () => {
             const actualAnalyticsColumnsIncludes = columnKey =>
-                includesColumn(getColumns('adobeAnalytics'), columnKey);
+                includesColumn(getColumns('ANALYTICS'), columnKey);
 
             expect(actualAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(signalType)).toBeTruthy();
@@ -93,7 +93,7 @@ describe('<SignalsTable /> component', () => {
 
         it('should return the correct columns when the "Adobe Analytics" signal type filter is selected and Advanced Search is enabled', () => {
             const actualAdvancedAnalyticsColumnsIncludes = columnKey =>
-                includesColumn(getColumns('adobeAnalytics', true), columnKey);
+                includesColumn(getColumns('ANALYTICS', true), columnKey);
 
             expect(actualAdvancedAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(keyName)).toBeTruthy();
@@ -109,7 +109,7 @@ describe('<SignalsTable /> component', () => {
 
         it('should return the correct columns when the "Actionable Log Files" signal type filter is selected', () => {
             const actualActionableLogFilesColumnsIncludes = columnKey =>
-                includesColumn(getColumns('actionableLogFiles'), columnKey);
+                includesColumn(getColumns('ALF'), columnKey);
 
             expect(actualActionableLogFilesColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(signalType)).toBeTruthy();
@@ -125,7 +125,7 @@ describe('<SignalsTable /> component', () => {
 
         it('should return the correct columns when the "General Online Data" signal type filter is selected', () => {
             const actualGeneralOnlineDataColumnsIncludes = columnKey =>
-                includesColumn(getColumns('generalOnlineData'), columnKey);
+                includesColumn(getColumns('REALTIME'), columnKey);
 
             expect(actualGeneralOnlineDataColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(signalType)).toBeTruthy();
@@ -141,7 +141,7 @@ describe('<SignalsTable /> component', () => {
 
         it('should return the correct columns when the "Onboarded Records" signal type filter is selected', () => {
             const actualOnboardedRecordsColumnsIncludes = columnKey =>
-                includesColumn(getColumns('onboardedRecords'), columnKey);
+                includesColumn(getColumns('ONBOARDED'), columnKey);
 
             expect(actualOnboardedRecordsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(signalType)).toBeTruthy();

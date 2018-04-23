@@ -11,8 +11,9 @@ var operators = [
 module.exports = () => {
     const data = {
         savedSearch: [],
-        results: {},
+        list: {},
         traits: [],
+        keys: [],
     };
 
     const randomGenerateArray = (item, max = 5) => {
@@ -108,13 +109,19 @@ module.exports = () => {
         });
     }
 
+    // Create 20 keys
+    for (let i = 0; i < 20; i++) {
+        data.keys.push('k-' + faker.name.findName());
+    }
+
     // Create 100 traits
     for (let i = 0; i < 100; i++) {
         data.traits.push({
             ...new Trait(i),
         });
     }
-    data.results = mockResults;
+
+    data.list = mockResults;
 
     return data;
 };
