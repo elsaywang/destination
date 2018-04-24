@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { shallow } from 'enzyme';
 import PropTypes from 'prop-types';
 import SignalsTable from '../SignalsTable';
-import Wait from '@react/react-spectrum/Wait';
 import SavedSearchTable from '../SavedSearchTable';
 
 describe('<SavedSearchTable/> component', () => {
@@ -65,7 +64,7 @@ describe('<SavedSearchTable/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('re-render the <SavedSearchTable/> component with error state', () => {
+        it('re-render the <SavedSearchTable/> component when there is error state', () => {
             const errorState = {
                 tableResults: {},
                 error: 'There is error',

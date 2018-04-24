@@ -105,7 +105,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`<SavedSearchTable/> component state changes based on lifecyle events re-render the <SavedSearchTable/> component with error state 1`] = `
+exports[`<SavedSearchTable/> component state changes based on lifecyle events re-render the <SavedSearchTable/> component when there is error state 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],

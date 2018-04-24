@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import * as searchFormActionCreators from '../actions/searchForm';
+import { callSearch } from '../actions/searchForm';
 import { getSavedSearch } from '../actions/savedSearch';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
@@ -52,7 +52,7 @@ const mapStateToProps = ({ savedSearch }) => ({
     savedSearch,
 });
 const actionCreators = {
-    ...searchFormActionCreators,
+    callSearch,
     getSavedSearch,
 };
 
