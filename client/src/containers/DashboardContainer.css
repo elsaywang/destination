@@ -1,0 +1,9 @@
+:local(.dashboardContainer) {
+    padding: 2em;
+}
+:local(.tableHeader) {
+    display: inline-flex;
+}
+:local(.signalTypeNameHeader) {
+    padding: 1.25em 0 0 1em;
+}

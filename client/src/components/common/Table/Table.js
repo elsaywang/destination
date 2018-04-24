@@ -24,7 +24,15 @@ class Table extends Component {
     }
 
     render() {
-        const { items, columns, renderCell, sortSearch, onSelectionChange, dataTest } = this.props;
+        const {
+            items,
+            columns,
+            renderCell,
+            sortSearch,
+            onSelectionChange,
+            dataTest,
+            allowsSelection,
+        } = this.props;
         const DataSourceWithColumns = withColumns(DataSource, columns);
         const dataSource = new DataSourceWithColumns({
             items,
@@ -38,6 +46,7 @@ class Table extends Component {
                     dataSource={dataSource}
                     renderCell={renderCell}
                     onSelectionChange={onSelectionChange}
+                    allowsSelection={allowsSelection}
                 />
             </div>
         );
@@ -51,6 +60,7 @@ Table.propTypes = {
     onSelectionChange: PropTypes.func,
     sortSearch: PropTypes.func,
     dataTest: PropTypes.string,
+    allowsSelection: PropTypes.bool,
 };
 
 export default Table;

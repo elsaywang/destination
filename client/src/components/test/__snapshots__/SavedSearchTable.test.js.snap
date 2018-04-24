@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SavedSearchTable/> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SavedSearchTable
+    allowsSelection={false}
+    getResultsBySavedSearch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "endDate": "2018-04-23T10:37:26.452Z",
+              "keyValuePairs": Array [
+                Object {
+                  "id": 0,
+                  "key": "k-user-centric",
+                  "operator": ">=",
+                  "value": 31399,
+                },
+              ],
+              "minEventFires": 46276,
+              "name": "Margot O'Hara",
+              "signalStatus": "USED",
+              "source": Object {
+                "dataSourceId": 72599,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+              },
+              "startDate": "2018-04-22T20:41:09.693Z",
+            },
+          ],
+        ],
+      }
+    }
+    isAdvancedSearchEnabled={false}
+    savedSearch={
+      Object {
+        "endDate": "2018-04-23T10:37:26.452Z",
+        "keyValuePairs": Array [
+          Object {
+            "id": 0,
+            "key": "k-user-centric",
+            "operator": ">=",
+            "value": 31399,
+          },
+        ],
+        "minEventFires": 46276,
+        "name": "Margot O'Hara",
+        "signalStatus": "USED",
+        "source": Object {
+          "dataSourceId": 72599,
+          "reportSuiteId": null,
+          "sourceType": "REALTIME",
+        },
+        "startDate": "2018-04-22T20:41:09.693Z",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "allowsSelection": false,
+      "isAdvancedSearchEnabled": false,
+      "isLoaded": false,
+      "results": Object {},
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "allowsSelection": false,
+        "isAdvancedSearchEnabled": false,
+        "isLoaded": false,
+        "results": Object {},
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SavedSearchTable/> component state changes based on lifecyle events re-render the <SavedSearchTable/> component with error state 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SavedSearchTable
+    allowsSelection={false}
+    getResultsBySavedSearch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "endDate": "2018-04-23T10:37:26.452Z",
+              "keyValuePairs": Array [
+                Object {
+                  "id": 0,
+                  "key": "k-user-centric",
+                  "operator": ">=",
+                  "value": 31399,
+                },
+              ],
+              "minEventFires": 46276,
+              "name": "Margot O'Hara",
+              "signalStatus": "USED",
+              "source": Object {
+                "dataSourceId": 72599,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+              },
+              "startDate": "2018-04-22T20:41:09.693Z",
+            },
+          ],
+        ],
+      }
+    }
+    isAdvancedSearchEnabled={false}
+    savedSearch={
+      Object {
+        "endDate": "2018-04-23T10:37:26.452Z",
+        "keyValuePairs": Array [
+          Object {
+            "id": 0,
+            "key": "k-user-centric",
+            "operator": ">=",
+            "value": 31399,
+          },
+        ],
+        "minEventFires": 46276,
+        "name": "Margot O'Hara",
+        "signalStatus": "USED",
+        "source": Object {
+          "dataSourceId": 72599,
+          "reportSuiteId": null,
+          "sourceType": "REALTIME",
+        },
+        "startDate": "2018-04-22T20:41:09.693Z",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "allowsSelection": false,
+      "isAdvancedSearchEnabled": false,
+      "isLoaded": false,
+      "results": Object {},
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "allowsSelection": false,
+        "isAdvancedSearchEnabled": false,
+        "isLoaded": false,
+        "results": Object {},
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SavedSearchTable/> component state changes based on lifecyle events re-render the <SavedSearchTable/> component with new state when no error 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SavedSearchTable
+    allowsSelection={false}
+    getResultsBySavedSearch={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "endDate": "2018-04-23T10:37:26.452Z",
+              "keyValuePairs": Array [
+                Object {
+                  "id": 0,
+                  "key": "k-user-centric",
+                  "operator": ">=",
+                  "value": 31399,
+                },
+              ],
+              "minEventFires": 46276,
+              "name": "Margot O'Hara",
+              "signalStatus": "USED",
+              "source": Object {
+                "dataSourceId": 72599,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+              },
+              "startDate": "2018-04-22T20:41:09.693Z",
+            },
+          ],
+        ],
+      }
+    }
+    isAdvancedSearchEnabled={false}
+    savedSearch={
+      Object {
+        "endDate": "2018-04-23T10:37:26.452Z",
+        "keyValuePairs": Array [
+          Object {
+            "id": 0,
+            "key": "k-user-centric",
+            "operator": ">=",
+            "value": 31399,
+          },
+        ],
+        "minEventFires": 46276,
+        "name": "Margot O'Hara",
+        "signalStatus": "USED",
+        "source": Object {
+          "dataSourceId": 72599,
+          "reportSuiteId": null,
+          "sourceType": "REALTIME",
+        },
+        "startDate": "2018-04-22T20:41:09.693Z",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "allowsSelection": false,
+      "isAdvancedSearchEnabled": false,
+      "isLoaded": true,
+      "results": Object {
+        "includedInTraits": Array [
+          1,
+          2,
+          3,
+        ],
+        "keyValuePairs": Array [
+          Object {
+            "key": "k-regional",
+            "operator": "<",
+            "value": 57091,
+          },
+        ],
+        "percentageChange": 0.154,
+        "signalStatus": "USED",
+        "source": Object {
+          "dataSourceId": 93561,
+          "reportSuiteId": null,
+          "sourceType": "REALTIME",
+        },
+        "totalCounts": 21456,
+      },
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "allowsSelection": false,
+        "isAdvancedSearchEnabled": false,
+        "isLoaded": true,
+        "results": Object {
+          "includedInTraits": Array [
+            1,
+            2,
+            3,
+          ],
+          "keyValuePairs": Array [
+            Object {
+              "key": "k-regional",
+              "operator": "<",
+              "value": 57091,
+            },
+          ],
+          "percentageChange": 0.154,
+          "signalStatus": "USED",
+          "source": Object {
+            "dataSourceId": 93561,
+            "reportSuiteId": null,
+            "sourceType": "REALTIME",
+          },
+          "totalCounts": 21456,
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
