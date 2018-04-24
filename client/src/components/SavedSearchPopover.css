@@ -1,0 +1,7 @@
+:local(.block) {
+    margin: 0 0 10px;
+}
+
+:local(.text-label) {
+    color: #888;
+}

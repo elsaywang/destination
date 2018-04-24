@@ -1,6 +1,6 @@
-import { stringifyKeyValuePair, stringifySignals } from '../stringifySignals';
+import { formatKeyValuePair, stringifySignals } from '../stringifySignals';
 
-describe('stringifyKeyValuePair', () => {
+describe('formatKeyValuePair', () => {
     it('should stringify a single key-value pair', () => {
         const keyValuePair = {
             key: 'eVar1',
@@ -8,7 +8,7 @@ describe('stringifyKeyValuePair', () => {
             value: 'xyz123',
         };
 
-        expect(stringifyKeyValuePair(keyValuePair)).toEqual('eVar1>"xyz123"');
+        expect(formatKeyValuePair(keyValuePair)).toEqual('eVar1>"xyz123"');
     });
     it('should stingify empty key in quotation marks', () => {
         const keyValuePair = {
@@ -16,7 +16,7 @@ describe('stringifyKeyValuePair', () => {
             value: 'xyz123',
         };
 
-        expect(stringifyKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"=="xyz123"`);
+        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"=="xyz123"`);
     });
     it('should stingify empty value in quotation marks', () => {
         const keyValuePair = {
@@ -24,7 +24,7 @@ describe('stringifyKeyValuePair', () => {
             value: '',
         };
 
-        expect(stringifyKeyValuePair(keyValuePair)).toEqual(String.raw`eVar1==\"\"`);
+        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`eVar1==\"\"`);
     });
     it('should stingify empty key and value in quotation marks', () => {
         const keyValuePair = {
@@ -32,7 +32,7 @@ describe('stringifyKeyValuePair', () => {
             value: '',
         };
 
-        expect(stringifyKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"==\"\"`);
+        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"==\"\"`);
     });
 });
 

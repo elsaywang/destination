@@ -1,17 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TagList, Tag } from '@react/react-spectrum/TagList';
+import SavedSearchPopover from './SavedSearchPopover';
+import { TagList } from '@react/react-spectrum/TagList';
 
 function SavedSearchTagList({ list, onSavedSearchClick }) {
-    const renderTag = search => (
-        <Tag
-            data-test="saved-search-tag"
-            style={{ cursor: 'pointer' }}
-            key={search.name}
-            value={search.name}
-            onClick={onSavedSearchClick.bind(this, search)}
-        />
-    );
+    const renderTag = search => <SavedSearchPopover key={search.name} search={search} onSavedSearchClick={onSavedSearchClick} />;
 
     return (
         <TagList data-test="saved-search-tag-list" readOnly>

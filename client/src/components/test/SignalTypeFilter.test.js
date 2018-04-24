@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import SignalTypeFilter from '../SignalTypeFilter';
 import Heading from '@react/react-spectrum/Heading';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
-import getSignalTypeOptions from '../../constants/getSignalTypeOptions';
+import { getSignalTypeOptions } from '../../constants/signalTypeOptions';
 
 describe('<SignalTypeFilter /> component', () => {
     const mockFn = jest.fn();

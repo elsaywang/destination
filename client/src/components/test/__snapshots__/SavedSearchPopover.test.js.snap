@@ -1,0 +1,1785 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SavedSearchPopover /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SavedSearchPopover
+    onSavedSearchClick={[MockFunction]}
+    search={
+      Object {
+        "endDate": "2018-04-25T12:15:25.260Z",
+        "keyValuePairs": Array [
+          Object {
+            "key": "k-Licensed",
+            "operator": ">=",
+            "value": 67425,
+          },
+          Object {
+            "key": "k-Gorgeous Wooden Shirt",
+            "operator": "<=",
+            "value": 98396,
+          },
+        ],
+        "minEventFires": 88991,
+        "name": "Loren Waters",
+        "signalStatus": "USED",
+        "sorting": "Key Value Pairs",
+        "source": Object {
+          "dataSourceId": 86195,
+          "dataType": "Real-Time",
+          "reportSuiteId": null,
+          "sourceType": "REALTIME",
+        },
+        "startDate": "2018-04-25T10:41:43.179Z",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <OverlayTrigger
+        boundariesElement="container"
+        crossOffset={0}
+        data-test="saved-search-overlay-trigger"
+        defaultShow={false}
+        flip={true}
+        offset={0}
+        placement="left"
+        trigger="hover"
+      >
+        <Tag
+          data-test="saved-search-tag"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          value="Loren Waters"
+        />
+        <Popover
+          data-test="saved-search-popover"
+          open={true}
+          placement="bottom"
+          title="Loren Waters"
+          variant="default"
+        >
+          <FieldLabel
+            label="Name"
+            style={
+              Object {
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            <div
+              className={undefined}
+            >
+              Loren Waters
+            </div>
+          </FieldLabel>
+          <FieldLabel
+            label="Search Query"
+            style={
+              Object {
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            <div
+              className={undefined}
+            >
+              k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+            </div>
+          </FieldLabel>
+          <Label
+            className={undefined}
+            style={
+              Object {
+                "marginTop": 0,
+                "textTransform": "uppercase",
+              }
+            }
+            value="Filters"
+          >
+            <div>
+              <span
+                className={undefined}
+              >
+                Signal Status: 
+              </span>
+              <span
+                style={
+                  Object {
+                    "verticalAlign": "bottom",
+                  }
+                }
+              >
+                Signals Included in Traits
+              </span>
+            </div>
+            <div>
+              <span
+                className={undefined}
+              >
+                Data Type: 
+              </span>
+              <span
+                style={
+                  Object {
+                    "verticalAlign": "bottom",
+                  }
+                }
+              >
+                Real-Time
+              </span>
+            </div>
+            <div>
+              <span
+                className={undefined}
+              >
+                Signal Source: 
+              </span>
+              <span
+                style={
+                  Object {
+                    "verticalAlign": "bottom",
+                  }
+                }
+              >
+                General Online Data
+              </span>
+            </div>
+            <div>
+              <span
+                className={undefined}
+              >
+                View Records For: 
+              </span>
+              <span
+                style={
+                  Object {
+                    "verticalAlign": "bottom",
+                  }
+                }
+              >
+                Wed Apr 25 2018
+                 - 
+                Wed Apr 25 2018
+              </span>
+            </div>
+          </Label>
+          <FieldLabel
+            label="Sorting"
+            style={
+              Object {
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            <div
+              className={undefined}
+            >
+              Key Value Pairs
+            </div>
+          </FieldLabel>
+        </Popover>
+      </OverlayTrigger>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "boundariesElement": "container",
+        "children": Array [
+          <Tag
+            data-test="saved-search-tag"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            value="Loren Waters"
+          />,
+          <Popover
+            data-test="saved-search-popover"
+            open={true}
+            placement="bottom"
+            title="Loren Waters"
+            variant="default"
+          >
+            <FieldLabel
+              label="Name"
+              style={
+                Object {
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              <div
+                className={undefined}
+              >
+                Loren Waters
+              </div>
+            </FieldLabel>
+            <FieldLabel
+              label="Search Query"
+              style={
+                Object {
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              <div
+                className={undefined}
+              >
+                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+              </div>
+            </FieldLabel>
+            <Label
+              className={undefined}
+              style={
+                Object {
+                  "marginTop": 0,
+                  "textTransform": "uppercase",
+                }
+              }
+              value="Filters"
+            >
+              <div>
+                <span
+                  className={undefined}
+                >
+                  Signal Status: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  Signals Included in Traits
+                </span>
+              </div>
+              <div>
+                <span
+                  className={undefined}
+                >
+                  Data Type: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  Real-Time
+                </span>
+              </div>
+              <div>
+                <span
+                  className={undefined}
+                >
+                  Signal Source: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  General Online Data
+                </span>
+              </div>
+              <div>
+                <span
+                  className={undefined}
+                >
+                  View Records For: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  Wed Apr 25 2018
+                   - 
+                  Wed Apr 25 2018
+                </span>
+              </div>
+            </Label>
+            <FieldLabel
+              label="Sorting"
+              style={
+                Object {
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              <div
+                className={undefined}
+              >
+                Key Value Pairs
+              </div>
+            </FieldLabel>
+          </Popover>,
+        ],
+        "crossOffset": 0,
+        "data-test": "saved-search-overlay-trigger",
+        "defaultShow": false,
+        "flip": true,
+        "offset": 0,
+        "placement": "left",
+        "trigger": "hover",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Loren Waters",
+          "nodeType": "function",
+          "props": Object {
+            "data-test": "saved-search-tag",
+            "onClick": [Function],
+            "style": Object {
+              "cursor": "pointer",
+            },
+            "value": "Loren Waters",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <FieldLabel
+                label="Name"
+                style={
+                  Object {
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                >
+                  Loren Waters
+                </div>
+              </FieldLabel>,
+              <FieldLabel
+                label="Search Query"
+                style={
+                  Object {
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                >
+                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                </div>
+              </FieldLabel>,
+              <Label
+                className={undefined}
+                style={
+                  Object {
+                    "marginTop": 0,
+                    "textTransform": "uppercase",
+                  }
+                }
+                value="Filters"
+              >
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    Signal Status: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    Signals Included in Traits
+                  </span>
+                </div>
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    Data Type: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    Real-Time
+                  </span>
+                </div>
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    Signal Source: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    General Online Data
+                  </span>
+                </div>
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    View Records For: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    Wed Apr 25 2018
+                     - 
+                    Wed Apr 25 2018
+                  </span>
+                </div>
+              </Label>,
+              <FieldLabel
+                label="Sorting"
+                style={
+                  Object {
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                >
+                  Key Value Pairs
+                </div>
+              </FieldLabel>,
+            ],
+            "data-test": "saved-search-popover",
+            "open": true,
+            "placement": "bottom",
+            "title": "Loren Waters",
+            "variant": "default",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <div
+                  className={undefined}
+                >
+                  Loren Waters
+                </div>,
+                "label": "Name",
+                "style": Object {
+                  "textTransform": "uppercase",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Loren Waters",
+                  "className": undefined,
+                },
+                "ref": null,
+                "rendered": "Loren Waters",
+                "type": "div",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <div
+                  className={undefined}
+                >
+                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                </div>,
+                "label": "Search Query",
+                "style": Object {
+                  "textTransform": "uppercase",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                  "className": undefined,
+                },
+                "ref": null,
+                "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                "type": "div",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      Signal Status: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      Signals Included in Traits
+                    </span>
+                  </div>,
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      Data Type: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      Real-Time
+                    </span>
+                  </div>,
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      Signal Source: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      General Online Data
+                    </span>
+                  </div>,
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      View Records For: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      Wed Apr 25 2018
+                       - 
+                      Wed Apr 25 2018
+                    </span>
+                  </div>,
+                ],
+                "className": undefined,
+                "style": Object {
+                  "marginTop": 0,
+                  "textTransform": "uppercase",
+                },
+                "value": "Filters",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className={undefined}
+                      >
+                        Signal Status: 
+                      </span>,
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        Signals Included in Traits
+                      </span>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Signal Status: ",
+                        "className": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "Signal Status: ",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Signals Included in Traits",
+                        "style": Object {
+                          "verticalAlign": "bottom",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Signals Included in Traits",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className={undefined}
+                      >
+                        Data Type: 
+                      </span>,
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        Real-Time
+                      </span>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Data Type: ",
+                        "className": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "Data Type: ",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Real-Time",
+                        "style": Object {
+                          "verticalAlign": "bottom",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Real-Time",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className={undefined}
+                      >
+                        Signal Source: 
+                      </span>,
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        General Online Data
+                      </span>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Signal Source: ",
+                        "className": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "Signal Source: ",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "General Online Data",
+                        "style": Object {
+                          "verticalAlign": "bottom",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "General Online Data",
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span
+                        className={undefined}
+                      >
+                        View Records For: 
+                      </span>,
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        Wed Apr 25 2018
+                         - 
+                        Wed Apr 25 2018
+                      </span>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "View Records For: ",
+                        "className": undefined,
+                      },
+                      "ref": null,
+                      "rendered": "View Records For: ",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "Wed Apr 25 2018",
+                          " - ",
+                          "Wed Apr 25 2018",
+                        ],
+                        "style": Object {
+                          "verticalAlign": "bottom",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Wed Apr 25 2018",
+                        " - ",
+                        "Wed Apr 25 2018",
+                      ],
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <div
+                  className={undefined}
+                >
+                  Key Value Pairs
+                </div>,
+                "label": "Sorting",
+                "style": Object {
+                  "textTransform": "uppercase",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Key Value Pairs",
+                  "className": undefined,
+                },
+                "ref": null,
+                "rendered": "Key Value Pairs",
+                "type": "div",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <OverlayTrigger
+          boundariesElement="container"
+          crossOffset={0}
+          data-test="saved-search-overlay-trigger"
+          defaultShow={false}
+          flip={true}
+          offset={0}
+          placement="left"
+          trigger="hover"
+        >
+          <Tag
+            data-test="saved-search-tag"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            value="Loren Waters"
+          />
+          <Popover
+            data-test="saved-search-popover"
+            open={true}
+            placement="bottom"
+            title="Loren Waters"
+            variant="default"
+          >
+            <FieldLabel
+              label="Name"
+              style={
+                Object {
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              <div
+                className={undefined}
+              >
+                Loren Waters
+              </div>
+            </FieldLabel>
+            <FieldLabel
+              label="Search Query"
+              style={
+                Object {
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              <div
+                className={undefined}
+              >
+                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+              </div>
+            </FieldLabel>
+            <Label
+              className={undefined}
+              style={
+                Object {
+                  "marginTop": 0,
+                  "textTransform": "uppercase",
+                }
+              }
+              value="Filters"
+            >
+              <div>
+                <span
+                  className={undefined}
+                >
+                  Signal Status: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  Signals Included in Traits
+                </span>
+              </div>
+              <div>
+                <span
+                  className={undefined}
+                >
+                  Data Type: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  Real-Time
+                </span>
+              </div>
+              <div>
+                <span
+                  className={undefined}
+                >
+                  Signal Source: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  General Online Data
+                </span>
+              </div>
+              <div>
+                <span
+                  className={undefined}
+                >
+                  View Records For: 
+                </span>
+                <span
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  Wed Apr 25 2018
+                   - 
+                  Wed Apr 25 2018
+                </span>
+              </div>
+            </Label>
+            <FieldLabel
+              label="Sorting"
+              style={
+                Object {
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              <div
+                className={undefined}
+              >
+                Key Value Pairs
+              </div>
+            </FieldLabel>
+          </Popover>
+        </OverlayTrigger>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "boundariesElement": "container",
+          "children": Array [
+            <Tag
+              data-test="saved-search-tag"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              value="Loren Waters"
+            />,
+            <Popover
+              data-test="saved-search-popover"
+              open={true}
+              placement="bottom"
+              title="Loren Waters"
+              variant="default"
+            >
+              <FieldLabel
+                label="Name"
+                style={
+                  Object {
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                >
+                  Loren Waters
+                </div>
+              </FieldLabel>
+              <FieldLabel
+                label="Search Query"
+                style={
+                  Object {
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                >
+                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                </div>
+              </FieldLabel>
+              <Label
+                className={undefined}
+                style={
+                  Object {
+                    "marginTop": 0,
+                    "textTransform": "uppercase",
+                  }
+                }
+                value="Filters"
+              >
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    Signal Status: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    Signals Included in Traits
+                  </span>
+                </div>
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    Data Type: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    Real-Time
+                  </span>
+                </div>
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    Signal Source: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    General Online Data
+                  </span>
+                </div>
+                <div>
+                  <span
+                    className={undefined}
+                  >
+                    View Records For: 
+                  </span>
+                  <span
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    Wed Apr 25 2018
+                     - 
+                    Wed Apr 25 2018
+                  </span>
+                </div>
+              </Label>
+              <FieldLabel
+                label="Sorting"
+                style={
+                  Object {
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                >
+                  Key Value Pairs
+                </div>
+              </FieldLabel>
+            </Popover>,
+          ],
+          "crossOffset": 0,
+          "data-test": "saved-search-overlay-trigger",
+          "defaultShow": false,
+          "flip": true,
+          "offset": 0,
+          "placement": "left",
+          "trigger": "hover",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "Loren Waters",
+            "nodeType": "function",
+            "props": Object {
+              "data-test": "saved-search-tag",
+              "onClick": [Function],
+              "style": Object {
+                "cursor": "pointer",
+              },
+              "value": "Loren Waters",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <FieldLabel
+                  label="Name"
+                  style={
+                    Object {
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  <div
+                    className={undefined}
+                  >
+                    Loren Waters
+                  </div>
+                </FieldLabel>,
+                <FieldLabel
+                  label="Search Query"
+                  style={
+                    Object {
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  <div
+                    className={undefined}
+                  >
+                    k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                  </div>
+                </FieldLabel>,
+                <Label
+                  className={undefined}
+                  style={
+                    Object {
+                      "marginTop": 0,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                  value="Filters"
+                >
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      Signal Status: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      Signals Included in Traits
+                    </span>
+                  </div>
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      Data Type: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      Real-Time
+                    </span>
+                  </div>
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      Signal Source: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      General Online Data
+                    </span>
+                  </div>
+                  <div>
+                    <span
+                      className={undefined}
+                    >
+                      View Records For: 
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      Wed Apr 25 2018
+                       - 
+                      Wed Apr 25 2018
+                    </span>
+                  </div>
+                </Label>,
+                <FieldLabel
+                  label="Sorting"
+                  style={
+                    Object {
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  <div
+                    className={undefined}
+                  >
+                    Key Value Pairs
+                  </div>
+                </FieldLabel>,
+              ],
+              "data-test": "saved-search-popover",
+              "open": true,
+              "placement": "bottom",
+              "title": "Loren Waters",
+              "variant": "default",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <div
+                    className={undefined}
+                  >
+                    Loren Waters
+                  </div>,
+                  "label": "Name",
+                  "style": Object {
+                    "textTransform": "uppercase",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Loren Waters",
+                    "className": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Loren Waters",
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <div
+                    className={undefined}
+                  >
+                    k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                  </div>,
+                  "label": "Search Query",
+                  "style": Object {
+                    "textTransform": "uppercase",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                    "className": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      <span
+                        className={undefined}
+                      >
+                        Signal Status: 
+                      </span>
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        Signals Included in Traits
+                      </span>
+                    </div>,
+                    <div>
+                      <span
+                        className={undefined}
+                      >
+                        Data Type: 
+                      </span>
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        Real-Time
+                      </span>
+                    </div>,
+                    <div>
+                      <span
+                        className={undefined}
+                      >
+                        Signal Source: 
+                      </span>
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        General Online Data
+                      </span>
+                    </div>,
+                    <div>
+                      <span
+                        className={undefined}
+                      >
+                        View Records For: 
+                      </span>
+                      <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        Wed Apr 25 2018
+                         - 
+                        Wed Apr 25 2018
+                      </span>
+                    </div>,
+                  ],
+                  "className": undefined,
+                  "style": Object {
+                    "marginTop": 0,
+                    "textTransform": "uppercase",
+                  },
+                  "value": "Filters",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span
+                          className={undefined}
+                        >
+                          Signal Status: 
+                        </span>,
+                        <span
+                          style={
+                            Object {
+                              "verticalAlign": "bottom",
+                            }
+                          }
+                        >
+                          Signals Included in Traits
+                        </span>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Signal Status: ",
+                          "className": undefined,
+                        },
+                        "ref": null,
+                        "rendered": "Signal Status: ",
+                        "type": "span",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Signals Included in Traits",
+                          "style": Object {
+                            "verticalAlign": "bottom",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": "Signals Included in Traits",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span
+                          className={undefined}
+                        >
+                          Data Type: 
+                        </span>,
+                        <span
+                          style={
+                            Object {
+                              "verticalAlign": "bottom",
+                            }
+                          }
+                        >
+                          Real-Time
+                        </span>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Data Type: ",
+                          "className": undefined,
+                        },
+                        "ref": null,
+                        "rendered": "Data Type: ",
+                        "type": "span",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Real-Time",
+                          "style": Object {
+                            "verticalAlign": "bottom",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": "Real-Time",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span
+                          className={undefined}
+                        >
+                          Signal Source: 
+                        </span>,
+                        <span
+                          style={
+                            Object {
+                              "verticalAlign": "bottom",
+                            }
+                          }
+                        >
+                          General Online Data
+                        </span>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Signal Source: ",
+                          "className": undefined,
+                        },
+                        "ref": null,
+                        "rendered": "Signal Source: ",
+                        "type": "span",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "General Online Data",
+                          "style": Object {
+                            "verticalAlign": "bottom",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": "General Online Data",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <span
+                          className={undefined}
+                        >
+                          View Records For: 
+                        </span>,
+                        <span
+                          style={
+                            Object {
+                              "verticalAlign": "bottom",
+                            }
+                          }
+                        >
+                          Wed Apr 25 2018
+                           - 
+                          Wed Apr 25 2018
+                        </span>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "View Records For: ",
+                          "className": undefined,
+                        },
+                        "ref": null,
+                        "rendered": "View Records For: ",
+                        "type": "span",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Wed Apr 25 2018",
+                            " - ",
+                            "Wed Apr 25 2018",
+                          ],
+                          "style": Object {
+                            "verticalAlign": "bottom",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Wed Apr 25 2018",
+                          " - ",
+                          "Wed Apr 25 2018",
+                        ],
+                        "type": "span",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <div
+                    className={undefined}
+                  >
+                    Key Value Pairs
+                  </div>,
+                  "label": "Sorting",
+                  "style": Object {
+                    "textTransform": "uppercase",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Key Value Pairs",
+                    "className": undefined,
+                  },
+                  "ref": null,
+                  "rendered": "Key Value Pairs",
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
