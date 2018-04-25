@@ -21,7 +21,7 @@ class SearchContainer extends Component {
                         Object.keys(search).length && (
                             <div className={styles.dashboardContainer} key={search.name}>
                                 <GridRow valign="middle">
-                                    <GridColumn size={11}>
+                                    <GridColumn size={5}>
                                         <div className={styles.tableHeader}>
                                             <Heading size={3}>{search.name}</Heading>
                                             <span className={styles.signalTypeNameHeader}>
@@ -29,8 +29,12 @@ class SearchContainer extends Component {
                                             </span>
                                         </div>
                                     </GridColumn>
-                                    <GridColumn size={1}>
-                                        <Button label="Show More" variant="primary" />
+                                    <GridColumn size={7}>
+                                        <GridRow>
+                                            <GridColumn size={2} offsetSize={10}>
+                                                <Button label="View More" variant="primary" />
+                                            </GridColumn>
+                                        </GridRow>
                                     </GridColumn>
                                 </GridRow>
                                 <SavedSearchTable
