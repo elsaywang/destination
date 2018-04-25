@@ -1,4 +1,4 @@
-:local(.dashboardContainer) {
+:local(.dashboardTable) {
     padding: 2em;
 }
 :local(.tableHeader) {

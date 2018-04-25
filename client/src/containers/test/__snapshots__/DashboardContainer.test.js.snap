@@ -126,6 +126,7 @@ ShallowWrapper {
       "children": Array [
         <div
           className={undefined}
+          data-test="dashboard-search-table"
         >
           <GridRow
             reverse={false}
@@ -202,6 +203,7 @@ ShallowWrapper {
         </div>,
         <div
           className={undefined}
+          data-test="dashboard-search-table"
         >
           <GridRow
             reverse={false}
@@ -360,6 +362,7 @@ ShallowWrapper {
             />,
           ],
           "className": undefined,
+          "data-test": "dashboard-search-table",
         },
         "ref": null,
         "rendered": Array [
@@ -699,6 +702,7 @@ ShallowWrapper {
             />,
           ],
           "className": undefined,
+          "data-test": "dashboard-search-table",
         },
         "ref": null,
         "rendered": Array [
@@ -970,6 +974,7 @@ ShallowWrapper {
         "children": Array [
           <div
             className={undefined}
+            data-test="dashboard-search-table"
           >
             <GridRow
               reverse={false}
@@ -1046,6 +1051,7 @@ ShallowWrapper {
           </div>,
           <div
             className={undefined}
+            data-test="dashboard-search-table"
           >
             <GridRow
               reverse={false}
@@ -1204,6 +1210,7 @@ ShallowWrapper {
               />,
             ],
             "className": undefined,
+            "data-test": "dashboard-search-table",
           },
           "ref": null,
           "rendered": Array [
@@ -1543,6 +1550,7 @@ ShallowWrapper {
               />,
             ],
             "className": undefined,
+            "data-test": "dashboard-search-table",
           },
           "ref": null,
           "rendered": Array [

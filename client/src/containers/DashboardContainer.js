@@ -19,7 +19,10 @@ class SearchContainer extends Component {
                 {this.props.savedSearch.map(search => {
                     return (
                         Object.keys(search).length && (
-                            <div className={styles.dashboardContainer} key={search.name}>
+                            <div
+                                data-test="dashboard-search-table"
+                                className={styles.dashboardTable}
+                                key={search.name}>
                                 <GridRow valign="middle">
                                     <GridColumn size={5}>
                                         <div className={styles.tableHeader}>
