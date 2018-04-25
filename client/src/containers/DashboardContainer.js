@@ -13,7 +13,6 @@ class SearchContainer extends Component {
     componentDidMount() {
         this.props.getSavedSearch();
     }
-
     render() {
         return (
             <Fragment>
@@ -36,7 +35,16 @@ class SearchContainer extends Component {
                                     <GridColumn size={7}>
                                         <GridRow>
                                             <GridColumn size={2} offsetSize={10}>
-                                                <Button label="View More" variant="primary" />
+                                                <Button
+                                                    label="View More"
+                                                    variant="primary"
+                                                    element="a"
+                                                    href="#/search"
+                                                    onClick={this.props.callSearch.bind(
+                                                        this,
+                                                        search,
+                                                    )}
+                                                />
                                             </GridColumn>
                                         </GridRow>
                                     </GridColumn>

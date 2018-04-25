@@ -161,10 +161,12 @@ ShallowWrapper {
                   <Button
                     block={false}
                     disabled={false}
-                    element="button"
+                    element="a"
+                    href="#/search"
                     invalid={false}
                     label="View More"
                     logic={false}
+                    onClick={[Function]}
                     quiet={false}
                     selected={false}
                     variant="primary"
@@ -238,10 +240,12 @@ ShallowWrapper {
                   <Button
                     block={false}
                     disabled={false}
-                    element="button"
+                    element="a"
+                    href="#/search"
                     invalid={false}
                     label="View More"
                     logic={false}
+                    onClick={[Function]}
                     quiet={false}
                     selected={false}
                     variant="primary"
@@ -321,10 +325,12 @@ ShallowWrapper {
                     <Button
                       block={false}
                       disabled={false}
-                      element="button"
+                      element="a"
+                      href="#/search"
                       invalid={false}
                       label="View More"
                       logic={false}
+                      onClick={[Function]}
                       quiet={false}
                       selected={false}
                       variant="primary"
@@ -401,10 +407,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -501,10 +509,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -526,10 +536,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -546,10 +558,12 @@ ShallowWrapper {
                       "children": <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -565,10 +579,12 @@ ShallowWrapper {
                       "props": Object {
                         "block": false,
                         "disabled": false,
-                        "element": "button",
+                        "element": "a",
+                        "href": "#/search",
                         "invalid": false,
                         "label": "View More",
                         "logic": false,
+                        "onClick": [Function],
                         "quiet": false,
                         "selected": false,
                         "variant": "primary",
@@ -661,10 +677,12 @@ ShallowWrapper {
                     <Button
                       block={false}
                       disabled={false}
-                      element="button"
+                      element="a"
+                      href="#/search"
                       invalid={false}
                       label="View More"
                       logic={false}
+                      onClick={[Function]}
                       quiet={false}
                       selected={false}
                       variant="primary"
@@ -741,10 +759,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -841,10 +861,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -866,10 +888,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -886,10 +910,12 @@ ShallowWrapper {
                       "children": <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -905,10 +931,12 @@ ShallowWrapper {
                       "props": Object {
                         "block": false,
                         "disabled": false,
-                        "element": "button",
+                        "element": "a",
+                        "href": "#/search",
                         "invalid": false,
                         "label": "View More",
                         "logic": false,
+                        "onClick": [Function],
                         "quiet": false,
                         "selected": false,
                         "variant": "primary",
@@ -1009,10 +1037,12 @@ ShallowWrapper {
                     <Button
                       block={false}
                       disabled={false}
-                      element="button"
+                      element="a"
+                      href="#/search"
                       invalid={false}
                       label="View More"
                       logic={false}
+                      onClick={[Function]}
                       quiet={false}
                       selected={false}
                       variant="primary"
@@ -1086,10 +1116,12 @@ ShallowWrapper {
                     <Button
                       block={false}
                       disabled={false}
-                      element="button"
+                      element="a"
+                      href="#/search"
                       invalid={false}
                       label="View More"
                       logic={false}
+                      onClick={[Function]}
                       quiet={false}
                       selected={false}
                       variant="primary"
@@ -1169,10 +1201,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -1249,10 +1283,12 @@ ShallowWrapper {
                         <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1349,10 +1385,12 @@ ShallowWrapper {
                         <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1374,10 +1412,12 @@ ShallowWrapper {
                         <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1394,10 +1434,12 @@ ShallowWrapper {
                         "children": <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1413,10 +1455,12 @@ ShallowWrapper {
                         "props": Object {
                           "block": false,
                           "disabled": false,
-                          "element": "button",
+                          "element": "a",
+                          "href": "#/search",
                           "invalid": false,
                           "label": "View More",
                           "logic": false,
+                          "onClick": [Function],
                           "quiet": false,
                           "selected": false,
                           "variant": "primary",
@@ -1509,10 +1553,12 @@ ShallowWrapper {
                       <Button
                         block={false}
                         disabled={false}
-                        element="button"
+                        element="a"
+                        href="#/search"
                         invalid={false}
                         label="View More"
                         logic={false}
+                        onClick={[Function]}
                         quiet={false}
                         selected={false}
                         variant="primary"
@@ -1589,10 +1635,12 @@ ShallowWrapper {
                         <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1689,10 +1737,12 @@ ShallowWrapper {
                         <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1714,10 +1764,12 @@ ShallowWrapper {
                         <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1734,10 +1786,12 @@ ShallowWrapper {
                         "children": <Button
                           block={false}
                           disabled={false}
-                          element="button"
+                          element="a"
+                          href="#/search"
                           invalid={false}
                           label="View More"
                           logic={false}
+                          onClick={[Function]}
                           quiet={false}
                           selected={false}
                           variant="primary"
@@ -1753,10 +1807,12 @@ ShallowWrapper {
                         "props": Object {
                           "block": false,
                           "disabled": false,
-                          "element": "button",
+                          "element": "a",
+                          "href": "#/search",
                           "invalid": false,
                           "label": "View More",
                           "logic": false,
+                          "onClick": [Function],
                           "quiet": false,
                           "selected": false,
                           "variant": "primary",
