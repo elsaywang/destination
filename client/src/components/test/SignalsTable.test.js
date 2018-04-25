@@ -30,6 +30,7 @@ describe('<SignalsTable /> component', () => {
             }}
             signalType="ALL"
             sortSearch={mockFn}
+            allowsSelection
         />,
     );
 
