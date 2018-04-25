@@ -124,7 +124,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <div
+        <Well
           className={undefined}
           data-test="dashboard-search-table"
         >
@@ -200,8 +200,8 @@ ShallowWrapper {
               }
             }
           />
-        </div>,
-        <div
+        </Well>,
+        <Well
           className={undefined}
           data-test="dashboard-search-table"
         >
@@ -277,7 +277,7 @@ ShallowWrapper {
               }
             }
           />
-        </div>,
+        </Well>,
       ],
     },
     "ref": null,
@@ -285,7 +285,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "Margot O'Hara",
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
           "children": Array [
             <GridRow
@@ -620,12 +620,12 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
-        "type": "div",
+        "type": [Function],
       },
       Object {
         "instance": null,
         "key": "Margot O'Hara",
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
           "children": Array [
             <GridRow
@@ -960,7 +960,7 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
-        "type": "div",
+        "type": [Function],
       },
     ],
     "type": Symbol(react.fragment),
@@ -972,7 +972,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <div
+          <Well
             className={undefined}
             data-test="dashboard-search-table"
           >
@@ -1048,8 +1048,8 @@ ShallowWrapper {
                 }
               }
             />
-          </div>,
-          <div
+          </Well>,
+          <Well
             className={undefined}
             data-test="dashboard-search-table"
           >
@@ -1125,7 +1125,7 @@ ShallowWrapper {
                 }
               }
             />
-          </div>,
+          </Well>,
         ],
       },
       "ref": null,
@@ -1133,7 +1133,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "Margot O'Hara",
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
             "children": Array [
               <GridRow
@@ -1468,12 +1468,12 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
-          "type": "div",
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": "Margot O'Hara",
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
             "children": Array [
               <GridRow
@@ -1808,7 +1808,7 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
-          "type": "div",
+          "type": [Function],
         },
       ],
       "type": Symbol(react.fragment),

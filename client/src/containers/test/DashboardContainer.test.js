@@ -6,6 +6,7 @@ import SavedSearchTable from '../../components/SavedSearchTable';
 import configureStore from '../../configureStore';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
+import Well from '@react/react-spectrum/Well';
 
 describe('<DashboardContainer /> component', () => {
     const store = configureStore();
@@ -27,6 +28,10 @@ describe('<DashboardContainer /> component', () => {
 
             it('matches snapshot', () => {
                 expect(wrapper).toMatchSnapshot();
+            });
+
+            it('does not render any <Well/> component', () => {
+                expect(wrapper.find(Well).exists()).toBeFalsy();
             });
 
             it('does not render any <Heading /> component', () => {
@@ -93,6 +98,11 @@ describe('<DashboardContainer /> component', () => {
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
+        });
+
+        it('renders the same number of <Well/> components as savedSearch props length', () => {
+            expect(wrapper.find(Well).exists()).toBeTruthy();
+            expect(wrapper.find(Well)).toHaveLength(wrapper.instance().props.savedSearch.length);
         });
 
         it('renders the same number of <Heading/> components as savedSearch props length', () => {

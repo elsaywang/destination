@@ -5,6 +5,7 @@ import { getSavedSearch } from '../actions/savedSearch';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
+import Well from '@react/react-spectrum/Well';
 import styles from './DashboardContainer.css';
 import SavedSearchTable from '../components/SavedSearchTable';
 
@@ -19,7 +20,7 @@ class SearchContainer extends Component {
                 {this.props.savedSearch.map(search => {
                     return (
                         Object.keys(search).length && (
-                            <div
+                            <Well
                                 data-test="dashboard-search-table"
                                 className={styles.dashboardTable}
                                 key={search.name}>
@@ -46,7 +47,7 @@ class SearchContainer extends Component {
                                     isAdvancedSearchEnabled={false}
                                     allowsSelection={false}
                                 />
-                            </div>
+                            </Well>
                         )
                     );
                 })}
