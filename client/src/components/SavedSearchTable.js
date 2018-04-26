@@ -9,23 +9,22 @@ class SavedSearchTable extends Component {
         error: '',
     };
 
-    setStateAsync(state) {
-        return new Promise(resolve => {
-            this.setState(state, resolve);
-        });
+    setStateAsync(state, ms) {
+        return new Promise(resolve => setTimeout(() => this.setState(state, resolve), ms));
     }
 
     async componentDidMount() {
         try {
             const { savedSearch, getResultsBySavedSearch } = this.props;
-
             const results = await getResultsBySavedSearch(savedSearch);
-
-            await this.setStateAsync({ tableResults: results.value });
+            await this.setStateAsync({ tableResults: results.value }, 2000);
         } catch (error) {
-            await this.setStateAsync({
-                error,
-            });
+            await this.setStateAsync(
+                {
+                    error,
+                },
+                2000,
+            );
         }
     }
 
