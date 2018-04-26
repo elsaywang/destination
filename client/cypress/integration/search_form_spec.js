@@ -236,4 +236,14 @@ describe('Search Form Integration Tests', function() {
             cy.get('[data-test="signals-table"]').should('have.length', 1);
         });
     });
+
+    describe.skip('when a Saved Search tag is hovered over', function() {
+        before(function() {
+            cy.get('[data-test="saved-search-tag"]:first').trigger('mouseover');
+        });
+
+        it('should trigger a popover', function() {
+            cy.get('[data-test="saved-search-popover"]').should('have.length', 1);
+        });
+    });
 });
