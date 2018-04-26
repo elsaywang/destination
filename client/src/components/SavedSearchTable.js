@@ -10,20 +10,20 @@ class SavedSearchTable extends Component {
     };
 
     setStateAsync(state, ms) {
-        return new Promise(resolve => setTimeout(() => this.setState(state, resolve), ms));
+        return new Promise(resolve => setTimeout(() => resolve(this.setState(state)), ms));
     }
 
     async componentDidMount() {
         try {
             const { savedSearch, getResultsBySavedSearch } = this.props;
             const results = await getResultsBySavedSearch(savedSearch);
-            await this.setStateAsync({ tableResults: results.value }, 2000);
+            await this.setStateAsync({ tableResults: results.value }, 1000);
         } catch (error) {
             await this.setStateAsync(
                 {
                     error,
                 },
-                2000,
+                1000,
             );
         }
     }
