@@ -16,8 +16,8 @@ class DashboardContainer extends Component {
     render() {
         return (
             <Fragment>
-                {this.props.savedSearch.map(search => {
-                    return (
+                {this.props.savedSearch.map(
+                    search =>
                         Object.keys(search).length && (
                             <Well
                                 data-test="saved-search-dashboard"
@@ -56,9 +56,8 @@ class DashboardContainer extends Component {
                                     allowsSelection={false}
                                 />
                             </Well>
-                        )
-                    );
-                })}
+                        ),
+                )})
             </Fragment>
         );
     }
