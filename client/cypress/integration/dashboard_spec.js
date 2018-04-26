@@ -4,7 +4,7 @@ describe('Dashboard Integration Tests', function() {
         cy.title().should('contain', 'Signals');
     });
 
-    it('should show list of saved search tables on the dashboard', function() {
-        cy.get('[data-test="dashboard-search-table"]').should('exist');
+    it('should show a list of saved search tables on the dashboard', function() {
+        cy.get('[data-test="saved-search-dashboard"]').should('exist');
     });
 });

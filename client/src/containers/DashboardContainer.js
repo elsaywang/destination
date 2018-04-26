@@ -9,7 +9,7 @@ import Well from '@react/react-spectrum/Well';
 import styles from './DashboardContainer.css';
 import SavedSearchTable from '../components/SavedSearchTable';
 
-class SearchContainer extends Component {
+class DashboardContainer extends Component {
     componentDidMount() {
         this.props.getSavedSearch();
     }
@@ -20,7 +20,7 @@ class SearchContainer extends Component {
                     return (
                         Object.keys(search).length && (
                             <Well
-                                data-test="dashboard-search-table"
+                                data-test="saved-search-dashboard"
                                 className={styles.dashboardTable}
                                 key={search.name}>
                                 <GridRow valign="middle">
@@ -72,4 +72,4 @@ const actionCreators = {
     getSavedSearch,
 };
 
-export default connect(mapStateToProps, actionCreators)(SearchContainer);
+export default connect(mapStateToProps, actionCreators)(DashboardContainer);

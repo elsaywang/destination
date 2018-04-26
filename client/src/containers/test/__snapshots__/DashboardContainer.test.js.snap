@@ -4,7 +4,7 @@ exports[`<DashboardContainer /> component rendering when savedSearch prop with n
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SearchContainer
+  Symbol(enzyme.__unrendered__): <DashboardContainer
     callSearch={[Function]}
     getSavedSearch={[Function]}
     savedSearch={Array []}
@@ -63,7 +63,7 @@ exports[`<DashboardContainer /> component when savedSearch with records is passe
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SearchContainer
+  Symbol(enzyme.__unrendered__): <DashboardContainer
     callSearch={[Function]}
     getSavedSearch={[Function]}
     savedSearch={
@@ -126,7 +126,7 @@ ShallowWrapper {
       "children": Array [
         <Well
           className={undefined}
-          data-test="dashboard-search-table"
+          data-test="saved-search-dashboard"
         >
           <GridRow
             reverse={false}
@@ -205,7 +205,7 @@ ShallowWrapper {
         </Well>,
         <Well
           className={undefined}
-          data-test="dashboard-search-table"
+          data-test="saved-search-dashboard"
         >
           <GridRow
             reverse={false}
@@ -368,7 +368,7 @@ ShallowWrapper {
             />,
           ],
           "className": undefined,
-          "data-test": "dashboard-search-table",
+          "data-test": "saved-search-dashboard",
         },
         "ref": null,
         "rendered": Array [
@@ -720,7 +720,7 @@ ShallowWrapper {
             />,
           ],
           "className": undefined,
-          "data-test": "dashboard-search-table",
+          "data-test": "saved-search-dashboard",
         },
         "ref": null,
         "rendered": Array [
@@ -1002,7 +1002,7 @@ ShallowWrapper {
         "children": Array [
           <Well
             className={undefined}
-            data-test="dashboard-search-table"
+            data-test="saved-search-dashboard"
           >
             <GridRow
               reverse={false}
@@ -1081,7 +1081,7 @@ ShallowWrapper {
           </Well>,
           <Well
             className={undefined}
-            data-test="dashboard-search-table"
+            data-test="saved-search-dashboard"
           >
             <GridRow
               reverse={false}
@@ -1244,7 +1244,7 @@ ShallowWrapper {
               />,
             ],
             "className": undefined,
-            "data-test": "dashboard-search-table",
+            "data-test": "saved-search-dashboard",
           },
           "ref": null,
           "rendered": Array [
@@ -1596,7 +1596,7 @@ ShallowWrapper {
               />,
             ],
             "className": undefined,
-            "data-test": "dashboard-search-table",
+            "data-test": "saved-search-dashboard",
           },
           "ref": null,
           "rendered": Array [
