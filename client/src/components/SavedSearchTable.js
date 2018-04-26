@@ -10,7 +10,9 @@ class SavedSearchTable extends Component {
     };
 
     setStateAsync(state, ms) {
-        return new Promise(resolve => setTimeout(() => resolve(this.setState(state)), ms));
+        return new Promise(
+            resolve => (this.timerHandle = setTimeout(() => resolve(this.setState(state)), ms)),
+        );
     }
 
     async componentDidMount() {
@@ -28,6 +30,11 @@ class SavedSearchTable extends Component {
         }
     }
 
+    componentWillUnmount() {
+        // Need to cancle asynchronous task in the componentWillUnmount method when user exits the current view before data is loaded
+        // Or else it will be warning: Can't call setState (or forceUpdate) on an unmounted component.
+        clearTimeout(this.timerHandle);
+    }
     render() {
         const { tableResults } = this.state;
         const { isAdvancedSearchEnabled, allowsSelection } = this.props;
