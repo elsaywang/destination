@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SavedSearchTagList /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SavedSearchTagList
+    list={
+      Array [
+        Object {
+          "id": 17966,
+          "includedTraits": Array [
+            0,
+            1,
+            2,
+          ],
+          "keyValuePairs": Array [
+            Object {
+              "key": "k-monitor",
+              "operator": ">",
+              "value": "v-programming",
+            },
+          ],
+          "name": "Germaine Wiza",
+          "percentageChange": 45886,
+          "signalStatus": "USED",
+          "source": "Buckinghamshire",
+          "totalCounts": 59925,
+          "type": "Lek",
+        },
+      ]
+    }
+    onSavedSearchClick={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <SavedSearchPopover
+          onSavedSearchClick={[MockFunction]}
+          search={
+            Object {
+              "id": 17966,
+              "includedTraits": Array [
+                0,
+                1,
+                2,
+              ],
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-monitor",
+                  "operator": ">",
+                  "value": "v-programming",
+                },
+              ],
+              "name": "Germaine Wiza",
+              "percentageChange": 45886,
+              "signalStatus": "USED",
+              "source": "Buckinghamshire",
+              "totalCounts": 59925,
+              "type": "Lek",
+            }
+          }
+        />,
+      ],
+      "data-test": "saved-search-tag-list",
+      "disabled": false,
+      "invalid": false,
+      "onBlur": [Function],
+      "onClose": [Function],
+      "onFocus": [Function],
+      "readOnly": true,
+      "required": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "Germaine Wiza",
+        "nodeType": "function",
+        "props": Object {
+          "onSavedSearchClick": [MockFunction],
+          "search": Object {
+            "id": 17966,
+            "includedTraits": Array [
+              0,
+              1,
+              2,
+            ],
+            "keyValuePairs": Array [
+              Object {
+                "key": "k-monitor",
+                "operator": ">",
+                "value": "v-programming",
+              },
+            ],
+            "name": "Germaine Wiza",
+            "percentageChange": 45886,
+            "signalStatus": "USED",
+            "source": "Buckinghamshire",
+            "totalCounts": 59925,
+            "type": "Lek",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <SavedSearchPopover
+            onSavedSearchClick={[MockFunction]}
+            search={
+              Object {
+                "id": 17966,
+                "includedTraits": Array [
+                  0,
+                  1,
+                  2,
+                ],
+                "keyValuePairs": Array [
+                  Object {
+                    "key": "k-monitor",
+                    "operator": ">",
+                    "value": "v-programming",
+                  },
+                ],
+                "name": "Germaine Wiza",
+                "percentageChange": 45886,
+                "signalStatus": "USED",
+                "source": "Buckinghamshire",
+                "totalCounts": 59925,
+                "type": "Lek",
+              }
+            }
+          />,
+        ],
+        "data-test": "saved-search-tag-list",
+        "disabled": false,
+        "invalid": false,
+        "onBlur": [Function],
+        "onClose": [Function],
+        "onFocus": [Function],
+        "readOnly": true,
+        "required": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Germaine Wiza",
+          "nodeType": "function",
+          "props": Object {
+            "onSavedSearchClick": [MockFunction],
+            "search": Object {
+              "id": 17966,
+              "includedTraits": Array [
+                0,
+                1,
+                2,
+              ],
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-monitor",
+                  "operator": ">",
+                  "value": "v-programming",
+                },
+              ],
+              "name": "Germaine Wiza",
+              "percentageChange": 45886,
+              "signalStatus": "USED",
+              "source": "Buckinghamshire",
+              "totalCounts": 59925,
+              "type": "Lek",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

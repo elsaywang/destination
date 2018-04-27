@@ -1,0 +1,7 @@
+:local(.heading) {
+    margin-bottom: 0;
+}
+
+:local(.block) {
+    margin: 0 0 10px;
+}

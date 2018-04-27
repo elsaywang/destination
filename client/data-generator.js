@@ -1,4 +1,16 @@
 var faker = require('faker');
+var sortingTypes = [
+    'Key Value Pairs',
+    'Key Name',
+    'Value Name',
+    'Signal Type',
+    'Signal Source',
+    'Total Counts',
+    'Total Event Fires',
+    'Percentage Change',
+    'Included In Traits',
+];
+
 var operators = [
     { label: '==', value: '==' },
     { label: '>', value: '>' },
@@ -50,14 +62,16 @@ module.exports = () => {
             this.signalStatus = 'USED';
             this.startDate = faker.date.recent();
             this.endDate = faker.date.recent();
+            this.sorting = sortingTypes[Math.floor(Math.random() * sortingTypes.length)];
         }
     }
 
     class Source {
-        constructor(dataSourceId, reportSuiteId, sourceType) {
+        constructor(dataSourceId, reportSuiteId, sourceType, dataType) {
             this.dataSourceId = dataSourceId || faker.random.number();
             this.reportSuiteId = reportSuiteId || null;
             this.sourceType = sourceType || 'REALTIME';
+            this.dataType = dataType || 'Real-Time';
         }
     }
 

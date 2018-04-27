@@ -10,7 +10,8 @@
 
 :local(.label) {
     display: block;
-    margin: 10px 0;
-    font-size: 0.875em;
+    margin: 6px 0;
+    font-size: 0.75rem;
     transition: color 150ms ease-in-out;
+    color: #707070;
 }
