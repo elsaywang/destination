@@ -4,4 +4,6 @@ const signalStatusOptions = [
     { label: 'Signals Included in Traits', value: 'USED' },
 ];
 
+export const getSignalStatusLabel = status => signalStatusOptions.find(option => option.value === status).label;
+
 export default signalStatusOptions;
