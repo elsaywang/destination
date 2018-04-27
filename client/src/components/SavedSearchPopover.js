@@ -9,6 +9,7 @@ import { formatSignal } from '../utils/stringifySignals';
 import { getSignalStatusLabel } from '../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../constants/signalTypeOptions';
 import styles from './SavedSearchPopover.css';
+import Heading from '@react/react-spectrum/Heading';
 
 function SavedSearchPopover({ search, onSavedSearchClick }) {
     const boundClick = onSavedSearchClick.bind(this, search);
@@ -27,50 +28,50 @@ function SavedSearchPopover({ search, onSavedSearchClick }) {
                     onClick={boundClick}
                 />
                 <Popover title={search.name} data-test="saved-search-popover">
-                    <FieldLabel style={{ textTransform: 'uppercase' }} label="Name">
-                        <div className={styles.block}>{search.name}</div>
-                    </FieldLabel>
+                    <Heading size="5" className={styles.heading}>
+                        Name
+                    </Heading>
+                    <div>{search.name}</div>
 
-                    <FieldLabel style={{ textTransform: 'uppercase' }} label="Search Query">
-                        <div className={styles.block}>{formatSignal(search)}</div>
-                    </FieldLabel>
+                    <Heading size="5" className={styles.heading}>
+                        Search Query
+                    </Heading>
+                    <div>{formatSignal(search)}</div>
 
-                    <Label
-                        style={{ textTransform: 'uppercase', marginTop: 0 }}
-                        value="Filters"
-                        className={styles.block}>
-                        <div>
-                            <span className={styles['text-label']}>Signal Status: </span>
+                    <Heading size="5" className={styles.heading}>
+                        Filters
+                    </Heading>
+
+                    <div>
+                        <FieldLabel position="left" label="Signal Status:">
                             <span style={{ verticalAlign: 'bottom' }}>
                                 {getSignalStatusLabel(search.signalStatus)}
                             </span>
-                        </div>
+                        </FieldLabel>
 
-                        <div>
-                            <span className={styles['text-label']}>Data Type: </span>
+                        <FieldLabel position="left" label="Data Type:">
                             <span style={{ verticalAlign: 'bottom' }}>
                                 {search.source.dataType}
                             </span>
-                        </div>
+                        </FieldLabel>
 
-                        <div>
-                            <span className={styles['text-label']}>Signal Source: </span>
+                        <FieldLabel position="left" label="Signal Source:">
                             <span style={{ verticalAlign: 'bottom' }}>
                                 {getSignalTypeLabel(search.source.sourceType)}
                             </span>
-                        </div>
+                        </FieldLabel>
 
-                        <div>
-                            <span className={styles['text-label']}>View Records For: </span>
+                        <FieldLabel position="left" label="View Records For:">
                             <span style={{ verticalAlign: 'bottom' }}>
                                 {startDate.toDateString()} - {endDate.toDateString()}
                             </span>
-                        </div>
-                    </Label>
+                        </FieldLabel>
+                    </div>
 
-                    <FieldLabel style={{ textTransform: 'uppercase' }} label="Sorting">
-                        <div className={styles.block}>{search.sorting}</div>
-                    </FieldLabel>
+                    <Heading size="5" className={styles.heading}>
+                        Sory By
+                    </Heading>
+                    <div>{search.sorting}</div>
                 </Popover>
             </OverlayTrigger>
         </Fragment>
