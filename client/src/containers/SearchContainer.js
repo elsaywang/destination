@@ -63,7 +63,7 @@ class SearchContainer extends Component {
     }
 
     componentWillUnmount() {
-        //when user existed current search tab view, clear search fields
+        //when user left current search tab view, clear search fields
         this.props.clearSearchFields();
     }
 
