@@ -88,6 +88,7 @@ describe('<SearchContainer /> component', () => {
 
     describe('state changes based on events', () => {
         const initialState = {
+            name: '',
             keyValuePairs: [
                 {
                     id: 0,
@@ -216,6 +217,7 @@ describe('<SearchContainer /> component', () => {
 
         it('.onClearAll() to reset state back to initial state', () => {
             wrapper.instance().onClearAll();
+            expect(wrapper.state('name')).toEqual('');
             expect(wrapper.state('keyValuePairs')).toEqual([
                 {
                     id: 0,
