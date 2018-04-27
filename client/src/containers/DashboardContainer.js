@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { callSearch } from '../actions/searchForm';
 import { getSavedSearch } from '../actions/savedSearch';
+import { populateSearchFields } from '../actions/savedSearchFields';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
@@ -13,6 +14,13 @@ class DashboardContainer extends Component {
     componentDidMount() {
         this.props.getSavedSearch();
     }
+
+    handleViewMoreForSavedSearch = search => {
+        const { populateSearchFields, callSearch } = this.props;
+        populateSearchFields(search);
+        callSearch(search);
+    };
+
     render() {
         return (
             <Fragment>
@@ -40,7 +48,7 @@ class DashboardContainer extends Component {
                                                     variant="primary"
                                                     element="a"
                                                     href="#/search"
-                                                    onClick={this.props.callSearch.bind(
+                                                    onClick={this.handleViewMoreForSavedSearch.bind(
                                                         this,
                                                         search,
                                                     )}
@@ -69,6 +77,7 @@ const mapStateToProps = ({ savedSearch }) => ({
 const actionCreators = {
     callSearch,
     getSavedSearch,
+    populateSearchFields,
 };
 
 export default connect(mapStateToProps, actionCreators)(DashboardContainer);
