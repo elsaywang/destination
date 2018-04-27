@@ -26,7 +26,34 @@ describe('<SavedSearchTagList /> component', () => {
             signalStatus: 'USED',
         },
     ];
-    const wrapper = shallow(<SavedSearchTagList list={list} onSavedSearchClick={mockFn} />);
+    const currentSearch = {
+        name: 'Watson Cartwright',
+        keyValuePairs: [
+            {
+                key: 'k-Coves',
+                operator: '<',
+                value: 24330,
+            },
+        ],
+        source: {
+            dataSourceId: 64915,
+            reportSuiteId: null,
+            sourceType: 'REALTIME',
+            dataType: 'Real-Time',
+        },
+        minEventFires: 42193,
+        signalStatus: 'USED',
+        startDate: '2018-04-27T07:59:20.448Z',
+        endDate: '2018-04-26T19:25:16.587Z',
+        sorting: 'Total Event Fires',
+    };
+    const wrapper = shallow(
+        <SavedSearchTagList
+            list={list}
+            onSavedSearchClick={mockFn}
+            currentSearch={currentSearch}
+        />,
+    );
 
     describe('rendering', () => {
         it('matches snapshot', () => {

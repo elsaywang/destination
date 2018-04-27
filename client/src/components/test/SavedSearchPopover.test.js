@@ -35,7 +35,13 @@ describe('<SavedSearchPopover /> component', () => {
         endDate: '2018-04-25T12:15:25.260Z',
         sorting: 'Key Value Pairs',
     };
-    const wrapper = shallow(<SavedSearchPopover onSavedSearchClick={jest.fn()} search={search} />);
+    const wrapper = shallow(
+        <SavedSearchPopover
+            onSavedSearchClick={jest.fn()}
+            search={search}
+            isCurrentSearch={false}
+        />,
+    );
 
     describe('rendering', () => {
         it('matches snapshot', () => {
@@ -61,6 +67,19 @@ describe('<SavedSearchPopover /> component', () => {
             const overlayTrigger = wrapper.find(OverlayTrigger);
 
             expect(overlayTrigger.find(Tag).props().value).toEqual(search.name);
+        });
+        it('renders <Tag /> with id the same value as search name when isCurrentSearch props is false', () => {
+            const overlayTrigger = wrapper.find(OverlayTrigger);
+
+            expect(overlayTrigger.find(Tag).props().id).toEqual(search.name);
+        });
+
+        it('renders <Tag /> with id is `currentTag` when isCurrentSearch props is true', () => {
+            wrapper.setProps({ isCurrentSearch: true });
+
+            const overlayTrigger = wrapper.find(OverlayTrigger);
+
+            expect(overlayTrigger.find(Tag).props().id).toEqual('currentTag');
         });
 
         it("renders <Popover /> containing user's saved search name", () => {

@@ -119,6 +119,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -307,6 +337,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -326,6 +386,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -341,6 +431,36 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -356,6 +476,34 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "currentSearch": Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  },
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -448,6 +596,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -636,6 +814,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -655,6 +863,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -670,6 +908,36 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <SavedSearch
+                    currentSearch={
+                      Object {
+                        "advanced": false,
+                        "counts": Object {
+                          "ALF": 359,
+                          "ALL": 72093,
+                          "ANALYTICS": 34300,
+                          "ONBOARDED": 37407,
+                          "REALTIME": 27,
+                        },
+                        "filter": Object {
+                          "dataSourceId": 0,
+                          "label": "",
+                          "reportSuiteId": 0,
+                        },
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "",
+                        "signalStatus": "ALL",
+                        "signalType": "ALL",
+                        "viewRecordsFor": 7,
+                      }
+                    }
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -685,6 +953,34 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "currentSearch": Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    },
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],
@@ -846,6 +1142,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1142,6 +1468,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1173,6 +1529,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1200,6 +1586,36 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -1226,6 +1642,34 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "currentSearch": Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  },
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -1845,6 +2289,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2141,6 +2615,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2172,6 +2676,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2199,6 +2733,36 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <SavedSearch
+                    currentSearch={
+                      Object {
+                        "advanced": false,
+                        "counts": Object {
+                          "ALF": 359,
+                          "ALL": 72093,
+                          "ANALYTICS": 34300,
+                          "ONBOARDED": 37407,
+                          "REALTIME": 27,
+                        },
+                        "filter": Object {
+                          "dataSourceId": 0,
+                          "label": "",
+                          "reportSuiteId": 0,
+                        },
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "",
+                        "signalStatus": "ALL",
+                        "signalType": "ALL",
+                        "viewRecordsFor": 7,
+                      }
+                    }
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -2225,6 +2789,34 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "currentSearch": Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    },
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],
@@ -2913,6 +3505,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -3209,6 +3831,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -3240,6 +3892,36 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch={
+                  Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -3267,6 +3949,36 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -3293,6 +4005,34 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "currentSearch": Object {
+                    "advanced": false,
+                    "counts": Object {
+                      "ALF": 359,
+                      "ALL": 72093,
+                      "ANALYTICS": 34300,
+                      "ONBOARDED": 37407,
+                      "REALTIME": 27,
+                    },
+                    "filter": Object {
+                      "dataSourceId": 0,
+                      "label": "",
+                      "reportSuiteId": 0,
+                    },
+                    "keyValuePairs": Array [
+                      Object {
+                        "id": 0,
+                        "key": "",
+                        "operator": "==",
+                        "value": "",
+                      },
+                    ],
+                    "minEventFires": 1000,
+                    "name": "",
+                    "signalStatus": "ALL",
+                    "signalType": "ALL",
+                    "viewRecordsFor": 7,
+                  },
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -3912,6 +4652,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -4208,6 +4978,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -4239,6 +5039,36 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch={
+                    Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -4266,6 +5096,36 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <SavedSearch
+                    currentSearch={
+                      Object {
+                        "advanced": false,
+                        "counts": Object {
+                          "ALF": 359,
+                          "ALL": 72093,
+                          "ANALYTICS": 34300,
+                          "ONBOARDED": 37407,
+                          "REALTIME": 27,
+                        },
+                        "filter": Object {
+                          "dataSourceId": 0,
+                          "label": "",
+                          "reportSuiteId": 0,
+                        },
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "",
+                        "signalStatus": "ALL",
+                        "signalType": "ALL",
+                        "viewRecordsFor": 7,
+                      }
+                    }
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -4292,6 +5152,34 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "currentSearch": Object {
+                      "advanced": false,
+                      "counts": Object {
+                        "ALF": 359,
+                        "ALL": 72093,
+                        "ANALYTICS": 34300,
+                        "ONBOARDED": 37407,
+                        "REALTIME": 27,
+                      },
+                      "filter": Object {
+                        "dataSourceId": 0,
+                        "label": "",
+                        "reportSuiteId": 0,
+                      },
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "",
+                      "signalStatus": "ALL",
+                      "signalType": "ALL",
+                      "viewRecordsFor": 7,
+                    },
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],

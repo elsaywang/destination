@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearchPopover
+    isCurrentSearch={false}
     onSavedSearchClick={[MockFunction]}
     search={
       Object {
@@ -59,6 +60,7 @@ ShallowWrapper {
       >
         <Tag
           data-test="saved-search-tag"
+          id="Loren Waters"
           onClick={[Function]}
           style={
             Object {
@@ -180,6 +182,7 @@ ShallowWrapper {
         "children": Array [
           <Tag
             data-test="saved-search-tag"
+            id="Loren Waters"
             onClick={[Function]}
             style={
               Object {
@@ -306,6 +309,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "data-test": "saved-search-tag",
+            "id": "Loren Waters",
             "onClick": [Function],
             "style": Object {
               "cursor": "pointer",
@@ -752,6 +756,7 @@ ShallowWrapper {
         >
           <Tag
             data-test="saved-search-tag"
+            id="Loren Waters"
             onClick={[Function]}
             style={
               Object {
@@ -873,6 +878,7 @@ ShallowWrapper {
           "children": Array [
             <Tag
               data-test="saved-search-tag"
+              id="Loren Waters"
               onClick={[Function]}
               style={
                 Object {
@@ -999,6 +1005,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "data-test": "saved-search-tag",
+              "id": "Loren Waters",
               "onClick": [Function],
               "style": Object {
                 "cursor": "pointer",

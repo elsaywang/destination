@@ -22,6 +22,7 @@ class SearchContainer extends Component {
         super();
 
         this.state = {
+            name: '',
             keyValuePairs: [
                 {
                     id: 0,
@@ -57,8 +58,8 @@ class SearchContainer extends Component {
         // Pre-populate search fields if user clicked view more button in dashboard
         this.setState({ ...this.state, ...this.props.savedSearchFields });
         //if user did not click any view more button in the dashboard, clear all
-        if (!this.props.savedSearchFields.name) {
-            this.onClearAll();
+        if (!this.state.name) {
+            this.props.clearSearch();
         }
     }
 
@@ -234,6 +235,7 @@ class SearchContainer extends Component {
                                 getSavedSearch={this.props.getSavedSearch}
                                 list={this.props.savedSearch}
                                 onSavedSearchClick={this.onSavedSearchClick}
+                                currentSearch={this.state}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
                                 <div className={styles.saveSearchExecution}>

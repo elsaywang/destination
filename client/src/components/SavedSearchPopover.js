@@ -11,17 +11,20 @@ import { getSignalTypeLabel } from '../constants/signalTypeOptions';
 import styles from './SavedSearchPopover.css';
 import Heading from '@react/react-spectrum/Heading';
 
-function SavedSearchPopover({ search, onSavedSearchClick }) {
+function SavedSearchPopover({ search, onSavedSearchClick, isCurrentSearch }) {
     const boundClick = onSavedSearchClick.bind(this, search);
     // TODO: use i18n FormattedDate for start/end dates
     const startDate = new Date(search.startDate);
     const endDate = new Date(search.endDate);
+
+    const getTagID = name => (isCurrentSearch ? 'currentTag' : name);
 
     return (
         <Fragment>
             <OverlayTrigger trigger="hover" data-test="saved-search-overlay-trigger">
                 <Tag
                     data-test="saved-search-tag"
+                    id={getTagID(search.name)}
                     style={{ cursor: 'pointer' }}
                     key={search.name}
                     value={search.name}
@@ -81,6 +84,7 @@ function SavedSearchPopover({ search, onSavedSearchClick }) {
 SavedSearchPopover.propTypes = {
     search: PropTypes.object.isRequired,
     onSavedSearchClick: PropTypes.func.isRequired,
+    isCurrentSearch: PropTypes.bool.isRequired,
 };
 
 export default SavedSearchPopover;

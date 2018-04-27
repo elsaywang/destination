@@ -5,6 +5,29 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearch
+    currentSearch={
+      Object {
+        "endDate": "2018-04-26T19:25:16.587Z",
+        "keyValuePairs": Array [
+          Object {
+            "key": "k-Coves",
+            "operator": "<",
+            "value": 24330,
+          },
+        ],
+        "minEventFires": 42193,
+        "name": "Watson Cartwright",
+        "signalStatus": "USED",
+        "sorting": "Total Event Fires",
+        "source": Object {
+          "dataSourceId": 64915,
+          "dataType": "Real-Time",
+          "reportSuiteId": null,
+          "sourceType": "REALTIME",
+        },
+        "startDate": "2018-04-27T07:59:20.448Z",
+      }
+    }
     getSavedSearch={
       [MockFunction] {
         "calls": Array [
@@ -64,6 +87,29 @@ ShallowWrapper {
           Saved Search
         </Heading>,
         <load
+          currentSearch={
+            Object {
+              "endDate": "2018-04-26T19:25:16.587Z",
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-Coves",
+                  "operator": "<",
+                  "value": 24330,
+                },
+              ],
+              "minEventFires": 42193,
+              "name": "Watson Cartwright",
+              "signalStatus": "USED",
+              "sorting": "Total Event Fires",
+              "source": Object {
+                "dataSourceId": 64915,
+                "dataType": "Real-Time",
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+              },
+              "startDate": "2018-04-27T07:59:20.448Z",
+            }
+          }
           isLoaded={true}
           list={
             Array [
@@ -120,6 +166,27 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "currentSearch": Object {
+            "endDate": "2018-04-26T19:25:16.587Z",
+            "keyValuePairs": Array [
+              Object {
+                "key": "k-Coves",
+                "operator": "<",
+                "value": 24330,
+              },
+            ],
+            "minEventFires": 42193,
+            "name": "Watson Cartwright",
+            "signalStatus": "USED",
+            "sorting": "Total Event Fires",
+            "source": Object {
+              "dataSourceId": 64915,
+              "dataType": "Real-Time",
+              "reportSuiteId": null,
+              "sourceType": "REALTIME",
+            },
+            "startDate": "2018-04-27T07:59:20.448Z",
+          },
           "isLoaded": true,
           "list": Array [
             Object {
@@ -170,6 +237,29 @@ ShallowWrapper {
             Saved Search
           </Heading>,
           <load
+            currentSearch={
+              Object {
+                "endDate": "2018-04-26T19:25:16.587Z",
+                "keyValuePairs": Array [
+                  Object {
+                    "key": "k-Coves",
+                    "operator": "<",
+                    "value": 24330,
+                  },
+                ],
+                "minEventFires": 42193,
+                "name": "Watson Cartwright",
+                "signalStatus": "USED",
+                "sorting": "Total Event Fires",
+                "source": Object {
+                  "dataSourceId": 64915,
+                  "dataType": "Real-Time",
+                  "reportSuiteId": null,
+                  "sourceType": "REALTIME",
+                },
+                "startDate": "2018-04-27T07:59:20.448Z",
+              }
+            }
             isLoaded={true}
             list={
               Array [
@@ -226,6 +316,27 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "currentSearch": Object {
+              "endDate": "2018-04-26T19:25:16.587Z",
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-Coves",
+                  "operator": "<",
+                  "value": 24330,
+                },
+              ],
+              "minEventFires": 42193,
+              "name": "Watson Cartwright",
+              "signalStatus": "USED",
+              "sorting": "Total Event Fires",
+              "source": Object {
+                "dataSourceId": 64915,
+                "dataType": "Real-Time",
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+              },
+              "startDate": "2018-04-27T07:59:20.448Z",
+            },
             "isLoaded": true,
             "list": Array [
               Object {
