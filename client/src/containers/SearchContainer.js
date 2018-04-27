@@ -58,8 +58,8 @@ class SearchContainer extends Component {
         // Pre-populate search fields if user clicked view more button in dashboard
         this.setState({ ...this.state, ...this.props.savedSearchFields });
         //if user did not click any view more button in the dashboard, clear all
-        if (!this.state.name) {
-            this.props.clearSearch();
+        if (!this.props.savedSearchFields.name) {
+            this.onClearAll();
         }
     }
 
@@ -185,6 +185,7 @@ class SearchContainer extends Component {
     onClearAll = () => {
         this.props.clearSearch();
         this.setState({
+            name: '',
             keyValuePairs: [
                 {
                     id: 0,

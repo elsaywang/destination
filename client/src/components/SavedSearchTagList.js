@@ -23,7 +23,7 @@ function SavedSearchTagList({ list, onSavedSearchClick, currentSearch }) {
 SavedSearchTagList.propTypes = {
     list: PropTypes.array.isRequired,
     onSavedSearchClick: PropTypes.func.isRequired,
-    currentSearch: PropTypes.object,
+    currentSearch: PropTypes.object.isRequired,
 };
 
 export default SavedSearchTagList;
