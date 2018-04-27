@@ -74,50 +74,35 @@ ShallowWrapper {
           title="Loren Waters"
           variant="default"
         >
-          <FieldLabel
-            label="Name"
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            <div
-              className={undefined}
-            >
-              Loren Waters
-            </div>
-          </FieldLabel>
-          <FieldLabel
-            label="Search Query"
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
-          >
-            <div
-              className={undefined}
-            >
-              k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-            </div>
-          </FieldLabel>
-          <Label
+          <Heading
             className={undefined}
-            style={
-              Object {
-                "marginTop": 0,
-                "textTransform": "uppercase",
-              }
-            }
-            value="Filters"
+            size="5"
           >
-            <div>
-              <span
-                className={undefined}
-              >
-                Signal Status: 
-              </span>
+            Name
+          </Heading>
+          <div>
+            Loren Waters
+          </div>
+          <Heading
+            className={undefined}
+            size="5"
+          >
+            Search Query
+          </Heading>
+          <div>
+            k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+          </div>
+          <Heading
+            className={undefined}
+            size="5"
+          >
+            Filters
+          </Heading>
+          <div>
+            <FieldLabel
+              label="Signal Status:"
+              position="left"
+            >
               <span
                 style={
                   Object {
@@ -127,13 +112,11 @@ ShallowWrapper {
               >
                 Signals Included in Traits
               </span>
-            </div>
-            <div>
-              <span
-                className={undefined}
-              >
-                Data Type: 
-              </span>
+            </FieldLabel>
+            <FieldLabel
+              label="Data Type:"
+              position="left"
+            >
               <span
                 style={
                   Object {
@@ -143,13 +126,11 @@ ShallowWrapper {
               >
                 Real-Time
               </span>
-            </div>
-            <div>
-              <span
-                className={undefined}
-              >
-                Signal Source: 
-              </span>
+            </FieldLabel>
+            <FieldLabel
+              label="Signal Source:"
+              position="left"
+            >
               <span
                 style={
                   Object {
@@ -159,13 +140,11 @@ ShallowWrapper {
               >
                 General Online Data
               </span>
-            </div>
-            <div>
-              <span
-                className={undefined}
-              >
-                View Records For: 
-              </span>
+            </FieldLabel>
+            <FieldLabel
+              label="View Records For:"
+              position="left"
+            >
               <span
                 style={
                   Object {
@@ -177,22 +156,17 @@ ShallowWrapper {
                  - 
                 Wed Apr 25 2018
               </span>
-            </div>
-          </Label>
-          <FieldLabel
-            label="Sorting"
-            style={
-              Object {
-                "textTransform": "uppercase",
-              }
-            }
+            </FieldLabel>
+          </div>
+          <Heading
+            className={undefined}
+            size="5"
           >
-            <div
-              className={undefined}
-            >
-              Key Value Pairs
-            </div>
-          </FieldLabel>
+            Sory By
+          </Heading>
+          <div>
+            Key Value Pairs
+          </div>
         </Popover>
       </OverlayTrigger>,
     },
@@ -221,50 +195,35 @@ ShallowWrapper {
             title="Loren Waters"
             variant="default"
           >
-            <FieldLabel
-              label="Name"
-              style={
-                Object {
-                  "textTransform": "uppercase",
-                }
-              }
-            >
-              <div
-                className={undefined}
-              >
-                Loren Waters
-              </div>
-            </FieldLabel>
-            <FieldLabel
-              label="Search Query"
-              style={
-                Object {
-                  "textTransform": "uppercase",
-                }
-              }
-            >
-              <div
-                className={undefined}
-              >
-                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-              </div>
-            </FieldLabel>
-            <Label
+            <Heading
               className={undefined}
-              style={
-                Object {
-                  "marginTop": 0,
-                  "textTransform": "uppercase",
-                }
-              }
-              value="Filters"
+              size="5"
             >
-              <div>
-                <span
-                  className={undefined}
-                >
-                  Signal Status: 
-                </span>
+              Name
+            </Heading>
+            <div>
+              Loren Waters
+            </div>
+            <Heading
+              className={undefined}
+              size="5"
+            >
+              Search Query
+            </Heading>
+            <div>
+              k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+            </div>
+            <Heading
+              className={undefined}
+              size="5"
+            >
+              Filters
+            </Heading>
+            <div>
+              <FieldLabel
+                label="Signal Status:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -274,13 +233,11 @@ ShallowWrapper {
                 >
                   Signals Included in Traits
                 </span>
-              </div>
-              <div>
-                <span
-                  className={undefined}
-                >
-                  Data Type: 
-                </span>
+              </FieldLabel>
+              <FieldLabel
+                label="Data Type:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -290,13 +247,11 @@ ShallowWrapper {
                 >
                   Real-Time
                 </span>
-              </div>
-              <div>
-                <span
-                  className={undefined}
-                >
-                  Signal Source: 
-                </span>
+              </FieldLabel>
+              <FieldLabel
+                label="Signal Source:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -306,13 +261,11 @@ ShallowWrapper {
                 >
                   General Online Data
                 </span>
-              </div>
-              <div>
-                <span
-                  className={undefined}
-                >
-                  View Records For: 
-                </span>
+              </FieldLabel>
+              <FieldLabel
+                label="View Records For:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -324,22 +277,17 @@ ShallowWrapper {
                    - 
                   Wed Apr 25 2018
                 </span>
-              </div>
-            </Label>
-            <FieldLabel
-              label="Sorting"
-              style={
-                Object {
-                  "textTransform": "uppercase",
-                }
-              }
+              </FieldLabel>
+            </div>
+            <Heading
+              className={undefined}
+              size="5"
             >
-              <div
-                className={undefined}
-              >
-                Key Value Pairs
-              </div>
-            </FieldLabel>
+              Sory By
+            </Heading>
+            <div>
+              Key Value Pairs
+            </div>
           </Popover>,
         ],
         "crossOffset": 0,
@@ -374,50 +322,35 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
-              <FieldLabel
-                label="Name"
-                style={
-                  Object {
-                    "textTransform": "uppercase",
-                  }
-                }
-              >
-                <div
-                  className={undefined}
-                >
-                  Loren Waters
-                </div>
-              </FieldLabel>,
-              <FieldLabel
-                label="Search Query"
-                style={
-                  Object {
-                    "textTransform": "uppercase",
-                  }
-                }
-              >
-                <div
-                  className={undefined}
-                >
-                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-                </div>
-              </FieldLabel>,
-              <Label
+              <Heading
                 className={undefined}
-                style={
-                  Object {
-                    "marginTop": 0,
-                    "textTransform": "uppercase",
-                  }
-                }
-                value="Filters"
+                size="5"
               >
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    Signal Status: 
-                  </span>
+                Name
+              </Heading>,
+              <div>
+                Loren Waters
+              </div>,
+              <Heading
+                className={undefined}
+                size="5"
+              >
+                Search Query
+              </Heading>,
+              <div>
+                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+              </div>,
+              <Heading
+                className={undefined}
+                size="5"
+              >
+                Filters
+              </Heading>,
+              <div>
+                <FieldLabel
+                  label="Signal Status:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -427,13 +360,11 @@ ShallowWrapper {
                   >
                     Signals Included in Traits
                   </span>
-                </div>
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    Data Type: 
-                  </span>
+                </FieldLabel>
+                <FieldLabel
+                  label="Data Type:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -443,13 +374,11 @@ ShallowWrapper {
                   >
                     Real-Time
                   </span>
-                </div>
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    Signal Source: 
-                  </span>
+                </FieldLabel>
+                <FieldLabel
+                  label="Signal Source:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -459,13 +388,11 @@ ShallowWrapper {
                   >
                     General Online Data
                   </span>
-                </div>
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    View Records For: 
-                  </span>
+                </FieldLabel>
+                <FieldLabel
+                  label="View Records For:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -477,22 +404,17 @@ ShallowWrapper {
                      - 
                     Wed Apr 25 2018
                   </span>
-                </div>
-              </Label>,
-              <FieldLabel
-                label="Sorting"
-                style={
-                  Object {
-                    "textTransform": "uppercase",
-                  }
-                }
+                </FieldLabel>
+              </div>,
+              <Heading
+                className={undefined}
+                size="5"
               >
-                <div
-                  className={undefined}
-                >
-                  Key Value Pairs
-                </div>
-              </FieldLabel>,
+                Sory By
+              </Heading>,
+              <div>
+                Key Value Pairs
+              </div>,
             ],
             "data-test": "saved-search-popover",
             "open": true,
@@ -507,73 +429,72 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <div
-                  className={undefined}
-                >
-                  Loren Waters
-                </div>,
-                "label": "Name",
-                "style": Object {
-                  "textTransform": "uppercase",
-                },
+                "children": "Name",
+                "className": undefined,
+                "size": "5",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Loren Waters",
-                  "className": undefined,
-                },
-                "ref": null,
-                "rendered": "Loren Waters",
-                "type": "div",
-              },
+              "rendered": "Name",
               "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Loren Waters",
+              },
+              "ref": null,
+              "rendered": "Loren Waters",
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <div
-                  className={undefined}
-                >
-                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-                </div>,
-                "label": "Search Query",
-                "style": Object {
-                  "textTransform": "uppercase",
-                },
+                "children": "Search Query",
+                "className": undefined,
+                "size": "5",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
-                  "className": undefined,
-                },
-                "ref": null,
-                "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
-                "type": "div",
-              },
+              "rendered": "Search Query",
               "type": [Function],
             },
             Object {
               "instance": null,
               "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+              },
+              "ref": null,
+              "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
               "nodeType": "function",
+              "props": Object {
+                "children": "Filters",
+                "className": undefined,
+                "size": "5",
+              },
+              "ref": null,
+              "rendered": "Filters",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      Signal Status: 
-                    </span>
+                  <FieldLabel
+                    label="Signal Status:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -583,13 +504,11 @@ ShallowWrapper {
                     >
                       Signals Included in Traits
                     </span>
-                  </div>,
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      Data Type: 
-                    </span>
+                  </FieldLabel>,
+                  <FieldLabel
+                    label="Data Type:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -599,13 +518,11 @@ ShallowWrapper {
                     >
                       Real-Time
                     </span>
-                  </div>,
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      Signal Source: 
-                    </span>
+                  </FieldLabel>,
+                  <FieldLabel
+                    label="Signal Source:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -615,13 +532,11 @@ ShallowWrapper {
                     >
                       General Online Data
                     </span>
-                  </div>,
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      View Records For: 
-                    </span>
+                  </FieldLabel>,
+                  <FieldLabel
+                    label="View Records For:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -633,271 +548,183 @@ ShallowWrapper {
                        - 
                       Wed Apr 25 2018
                     </span>
-                  </div>,
+                  </FieldLabel>,
                 ],
-                "className": undefined,
-                "style": Object {
-                  "marginTop": 0,
-                  "textTransform": "uppercase",
-                },
-                "value": "Filters",
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <span
-                        className={undefined}
-                      >
-                        Signal Status: 
-                      </span>,
-                      <span
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                    "children": <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
                         }
-                      >
-                        Signals Included in Traits
-                      </span>,
-                    ],
+                      }
+                    >
+                      Signals Included in Traits
+                    </span>,
+                    "label": "Signal Status:",
+                    "position": "left",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Signal Status: ",
-                        "className": undefined,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Signals Included in Traits",
+                      "style": Object {
+                        "verticalAlign": "bottom",
                       },
-                      "ref": null,
-                      "rendered": "Signal Status: ",
-                      "type": "span",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Signals Included in Traits",
-                        "style": Object {
-                          "verticalAlign": "bottom",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": "Signals Included in Traits",
-                      "type": "span",
-                    },
-                  ],
-                  "type": "div",
+                    "ref": null,
+                    "rendered": "Signals Included in Traits",
+                    "type": "span",
+                  },
+                  "type": [Function],
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <span
-                        className={undefined}
-                      >
-                        Data Type: 
-                      </span>,
-                      <span
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                    "children": <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
                         }
-                      >
-                        Real-Time
-                      </span>,
-                    ],
+                      }
+                    >
+                      Real-Time
+                    </span>,
+                    "label": "Data Type:",
+                    "position": "left",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Data Type: ",
-                        "className": undefined,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Real-Time",
+                      "style": Object {
+                        "verticalAlign": "bottom",
                       },
-                      "ref": null,
-                      "rendered": "Data Type: ",
-                      "type": "span",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Real-Time",
-                        "style": Object {
-                          "verticalAlign": "bottom",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": "Real-Time",
-                      "type": "span",
-                    },
-                  ],
-                  "type": "div",
+                    "ref": null,
+                    "rendered": "Real-Time",
+                    "type": "span",
+                  },
+                  "type": [Function],
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <span
-                        className={undefined}
-                      >
-                        Signal Source: 
-                      </span>,
-                      <span
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                    "children": <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
                         }
-                      >
-                        General Online Data
-                      </span>,
-                    ],
+                      }
+                    >
+                      General Online Data
+                    </span>,
+                    "label": "Signal Source:",
+                    "position": "left",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Signal Source: ",
-                        "className": undefined,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "General Online Data",
+                      "style": Object {
+                        "verticalAlign": "bottom",
                       },
-                      "ref": null,
-                      "rendered": "Signal Source: ",
-                      "type": "span",
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "General Online Data",
-                        "style": Object {
-                          "verticalAlign": "bottom",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": "General Online Data",
-                      "type": "span",
-                    },
-                  ],
-                  "type": "div",
+                    "ref": null,
+                    "rendered": "General Online Data",
+                    "type": "span",
+                  },
+                  "type": [Function],
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <span
-                        className={undefined}
-                      >
-                        View Records For: 
-                      </span>,
-                      <span
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                    "children": <span
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
                         }
-                      >
-                        Wed Apr 25 2018
-                         - 
-                        Wed Apr 25 2018
-                      </span>,
-                    ],
+                      }
+                    >
+                      Wed Apr 25 2018
+                       - 
+                      Wed Apr 25 2018
+                    </span>,
+                    "label": "View Records For:",
+                    "position": "left",
                   },
                   "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "View Records For: ",
-                        "className": undefined,
-                      },
-                      "ref": null,
-                      "rendered": "View Records For: ",
-                      "type": "span",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [
-                          "Wed Apr 25 2018",
-                          " - ",
-                          "Wed Apr 25 2018",
-                        ],
-                        "style": Object {
-                          "verticalAlign": "bottom",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": Array [
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
                         "Wed Apr 25 2018",
                         " - ",
                         "Wed Apr 25 2018",
                       ],
-                      "type": "span",
+                      "style": Object {
+                        "verticalAlign": "bottom",
+                      },
                     },
-                  ],
-                  "type": "div",
+                    "ref": null,
+                    "rendered": Array [
+                      "Wed Apr 25 2018",
+                      " - ",
+                      "Wed Apr 25 2018",
+                    ],
+                    "type": "span",
+                  },
+                  "type": [Function],
                 },
               ],
-              "type": [Function],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <div
-                  className={undefined}
-                >
-                  Key Value Pairs
-                </div>,
-                "label": "Sorting",
-                "style": Object {
-                  "textTransform": "uppercase",
-                },
+                "children": "Sory By",
+                "className": undefined,
+                "size": "5",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Key Value Pairs",
-                  "className": undefined,
-                },
-                "ref": null,
-                "rendered": "Key Value Pairs",
-                "type": "div",
-              },
+              "rendered": "Sory By",
               "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Key Value Pairs",
+              },
+              "ref": null,
+              "rendered": "Key Value Pairs",
+              "type": "div",
             },
           ],
           "type": [Function],
@@ -940,50 +767,35 @@ ShallowWrapper {
             title="Loren Waters"
             variant="default"
           >
-            <FieldLabel
-              label="Name"
-              style={
-                Object {
-                  "textTransform": "uppercase",
-                }
-              }
-            >
-              <div
-                className={undefined}
-              >
-                Loren Waters
-              </div>
-            </FieldLabel>
-            <FieldLabel
-              label="Search Query"
-              style={
-                Object {
-                  "textTransform": "uppercase",
-                }
-              }
-            >
-              <div
-                className={undefined}
-              >
-                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-              </div>
-            </FieldLabel>
-            <Label
+            <Heading
               className={undefined}
-              style={
-                Object {
-                  "marginTop": 0,
-                  "textTransform": "uppercase",
-                }
-              }
-              value="Filters"
+              size="5"
             >
-              <div>
-                <span
-                  className={undefined}
-                >
-                  Signal Status: 
-                </span>
+              Name
+            </Heading>
+            <div>
+              Loren Waters
+            </div>
+            <Heading
+              className={undefined}
+              size="5"
+            >
+              Search Query
+            </Heading>
+            <div>
+              k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+            </div>
+            <Heading
+              className={undefined}
+              size="5"
+            >
+              Filters
+            </Heading>
+            <div>
+              <FieldLabel
+                label="Signal Status:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -993,13 +805,11 @@ ShallowWrapper {
                 >
                   Signals Included in Traits
                 </span>
-              </div>
-              <div>
-                <span
-                  className={undefined}
-                >
-                  Data Type: 
-                </span>
+              </FieldLabel>
+              <FieldLabel
+                label="Data Type:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -1009,13 +819,11 @@ ShallowWrapper {
                 >
                   Real-Time
                 </span>
-              </div>
-              <div>
-                <span
-                  className={undefined}
-                >
-                  Signal Source: 
-                </span>
+              </FieldLabel>
+              <FieldLabel
+                label="Signal Source:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -1025,13 +833,11 @@ ShallowWrapper {
                 >
                   General Online Data
                 </span>
-              </div>
-              <div>
-                <span
-                  className={undefined}
-                >
-                  View Records For: 
-                </span>
+              </FieldLabel>
+              <FieldLabel
+                label="View Records For:"
+                position="left"
+              >
                 <span
                   style={
                     Object {
@@ -1043,22 +849,17 @@ ShallowWrapper {
                    - 
                   Wed Apr 25 2018
                 </span>
-              </div>
-            </Label>
-            <FieldLabel
-              label="Sorting"
-              style={
-                Object {
-                  "textTransform": "uppercase",
-                }
-              }
+              </FieldLabel>
+            </div>
+            <Heading
+              className={undefined}
+              size="5"
             >
-              <div
-                className={undefined}
-              >
-                Key Value Pairs
-              </div>
-            </FieldLabel>
+              Sory By
+            </Heading>
+            <div>
+              Key Value Pairs
+            </div>
           </Popover>
         </OverlayTrigger>,
       },
@@ -1087,50 +888,35 @@ ShallowWrapper {
               title="Loren Waters"
               variant="default"
             >
-              <FieldLabel
-                label="Name"
-                style={
-                  Object {
-                    "textTransform": "uppercase",
-                  }
-                }
-              >
-                <div
-                  className={undefined}
-                >
-                  Loren Waters
-                </div>
-              </FieldLabel>
-              <FieldLabel
-                label="Search Query"
-                style={
-                  Object {
-                    "textTransform": "uppercase",
-                  }
-                }
-              >
-                <div
-                  className={undefined}
-                >
-                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-                </div>
-              </FieldLabel>
-              <Label
+              <Heading
                 className={undefined}
-                style={
-                  Object {
-                    "marginTop": 0,
-                    "textTransform": "uppercase",
-                  }
-                }
-                value="Filters"
+                size="5"
               >
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    Signal Status: 
-                  </span>
+                Name
+              </Heading>
+              <div>
+                Loren Waters
+              </div>
+              <Heading
+                className={undefined}
+                size="5"
+              >
+                Search Query
+              </Heading>
+              <div>
+                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+              </div>
+              <Heading
+                className={undefined}
+                size="5"
+              >
+                Filters
+              </Heading>
+              <div>
+                <FieldLabel
+                  label="Signal Status:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -1140,13 +926,11 @@ ShallowWrapper {
                   >
                     Signals Included in Traits
                   </span>
-                </div>
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    Data Type: 
-                  </span>
+                </FieldLabel>
+                <FieldLabel
+                  label="Data Type:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -1156,13 +940,11 @@ ShallowWrapper {
                   >
                     Real-Time
                   </span>
-                </div>
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    Signal Source: 
-                  </span>
+                </FieldLabel>
+                <FieldLabel
+                  label="Signal Source:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -1172,13 +954,11 @@ ShallowWrapper {
                   >
                     General Online Data
                   </span>
-                </div>
-                <div>
-                  <span
-                    className={undefined}
-                  >
-                    View Records For: 
-                  </span>
+                </FieldLabel>
+                <FieldLabel
+                  label="View Records For:"
+                  position="left"
+                >
                   <span
                     style={
                       Object {
@@ -1190,22 +970,17 @@ ShallowWrapper {
                      - 
                     Wed Apr 25 2018
                   </span>
-                </div>
-              </Label>
-              <FieldLabel
-                label="Sorting"
-                style={
-                  Object {
-                    "textTransform": "uppercase",
-                  }
-                }
+                </FieldLabel>
+              </div>
+              <Heading
+                className={undefined}
+                size="5"
               >
-                <div
-                  className={undefined}
-                >
-                  Key Value Pairs
-                </div>
-              </FieldLabel>
+                Sory By
+              </Heading>
+              <div>
+                Key Value Pairs
+              </div>
             </Popover>,
           ],
           "crossOffset": 0,
@@ -1240,50 +1015,35 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <FieldLabel
-                  label="Name"
-                  style={
-                    Object {
-                      "textTransform": "uppercase",
-                    }
-                  }
-                >
-                  <div
-                    className={undefined}
-                  >
-                    Loren Waters
-                  </div>
-                </FieldLabel>,
-                <FieldLabel
-                  label="Search Query"
-                  style={
-                    Object {
-                      "textTransform": "uppercase",
-                    }
-                  }
-                >
-                  <div
-                    className={undefined}
-                  >
-                    k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-                  </div>
-                </FieldLabel>,
-                <Label
+                <Heading
                   className={undefined}
-                  style={
-                    Object {
-                      "marginTop": 0,
-                      "textTransform": "uppercase",
-                    }
-                  }
-                  value="Filters"
+                  size="5"
                 >
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      Signal Status: 
-                    </span>
+                  Name
+                </Heading>,
+                <div>
+                  Loren Waters
+                </div>,
+                <Heading
+                  className={undefined}
+                  size="5"
+                >
+                  Search Query
+                </Heading>,
+                <div>
+                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                </div>,
+                <Heading
+                  className={undefined}
+                  size="5"
+                >
+                  Filters
+                </Heading>,
+                <div>
+                  <FieldLabel
+                    label="Signal Status:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -1293,13 +1053,11 @@ ShallowWrapper {
                     >
                       Signals Included in Traits
                     </span>
-                  </div>
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      Data Type: 
-                    </span>
+                  </FieldLabel>
+                  <FieldLabel
+                    label="Data Type:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -1309,13 +1067,11 @@ ShallowWrapper {
                     >
                       Real-Time
                     </span>
-                  </div>
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      Signal Source: 
-                    </span>
+                  </FieldLabel>
+                  <FieldLabel
+                    label="Signal Source:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -1325,13 +1081,11 @@ ShallowWrapper {
                     >
                       General Online Data
                     </span>
-                  </div>
-                  <div>
-                    <span
-                      className={undefined}
-                    >
-                      View Records For: 
-                    </span>
+                  </FieldLabel>
+                  <FieldLabel
+                    label="View Records For:"
+                    position="left"
+                  >
                     <span
                       style={
                         Object {
@@ -1343,22 +1097,17 @@ ShallowWrapper {
                        - 
                       Wed Apr 25 2018
                     </span>
-                  </div>
-                </Label>,
-                <FieldLabel
-                  label="Sorting"
-                  style={
-                    Object {
-                      "textTransform": "uppercase",
-                    }
-                  }
+                  </FieldLabel>
+                </div>,
+                <Heading
+                  className={undefined}
+                  size="5"
                 >
-                  <div
-                    className={undefined}
-                  >
-                    Key Value Pairs
-                  </div>
-                </FieldLabel>,
+                  Sory By
+                </Heading>,
+                <div>
+                  Key Value Pairs
+                </div>,
               ],
               "data-test": "saved-search-popover",
               "open": true,
@@ -1373,73 +1122,72 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <div
-                    className={undefined}
-                  >
-                    Loren Waters
-                  </div>,
-                  "label": "Name",
-                  "style": Object {
-                    "textTransform": "uppercase",
-                  },
+                  "children": "Name",
+                  "className": undefined,
+                  "size": "5",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Loren Waters",
-                    "className": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Loren Waters",
-                  "type": "div",
-                },
+                "rendered": "Name",
                 "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Loren Waters",
+                },
+                "ref": null,
+                "rendered": "Loren Waters",
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <div
-                    className={undefined}
-                  >
-                    k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
-                  </div>,
-                  "label": "Search Query",
-                  "style": Object {
-                    "textTransform": "uppercase",
-                  },
+                  "children": "Search Query",
+                  "className": undefined,
+                  "size": "5",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
-                    "className": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
-                  "type": "div",
-                },
+                "rendered": "Search Query",
                 "type": [Function],
               },
               Object {
                 "instance": null,
                 "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                },
+                "ref": null,
+                "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
                 "nodeType": "function",
+                "props": Object {
+                  "children": "Filters",
+                  "className": undefined,
+                  "size": "5",
+                },
+                "ref": null,
+                "rendered": "Filters",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <div>
-                      <span
-                        className={undefined}
-                      >
-                        Signal Status: 
-                      </span>
+                    <FieldLabel
+                      label="Signal Status:"
+                      position="left"
+                    >
                       <span
                         style={
                           Object {
@@ -1449,13 +1197,11 @@ ShallowWrapper {
                       >
                         Signals Included in Traits
                       </span>
-                    </div>,
-                    <div>
-                      <span
-                        className={undefined}
-                      >
-                        Data Type: 
-                      </span>
+                    </FieldLabel>,
+                    <FieldLabel
+                      label="Data Type:"
+                      position="left"
+                    >
                       <span
                         style={
                           Object {
@@ -1465,13 +1211,11 @@ ShallowWrapper {
                       >
                         Real-Time
                       </span>
-                    </div>,
-                    <div>
-                      <span
-                        className={undefined}
-                      >
-                        Signal Source: 
-                      </span>
+                    </FieldLabel>,
+                    <FieldLabel
+                      label="Signal Source:"
+                      position="left"
+                    >
                       <span
                         style={
                           Object {
@@ -1481,13 +1225,11 @@ ShallowWrapper {
                       >
                         General Online Data
                       </span>
-                    </div>,
-                    <div>
-                      <span
-                        className={undefined}
-                      >
-                        View Records For: 
-                      </span>
+                    </FieldLabel>,
+                    <FieldLabel
+                      label="View Records For:"
+                      position="left"
+                    >
                       <span
                         style={
                           Object {
@@ -1499,271 +1241,183 @@ ShallowWrapper {
                          - 
                         Wed Apr 25 2018
                       </span>
-                    </div>,
+                    </FieldLabel>,
                   ],
-                  "className": undefined,
-                  "style": Object {
-                    "marginTop": 0,
-                    "textTransform": "uppercase",
-                  },
-                  "value": "Filters",
                 },
                 "ref": null,
                 "rendered": Array [
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <span
-                          className={undefined}
-                        >
-                          Signal Status: 
-                        </span>,
-                        <span
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                      "children": <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
                           }
-                        >
-                          Signals Included in Traits
-                        </span>,
-                      ],
+                        }
+                      >
+                        Signals Included in Traits
+                      </span>,
+                      "label": "Signal Status:",
+                      "position": "left",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Signal Status: ",
-                          "className": undefined,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Signals Included in Traits",
+                        "style": Object {
+                          "verticalAlign": "bottom",
                         },
-                        "ref": null,
-                        "rendered": "Signal Status: ",
-                        "type": "span",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Signals Included in Traits",
-                          "style": Object {
-                            "verticalAlign": "bottom",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": "Signals Included in Traits",
-                        "type": "span",
-                      },
-                    ],
-                    "type": "div",
+                      "ref": null,
+                      "rendered": "Signals Included in Traits",
+                      "type": "span",
+                    },
+                    "type": [Function],
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <span
-                          className={undefined}
-                        >
-                          Data Type: 
-                        </span>,
-                        <span
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                      "children": <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
                           }
-                        >
-                          Real-Time
-                        </span>,
-                      ],
+                        }
+                      >
+                        Real-Time
+                      </span>,
+                      "label": "Data Type:",
+                      "position": "left",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Data Type: ",
-                          "className": undefined,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Real-Time",
+                        "style": Object {
+                          "verticalAlign": "bottom",
                         },
-                        "ref": null,
-                        "rendered": "Data Type: ",
-                        "type": "span",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Real-Time",
-                          "style": Object {
-                            "verticalAlign": "bottom",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": "Real-Time",
-                        "type": "span",
-                      },
-                    ],
-                    "type": "div",
+                      "ref": null,
+                      "rendered": "Real-Time",
+                      "type": "span",
+                    },
+                    "type": [Function],
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <span
-                          className={undefined}
-                        >
-                          Signal Source: 
-                        </span>,
-                        <span
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                      "children": <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
                           }
-                        >
-                          General Online Data
-                        </span>,
-                      ],
+                        }
+                      >
+                        General Online Data
+                      </span>,
+                      "label": "Signal Source:",
+                      "position": "left",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Signal Source: ",
-                          "className": undefined,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "General Online Data",
+                        "style": Object {
+                          "verticalAlign": "bottom",
                         },
-                        "ref": null,
-                        "rendered": "Signal Source: ",
-                        "type": "span",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "General Online Data",
-                          "style": Object {
-                            "verticalAlign": "bottom",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": "General Online Data",
-                        "type": "span",
-                      },
-                    ],
-                    "type": "div",
+                      "ref": null,
+                      "rendered": "General Online Data",
+                      "type": "span",
+                    },
+                    "type": [Function],
                   },
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "host",
+                    "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <span
-                          className={undefined}
-                        >
-                          View Records For: 
-                        </span>,
-                        <span
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                      "children": <span
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
                           }
-                        >
-                          Wed Apr 25 2018
-                           - 
-                          Wed Apr 25 2018
-                        </span>,
-                      ],
+                        }
+                      >
+                        Wed Apr 25 2018
+                         - 
+                        Wed Apr 25 2018
+                      </span>,
+                      "label": "View Records For:",
+                      "position": "left",
                     },
                     "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "View Records For: ",
-                          "className": undefined,
-                        },
-                        "ref": null,
-                        "rendered": "View Records For: ",
-                        "type": "span",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": Array [
-                            "Wed Apr 25 2018",
-                            " - ",
-                            "Wed Apr 25 2018",
-                          ],
-                          "style": Object {
-                            "verticalAlign": "bottom",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": Array [
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
                           "Wed Apr 25 2018",
                           " - ",
                           "Wed Apr 25 2018",
                         ],
-                        "type": "span",
+                        "style": Object {
+                          "verticalAlign": "bottom",
+                        },
                       },
-                    ],
-                    "type": "div",
+                      "ref": null,
+                      "rendered": Array [
+                        "Wed Apr 25 2018",
+                        " - ",
+                        "Wed Apr 25 2018",
+                      ],
+                      "type": "span",
+                    },
+                    "type": [Function],
                   },
                 ],
-                "type": [Function],
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <div
-                    className={undefined}
-                  >
-                    Key Value Pairs
-                  </div>,
-                  "label": "Sorting",
-                  "style": Object {
-                    "textTransform": "uppercase",
-                  },
+                  "children": "Sory By",
+                  "className": undefined,
+                  "size": "5",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Key Value Pairs",
-                    "className": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Key Value Pairs",
-                  "type": "div",
-                },
+                "rendered": "Sory By",
                 "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Key Value Pairs",
+                },
+                "ref": null,
+                "rendered": "Key Value Pairs",
+                "type": "div",
               },
             ],
             "type": [Function],
