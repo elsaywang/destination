@@ -2,6 +2,7 @@ import * as searchFormActionCreators from '../actions/searchForm';
 import * as saveThisSearchActionCreators from '../actions/saveThisSearch';
 import { selectSignals } from '../actions/selectSignals';
 import { getSavedSearch } from '../actions/savedSearch';
+import { populateSearchFields, clearSearchFields } from '../actions/savedSearchFields';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
@@ -52,6 +53,18 @@ class SearchContainer extends Component {
 
     componentDidMount() {
         // TODO: API call to getCounts and set state
+
+        // Pre-populate search fields if user clicked view more button in dashboard
+        this.setState({ ...this.state, ...this.props.savedSearchFields });
+        //if user did not click any view more button in the dashboard, clear all
+        if (!this.props.savedSearchFields.name) {
+            this.onClearAll();
+        }
+    }
+
+    componentWillUnmount() {
+        //when user left current search tab view, clear search fields
+        this.props.clearSearchFields();
     }
 
     handleSignalTypeChange = signalType => {
@@ -285,16 +298,19 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearch, saveThisSearch }) => ({
+const mapStateToProps = ({ results, savedSearch, saveThisSearch, savedSearchFields }) => ({
     results,
     savedSearch,
     saveThisSearch,
+    savedSearchFields,
 });
 const actionCreators = {
     ...searchFormActionCreators,
     ...saveThisSearchActionCreators,
     selectSignals,
     getSavedSearch,
+    populateSearchFields,
+    clearSearchFields,
 };
 
 export default connect(mapStateToProps, actionCreators)(SearchContainer);

@@ -161,7 +161,13 @@ class SignalsTable extends Component {
     };
 
     render() {
-        const { results, signalType, isAdvancedSearchEnabled, sortSearch } = this.props;
+        const {
+            results,
+            signalType,
+            isAdvancedSearchEnabled,
+            sortSearch,
+            allowsSelection,
+        } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
         const items = this.formatSignalsList(results.list);
 
@@ -173,6 +179,7 @@ class SignalsTable extends Component {
                 renderCell={this.renderCell}
                 sortSearch={sortSearch}
                 onSelectionChange={this.handleSelectionChange}
+                allowsSelection={allowsSelection}
             />
         );
     }
@@ -184,6 +191,7 @@ SignalsTable.propTypes = {
     isAdvancedSearchEnabled: PropTypes.bool,
     onSignalRecordsSelection: PropTypes.func,
     sortSearch: PropTypes.func,
+    allowsSelection: PropTypes.bool,
 };
 
 export default SignalsTable;

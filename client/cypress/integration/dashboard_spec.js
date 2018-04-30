@@ -3,4 +3,8 @@ describe('Dashboard Integration Tests', function() {
         cy.visit('/');
         cy.title().should('contain', 'Signals');
     });
+
+    xit('should show a list of saved search tables on the dashboard', function() {
+        cy.get('[data-test="saved-search-dashboard"]').should('exist');
+    });
 });

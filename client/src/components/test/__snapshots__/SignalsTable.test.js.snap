@@ -52,6 +52,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalsTable
+    allowsSelection={true}
     results={
       Object {
         "list": Array [
@@ -89,6 +90,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "allowsSelection": true,
       "columns": Array [
         Object {
           "key": "keyValuePairs",
@@ -174,6 +176,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "allowsSelection": true,
         "columns": Array [
           Object {
             "key": "keyValuePairs",
