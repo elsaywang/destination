@@ -17,14 +17,14 @@ function SavedSearchPopover({ search, onSavedSearchClick, isCurrentSearch }) {
     const startDate = new Date(search.startDate);
     const endDate = new Date(search.endDate);
 
-    const getTagID = name => (isCurrentSearch ? 'currentTag' : null);
+    const getTagID = () => (isCurrentSearch ? 'currentTag' : null);
 
     return (
         <Fragment>
             <OverlayTrigger trigger="hover" data-test="saved-search-overlay-trigger">
                 <Tag
                     data-test="saved-search-tag"
-                    id={getTagID(search.name)}
+                    id={getTagID()}
                     style={{ cursor: 'pointer' }}
                     key={search.name}
                     value={search.name}
