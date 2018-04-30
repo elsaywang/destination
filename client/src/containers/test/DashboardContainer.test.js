@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import DashboardContainer from '../DashboardContainer';
 import SavedSearchTable from '../../components/SavedSearchTable';
 import configureStore from '../../configureStore';
