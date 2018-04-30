@@ -51,7 +51,7 @@ describe('<SavedSearchTagList /> component', () => {
         <SavedSearchTagList
             list={list}
             onSavedSearchClick={mockFn}
-            currentSearch={currentSearch}
+            currentSearch={currentSearch.name}
         />,
     );
 

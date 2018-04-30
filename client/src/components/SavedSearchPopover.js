@@ -17,7 +17,7 @@ function SavedSearchPopover({ search, onSavedSearchClick, isCurrentSearch }) {
     const startDate = new Date(search.startDate);
     const endDate = new Date(search.endDate);
 
-    const getTagID = name => (isCurrentSearch ? 'currentTag' : name);
+    const getTagID = name => (isCurrentSearch ? 'currentTag' : null);
 
     return (
         <Fragment>

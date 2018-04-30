@@ -68,10 +68,10 @@ describe('<SavedSearchPopover /> component', () => {
 
             expect(overlayTrigger.find(Tag).props().value).toEqual(search.name);
         });
-        it('renders <Tag /> with id the same value as search name when isCurrentSearch props is false', () => {
+        it('renders <Tag /> with id the same value is null when isCurrentSearch props is false', () => {
             const overlayTrigger = wrapper.find(OverlayTrigger);
 
-            expect(overlayTrigger.find(Tag).props().id).toEqual(search.name);
+            expect(overlayTrigger.find(Tag).props().id).toEqual(null);
         });
 
         it('renders <Tag /> with id is `currentTag` when isCurrentSearch props is true', () => {

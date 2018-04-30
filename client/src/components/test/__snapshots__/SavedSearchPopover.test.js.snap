@@ -60,7 +60,7 @@ ShallowWrapper {
       >
         <Tag
           data-test="saved-search-tag"
-          id="Loren Waters"
+          id={null}
           onClick={[Function]}
           style={
             Object {
@@ -182,7 +182,7 @@ ShallowWrapper {
         "children": Array [
           <Tag
             data-test="saved-search-tag"
-            id="Loren Waters"
+            id={null}
             onClick={[Function]}
             style={
               Object {
@@ -309,7 +309,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "data-test": "saved-search-tag",
-            "id": "Loren Waters",
+            "id": null,
             "onClick": [Function],
             "style": Object {
               "cursor": "pointer",
@@ -756,7 +756,7 @@ ShallowWrapper {
         >
           <Tag
             data-test="saved-search-tag"
-            id="Loren Waters"
+            id={null}
             onClick={[Function]}
             style={
               Object {
@@ -878,7 +878,7 @@ ShallowWrapper {
           "children": Array [
             <Tag
               data-test="saved-search-tag"
-              id="Loren Waters"
+              id={null}
               onClick={[Function]}
               style={
                 Object {
@@ -1005,7 +1005,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "data-test": "saved-search-tag",
-              "id": "Loren Waters",
+              "id": null,
               "onClick": [Function],
               "style": Object {
                 "cursor": "pointer",

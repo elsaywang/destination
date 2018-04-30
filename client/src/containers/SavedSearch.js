@@ -30,7 +30,7 @@ SavedSearch.propTypes = {
     list: PropTypes.array.isRequired,
     getSavedSearch: PropTypes.func.isRequired,
     onSavedSearchClick: PropTypes.func.isRequired,
-    currentSearch: PropTypes.object.isRequired,
+    currentSearch: PropTypes.string.isRequired,
 };
 
 export default SavedSearch;

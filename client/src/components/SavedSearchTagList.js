@@ -9,7 +9,7 @@ function SavedSearchTagList({ list, onSavedSearchClick, currentSearch }) {
             key={search.name}
             search={search}
             onSavedSearchClick={onSavedSearchClick}
-            isCurrentSearch={search.name === currentSearch.name}
+            isCurrentSearch={search.name === currentSearch}
         />
     );
 
@@ -23,7 +23,7 @@ function SavedSearchTagList({ list, onSavedSearchClick, currentSearch }) {
 SavedSearchTagList.propTypes = {
     list: PropTypes.array.isRequired,
     onSavedSearchClick: PropTypes.func.isRequired,
-    currentSearch: PropTypes.object.isRequired,
+    currentSearch: PropTypes.string.isRequired,
 };
 
 export default SavedSearchTagList;

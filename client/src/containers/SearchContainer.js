@@ -236,7 +236,7 @@ class SearchContainer extends Component {
                                 getSavedSearch={this.props.getSavedSearch}
                                 list={this.props.savedSearch}
                                 onSavedSearchClick={this.onSavedSearchClick}
-                                currentSearch={this.state}
+                                currentSearch={this.state.name}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
                                 <div className={styles.saveSearchExecution}>
