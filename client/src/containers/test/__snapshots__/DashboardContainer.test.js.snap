@@ -75,9 +75,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashboardContainer
-    callSearch={[Function]}
+    callSearch={[MockFunction]}
     getSavedSearch={[Function]}
-    populateSearchFields={[Function]}
+    populateSearchFields={[MockFunction]}
     savedSearch={
       Array [
         Object {
@@ -190,7 +190,7 @@ ShallowWrapper {
             </GridRow>
             <SavedSearchTable
               allowsSelection={false}
-              getResultsBySavedSearch={[Function]}
+              getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
@@ -269,7 +269,7 @@ ShallowWrapper {
             </GridRow>
             <SavedSearchTable
               allowsSelection={false}
-              getResultsBySavedSearch={[Function]}
+              getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
@@ -356,7 +356,7 @@ ShallowWrapper {
             </GridRow>,
             <SavedSearchTable
               allowsSelection={false}
-              getResultsBySavedSearch={[Function]}
+              getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
@@ -623,7 +623,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "allowsSelection": false,
-              "getResultsBySavedSearch": [Function],
+              "getResultsBySavedSearch": [MockFunction],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
                 "endDate": "2018-04-23T10:37:26.452Z",
@@ -708,7 +708,7 @@ ShallowWrapper {
             </GridRow>,
             <SavedSearchTable
               allowsSelection={false}
-              getResultsBySavedSearch={[Function]}
+              getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
@@ -975,7 +975,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "allowsSelection": false,
-              "getResultsBySavedSearch": [Function],
+              "getResultsBySavedSearch": [MockFunction],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
                 "endDate": "2018-04-23T10:37:26.452Z",
@@ -1070,7 +1070,7 @@ ShallowWrapper {
               </GridRow>
               <SavedSearchTable
                 allowsSelection={false}
-                getResultsBySavedSearch={[Function]}
+                getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                   Object {
@@ -1149,7 +1149,7 @@ ShallowWrapper {
               </GridRow>
               <SavedSearchTable
                 allowsSelection={false}
-                getResultsBySavedSearch={[Function]}
+                getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                   Object {
@@ -1236,7 +1236,7 @@ ShallowWrapper {
               </GridRow>,
               <SavedSearchTable
                 allowsSelection={false}
-                getResultsBySavedSearch={[Function]}
+                getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                   Object {
@@ -1503,7 +1503,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "allowsSelection": false,
-                "getResultsBySavedSearch": [Function],
+                "getResultsBySavedSearch": [MockFunction],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
                   "endDate": "2018-04-23T10:37:26.452Z",
@@ -1588,7 +1588,7 @@ ShallowWrapper {
               </GridRow>,
               <SavedSearchTable
                 allowsSelection={false}
-                getResultsBySavedSearch={[Function]}
+                getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                   Object {
@@ -1855,7 +1855,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "allowsSelection": false,
-                "getResultsBySavedSearch": [Function],
+                "getResultsBySavedSearch": [MockFunction],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
                   "endDate": "2018-04-23T10:37:26.452Z",
