@@ -22,7 +22,7 @@ function SavedSearchPopover({ search, onSavedSearchClick, isCurrentSearch }) {
             <OverlayTrigger trigger="hover" data-test="saved-search-overlay-trigger">
                 <Tag
                     data-test="saved-search-tag"
-                    id={isCurrentSearch ? 'currentTag' : null}
+                    id={isCurrentSearch ? 'isCurrentSearch' : null}
                     style={{ cursor: 'pointer' }}
                     key={search.name}
                     value={search.name}
