@@ -22,15 +22,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        Array [],
-        ")",
-      ],
+      "children": Array [],
     },
     "ref": null,
-    "rendered": Array [
-      ")",
-    ],
+    "rendered": Array [],
     "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
@@ -39,15 +34,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [
-          Array [],
-          ")",
-        ],
+        "children": Array [],
       },
       "ref": null,
-      "rendered": Array [
-        ")",
-      ],
+      "rendered": Array [],
       "type": Symbol(react.fragment),
     },
   ],
@@ -136,167 +126,164 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        Array [
-          <Well
-            className={undefined}
-            data-test="saved-search-dashboard"
+        <Well
+          className={undefined}
+          data-test="saved-search-dashboard"
+        >
+          <GridRow
+            reverse={false}
+            valign="middle"
           >
-            <GridRow
-              reverse={false}
-              valign="middle"
+            <GridColumn
+              size={5}
             >
-              <GridColumn
-                size={5}
+              <div
+                className={undefined}
               >
-                <div
+                <Heading
+                  size={3}
+                >
+                  Margot O'Hara
+                </Heading>
+                <span
                   className={undefined}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Margot O'Hara
-                  </Heading>
-                  <span
-                    className={undefined}
-                  />
-                </div>
-              </GridColumn>
-              <GridColumn
-                size={7}
+                />
+              </div>
+            </GridColumn>
+            <GridColumn
+              size={7}
+            >
+              <GridRow
+                reverse={false}
               >
-                <GridRow
-                  reverse={false}
+                <GridColumn
+                  offsetSize={10}
+                  size={2}
                 >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
-                  >
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View More"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-            <SavedSearchTable
-              allowsSelection={false}
-              getResultsBySavedSearch={[MockFunction]}
-              isAdvancedSearchEnabled={false}
-              savedSearch={
-                Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
-                  "keyValuePairs": Array [
-                    Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
-                    },
-                  ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
-                  "signalStatus": "USED",
-                  "source": Object {
-                    "dataSourceId": 72599,
-                    "reportSuiteId": null,
-                    "sourceType": "REALTIME",
+                  <Button
+                    block={false}
+                    disabled={false}
+                    element="a"
+                    href="#/search"
+                    invalid={false}
+                    label="View More"
+                    logic={false}
+                    onClick={[Function]}
+                    quiet={false}
+                    selected={false}
+                    variant="primary"
+                  />
+                </GridColumn>
+              </GridRow>
+            </GridColumn>
+          </GridRow>
+          <SavedSearchTable
+            allowsSelection={false}
+            getResultsBySavedSearch={[MockFunction]}
+            isAdvancedSearchEnabled={false}
+            savedSearch={
+              Object {
+                "endDate": "2018-04-23T10:37:26.452Z",
+                "keyValuePairs": Array [
+                  Object {
+                    "id": 0,
+                    "key": "k-user-centric",
+                    "operator": ">=",
+                    "value": 31399,
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
-                }
+                ],
+                "minEventFires": 46276,
+                "name": "Margot O'Hara",
+                "signalStatus": "USED",
+                "source": Object {
+                  "dataSourceId": 72599,
+                  "reportSuiteId": null,
+                  "sourceType": "REALTIME",
+                },
+                "startDate": "2018-04-22T20:41:09.693Z",
               }
-            />
-          </Well>,
-          <Well
-            className={undefined}
-            data-test="saved-search-dashboard"
+            }
+          />
+        </Well>,
+        <Well
+          className={undefined}
+          data-test="saved-search-dashboard"
+        >
+          <GridRow
+            reverse={false}
+            valign="middle"
           >
-            <GridRow
-              reverse={false}
-              valign="middle"
+            <GridColumn
+              size={5}
             >
-              <GridColumn
-                size={5}
+              <div
+                className={undefined}
               >
-                <div
+                <Heading
+                  size={3}
+                >
+                  Margot O'Hara
+                </Heading>
+                <span
                   className={undefined}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Margot O'Hara
-                  </Heading>
-                  <span
-                    className={undefined}
-                  />
-                </div>
-              </GridColumn>
-              <GridColumn
-                size={7}
+                />
+              </div>
+            </GridColumn>
+            <GridColumn
+              size={7}
+            >
+              <GridRow
+                reverse={false}
               >
-                <GridRow
-                  reverse={false}
+                <GridColumn
+                  offsetSize={10}
+                  size={2}
                 >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
-                  >
-                    <Button
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View More"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-            <SavedSearchTable
-              allowsSelection={false}
-              getResultsBySavedSearch={[MockFunction]}
-              isAdvancedSearchEnabled={false}
-              savedSearch={
-                Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
-                  "keyValuePairs": Array [
-                    Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
-                    },
-                  ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
-                  "signalStatus": "USED",
-                  "source": Object {
-                    "dataSourceId": 72599,
-                    "reportSuiteId": null,
-                    "sourceType": "REALTIME",
+                  <Button
+                    block={false}
+                    disabled={false}
+                    element="a"
+                    href="#/search"
+                    invalid={false}
+                    label="View More"
+                    logic={false}
+                    onClick={[Function]}
+                    quiet={false}
+                    selected={false}
+                    variant="primary"
+                  />
+                </GridColumn>
+              </GridRow>
+            </GridColumn>
+          </GridRow>
+          <SavedSearchTable
+            allowsSelection={false}
+            getResultsBySavedSearch={[MockFunction]}
+            isAdvancedSearchEnabled={false}
+            savedSearch={
+              Object {
+                "endDate": "2018-04-23T10:37:26.452Z",
+                "keyValuePairs": Array [
+                  Object {
+                    "id": 0,
+                    "key": "k-user-centric",
+                    "operator": ">=",
+                    "value": 31399,
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
-                }
+                ],
+                "minEventFires": 46276,
+                "name": "Margot O'Hara",
+                "signalStatus": "USED",
+                "source": Object {
+                  "dataSourceId": 72599,
+                  "reportSuiteId": null,
+                  "sourceType": "REALTIME",
+                },
+                "startDate": "2018-04-22T20:41:09.693Z",
               }
-            />
-          </Well>,
-        ],
-        ")",
+            }
+          />
+        </Well>,
       ],
     },
     "ref": null,
@@ -1005,7 +992,6 @@ ShallowWrapper {
         ],
         "type": [Function],
       },
-      ")",
     ],
     "type": Symbol(react.fragment),
   },
@@ -1016,167 +1002,164 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          Array [
-            <Well
-              className={undefined}
-              data-test="saved-search-dashboard"
+          <Well
+            className={undefined}
+            data-test="saved-search-dashboard"
+          >
+            <GridRow
+              reverse={false}
+              valign="middle"
             >
-              <GridRow
-                reverse={false}
-                valign="middle"
+              <GridColumn
+                size={5}
               >
-                <GridColumn
-                  size={5}
+                <div
+                  className={undefined}
                 >
-                  <div
+                  <Heading
+                    size={3}
+                  >
+                    Margot O'Hara
+                  </Heading>
+                  <span
                     className={undefined}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Margot O'Hara
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
-                  </div>
-                </GridColumn>
-                <GridColumn
-                  size={7}
+                  />
+                </div>
+              </GridColumn>
+              <GridColumn
+                size={7}
+              >
+                <GridRow
+                  reverse={false}
                 >
-                  <GridRow
-                    reverse={false}
+                  <GridColumn
+                    offsetSize={10}
+                    size={2}
                   >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View More"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
-              </GridRow>
-              <SavedSearchTable
-                allowsSelection={false}
-                getResultsBySavedSearch={[MockFunction]}
-                isAdvancedSearchEnabled={false}
-                savedSearch={
-                  Object {
-                    "endDate": "2018-04-23T10:37:26.452Z",
-                    "keyValuePairs": Array [
-                      Object {
-                        "id": 0,
-                        "key": "k-user-centric",
-                        "operator": ">=",
-                        "value": 31399,
-                      },
-                    ],
-                    "minEventFires": 46276,
-                    "name": "Margot O'Hara",
-                    "signalStatus": "USED",
-                    "source": Object {
-                      "dataSourceId": 72599,
-                      "reportSuiteId": null,
-                      "sourceType": "REALTIME",
+                    <Button
+                      block={false}
+                      disabled={false}
+                      element="a"
+                      href="#/search"
+                      invalid={false}
+                      label="View More"
+                      logic={false}
+                      onClick={[Function]}
+                      quiet={false}
+                      selected={false}
+                      variant="primary"
+                    />
+                  </GridColumn>
+                </GridRow>
+              </GridColumn>
+            </GridRow>
+            <SavedSearchTable
+              allowsSelection={false}
+              getResultsBySavedSearch={[MockFunction]}
+              isAdvancedSearchEnabled={false}
+              savedSearch={
+                Object {
+                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "keyValuePairs": Array [
+                    Object {
+                      "id": 0,
+                      "key": "k-user-centric",
+                      "operator": ">=",
+                      "value": 31399,
                     },
-                    "startDate": "2018-04-22T20:41:09.693Z",
-                  }
+                  ],
+                  "minEventFires": 46276,
+                  "name": "Margot O'Hara",
+                  "signalStatus": "USED",
+                  "source": Object {
+                    "dataSourceId": 72599,
+                    "reportSuiteId": null,
+                    "sourceType": "REALTIME",
+                  },
+                  "startDate": "2018-04-22T20:41:09.693Z",
                 }
-              />
-            </Well>,
-            <Well
-              className={undefined}
-              data-test="saved-search-dashboard"
+              }
+            />
+          </Well>,
+          <Well
+            className={undefined}
+            data-test="saved-search-dashboard"
+          >
+            <GridRow
+              reverse={false}
+              valign="middle"
             >
-              <GridRow
-                reverse={false}
-                valign="middle"
+              <GridColumn
+                size={5}
               >
-                <GridColumn
-                  size={5}
+                <div
+                  className={undefined}
                 >
-                  <div
+                  <Heading
+                    size={3}
+                  >
+                    Margot O'Hara
+                  </Heading>
+                  <span
                     className={undefined}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Margot O'Hara
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
-                  </div>
-                </GridColumn>
-                <GridColumn
-                  size={7}
+                  />
+                </div>
+              </GridColumn>
+              <GridColumn
+                size={7}
+              >
+                <GridRow
+                  reverse={false}
                 >
-                  <GridRow
-                    reverse={false}
+                  <GridColumn
+                    offsetSize={10}
+                    size={2}
                   >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View More"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
-              </GridRow>
-              <SavedSearchTable
-                allowsSelection={false}
-                getResultsBySavedSearch={[MockFunction]}
-                isAdvancedSearchEnabled={false}
-                savedSearch={
-                  Object {
-                    "endDate": "2018-04-23T10:37:26.452Z",
-                    "keyValuePairs": Array [
-                      Object {
-                        "id": 0,
-                        "key": "k-user-centric",
-                        "operator": ">=",
-                        "value": 31399,
-                      },
-                    ],
-                    "minEventFires": 46276,
-                    "name": "Margot O'Hara",
-                    "signalStatus": "USED",
-                    "source": Object {
-                      "dataSourceId": 72599,
-                      "reportSuiteId": null,
-                      "sourceType": "REALTIME",
+                    <Button
+                      block={false}
+                      disabled={false}
+                      element="a"
+                      href="#/search"
+                      invalid={false}
+                      label="View More"
+                      logic={false}
+                      onClick={[Function]}
+                      quiet={false}
+                      selected={false}
+                      variant="primary"
+                    />
+                  </GridColumn>
+                </GridRow>
+              </GridColumn>
+            </GridRow>
+            <SavedSearchTable
+              allowsSelection={false}
+              getResultsBySavedSearch={[MockFunction]}
+              isAdvancedSearchEnabled={false}
+              savedSearch={
+                Object {
+                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "keyValuePairs": Array [
+                    Object {
+                      "id": 0,
+                      "key": "k-user-centric",
+                      "operator": ">=",
+                      "value": 31399,
                     },
-                    "startDate": "2018-04-22T20:41:09.693Z",
-                  }
+                  ],
+                  "minEventFires": 46276,
+                  "name": "Margot O'Hara",
+                  "signalStatus": "USED",
+                  "source": Object {
+                    "dataSourceId": 72599,
+                    "reportSuiteId": null,
+                    "sourceType": "REALTIME",
+                  },
+                  "startDate": "2018-04-22T20:41:09.693Z",
                 }
-              />
-            </Well>,
-          ],
-          ")",
+              }
+            />
+          </Well>,
         ],
       },
       "ref": null,
@@ -1885,7 +1868,6 @@ ShallowWrapper {
           ],
           "type": [Function],
         },
-        ")",
       ],
       "type": Symbol(react.fragment),
     },

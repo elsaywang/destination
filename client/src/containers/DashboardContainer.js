@@ -64,7 +64,7 @@ class DashboardContainer extends Component {
                                 />
                             </Well>
                         ),
-                )})
+                )}
             </Fragment>
         );
     }
