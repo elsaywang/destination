@@ -26,8 +26,16 @@ describe('<SavedSearch /> component', () => {
             signalStatus: 'USED',
         },
     ];
+    const currentSearch = {
+        name: 'Watson Cartwright',
+    };
     const wrapper = shallow(
-        <SavedSearch list={list} getSavedSearch={mockFn} onSavedSearchClick={mockFn} />,
+        <SavedSearch
+            list={list}
+            getSavedSearch={mockFn}
+            onSavedSearchClick={mockFn}
+            currentSearch={currentSearch.name}
+        />,
     );
 
     describe('rendering', () => {

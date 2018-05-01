@@ -48,10 +48,9 @@ class DashboardContainer extends Component {
                                                     variant="primary"
                                                     element="a"
                                                     href="#/search"
-                                                    onClick={this.handleViewMoreForSavedSearch.bind(
-                                                        this,
-                                                        search,
-                                                    )}
+                                                    onClick={() =>
+                                                        this.handleViewMoreForSavedSearch(search)
+                                                    }
                                                 />
                                             </GridColumn>
                                         </GridRow>
@@ -65,7 +64,7 @@ class DashboardContainer extends Component {
                                 />
                             </Well>
                         ),
-                )})
+                )}
             </Fragment>
         );
     }

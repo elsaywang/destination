@@ -119,6 +119,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -307,6 +308,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -326,6 +328,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -341,6 +344,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -356,6 +360,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "currentSearch": "",
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -448,6 +453,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -636,6 +642,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -655,6 +662,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -670,6 +678,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <SavedSearch
+                    currentSearch=""
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -685,6 +694,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "currentSearch": "",
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],
@@ -846,6 +856,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1142,6 +1153,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1173,6 +1185,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1200,6 +1213,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -1226,6 +1240,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "currentSearch": "",
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -1845,6 +1860,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2141,6 +2157,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2172,6 +2189,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2199,6 +2217,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <SavedSearch
+                    currentSearch=""
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -2225,6 +2244,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "currentSearch": "",
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],
@@ -2913,6 +2933,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -3209,6 +3230,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -3240,6 +3262,7 @@ ShallowWrapper {
               className={undefined}
             >
               <SavedSearch
+                currentSearch=""
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -3267,6 +3290,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -3293,6 +3317,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "currentSearch": "",
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -3912,6 +3937,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -4208,6 +4234,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -4239,6 +4266,7 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SavedSearch
+                  currentSearch=""
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -4266,6 +4294,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <SavedSearch
+                    currentSearch=""
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -4292,6 +4321,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "currentSearch": "",
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],

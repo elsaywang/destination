@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearchTagList
+    currentSearch="Watson Cartwright"
     list={
       Array [
         Object {
@@ -46,6 +47,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <SavedSearchPopover
+          isCurrentSearch={false}
           onSavedSearchClick={[MockFunction]}
           search={
             Object {
@@ -88,6 +90,7 @@ ShallowWrapper {
         "key": "Germaine Wiza",
         "nodeType": "function",
         "props": Object {
+          "isCurrentSearch": false,
           "onSavedSearchClick": [MockFunction],
           "search": Object {
             "id": 17966,
@@ -126,6 +129,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <SavedSearchPopover
+            isCurrentSearch={false}
             onSavedSearchClick={[MockFunction]}
             search={
               Object {
@@ -168,6 +172,7 @@ ShallowWrapper {
           "key": "Germaine Wiza",
           "nodeType": "function",
           "props": Object {
+            "isCurrentSearch": false,
             "onSavedSearchClick": [MockFunction],
             "search": Object {
               "id": 17966,

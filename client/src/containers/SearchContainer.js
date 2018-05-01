@@ -22,6 +22,7 @@ class SearchContainer extends Component {
         super();
 
         this.state = {
+            name: '',
             keyValuePairs: [
                 {
                     id: 0,
@@ -56,15 +57,11 @@ class SearchContainer extends Component {
 
         // Pre-populate search fields if user clicked view more button in dashboard
         this.setState({ ...this.state, ...this.props.savedSearchFields });
-        //if user did not click any view more button in the dashboard, clear all
+        //if user does not click any view more button in the dashboard, reset the carried over search results from dashboard
+        //TODO: Extract all shared search fields state changes to redux
         if (!this.props.savedSearchFields.name) {
             this.onClearAll();
         }
-    }
-
-    componentWillUnmount() {
-        //when user left current search tab view, clear search fields
-        this.props.clearSearchFields();
     }
 
     handleSignalTypeChange = signalType => {
@@ -170,6 +167,7 @@ class SearchContainer extends Component {
             ...savedSearch,
         });
         this.props.callSearch(savedSearch);
+        this.props.populateSearchFields(savedSearch);
     };
 
     onSearch = () => {
@@ -183,7 +181,9 @@ class SearchContainer extends Component {
 
     onClearAll = () => {
         this.props.clearSearch();
+        this.props.clearSearchFields();
         this.setState({
+            name: '',
             keyValuePairs: [
                 {
                     id: 0,
@@ -234,6 +234,7 @@ class SearchContainer extends Component {
                                 getSavedSearch={this.props.getSavedSearch}
                                 list={this.props.savedSearch}
                                 onSavedSearchClick={this.onSavedSearchClick}
+                                currentSearch={this.state.name}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
                                 <div className={styles.saveSearchExecution}>

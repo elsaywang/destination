@@ -93,6 +93,8 @@ describe('<DashboardContainer /> component', () => {
                         endDate: '2018-04-23T10:37:26.452Z',
                     },
                 ],
+                populateSearchFields: jest.fn(),
+                callSearch: jest.fn(),
             });
         });
 
@@ -120,6 +122,19 @@ describe('<DashboardContainer /> component', () => {
             expect(wrapper.find(SavedSearchTable)).toHaveLength(
                 wrapper.instance().props.savedSearch.length,
             );
+        });
+
+        it('.handleViewMoreForSavedSearch() is called on the first saved search table', () => {
+            const wrapperInstance = wrapper.instance();
+            const firstSavedSearch = wrapperInstance.props.savedSearch[0];
+            const spyOnClick = jest.spyOn(wrapperInstance, 'handleViewMoreForSavedSearch');
+            wrapper
+                .find(Button)
+                .at(0)
+                .simulate('click', firstSavedSearch);
+            expect(spyOnClick).toHaveBeenCalled();
+            expect(wrapperInstance.props.populateSearchFields).toHaveBeenCalled();
+            expect(wrapperInstance.props.callSearch).toHaveBeenCalled();
         });
     });
 });

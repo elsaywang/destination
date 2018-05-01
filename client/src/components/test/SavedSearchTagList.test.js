@@ -26,7 +26,16 @@ describe('<SavedSearchTagList /> component', () => {
             signalStatus: 'USED',
         },
     ];
-    const wrapper = shallow(<SavedSearchTagList list={list} onSavedSearchClick={mockFn} />);
+    const currentSearch = {
+        name: 'Watson Cartwright',
+    };
+    const wrapper = shallow(
+        <SavedSearchTagList
+            list={list}
+            onSavedSearchClick={mockFn}
+            currentSearch={currentSearch.name}
+        />,
+    );
 
     describe('rendering', () => {
         it('matches snapshot', () => {

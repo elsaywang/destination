@@ -19,6 +19,7 @@ class SavedSearch extends Component {
                     isLoaded={Boolean(this.props.list.length)}
                     list={this.props.list}
                     onSavedSearchClick={this.props.onSavedSearchClick}
+                    currentSearch={this.props.currentSearch}
                 />
             </div>
         );
@@ -29,6 +30,7 @@ SavedSearch.propTypes = {
     list: PropTypes.array.isRequired,
     getSavedSearch: PropTypes.func.isRequired,
     onSavedSearchClick: PropTypes.func.isRequired,
+    currentSearch: PropTypes.string.isRequired,
 };
 
 export default SavedSearch;

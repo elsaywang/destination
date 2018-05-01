@@ -5,3 +5,9 @@
 :local(.block) {
     margin: 0 0 10px;
 }
+
+#isCurrentSearch {
+    background: var(--spectrum-global-color-blue500);
+    color: var(--spectrum-global-color-grey50);
+    border-color: var(--spectrum-global-color-blue500);
+}

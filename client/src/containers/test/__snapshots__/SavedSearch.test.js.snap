@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearch
+    currentSearch="Watson Cartwright"
     getSavedSearch={
       [MockFunction] {
         "calls": Array [
@@ -64,6 +65,7 @@ ShallowWrapper {
           Saved Search
         </Heading>,
         <load
+          currentSearch="Watson Cartwright"
           isLoaded={true}
           list={
             Array [
@@ -120,6 +122,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "currentSearch": "Watson Cartwright",
           "isLoaded": true,
           "list": Array [
             Object {
@@ -170,6 +173,7 @@ ShallowWrapper {
             Saved Search
           </Heading>,
           <load
+            currentSearch="Watson Cartwright"
             isLoaded={true}
             list={
               Array [
@@ -226,6 +230,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "currentSearch": "Watson Cartwright",
             "isLoaded": true,
             "list": Array [
               Object {
