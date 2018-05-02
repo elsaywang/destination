@@ -1,11 +1,31 @@
+const deferred = require('../utils/deferred');
+const savedSearchResponse = require('../fixtures/savedSearch.json');
+const searchResultsResponse = require('../fixtures/searchResults.json');
+
 describe('Search Form Integration Tests', function() {
-    it('should show search form when navigating with URL', function() {
-        cy.visit('#/search');
-        cy.get('[data-test="search-form"]').should('exist');
+    before(function() {
+        this.fetchSavedSearchDeferred = deferred();
+
+        cy.visit('#/search', {
+            onBeforeLoad(win) {
+                cy
+                    .stub(win, 'fetch')
+                    .withArgs('/api/v1/users/self/annotations/aam-portal')
+                    .as('fetchSavedSearch')
+                    .returns(this.fetchSavedSearchDeferred.promise);
+            },
+        });
+
+        this.fetchSavedSearchDeferred.resolve({
+            json() {
+                return savedSearchResponse.savedSearch;
+            },
+            ok: true,
+        });
     });
 
-    it("should show user's saved search", function() {
-        cy.get('[data-test="saved-search"]').should('exist');
+    it('should show search form when navigating with URL', function() {
+        cy.get('[data-test="search-form"]').should('exist');
     });
 
     describe('when Advanced toggle is clicked', function() {
@@ -46,42 +66,34 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    // describe('when typing in text in Key input', function() {
-    //     beforeEach(function() {
-    //         cy.get('[data-test="key-search-field"]').as('keyInput');
-    //         cy.server();
-    //         cy
-    //             .route({
-    //                 method: 'GET',
-    //                 url: 'api/results',
-    //                 response: 'fixture:results.json',
-    //             })
-    //             .as('getResults');
-    //     });
+    describe.skip('when typing in text in Key input', function() {
+        beforeEach(function() {
+            cy.get('[data-test="key-search-field"]').as('keyInput');
+        });
 
-    //     it('should show autocomplete with suggestions', function() {
-    //         cy
-    //             .get('@keyInput')
-    //             .type('k')
-    //             .wait('@getResults');
+        it('should show autocomplete with suggestions', function() {
+            cy
+                .get('@keyInput')
+                .type('k')
+                .wait('@getResults');
 
-    //         cy.get('.spectrum-Popover.is-open').should('have.length', 1);
-    //     });
+            cy.get('.spectrum-Popover.is-open').should('have.length', 1);
+        });
 
-    //     describe('when an option is clicked', function() {
-    //         it('should have the same key value as clicked option', function() {
-    //             cy.wait('@getResults');
-    //             cy
-    //                 .get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
-    //                 .click()
-    //                 .then(function($item) {
-    //                     cy.get('@keyInput').should(function($keyInput) {
-    //                         expect($keyInput.val()).to.eq($item.text());
-    //                     });
-    //                 });
-    //         });
-    //     });
-    // });
+        describe('when an option is clicked', function() {
+            it('should have the same key value as clicked option', function() {
+                cy.wait('@getResults');
+                cy
+                    .get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
+                    .click()
+                    .then(function($item) {
+                        cy.get('@keyInput').should(function($keyInput) {
+                            expect($keyInput.val()).to.eq($item.text());
+                        });
+                    });
+            });
+        });
+    });
 
     describe('when Operator select is changed', function() {
         it('should change the value to selected option', function() {
@@ -189,23 +201,44 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    // TODO: need to mock server and server response
-    // describe('when Search button is clicked', function() {
-    //     it('should render results table', function () {
-    //         cy.get('[data-test="search-button"]').click();
-    //         cy.get('[data-test="signals-table"]').should('have.length', 1);
-    //     });
+    describe('when Search button is clicked', function() {
+        beforeEach(function() {
+            this.fetchSavedSearchDeferred = deferred();
+            this.fetchSearchResultsDeferred = deferred();
 
-    //     describe('with multiple key value pairs that are empty', function() {
-    //         it('should clean up empty key value pairs except the first and make a request with cleaned up key value pairs to API', function() {
-    //             cy.get('[data-test="add-button"]').click();
-    //             cy.get('[data-test="add-button"]').click();
-    //             cy.get('[data-test="search-button"]').click();
-    //             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
-    //             // TODO: expect fetch to have been called with cleaned up key value pairs
-    //         });
-    //     });
-    // });
+            cy.visit('#/search', {
+                onBeforeLoad(win) {
+                    cy
+                        .stub(win, 'fetch')
+                        .withArgs('/api/v1/users/self/annotations/aam-portal')
+                        .as('fetchSavedSearch')
+                        .returns(this.fetchSavedSearchDeferred.promise)
+                        .withArgs('/api/signals/list')
+                        .as('fetchSearchResults')
+                        .returns(this.fetchSearchResultsDeferred.promise);
+                },
+            });
+
+            this.fetchSavedSearchDeferred.resolve({
+                json() {
+                    return savedSearchResponse.savedSearch;
+                },
+                ok: true,
+            });
+
+            this.fetchSearchResultsDeferred.resolve({
+                json() {
+                    return searchResultsResponse;
+                },
+                ok: true,
+            });
+        });
+
+        it('should render results table', function() {
+            cy.get('[data-test="search-button"]').click();
+            cy.get('[data-test="signals-table"]').should('have.length', 1);
+        });
+    });
 
     describe('when Clear All button is clicked', function() {
         before(function() {
@@ -221,29 +254,6 @@ describe('Search Form Integration Tests', function() {
             cy.get('.view-records').should('contain', '7 Days');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
             cy.get('[data-test="signals-table"]').should('have.length', 0);
-        });
-    });
-
-    describe.skip('when a Saved Search tag is clicked', function() {
-        before(function() {
-            cy.get('[data-test="saved-search-tag"]:first').click();
-        });
-
-        // TODO: when API call is hooked up, this should check for the mocked call to pre-fill the values
-        it.skip('should pre-fill the key-value pair fields', function() {});
-
-        it('should execute the saved search and show results', function() {
-            cy.get('[data-test="signals-table"]').should('have.length', 1);
-        });
-    });
-
-    describe.skip('when a Saved Search tag is hovered over', function() {
-        before(function() {
-            cy.get('[data-test="saved-search-tag"]:first').trigger('mouseover');
-        });
-
-        it('should trigger a popover', function() {
-            cy.get('[data-test="saved-search-popover"]').should('have.length', 1);
         });
     });
 });

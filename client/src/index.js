@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import './polyfills';
 import { getLocaleData } from './lib/i18n';
 import configureStore from './configureStore';
-import registerServiceWorker from './registerServiceWorker';
 import Layout from './components/Layout';
 import Nav from './components/Nav';
 import DashboardContainer from './containers/DashboardContainer';
@@ -31,5 +30,3 @@ ReactDOM.render(
     </IntlProvider>,
     document.getElementById('root'),
 );
-
-registerServiceWorker();

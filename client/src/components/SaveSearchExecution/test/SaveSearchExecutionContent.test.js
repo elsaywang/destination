@@ -11,7 +11,7 @@ import { descending, sortingOptions, radioGroupOptions } from '../../../constant
 import {
     textFieldLabelName,
     textFieldPlaceHolder,
-    saveThisSearch,
+    saveSearch,
     checkBoxLabel,
     defaultSorting,
 } from '../saveSearchExecutionMessages';

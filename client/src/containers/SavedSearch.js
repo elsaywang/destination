@@ -20,6 +20,7 @@ class SavedSearch extends Component {
                     list={this.props.list}
                     onSavedSearchClick={this.props.onSavedSearchClick}
                     currentSearch={this.props.currentSearch}
+                    deleteSearch={this.props.deleteSearch}
                 />
             </div>
         );
@@ -31,6 +32,7 @@ SavedSearch.propTypes = {
     getSavedSearch: PropTypes.func.isRequired,
     onSavedSearchClick: PropTypes.func.isRequired,
     currentSearch: PropTypes.string.isRequired,
+    deleteSearch: PropTypes.func.isRequired,
 };
 
 export default SavedSearch;

@@ -8,7 +8,17 @@ ShallowWrapper {
     callSearch={[Function]}
     getSavedSearch={[Function]}
     populateSearchFields={[Function]}
-    savedSearch={Array []}
+    savedSearch={
+      Object {
+        "list": Array [],
+        "saveSearch": Object {
+          "descending": false,
+          "includeInDashboard": false,
+          "name": "",
+          "sorting": "",
+        },
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -69,48 +79,59 @@ ShallowWrapper {
     getSavedSearch={[Function]}
     populateSearchFields={[MockFunction]}
     savedSearch={
-      Array [
-        Object {
-          "endDate": "2018-04-23T10:37:26.452Z",
-          "keyValuePairs": Array [
-            Object {
-              "id": 0,
-              "key": "k-user-centric",
-              "operator": ">=",
-              "value": 31399,
+      Object {
+        "list": Array [
+          Object {
+            "endDate": "2018-04-29T05:55:48.852Z",
+            "id": 0,
+            "keyValuePairs": Array [
+              Object {
+                "key": "k-bandwidth",
+                "operator": "<",
+                "value": 80692,
+              },
+            ],
+            "minEventFires": 91445,
+            "name": "Clovis Simonis",
+            "signalStatus": "USED",
+            "sorting": "Key Name",
+            "source": Object {
+              "dataSourceId": 30634,
+              "dataType": "Real-Time",
+              "reportSuiteId": null,
+              "sourceType": "REALTIME",
             },
-          ],
-          "minEventFires": 46276,
-          "name": "Margot O'Hara",
-          "signalStatus": "USED",
-          "source": Object {
-            "dataSourceId": 72599,
-            "reportSuiteId": null,
-            "sourceType": "REALTIME",
+            "startDate": "2018-04-29T16:37:33.894Z",
           },
-          "startDate": "2018-04-22T20:41:09.693Z",
-        },
-        Object {
-          "endDate": "2018-04-23T10:37:26.452Z",
-          "keyValuePairs": Array [
-            Object {
-              "id": 0,
-              "key": "k-user-centric",
-              "operator": ">=",
-              "value": 31399,
+          Object {
+            "endDate": "2018-04-29T09:22:26.931Z",
+            "id": 1,
+            "keyValuePairs": Array [
+              Object {
+                "key": "k-Customer",
+                "operator": "<",
+                "value": 83989,
+              },
+              Object {
+                "key": "k-coherent",
+                "operator": "<=",
+                "value": 54800,
+              },
+            ],
+            "minEventFires": 33675,
+            "name": "Stephen Sanford",
+            "signalStatus": "USED",
+            "sorting": "Total Event Fires",
+            "source": Object {
+              "dataSourceId": 81638,
+              "dataType": "Real-Time",
+              "reportSuiteId": null,
+              "sourceType": "REALTIME",
             },
-          ],
-          "minEventFires": 46276,
-          "name": "Margot O'Hara",
-          "signalStatus": "USED",
-          "source": Object {
-            "dataSourceId": 72599,
-            "reportSuiteId": null,
-            "sourceType": "REALTIME",
+            "startDate": "2018-04-28T22:35:51.313Z",
           },
-          "startDate": "2018-04-22T20:41:09.693Z",
-        },
-      ]
+        ],
+      }
     }
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -143,7 +164,7 @@ ShallowWrapper {
                 <Heading
                   size={3}
                 >
-                  Margot O'Hara
+                  Clovis Simonis
                 </Heading>
                 <span
                   className={undefined}
@@ -183,24 +204,26 @@ ShallowWrapper {
             isAdvancedSearchEnabled={false}
             savedSearch={
               Object {
-                "endDate": "2018-04-23T10:37:26.452Z",
+                "endDate": "2018-04-29T05:55:48.852Z",
+                "id": 0,
                 "keyValuePairs": Array [
                   Object {
-                    "id": 0,
-                    "key": "k-user-centric",
-                    "operator": ">=",
-                    "value": 31399,
+                    "key": "k-bandwidth",
+                    "operator": "<",
+                    "value": 80692,
                   },
                 ],
-                "minEventFires": 46276,
-                "name": "Margot O'Hara",
+                "minEventFires": 91445,
+                "name": "Clovis Simonis",
                 "signalStatus": "USED",
+                "sorting": "Key Name",
                 "source": Object {
-                  "dataSourceId": 72599,
+                  "dataSourceId": 30634,
+                  "dataType": "Real-Time",
                   "reportSuiteId": null,
                   "sourceType": "REALTIME",
                 },
-                "startDate": "2018-04-22T20:41:09.693Z",
+                "startDate": "2018-04-29T16:37:33.894Z",
               }
             }
           />
@@ -222,7 +245,7 @@ ShallowWrapper {
                 <Heading
                   size={3}
                 >
-                  Margot O'Hara
+                  Stephen Sanford
                 </Heading>
                 <span
                   className={undefined}
@@ -262,24 +285,31 @@ ShallowWrapper {
             isAdvancedSearchEnabled={false}
             savedSearch={
               Object {
-                "endDate": "2018-04-23T10:37:26.452Z",
+                "endDate": "2018-04-29T09:22:26.931Z",
+                "id": 1,
                 "keyValuePairs": Array [
                   Object {
-                    "id": 0,
-                    "key": "k-user-centric",
-                    "operator": ">=",
-                    "value": 31399,
+                    "key": "k-Customer",
+                    "operator": "<",
+                    "value": 83989,
+                  },
+                  Object {
+                    "key": "k-coherent",
+                    "operator": "<=",
+                    "value": 54800,
                   },
                 ],
-                "minEventFires": 46276,
-                "name": "Margot O'Hara",
+                "minEventFires": 33675,
+                "name": "Stephen Sanford",
                 "signalStatus": "USED",
+                "sorting": "Total Event Fires",
                 "source": Object {
-                  "dataSourceId": 72599,
+                  "dataSourceId": 81638,
+                  "dataType": "Real-Time",
                   "reportSuiteId": null,
                   "sourceType": "REALTIME",
                 },
-                "startDate": "2018-04-22T20:41:09.693Z",
+                "startDate": "2018-04-28T22:35:51.313Z",
               }
             }
           />
@@ -290,7 +320,7 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "Margot O'Hara",
+        "key": "Clovis Simonis",
         "nodeType": "function",
         "props": Object {
           "children": Array [
@@ -307,7 +337,7 @@ ShallowWrapper {
                   <Heading
                     size={3}
                   >
-                    Margot O'Hara
+                    Clovis Simonis
                   </Heading>
                   <span
                     className={undefined}
@@ -347,24 +377,26 @@ ShallowWrapper {
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "endDate": "2018-04-29T05:55:48.852Z",
+                  "id": 0,
                   "keyValuePairs": Array [
                     Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
+                      "key": "k-bandwidth",
+                      "operator": "<",
+                      "value": 80692,
                     },
                   ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
+                  "minEventFires": 91445,
+                  "name": "Clovis Simonis",
                   "signalStatus": "USED",
+                  "sorting": "Key Name",
                   "source": Object {
-                    "dataSourceId": 72599,
+                    "dataSourceId": 30634,
+                    "dataType": "Real-Time",
                     "reportSuiteId": null,
                     "sourceType": "REALTIME",
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
+                  "startDate": "2018-04-29T16:37:33.894Z",
                 }
               }
             />,
@@ -389,7 +421,7 @@ ShallowWrapper {
                     <Heading
                       size={3}
                     >
-                      Margot O'Hara
+                      Clovis Simonis
                     </Heading>
                     <span
                       className={undefined}
@@ -439,7 +471,7 @@ ShallowWrapper {
                     <Heading
                       size={3}
                     >
-                      Margot O'Hara
+                      Clovis Simonis
                     </Heading>
                     <span
                       className={undefined}
@@ -457,7 +489,7 @@ ShallowWrapper {
                       <Heading
                         size={3}
                       >
-                        Margot O'Hara
+                        Clovis Simonis
                       </Heading>,
                       <span
                         className={undefined}
@@ -472,11 +504,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "children": "Margot O'Hara",
+                        "children": "Clovis Simonis",
                         "size": 3,
                       },
                       "ref": null,
-                      "rendered": "Margot O'Hara",
+                      "rendered": "Clovis Simonis",
                       "type": [Function],
                     },
                     Object {
@@ -613,24 +645,26 @@ ShallowWrapper {
               "getResultsBySavedSearch": [MockFunction],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
-                "endDate": "2018-04-23T10:37:26.452Z",
+                "endDate": "2018-04-29T05:55:48.852Z",
+                "id": 0,
                 "keyValuePairs": Array [
                   Object {
-                    "id": 0,
-                    "key": "k-user-centric",
-                    "operator": ">=",
-                    "value": 31399,
+                    "key": "k-bandwidth",
+                    "operator": "<",
+                    "value": 80692,
                   },
                 ],
-                "minEventFires": 46276,
-                "name": "Margot O'Hara",
+                "minEventFires": 91445,
+                "name": "Clovis Simonis",
                 "signalStatus": "USED",
+                "sorting": "Key Name",
                 "source": Object {
-                  "dataSourceId": 72599,
+                  "dataSourceId": 30634,
+                  "dataType": "Real-Time",
                   "reportSuiteId": null,
                   "sourceType": "REALTIME",
                 },
-                "startDate": "2018-04-22T20:41:09.693Z",
+                "startDate": "2018-04-29T16:37:33.894Z",
               },
             },
             "ref": null,
@@ -642,7 +676,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "Margot O'Hara",
+        "key": "Stephen Sanford",
         "nodeType": "function",
         "props": Object {
           "children": Array [
@@ -659,7 +693,7 @@ ShallowWrapper {
                   <Heading
                     size={3}
                   >
-                    Margot O'Hara
+                    Stephen Sanford
                   </Heading>
                   <span
                     className={undefined}
@@ -699,24 +733,31 @@ ShallowWrapper {
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "endDate": "2018-04-29T09:22:26.931Z",
+                  "id": 1,
                   "keyValuePairs": Array [
                     Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
+                      "key": "k-Customer",
+                      "operator": "<",
+                      "value": 83989,
+                    },
+                    Object {
+                      "key": "k-coherent",
+                      "operator": "<=",
+                      "value": 54800,
                     },
                   ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
+                  "minEventFires": 33675,
+                  "name": "Stephen Sanford",
                   "signalStatus": "USED",
+                  "sorting": "Total Event Fires",
                   "source": Object {
-                    "dataSourceId": 72599,
+                    "dataSourceId": 81638,
+                    "dataType": "Real-Time",
                     "reportSuiteId": null,
                     "sourceType": "REALTIME",
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
+                  "startDate": "2018-04-28T22:35:51.313Z",
                 }
               }
             />,
@@ -741,7 +782,7 @@ ShallowWrapper {
                     <Heading
                       size={3}
                     >
-                      Margot O'Hara
+                      Stephen Sanford
                     </Heading>
                     <span
                       className={undefined}
@@ -791,7 +832,7 @@ ShallowWrapper {
                     <Heading
                       size={3}
                     >
-                      Margot O'Hara
+                      Stephen Sanford
                     </Heading>
                     <span
                       className={undefined}
@@ -809,7 +850,7 @@ ShallowWrapper {
                       <Heading
                         size={3}
                       >
-                        Margot O'Hara
+                        Stephen Sanford
                       </Heading>,
                       <span
                         className={undefined}
@@ -824,11 +865,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "children": "Margot O'Hara",
+                        "children": "Stephen Sanford",
                         "size": 3,
                       },
                       "ref": null,
-                      "rendered": "Margot O'Hara",
+                      "rendered": "Stephen Sanford",
                       "type": [Function],
                     },
                     Object {
@@ -965,24 +1006,31 @@ ShallowWrapper {
               "getResultsBySavedSearch": [MockFunction],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
-                "endDate": "2018-04-23T10:37:26.452Z",
+                "endDate": "2018-04-29T09:22:26.931Z",
+                "id": 1,
                 "keyValuePairs": Array [
                   Object {
-                    "id": 0,
-                    "key": "k-user-centric",
-                    "operator": ">=",
-                    "value": 31399,
+                    "key": "k-Customer",
+                    "operator": "<",
+                    "value": 83989,
+                  },
+                  Object {
+                    "key": "k-coherent",
+                    "operator": "<=",
+                    "value": 54800,
                   },
                 ],
-                "minEventFires": 46276,
-                "name": "Margot O'Hara",
+                "minEventFires": 33675,
+                "name": "Stephen Sanford",
                 "signalStatus": "USED",
+                "sorting": "Total Event Fires",
                 "source": Object {
-                  "dataSourceId": 72599,
+                  "dataSourceId": 81638,
+                  "dataType": "Real-Time",
                   "reportSuiteId": null,
                   "sourceType": "REALTIME",
                 },
-                "startDate": "2018-04-22T20:41:09.693Z",
+                "startDate": "2018-04-28T22:35:51.313Z",
               },
             },
             "ref": null,
@@ -1019,7 +1067,7 @@ ShallowWrapper {
                   <Heading
                     size={3}
                   >
-                    Margot O'Hara
+                    Clovis Simonis
                   </Heading>
                   <span
                     className={undefined}
@@ -1059,24 +1107,26 @@ ShallowWrapper {
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "endDate": "2018-04-29T05:55:48.852Z",
+                  "id": 0,
                   "keyValuePairs": Array [
                     Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
+                      "key": "k-bandwidth",
+                      "operator": "<",
+                      "value": 80692,
                     },
                   ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
+                  "minEventFires": 91445,
+                  "name": "Clovis Simonis",
                   "signalStatus": "USED",
+                  "sorting": "Key Name",
                   "source": Object {
-                    "dataSourceId": 72599,
+                    "dataSourceId": 30634,
+                    "dataType": "Real-Time",
                     "reportSuiteId": null,
                     "sourceType": "REALTIME",
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
+                  "startDate": "2018-04-29T16:37:33.894Z",
                 }
               }
             />
@@ -1098,7 +1148,7 @@ ShallowWrapper {
                   <Heading
                     size={3}
                   >
-                    Margot O'Hara
+                    Stephen Sanford
                   </Heading>
                   <span
                     className={undefined}
@@ -1138,24 +1188,31 @@ ShallowWrapper {
               isAdvancedSearchEnabled={false}
               savedSearch={
                 Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "endDate": "2018-04-29T09:22:26.931Z",
+                  "id": 1,
                   "keyValuePairs": Array [
                     Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
+                      "key": "k-Customer",
+                      "operator": "<",
+                      "value": 83989,
+                    },
+                    Object {
+                      "key": "k-coherent",
+                      "operator": "<=",
+                      "value": 54800,
                     },
                   ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
+                  "minEventFires": 33675,
+                  "name": "Stephen Sanford",
                   "signalStatus": "USED",
+                  "sorting": "Total Event Fires",
                   "source": Object {
-                    "dataSourceId": 72599,
+                    "dataSourceId": 81638,
+                    "dataType": "Real-Time",
                     "reportSuiteId": null,
                     "sourceType": "REALTIME",
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
+                  "startDate": "2018-04-28T22:35:51.313Z",
                 }
               }
             />
@@ -1166,7 +1223,7 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "Margot O'Hara",
+          "key": "Clovis Simonis",
           "nodeType": "function",
           "props": Object {
             "children": Array [
@@ -1183,7 +1240,7 @@ ShallowWrapper {
                     <Heading
                       size={3}
                     >
-                      Margot O'Hara
+                      Clovis Simonis
                     </Heading>
                     <span
                       className={undefined}
@@ -1223,24 +1280,26 @@ ShallowWrapper {
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                   Object {
-                    "endDate": "2018-04-23T10:37:26.452Z",
+                    "endDate": "2018-04-29T05:55:48.852Z",
+                    "id": 0,
                     "keyValuePairs": Array [
                       Object {
-                        "id": 0,
-                        "key": "k-user-centric",
-                        "operator": ">=",
-                        "value": 31399,
+                        "key": "k-bandwidth",
+                        "operator": "<",
+                        "value": 80692,
                       },
                     ],
-                    "minEventFires": 46276,
-                    "name": "Margot O'Hara",
+                    "minEventFires": 91445,
+                    "name": "Clovis Simonis",
                     "signalStatus": "USED",
+                    "sorting": "Key Name",
                     "source": Object {
-                      "dataSourceId": 72599,
+                      "dataSourceId": 30634,
+                      "dataType": "Real-Time",
                       "reportSuiteId": null,
                       "sourceType": "REALTIME",
                     },
-                    "startDate": "2018-04-22T20:41:09.693Z",
+                    "startDate": "2018-04-29T16:37:33.894Z",
                   }
                 }
               />,
@@ -1265,7 +1324,7 @@ ShallowWrapper {
                       <Heading
                         size={3}
                       >
-                        Margot O'Hara
+                        Clovis Simonis
                       </Heading>
                       <span
                         className={undefined}
@@ -1315,7 +1374,7 @@ ShallowWrapper {
                       <Heading
                         size={3}
                       >
-                        Margot O'Hara
+                        Clovis Simonis
                       </Heading>
                       <span
                         className={undefined}
@@ -1333,7 +1392,7 @@ ShallowWrapper {
                         <Heading
                           size={3}
                         >
-                          Margot O'Hara
+                          Clovis Simonis
                         </Heading>,
                         <span
                           className={undefined}
@@ -1348,11 +1407,11 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "function",
                         "props": Object {
-                          "children": "Margot O'Hara",
+                          "children": "Clovis Simonis",
                           "size": 3,
                         },
                         "ref": null,
-                        "rendered": "Margot O'Hara",
+                        "rendered": "Clovis Simonis",
                         "type": [Function],
                       },
                       Object {
@@ -1489,24 +1548,26 @@ ShallowWrapper {
                 "getResultsBySavedSearch": [MockFunction],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "endDate": "2018-04-29T05:55:48.852Z",
+                  "id": 0,
                   "keyValuePairs": Array [
                     Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
+                      "key": "k-bandwidth",
+                      "operator": "<",
+                      "value": 80692,
                     },
                   ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
+                  "minEventFires": 91445,
+                  "name": "Clovis Simonis",
                   "signalStatus": "USED",
+                  "sorting": "Key Name",
                   "source": Object {
-                    "dataSourceId": 72599,
+                    "dataSourceId": 30634,
+                    "dataType": "Real-Time",
                     "reportSuiteId": null,
                     "sourceType": "REALTIME",
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
+                  "startDate": "2018-04-29T16:37:33.894Z",
                 },
               },
               "ref": null,
@@ -1518,7 +1579,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "Margot O'Hara",
+          "key": "Stephen Sanford",
           "nodeType": "function",
           "props": Object {
             "children": Array [
@@ -1535,7 +1596,7 @@ ShallowWrapper {
                     <Heading
                       size={3}
                     >
-                      Margot O'Hara
+                      Stephen Sanford
                     </Heading>
                     <span
                       className={undefined}
@@ -1575,24 +1636,31 @@ ShallowWrapper {
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                   Object {
-                    "endDate": "2018-04-23T10:37:26.452Z",
+                    "endDate": "2018-04-29T09:22:26.931Z",
+                    "id": 1,
                     "keyValuePairs": Array [
                       Object {
-                        "id": 0,
-                        "key": "k-user-centric",
-                        "operator": ">=",
-                        "value": 31399,
+                        "key": "k-Customer",
+                        "operator": "<",
+                        "value": 83989,
+                      },
+                      Object {
+                        "key": "k-coherent",
+                        "operator": "<=",
+                        "value": 54800,
                       },
                     ],
-                    "minEventFires": 46276,
-                    "name": "Margot O'Hara",
+                    "minEventFires": 33675,
+                    "name": "Stephen Sanford",
                     "signalStatus": "USED",
+                    "sorting": "Total Event Fires",
                     "source": Object {
-                      "dataSourceId": 72599,
+                      "dataSourceId": 81638,
+                      "dataType": "Real-Time",
                       "reportSuiteId": null,
                       "sourceType": "REALTIME",
                     },
-                    "startDate": "2018-04-22T20:41:09.693Z",
+                    "startDate": "2018-04-28T22:35:51.313Z",
                   }
                 }
               />,
@@ -1617,7 +1685,7 @@ ShallowWrapper {
                       <Heading
                         size={3}
                       >
-                        Margot O'Hara
+                        Stephen Sanford
                       </Heading>
                       <span
                         className={undefined}
@@ -1667,7 +1735,7 @@ ShallowWrapper {
                       <Heading
                         size={3}
                       >
-                        Margot O'Hara
+                        Stephen Sanford
                       </Heading>
                       <span
                         className={undefined}
@@ -1685,7 +1753,7 @@ ShallowWrapper {
                         <Heading
                           size={3}
                         >
-                          Margot O'Hara
+                          Stephen Sanford
                         </Heading>,
                         <span
                           className={undefined}
@@ -1700,11 +1768,11 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "function",
                         "props": Object {
-                          "children": "Margot O'Hara",
+                          "children": "Stephen Sanford",
                           "size": 3,
                         },
                         "ref": null,
-                        "rendered": "Margot O'Hara",
+                        "rendered": "Stephen Sanford",
                         "type": [Function],
                       },
                       Object {
@@ -1841,24 +1909,31 @@ ShallowWrapper {
                 "getResultsBySavedSearch": [MockFunction],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
-                  "endDate": "2018-04-23T10:37:26.452Z",
+                  "endDate": "2018-04-29T09:22:26.931Z",
+                  "id": 1,
                   "keyValuePairs": Array [
                     Object {
-                      "id": 0,
-                      "key": "k-user-centric",
-                      "operator": ">=",
-                      "value": 31399,
+                      "key": "k-Customer",
+                      "operator": "<",
+                      "value": 83989,
+                    },
+                    Object {
+                      "key": "k-coherent",
+                      "operator": "<=",
+                      "value": 54800,
                     },
                   ],
-                  "minEventFires": 46276,
-                  "name": "Margot O'Hara",
+                  "minEventFires": 33675,
+                  "name": "Stephen Sanford",
                   "signalStatus": "USED",
+                  "sorting": "Total Event Fires",
                   "source": Object {
-                    "dataSourceId": 72599,
+                    "dataSourceId": 81638,
+                    "dataType": "Real-Time",
                     "reportSuiteId": null,
                     "sourceType": "REALTIME",
                   },
-                  "startDate": "2018-04-22T20:41:09.693Z",
+                  "startDate": "2018-04-28T22:35:51.313Z",
                 },
               },
               "ref": null,

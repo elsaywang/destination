@@ -33,8 +33,9 @@ describe('<SavedSearchTagList /> component', () => {
         <SavedSearchTagList
             list={list}
             onSavedSearchClick={mockFn}
+            deleteSearch={mockFn}
             currentSearch={currentSearch.name}
-        />,
+        />
     );
 
     describe('rendering', () => {

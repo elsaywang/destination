@@ -55,7 +55,8 @@ module.exports = () => {
     }
 
     class SavedSearch {
-        constructor() {
+        constructor(id) {
+            this.id = id;
             this.keyValuePairs = randomGenerateArray(Kvp, 2);
             this.source = new Source();
             this.minEventFires = faker.random.number();
@@ -119,7 +120,7 @@ module.exports = () => {
     for (let i = 0; i < 5; i++) {
         data.savedSearch.push({
             name: faker.name.findName(),
-            ...new SavedSearch(),
+            ...new SavedSearch(i),
         });
     }
 

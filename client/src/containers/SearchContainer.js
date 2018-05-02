@@ -1,7 +1,6 @@
 import * as searchFormActionCreators from '../actions/searchForm';
-import * as saveThisSearchActionCreators from '../actions/saveThisSearch';
+import * as savedSearchActionCreators from '../actions/savedSearch';
 import { selectSignals } from '../actions/selectSignals';
-import { getSavedSearch } from '../actions/savedSearch';
 import { populateSearchFields, clearSearchFields } from '../actions/savedSearchFields';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
@@ -174,9 +173,37 @@ class SearchContainer extends Component {
         this.props.callSearch(this.state);
     };
 
-    handleSaveThisSearchConfirm = () => {
-        const { saveThisSearch, saveCurrentSearch } = this.props;
-        saveCurrentSearch({ ...this.state, ...saveThisSearch });
+    handleSaveThisSearchConfirm = search => {
+        const { thisSearch, savedSearch, saveSearch } = this.props;
+        const maxId = savedSearch[savedSearch.length - 1].id;
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() - 7);
+        // TODO: move this.state to redux to clean this up and figure out where some of these params come from
+        const thisSearchWithKeyValuePairs = {
+            ...thisSearch,
+            id: maxId + 1,
+            endDate,
+            keyValuePairs: this.state.keyValuePairs,
+            signalStatus: this.state.signalStatus,
+            source: {
+                dataType: 'Real-Time',
+                sourceType: 'REALTIME',
+                ...this.state.filter,
+            },
+            viewRecordsFor: this.state.viewRecordsFor,
+            minEventFires: this.state.minEventFires,
+        };
+        const newSavedSearch = [...savedSearch, thisSearchWithKeyValuePairs];
+
+        saveSearch(newSavedSearch);
+    };
+
+    deleteSearch = search => {
+        const { savedSearch, saveSearch } = this.props;
+        const index = savedSearch.findIndex(ss => ss.id === Number(search.id));
+        const newSavedSearch = [...savedSearch.slice(0, index), ...savedSearch.slice(index + 1)];
+
+        saveSearch(newSavedSearch);
     };
 
     onClearAll = () => {
@@ -232,6 +259,7 @@ class SearchContainer extends Component {
                         <div className={styles.saveSearch}>
                             <SavedSearch
                                 getSavedSearch={this.props.getSavedSearch}
+                                deleteSearch={this.deleteSearch}
                                 list={this.props.savedSearch}
                                 onSavedSearchClick={this.onSavedSearchClick}
                                 currentSearch={this.state.name}
@@ -255,7 +283,7 @@ class SearchContainer extends Component {
                 </GridRow>
 
                 {Object.keys(this.props.results.list).length > 0 && (
-                    <div style={{ display: 'flex' }}>
+                    <div style={{ display: 'flex', marginTop: 20 }}>
                         <div className={styles.filterListContainer}>
                             <SignalTypeFilter
                                 counts={this.state.counts}
@@ -299,17 +327,16 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearch, saveThisSearch, savedSearchFields }) => ({
+const mapStateToProps = ({ results, savedSearch, savedSearchFields }) => ({
     results,
-    savedSearch,
-    saveThisSearch,
     savedSearchFields,
+    savedSearch: savedSearch.list,
+    thisSearch: savedSearch.saveSearch,
 });
 const actionCreators = {
     ...searchFormActionCreators,
-    ...saveThisSearchActionCreators,
+    ...savedSearchActionCreators,
     selectSignals,
-    getSavedSearch,
     populateSearchFields,
     clearSearchFields,
 };

@@ -35,6 +35,7 @@ describe('<SavedSearch /> component', () => {
             getSavedSearch={mockFn}
             onSavedSearchClick={mockFn}
             currentSearch={currentSearch.name}
+            deleteSearch={mockFn}
         />,
     );
 

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Label from '../../components/common/Label';
 import Textfield from '@react/react-spectrum/Textfield';
@@ -10,7 +10,7 @@ import styles from './SaveSearchExecution.css';
 import {
     textFieldLabelName,
     textFieldPlaceHolder,
-    saveThisSearch,
+    saveSearch,
     checkBoxLabel,
     defaultSorting,
 } from './saveSearchExecutionMessages.js';
@@ -32,9 +32,10 @@ class SaveSearchExecutionContent extends Component {
 
     render() {
         return (
-            <Fragment>
-                <Label value={textFieldLabelName} labelFor={saveThisSearch}>
+            <div data-test="save-this-search-dialog-content">
+                <Label value={textFieldLabelName} labelFor={saveSearch}>
                     <Textfield
+                        data-test="save-this-search-name-field"
                         className={styles.contentTextField}
                         placeholder={textFieldPlaceHolder}
                         onChange={this.props.onSaveSearchNameChange}
@@ -50,27 +51,25 @@ class SaveSearchExecutionContent extends Component {
                 </div>
                 {this.state.isTrackInDashboardChecked && (
                     <Label value={defaultSorting} labelFor={defaultSorting}>
-                        <Fragment>
-                            <Select
-                                options={sortingOptions}
-                                onChange={this.props.onDefaultSortingChange}
-                            />
-                            <div className={styles.contentRadioGroup}>
-                                <RadioGroup>
-                                    {radioGroupOptions.map(({ label, value }) => (
-                                        <Radio
-                                            key={value}
-                                            {...{ label, value }}
-                                            checked={value === descending}
-                                            onChange={this.handleRadioChange}
-                                        />
-                                    ))}
-                                </RadioGroup>
-                            </div>
-                        </Fragment>
+                        <Select
+                            options={sortingOptions}
+                            onChange={this.props.onDefaultSortingChange}
+                        />
+                        <div className={styles.contentRadioGroup}>
+                            <RadioGroup>
+                                {radioGroupOptions.map(({ label, value }) => (
+                                    <Radio
+                                        key={value}
+                                        {...{ label, value }}
+                                        checked={value === descending}
+                                        onChange={this.handleRadioChange}
+                                    />
+                                ))}
+                            </RadioGroup>
+                        </div>
                     </Label>
                 )}
-            </Fragment>
+            </div>
         );
     }
 }

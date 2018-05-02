@@ -1,0 +1,88 @@
+{
+    "list": [
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Lead",
+                    "operator": "<=",
+                    "value": 78610
+                }
+            ],
+            "source": {
+                "dataSourceId": 7401,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+                "dataType": "Real-Time"
+            },
+            "totalCounts": 71071,
+            "percentageChange": 0.154,
+            "includedInTraits": [1, 2, 3],
+            "signalStatus": "USED"
+        },
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Computer",
+                    "operator": ">=",
+                    "value": 11467
+                }
+            ],
+            "source": {
+                "dataSourceId": 15841,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+                "dataType": "Real-Time"
+            },
+            "totalCounts": 69967,
+            "percentageChange": -0.3711,
+            "includedInTraits": [],
+            "signalStatus": "UNUSED"
+        },
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Mews",
+                    "operator": "==",
+                    "value": "v-Berkshire"
+                }
+            ],
+            "source": {
+                "dataSourceId": 1234,
+                "reportSuiteId": null,
+                "sourceType": "ONBOARDED",
+                "dataType": "Real-Time"
+            },
+            "totalCounts": 14793,
+            "percentageChange": -0.9711,
+            "includedInTraits": [131, 838],
+            "signalStatus": "USED"
+        },
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Home",
+                    "operator": "==",
+                    "value": "v-back-end"
+                },
+                {
+                    "key": "k-West Virginia",
+                    "operator": "==",
+                    "value": "v-Gibraltar Pound"
+                }
+            ],
+            "source": {
+                "dataSourceId": 4019,
+                "reportSuiteId": 5678,
+                "sourceType": "ANALYTICS",
+                "dataType": "Real-Time"
+            },
+            "totalCounts": 21124,
+            "percentageChange": 0.8711,
+            "includedInTraits": [],
+            "signalStatus": "UNUSED"
+        }
+    ],
+    "page": 0,
+    "pageSize": 0,
+    "total": 4
+}

@@ -17,6 +17,7 @@ class DashboardContainer extends Component {
 
     handleViewMoreForSavedSearch = search => {
         const { populateSearchFields, callSearch } = this.props;
+
         populateSearchFields(search);
         callSearch(search);
     };
@@ -24,7 +25,7 @@ class DashboardContainer extends Component {
     render() {
         return (
             <Fragment>
-                {this.props.savedSearch.map(
+                {this.props.savedSearch.list.map(
                     search =>
                         Object.keys(search).length && (
                             <Well

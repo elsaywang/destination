@@ -2,6 +2,12 @@
     margin-bottom: 0;
 }
 
+:local(.button) {
+    padding: 0 4px;
+    margin-left: 4px;
+    height: 24px;
+}
+
 :local(.block) {
     margin: 0 0 10px;
 }
@@ -10,4 +16,10 @@
     background: var(--spectrum-global-color-blue500);
     color: var(--spectrum-global-color-grey50);
     border-color: var(--spectrum-global-color-blue500);
+}
+
+:local(.tagBlock) {
+    display: inline-flex;
+    /* display: inline-block; */
+    margin-right: 10px;
 }

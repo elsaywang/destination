@@ -9,7 +9,7 @@ import styles from './SaveSearchExecution.css';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
 import Dialog from '@react/react-spectrum/Dialog';
 import SaveSearchExecutionContent from './SaveSearchExecutionContent';
-import { saveThisSearch } from './saveSearchExecutionMessages';
+import { saveSearch } from './saveSearchExecutionMessages';
 
 class SaveSearchExecution extends Component {
     render() {
@@ -24,7 +24,7 @@ class SaveSearchExecution extends Component {
         return (
             // TODO: switch back to OverlayTrigger once PopOver is fixed
             //     <OverlayTrigger trigger="click" placement="bottom" onHide={cancelSaveSearch}>
-            //         <Button label={saveThisSearch} variant="action" quiet icon={<Add />} />
+            //         <Button label={saveSearch} variant="action" quiet icon={<Add />} />
             //         <Popover className={styles.triggerDialog}>
             //             <SaveSearchExecutionContent
             //                 onSaveSearchNameChange={updateSaveSearchName}
@@ -35,7 +35,13 @@ class SaveSearchExecution extends Component {
             //         </Popover>
             //     </OverlayTrigger>
             <ModalTrigger>
-                <Button label={saveThisSearch} variant="action" quiet icon={<Add />} />
+                <Button
+                    data-test="save-this-search-button"
+                    label={saveSearch}
+                    variant="action"
+                    quiet
+                    icon={<Add />}
+                />
                 <Dialog
                     className={styles.triggerDialog}
                     modalcontent

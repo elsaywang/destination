@@ -1,4 +1,4 @@
-import results, { getList, list as listReducer } from '../results';
+import { getList, list as listReducer } from '../results';
 import { CALL_SEARCH_FULFILLED } from '../../actions/searchForm';
 
 describe('results reducer', () => {

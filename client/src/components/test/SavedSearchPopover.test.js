@@ -40,6 +40,7 @@ describe('<SavedSearchPopover /> component', () => {
             onSavedSearchClick={jest.fn()}
             search={search}
             isCurrentSearch={false}
+            deleteSearch={jest.fn()}
         />,
     );
 

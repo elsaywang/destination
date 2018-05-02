@@ -1,0 +1,134 @@
+{
+    "savedSearch": [
+        {
+            "name": "Clovis Simonis",
+            "id": 0,
+            "keyValuePairs": [
+                {
+                    "key": "k-bandwidth",
+                    "operator": "<",
+                    "value": 80692
+                }
+            ],
+            "source": {
+                "dataSourceId": 30634,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+                "dataType": "Real-Time"
+            },
+            "minEventFires": 91445,
+            "signalStatus": "USED",
+            "startDate": "2018-04-29T16:37:33.894Z",
+            "endDate": "2018-04-29T05:55:48.852Z",
+            "sorting": "Key Name"
+        },
+        {
+            "name": "Stephen Sanford",
+            "id": 1,
+            "keyValuePairs": [
+                {
+                    "key": "k-Customer",
+                    "operator": "<",
+                    "value": 83989
+                },
+                {
+                    "key": "k-coherent",
+                    "operator": "<=",
+                    "value": 54800
+                }
+            ],
+            "source": {
+                "dataSourceId": 81638,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+                "dataType": "Real-Time"
+            },
+            "minEventFires": 33675,
+            "signalStatus": "USED",
+            "startDate": "2018-04-28T22:35:51.313Z",
+            "endDate": "2018-04-29T09:22:26.931Z",
+            "sorting": "Total Event Fires"
+        },
+        {
+            "name": "Angus Koss V",
+            "id": 2,
+            "keyValuePairs": [
+                {
+                    "key": "k-optimizing",
+                    "operator": "<",
+                    "value": 14505
+                },
+                {
+                    "key": "k-New Zealand",
+                    "operator": ">=",
+                    "value": 28275
+                }
+            ],
+            "source": {
+                "dataSourceId": 47530,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+                "dataType": "Real-Time"
+            },
+            "minEventFires": 66009,
+            "signalStatus": "USED",
+            "startDate": "2018-04-28T21:03:13.794Z",
+            "endDate": "2018-04-29T13:46:34.063Z",
+            "sorting": "Included In Traits"
+        },
+        {
+            "name": "Stella Kling",
+            "id": 3,
+            "keyValuePairs": [
+                {
+                    "key": "k-hack",
+                    "operator": ">=",
+                    "value": 24478
+                },
+                {
+                    "key": "k-users",
+                    "operator": "<",
+                    "value": 32006
+                }
+            ],
+            "source": {
+                "dataSourceId": 20179,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+                "dataType": "Real-Time"
+            },
+            "minEventFires": 2542,
+            "signalStatus": "USED",
+            "startDate": "2018-04-29T09:03:02.363Z",
+            "endDate": "2018-04-29T16:35:09.264Z",
+            "sorting": "Included In Traits"
+        },
+        {
+            "name": "Demarco Stiedemann",
+            "id": 4,
+            "keyValuePairs": [
+                {
+                    "key": "k-Supervisor",
+                    "operator": "<=",
+                    "value": 36516
+                },
+                {
+                    "key": "k-application",
+                    "operator": "==",
+                    "value": "v-Drive"
+                }
+            ],
+            "source": {
+                "dataSourceId": 14734,
+                "reportSuiteId": null,
+                "sourceType": "REALTIME",
+                "dataType": "Real-Time"
+            },
+            "minEventFires": 65935,
+            "signalStatus": "USED",
+            "startDate": "2018-04-29T12:10:21.904Z",
+            "endDate": "2018-04-28T20:52:30.027Z",
+            "sorting": "Value Name"
+        }
+    ]
+}

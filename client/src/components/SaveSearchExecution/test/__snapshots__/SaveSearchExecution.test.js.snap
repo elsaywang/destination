@@ -20,6 +20,7 @@ ShallowWrapper {
       "children": Array [
         <Button
           block={false}
+          data-test="save-this-search-button"
           disabled={false}
           element="button"
           icon={<Add />}
@@ -63,6 +64,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "block": false,
+          "data-test": "save-this-search-button",
           "disabled": false,
           "element": "button",
           "icon": <Add />,
@@ -132,6 +134,7 @@ ShallowWrapper {
         "children": Array [
           <Button
             block={false}
+            data-test="save-this-search-button"
             disabled={false}
             element="button"
             icon={<Add />}
@@ -175,6 +178,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "block": false,
+            "data-test": "save-this-search-button",
             "disabled": false,
             "element": "button",
             "icon": <Add />,

@@ -22,7 +22,15 @@ describe('<DashboardContainer /> component', () => {
         describe('when savedSearch prop with no records passed in ', () => {
             beforeAll(() => {
                 wrapper.setProps({
-                    savedSearch: [],
+                    savedSearch: {
+                        list: [],
+                        saveSearch: {
+                            name: '',
+                            includeInDashboard: false,
+                            sorting: '',
+                            descending: false,
+                        },
+                    },
                 });
             });
 
@@ -51,48 +59,59 @@ describe('<DashboardContainer /> component', () => {
     describe('when savedSearch with records is passed in as a prop', () => {
         beforeAll(() => {
             wrapper.setProps({
-                savedSearch: [
-                    {
-                        name: "Margot O'Hara",
-                        keyValuePairs: [
-                            {
-                                key: 'k-user-centric',
-                                operator: '>=',
-                                value: 31399,
-                                id: 0,
+                savedSearch: {
+                    list: [
+                        {
+                            name: 'Clovis Simonis',
+                            id: 0,
+                            keyValuePairs: [
+                                {
+                                    key: 'k-bandwidth',
+                                    operator: '<',
+                                    value: 80692,
+                                },
+                            ],
+                            source: {
+                                dataSourceId: 30634,
+                                reportSuiteId: null,
+                                sourceType: 'REALTIME',
+                                dataType: 'Real-Time',
                             },
-                        ],
-                        source: {
-                            dataSourceId: 72599,
-                            reportSuiteId: null,
-                            sourceType: 'REALTIME',
+                            minEventFires: 91445,
+                            signalStatus: 'USED',
+                            startDate: '2018-04-29T16:37:33.894Z',
+                            endDate: '2018-04-29T05:55:48.852Z',
+                            sorting: 'Key Name',
                         },
-                        minEventFires: 46276,
-                        signalStatus: 'USED',
-                        startDate: '2018-04-22T20:41:09.693Z',
-                        endDate: '2018-04-23T10:37:26.452Z',
-                    },
-                    {
-                        name: "Margot O'Hara",
-                        keyValuePairs: [
-                            {
-                                key: 'k-user-centric',
-                                operator: '>=',
-                                value: 31399,
-                                id: 0,
+                        {
+                            name: 'Stephen Sanford',
+                            id: 1,
+                            keyValuePairs: [
+                                {
+                                    key: 'k-Customer',
+                                    operator: '<',
+                                    value: 83989,
+                                },
+                                {
+                                    key: 'k-coherent',
+                                    operator: '<=',
+                                    value: 54800,
+                                },
+                            ],
+                            source: {
+                                dataSourceId: 81638,
+                                reportSuiteId: null,
+                                sourceType: 'REALTIME',
+                                dataType: 'Real-Time',
                             },
-                        ],
-                        source: {
-                            dataSourceId: 72599,
-                            reportSuiteId: null,
-                            sourceType: 'REALTIME',
+                            minEventFires: 33675,
+                            signalStatus: 'USED',
+                            startDate: '2018-04-28T22:35:51.313Z',
+                            endDate: '2018-04-29T09:22:26.931Z',
+                            sorting: 'Total Event Fires',
                         },
-                        minEventFires: 46276,
-                        signalStatus: 'USED',
-                        startDate: '2018-04-22T20:41:09.693Z',
-                        endDate: '2018-04-23T10:37:26.452Z',
-                    },
-                ],
+                    ],
+                },
                 populateSearchFields: jest.fn(),
                 callSearch: jest.fn(),
             });
@@ -104,23 +123,29 @@ describe('<DashboardContainer /> component', () => {
 
         it('renders the same number of <Well/> components as savedSearch props length', () => {
             expect(wrapper.find(Well).exists()).toBeTruthy();
-            expect(wrapper.find(Well)).toHaveLength(wrapper.instance().props.savedSearch.length);
+            expect(wrapper.find(Well)).toHaveLength(
+                wrapper.instance().props.savedSearch.list.length,
+            );
         });
 
         it('renders the same number of <Heading/> components as savedSearch props length', () => {
             expect(wrapper.find(Heading).exists()).toBeTruthy();
-            expect(wrapper.find(Heading)).toHaveLength(wrapper.instance().props.savedSearch.length);
+            expect(wrapper.find(Heading)).toHaveLength(
+                wrapper.instance().props.savedSearch.list.length,
+            );
         });
 
         it('renders the same number of <Button/> components as savedSearch props length', () => {
             expect(wrapper.find(Button).exists()).toBeTruthy();
-            expect(wrapper.find(Button)).toHaveLength(wrapper.instance().props.savedSearch.length);
+            expect(wrapper.find(Button)).toHaveLength(
+                wrapper.instance().props.savedSearch.list.length,
+            );
         });
 
         it('renders the same number of <SavedSearchTable/> components as savedSearch props length', () => {
             expect(wrapper.find(SavedSearchTable).exists()).toBeTruthy();
             expect(wrapper.find(SavedSearchTable)).toHaveLength(
-                wrapper.instance().props.savedSearch.length,
+                wrapper.instance().props.savedSearch.list.length,
             );
         });
 
