@@ -40,7 +40,9 @@ ShallowWrapper {
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
+          quiet={false}
           value="ALL"
+          variant=""
         >
           <Tab
             disabled={false}
@@ -150,7 +152,9 @@ ShallowWrapper {
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
+          "quiet": false,
           "value": "ALL",
+          "variant": "",
         },
         "ref": null,
         "rendered": Array [
@@ -252,7 +256,9 @@ ShallowWrapper {
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
+            quiet={false}
             value="ALL"
+            variant=""
           >
             <Tab
               disabled={false}
@@ -362,7 +368,9 @@ ShallowWrapper {
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
+            "quiet": false,
             "value": "ALL",
+            "variant": "",
           },
           "ref": null,
           "rendered": Array [
@@ -498,7 +506,9 @@ ShallowWrapper {
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
+          quiet={false}
           value="ANALYTICS"
+          variant=""
         >
           <Tab
             disabled={false}
@@ -608,7 +618,9 @@ ShallowWrapper {
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
+          "quiet": false,
           "value": "ANALYTICS",
+          "variant": "",
         },
         "ref": null,
         "rendered": Array [
@@ -710,7 +722,9 @@ ShallowWrapper {
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
+            quiet={false}
             value="ANALYTICS"
+            variant=""
           >
             <Tab
               disabled={false}
@@ -820,7 +834,9 @@ ShallowWrapper {
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
+            "quiet": false,
             "value": "ANALYTICS",
+            "variant": "",
           },
           "ref": null,
           "rendered": Array [
@@ -956,7 +972,9 @@ ShallowWrapper {
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
+          quiet={false}
           value="ANALYTICS"
+          variant=""
         >
           <Tab
             disabled={false}
@@ -1066,7 +1084,9 @@ ShallowWrapper {
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
+          "quiet": false,
           "value": "ANALYTICS",
+          "variant": "",
         },
         "ref": null,
         "rendered": Array [
@@ -1168,7 +1188,9 @@ ShallowWrapper {
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
+            quiet={false}
             value="ANALYTICS"
+            variant=""
           >
             <Tab
               disabled={false}
@@ -1278,7 +1300,9 @@ ShallowWrapper {
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
+            "quiet": false,
             "value": "ANALYTICS",
+            "variant": "",
           },
           "ref": null,
           "rendered": Array [

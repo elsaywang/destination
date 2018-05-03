@@ -182,6 +182,7 @@ ShallowWrapper {
                   size={2}
                 >
                   <Button
+                    autoFocus={false}
                     block={false}
                     disabled={false}
                     element="a"
@@ -263,6 +264,7 @@ ShallowWrapper {
                   size={2}
                 >
                   <Button
+                    autoFocus={false}
                     block={false}
                     disabled={false}
                     element="a"
@@ -355,6 +357,7 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      autoFocus={false}
                       block={false}
                       disabled={false}
                       element="a"
@@ -439,6 +442,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -541,6 +545,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -568,6 +573,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -590,6 +596,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -611,6 +618,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
+                        "autoFocus": false,
                         "block": false,
                         "disabled": false,
                         "element": "a",
@@ -711,6 +719,7 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      autoFocus={false}
                       block={false}
                       disabled={false}
                       element="a"
@@ -800,6 +809,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -902,6 +912,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -929,6 +940,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -951,6 +963,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -972,6 +985,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
+                        "autoFocus": false,
                         "block": false,
                         "disabled": false,
                         "element": "a",
@@ -1085,6 +1099,7 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      autoFocus={false}
                       block={false}
                       disabled={false}
                       element="a"
@@ -1166,6 +1181,7 @@ ShallowWrapper {
                     size={2}
                   >
                     <Button
+                      autoFocus={false}
                       block={false}
                       disabled={false}
                       element="a"
@@ -1258,6 +1274,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -1342,6 +1359,7 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1444,6 +1462,7 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1471,6 +1490,7 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1493,6 +1513,7 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1514,6 +1535,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
+                          "autoFocus": false,
                           "block": false,
                           "disabled": false,
                           "element": "a",
@@ -1614,6 +1636,7 @@ ShallowWrapper {
                       size={2}
                     >
                       <Button
+                        autoFocus={false}
                         block={false}
                         disabled={false}
                         element="a"
@@ -1703,6 +1726,7 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1805,6 +1829,7 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1832,6 +1857,7 @@ ShallowWrapper {
                         size={2}
                       >
                         <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1854,6 +1880,7 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": <Button
+                          autoFocus={false}
                           block={false}
                           disabled={false}
                           element="a"
@@ -1875,6 +1902,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
+                          "autoFocus": false,
                           "block": false,
                           "disabled": false,
                           "element": "a",
