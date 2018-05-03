@@ -45,7 +45,7 @@ describe('Search Form Integration Tests', function() {
                 .type('t{enter}')
                 .then(function($text) {
                     cy.get('@advancedFilter').should(function($filter) {
-                        expect($filter.val()).to.eq($text.val());
+                        expect($filter.val()).to.contains($text.val());
                     });
                 });
         });
@@ -58,7 +58,7 @@ describe('Search Form Integration Tests', function() {
                 .click()
                 .then(function($text) {
                     cy.get('@advancedFilter').should(function($filter) {
-                        expect($filter.val()).to.eq($text.text());
+                        expect($filter.val()).to.contains($text.text());
                     });
                 });
 
@@ -88,7 +88,7 @@ describe('Search Form Integration Tests', function() {
                     .click()
                     .then(function($item) {
                         cy.get('@keyInput').should(function($keyInput) {
-                            expect($keyInput.val()).to.eq($item.text());
+                            expect($keyInput.val()).to.contains($item.text());
                         });
                     });
             });
@@ -104,7 +104,7 @@ describe('Search Form Integration Tests', function() {
                 .click()
                 .then(function($option) {
                     cy.get('.operator').should(function($operator) {
-                        expect($operator.text()).to.eq($option.text());
+                        expect($operator.text()).to.contains($option.text());
                     });
                 });
         });
@@ -117,7 +117,7 @@ describe('Search Form Integration Tests', function() {
             cy.get('[data-test="value-search"]').type(value);
 
             cy.get('[data-test="value-search"]').should(function($text) {
-                expect($text.val()).to.eq(value);
+                expect($text.val()).to.contains(value);
             });
         });
     });
@@ -168,7 +168,7 @@ describe('Search Form Integration Tests', function() {
                 .click()
                 .then(function($option) {
                     cy.get('.signal-status').should(function($signalStatus) {
-                        expect($signalStatus.text()).to.eq($option.text());
+                        expect($signalStatus.text()).to.contains($option.text());
                     });
                 });
         });
@@ -183,7 +183,7 @@ describe('Search Form Integration Tests', function() {
                 .click()
                 .then(function($option) {
                     cy.get('.view-records').should(function($viewRecords) {
-                        expect($viewRecords.text()).to.eq($option.text());
+                        expect($viewRecords.text()).to.contains($option.text());
                     });
                 });
         });
@@ -248,7 +248,7 @@ describe('Search Form Integration Tests', function() {
         it('should reset the form and clear the results', function() {
             cy.get('[data-test="advanced-search-filter"]').should('be.disabled');
             cy.get('[data-test="key-search-field"]').should('have.value', '');
-            cy.get('.operator').should('have.text', '==');
+            cy.get('.operator').should('contain', '==');
             cy.get('[data-test="value-search"]').should('have.value', '');
             cy.get('.signal-status').should('contain', 'All');
             cy.get('.view-records').should('contain', '7 Days');
