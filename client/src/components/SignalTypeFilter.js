@@ -34,6 +34,7 @@ class SignalTypeFilter extends Component {
                 <TabList
                     className={styles.signalType}
                     orientation="vertical"
+                    variant="compact"
                     onChange={this.handleSignalTypeChange}
                     value={this.props.signalType}>
                     {this.renderTabs()}

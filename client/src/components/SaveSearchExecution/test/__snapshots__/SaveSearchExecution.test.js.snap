@@ -19,6 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Button
+          autoFocus={false}
           block={false}
           data-test="save-this-search-button"
           disabled={false}
@@ -32,6 +33,7 @@ ShallowWrapper {
           variant="action"
         />,
         <Dialog
+          autoFocusButton={null}
           backdropClickable={false}
           cancelLabel="Cancel"
           className={undefined}
@@ -63,6 +65,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "autoFocus": false,
           "block": false,
           "data-test": "save-this-search-button",
           "disabled": false,
@@ -84,6 +87,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "autoFocusButton": null,
           "backdropClickable": false,
           "cancelLabel": "Cancel",
           "children": <SaveSearchExecutionContent
@@ -133,6 +137,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Button
+            autoFocus={false}
             block={false}
             data-test="save-this-search-button"
             disabled={false}
@@ -146,6 +151,7 @@ ShallowWrapper {
             variant="action"
           />,
           <Dialog
+            autoFocusButton={null}
             backdropClickable={false}
             cancelLabel="Cancel"
             className={undefined}
@@ -177,6 +183,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "autoFocus": false,
             "block": false,
             "data-test": "save-this-search-button",
             "disabled": false,
@@ -198,6 +205,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "autoFocusButton": null,
             "backdropClickable": false,
             "cancelLabel": "Cancel",
             "children": <SaveSearchExecutionContent

@@ -30,6 +30,7 @@ ShallowWrapper {
         crossOffset={0}
         data-test="overlay-trigger"
         defaultShow={false}
+        disabled={false}
         flip={true}
         offset={0}
         onShow={[Function]}
@@ -37,6 +38,7 @@ ShallowWrapper {
         trigger="click"
       >
         <Button
+          autoFocus={false}
           block={false}
           data-test="overlay-trigger-button"
           disabled={false}
@@ -71,6 +73,7 @@ ShallowWrapper {
         "boundariesElement": "container",
         "children": Array [
           <Button
+            autoFocus={false}
             block={false}
             data-test="overlay-trigger-button"
             disabled={false}
@@ -98,6 +101,7 @@ ShallowWrapper {
         "crossOffset": 0,
         "data-test": "overlay-trigger",
         "defaultShow": false,
+        "disabled": false,
         "flip": true,
         "offset": 0,
         "onShow": [Function],
@@ -111,6 +115,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "autoFocus": false,
             "block": false,
             "children": "3 Traits",
             "data-test": "overlay-trigger-button",
@@ -168,6 +173,7 @@ ShallowWrapper {
           crossOffset={0}
           data-test="overlay-trigger"
           defaultShow={false}
+          disabled={false}
           flip={true}
           offset={0}
           onShow={[Function]}
@@ -175,6 +181,7 @@ ShallowWrapper {
           trigger="click"
         >
           <Button
+            autoFocus={false}
             block={false}
             data-test="overlay-trigger-button"
             disabled={false}
@@ -209,6 +216,7 @@ ShallowWrapper {
           "boundariesElement": "container",
           "children": Array [
             <Button
+              autoFocus={false}
               block={false}
               data-test="overlay-trigger-button"
               disabled={false}
@@ -236,6 +244,7 @@ ShallowWrapper {
           "crossOffset": 0,
           "data-test": "overlay-trigger",
           "defaultShow": false,
+          "disabled": false,
           "flip": true,
           "offset": 0,
           "onShow": [Function],
@@ -249,6 +258,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "autoFocus": false,
               "block": false,
               "children": "3 Traits",
               "data-test": "overlay-trigger-button",

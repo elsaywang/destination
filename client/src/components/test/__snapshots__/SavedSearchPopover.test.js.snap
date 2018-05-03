@@ -55,6 +55,7 @@ ShallowWrapper {
           crossOffset={0}
           data-test="saved-search-overlay-trigger"
           defaultShow={false}
+          disabled={false}
           flip={true}
           offset={0}
           placement="left"
@@ -294,6 +295,7 @@ ShallowWrapper {
           "crossOffset": 0,
           "data-test": "saved-search-overlay-trigger",
           "defaultShow": false,
+          "disabled": false,
           "flip": true,
           "offset": 0,
           "placement": "left",
@@ -748,6 +750,7 @@ ShallowWrapper {
             crossOffset={0}
             data-test="saved-search-overlay-trigger"
             defaultShow={false}
+            disabled={false}
             flip={true}
             offset={0}
             placement="left"
@@ -987,6 +990,7 @@ ShallowWrapper {
             "crossOffset": 0,
             "data-test": "saved-search-overlay-trigger",
             "defaultShow": false,
+            "disabled": false,
             "flip": true,
             "offset": 0,
             "placement": "left",
