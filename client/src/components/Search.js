@@ -94,7 +94,9 @@ class Search extends Component {
                                 enabled={this.props.advanced}
                                 onAdvancedSearchChange={this.props.onAdvancedSearchChange}
                                 onFilterChange={this.props.onFilterChange}
-                                filter={this.props.filter}
+                                onFilterSelect={value => this.props.onFilterSelect(value)}
+                                sourceName={this.props.source.name}
+                                reportSuites={this.props.reportSuites}
                             />
 
                             <GridRow>

@@ -1,0 +1,165 @@
+{
+    "list": [
+        {
+            "name": "datasource-Corporate",
+            "integrationCode": "{\"suite\":\"Small\", \"datacenter\":\"synthesize\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 29186,
+            "dataSourceId": 30634
+        },
+        {
+            "name": "datasource-synthesizing",
+            "integrationCode": "{\"suite\":\"next generation\", \"datacenter\":\"Consultant\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 87585,
+            "dataSourceId": 81638
+        },
+        {
+            "name": "datasource-ROI",
+            "integrationCode": "{\"suite\":\"Generic\", \"datacenter\":\"Port\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 32952,
+            "dataSourceId": 46683
+        },
+        {
+            "name": "datasource-Quality",
+            "integrationCode": "{\"suite\":\"white\", \"datacenter\":\"programming\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 45208,
+            "dataSourceId": 68132
+        },
+        {
+            "name": "datasource-deposit",
+            "integrationCode": "{\"suite\":\"intuitive\", \"datacenter\":\"Cambridgeshire\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 56451,
+            "dataSourceId": 85196
+        },
+        {
+            "name": "datasource-turquoise",
+            "integrationCode": "{\"suite\":\"mobile\", \"datacenter\":\"Savings Account\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 65548,
+            "dataSourceId": 90840
+        },
+        {
+            "name": "datasource-Center",
+            "integrationCode": "{\"suite\":\"Phased\", \"datacenter\":\"bandwidth\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 50331,
+            "dataSourceId": 39049
+        },
+        {
+            "name": "datasource-Fresh",
+            "integrationCode": "{\"suite\":\"feed\", \"datacenter\":\"Customer-focused\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 42002,
+            "dataSourceId": 97984
+        },
+        {
+            "name": "datasource-fuchsia",
+            "integrationCode": "{\"suite\":\"strategy\", \"datacenter\":\"Direct\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 86052,
+            "dataSourceId": 90317
+        },
+        {
+            "name": "datasource-Cliffs",
+            "integrationCode": "{\"suite\":\"hybrid\", \"datacenter\":\"Tasty\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 74846,
+            "dataSourceId": 69757
+        },
+        {
+            "name": "datasource-methodology",
+            "integrationCode": "{\"suite\":\"reciprocal\", \"datacenter\":\"withdrawal\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 34138,
+            "dataSourceId": 99306
+        },
+        {
+            "name": "datasource-Associate",
+            "integrationCode": "{\"suite\":\"success\", \"datacenter\":\"Salad\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 10873,
+            "dataSourceId": 9923
+        },
+        {
+            "name": "datasource-leading-edge",
+            "integrationCode": "{\"suite\":\"solid state\", \"datacenter\":\"Jewelery\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 31281,
+            "dataSourceId": 65093
+        },
+        {
+            "name": "datasource-empowering",
+            "integrationCode":
+                "{\"suite\":\"experiences\", \"datacenter\":\"Money Market Account\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 33061,
+            "dataSourceId": 38885
+        },
+        {
+            "name": "datasource-white",
+            "integrationCode": "{\"suite\":\"Switchable\", \"datacenter\":\"quantify\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 90616,
+            "dataSourceId": 18660
+        },
+        {
+            "name": "datasource-sky blue",
+            "integrationCode": "{\"suite\":\"Web\", \"datacenter\":\"National\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 86427,
+            "dataSourceId": 54608
+        },
+        {
+            "name": "datasource-Personal Loan Account",
+            "integrationCode": "{\"suite\":\"Manager\", \"datacenter\":\"Avon\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 28602,
+            "dataSourceId": 77910
+        },
+        {
+            "name": "datasource-HDD",
+            "integrationCode": "{\"suite\":\"encoding\", \"datacenter\":\"New Leu\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 35385,
+            "dataSourceId": 39120
+        },
+        {
+            "name": "datasource-1080p",
+            "integrationCode": "{\"suite\":\"Investment Account\", \"datacenter\":\"bypass\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 5548,
+            "dataSourceId": 3966
+        },
+        {
+            "name": "datasource-Handmade Granite Chicken",
+            "integrationCode": "{\"suite\":\"strategize\", \"datacenter\":\"payment\"}",
+            "type": "GENERAL",
+            "idType": "COOKIE",
+            "pid": 96120,
+            "dataSourceId": 29917
+        }
+    ]
+}

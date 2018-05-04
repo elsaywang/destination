@@ -2,5 +2,6 @@
     "/api/traits": "/traits",
     "/api/signals/list": "/list",
     "/api/signals/keys": "/keys",
-    "/api/v1/users/self/annotations/aam-portal": "/savedSearch"
+    "/api/v1/users/self/annotations/aam-portal": "/savedSearch",
+    "/api/v1/datasources/?search=suite": "/datasources"
 }

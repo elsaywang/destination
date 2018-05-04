@@ -6,12 +6,28 @@ import Switch from '@react/react-spectrum/Switch';
 
 describe('Advanced Search', () => {
     const mockFn = jest.fn();
-    const filter = {
-        label: 'test',
-    };
+    const reportSuites = [
+        {
+            name: 'datasource-cross-media',
+            integrationCode: '{"suite":"Administrator", "datacenter":"microchip"}',
+            type: 'GENERAL',
+            idType: 'COOKIE',
+            pid: 51083,
+            dataSourceIds: 1696,
+        },
+        {
+            name: 'datasource-impactful',
+            integrationCode: '{"suite":"Representative", "datacenter":"conglomeration"}',
+            type: 'GENERAL',
+            idType: 'COOKIE',
+            pid: 52229,
+            dataSourceIds: 2620,
+        },
+    ];
     const wrapper = shallow(
         <AdvancedSearch
-            filter={filter}
+            sourceName="test"
+            reportSuites={reportSuites}
             enabled={false}
             onFilterChange={mockFn}
             onAdvancedSearchChange={mockFn}
@@ -42,7 +58,7 @@ describe('Advanced Search', () => {
         });
 
         it('renders <ComboBox /> with value passed in', () => {
-            wrapper.setProps({ filter: { label: 'abc' } });
+            wrapper.setProps({ sourceName: 'abc' });
             expect(wrapper.find(ComboBox).props().value).toBe('abc');
         });
     });

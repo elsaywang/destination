@@ -20,8 +20,8 @@ describe('<SavedSearchTable/> component', () => {
                 },
             ],
             source: {
-                dataSourceId: 72599,
-                reportSuiteId: null,
+                dataSourceIds: 72599,
+                reportSuiteIds: null,
                 sourceType: 'REALTIME',
             },
             minEventFires: 46276,
@@ -66,8 +66,8 @@ describe('<SavedSearchTable/> component', () => {
                     },
                 ],
                 source: {
-                    dataSourceId: 93561,
-                    reportSuiteId: null,
+                    dataSourceIds: 93561,
+                    reportSuiteIds: null,
                     sourceType: 'REALTIME',
                 },
                 totalCounts: 21456,

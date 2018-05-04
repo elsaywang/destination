@@ -1,10 +1,11 @@
 const deferred = require('../utils/deferred');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
-const searchResultsResponse = require('../fixtures/searchResults.json');
+const datasourcesResponse = require('../fixtures/reportSuites.json');
 
 describe('Search Form Integration Tests', function() {
     before(function() {
         this.fetchSavedSearchDeferred = deferred();
+        this.fetchReportSuitesDeferred = deferred();
 
         cy.visit('#/search', {
             onBeforeLoad(win) {
@@ -12,13 +13,23 @@ describe('Search Form Integration Tests', function() {
                     .stub(win, 'fetch')
                     .withArgs('/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
-                    .returns(this.fetchSavedSearchDeferred.promise);
+                    .returns(this.fetchSavedSearchDeferred.promise)
+                    .withArgs('/api/v1/datasources/?search=suite')
+                    .as('fetchReportSuites')
+                    .returns(this.fetchReportSuitesDeferred.promise);
             },
         });
 
         this.fetchSavedSearchDeferred.resolve({
             json() {
                 return savedSearchResponse.savedSearch;
+            },
+            ok: true,
+        });
+
+        this.fetchReportSuitesDeferred.resolve({
+            json() {
+                return datasourcesResponse.list;
             },
             ok: true,
         });
@@ -42,7 +53,7 @@ describe('Search Form Integration Tests', function() {
         it('should allow you to type a report suite name and press enter on list of suggestions', function() {
             cy
                 .get('@advancedFilter')
-                .type('t{enter}')
+                .type('da{enter}')
                 .then(function($text) {
                     cy.get('@advancedFilter').should(function($filter) {
                         expect($filter.val()).to.contains($text.val());
@@ -198,45 +209,6 @@ describe('Search Form Integration Tests', function() {
                 .clear()
                 .type(value)
                 .should('have.value', String(value));
-        });
-    });
-
-    describe('when Search button is clicked', function() {
-        beforeEach(function() {
-            this.fetchSavedSearchDeferred = deferred();
-            this.fetchSearchResultsDeferred = deferred();
-
-            cy.visit('#/search', {
-                onBeforeLoad(win) {
-                    cy
-                        .stub(win, 'fetch')
-                        .withArgs('/api/v1/users/self/annotations/aam-portal')
-                        .as('fetchSavedSearch')
-                        .returns(this.fetchSavedSearchDeferred.promise)
-                        .withArgs('/api/signals/list')
-                        .as('fetchSearchResults')
-                        .returns(this.fetchSearchResultsDeferred.promise);
-                },
-            });
-
-            this.fetchSavedSearchDeferred.resolve({
-                json() {
-                    return savedSearchResponse.savedSearch;
-                },
-                ok: true,
-            });
-
-            this.fetchSearchResultsDeferred.resolve({
-                json() {
-                    return searchResultsResponse;
-                },
-                ok: true,
-            });
-        });
-
-        it('should render results table', function() {
-            cy.get('[data-test="search-button"]').click();
-            cy.get('[data-test="signals-table"]').should('have.length', 1);
         });
     });
 

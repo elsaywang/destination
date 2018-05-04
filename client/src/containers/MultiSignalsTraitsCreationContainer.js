@@ -6,17 +6,17 @@ import { getSelectedSignalsDataType } from '../reducers/selectedSignals';
 
 export class MultiSignalsTraitsCreationContainer extends Component {
     render() {
-        const { dataType, selectedSignals } = this.props;
+        const { categoryType, selectedSignals } = this.props;
         const { records } = selectedSignals;
 
         return records.length ? (
-            <TraitsCreation multiCreation {...{ selectedSignals, dataType }} />
+            <TraitsCreation multiCreation {...{ selectedSignals, categoryType }} />
         ) : null;
     }
 }
 
 MultiSignalsTraitsCreationContainer.propTypes = {
-    dataType: PropTypes.string,
+    categoryType: PropTypes.string,
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,
@@ -26,7 +26,7 @@ MultiSignalsTraitsCreationContainer.propTypes = {
 
 const mapStateToProps = ({ selectedSignals }) => ({
     selectedSignals,
-    dataType: getSelectedSignalsDataType(selectedSignals),
+    categoryType: getSelectedSignalsDataType(selectedSignals),
 });
 
 export default connect(mapStateToProps)(MultiSignalsTraitsCreationContainer);

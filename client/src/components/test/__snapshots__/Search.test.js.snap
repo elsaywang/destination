@@ -6,7 +6,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Search
     advanced={false}
-    filter=""
     keyValuePairs={
       Array [
         Object {
@@ -18,6 +17,7 @@ ShallowWrapper {
       ]
     }
     minEventFires={1000}
+    name=""
     onAddClick={[MockFunction]}
     onAdvancedSearchChange={[MockFunction]}
     onClearAll={[MockFunction]}
@@ -30,6 +30,14 @@ ShallowWrapper {
     onValueChange={[MockFunction]}
     onViewRecordsChange={[MockFunction]}
     signalStatus="ALL"
+    source={
+      Object {
+        "dataSourceIds": 0,
+        "name": "",
+        "reportSuiteIds": 0,
+        "sourceType": "ALL",
+      }
+    }
     viewRecordsFor={7}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -53,9 +61,11 @@ ShallowWrapper {
           >
             <AdvancedSearch
               enabled={false}
-              filter=""
               onAdvancedSearchChange={[MockFunction]}
               onFilterChange={undefined}
+              onFilterSelect={[Function]}
+              reportSuites={undefined}
+              sourceName=""
             />
             <GridRow
               reverse={false}
@@ -244,9 +254,11 @@ ShallowWrapper {
           >
             <AdvancedSearch
               enabled={false}
-              filter=""
               onAdvancedSearchChange={[MockFunction]}
               onFilterChange={undefined}
+              onFilterSelect={[Function]}
+              reportSuites={undefined}
+              sourceName=""
             />
             <GridRow
               reverse={false}
@@ -433,9 +445,11 @@ ShallowWrapper {
           >
             <AdvancedSearch
               enabled={false}
-              filter=""
               onAdvancedSearchChange={[MockFunction]}
               onFilterChange={undefined}
+              onFilterSelect={[Function]}
+              reportSuites={undefined}
+              sourceName=""
             />
             <GridRow
               reverse={false}
@@ -618,9 +632,11 @@ ShallowWrapper {
             "children": Array [
               <AdvancedSearch
                 enabled={false}
-                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
+                onFilterSelect={[Function]}
+                reportSuites={undefined}
+                sourceName=""
               />,
               <GridRow
                 reverse={false}
@@ -803,9 +819,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "enabled": false,
-                "filter": "",
                 "onAdvancedSearchChange": [MockFunction],
                 "onFilterChange": undefined,
+                "onFilterSelect": [Function],
+                "reportSuites": undefined,
+                "sourceName": "",
               },
               "ref": null,
               "rendered": null,
@@ -1833,9 +1851,11 @@ ShallowWrapper {
             >
               <AdvancedSearch
                 enabled={false}
-                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
+                onFilterSelect={[Function]}
+                reportSuites={undefined}
+                sourceName=""
               />
               <GridRow
                 reverse={false}
@@ -2024,9 +2044,11 @@ ShallowWrapper {
             >
               <AdvancedSearch
                 enabled={false}
-                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
+                onFilterSelect={[Function]}
+                reportSuites={undefined}
+                sourceName=""
               />
               <GridRow
                 reverse={false}
@@ -2213,9 +2235,11 @@ ShallowWrapper {
             >
               <AdvancedSearch
                 enabled={false}
-                filter=""
                 onAdvancedSearchChange={[MockFunction]}
                 onFilterChange={undefined}
+                onFilterSelect={[Function]}
+                reportSuites={undefined}
+                sourceName=""
               />
               <GridRow
                 reverse={false}
@@ -2398,9 +2422,11 @@ ShallowWrapper {
               "children": Array [
                 <AdvancedSearch
                   enabled={false}
-                  filter=""
                   onAdvancedSearchChange={[MockFunction]}
                   onFilterChange={undefined}
+                  onFilterSelect={[Function]}
+                  reportSuites={undefined}
+                  sourceName=""
                 />,
                 <GridRow
                   reverse={false}
@@ -2583,9 +2609,11 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "enabled": false,
-                  "filter": "",
                   "onAdvancedSearchChange": [MockFunction],
                   "onFilterChange": undefined,
+                  "onFilterSelect": [Function],
+                  "reportSuites": undefined,
+                  "sourceName": "",
                 },
                 "ref": null,
                 "rendered": null,

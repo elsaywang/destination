@@ -24,16 +24,16 @@ describe('<SavedSearchPopover /> component', () => {
             },
         ],
         source: {
-            dataSourceId: 86195,
-            reportSuiteId: null,
+            dataSourceIds: [86195],
+            reportSuiteIds: [],
             sourceType: 'REALTIME',
-            dataType: 'Real-Time',
+            categoryType: 'Real-Time',
         },
         minEventFires: 88991,
         signalStatus: 'USED',
         startDate: '2018-04-25T10:41:43.179Z',
         endDate: '2018-04-25T12:15:25.260Z',
-        sorting: 'Key Value Pairs',
+        sortBy: 'Key Value Pairs',
     };
     const wrapper = shallow(
         <SavedSearchPopover
@@ -94,7 +94,7 @@ describe('<SavedSearchPopover /> component', () => {
         });
 
         it("renders <Popover /> containing user's saved search data type", () => {
-            expect(wrapper.find(Popover).contains(search.source.dataType)).toBe(true);
+            expect(wrapper.find(Popover).contains(search.source.categoryType)).toBe(true);
         });
 
         it("renders <Popover /> containing user's saved search source type", () => {
@@ -104,7 +104,7 @@ describe('<SavedSearchPopover /> component', () => {
         });
 
         it("renders <Popover /> containing user's saved search sorting selection", () => {
-            expect(wrapper.find(Popover).contains(search.sorting)).toBe(true);
+            expect(wrapper.find(Popover).contains(search.sortBy)).toBe(true);
         });
     });
 });

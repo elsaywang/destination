@@ -14,4 +14,8 @@ export const getSignalTypeOptions = counts => [
     { label: `Onboarded Records (${counts.ONBOARDED})`, value: 'ONBOARDED' },
 ];
 
-export const getSignalTypeLabel = type => signalTypeOptions.find(option => option.value === type).label;
+export const getSignalTypeLabel = type => {
+    const signalTypeOption = signalTypeOptions.find(option => option.value === type);
+
+    return signalTypeOption ? signalTypeOption.label : '';
+};

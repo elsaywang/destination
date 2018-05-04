@@ -13,7 +13,7 @@ export const list = handleActions(
         [CALL_SEARCH_FULFILLED]: (state, action) =>
             action.payload.list.map(signal => ({
                 ...signal,
-                dataType: signal.source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
+                categoryType: signal.source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
             })),
     },
     initialState.list,

@@ -26,11 +26,13 @@ ShallowWrapper {
         "minEventFires": 88991,
         "name": "Loren Waters",
         "signalStatus": "USED",
-        "sorting": "Key Value Pairs",
+        "sortBy": "Key Value Pairs",
         "source": Object {
-          "dataSourceId": 86195,
-          "dataType": "Real-Time",
-          "reportSuiteId": null,
+          "categoryType": "Real-Time",
+          "dataSourceIds": Array [
+            86195,
+          ],
+          "reportSuiteIds": Array [],
           "sourceType": "REALTIME",
         },
         "startDate": "2018-04-25T10:41:43.179Z",
@@ -115,7 +117,7 @@ ShallowWrapper {
                 </span>
               </FieldLabel>
               <FieldLabel
-                label="Data Type"
+                label="Signal Category"
                 position="left"
               >
                 <span
@@ -237,7 +239,7 @@ ShallowWrapper {
                   </span>
                 </FieldLabel>
                 <FieldLabel
-                  label="Data Type"
+                  label="Signal Category"
                   position="left"
                 >
                   <span
@@ -364,7 +366,7 @@ ShallowWrapper {
                     </span>
                   </FieldLabel>
                   <FieldLabel
-                    label="Data Type"
+                    label="Signal Category"
                     position="left"
                   >
                     <span
@@ -508,7 +510,7 @@ ShallowWrapper {
                       </span>
                     </FieldLabel>,
                     <FieldLabel
-                      label="Data Type"
+                      label="Signal Category"
                       position="left"
                     >
                       <span
@@ -603,7 +605,7 @@ ShallowWrapper {
                       >
                         Real-Time
                       </span>,
-                      "label": "Data Type",
+                      "label": "Signal Category",
                       "position": "left",
                     },
                     "ref": null,
@@ -810,7 +812,7 @@ ShallowWrapper {
                   </span>
                 </FieldLabel>
                 <FieldLabel
-                  label="Data Type"
+                  label="Signal Category"
                   position="left"
                 >
                   <span
@@ -932,7 +934,7 @@ ShallowWrapper {
                     </span>
                   </FieldLabel>
                   <FieldLabel
-                    label="Data Type"
+                    label="Signal Category"
                     position="left"
                   >
                     <span
@@ -1059,7 +1061,7 @@ ShallowWrapper {
                       </span>
                     </FieldLabel>
                     <FieldLabel
-                      label="Data Type"
+                      label="Signal Category"
                       position="left"
                     >
                       <span
@@ -1203,7 +1205,7 @@ ShallowWrapper {
                         </span>
                       </FieldLabel>,
                       <FieldLabel
-                        label="Data Type"
+                        label="Signal Category"
                         position="left"
                       >
                         <span
@@ -1298,7 +1300,7 @@ ShallowWrapper {
                         >
                           Real-Time
                         </span>,
-                        "label": "Data Type",
+                        "label": "Signal Category",
                         "position": "left",
                       },
                       "ref": null,

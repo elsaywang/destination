@@ -21,7 +21,7 @@ export const getSelectedSignalsDataType = state => {
         return null;
     }
 
-    return state.records.every(signal => signal.dataType === 'ONBOARDED')
+    return state.records.every(signal => signal.categoryType === 'ONBOARDED')
         ? 'ONBOARDED'
         : 'REALTIME';
 };

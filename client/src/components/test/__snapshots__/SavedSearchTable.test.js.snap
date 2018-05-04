@@ -119,8 +119,8 @@ ShallowWrapper {
         "percentageChange": 0.154,
         "signalStatus": "USED",
         "source": Object {
-          "dataSourceId": 93561,
-          "reportSuiteId": null,
+          "dataSourceIds": 93561,
+          "reportSuiteIds": null,
           "sourceType": "REALTIME",
         },
         "totalCounts": 21456,
@@ -157,8 +157,8 @@ ShallowWrapper {
         "percentageChange": 0.154,
         "signalStatus": "USED",
         "source": Object {
-          "dataSourceId": 93561,
-          "reportSuiteId": null,
+          "dataSourceIds": 93561,
+          "reportSuiteIds": null,
           "sourceType": "REALTIME",
         },
         "totalCounts": 21456,
@@ -192,8 +192,8 @@ ShallowWrapper {
           "percentageChange": 0.154,
           "signalStatus": "USED",
           "source": Object {
-            "dataSourceId": 93561,
-            "reportSuiteId": null,
+            "dataSourceIds": 93561,
+            "reportSuiteIds": null,
             "sourceType": "REALTIME",
           },
           "totalCounts": 21456,

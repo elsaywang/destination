@@ -7,21 +7,21 @@ import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
     getCreateTraitURL() {
-        const { dataType, keyValuePairs, multiCreation, selectedSignals } = this.props;
+        const { categoryType, keyValuePairs, multiCreation, selectedSignals } = this.props;
         const signals = multiCreation ? selectedSignals.records : [{ keyValuePairs }];
         const signalsParams = {
             signals: stringifySignals(signals),
         };
 
-        return dataType === 'ONBOARDED'
+        return categoryType === 'ONBOARDED'
             ? createOnboardedTraitUrl(signalsParams)
             : createRuleBasedTraitUrl(signalsParams);
     }
 
     getLinkText() {
-        const { dataType } = this.props;
+        const { categoryType } = this.props;
 
-        return dataType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-Based Trait';
+        return categoryType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-Based Trait';
     }
 
     render() {
@@ -41,7 +41,7 @@ class TraitsCreation extends Component {
 }
 
 TraitsCreation.propTypes = {
-    dataType: PropTypes.string,
+    categoryType: PropTypes.string,
     keyValuePairs: PropTypes.array,
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({

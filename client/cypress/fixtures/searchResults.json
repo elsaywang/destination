@@ -9,10 +9,9 @@
                 }
             ],
             "source": {
-                "dataSourceId": 7401,
-                "reportSuiteId": null,
-                "sourceType": "REALTIME",
-                "dataType": "Real-Time"
+                "dataSourceIds": [7401],
+                "reportSuiteIds": [],
+                "sourceType": "REALTIME"
             },
             "totalCounts": 71071,
             "percentageChange": 0.154,
@@ -28,10 +27,9 @@
                 }
             ],
             "source": {
-                "dataSourceId": 15841,
-                "reportSuiteId": null,
-                "sourceType": "REALTIME",
-                "dataType": "Real-Time"
+                "dataSourceIds": [15841],
+                "reportSuiteIds": [],
+                "sourceType": "REALTIME"
             },
             "totalCounts": 69967,
             "percentageChange": -0.3711,
@@ -47,10 +45,9 @@
                 }
             ],
             "source": {
-                "dataSourceId": 1234,
-                "reportSuiteId": null,
-                "sourceType": "ONBOARDED",
-                "dataType": "Real-Time"
+                "dataSourceIds": [1234],
+                "reportSuiteIds": [],
+                "sourceType": "ONBOARDED"
             },
             "totalCounts": 14793,
             "percentageChange": -0.9711,
@@ -71,10 +68,9 @@
                 }
             ],
             "source": {
-                "dataSourceId": 4019,
-                "reportSuiteId": 5678,
-                "sourceType": "ANALYTICS",
-                "dataType": "Real-Time"
+                "dataSourceIds": [4019],
+                "reportSuiteIds": [5678],
+                "sourceType": "ANALYTICS"
             },
             "totalCounts": 21124,
             "percentageChange": 0.8711,

@@ -20,6 +20,5 @@
 
 :local(.tagBlock) {
     display: inline-flex;
-    /* display: inline-block; */
     margin-right: 10px;
 }

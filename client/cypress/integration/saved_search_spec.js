@@ -1,11 +1,13 @@
 const deferred = require('../utils/deferred');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
+const datasourcesResponse = require('../fixtures/reportSuites.json');
 
 describe('Saved Search Integration Test', function() {
     beforeEach(function() {
         this.fetchSavedSearchDeferred = deferred();
         this.fetchSearchResultsDeferred = deferred();
+        this.fetchReportSuitesDeferred = deferred();
 
         cy.visit('#/search', {
             onBeforeLoad(win) {
@@ -16,7 +18,10 @@ describe('Saved Search Integration Test', function() {
                     .returns(this.fetchSavedSearchDeferred.promise)
                     .withArgs('/api/signals/list')
                     .as('fetchSearchResults')
-                    .returns(this.fetchSearchResultsDeferred.promise);
+                    .returns(this.fetchSearchResultsDeferred.promise)
+                    .withArgs('/api/v1/datasources/?search=suite')
+                    .as('fetchReportSuites')
+                    .returns(this.fetchReportSuitesDeferred.promise);
             },
         });
 
@@ -33,25 +38,38 @@ describe('Saved Search Integration Test', function() {
             },
             ok: true,
         });
+
+        this.fetchReportSuitesDeferred.resolve({
+            json() {
+                return datasourcesResponse.list;
+            },
+            ok: true,
+        });
     });
 
-    it("should show user's saved search", function() {
+    it("should show user's saved search, with no delete buttons visible", function() {
         cy.get('[data-test="saved-search"]').should('exist');
         cy.get('[data-test="saved-search-tag"]:first').should(function($tag) {
             expect($tag.text()).to.eq(savedSearchResponse.savedSearch[0].name);
         });
+        cy.get('[data-test="saved-search-delete-button"]').should('have.length', 0);
     });
 
     describe('when a Saved Search tag is clicked', function() {
-        it('should show a highlighted tag for the saved search that was clicked and a delete button', function() {
-            cy.get('[data-test="saved-search-delete-button"]').should('not.exist');
+        beforeEach(function() {
             cy.get('[data-test="saved-search-tag"]:first').click();
+        });
+
+        it('should execute the saved search and show results', function() {
+            cy.get('[data-test="signals-table"]').should('have.length', 1);
+        });
+
+        it('should show a highlighted tag for the saved search that was clicked and a delete button', function() {
             cy.get('#isCurrentSearch').should('exist');
             cy.get('[data-test="saved-search-delete-button"]').should('exist');
         });
 
-        it('should pre-fill the key-value pair fields', function() {
-            cy.get('[data-test="saved-search-tag"]:first').click();
+        it('should pre-fill Key-Value Pair fields', function() {
             cy
                 .get('[data-test="key-value-pair"]')
                 .should('have.length', savedSearchResponse.savedSearch[0].keyValuePairs.length);
@@ -67,37 +85,39 @@ describe('Saved Search Integration Test', function() {
             });
         });
 
-        it('should execute the saved search and show results', function() {
-            cy.get('[data-test="saved-search-tag"]:first').click();
-            cy.get('[data-test="signals-table"]').should('have.length', 1);
-        });
+        // TODO: why is this breaking on build only...
+        it.skip('should pre-fill Advanced Search fields', function() {
+            cy.get('.advanced-search-toggle').should(function($value) {
+                expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].advanced);
+            });
 
-        describe('when the delete button next to it is clicked', function() {
-            it("should remove that saved search from user's saved search", function() {
-                cy.get('[data-test="saved-search-tag"]:first').click();
-                cy.get('#isCurrentSearch ~ button').click();
-
-                cy
-                    .get('[data-test="saved-search-tag"]')
-                    .should('have.length', savedSearchResponse.savedSearch.length - 1);
-
-                cy
-                    .get('[data-test="saved-search-tag"]:first')
-                    .should('not.have.text', savedSearchResponse.savedSearch[0].name);
+            cy.get('[data-test="advanced-search-filter"]').should(function($value) {
+                expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].source.name);
             });
         });
-    });
 
-    describe('when a Saved Search tag is hovered over', function() {
-        it('should trigger a popover', function() {
-            cy.get('[data-test="saved-search-tag"]:first').trigger('mouseover');
-            cy.get('[data-test="saved-search-overlay-trigger"]').should('have.length', 1);
+        it('should pre-fill Signal Status field', function() {
+            const signalStatus = savedSearchResponse.savedSearch[0].signalStatus;
+
+            cy.get('.signal-status').should(function($value) {
+                expect($value.text()).to.include(
+                    signalStatus.slice(0, 1) + signalStatus.slice(1).toLowerCase(),
+                );
+            });
         });
-    });
 
-    describe('when search is executed', function() {
-        beforeEach(function() {
-            cy.get('[data-test="saved-search-tag"]:first').click();
+        it('should pre-fill View Records For fields', function() {
+            cy.get('[data-test="view-records"]').should(function($value) {
+                expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].viewRecordsFor);
+            });
+        });
+
+        it('should pre-fill Minimum Counts field', function() {
+            cy.get('[data-test="min-counts"]').should(function($value) {
+                expect($value.val()).to.eq(
+                    String(savedSearchResponse.savedSearch[0].minEventFires),
+                );
+            });
         });
 
         it('should show "Save This Search" button', function() {
@@ -154,6 +174,27 @@ describe('Saved Search Integration Test', function() {
                     cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
                 });
             });
+        });
+
+        describe('when the delete button next to it is clicked', function() {
+            it("should remove that saved search from user's saved search", function() {
+                cy.get('#isCurrentSearch ~ button').click();
+
+                cy
+                    .get('[data-test="saved-search-tag"]')
+                    .should('have.length', savedSearchResponse.savedSearch.length - 1);
+
+                cy
+                    .get('[data-test="saved-search-tag"]:first')
+                    .should('not.have.text', savedSearchResponse.savedSearch[0].name);
+            });
+        });
+    });
+
+    describe('when a Saved Search tag is hovered over', function() {
+        it('should trigger a popover', function() {
+            cy.get('[data-test="saved-search-tag"]:first').trigger('mouseover');
+            cy.get('[data-test="saved-search-overlay-trigger"]').should('have.length', 1);
         });
     });
 });

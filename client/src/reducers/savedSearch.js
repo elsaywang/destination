@@ -14,7 +14,7 @@ const initialState = {
     saveSearch: {
         name: '',
         includeInDashboard: false,
-        sorting: '',
+        sortBy: '',
         descending: false,
     },
 };
@@ -51,7 +51,7 @@ const saveSearch = handleActions(
         }),
         [SELECT_DEFAULT_SORTING]: (state, action) => ({
             ...state,
-            sorting: action.payload,
+            sortBy: action.payload,
         }),
         [CHANGE_SORTING_ORDER]: (state, action) => ({
             ...state,

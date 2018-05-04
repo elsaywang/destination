@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TraitsCreation/> component rendering when it is used in Multi-Signals Traits Creation matches the snapshot 1`] = `
+exports[`<TraitsCreation /> component rendering when it is used in Multi-Signals Traits Creation matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -65,12 +65,12 @@ ShallowWrapper {
 }
 `;
 
-exports[`<TraitsCreation/> component rendering when it is used in Single-Signal Traits Creation matches the snapshot 1`] = `
+exports[`<TraitsCreation /> component rendering when it is used in Single-Signal Traits Creation matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreation
-    dataType="ONBOARDED"
+    categoryType="ONBOARDED"
     keyValuePairs={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {

@@ -58,7 +58,7 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
             );
         });
 
-        it('<TraitsCreation/> passes props `dataType`', () => {
+        it('<TraitsCreation/> passes props `categoryType`', () => {
             expect(wrapper.find(TraitsCreation).props().selectedSignals).toMatchObject(
                 props.selectedSignals,
             );

@@ -2,6 +2,7 @@ import * as searchFormActionCreators from '../actions/searchForm';
 import * as savedSearchActionCreators from '../actions/savedSearch';
 import { selectSignals } from '../actions/selectSignals';
 import { populateSearchFields, clearSearchFields } from '../actions/savedSearchFields';
+import { getReportSuites } from '../actions/reportSuites';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
@@ -32,14 +33,15 @@ class SearchContainer extends Component {
             ],
             signalStatus: 'ALL',
             advanced: false,
-            filter: {
-                label: '',
-                dataSourceId: 0,
-                reportSuiteId: 0,
+            source: {
+                name: '',
+                dataSourceIds: [],
+                reportSuiteIds: [],
+                sourceType: null,
             },
             viewRecordsFor: 7,
             minEventFires: 1000,
-            // TODO: counts and signalType should be extracted to redux and come through props
+            // TODO: counts should be extracted to redux and come through props
             counts: {
                 ALL: 72093,
                 ANALYTICS: 34300,
@@ -47,11 +49,12 @@ class SearchContainer extends Component {
                 REALTIME: 27,
                 ONBOARDED: 37407,
             },
-            signalType: 'ALL',
         };
     }
 
     componentDidMount() {
+        this.props.getReportSuites();
+
         // TODO: API call to getCounts and set state
 
         // Pre-populate search fields if user clicked view more button in dashboard
@@ -63,29 +66,52 @@ class SearchContainer extends Component {
         }
     }
 
-    handleSignalTypeChange = signalType => {
-        this.setState({ signalType });
+    handleSignalTypeChange = sourceType => {
+        this.setState({
+            source: {
+                name: '',
+                dataSourceIds: [],
+                reportSuiteIds: [],
+                sourceType,
+            },
+        });
         // TODO: API call to update items in table results
     };
 
     onAdvancedSearchChange = value => {
         this.setState({
             advanced: value,
-            filter: {
-                label: '',
-                dataSourceId: 0,
-                reportSuiteId: 0,
+            source: {
+                name: '',
+                dataSourceIds: [],
+                reportSuiteIds: [],
+                sourceType: value ? 'ANALYTICS' : null,
             },
         });
     };
 
     onFilterChange = value => {
         this.setState({
-            // TODO: figure out how to populate dataSourceId && reportSuiteId for AAM-35130
-            filter: {
-                label: value,
-                dataSourceId: 0,
-                reportSuiteId: 0,
+            source: {
+                name: value,
+            },
+        });
+    };
+
+    onFilterSelect = value => {
+        // TODO: This is currently overly complex due to API restrictions,
+        // we should re-revisit when AAM- is complete
+        const matchingReportSuite = this.props.reportSuites.find(
+            reportSuite => reportSuite.name === value,
+        );
+        const reportSuiteIds = JSON.parse(matchingReportSuite.integrationCode).suite;
+
+        this.setState({
+            source: {
+                name: value,
+                dataSourceIds: [matchingReportSuite.dataSourceId],
+                reportSuiteIds: [reportSuiteIds],
+                sourceType: 'ANALYTICS',
             },
         });
     };
@@ -176,22 +202,12 @@ class SearchContainer extends Component {
     handleSaveThisSearchConfirm = search => {
         const { thisSearch, savedSearch, saveSearch } = this.props;
         const maxId = savedSearch[savedSearch.length - 1].id;
-        const endDate = new Date();
-        endDate.setDate(endDate.getDate() - 7);
-        // TODO: move this.state to redux to clean this up and figure out where some of these params come from
+
         const thisSearchWithKeyValuePairs = {
-            ...thisSearch,
             id: maxId + 1,
-            endDate,
-            keyValuePairs: this.state.keyValuePairs,
-            signalStatus: this.state.signalStatus,
-            source: {
-                dataType: 'Real-Time',
-                sourceType: 'REALTIME',
-                ...this.state.filter,
-            },
-            viewRecordsFor: this.state.viewRecordsFor,
-            minEventFires: this.state.minEventFires,
+            ...this.state,
+            counts: undefined, // TODO: counts should be extracted to redux and come through props, this will eliminate the need to reset here
+            ...thisSearch,
         };
         const newSavedSearch = [...savedSearch, thisSearchWithKeyValuePairs];
 
@@ -221,10 +237,11 @@ class SearchContainer extends Component {
             ],
             signalStatus: 'ALL',
             advanced: false,
-            filter: {
-                label: '',
-                dataSourceId: 0,
-                reportSuiteId: 0,
+            source: {
+                name: '',
+                dataSourceIds: [],
+                reportSuiteIds: [],
+                sourceType: null,
             },
             viewRecordsFor: 7,
             minEventFires: 1000,
@@ -238,8 +255,10 @@ class SearchContainer extends Component {
                     <GridColumn size={12}>
                         <Search
                             {...this.state}
+                            reportSuites={this.props.reportSuites}
                             onAdvancedSearchChange={this.onAdvancedSearchChange}
                             onFilterChange={this.onFilterChange}
+                            onFilterSelect={value => this.onFilterSelect(value)}
                             onKeySelect={this.onKeySelect}
                             onValueChange={this.onValueChange}
                             onOperatorChange={this.onOperatorChange}
@@ -288,7 +307,7 @@ class SearchContainer extends Component {
                             <SignalTypeFilter
                                 counts={this.state.counts}
                                 onSignalTypeChange={this.handleSignalTypeChange}
-                                signalType={this.state.signalType}
+                                signalType={this.state.source.sourceType}
                             />
                         </div>
                         <div className={styles.tableContainer}>
@@ -314,8 +333,8 @@ class SearchContainer extends Component {
                             </GridRow>
                             <SignalsTable
                                 results={this.props.results}
-                                signalType={this.state.signalType}
-                                isAdvancedSearchEnabled={false} // TODO: hook this up
+                                signalType={this.state.source.sourceType}
+                                isAdvancedSearchEnabled={this.state.advanced}
                                 sortSearch={this.props.sortSearch}
                                 onSignalRecordsSelection={this.props.selectSignals}
                             />
@@ -327,11 +346,12 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearch, savedSearchFields }) => ({
+const mapStateToProps = ({ results, savedSearch, savedSearchFields, reportSuites }) => ({
     results,
     savedSearchFields,
     savedSearch: savedSearch.list,
     thisSearch: savedSearch.saveSearch,
+    reportSuites,
 });
 const actionCreators = {
     ...searchFormActionCreators,
@@ -339,6 +359,7 @@ const actionCreators = {
     selectSignals,
     populateSearchFields,
     clearSearchFields,
+    getReportSuites,
 };
 
 export default connect(mapStateToProps, actionCreators)(SearchContainer);

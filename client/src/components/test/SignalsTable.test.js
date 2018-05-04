@@ -251,7 +251,7 @@ describe('<SignalsTable /> component', () => {
                     );
                 });
 
-                it('passes `dataType` prop`', () => {
+                it('passes `categoryType` prop`', () => {
                     signals.map(data => expect(renderIncludedInTraits(data)).toMatchSnapshot());
                 });
             });

@@ -1,29 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 1`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 1`] = `
 <TraitsCreation
-  dataType={undefined}
+  categoryType={undefined}
   keyValuePairs={undefined}
 />
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 2`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 2`] = `
 <TraitsCreation
-  dataType={undefined}
+  categoryType={undefined}
   keyValuePairs={undefined}
 />
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 3`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 3`] = `
 <TraitsCreation
-  dataType={undefined}
+  categoryType={undefined}
   keyValuePairs={undefined}
 />
 `;
 
-exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`dataType\` prop\` 4`] = `
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 4`] = `
 <TraitsCreation
-  dataType={undefined}
+  categoryType={undefined}
   keyValuePairs={undefined}
 />
 `;
@@ -134,7 +134,7 @@ ShallowWrapper {
         Object {
           "id": 0,
           "includedInTraits": Object {
-            "dataType": undefined,
+            "categoryType": undefined,
             "keyValuePairs": undefined,
             "sids": undefined,
           },
@@ -149,7 +149,7 @@ ShallowWrapper {
         Object {
           "id": 1,
           "includedInTraits": Object {
-            "dataType": undefined,
+            "categoryType": undefined,
             "keyValuePairs": undefined,
             "sids": undefined,
           },
@@ -220,7 +220,7 @@ ShallowWrapper {
           Object {
             "id": 0,
             "includedInTraits": Object {
-              "dataType": undefined,
+              "categoryType": undefined,
               "keyValuePairs": undefined,
               "sids": undefined,
             },
@@ -235,7 +235,7 @@ ShallowWrapper {
           Object {
             "id": 1,
             "includedInTraits": Object {
-              "dataType": undefined,
+              "categoryType": undefined,
               "keyValuePairs": undefined,
               "sids": undefined,
             },

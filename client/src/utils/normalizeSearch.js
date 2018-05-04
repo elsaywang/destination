@@ -9,11 +9,11 @@ export const normalizeSearch = search => ({
     startDate: 0,
     endDate: 0,
     source: {
-        sourceType: search.signalType === 'ALL' ? '' : search.signalType,
-        dataSourceId:
-            search.advanced && search.filter.dataSourceId ? search.filter.dataSourceId : '',
-        reportSuiteId:
-            search.advanced && search.filter.reportSuiteId ? search.filter.reportSuiteId : '',
+        sourceType: search.source.sourceType === 'ALL' ? '' : search.source.sourceType,
+        dataSourceIds:
+            search.advanced && search.source.dataSourceIds ? search.source.dataSourceIds : 0,
+        reportSuiteIds:
+            search.advanced && search.source.reportSuiteIds ? search.source.reportSuiteIds : '',
     },
     signalStatus: search.signalStatus,
     minEventFires: search.minEventFires,

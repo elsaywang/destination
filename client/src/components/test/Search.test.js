@@ -11,6 +11,7 @@ import { isFormValid } from '../../utils/searchValidation';
 
 describe('<Search /> component', () => {
     const state = {
+        name: '',
         keyValuePairs: [
             {
                 id: 0,
@@ -21,7 +22,12 @@ describe('<Search /> component', () => {
         ],
         signalStatus: 'ALL',
         advanced: false,
-        filter: '',
+        source: {
+            name: '',
+            dataSourceIds: 0,
+            reportSuiteIds: 0,
+            sourceType: 'ALL',
+        },
         viewRecordsFor: 7,
         minEventFires: 1000,
     };

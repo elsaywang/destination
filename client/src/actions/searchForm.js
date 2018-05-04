@@ -4,7 +4,7 @@ import { normalizeSearch } from '../utils/normalizeSearch';
 export const CALL_SEARCH = 'CALL_SEARCH';
 export const CALL_SEARCH_FULFILLED = 'CALL_SEARCH_FULFILLED';
 export const CALL_SEARCH_REJECTED = 'CALL_SEARCH_REJECTED';
-export const callSearch = createAction(CALL_SEARCH, search => {
+export const callSearch = createAction(CALL_SEARCH, async search => {
     const normalizedSearch = normalizeSearch(search);
     const options = {
         body: JSON.stringify(normalizedSearch),
@@ -12,14 +12,11 @@ export const callSearch = createAction(CALL_SEARCH, search => {
         method: 'POST',
     };
 
-    // TODO: take out the return and pass in options above when making a real API call,
+    // TODO: pass in options above when making a real API call,
     // currently the json-server does not return anything for a POST call
-    return fetch('/api/signals/list').then(
-        result => result.json(),
-        error => {
-            throw new Error(error);
-        },
-    );
+    const result = await fetch('/api/signals/list');
+
+    return result.json();
 });
 
 export const SORT_SEARCH = 'SORT_SEARCH';

@@ -10,7 +10,7 @@ var sortingTypes = [
     'Percentage Change',
     'Included In Traits',
 ];
-
+var categoryTypes = ['REAL-TIME', 'ONBOARDED'];
 var operators = [
     { label: '==', value: '==' },
     { label: '>', value: '>' },
@@ -26,6 +26,7 @@ module.exports = () => {
         list: {},
         traits: [],
         keys: [],
+        datasources: [],
     };
 
     const randomGenerateArray = (item, max = 5) => {
@@ -37,6 +38,17 @@ module.exports = () => {
 
         return array;
     };
+
+    class Datasource {
+        constructor() {
+            this.name = 'datasource-' + faker.random.word();
+            this.integrationCode = `{"suite":"${faker.random.word()}", "datacenter":"${faker.random.word()}"}`;
+            this.type = 'GENERAL';
+            this.idType = 'COOKIE';
+            this.pid = faker.random.number();
+            this.dataSourceIds = faker.random.number();
+        }
+    }
 
     class Kvp {
         constructor() {
@@ -58,21 +70,23 @@ module.exports = () => {
         constructor(id) {
             this.id = id;
             this.keyValuePairs = randomGenerateArray(Kvp, 2);
-            this.source = new Source();
+            this.source = new Source(faker.random.word());
             this.minEventFires = faker.random.number();
             this.signalStatus = 'USED';
             this.startDate = faker.date.recent();
             this.endDate = faker.date.recent();
-            this.sorting = sortingTypes[Math.floor(Math.random() * sortingTypes.length)];
+            this.sortBy = sortingTypes[Math.floor(Math.random() * sortingTypes.length)];
+            this.categoryType = categoryTypes[Math.floor(Math.random() * sortingTypes.length)];
+            this.advanced = faker.random.boolean();
         }
     }
 
     class Source {
-        constructor(dataSourceId, reportSuiteId, sourceType, dataType) {
-            this.dataSourceId = dataSourceId || faker.random.number();
-            this.reportSuiteId = reportSuiteId || null;
+        constructor(name, dataSourceIds, reportSuiteIds, sourceType) {
+            this.name = name || undefined;
+            this.dataSourceIds = dataSourceIds || [faker.random.number()];
+            this.reportSuiteIds = reportSuiteIds || null;
             this.sourceType = sourceType || 'REALTIME';
-            this.dataType = dataType || 'Real-Time';
         }
     }
 
@@ -124,9 +138,12 @@ module.exports = () => {
         });
     }
 
-    // Create 20 keys
+    // Create 20 keys and datasources
     for (let i = 0; i < 20; i++) {
         data.keys.push('k-' + faker.name.findName());
+        data.datasources.push({
+            ...new Datasource(),
+        });
     }
 
     // Create 100 traits

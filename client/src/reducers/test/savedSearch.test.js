@@ -15,7 +15,7 @@ describe('saveSearch reducer', () => {
         saveSearch: {
             name: '',
             includeInDashboard: false,
-            sorting: '',
+            sortBy: '',
             descending: false,
         },
     };
@@ -45,7 +45,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: false,
-                sorting: '',
+                sortBy: '',
                 descending: false,
             },
         };
@@ -59,7 +59,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sorting: '',
+                sortBy: '',
                 descending: false,
             },
         });
@@ -71,7 +71,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sorting: '',
+                sortBy: '',
                 descending: false,
             },
         };
@@ -85,7 +85,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sorting: 'Key-Value Pair',
+                sortBy: 'Key-Value Pair',
                 descending: false,
             },
         });
@@ -97,7 +97,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sorting: 'Key-Value Pair',
+                sortBy: 'Key-Value Pair',
                 descending: false,
             },
         };
@@ -111,7 +111,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sorting: 'Key-Value Pair',
+                sortBy: 'Key-Value Pair',
                 descending: true,
             },
         });
@@ -134,16 +134,16 @@ describe('saveSearch reducer', () => {
                         },
                     ],
                     source: {
-                        dataSourceId: 42251,
-                        reportSuiteId: null,
+                        dataSourceIds: 42251,
+                        reportSuiteIds: null,
                         sourceType: 'REALTIME',
-                        dataType: 'Real-Time',
+                        categoryType: 'Real-Time',
                     },
                     minEventFires: 79746,
                     signalStatus: 'USED',
                     startDate: '2018-04-28T18:13:54.899Z',
                     endDate: '2018-04-28T06:13:52.825Z',
-                    sorting: 'Total Event Fires',
+                    sortBy: 'Total Event Fires',
                 },
                 {
                     name: 'Ms. Guy Pagac',
@@ -157,16 +157,16 @@ describe('saveSearch reducer', () => {
                         },
                     ],
                     source: {
-                        dataSourceId: 65509,
-                        reportSuiteId: null,
+                        dataSourceIds: 65509,
+                        reportSuiteIds: null,
                         sourceType: 'REALTIME',
-                        dataType: 'Real-Time',
+                        categoryType: 'Real-Time',
                     },
                     minEventFires: 86912,
                     signalStatus: 'USED',
                     startDate: '2018-04-28T21:18:33.376Z',
                     endDate: '2018-04-28T17:07:28.540Z',
-                    sorting: 'Total Event Fires',
+                    sortBy: 'Total Event Fires',
                 },
             ],
         };
@@ -184,7 +184,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'Test',
                 includeInDashboard: false,
-                sorting: '',
+                sortBy: '',
                 descending: false,
             },
         };

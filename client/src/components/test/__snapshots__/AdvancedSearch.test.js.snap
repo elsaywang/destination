@@ -6,13 +6,29 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdvancedSearch
     enabled={false}
-    filter={
-      Object {
-        "label": "test",
-      }
-    }
     onAdvancedSearchChange={[MockFunction]}
     onFilterChange={[MockFunction]}
+    reportSuites={
+      Array [
+        Object {
+          "dataSourceIds": 1696,
+          "idType": "COOKIE",
+          "integrationCode": "{\\"suite\\":\\"Administrator\\", \\"datacenter\\":\\"microchip\\"}",
+          "name": "datasource-cross-media",
+          "pid": 51083,
+          "type": "GENERAL",
+        },
+        Object {
+          "dataSourceIds": 2620,
+          "idType": "COOKIE",
+          "integrationCode": "{\\"suite\\":\\"Representative\\", \\"datacenter\\":\\"conglomeration\\"}",
+          "name": "datasource-impactful",
+          "pid": 52229,
+          "type": "GENERAL",
+        },
+      ]
+    }
+    sourceName="test"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -30,6 +46,7 @@ ShallowWrapper {
         <Switch
           aria-label="Advanced Search"
           checked={false}
+          className="advanced-search-toggle"
           data-test="advanced-search-toggle"
           label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
           onChange={[MockFunction]}
@@ -39,29 +56,17 @@ ShallowWrapper {
           disabled={true}
           invalid={false}
           onChange={[MockFunction]}
+          onSelect={[Function]}
           options={
             Array [
-              Object {
-                "dataSourceId": 1,
-                "label": "test",
-                "reportSuiteId": 1,
-              },
-              Object {
-                "dataSourceId": 2,
-                "label": "test2",
-                "reportSuiteId": 2,
-              },
-              Object {
-                "dataSourceId": 3,
-                "label": "test3",
-                "reportSuiteId": 3,
-              },
+              "datasource-cross-media",
+              "datasource-impactful",
             ]
           }
           placeholder="Filter by report suite"
           quiet={true}
           required={false}
-          value="test"
+          value=""
         />,
       ],
       "data-test": "advanced-search",
@@ -75,6 +80,7 @@ ShallowWrapper {
         "props": Object {
           "aria-label": "Advanced Search",
           "checked": false,
+          "className": "advanced-search-toggle",
           "data-test": "advanced-search-toggle",
           "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
           "onChange": [MockFunction],
@@ -92,27 +98,15 @@ ShallowWrapper {
           "disabled": true,
           "invalid": false,
           "onChange": [MockFunction],
+          "onSelect": [Function],
           "options": Array [
-            Object {
-              "dataSourceId": 1,
-              "label": "test",
-              "reportSuiteId": 1,
-            },
-            Object {
-              "dataSourceId": 2,
-              "label": "test2",
-              "reportSuiteId": 2,
-            },
-            Object {
-              "dataSourceId": 3,
-              "label": "test3",
-              "reportSuiteId": 3,
-            },
+            "datasource-cross-media",
+            "datasource-impactful",
           ],
           "placeholder": "Filter by report suite",
           "quiet": true,
           "required": false,
-          "value": "test",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
@@ -131,6 +125,7 @@ ShallowWrapper {
           <Switch
             aria-label="Advanced Search"
             checked={false}
+            className="advanced-search-toggle"
             data-test="advanced-search-toggle"
             label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
             onChange={[MockFunction]}
@@ -140,29 +135,17 @@ ShallowWrapper {
             disabled={true}
             invalid={false}
             onChange={[MockFunction]}
+            onSelect={[Function]}
             options={
               Array [
-                Object {
-                  "dataSourceId": 1,
-                  "label": "test",
-                  "reportSuiteId": 1,
-                },
-                Object {
-                  "dataSourceId": 2,
-                  "label": "test2",
-                  "reportSuiteId": 2,
-                },
-                Object {
-                  "dataSourceId": 3,
-                  "label": "test3",
-                  "reportSuiteId": 3,
-                },
+                "datasource-cross-media",
+                "datasource-impactful",
               ]
             }
             placeholder="Filter by report suite"
             quiet={true}
             required={false}
-            value="test"
+            value=""
           />,
         ],
         "data-test": "advanced-search",
@@ -176,6 +159,7 @@ ShallowWrapper {
           "props": Object {
             "aria-label": "Advanced Search",
             "checked": false,
+            "className": "advanced-search-toggle",
             "data-test": "advanced-search-toggle",
             "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
             "onChange": [MockFunction],
@@ -193,27 +177,15 @@ ShallowWrapper {
             "disabled": true,
             "invalid": false,
             "onChange": [MockFunction],
+            "onSelect": [Function],
             "options": Array [
-              Object {
-                "dataSourceId": 1,
-                "label": "test",
-                "reportSuiteId": 1,
-              },
-              Object {
-                "dataSourceId": 2,
-                "label": "test2",
-                "reportSuiteId": 2,
-              },
-              Object {
-                "dataSourceId": 3,
-                "label": "test3",
-                "reportSuiteId": 3,
-              },
+              "datasource-cross-media",
+              "datasource-impactful",
             ],
             "placeholder": "Filter by report suite",
             "quiet": true,
             "required": false,
-            "value": "test",
+            "value": "",
           },
           "ref": null,
           "rendered": null,

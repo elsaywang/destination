@@ -10,10 +10,10 @@ import { stringifySignals } from '../../../../utils/stringifySignals';
 jest.mock('../../../../utils/stringifySignals');
 stringifySignals.mockImplementation(() => '');
 
-describe('<TraitsCreation/> component', () => {
+describe('<TraitsCreation /> component', () => {
     describe('rendering when it is used in Single-Signal Traits Creation', () => {
         const props = {
-            dataType: 'ONBOARDED',
+            categoryType: 'ONBOARDED',
             keyValuePairs: [],
         };
 
@@ -34,7 +34,7 @@ describe('<TraitsCreation/> component', () => {
 
         describe('Trait creation label', () => {
             it('is for creaitng an onboarded trait when the single signal is an onboarded signal', () => {
-                wrapper.setProps({ dataType: 'ONBOARDED' });
+                wrapper.setProps({ categoryType: 'ONBOARDED' });
 
                 expect(
                     wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
@@ -42,7 +42,7 @@ describe('<TraitsCreation/> component', () => {
             });
 
             it('is for creating a rule-based trait when the single signal is a real-time signal', () => {
-                wrapper.setProps({ dataType: 'REALTIME' });
+                wrapper.setProps({ categoryType: 'REALTIME' });
 
                 expect(
                     wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
@@ -76,7 +76,7 @@ describe('<TraitsCreation/> component', () => {
     describe('getCreateTraitURL', () => {
         stringifySignals.mockClear();
         const props = {
-            dataType: 'ONBOARDED',
+            categoryType: 'ONBOARDED',
             keyValuePairs: [],
         };
         const wrapper = shallow(<TraitsCreation {...props} />);
@@ -100,9 +100,9 @@ describe('<TraitsCreation/> component', () => {
             expect(stringifySignals).toBeCalledWith(selectedSignals.records);
         });
 
-        it('returns the Create Rule-Based Trait URL when the `dataType` is "REALTIME"', () => {
+        it('returns the Create Rule-Based Trait URL when the `categoryType` is "REALTIME"', () => {
             wrapper.setProps({
-                dataType: 'REALTIME',
+                categoryType: 'REALTIME',
                 keyValuePairs: [],
             });
 
@@ -114,9 +114,9 @@ describe('<TraitsCreation/> component', () => {
             ).toBeTruthy();
         });
 
-        it('returns the Create Onboarded Trait URL when the `dataType` is "ONBOARDED"', () => {
+        it('returns the Create Onboarded Trait URL when the `categoryType` is "ONBOARDED"', () => {
             wrapper.setProps({
-                dataType: 'ONBOARDED',
+                categoryType: 'ONBOARDED',
                 keyValuePairs: [],
             });
 

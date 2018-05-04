@@ -7,6 +7,7 @@ import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { formatSignal } from '../utils/stringifySignals';
 import { getSignalStatusLabel } from '../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../constants/signalTypeOptions';
+import { getSignalCategory } from '../constants/signalCategoryOptions';
 import styles from './SavedSearchPopover.css';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
@@ -57,9 +58,9 @@ class SavedSearchPopover extends Component {
                                 </span>
                             </FieldLabel>
 
-                            <FieldLabel position="left" label="Data Type">
+                            <FieldLabel position="left" label="Signal Category">
                                 <span style={{ verticalAlign: 'bottom' }}>
-                                    {search.source.dataType}
+                                    {getSignalCategory(search.source.sourceType)}
                                 </span>
                             </FieldLabel>
 
@@ -79,7 +80,7 @@ class SavedSearchPopover extends Component {
                         <Heading size="5" className={styles.heading}>
                             Sorting
                         </Heading>
-                        <div>{search.sorting}</div>
+                        <div>{search.sortBy}</div>
                     </Popover>
                 </OverlayTrigger>
                 {isCurrentSearch && (

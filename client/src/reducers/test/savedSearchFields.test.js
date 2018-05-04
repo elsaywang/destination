@@ -30,16 +30,16 @@ describe('searchField reducer', () => {
                     },
                 ],
                 source: {
-                    dataSourceId: 28018,
-                    reportSuiteId: null,
+                    dataSourceIds: 28018,
+                    reportSuiteIds: null,
                     sourceType: 'REALTIME',
-                    dataType: 'Real-Time',
+                    categoryType: 'Real-Time',
                 },
                 minEventFires: 37211,
                 signalStatus: 'USED',
                 startDate: '2018-04-27T03:51:24.565Z',
                 endDate: '2018-04-26T17:36:47.082Z',
-                sorting: 'Key Value Pairs',
+                sortBy: 'Key Value Pairs',
             },
         };
         expect(savedSearchFieldsReucer(initialState, action)).toEqual(action.payload);

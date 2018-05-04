@@ -11,25 +11,25 @@ describe('selected signals reducer', () => {
         });
 
         describe('getSelectedSignalsDataType', () => {
-            it('returns "REALTIME" if all selected signals have the `dataType` "REALTIME"', () => {
+            it('returns "REALTIME" if all selected signals have the `categoryType` "REALTIME"', () => {
                 const state = {
-                    records: [{ dataType: 'REALTIME' }, { dataType: 'REALTIME' }],
+                    records: [{ categoryType: 'REALTIME' }, { categoryType: 'REALTIME' }],
                 };
 
                 expect(getSelectedSignalsDataType(state)).toEqual('REALTIME');
             });
 
-            it('returns "ONBOARDED" if all selected signals have the `dataType` "ONBOARDED"', () => {
+            it('returns "ONBOARDED" if all selected signals have the `categoryType` "ONBOARDED"', () => {
                 const state = {
-                    records: [{ dataType: 'ONBOARDED' }, { dataType: 'ONBOARDED' }],
+                    records: [{ categoryType: 'ONBOARDED' }, { categoryType: 'ONBOARDED' }],
                 };
 
                 expect(getSelectedSignalsDataType(state)).toEqual('ONBOARDED');
             });
 
-            it('returns "REALTIME" by default if some selected signals have the `dataType` "REALTIME" and some have the `dataType` "ONBOARDED"', () => {
+            it('returns "REALTIME" by default if some selected signals have the `categoryType` "REALTIME" and some have the `categoryType` "ONBOARDED"', () => {
                 const state = {
-                    records: [{ dataType: 'REALTIME' }, { dataType: 'ONBOARDED' }],
+                    records: [{ categoryType: 'REALTIME' }, { categoryType: 'ONBOARDED' }],
                 };
 
                 expect(getSelectedSignalsDataType(state)).toEqual('REALTIME');

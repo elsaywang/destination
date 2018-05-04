@@ -8,7 +8,7 @@ const initialState = {
 export default handleActions(
     {
         [POPULATE_SEARCH_FIELDS]: (state, action) => ({ ...action.payload }),
-        [CLEAR_SEARCH_FIELDS]: (state, action) => ({ ...initialState }),
+        [CLEAR_SEARCH_FIELDS]: () => ({ ...initialState }),
     },
     initialState,
 );

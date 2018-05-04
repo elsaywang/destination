@@ -75,7 +75,7 @@ class SignalsTable extends Component {
 
     // TEMP: ALF signals will soon have their own signal type
     isALF(signal) {
-        return isNumeric(signal.source.dataSourceId);
+        return isNumeric(signal.source.dataSourceIds);
     }
 
     formatSignalType(signal) {
@@ -94,24 +94,24 @@ class SignalsTable extends Component {
     }
 
     formatSignalSource(signal) {
-        const { sourceType, dataSourceId, reportSuiteId } = signal.source;
+        const { sourceType, dataSourceIds, reportSuiteIds } = signal.source;
 
         switch (sourceType) {
             case 'ANALYTICS':
-                return reportSuiteId;
+                return reportSuiteIds;
             case 'REALTIME':
                 return '—';
             case 'ONBOARDED':
-                return dataSourceId;
+                return dataSourceIds;
             default:
                 return '—';
         }
     }
 
     formatIncludedInTraits(signal) {
-        const { keyValuePairs, includedInTraits, dataType } = signal;
+        const { keyValuePairs, includedInTraits, categoryType } = signal;
 
-        return { keyValuePairs, sids: includedInTraits, dataType };
+        return { keyValuePairs, sids: includedInTraits, categoryType };
     }
 
     renderKeyValuePairs(keyValuePairs) {
@@ -146,11 +146,11 @@ class SignalsTable extends Component {
     };
 
     renderIncludedInTraits = data => {
-        const { keyValuePairs, sids, dataType } = data;
+        const { keyValuePairs, sids, categoryType } = data;
         const number = sids.length;
 
         if (number === 0) {
-            return <TraitsCreation keyValuePairs={keyValuePairs} dataType={dataType} />;
+            return <TraitsCreation keyValuePairs={keyValuePairs} categoryType={categoryType} />;
         }
 
         return (
