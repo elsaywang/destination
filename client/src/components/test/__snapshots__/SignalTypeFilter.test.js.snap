@@ -42,7 +42,7 @@ ShallowWrapper {
           orientation="vertical"
           quiet={false}
           value="ALL"
-          variant=""
+          variant="compact"
         >
           <Tab
             disabled={false}
@@ -154,7 +154,7 @@ ShallowWrapper {
           "orientation": "vertical",
           "quiet": false,
           "value": "ALL",
-          "variant": "",
+          "variant": "compact",
         },
         "ref": null,
         "rendered": Array [
@@ -258,7 +258,7 @@ ShallowWrapper {
             orientation="vertical"
             quiet={false}
             value="ALL"
-            variant=""
+            variant="compact"
           >
             <Tab
               disabled={false}
@@ -370,7 +370,7 @@ ShallowWrapper {
             "orientation": "vertical",
             "quiet": false,
             "value": "ALL",
-            "variant": "",
+            "variant": "compact",
           },
           "ref": null,
           "rendered": Array [
@@ -508,7 +508,7 @@ ShallowWrapper {
           orientation="vertical"
           quiet={false}
           value="ANALYTICS"
-          variant=""
+          variant="compact"
         >
           <Tab
             disabled={false}
@@ -620,7 +620,7 @@ ShallowWrapper {
           "orientation": "vertical",
           "quiet": false,
           "value": "ANALYTICS",
-          "variant": "",
+          "variant": "compact",
         },
         "ref": null,
         "rendered": Array [
@@ -724,7 +724,7 @@ ShallowWrapper {
             orientation="vertical"
             quiet={false}
             value="ANALYTICS"
-            variant=""
+            variant="compact"
           >
             <Tab
               disabled={false}
@@ -836,7 +836,7 @@ ShallowWrapper {
             "orientation": "vertical",
             "quiet": false,
             "value": "ANALYTICS",
-            "variant": "",
+            "variant": "compact",
           },
           "ref": null,
           "rendered": Array [
@@ -974,7 +974,7 @@ ShallowWrapper {
           orientation="vertical"
           quiet={false}
           value="ANALYTICS"
-          variant=""
+          variant="compact"
         >
           <Tab
             disabled={false}
@@ -1086,7 +1086,7 @@ ShallowWrapper {
           "orientation": "vertical",
           "quiet": false,
           "value": "ANALYTICS",
-          "variant": "",
+          "variant": "compact",
         },
         "ref": null,
         "rendered": Array [
@@ -1190,7 +1190,7 @@ ShallowWrapper {
             orientation="vertical"
             quiet={false}
             value="ANALYTICS"
-            variant=""
+            variant="compact"
           >
             <Tab
               disabled={false}
@@ -1302,7 +1302,7 @@ ShallowWrapper {
             "orientation": "vertical",
             "quiet": false,
             "value": "ANALYTICS",
-            "variant": "",
+            "variant": "compact",
           },
           "ref": null,
           "rendered": Array [

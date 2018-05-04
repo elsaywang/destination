@@ -1,0 +1,7 @@
+:local(.tabList) {
+    margin-bottom: 1.25em;
+    width: 100%;
+}
+:local(.tab) {
+    padding: 0.5em;
+}
