@@ -1,7 +1,7 @@
 const deferred = require('../utils/deferred');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
-const datasourcesResponse = require('../fixtures/reportSuites.json');
+const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
 describe('Saved Search Integration Test', function() {
     beforeEach(function() {
@@ -19,7 +19,7 @@ describe('Saved Search Integration Test', function() {
                     .withArgs('/api/signals/list')
                     .as('fetchSearchResults')
                     .returns(this.fetchSearchResultsDeferred.promise)
-                    .withArgs('/api/v1/datasources/?search=suite')
+                    .withArgs('/api/v1/report-suites')
                     .as('fetchReportSuites')
                     .returns(this.fetchReportSuitesDeferred.promise);
             },
@@ -41,7 +41,7 @@ describe('Saved Search Integration Test', function() {
 
         this.fetchReportSuitesDeferred.resolve({
             json() {
-                return datasourcesResponse.list;
+                return reportSuitesResponse.list;
             },
             ok: true,
         });

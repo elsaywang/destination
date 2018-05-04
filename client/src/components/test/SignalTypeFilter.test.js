@@ -7,7 +7,10 @@ import { getSignalTypeOptions } from '../../constants/signalTypeOptions';
 
 describe('<SignalTypeFilter /> component', () => {
     const mockFn = jest.fn();
-    const initialState = {
+    const props = {
+        signalType: 'ALL',
+    };
+    const state = {
         counts: {
             ALL: 72093,
             ANALYTICS: 34300,
@@ -15,16 +18,11 @@ describe('<SignalTypeFilter /> component', () => {
             REALTIME: 27,
             ONBOARDED: 37407,
         },
-        signalType: 'ALL',
     };
-    let wrapper = shallow(
-        <SignalTypeFilter
-            onSignalTypeChange={mockFn}
-            counts={initialState.counts}
-            signalType={initialState.signalType}
-        />,
+    const wrapper = shallow(
+        <SignalTypeFilter onSignalTypeChange={mockFn} signalType={props.signalType} />,
     );
-    const signalTypeOptions = getSignalTypeOptions(initialState.counts);
+    const signalTypeOptions = getSignalTypeOptions(state.counts);
 
     describe('rendering', () => {
         it('matches snapshot', () => {
@@ -73,7 +71,7 @@ describe('<SignalTypeFilter /> component', () => {
             };
             const newSignalTypeOptions = getSignalTypeOptions(newState.counts);
 
-            wrapper.setProps({
+            wrapper.setState({
                 ...newState,
             });
 

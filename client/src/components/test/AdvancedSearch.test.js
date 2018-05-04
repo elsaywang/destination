@@ -8,20 +8,18 @@ describe('Advanced Search', () => {
     const mockFn = jest.fn();
     const reportSuites = [
         {
-            name: 'datasource-cross-media',
-            integrationCode: '{"suite":"Administrator", "datacenter":"microchip"}',
-            type: 'GENERAL',
-            idType: 'COOKIE',
-            pid: 51083,
-            dataSourceIds: 1696,
+            dataSourceId: 168815,
+            pid: 1194,
+            name: 'Test Report Suite Edited1505153440289',
+            suite: 'test-report-suite-edited1505153440289',
+            datacenter: 'sin',
         },
         {
-            name: 'datasource-impactful',
-            integrationCode: '{"suite":"Representative", "datacenter":"conglomeration"}',
-            type: 'GENERAL',
-            idType: 'COOKIE',
-            pid: 52229,
-            dataSourceIds: 2620,
+            dataSourceId: 169626,
+            pid: 1194,
+            name: 'Test Report Suite Edited1505154745046',
+            suite: 'test-report-suite-edited1505154745046',
+            datacenter: 'sin',
         },
     ];
     const wrapper = shallow(

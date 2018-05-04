@@ -64,15 +64,6 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -147,15 +138,6 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -204,15 +186,6 @@ ShallowWrapper {
           "props": Object {
             "children": <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -259,13 +232,6 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "advanced": false,
-              "counts": Object {
-                "ALF": 359,
-                "ALL": 72093,
-                "ANALYTICS": 34300,
-                "ONBOARDED": 37407,
-                "REALTIME": 27,
-              },
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -411,15 +377,6 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -494,15 +451,6 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -551,15 +499,6 @@ ShallowWrapper {
             "props": Object {
               "children": <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -606,13 +545,6 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "advanced": false,
-                "counts": Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                },
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -829,15 +761,6 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -921,15 +844,6 @@ ShallowWrapper {
             className={undefined}
           >
             <SignalTypeFilter
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               onSignalTypeChange={[Function]}
               signalType={null}
             />
@@ -1022,15 +936,6 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -1079,15 +984,6 @@ ShallowWrapper {
           "props": Object {
             "children": <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -1134,13 +1030,6 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "advanced": false,
-              "counts": Object {
-                "ALF": 359,
-                "ALL": 72093,
-                "ANALYTICS": 34300,
-                "ONBOARDED": 37407,
-                "REALTIME": 27,
-              },
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -1345,15 +1234,6 @@ ShallowWrapper {
               className={undefined}
             >
               <SignalTypeFilter
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 onSignalTypeChange={[Function]}
                 signalType={null}
               />
@@ -1445,15 +1325,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <SignalTypeFilter
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 onSignalTypeChange={[Function]}
                 signalType={null}
               />,
@@ -1465,13 +1336,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "counts": Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                },
                 "onSignalTypeChange": [Function],
                 "signalType": null,
               },
@@ -1856,15 +1720,6 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -1948,15 +1803,6 @@ ShallowWrapper {
               className={undefined}
             >
               <SignalTypeFilter
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 onSignalTypeChange={[Function]}
                 signalType={null}
               />
@@ -2049,15 +1895,6 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -2106,15 +1943,6 @@ ShallowWrapper {
             "props": Object {
               "children": <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -2161,13 +1989,6 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "advanced": false,
-                "counts": Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                },
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -2372,15 +2193,6 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SignalTypeFilter
-                  counts={
-                    Object {
-                      "ALF": 359,
-                      "ALL": 72093,
-                      "ANALYTICS": 34300,
-                      "ONBOARDED": 37407,
-                      "REALTIME": 27,
-                    }
-                  }
                   onSignalTypeChange={[Function]}
                   signalType={null}
                 />
@@ -2472,15 +2284,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <SignalTypeFilter
-                  counts={
-                    Object {
-                      "ALF": 359,
-                      "ALL": 72093,
-                      "ANALYTICS": 34300,
-                      "ONBOARDED": 37407,
-                      "REALTIME": 27,
-                    }
-                  }
                   onSignalTypeChange={[Function]}
                   signalType={null}
                 />,
@@ -2492,13 +2295,6 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "counts": Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  },
                   "onSignalTypeChange": [Function],
                   "signalType": null,
                 },
@@ -2954,15 +2750,6 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -3046,15 +2833,6 @@ ShallowWrapper {
             className={undefined}
           >
             <SignalTypeFilter
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               onSignalTypeChange={[Function]}
               signalType={null}
             />
@@ -3147,15 +2925,6 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -3204,15 +2973,6 @@ ShallowWrapper {
           "props": Object {
             "children": <Search
               advanced={false}
-              counts={
-                Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                }
-              }
               keyValuePairs={
                 Array [
                   Object {
@@ -3259,13 +3019,6 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "advanced": false,
-              "counts": Object {
-                "ALF": 359,
-                "ALL": 72093,
-                "ANALYTICS": 34300,
-                "ONBOARDED": 37407,
-                "REALTIME": 27,
-              },
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -3470,15 +3223,6 @@ ShallowWrapper {
               className={undefined}
             >
               <SignalTypeFilter
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 onSignalTypeChange={[Function]}
                 signalType={null}
               />
@@ -3570,15 +3314,6 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <SignalTypeFilter
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 onSignalTypeChange={[Function]}
                 signalType={null}
               />,
@@ -3590,13 +3325,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "counts": Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                },
                 "onSignalTypeChange": [Function],
                 "signalType": null,
               },
@@ -3981,15 +3709,6 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -4073,15 +3792,6 @@ ShallowWrapper {
               className={undefined}
             >
               <SignalTypeFilter
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 onSignalTypeChange={[Function]}
                 signalType={null}
               />
@@ -4174,15 +3884,6 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -4231,15 +3932,6 @@ ShallowWrapper {
             "props": Object {
               "children": <Search
                 advanced={false}
-                counts={
-                  Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  }
-                }
                 keyValuePairs={
                   Array [
                     Object {
@@ -4286,13 +3978,6 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "advanced": false,
-                "counts": Object {
-                  "ALF": 359,
-                  "ALL": 72093,
-                  "ANALYTICS": 34300,
-                  "ONBOARDED": 37407,
-                  "REALTIME": 27,
-                },
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -4497,15 +4182,6 @@ ShallowWrapper {
                 className={undefined}
               >
                 <SignalTypeFilter
-                  counts={
-                    Object {
-                      "ALF": 359,
-                      "ALL": 72093,
-                      "ANALYTICS": 34300,
-                      "ONBOARDED": 37407,
-                      "REALTIME": 27,
-                    }
-                  }
                   onSignalTypeChange={[Function]}
                   signalType={null}
                 />
@@ -4597,15 +4273,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <SignalTypeFilter
-                  counts={
-                    Object {
-                      "ALF": 359,
-                      "ALL": 72093,
-                      "ANALYTICS": 34300,
-                      "ONBOARDED": 37407,
-                      "REALTIME": 27,
-                    }
-                  }
                   onSignalTypeChange={[Function]}
                   signalType={null}
                 />,
@@ -4617,13 +4284,6 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "counts": Object {
-                    "ALF": 359,
-                    "ALL": 72093,
-                    "ANALYTICS": 34300,
-                    "ONBOARDED": 37407,
-                    "REALTIME": 27,
-                  },
                   "onSignalTypeChange": [Function],
                   "signalType": null,
                 },

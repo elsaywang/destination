@@ -11,20 +11,18 @@ ShallowWrapper {
     reportSuites={
       Array [
         Object {
-          "dataSourceIds": 1696,
-          "idType": "COOKIE",
-          "integrationCode": "{\\"suite\\":\\"Administrator\\", \\"datacenter\\":\\"microchip\\"}",
-          "name": "datasource-cross-media",
-          "pid": 51083,
-          "type": "GENERAL",
+          "dataSourceId": 168815,
+          "datacenter": "sin",
+          "name": "Test Report Suite Edited1505153440289",
+          "pid": 1194,
+          "suite": "test-report-suite-edited1505153440289",
         },
         Object {
-          "dataSourceIds": 2620,
-          "idType": "COOKIE",
-          "integrationCode": "{\\"suite\\":\\"Representative\\", \\"datacenter\\":\\"conglomeration\\"}",
-          "name": "datasource-impactful",
-          "pid": 52229,
-          "type": "GENERAL",
+          "dataSourceId": 169626,
+          "datacenter": "sin",
+          "name": "Test Report Suite Edited1505154745046",
+          "pid": 1194,
+          "suite": "test-report-suite-edited1505154745046",
         },
       ]
     }
@@ -59,8 +57,8 @@ ShallowWrapper {
           onSelect={[Function]}
           options={
             Array [
-              "datasource-cross-media",
-              "datasource-impactful",
+              "Test Report Suite Edited1505153440289",
+              "Test Report Suite Edited1505154745046",
             ]
           }
           placeholder="Filter by report suite"
@@ -100,8 +98,8 @@ ShallowWrapper {
           "onChange": [MockFunction],
           "onSelect": [Function],
           "options": Array [
-            "datasource-cross-media",
-            "datasource-impactful",
+            "Test Report Suite Edited1505153440289",
+            "Test Report Suite Edited1505154745046",
           ],
           "placeholder": "Filter by report suite",
           "quiet": true,
@@ -138,8 +136,8 @@ ShallowWrapper {
             onSelect={[Function]}
             options={
               Array [
-                "datasource-cross-media",
-                "datasource-impactful",
+                "Test Report Suite Edited1505153440289",
+                "Test Report Suite Edited1505154745046",
               ]
             }
             placeholder="Filter by report suite"
@@ -179,8 +177,8 @@ ShallowWrapper {
             "onChange": [MockFunction],
             "onSelect": [Function],
             "options": Array [
-              "datasource-cross-media",
-              "datasource-impactful",
+              "Test Report Suite Edited1505153440289",
+              "Test Report Suite Edited1505154745046",
             ],
             "placeholder": "Filter by report suite",
             "quiet": true,

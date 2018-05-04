@@ -41,22 +41,11 @@ class SearchContainer extends Component {
             },
             viewRecordsFor: 7,
             minEventFires: 1000,
-            // TODO: counts should be extracted to redux and come through props
-            counts: {
-                ALL: 72093,
-                ANALYTICS: 34300,
-                ALF: 359,
-                REALTIME: 27,
-                ONBOARDED: 37407,
-            },
         };
     }
 
     componentDidMount() {
         this.props.getReportSuites();
-
-        // TODO: API call to getCounts and set state
-
         // Pre-populate search fields if user clicked view more button in dashboard
         this.setState({ ...this.state, ...this.props.savedSearchFields });
         //if user does not click any view more button in the dashboard, reset the carried over search results from dashboard
@@ -104,13 +93,12 @@ class SearchContainer extends Component {
         const matchingReportSuite = this.props.reportSuites.find(
             reportSuite => reportSuite.name === value,
         );
-        const reportSuiteIds = JSON.parse(matchingReportSuite.integrationCode).suite;
 
         this.setState({
             source: {
                 name: value,
                 dataSourceIds: [matchingReportSuite.dataSourceId],
-                reportSuiteIds: [reportSuiteIds],
+                reportSuiteIds: [matchingReportSuite.suite],
                 sourceType: 'ANALYTICS',
             },
         });
@@ -206,7 +194,6 @@ class SearchContainer extends Component {
         const thisSearchWithKeyValuePairs = {
             id: maxId + 1,
             ...this.state,
-            counts: undefined, // TODO: counts should be extracted to redux and come through props, this will eliminate the need to reset here
             ...thisSearch,
         };
         const newSavedSearch = [...savedSearch, thisSearchWithKeyValuePairs];
@@ -305,7 +292,6 @@ class SearchContainer extends Component {
                     <div style={{ display: 'flex', marginTop: 20 }}>
                         <div className={styles.filterListContainer}>
                             <SignalTypeFilter
-                                counts={this.state.counts}
                                 onSignalTypeChange={this.handleSignalTypeChange}
                                 signalType={this.state.source.sourceType}
                             />

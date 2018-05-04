@@ -6,20 +6,28 @@ import styles from './SignalTypeFilter.css';
 import { getSignalTypeOptions } from '../constants/signalTypeOptions';
 
 class SignalTypeFilter extends Component {
+    state = {
+        counts: {
+            ALL: 72093,
+            ANALYTICS: 34300,
+            ALF: 359,
+            REALTIME: 27,
+            ONBOARDED: 37407,
+        },
+    };
+
     handleSignalTypeChange = tabIndex => {
-        const { counts, onSignalTypeChange } = this.props;
-        const signalTypeOptions = getSignalTypeOptions(counts);
+        const signalTypeOptions = getSignalTypeOptions(this.state.counts);
         const { value } = signalTypeOptions[tabIndex];
 
-        onSignalTypeChange(value);
+        this.props.onSignalTypeChange(value);
     };
 
     renderTabs = () => {
-        const { counts, signalType } = this.props;
-        const signalTypeOptions = getSignalTypeOptions(counts);
+        const signalTypeOptions = getSignalTypeOptions(this.state.counts);
 
         return signalTypeOptions.map(option => (
-            <Tab key={option.value} selected={signalType === option.value}>
+            <Tab key={option.value} selected={this.props.signalType === option.value}>
                 {option.label}
             </Tab>
         ));

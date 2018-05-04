@@ -1,6 +1,6 @@
 const deferred = require('../utils/deferred');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
-const datasourcesResponse = require('../fixtures/reportSuites.json');
+const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
 describe('Search Form Integration Tests', function() {
     before(function() {
@@ -14,7 +14,7 @@ describe('Search Form Integration Tests', function() {
                     .withArgs('/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
                     .returns(this.fetchSavedSearchDeferred.promise)
-                    .withArgs('/api/v1/datasources/?search=suite')
+                    .withArgs('/api/v1/report-suites')
                     .as('fetchReportSuites')
                     .returns(this.fetchReportSuitesDeferred.promise);
             },
@@ -29,7 +29,7 @@ describe('Search Form Integration Tests', function() {
 
         this.fetchReportSuitesDeferred.resolve({
             json() {
-                return datasourcesResponse.list;
+                return reportSuitesResponse.list;
             },
             ok: true,
         });
@@ -53,7 +53,7 @@ describe('Search Form Integration Tests', function() {
         it('should allow you to type a report suite name and press enter on list of suggestions', function() {
             cy
                 .get('@advancedFilter')
-                .type('da{enter}')
+                .type('re{enter}')
                 .then(function($text) {
                     cy.get('@advancedFilter').should(function($filter) {
                         expect($filter.val()).to.contains($text.val());
@@ -65,7 +65,6 @@ describe('Search Form Integration Tests', function() {
             cy
                 .get('@advancedFilter')
                 .siblings('button')
-                .get('[role=option]:last')
                 .click()
                 .then(function($text) {
                     cy.get('@advancedFilter').should(function($filter) {

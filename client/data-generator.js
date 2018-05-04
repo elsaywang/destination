@@ -26,7 +26,7 @@ module.exports = () => {
         list: {},
         traits: [],
         keys: [],
-        datasources: [],
+        reportSuites: [],
     };
 
     const randomGenerateArray = (item, max = 5) => {
@@ -39,14 +39,13 @@ module.exports = () => {
         return array;
     };
 
-    class Datasource {
+    class ReportSuite {
         constructor() {
-            this.name = 'datasource-' + faker.random.word();
-            this.integrationCode = `{"suite":"${faker.random.word()}", "datacenter":"${faker.random.word()}"}`;
-            this.type = 'GENERAL';
-            this.idType = 'COOKIE';
-            this.pid = faker.random.number();
-            this.dataSourceIds = faker.random.number();
+            this.name = 'Test Suite ' + faker.random.word();
+            this.suite = 'test-suite-' + faker.random.word();
+            this.datacenter = 'sin';
+            this.pid = 1194;
+            this.dataSourceId = faker.random.number();
         }
     }
 
@@ -141,8 +140,8 @@ module.exports = () => {
     // Create 20 keys and datasources
     for (let i = 0; i < 20; i++) {
         data.keys.push('k-' + faker.name.findName());
-        data.datasources.push({
-            ...new Datasource(),
+        data.reportSuites.push({
+            ...new ReportSuite(),
         });
     }
 

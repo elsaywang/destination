@@ -19,7 +19,7 @@ describe('when Search button is clicked', function() {
                     .withArgs('/api/signals/list')
                     .as('fetchSearchResults')
                     .returns(this.fetchSearchResultsDeferred.promise)
-                    .withArgs('/api/v1/datasources/?search=suite')
+                    .withArgs('/api/v1/report-suites')
                     .as('fetchReportSuites')
                     .returns(this.fetchReportSuitesDeferred.promise);
             },
