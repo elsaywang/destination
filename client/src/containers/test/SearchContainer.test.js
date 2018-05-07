@@ -113,7 +113,7 @@ describe('<SearchContainer /> component', () => {
                 dataSourceIds: [],
                 reportSuiteIds: [],
             },
-            viewRecordsFor: 7,
+            viewRecordsFor: '7D',
             minEventFires: 1000,
             counts: {
                 ALL: 72093,
@@ -240,7 +240,7 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').sourceType).toEqual(null);
             expect(wrapper.state('source').reportSuiteIds).toEqual([]);
             expect(wrapper.state('source').dataSourceIds).toEqual([]);
-            expect(wrapper.state('viewRecordsFor')).toEqual(7);
+            expect(wrapper.state('viewRecordsFor')).toEqual('7D');
             expect(wrapper.state('minEventFires')).toEqual(1000);
         });
 

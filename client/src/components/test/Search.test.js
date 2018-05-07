@@ -29,7 +29,7 @@ describe('<Search /> component', () => {
             reportSuiteIds: 0,
             sourceType: 'ALL',
         },
-        viewRecordsFor: 7,
+        viewRecordsFor: '7D',
         customStartDate: '04-24-2018',
         customEndDate: '05-01-2018',
         minEventFires: 1000,
