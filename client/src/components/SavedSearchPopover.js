@@ -64,7 +64,7 @@ class SavedSearchPopover extends Component {
                                 </span>
                             </FieldLabel>
 
-                            <FieldLabel position="left" label="Signal Source">
+                            <FieldLabel position="left" label="Signal Type">
                                 <span style={{ verticalAlign: 'bottom' }}>
                                     {getSignalTypeLabel(search.source.sourceType)}
                                 </span>
