@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { GridColumn, GridRow } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
+import Datepicker from '@react/react-spectrum/Datepicker';
 import Select from '@react/react-spectrum/Select';
 import NumberInput from '@react/react-spectrum/NumberInput';
 import AddCircle from '@react/react-spectrum/Icon/AddCircle';
@@ -66,6 +67,36 @@ class Search extends Component {
         );
     };
 
+    renderCustomDatepickers = () => {
+        if (!this.props.isCustomDateRangeEnabled) {
+            return null;
+        }
+
+        return (
+            <Fragment>
+                <Label value="Start Date">
+                    <Datepicker
+                        className="custom-start-date"
+                        data-test="custom-start-date"
+                        value={this.props.customStartDate}
+                        onChange={this.props.onCustomStartDateChange}
+                        quiet
+                    />
+                </Label>
+
+                <Label value="End Date">
+                    <Datepicker
+                        className="custom-end-date"
+                        data-test="custom-end-date"
+                        value={this.props.customEndDate}
+                        onChange={this.props.onCustomEndDateChange}
+                        quiet
+                    />
+                </Label>
+            </Fragment>
+        );
+    };
+
     renderCTAs = () => (
         <GridColumn size={3}>
             <Button
@@ -126,6 +157,8 @@ class Search extends Component {
                                                     quiet
                                                 />
                                             </Label>
+
+                                            {this.renderCustomDatepickers()}
 
                                             <Label value="Minimum Counts">
                                                 <NumberInput

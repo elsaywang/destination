@@ -1,4 +1,5 @@
 import React from 'react';
+import mockdate from 'mockdate';
 import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
 import SearchContainer from '../SearchContainer';
@@ -10,6 +11,8 @@ import SaveSearchExecution from '../../components/SaveSearchExecution';
 import configureStore from '../../configureStore';
 
 describe('<SearchContainer /> component', () => {
+    mockdate.set(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
+
     const store = configureStore();
     const wrapper = shallow(
         <Provider store={store}>
@@ -249,4 +252,6 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').sourceType).toBe(newSignalType);
         });
     });
+
+    mockdate.reset();
 });

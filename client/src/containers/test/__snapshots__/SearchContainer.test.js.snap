@@ -64,6 +64,9 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -79,6 +82,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -138,6 +143,9 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -153,6 +161,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -186,6 +196,9 @@ ShallowWrapper {
           "props": Object {
             "children": <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -201,6 +214,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -232,6 +247,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "advanced": false,
+              "customEndDate": "2018-05-01",
+              "customStartDate": "2018-04-24",
+              "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -245,6 +263,8 @@ ShallowWrapper {
               "onAddClick": [Function],
               "onAdvancedSearchChange": [Function],
               "onClearAll": [Function],
+              "onCustomEndDateChange": [Function],
+              "onCustomStartDateChange": [Function],
               "onFilterChange": [Function],
               "onFilterSelect": [Function],
               "onKeySelect": [Function],
@@ -377,6 +397,9 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -392,6 +415,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -451,6 +476,9 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -466,6 +494,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -499,6 +529,9 @@ ShallowWrapper {
             "props": Object {
               "children": <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -514,6 +547,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -545,6 +580,9 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "advanced": false,
+                "customEndDate": "2018-05-01",
+                "customStartDate": "2018-04-24",
+                "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -558,6 +596,8 @@ ShallowWrapper {
                 "onAddClick": [Function],
                 "onAdvancedSearchChange": [Function],
                 "onClearAll": [Function],
+                "onCustomEndDateChange": [Function],
+                "onCustomStartDateChange": [Function],
                 "onFilterChange": [Function],
                 "onFilterSelect": [Function],
                 "onKeySelect": [Function],
@@ -761,6 +801,9 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -776,6 +819,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -936,6 +981,9 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -951,6 +999,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -984,6 +1034,9 @@ ShallowWrapper {
           "props": Object {
             "children": <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -999,6 +1052,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -1030,6 +1085,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "advanced": false,
+              "customEndDate": "2018-05-01",
+              "customStartDate": "2018-04-24",
+              "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -1043,6 +1101,8 @@ ShallowWrapper {
               "onAddClick": [Function],
               "onAdvancedSearchChange": [Function],
               "onClearAll": [Function],
+              "onCustomEndDateChange": [Function],
+              "onCustomStartDateChange": [Function],
               "onFilterChange": [Function],
               "onFilterSelect": [Function],
               "onKeySelect": [Function],
@@ -1720,6 +1780,9 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -1735,6 +1798,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -1895,6 +1960,9 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -1910,6 +1978,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -1943,6 +2013,9 @@ ShallowWrapper {
             "props": Object {
               "children": <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -1958,6 +2031,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -1989,6 +2064,9 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "advanced": false,
+                "customEndDate": "2018-05-01",
+                "customStartDate": "2018-04-24",
+                "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -2002,6 +2080,8 @@ ShallowWrapper {
                 "onAddClick": [Function],
                 "onAdvancedSearchChange": [Function],
                 "onClearAll": [Function],
+                "onCustomEndDateChange": [Function],
+                "onCustomStartDateChange": [Function],
                 "onFilterChange": [Function],
                 "onFilterSelect": [Function],
                 "onKeySelect": [Function],
@@ -2750,6 +2830,9 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -2765,6 +2848,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -2925,6 +3010,9 @@ ShallowWrapper {
           >
             <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -2940,6 +3028,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -2973,6 +3063,9 @@ ShallowWrapper {
           "props": Object {
             "children": <Search
               advanced={false}
+              customEndDate="2018-05-01"
+              customStartDate="2018-04-24"
+              isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
                   Object {
@@ -2988,6 +3081,8 @@ ShallowWrapper {
               onAddClick={[Function]}
               onAdvancedSearchChange={[Function]}
               onClearAll={[Function]}
+              onCustomEndDateChange={[Function]}
+              onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
               onKeySelect={[Function]}
@@ -3019,6 +3114,9 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "advanced": false,
+              "customEndDate": "2018-05-01",
+              "customStartDate": "2018-04-24",
+              "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -3032,6 +3130,8 @@ ShallowWrapper {
               "onAddClick": [Function],
               "onAdvancedSearchChange": [Function],
               "onClearAll": [Function],
+              "onCustomEndDateChange": [Function],
+              "onCustomStartDateChange": [Function],
               "onFilterChange": [Function],
               "onFilterSelect": [Function],
               "onKeySelect": [Function],
@@ -3709,6 +3809,9 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -3724,6 +3827,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -3884,6 +3989,9 @@ ShallowWrapper {
             >
               <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -3899,6 +4007,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -3932,6 +4042,9 @@ ShallowWrapper {
             "props": Object {
               "children": <Search
                 advanced={false}
+                customEndDate="2018-05-01"
+                customStartDate="2018-04-24"
+                isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
                     Object {
@@ -3947,6 +4060,8 @@ ShallowWrapper {
                 onAddClick={[Function]}
                 onAdvancedSearchChange={[Function]}
                 onClearAll={[Function]}
+                onCustomEndDateChange={[Function]}
+                onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
                 onKeySelect={[Function]}
@@ -3978,6 +4093,9 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "advanced": false,
+                "customEndDate": "2018-05-01",
+                "customStartDate": "2018-04-24",
+                "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
@@ -3991,6 +4109,8 @@ ShallowWrapper {
                 "onAddClick": [Function],
                 "onAdvancedSearchChange": [Function],
                 "onClearAll": [Function],
+                "onCustomEndDateChange": [Function],
+                "onCustomStartDateChange": [Function],
                 "onFilterChange": [Function],
                 "onFilterSelect": [Function],
                 "onKeySelect": [Function],

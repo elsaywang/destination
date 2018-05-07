@@ -4,6 +4,7 @@ import Search from '../Search';
 import AdvancedSearch from '../AdvancedSearch';
 import KeyValuePair from '../KeyValuePair';
 import Button from '@react/react-spectrum/Button';
+import Datepicker from '@react/react-spectrum/Datepicker';
 import Select from '@react/react-spectrum/Select';
 import signalStatuses from '../../constants/signalStatusOptions';
 import dateRangeOptions from '../../constants/dateRangeOptions';
@@ -29,6 +30,8 @@ describe('<Search /> component', () => {
             sourceType: 'ALL',
         },
         viewRecordsFor: 7,
+        customStartDate: '04-24-2018',
+        customEndDate: '05-01-2018',
         minEventFires: 1000,
     };
     const mockFn = jest.fn();
@@ -43,9 +46,12 @@ describe('<Search /> component', () => {
             onRemoveClick={mockFn}
             onSignalStatusChange={mockFn}
             onViewRecordsChange={mockFn}
+            onCustomStartDateChange={mockFn}
+            onCustomEndDateChange={mockFn}
             onMinEventFiresChange={mockFn}
             onSearch={mockFn}
             onClearAll={mockFn}
+            isCustomDateRangeEnabled={false}
         />,
     );
 
@@ -117,22 +123,7 @@ describe('<Search /> component', () => {
                 ],
             };
 
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    onAdvancedSearchChange={mockFn}
-                    onKeySelect={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onSignalStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinEventFiresChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(
                 newWrapper.find(Button).someWhere(button => button.props().label === 'Add'),
@@ -157,22 +148,7 @@ describe('<Search /> component', () => {
                 ],
             };
 
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    onAdvancedSearchChange={mockFn}
-                    onKeySelect={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onSignalStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinEventFiresChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(
                 newWrapper.find(Button).someWhere(button => button.props().label === 'Remove'),
@@ -198,22 +174,7 @@ describe('<Search /> component', () => {
                 ],
             };
 
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    onAdvancedSearchChange={mockFn}
-                    onKeySelect={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onSignalStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinEventFiresChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(newWrapper.find('[data-test="search-button"]').is('[disabled]')).toBe(true);
         });
@@ -222,6 +183,16 @@ describe('<Search /> component', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Clear All'),
             ).toBe(true);
+        });
+
+        it('does not render custom start and end datepickers by default, when "Custom Date Range" is not selected', () => {
+            expect(wrapper.find(Datepicker).length).toEqual(0);
+        });
+
+        it('renders custom start and end datepickers when the `isCustomDateRangeEnabled` prop is true', () => {
+            const newWrapper = shallow(<Search {...state} isCustomDateRangeEnabled={true} />);
+
+            expect(newWrapper.find(Datepicker).length).toEqual(2);
         });
     });
 });

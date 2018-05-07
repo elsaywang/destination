@@ -6,6 +6,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Search
     advanced={false}
+    customEndDate="05-01-2018"
+    customStartDate="04-24-2018"
+    isCustomDateRangeEnabled={false}
     keyValuePairs={
       Array [
         Object {
@@ -21,6 +24,8 @@ ShallowWrapper {
     onAddClick={[MockFunction]}
     onAdvancedSearchChange={[MockFunction]}
     onClearAll={[MockFunction]}
+    onCustomEndDateChange={[MockFunction]}
+    onCustomStartDateChange={[MockFunction]}
     onKeySelect={[MockFunction]}
     onMinEventFiresChange={[MockFunction]}
     onOperatorChange={[MockFunction]}
@@ -174,7 +179,7 @@ ShallowWrapper {
                               "value": 30,
                             },
                             Object {
-                              "label": "Custom",
+                              "label": "Custom Date Range",
                               "value": "custom",
                             },
                           ]
@@ -367,7 +372,7 @@ ShallowWrapper {
                               "value": 30,
                             },
                             Object {
-                              "label": "Custom",
+                              "label": "Custom Date Range",
                               "value": "custom",
                             },
                           ]
@@ -558,7 +563,7 @@ ShallowWrapper {
                               "value": 30,
                             },
                             Object {
-                              "label": "Custom",
+                              "label": "Custom Date Range",
                               "value": "custom",
                             },
                           ]
@@ -745,7 +750,7 @@ ShallowWrapper {
                                 "value": 30,
                               },
                               Object {
-                                "label": "Custom",
+                                "label": "Custom Date Range",
                                 "value": "custom",
                               },
                             ]
@@ -938,7 +943,7 @@ ShallowWrapper {
                                 "value": 30,
                               },
                               Object {
-                                "label": "Custom",
+                                "label": "Custom Date Range",
                                 "value": "custom",
                               },
                             ]
@@ -1112,7 +1117,7 @@ ShallowWrapper {
                                   "value": 30,
                                 },
                                 Object {
-                                  "label": "Custom",
+                                  "label": "Custom Date Range",
                                   "value": "custom",
                                 },
                               ]
@@ -1387,7 +1392,7 @@ ShallowWrapper {
                                     "value": 30,
                                   },
                                   Object {
-                                    "label": "Custom",
+                                    "label": "Custom Date Range",
                                     "value": "custom",
                                   },
                                 ]
@@ -1512,7 +1517,7 @@ ShallowWrapper {
                                       "value": 30,
                                     },
                                     Object {
-                                      "label": "Custom",
+                                      "label": "Custom Date Range",
                                       "value": "custom",
                                     },
                                   ]
@@ -1521,6 +1526,7 @@ ShallowWrapper {
                                 value={7}
                               />
                             </Label>,
+                            null,
                             <Label
                               value="Minimum Counts"
                             >
@@ -1634,7 +1640,7 @@ ShallowWrapper {
                                       "value": 30,
                                     },
                                     Object {
-                                      "label": "Custom",
+                                      "label": "Custom Date Range",
                                       "value": "custom",
                                     },
                                   ]
@@ -1671,7 +1677,7 @@ ShallowWrapper {
                                     "value": 30,
                                   },
                                   Object {
-                                    "label": "Custom",
+                                    "label": "Custom Date Range",
                                     "value": "custom",
                                   },
                                 ],
@@ -1684,6 +1690,7 @@ ShallowWrapper {
                             },
                             "type": [Function],
                           },
+                          null,
                           Object {
                             "instance": null,
                             "key": undefined,
@@ -1964,7 +1971,7 @@ ShallowWrapper {
                                 "value": 30,
                               },
                               Object {
-                                "label": "Custom",
+                                "label": "Custom Date Range",
                                 "value": "custom",
                               },
                             ]
@@ -2157,7 +2164,7 @@ ShallowWrapper {
                                 "value": 30,
                               },
                               Object {
-                                "label": "Custom",
+                                "label": "Custom Date Range",
                                 "value": "custom",
                               },
                             ]
@@ -2348,7 +2355,7 @@ ShallowWrapper {
                                 "value": 30,
                               },
                               Object {
-                                "label": "Custom",
+                                "label": "Custom Date Range",
                                 "value": "custom",
                               },
                             ]
@@ -2535,7 +2542,7 @@ ShallowWrapper {
                                   "value": 30,
                                 },
                                 Object {
-                                  "label": "Custom",
+                                  "label": "Custom Date Range",
                                   "value": "custom",
                                 },
                               ]
@@ -2728,7 +2735,7 @@ ShallowWrapper {
                                   "value": 30,
                                 },
                                 Object {
-                                  "label": "Custom",
+                                  "label": "Custom Date Range",
                                   "value": "custom",
                                 },
                               ]
@@ -2902,7 +2909,7 @@ ShallowWrapper {
                                     "value": 30,
                                   },
                                   Object {
-                                    "label": "Custom",
+                                    "label": "Custom Date Range",
                                     "value": "custom",
                                   },
                                 ]
@@ -3177,7 +3184,7 @@ ShallowWrapper {
                                       "value": 30,
                                     },
                                     Object {
-                                      "label": "Custom",
+                                      "label": "Custom Date Range",
                                       "value": "custom",
                                     },
                                   ]
@@ -3302,7 +3309,7 @@ ShallowWrapper {
                                         "value": 30,
                                       },
                                       Object {
-                                        "label": "Custom",
+                                        "label": "Custom Date Range",
                                         "value": "custom",
                                       },
                                     ]
@@ -3311,6 +3318,7 @@ ShallowWrapper {
                                   value={7}
                                 />
                               </Label>,
+                              null,
                               <Label
                                 value="Minimum Counts"
                               >
@@ -3424,7 +3432,7 @@ ShallowWrapper {
                                         "value": 30,
                                       },
                                       Object {
-                                        "label": "Custom",
+                                        "label": "Custom Date Range",
                                         "value": "custom",
                                       },
                                     ]
@@ -3461,7 +3469,7 @@ ShallowWrapper {
                                       "value": 30,
                                     },
                                     Object {
-                                      "label": "Custom",
+                                      "label": "Custom Date Range",
                                       "value": "custom",
                                     },
                                   ],
@@ -3474,6 +3482,7 @@ ShallowWrapper {
                               },
                               "type": [Function],
                             },
+                            null,
                             Object {
                               "instance": null,
                               "key": undefined,

@@ -15,6 +15,7 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
+import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
@@ -40,6 +41,8 @@ class SearchContainer extends Component {
                 sourceType: null,
             },
             viewRecordsFor: 7,
+            customStartDate: getDefaultCustomStartDate(),
+            customEndDate: getDefaultCustomEndDate(),
             minEventFires: 1000,
         };
     }
@@ -157,15 +160,21 @@ class SearchContainer extends Component {
     };
 
     onViewRecordsChange = value => {
-        if (value === 'custom') {
-            // AAM-34805
-            // invoke custom date picker
-            // set state to custom date range
-        } else {
-            this.setState({
-                viewRecordsFor: value,
-            });
-        }
+        this.setState({
+            viewRecordsFor: value,
+        });
+    };
+
+    onCustomStartDateChange = value => {
+        this.setState({
+            customStartDate: value,
+        });
+    };
+
+    onCustomEndDateChange = value => {
+        this.setState({
+            customEndDate: value,
+        });
     };
 
     onMinEventFiresChange = value => {
@@ -231,9 +240,13 @@ class SearchContainer extends Component {
                 sourceType: null,
             },
             viewRecordsFor: 7,
+            customStartDate: getDefaultCustomStartDate(),
+            customEndDate: getDefaultCustomEndDate(),
             minEventFires: 1000,
         });
     };
+
+    isCustomDateRangeEnabled = () => this.state.viewRecordsFor === 'custom';
 
     render() {
         return (
@@ -253,9 +266,12 @@ class SearchContainer extends Component {
                             onRemoveClick={this.onRemoveClick}
                             onSignalStatusChange={this.onSignalStatusChange}
                             onViewRecordsChange={this.onViewRecordsChange}
+                            onCustomStartDateChange={this.onCustomStartDateChange}
+                            onCustomEndDateChange={this.onCustomEndDateChange}
                             onMinEventFiresChange={this.onMinEventFiresChange}
                             onSearch={this.onSearch}
                             onClearAll={this.onClearAll}
+                            isCustomDateRangeEnabled={this.isCustomDateRangeEnabled()}
                         />
                     </GridColumn>
                 </GridRow>
