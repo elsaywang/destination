@@ -1,19 +1,31 @@
 import { stringifySignal } from './stringifySignals';
+import { getDaysAgoTimestamp } from './dateRange';
+
+const normalizeStartDate = ({ viewRecordsFor, customStartDate }) =>
+    getDaysAgoTimestamp(viewRecordsFor === 'custom' ? customStartDate : viewRecordsFor);
+
+const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
+    viewRecordsFor === 'custom' ? getDaysAgoTimestamp(customEndDate) : null;
+
+const normalizeSourceType = ({ source }) => (source.sourceType === 'ALL' ? '' : source.sourceType);
+
+const normalizeDataSourceIds = ({ advanced, source }) =>
+    advanced && source.dataSourceIds ? source.dataSourceIds : 0;
+
+const normalizeReportSuiteIds = ({ advanced, source }) =>
+    advanced && source.reportSuiteIds ? source.reportSuiteIds : '';
 
 export const normalizeSearch = search => ({
     search: stringifySignal(search),
     pageSize: 0,
     pid: 0,
     page: 0,
-    // TODO: use utils to calculate startDate/endDate
-    startDate: 0,
-    endDate: 0,
+    startDate: normalizeStartDate(search),
+    endDate: normalizeEndDate(search),
     source: {
-        sourceType: search.source.sourceType === 'ALL' ? '' : search.source.sourceType,
-        dataSourceIds:
-            search.advanced && search.source.dataSourceIds ? search.source.dataSourceIds : 0,
-        reportSuiteIds:
-            search.advanced && search.source.reportSuiteIds ? search.source.reportSuiteIds : '',
+        sourceType: normalizeSourceType(search),
+        dataSourceIds: normalizeDataSourceIds(search),
+        reportSuiteIds: normalizeReportSuiteIds(search),
     },
     signalStatus: search.signalStatus,
     minEventFires: search.minEventFires,
