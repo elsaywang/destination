@@ -45,7 +45,7 @@ class DashboardContainer extends Component {
                                         <GridRow>
                                             <GridColumn size={2} offsetSize={10}>
                                                 <Button
-                                                    label="View More"
+                                                    label="View All"
                                                     variant="primary"
                                                     element="a"
                                                     href="#/search"

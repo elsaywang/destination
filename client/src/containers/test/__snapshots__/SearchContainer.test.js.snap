@@ -123,7 +123,26 @@ ShallowWrapper {
             </div>
           </GridColumn>
         </GridRow>,
-        false,
+        <GridRow
+          reverse={false}
+        >
+          <GridColumn
+            offsetSize={5}
+            size={7}
+          >
+            <Empty
+              className={undefined}
+              message="Enter some queries to start a search."
+              title="Start exploring."
+            >
+              <img
+                alt="Start exploring"
+                className={undefined}
+                src="explore.svg"
+              />
+            </Empty>
+          </GridColumn>
+        </GridRow>,
       ],
     },
     "ref": null,
@@ -358,7 +377,84 @@ ShallowWrapper {
         },
         "type": [Function],
       },
-      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <GridColumn
+            offsetSize={5}
+            size={7}
+          >
+            <Empty
+              className={undefined}
+              message="Enter some queries to start a search."
+              title="Start exploring."
+            >
+              <img
+                alt="Start exploring"
+                className={undefined}
+                src="explore.svg"
+              />
+            </Empty>
+          </GridColumn>,
+          "reverse": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Empty
+              className={undefined}
+              message="Enter some queries to start a search."
+              title="Start exploring."
+            >
+              <img
+                alt="Start exploring"
+                className={undefined}
+                src="explore.svg"
+              />
+            </Empty>,
+            "offsetSize": 5,
+            "size": 7,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <img
+                alt="Start exploring"
+                className={undefined}
+                src="explore.svg"
+              />,
+              "className": undefined,
+              "message": "Enter some queries to start a search.",
+              "title": "Start exploring.",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Start exploring",
+                "className": undefined,
+                "src": "explore.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
     ],
     "type": Symbol(react.fragment),
   },
@@ -436,7 +532,26 @@ ShallowWrapper {
               </div>
             </GridColumn>
           </GridRow>,
-          false,
+          <GridRow
+            reverse={false}
+          >
+            <GridColumn
+              offsetSize={5}
+              size={7}
+            >
+              <Empty
+                className={undefined}
+                message="Enter some queries to start a search."
+                title="Start exploring."
+              >
+                <img
+                  alt="Start exploring"
+                  className={undefined}
+                  src="explore.svg"
+                />
+              </Empty>
+            </GridColumn>
+          </GridRow>,
         ],
       },
       "ref": null,
@@ -671,7 +786,84 @@ ShallowWrapper {
           },
           "type": [Function],
         },
-        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <GridColumn
+              offsetSize={5}
+              size={7}
+            >
+              <Empty
+                className={undefined}
+                message="Enter some queries to start a search."
+                title="Start exploring."
+              >
+                <img
+                  alt="Start exploring"
+                  className={undefined}
+                  src="explore.svg"
+                />
+              </Empty>
+            </GridColumn>,
+            "reverse": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Empty
+                className={undefined}
+                message="Enter some queries to start a search."
+                title="Start exploring."
+              >
+                <img
+                  alt="Start exploring"
+                  className={undefined}
+                  src="explore.svg"
+                />
+              </Empty>,
+              "offsetSize": 5,
+              "size": 7,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <img
+                  alt="Start exploring"
+                  className={undefined}
+                  src="explore.svg"
+                />,
+                "className": undefined,
+                "message": "Enter some queries to start a search.",
+                "title": "Start exploring.",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Start exploring",
+                  "className": undefined,
+                  "src": "explore.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
       ],
       "type": Symbol(react.fragment),
     },

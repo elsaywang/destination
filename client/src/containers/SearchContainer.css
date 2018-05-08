@@ -20,3 +20,10 @@
 :local(.saveSearchExecution) {
     margin-top: 2.8rem;
 }
+
+:local(.empty) {
+    margin-top: 80px;
+}
+:local(.emptyImage) {
+    width: 250px;
+}

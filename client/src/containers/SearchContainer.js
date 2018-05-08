@@ -15,6 +15,9 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
+import Empty from '../components/common/Empty';
+import Explore from '../images/explore.svg';
+import NoResult from '../images/noResult.svg';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
@@ -288,7 +291,7 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
 
-                {Object.keys(this.props.results.list).length > 0 && (
+                {Object.keys(this.props.results.list).length ? (
                     <div style={{ display: 'flex', marginTop: 20 }}>
                         <div className={styles.filterListContainer}>
                             <SignalTypeFilter
@@ -326,6 +329,21 @@ class SearchContainer extends Component {
                             />
                         </div>
                     </div>
+                ) : (
+                    <GridRow>
+                        <GridColumn size={7} offsetSize={5}>
+                            <Empty
+                                className={styles.empty}
+                                title="Start exploring."
+                                message="Enter some queries to start a search.">
+                                <img
+                                    src={Explore}
+                                    className={styles.emptyImage}
+                                    alt="Start exploring"
+                                />
+                            </Empty>
+                        </GridColumn>
+                    </GridRow>
                 )}
             </Fragment>
         );
