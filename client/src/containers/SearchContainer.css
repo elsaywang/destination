@@ -24,6 +24,11 @@
 :local(.empty) {
     margin-top: 80px;
 }
-:local(.emptyImage) {
-    width: 250px;
+:local(.noResultImage) {
+    padding-left: 1.25em;
+    width: 180px;
+}
+:local(.exploreImage) {
+    width: 280px;
+    margin-left: -0.25em;
 }

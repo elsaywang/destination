@@ -18,6 +18,7 @@ import SaveSearchExecution from '../components/SaveSearchExecution';
 import Empty from '../components/common/Empty';
 import Explore from '../images/explore.svg';
 import NoResult from '../images/noResult.svg';
+import { getEmptyInfo } from '../constants/emptyOptions';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
@@ -44,6 +45,7 @@ class SearchContainer extends Component {
             },
             viewRecordsFor: 7,
             minEventFires: 1000,
+            searched: false,
         };
     }
 
@@ -55,6 +57,8 @@ class SearchContainer extends Component {
         //TODO: Extract all shared search fields state changes to redux
         if (!this.props.savedSearchFields.name) {
             this.onClearAll();
+        } else {
+            this.setState({ searched: true });
         }
     }
 
@@ -181,12 +185,14 @@ class SearchContainer extends Component {
         this.setState({
             ...this.state,
             ...savedSearch,
+            searched: true,
         });
         this.props.callSearch(savedSearch);
         this.props.populateSearchFields(savedSearch);
     };
 
     onSearch = () => {
+        this.setState({ searched: true });
         this.props.callSearch(this.state);
     };
 
@@ -217,6 +223,7 @@ class SearchContainer extends Component {
         this.props.clearSearchFields();
         this.setState({
             name: '',
+            searched: false,
             keyValuePairs: [
                 {
                     id: 0,
@@ -237,7 +244,6 @@ class SearchContainer extends Component {
             minEventFires: 1000,
         });
     };
-
     render() {
         return (
             <Fragment>
@@ -331,15 +337,19 @@ class SearchContainer extends Component {
                     </div>
                 ) : (
                     <GridRow>
-                        <GridColumn size={7} offsetSize={5}>
+                        <GridColumn size={8} offsetSize={4}>
                             <Empty
                                 className={styles.empty}
-                                title="Start exploring."
-                                message="Enter some queries to start a search.">
+                                title={getEmptyInfo(this.state.searched).title}
+                                message={getEmptyInfo(this.state.searched).message}>
                                 <img
-                                    src={Explore}
-                                    className={styles.emptyImage}
-                                    alt="Start exploring"
+                                    src={this.state.searched ? NoResult : Explore}
+                                    className={
+                                        this.state.searched
+                                            ? styles.noResultImage
+                                            : styles.exploreImage
+                                    }
+                                    alt={getEmptyInfo(this.state.searched).title.imageAlt}
                                 />
                             </Empty>
                         </GridColumn>

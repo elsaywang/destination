@@ -90,6 +90,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -127,16 +128,16 @@ ShallowWrapper {
           reverse={false}
         >
           <GridColumn
-            offsetSize={5}
-            size={7}
+            offsetSize={4}
+            size={8}
           >
             <Empty
               className={undefined}
-              message="Enter some queries to start a search."
+              message="Search by key-value pairs or use only filters to get insights on signals."
               title="Start exploring."
             >
               <img
-                alt="Start exploring"
+                alt={undefined}
                 className={undefined}
                 src="explore.svg"
               />
@@ -183,6 +184,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -231,6 +233,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -275,6 +278,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "reportSuites": Array [],
+              "searched": false,
               "signalStatus": "ALL",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -383,16 +387,16 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <GridColumn
-            offsetSize={5}
-            size={7}
+            offsetSize={4}
+            size={8}
           >
             <Empty
               className={undefined}
-              message="Enter some queries to start a search."
+              message="Search by key-value pairs or use only filters to get insights on signals."
               title="Start exploring."
             >
               <img
-                alt="Start exploring"
+                alt={undefined}
                 className={undefined}
                 src="explore.svg"
               />
@@ -408,17 +412,17 @@ ShallowWrapper {
           "props": Object {
             "children": <Empty
               className={undefined}
-              message="Enter some queries to start a search."
+              message="Search by key-value pairs or use only filters to get insights on signals."
               title="Start exploring."
             >
               <img
-                alt="Start exploring"
+                alt={undefined}
                 className={undefined}
                 src="explore.svg"
               />
             </Empty>,
-            "offsetSize": 5,
-            "size": 7,
+            "offsetSize": 4,
+            "size": 8,
           },
           "ref": null,
           "rendered": Object {
@@ -427,12 +431,12 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <img
-                alt="Start exploring"
+                alt={undefined}
                 className={undefined}
                 src="explore.svg"
               />,
               "className": undefined,
-              "message": "Enter some queries to start a search.",
+              "message": "Search by key-value pairs or use only filters to get insights on signals.",
               "title": "Start exploring.",
             },
             "ref": null,
@@ -441,7 +445,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "Start exploring",
+                "alt": undefined,
                 "className": undefined,
                 "src": "explore.svg",
               },
@@ -499,6 +503,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -536,16 +541,16 @@ ShallowWrapper {
             reverse={false}
           >
             <GridColumn
-              offsetSize={5}
-              size={7}
+              offsetSize={4}
+              size={8}
             >
               <Empty
                 className={undefined}
-                message="Enter some queries to start a search."
+                message="Search by key-value pairs or use only filters to get insights on signals."
                 title="Start exploring."
               >
                 <img
-                  alt="Start exploring"
+                  alt={undefined}
                   className={undefined}
                   src="explore.svg"
                 />
@@ -592,6 +597,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -640,6 +646,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -684,6 +691,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "reportSuites": Array [],
+                "searched": false,
                 "signalStatus": "ALL",
                 "source": Object {
                   "dataSourceIds": Array [],
@@ -792,16 +800,16 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <GridColumn
-              offsetSize={5}
-              size={7}
+              offsetSize={4}
+              size={8}
             >
               <Empty
                 className={undefined}
-                message="Enter some queries to start a search."
+                message="Search by key-value pairs or use only filters to get insights on signals."
                 title="Start exploring."
               >
                 <img
-                  alt="Start exploring"
+                  alt={undefined}
                   className={undefined}
                   src="explore.svg"
                 />
@@ -817,17 +825,17 @@ ShallowWrapper {
             "props": Object {
               "children": <Empty
                 className={undefined}
-                message="Enter some queries to start a search."
+                message="Search by key-value pairs or use only filters to get insights on signals."
                 title="Start exploring."
               >
                 <img
-                  alt="Start exploring"
+                  alt={undefined}
                   className={undefined}
                   src="explore.svg"
                 />
               </Empty>,
-              "offsetSize": 5,
-              "size": 7,
+              "offsetSize": 4,
+              "size": 8,
             },
             "ref": null,
             "rendered": Object {
@@ -836,12 +844,12 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": <img
-                  alt="Start exploring"
+                  alt={undefined}
                   className={undefined}
                   src="explore.svg"
                 />,
                 "className": undefined,
-                "message": "Enter some queries to start a search.",
+                "message": "Search by key-value pairs or use only filters to get insights on signals.",
                 "title": "Start exploring.",
               },
               "ref": null,
@@ -850,7 +858,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "alt": "Start exploring",
+                  "alt": undefined,
                   "className": undefined,
                   "src": "explore.svg",
                 },
@@ -979,6 +987,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -1154,6 +1163,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -1202,6 +1212,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -1246,6 +1257,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "reportSuites": Array [],
+              "searched": false,
               "signalStatus": "ALL",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -1938,6 +1950,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -2113,6 +2126,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -2161,6 +2175,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -2205,6 +2220,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "reportSuites": Array [],
+                "searched": false,
                 "signalStatus": "ALL",
                 "source": Object {
                   "dataSourceIds": Array [],
@@ -2968,6 +2984,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -3143,6 +3160,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -3191,6 +3209,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -3235,6 +3254,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "reportSuites": Array [],
+              "searched": false,
               "signalStatus": "ALL",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -3927,6 +3947,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -4102,6 +4123,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -4150,6 +4172,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -4194,6 +4217,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "reportSuites": Array [],
+                "searched": false,
                 "signalStatus": "ALL",
                 "source": Object {
                   "dataSourceIds": Array [],

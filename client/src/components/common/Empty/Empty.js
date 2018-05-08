@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Empty.css';
+import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import Heading from '@react/react-spectrum/Heading';
 
 function Empty(props) {
