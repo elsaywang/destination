@@ -345,7 +345,12 @@ class SearchContainer extends Component {
                             <Empty
                                 className={styles.empty}
                                 title={getEmptyInfo(this.state.searched).title}
-                                message={getEmptyInfo(this.state.searched).message}>
+                                message={getEmptyInfo(this.state.searched).message}
+                                messageStyle={
+                                    this.state.searched
+                                        ? styles.noResultMessage
+                                        : styles.exploreMessage
+                                }>
                                 <img
                                     src={this.state.searched ? NoResult : Explore}
                                     data-test={getEmptyInfo(this.state.searched).dataTest}

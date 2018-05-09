@@ -134,6 +134,7 @@ ShallowWrapper {
             <Empty
               className={undefined}
               message="Search by key-value pairs or use only filters to get insights on signals."
+              messageStyle={undefined}
               title="Start exploring."
             >
               <img
@@ -394,6 +395,7 @@ ShallowWrapper {
             <Empty
               className={undefined}
               message="Search by key-value pairs or use only filters to get insights on signals."
+              messageStyle={undefined}
               title="Start exploring."
             >
               <img
@@ -415,6 +417,7 @@ ShallowWrapper {
             "children": <Empty
               className={undefined}
               message="Search by key-value pairs or use only filters to get insights on signals."
+              messageStyle={undefined}
               title="Start exploring."
             >
               <img
@@ -441,6 +444,7 @@ ShallowWrapper {
               />,
               "className": undefined,
               "message": "Search by key-value pairs or use only filters to get insights on signals.",
+              "messageStyle": undefined,
               "title": "Start exploring.",
             },
             "ref": null,
@@ -552,6 +556,7 @@ ShallowWrapper {
               <Empty
                 className={undefined}
                 message="Search by key-value pairs or use only filters to get insights on signals."
+                messageStyle={undefined}
                 title="Start exploring."
               >
                 <img
@@ -812,6 +817,7 @@ ShallowWrapper {
               <Empty
                 className={undefined}
                 message="Search by key-value pairs or use only filters to get insights on signals."
+                messageStyle={undefined}
                 title="Start exploring."
               >
                 <img
@@ -833,6 +839,7 @@ ShallowWrapper {
               "children": <Empty
                 className={undefined}
                 message="Search by key-value pairs or use only filters to get insights on signals."
+                messageStyle={undefined}
                 title="Start exploring."
               >
                 <img
@@ -859,6 +866,7 @@ ShallowWrapper {
                 />,
                 "className": undefined,
                 "message": "Search by key-value pairs or use only filters to get insights on signals.",
+                "messageStyle": undefined,
                 "title": "Start exploring.",
               },
               "ref": null,
@@ -1036,6 +1044,7 @@ ShallowWrapper {
             <Empty
               className={undefined}
               message="Refine the search query and try searching again."
+              messageStyle={undefined}
               title="No results found."
             >
               <img
@@ -1296,6 +1305,7 @@ ShallowWrapper {
             <Empty
               className={undefined}
               message="Refine the search query and try searching again."
+              messageStyle={undefined}
               title="No results found."
             >
               <img
@@ -1317,6 +1327,7 @@ ShallowWrapper {
             "children": <Empty
               className={undefined}
               message="Refine the search query and try searching again."
+              messageStyle={undefined}
               title="No results found."
             >
               <img
@@ -1343,6 +1354,7 @@ ShallowWrapper {
               />,
               "className": undefined,
               "message": "Refine the search query and try searching again.",
+              "messageStyle": undefined,
               "title": "No results found.",
             },
             "ref": null,
@@ -1454,6 +1466,7 @@ ShallowWrapper {
               <Empty
                 className={undefined}
                 message="Refine the search query and try searching again."
+                messageStyle={undefined}
                 title="No results found."
               >
                 <img
@@ -1714,6 +1727,7 @@ ShallowWrapper {
               <Empty
                 className={undefined}
                 message="Refine the search query and try searching again."
+                messageStyle={undefined}
                 title="No results found."
               >
                 <img
@@ -1735,6 +1749,7 @@ ShallowWrapper {
               "children": <Empty
                 className={undefined}
                 message="Refine the search query and try searching again."
+                messageStyle={undefined}
                 title="No results found."
               >
                 <img
@@ -1761,6 +1776,7 @@ ShallowWrapper {
                 />,
                 "className": undefined,
                 "message": "Refine the search query and try searching again.",
+                "messageStyle": undefined,
                 "title": "No results found.",
               },
               "ref": null,
@@ -1938,6 +1954,7 @@ ShallowWrapper {
             <Empty
               className={undefined}
               message="Refine the search query and try searching again."
+              messageStyle={undefined}
               title="No results found."
             >
               <img
@@ -2198,6 +2215,7 @@ ShallowWrapper {
             <Empty
               className={undefined}
               message="Refine the search query and try searching again."
+              messageStyle={undefined}
               title="No results found."
             >
               <img
@@ -2219,6 +2237,7 @@ ShallowWrapper {
             "children": <Empty
               className={undefined}
               message="Refine the search query and try searching again."
+              messageStyle={undefined}
               title="No results found."
             >
               <img
@@ -2245,6 +2264,7 @@ ShallowWrapper {
               />,
               "className": undefined,
               "message": "Refine the search query and try searching again.",
+              "messageStyle": undefined,
               "title": "No results found.",
             },
             "ref": null,
@@ -2356,6 +2376,7 @@ ShallowWrapper {
               <Empty
                 className={undefined}
                 message="Refine the search query and try searching again."
+                messageStyle={undefined}
                 title="No results found."
               >
                 <img
@@ -2616,6 +2637,7 @@ ShallowWrapper {
               <Empty
                 className={undefined}
                 message="Refine the search query and try searching again."
+                messageStyle={undefined}
                 title="No results found."
               >
                 <img
@@ -2637,6 +2659,7 @@ ShallowWrapper {
               "children": <Empty
                 className={undefined}
                 message="Refine the search query and try searching again."
+                messageStyle={undefined}
                 title="No results found."
               >
                 <img
@@ -2663,6 +2686,7 @@ ShallowWrapper {
                 />,
                 "className": undefined,
                 "message": "Refine the search query and try searching again.",
+                "messageStyle": undefined,
                 "title": "No results found.",
               },
               "ref": null,
