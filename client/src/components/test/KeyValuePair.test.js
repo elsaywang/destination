@@ -14,12 +14,15 @@ describe('<KeyValuePair /> component', () => {
         operator: '==',
         value: '',
     };
+    const advanced = false;
     const wrapper = shallow(
         <KeyValuePair
+            enabled={advanced}
             pair={pair}
-            onKeySelect={mockFn}
+            onKeyChange={mockFn}
             onOperatorChange={mockFn}
             onValueChange={mockFn}
+            reportSuiteId="test"
         />,
     );
 

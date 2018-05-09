@@ -8,6 +8,7 @@ ShallowWrapper {
     enabled={false}
     onAdvancedSearchChange={[MockFunction]}
     onFilterChange={[MockFunction]}
+    onFilterSelect={[MockFunction]}
     reportSuites={
       Array [
         Object {
@@ -41,14 +42,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Switch
-          aria-label="Advanced Search"
-          checked={false}
-          className="advanced-search-toggle"
-          data-test="advanced-search-toggle"
-          label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
-          onChange={[MockFunction]}
-        />,
+        <span>
+          Search and see results in friendly names:  
+        </span>,
         <ComboBox
           data-test="advanced-search-filter"
           disabled={true}
@@ -67,6 +63,7 @@ ShallowWrapper {
           value=""
         />,
       ],
+      "className": undefined,
       "data-test": "advanced-search",
     },
     "ref": null,
@@ -74,18 +71,13 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "aria-label": "Advanced Search",
-          "checked": false,
-          "className": "advanced-search-toggle",
-          "data-test": "advanced-search-toggle",
-          "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
-          "onChange": [MockFunction],
+          "children": "Search and see results in friendly names:  ",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "Search and see results in friendly names:  ",
+        "type": "span",
       },
       Object {
         "instance": null,
@@ -120,14 +112,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Switch
-            aria-label="Advanced Search"
-            checked={false}
-            className="advanced-search-toggle"
-            data-test="advanced-search-toggle"
-            label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
-            onChange={[MockFunction]}
-          />,
+          <span>
+            Search and see results in friendly names:  
+          </span>,
           <ComboBox
             data-test="advanced-search-filter"
             disabled={true}
@@ -146,6 +133,7 @@ ShallowWrapper {
             value=""
           />,
         ],
+        "className": undefined,
         "data-test": "advanced-search",
       },
       "ref": null,
@@ -153,18 +141,13 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "aria-label": "Advanced Search",
-            "checked": false,
-            "className": "advanced-search-toggle",
-            "data-test": "advanced-search-toggle",
-            "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
-            "onChange": [MockFunction],
+            "children": "Search and see results in friendly names:  ",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "Search and see results in friendly names:  ",
+          "type": "span",
         },
         Object {
           "instance": null,

@@ -1,0 +1,5 @@
+:local(.reportSuitesFilter) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}

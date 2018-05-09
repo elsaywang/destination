@@ -40,20 +40,22 @@ describe('Search Form Integration Tests', function() {
     });
 
     describe('when Advanced toggle is clicked', function() {
+        before(function() {
+            cy.get('[data-test="advanced-search-toggle"]').click();
+        });
+
         beforeEach(function() {
             cy.get('[data-test="advanced-search-filter"]').as('advancedFilter');
         });
 
         it('should enable filter to filter by user-friendly key names', function() {
-            cy.get('[data-test="advanced-search-toggle"]').click();
-
             cy.get('@advancedFilter').should('be.enabled');
         });
 
         it('should allow you to type a report suite name and press enter on list of suggestions', function() {
             cy
                 .get('@advancedFilter')
-                .type('re{enter}')
+                .type('te{enter}')
                 .then(function($text) {
                     cy.get('@advancedFilter').should(function($filter) {
                         expect($filter.val()).to.contains($text.val());
@@ -217,7 +219,7 @@ describe('Search Form Integration Tests', function() {
         });
 
         it('should reset the form and clear the results', function() {
-            cy.get('[data-test="advanced-search-filter"]').should('be.disabled');
+            cy.get('[data-test="advanced-search-filter"]').should('have.length', 0);
             cy.get('[data-test="key-search-field"]').should('have.value', '');
             cy.get('.operator').should('contain', '==');
             cy.get('[data-test="value-search"]').should('have.value', '');
