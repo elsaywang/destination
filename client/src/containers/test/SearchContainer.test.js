@@ -1,4 +1,5 @@
 import React from 'react';
+import mockdate from 'mockdate';
 import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
 import SearchContainer from '../SearchContainer';
@@ -13,6 +14,8 @@ import SaveSearchExecution from '../../components/SaveSearchExecution';
 import configureStore from '../../configureStore';
 
 describe('<SearchContainer /> component', () => {
+    mockdate.set(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
+
     const store = configureStore();
     const wrapper = shallow(
         <Provider store={store}>
@@ -138,7 +141,7 @@ describe('<SearchContainer /> component', () => {
                 dataSourceIds: [],
                 reportSuiteIds: [],
             },
-            viewRecordsFor: 7,
+            viewRecordsFor: '7D',
             minEventFires: 1000,
             counts: {
                 ALL: 72093,
@@ -266,7 +269,7 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').sourceType).toEqual(null);
             expect(wrapper.state('source').reportSuiteIds).toEqual([]);
             expect(wrapper.state('source').dataSourceIds).toEqual([]);
-            expect(wrapper.state('viewRecordsFor')).toEqual(7);
+            expect(wrapper.state('viewRecordsFor')).toEqual('7D');
             expect(wrapper.state('minEventFires')).toEqual(1000);
         });
 
@@ -278,4 +281,6 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').sourceType).toBe(newSignalType);
         });
     });
+
+    mockdate.reset();
 });

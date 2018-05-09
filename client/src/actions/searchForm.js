@@ -16,6 +16,10 @@ export const callSearch = createAction(CALL_SEARCH, async search => {
     // currently the json-server does not return anything for a POST call
     const result = await fetch('/api/signals/list');
 
+    // TODO: This will allow us to see the API request body until we call the
+    // real API.
+    console.log(normalizedSearch);
+
     return result.json();
 });
 
