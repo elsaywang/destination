@@ -359,7 +359,7 @@ class SearchContainer extends Component {
                                             ? styles.noResultImage
                                             : styles.exploreImage
                                     }
-                                    alt={getEmptyInfo(this.state.searched).title.imageAlt}
+                                    alt={getEmptyInfo(this.state.searched).imageAlt}
                                 />
                             </Empty>
                         </GridColumn>

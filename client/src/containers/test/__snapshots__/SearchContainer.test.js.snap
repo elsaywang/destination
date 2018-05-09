@@ -138,7 +138,7 @@ ShallowWrapper {
               title="Start exploring."
             >
               <img
-                alt={undefined}
+                alt="start exploring"
                 className={undefined}
                 data-test="start-exploring"
                 src="explore.svg"
@@ -399,7 +399,7 @@ ShallowWrapper {
               title="Start exploring."
             >
               <img
-                alt={undefined}
+                alt="start exploring"
                 className={undefined}
                 data-test="start-exploring"
                 src="explore.svg"
@@ -421,7 +421,7 @@ ShallowWrapper {
               title="Start exploring."
             >
               <img
-                alt={undefined}
+                alt="start exploring"
                 className={undefined}
                 data-test="start-exploring"
                 src="explore.svg"
@@ -437,7 +437,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <img
-                alt={undefined}
+                alt="start exploring"
                 className={undefined}
                 data-test="start-exploring"
                 src="explore.svg"
@@ -453,7 +453,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": undefined,
+                "alt": "start exploring",
                 "className": undefined,
                 "data-test": "start-exploring",
                 "src": "explore.svg",
@@ -560,7 +560,7 @@ ShallowWrapper {
                 title="Start exploring."
               >
                 <img
-                  alt={undefined}
+                  alt="start exploring"
                   className={undefined}
                   data-test="start-exploring"
                   src="explore.svg"
@@ -821,7 +821,7 @@ ShallowWrapper {
                 title="Start exploring."
               >
                 <img
-                  alt={undefined}
+                  alt="start exploring"
                   className={undefined}
                   data-test="start-exploring"
                   src="explore.svg"
@@ -843,7 +843,7 @@ ShallowWrapper {
                 title="Start exploring."
               >
                 <img
-                  alt={undefined}
+                  alt="start exploring"
                   className={undefined}
                   data-test="start-exploring"
                   src="explore.svg"
@@ -859,7 +859,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": <img
-                  alt={undefined}
+                  alt="start exploring"
                   className={undefined}
                   data-test="start-exploring"
                   src="explore.svg"
@@ -875,7 +875,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "alt": undefined,
+                  "alt": "start exploring",
                   "className": undefined,
                   "data-test": "start-exploring",
                   "src": "explore.svg",
@@ -1048,7 +1048,7 @@ ShallowWrapper {
               title="No results found."
             >
               <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -1309,7 +1309,7 @@ ShallowWrapper {
               title="No results found."
             >
               <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -1331,7 +1331,7 @@ ShallowWrapper {
               title="No results found."
             >
               <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -1347,7 +1347,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -1363,7 +1363,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": undefined,
+                "alt": "no results found",
                 "className": undefined,
                 "data-test": "no-result-found",
                 "src": "noResult.svg",
@@ -1470,7 +1470,7 @@ ShallowWrapper {
                 title="No results found."
               >
                 <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -1731,7 +1731,7 @@ ShallowWrapper {
                 title="No results found."
               >
                 <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -1753,7 +1753,7 @@ ShallowWrapper {
                 title="No results found."
               >
                 <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -1769,7 +1769,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -1785,7 +1785,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "alt": undefined,
+                  "alt": "no results found",
                   "className": undefined,
                   "data-test": "no-result-found",
                   "src": "noResult.svg",
@@ -1958,7 +1958,7 @@ ShallowWrapper {
               title="No results found."
             >
               <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -2219,7 +2219,7 @@ ShallowWrapper {
               title="No results found."
             >
               <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -2241,7 +2241,7 @@ ShallowWrapper {
               title="No results found."
             >
               <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -2257,7 +2257,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <img
-                alt={undefined}
+                alt="no results found"
                 className={undefined}
                 data-test="no-result-found"
                 src="noResult.svg"
@@ -2273,7 +2273,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": undefined,
+                "alt": "no results found",
                 "className": undefined,
                 "data-test": "no-result-found",
                 "src": "noResult.svg",
@@ -2380,7 +2380,7 @@ ShallowWrapper {
                 title="No results found."
               >
                 <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -2641,7 +2641,7 @@ ShallowWrapper {
                 title="No results found."
               >
                 <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -2663,7 +2663,7 @@ ShallowWrapper {
                 title="No results found."
               >
                 <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -2679,7 +2679,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": <img
-                  alt={undefined}
+                  alt="no results found"
                   className={undefined}
                   data-test="no-result-found"
                   src="noResult.svg"
@@ -2695,7 +2695,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "alt": undefined,
+                  "alt": "no results found",
                   "className": undefined,
                   "data-test": "no-result-found",
                   "src": "noResult.svg",
