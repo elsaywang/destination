@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl, intlShape } from 'react-intl';
 import { Tag } from '@react/react-spectrum/TagList';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Popover from '@react/react-spectrum/Popover';
 import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { formatSignal } from '../utils/stringifySignals';
+import { getDateRangeLabel } from '../constants/dateRangeOptions';
 import { getSignalStatusLabel } from '../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../constants/signalTypeOptions';
 import { getSignalCategory } from '../constants/signalCategoryOptions';
@@ -18,12 +20,34 @@ class SavedSearchPopover extends Component {
         this.props.onSavedSearchClick(search);
     };
 
+    getCustomDateRangeLabel() {
+        const { search, intl } = this.props;
+        const { customStartDate, customEndDate } = search;
+        const formatDateOptions = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            timeZone: 'UTC',
+        };
+
+        return `${intl.formatDate(search.customStartDate, formatDateOptions)} to ${intl.formatDate(
+            search.customEndDate,
+            formatDateOptions,
+        )}`;
+    }
+
+    getViewRecordsForLabel() {
+        const { search } = this.props;
+        const isCustomDateRangeEnabled = search.viewRecordsFor === 'custom';
+
+        return isCustomDateRangeEnabled
+            ? this.getCustomDateRangeLabel()
+            : getDateRangeLabel(search.viewRecordsFor);
+    }
+
     render() {
         const { search, deleteSearch, isCurrentSearch } = this.props;
         const boundDeleteClick = deleteSearch.bind(this, search);
-        // TODO: use i18n FormattedDate for start/end dates
-        const startDate = new Date(search.startDate);
-        const endDate = new Date(search.endDate);
 
         return (
             <span className={styles.tagBlock}>
@@ -72,7 +96,7 @@ class SavedSearchPopover extends Component {
 
                             <FieldLabel position="left" label="View Records For">
                                 <span style={{ verticalAlign: 'bottom' }}>
-                                    {startDate.toDateString()} - {endDate.toDateString()}
+                                    {this.getViewRecordsForLabel()}
                                 </span>
                             </FieldLabel>
                         </div>
@@ -103,6 +127,7 @@ SavedSearchPopover.propTypes = {
     onSavedSearchClick: PropTypes.func.isRequired,
     isCurrentSearch: PropTypes.bool.isRequired,
     deleteSearch: PropTypes.func.isRequired,
+    intl: intlShape.isRequired,
 };
 
-export default SavedSearchPopover;
+export default injectIntl(SavedSearchPopover);

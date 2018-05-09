@@ -8,7 +8,7 @@ import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
 import Switch from '@react/react-spectrum/Switch';
 import signalStatuses from '../../constants/signalStatusOptions';
-import dateRangeOptions from '../../constants/dateRangeOptions';
+import { dateRangeOptions } from '../../constants/dateRangeOptions';
 import { isFormValid } from '../../utils/searchValidation';
 
 describe('<Search /> component', () => {

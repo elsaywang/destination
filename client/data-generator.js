@@ -1,4 +1,5 @@
 var faker = require('faker');
+var moment = require('moment');
 var sortingTypes = [
     'Key Value Pairs',
     'Key Name',
@@ -41,6 +42,34 @@ module.exports = () => {
         return array;
     };
 
+    const generateSearchDates = () => {
+        const isCustom = Math.random() >= 0.5;
+        const customEndDateDaysAgo = Math.floor(Math.random() * 15);
+        const customStartDateDaysAgo = customEndDateDaysAgo * 2;
+        const viewRecordsFor = isCustom ? 'custom' : '7D';
+        const customStartDate = isCustom
+            ? moment
+                  .utc()
+                  .subtract(customStartDateDaysAgo, 'days')
+                  .format('YYYY-MM-DD')
+            : moment
+                  .utc()
+                  .subtract(7, 'days')
+                  .format('YYYY-MM-DD');
+        const customEndDate = isCustom
+            ? moment
+                  .utc()
+                  .subtract(customEndDateDaysAgo, 'days')
+                  .format('YYYY-MM-DD')
+            : moment.utc().format('YYYY-MM-DD');
+
+        return {
+            viewRecordsFor,
+            customStartDate,
+            customEndDate,
+        };
+    };
+
     class ReportSuite {
         constructor() {
             this.name = 'Test Suite ' + faker.random.word();
@@ -69,13 +98,16 @@ module.exports = () => {
 
     class SavedSearch {
         constructor(id) {
+            const { viewRecordsFor, customStartDate, customEndDate } = generateSearchDates();
+
             this.id = id;
             this.keyValuePairs = randomGenerateArray(Kvp, 2);
             this.source = new Source(faker.random.word());
             this.minEventFires = faker.random.number();
             this.signalStatus = 'USED';
-            this.startDate = faker.date.recent();
-            this.endDate = faker.date.recent();
+            this.viewRecordsFor = viewRecordsFor;
+            this.customStartDate = customStartDate;
+            this.customEndDate = customEndDate;
             this.sortBy = sortingTypes[Math.floor(Math.random() * sortingTypes.length)];
             this.categoryType = categoryTypes[Math.floor(Math.random() * sortingTypes.length)];
             this.advanced = faker.random.boolean();

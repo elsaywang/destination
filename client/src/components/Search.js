@@ -12,7 +12,7 @@ import CustomDateRange from './CustomDateRange';
 import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
 
-import viewRecordsOptions from '../constants/dateRangeOptions';
+import { dateRangeOptions as viewRecordsOptions } from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
 import { isFormValid } from '../utils/searchValidation';
 
