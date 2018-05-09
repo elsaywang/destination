@@ -30,6 +30,7 @@ ShallowWrapper {
             className="custom-start-date"
             data-test="custom-start-date"
             disabled={false}
+            displayFormat="MM/DD/YYYY"
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
@@ -44,6 +45,7 @@ ShallowWrapper {
             startDay={0}
             type="date"
             value="2018-04-24"
+            valueFormat="YYYY-MM-DD"
           />
         </Label>,
         <Label
@@ -53,6 +55,7 @@ ShallowWrapper {
             className="custom-end-date"
             data-test="custom-end-date"
             disabled={false}
+            displayFormat="MM/DD/YYYY"
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
@@ -67,6 +70,7 @@ ShallowWrapper {
             startDay={0}
             type="date"
             value="2018-05-01"
+            valueFormat="YYYY-MM-DD"
           />
         </Label>,
       ],
@@ -82,6 +86,7 @@ ShallowWrapper {
             className="custom-start-date"
             data-test="custom-start-date"
             disabled={false}
+            displayFormat="MM/DD/YYYY"
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
@@ -96,6 +101,7 @@ ShallowWrapper {
             startDay={0}
             type="date"
             value="2018-04-24"
+            valueFormat="YYYY-MM-DD"
           />,
           "value": "Start Date",
         },
@@ -108,6 +114,7 @@ ShallowWrapper {
             "className": "custom-start-date",
             "data-test": "custom-start-date",
             "disabled": false,
+            "displayFormat": "MM/DD/YYYY",
             "headerFormat": "MMMM YYYY",
             "id": "react-spectrum-1",
             "invalid": false,
@@ -122,6 +129,7 @@ ShallowWrapper {
             "startDay": 0,
             "type": "date",
             "value": "2018-04-24",
+            "valueFormat": "YYYY-MM-DD",
           },
           "ref": null,
           "rendered": null,
@@ -138,6 +146,7 @@ ShallowWrapper {
             className="custom-end-date"
             data-test="custom-end-date"
             disabled={false}
+            displayFormat="MM/DD/YYYY"
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
@@ -152,6 +161,7 @@ ShallowWrapper {
             startDay={0}
             type="date"
             value="2018-05-01"
+            valueFormat="YYYY-MM-DD"
           />,
           "value": "End Date",
         },
@@ -164,6 +174,7 @@ ShallowWrapper {
             "className": "custom-end-date",
             "data-test": "custom-end-date",
             "disabled": false,
+            "displayFormat": "MM/DD/YYYY",
             "headerFormat": "MMMM YYYY",
             "id": "react-spectrum-1",
             "invalid": false,
@@ -178,6 +189,7 @@ ShallowWrapper {
             "startDay": 0,
             "type": "date",
             "value": "2018-05-01",
+            "valueFormat": "YYYY-MM-DD",
           },
           "ref": null,
           "rendered": null,
@@ -202,6 +214,7 @@ ShallowWrapper {
               className="custom-start-date"
               data-test="custom-start-date"
               disabled={false}
+              displayFormat="MM/DD/YYYY"
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
@@ -216,6 +229,7 @@ ShallowWrapper {
               startDay={0}
               type="date"
               value="2018-04-24"
+              valueFormat="YYYY-MM-DD"
             />
           </Label>,
           <Label
@@ -225,6 +239,7 @@ ShallowWrapper {
               className="custom-end-date"
               data-test="custom-end-date"
               disabled={false}
+              displayFormat="MM/DD/YYYY"
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
@@ -239,6 +254,7 @@ ShallowWrapper {
               startDay={0}
               type="date"
               value="2018-05-01"
+              valueFormat="YYYY-MM-DD"
             />
           </Label>,
         ],
@@ -254,6 +270,7 @@ ShallowWrapper {
               className="custom-start-date"
               data-test="custom-start-date"
               disabled={false}
+              displayFormat="MM/DD/YYYY"
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
@@ -268,6 +285,7 @@ ShallowWrapper {
               startDay={0}
               type="date"
               value="2018-04-24"
+              valueFormat="YYYY-MM-DD"
             />,
             "value": "Start Date",
           },
@@ -280,6 +298,7 @@ ShallowWrapper {
               "className": "custom-start-date",
               "data-test": "custom-start-date",
               "disabled": false,
+              "displayFormat": "MM/DD/YYYY",
               "headerFormat": "MMMM YYYY",
               "id": "react-spectrum-1",
               "invalid": false,
@@ -294,6 +313,7 @@ ShallowWrapper {
               "startDay": 0,
               "type": "date",
               "value": "2018-04-24",
+              "valueFormat": "YYYY-MM-DD",
             },
             "ref": null,
             "rendered": null,
@@ -310,6 +330,7 @@ ShallowWrapper {
               className="custom-end-date"
               data-test="custom-end-date"
               disabled={false}
+              displayFormat="MM/DD/YYYY"
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
@@ -324,6 +345,7 @@ ShallowWrapper {
               startDay={0}
               type="date"
               value="2018-05-01"
+              valueFormat="YYYY-MM-DD"
             />,
             "value": "End Date",
           },
@@ -336,6 +358,7 @@ ShallowWrapper {
               "className": "custom-end-date",
               "data-test": "custom-end-date",
               "disabled": false,
+              "displayFormat": "MM/DD/YYYY",
               "headerFormat": "MMMM YYYY",
               "id": "react-spectrum-1",
               "invalid": false,
@@ -350,6 +373,7 @@ ShallowWrapper {
               "startDay": 0,
               "type": "date",
               "value": "2018-05-01",
+              "valueFormat": "YYYY-MM-DD",
             },
             "ref": null,
             "rendered": null,
