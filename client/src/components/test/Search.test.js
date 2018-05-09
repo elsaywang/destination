@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Search from '../Search';
 import AdvancedSearch from '../AdvancedSearch';
+import CustomDateRange from '../CustomDateRange';
 import KeyValuePair from '../KeyValuePair';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
@@ -29,7 +30,9 @@ describe('<Search /> component', () => {
             reportSuiteIds: 0,
             sourceType: 'ALL',
         },
-        viewRecordsFor: 7,
+        viewRecordsFor: '7D',
+        customStartDate: '04-24-2018',
+        customEndDate: '05-01-2018',
         minEventFires: 1000,
     };
     const mockFn = jest.fn();
@@ -45,11 +48,14 @@ describe('<Search /> component', () => {
             onRemoveClick={mockFn}
             onSignalStatusChange={mockFn}
             onViewRecordsChange={mockFn}
+            onCustomStartDateChange={mockFn}
+            onCustomEndDateChange={mockFn}
             onMinEventFiresChange={mockFn}
             onFilterChange={mockFn}
             onFilterSelect={mockFn}
             onSearch={mockFn}
             onClearAll={mockFn}
+            isCustomDateRangeEnabled={false}
         />,
     );
 
@@ -131,22 +137,7 @@ describe('<Search /> component', () => {
                 ],
             };
 
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    onAdvancedSearchChange={mockFn}
-                    onKeySelect={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onSignalStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinEventFiresChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(
                 newWrapper.find(Button).someWhere(button => button.props().label === 'Add'),
@@ -170,29 +161,22 @@ describe('<Search /> component', () => {
                     },
                 ],
             };
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    reportSuites={[]}
-                    onAdvancedSearchChange={mockFn}
-                    onFilterChange={mockFn}
-                    onFilterSelect={mockFn}
-                    onKeyChange={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onSignalStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinEventFiresChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(
                 newWrapper.find(Button).someWhere(button => button.props().label === 'Remove'),
             ).toBe(true);
+        });
+
+        it('does not render <CustomDateRange /> by default, when the `isCustomDateRangeEnabled` prop is false', () => {
+            expect(wrapper.find(CustomDateRange).exists()).toBeFalsy();
+        });
+
+        it('renders <CustomDateRange /> when the `isCustomDateRangeEnabled` prop is true', () => {
+            const newWrapper = shallow(<Search {...state} isCustomDateRangeEnabled={true} />);
+
+            expect(newWrapper.find(CustomDateRange).exists()).toBeTruthy();
         });
 
         it('renders <Button /> with label "Search"', () => {
@@ -214,22 +198,7 @@ describe('<Search /> component', () => {
                 ],
             };
 
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    onAdvancedSearchChange={mockFn}
-                    onKeySelect={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onSignalStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinEventFiresChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(newWrapper.find('[data-test="search-button"]').is('[disabled]')).toBe(true);
         });

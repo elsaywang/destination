@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { GridColumn, GridRow } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
@@ -8,6 +8,7 @@ import NumberInput from '@react/react-spectrum/NumberInput';
 import AddCircle from '@react/react-spectrum/Icon/AddCircle';
 import RemoveCircle from '@react/react-spectrum/Icon/RemoveCircle';
 import AdvancedSearch from './AdvancedSearch';
+import CustomDateRange from './CustomDateRange';
 import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
 
@@ -69,6 +70,21 @@ class Search extends Component {
                     )}
                 </GridColumn>
             </GridRow>
+        );
+    };
+
+    renderCustomDatepickers = () => {
+        if (!this.props.isCustomDateRangeEnabled) {
+            return null;
+        }
+
+        return (
+            <CustomDateRange
+                customStartDate={this.props.customStartDate}
+                customEndDate={this.props.customEndDate}
+                onCustomStartDateChange={this.props.onCustomStartDateChange}
+                onCustomEndDateChange={this.props.onCustomEndDateChange}
+            />
         );
     };
 
@@ -141,6 +157,8 @@ class Search extends Component {
                                                     quiet
                                                 />
                                             </Label>
+
+                                            {this.renderCustomDatepickers()}
 
                                             <Label value="Minimum Counts">
                                                 <NumberInput

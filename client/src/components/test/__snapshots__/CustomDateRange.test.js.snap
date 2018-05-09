@@ -1,0 +1,396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomDateRange /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CustomDateRange
+    customEndDate="2018-05-01"
+    customStartDate="2018-04-24"
+    onCustomEndDateChange={[MockFunction]}
+    onCustomStartDateChange={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Label
+          value="Start Date"
+        >
+          <Datepicker
+            className="custom-start-date"
+            data-test="custom-start-date"
+            disabled={false}
+            displayFormat="MM/DD/YYYY"
+            headerFormat="MMMM YYYY"
+            id="react-spectrum-1"
+            invalid={false}
+            max="2018-04-30"
+            min="2017-05-09"
+            onChange={[MockFunction]}
+            placeholder="Choose a date"
+            placement="right"
+            quiet={true}
+            readOnly={false}
+            required={false}
+            startDay={0}
+            type="date"
+            value="2018-04-24"
+            valueFormat="YYYY-MM-DD"
+          />
+        </Label>,
+        <Label
+          value="End Date"
+        >
+          <Datepicker
+            className="custom-end-date"
+            data-test="custom-end-date"
+            disabled={false}
+            displayFormat="MM/DD/YYYY"
+            headerFormat="MMMM YYYY"
+            id="react-spectrum-1"
+            invalid={false}
+            max="2018-05-09"
+            min="2018-04-25"
+            onChange={[MockFunction]}
+            placeholder="Choose a date"
+            placement="right"
+            quiet={true}
+            readOnly={false}
+            required={false}
+            startDay={0}
+            type="date"
+            value="2018-05-01"
+            valueFormat="YYYY-MM-DD"
+          />
+        </Label>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Datepicker
+            className="custom-start-date"
+            data-test="custom-start-date"
+            disabled={false}
+            displayFormat="MM/DD/YYYY"
+            headerFormat="MMMM YYYY"
+            id="react-spectrum-1"
+            invalid={false}
+            max="2018-04-30"
+            min="2017-05-09"
+            onChange={[MockFunction]}
+            placeholder="Choose a date"
+            placement="right"
+            quiet={true}
+            readOnly={false}
+            required={false}
+            startDay={0}
+            type="date"
+            value="2018-04-24"
+            valueFormat="YYYY-MM-DD"
+          />,
+          "value": "Start Date",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "custom-start-date",
+            "data-test": "custom-start-date",
+            "disabled": false,
+            "displayFormat": "MM/DD/YYYY",
+            "headerFormat": "MMMM YYYY",
+            "id": "react-spectrum-1",
+            "invalid": false,
+            "max": "2018-04-30",
+            "min": "2017-05-09",
+            "onChange": [MockFunction],
+            "placeholder": "Choose a date",
+            "placement": "right",
+            "quiet": true,
+            "readOnly": false,
+            "required": false,
+            "startDay": 0,
+            "type": "date",
+            "value": "2018-04-24",
+            "valueFormat": "YYYY-MM-DD",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Datepicker
+            className="custom-end-date"
+            data-test="custom-end-date"
+            disabled={false}
+            displayFormat="MM/DD/YYYY"
+            headerFormat="MMMM YYYY"
+            id="react-spectrum-1"
+            invalid={false}
+            max="2018-05-09"
+            min="2018-04-25"
+            onChange={[MockFunction]}
+            placeholder="Choose a date"
+            placement="right"
+            quiet={true}
+            readOnly={false}
+            required={false}
+            startDay={0}
+            type="date"
+            value="2018-05-01"
+            valueFormat="YYYY-MM-DD"
+          />,
+          "value": "End Date",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "custom-end-date",
+            "data-test": "custom-end-date",
+            "disabled": false,
+            "displayFormat": "MM/DD/YYYY",
+            "headerFormat": "MMMM YYYY",
+            "id": "react-spectrum-1",
+            "invalid": false,
+            "max": "2018-05-09",
+            "min": "2018-04-25",
+            "onChange": [MockFunction],
+            "placeholder": "Choose a date",
+            "placement": "right",
+            "quiet": true,
+            "readOnly": false,
+            "required": false,
+            "startDay": 0,
+            "type": "date",
+            "value": "2018-05-01",
+            "valueFormat": "YYYY-MM-DD",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Label
+            value="Start Date"
+          >
+            <Datepicker
+              className="custom-start-date"
+              data-test="custom-start-date"
+              disabled={false}
+              displayFormat="MM/DD/YYYY"
+              headerFormat="MMMM YYYY"
+              id="react-spectrum-1"
+              invalid={false}
+              max="2018-04-30"
+              min="2017-05-09"
+              onChange={[MockFunction]}
+              placeholder="Choose a date"
+              placement="right"
+              quiet={true}
+              readOnly={false}
+              required={false}
+              startDay={0}
+              type="date"
+              value="2018-04-24"
+              valueFormat="YYYY-MM-DD"
+            />
+          </Label>,
+          <Label
+            value="End Date"
+          >
+            <Datepicker
+              className="custom-end-date"
+              data-test="custom-end-date"
+              disabled={false}
+              displayFormat="MM/DD/YYYY"
+              headerFormat="MMMM YYYY"
+              id="react-spectrum-1"
+              invalid={false}
+              max="2018-05-09"
+              min="2018-04-25"
+              onChange={[MockFunction]}
+              placeholder="Choose a date"
+              placement="right"
+              quiet={true}
+              readOnly={false}
+              required={false}
+              startDay={0}
+              type="date"
+              value="2018-05-01"
+              valueFormat="YYYY-MM-DD"
+            />
+          </Label>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Datepicker
+              className="custom-start-date"
+              data-test="custom-start-date"
+              disabled={false}
+              displayFormat="MM/DD/YYYY"
+              headerFormat="MMMM YYYY"
+              id="react-spectrum-1"
+              invalid={false}
+              max="2018-04-30"
+              min="2017-05-09"
+              onChange={[MockFunction]}
+              placeholder="Choose a date"
+              placement="right"
+              quiet={true}
+              readOnly={false}
+              required={false}
+              startDay={0}
+              type="date"
+              value="2018-04-24"
+              valueFormat="YYYY-MM-DD"
+            />,
+            "value": "Start Date",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "className": "custom-start-date",
+              "data-test": "custom-start-date",
+              "disabled": false,
+              "displayFormat": "MM/DD/YYYY",
+              "headerFormat": "MMMM YYYY",
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "max": "2018-04-30",
+              "min": "2017-05-09",
+              "onChange": [MockFunction],
+              "placeholder": "Choose a date",
+              "placement": "right",
+              "quiet": true,
+              "readOnly": false,
+              "required": false,
+              "startDay": 0,
+              "type": "date",
+              "value": "2018-04-24",
+              "valueFormat": "YYYY-MM-DD",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Datepicker
+              className="custom-end-date"
+              data-test="custom-end-date"
+              disabled={false}
+              displayFormat="MM/DD/YYYY"
+              headerFormat="MMMM YYYY"
+              id="react-spectrum-1"
+              invalid={false}
+              max="2018-05-09"
+              min="2018-04-25"
+              onChange={[MockFunction]}
+              placeholder="Choose a date"
+              placement="right"
+              quiet={true}
+              readOnly={false}
+              required={false}
+              startDay={0}
+              type="date"
+              value="2018-05-01"
+              valueFormat="YYYY-MM-DD"
+            />,
+            "value": "End Date",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "className": "custom-end-date",
+              "data-test": "custom-end-date",
+              "disabled": false,
+              "displayFormat": "MM/DD/YYYY",
+              "headerFormat": "MMMM YYYY",
+              "id": "react-spectrum-1",
+              "invalid": false,
+              "max": "2018-05-09",
+              "min": "2018-04-25",
+              "onChange": [MockFunction],
+              "placeholder": "Choose a date",
+              "placement": "right",
+              "quiet": true,
+              "readOnly": false,
+              "required": false,
+              "startDay": 0,
+              "type": "date",
+              "value": "2018-05-01",
+              "valueFormat": "YYYY-MM-DD",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
