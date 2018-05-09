@@ -25,10 +25,10 @@
     margin-top: 80px;
 }
 :local(.noResultImage) {
-    padding-left: 1.25em;
-    width: 180px;
+    width: 13em;
+    margin-left: 0.5em;
 }
 :local(.exploreImage) {
-    width: 280px;
+    width: 20em;
     margin-left: -0.25em;
 }

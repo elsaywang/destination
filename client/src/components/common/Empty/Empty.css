@@ -2,7 +2,7 @@
     padding-left: 1.5em;
 }
 :local(.message) {
-    margin-top: -0.75em;
+    margin: -0.75em 0 0 -0.5em;
     font-style: italic;
     color: var(--spectrum-global-color-grey500);
 }
