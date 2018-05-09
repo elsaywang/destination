@@ -23,17 +23,15 @@ class SignalTypeFilter extends Component {
         this.props.onSignalTypeChange(value);
     };
 
-    renderTabs = () => {
-        const signalTypeOptions = getSignalTypeOptions(this.state.counts);
-
-        return signalTypeOptions.map(option => (
-            <Tab key={option.value} selected={this.props.signalType === option.value}>
-                {option.label}
-            </Tab>
-        ));
-    };
+    renderTab = option => (
+        <Tab key={option.value} selected={this.props.signalType === option.value}>
+            {option.label}
+        </Tab>
+    );
 
     render() {
+        const signalTypeOptions = getSignalTypeOptions(this.state.counts);
+
         return (
             <Fragment>
                 <Heading size={3} className={styles.heading}>
@@ -43,9 +41,8 @@ class SignalTypeFilter extends Component {
                     className={styles.signalType}
                     orientation="vertical"
                     variant="compact"
-                    onChange={this.handleSignalTypeChange}
-                    value={this.props.signalType}>
-                    {this.renderTabs()}
+                    onChange={this.handleSignalTypeChange}>
+                    {signalTypeOptions.map(this.renderTab)}
                 </TabList>
             </Fragment>
         );

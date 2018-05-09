@@ -86,7 +86,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -165,7 +165,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -218,7 +218,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -267,7 +267,7 @@ ShallowWrapper {
               "onCustomStartDateChange": [Function],
               "onFilterChange": [Function],
               "onFilterSelect": [Function],
-              "onKeySelect": [Function],
+              "onKeyChange": [Function],
               "onMinEventFiresChange": [Function],
               "onOperatorChange": [Function],
               "onRemoveClick": [Function],
@@ -419,7 +419,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -498,7 +498,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -551,7 +551,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -600,7 +600,7 @@ ShallowWrapper {
                 "onCustomStartDateChange": [Function],
                 "onFilterChange": [Function],
                 "onFilterSelect": [Function],
-                "onKeySelect": [Function],
+                "onKeyChange": [Function],
                 "onMinEventFiresChange": [Function],
                 "onOperatorChange": [Function],
                 "onRemoveClick": [Function],
@@ -823,7 +823,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -1003,7 +1003,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -1056,7 +1056,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -1105,7 +1105,7 @@ ShallowWrapper {
               "onCustomStartDateChange": [Function],
               "onFilterChange": [Function],
               "onFilterSelect": [Function],
-              "onKeySelect": [Function],
+              "onKeyChange": [Function],
               "onMinEventFiresChange": [Function],
               "onOperatorChange": [Function],
               "onRemoveClick": [Function],
@@ -1802,7 +1802,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -1982,7 +1982,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -2035,7 +2035,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -2084,7 +2084,7 @@ ShallowWrapper {
                 "onCustomStartDateChange": [Function],
                 "onFilterChange": [Function],
                 "onFilterSelect": [Function],
-                "onKeySelect": [Function],
+                "onKeyChange": [Function],
                 "onMinEventFiresChange": [Function],
                 "onOperatorChange": [Function],
                 "onRemoveClick": [Function],
@@ -2852,7 +2852,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -3032,7 +3032,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -3085,7 +3085,7 @@ ShallowWrapper {
               onCustomStartDateChange={[Function]}
               onFilterChange={[Function]}
               onFilterSelect={[Function]}
-              onKeySelect={[Function]}
+              onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
@@ -3134,7 +3134,7 @@ ShallowWrapper {
               "onCustomStartDateChange": [Function],
               "onFilterChange": [Function],
               "onFilterSelect": [Function],
-              "onKeySelect": [Function],
+              "onKeyChange": [Function],
               "onMinEventFiresChange": [Function],
               "onOperatorChange": [Function],
               "onRemoveClick": [Function],
@@ -3831,7 +3831,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -4011,7 +4011,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -4064,7 +4064,7 @@ ShallowWrapper {
                 onCustomStartDateChange={[Function]}
                 onFilterChange={[Function]}
                 onFilterSelect={[Function]}
-                onKeySelect={[Function]}
+                onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
@@ -4113,7 +4113,7 @@ ShallowWrapper {
                 "onCustomStartDateChange": [Function],
                 "onFilterChange": [Function],
                 "onFilterSelect": [Function],
-                "onKeySelect": [Function],
+                "onKeyChange": [Function],
                 "onMinEventFiresChange": [Function],
                 "onOperatorChange": [Function],
                 "onRemoveClick": [Function],

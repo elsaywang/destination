@@ -6,6 +6,7 @@ import CustomDateRange from '../CustomDateRange';
 import KeyValuePair from '../KeyValuePair';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
+import Switch from '@react/react-spectrum/Switch';
 import signalStatuses from '../../constants/signalStatusOptions';
 import dateRangeOptions from '../../constants/dateRangeOptions';
 import { isFormValid } from '../../utils/searchValidation';
@@ -38,6 +39,7 @@ describe('<Search /> component', () => {
     const wrapper = shallow(
         <Search
             {...state}
+            reportSuites={[]}
             onAdvancedSearchChange={mockFn}
             onKeySelect={mockFn}
             onValueChange={mockFn}
@@ -49,6 +51,8 @@ describe('<Search /> component', () => {
             onCustomStartDateChange={mockFn}
             onCustomEndDateChange={mockFn}
             onMinEventFiresChange={mockFn}
+            onFilterChange={mockFn}
+            onFilterSelect={mockFn}
             onSearch={mockFn}
             onClearAll={mockFn}
             isCustomDateRangeEnabled={false}
@@ -60,7 +64,17 @@ describe('<Search /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <AdvancedSearch />', () => {
+        it('renders <Switch />', () => {
+            expect(wrapper.find(Switch).exists()).toBe(true);
+        });
+
+        it('does not render <AdvancedSearch /> when advanced is toggled off', () => {
+            wrapper.setProps({ advanced: false });
+            expect(wrapper.find(AdvancedSearch).exists()).toBe(false);
+        });
+
+        it('renders <AdvancedSearch /> when advanced is toggled on', () => {
+            wrapper.setProps({ advanced: true });
             expect(wrapper.find(AdvancedSearch).exists()).toBe(true);
         });
 

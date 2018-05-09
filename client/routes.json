@@ -3,5 +3,6 @@
     "/api/signals/list": "/list",
     "/api/signals/keys": "/keys",
     "/api/v1/users/self/annotations/aam-portal": "/savedSearch",
-    "/api/v1/report-suites": "/reportSuites"
+    "/api/v1/report-suites": "/reportSuites",
+    "/api/v1/report-suites/*/keys": "/reportSuitesKeys"
 }

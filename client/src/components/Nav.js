@@ -12,18 +12,18 @@ function Nav(props) {
         <TabList
             className={styles.tabList}
             selectedIndex={getSelectedIndex()}
-            variant="anchored"
+            quiet
             onChange={noOp}>
-            <NavLink to="/">
-                <Tab className={styles.tab} selected={props.location.pathname === '/'}>
+            <Tab className={styles.tab} selected={props.location.pathname === '/'}>
+                <NavLink to="/" className={styles.link}>
                     Dashboard
-                </Tab>
-            </NavLink>
-            <NavLink to="/search">
-                <Tab className={styles.tab} selected={props.location.pathname === '/search'}>
+                </NavLink>
+            </Tab>
+            <Tab className={styles.tab} selected={props.location.pathname === '/search'}>
+                <NavLink to="/search" className={styles.link}>
                     Search
-                </Tab>
-            </NavLink>
+                </NavLink>
+            </Tab>
         </TabList>
     );
 }

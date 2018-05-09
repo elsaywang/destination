@@ -1,11 +1,7 @@
 :local(.inline-block) {
     display: inline-block;
-    margin: 0 10px;
+    margin-right: 10px;
     vertical-align: bottom;
-}
-
-:local(.inline-block + .inline-block) {
-    margin-left: 0;
 }
 
 :local(.label) {

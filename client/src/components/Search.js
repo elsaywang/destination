@@ -3,6 +3,7 @@ import { GridColumn, GridRow } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
+import Switch from '@react/react-spectrum/Switch';
 import NumberInput from '@react/react-spectrum/NumberInput';
 import AddCircle from '@react/react-spectrum/Icon/AddCircle';
 import RemoveCircle from '@react/react-spectrum/Icon/RemoveCircle';
@@ -19,28 +20,33 @@ class Search extends Component {
     renderKVPFields = pair => {
         const {
             keyValuePairs,
+            advanced,
+            source,
             onRemoveClick,
             onAddClick,
-            onKeySelect,
+            onKeyChange,
             onOperatorChange,
             onValueChange,
         } = this.props;
         const validKeyValuePairsLimit = keyValuePairs.length < 3;
         const isLastPair = id => keyValuePairs[keyValuePairs.length - 1].id === id;
         const onRemove = () => onRemoveClick(pair.id);
+        const reportSuiteId = source.reportSuiteIds;
 
         return (
-            <GridRow key={pair.id} valign="bottom">
-                <GridColumn size={4}>
+            <GridRow key={pair.id}>
+                <GridColumn
+                    size={12}
+                    style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 10 }}>
                     <KeyValuePair
                         key={pair.id}
                         pair={pair}
-                        onKeySelect={onKeySelect}
+                        advanced={advanced}
+                        reportSuiteId={reportSuiteId ? reportSuiteId[0] : 0}
+                        onKeyChange={onKeyChange}
                         onOperatorChange={onOperatorChange}
                         onValueChange={onValueChange}
                     />
-                </GridColumn>
-                <GridColumn size={2}>
                     {isLastPair(pair.id) &&
                         validKeyValuePairsLimit && (
                             <Button
@@ -104,22 +110,31 @@ class Search extends Component {
         return (
             <GridRow>
                 <GridColumn size={12}>
+                    <Switch
+                        className="advanced-search-toggle"
+                        onChange={this.props.onAdvancedSearchChange}
+                        checked={this.props.advanced}
+                        data-test="advanced-search-toggle"
+                        aria-label="Advanced Search"
+                        label="Advanced search for Adobe Analytics"
+                    />
                     <Well>
                         <div data-test="search-form">
-                            <AdvancedSearch
-                                enabled={this.props.advanced}
-                                onAdvancedSearchChange={this.props.onAdvancedSearchChange}
-                                onFilterChange={this.props.onFilterChange}
-                                onFilterSelect={value => this.props.onFilterSelect(value)}
-                                sourceName={this.props.source.name}
-                                reportSuites={this.props.reportSuites}
-                            />
+                            {this.props.advanced && (
+                                <AdvancedSearch
+                                    enabled={this.props.advanced}
+                                    onFilterChange={this.props.onFilterChange}
+                                    onFilterSelect={value => this.props.onFilterSelect(value)}
+                                    sourceName={this.props.source.name}
+                                    reportSuites={this.props.reportSuites}
+                                />
+                            )}
 
                             <GridRow>
                                 <GridColumn size={12}>
                                     {this.props.keyValuePairs.map(this.renderKVPFields)}
 
-                                    <GridRow valign="bottom">
+                                    <GridRow>
                                         <GridColumn size={7}>
                                             <Label value="Signal Status">
                                                 <Select

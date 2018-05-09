@@ -159,13 +159,13 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').name).toBe('');
         });
 
-        it('.onKeySelect() changes key state to given value at corresponding id in keyValuePairs[]', () => {
+        it('.onKeyChange() changes key state to given value at corresponding id in keyValuePairs[]', () => {
             const value = 'test';
             const id = 0;
 
             expect(wrapper.state('keyValuePairs')[id].key).toBe(initialState.keyValuePairs[id].key);
 
-            wrapper.instance().onKeySelect(id, value);
+            wrapper.instance().onKeyChange(id, value);
             const newKeyValuePairs = [...initialState.keyValuePairs];
 
             newKeyValuePairs[id].key = value;

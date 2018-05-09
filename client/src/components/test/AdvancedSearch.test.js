@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import AdvancedSearch from '../AdvancedSearch';
 import ComboBox from '@react/react-spectrum/ComboBox';
-import Switch from '@react/react-spectrum/Switch';
 
 describe('Advanced Search', () => {
     const mockFn = jest.fn();
@@ -28,6 +27,7 @@ describe('Advanced Search', () => {
             reportSuites={reportSuites}
             enabled={false}
             onFilterChange={mockFn}
+            onFilterSelect={mockFn}
             onAdvancedSearchChange={mockFn}
         />,
     );
@@ -35,10 +35,6 @@ describe('Advanced Search', () => {
     describe('rendering', () => {
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
-        });
-
-        it('renders <Switch />', () => {
-            expect(wrapper.find(Switch).exists()).toBe(true);
         });
 
         it('renders <ComboBox />', () => {
