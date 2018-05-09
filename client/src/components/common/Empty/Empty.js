@@ -5,7 +5,7 @@ import Heading from '@react/react-spectrum/Heading';
 
 function Empty(props) {
     return (
-        <div className={props.className}>
+        <div className={props.className} data-test="empty">
             {props.children}
             <Heading size={2} className={styles.title}>
                 {props.title}

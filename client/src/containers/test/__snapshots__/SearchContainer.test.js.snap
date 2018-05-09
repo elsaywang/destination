@@ -139,6 +139,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="start-exploring"
                 src="explore.svg"
               />
             </Empty>
@@ -398,6 +399,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="start-exploring"
                 src="explore.svg"
               />
             </Empty>
@@ -418,6 +420,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="start-exploring"
                 src="explore.svg"
               />
             </Empty>,
@@ -433,6 +436,7 @@ ShallowWrapper {
               "children": <img
                 alt={undefined}
                 className={undefined}
+                data-test="start-exploring"
                 src="explore.svg"
               />,
               "className": undefined,
@@ -447,6 +451,7 @@ ShallowWrapper {
               "props": Object {
                 "alt": undefined,
                 "className": undefined,
+                "data-test": "start-exploring",
                 "src": "explore.svg",
               },
               "ref": null,
@@ -552,6 +557,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="start-exploring"
                   src="explore.svg"
                 />
               </Empty>
@@ -811,6 +817,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="start-exploring"
                   src="explore.svg"
                 />
               </Empty>
@@ -831,6 +838,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="start-exploring"
                   src="explore.svg"
                 />
               </Empty>,
@@ -846,6 +854,7 @@ ShallowWrapper {
                 "children": <img
                   alt={undefined}
                   className={undefined}
+                  data-test="start-exploring"
                   src="explore.svg"
                 />,
                 "className": undefined,
@@ -860,6 +869,7 @@ ShallowWrapper {
                 "props": Object {
                   "alt": undefined,
                   "className": undefined,
+                  "data-test": "start-exploring",
                   "src": "explore.svg",
                 },
                 "ref": null,
@@ -1031,6 +1041,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />
             </Empty>
@@ -1290,6 +1301,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />
             </Empty>
@@ -1310,6 +1322,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />
             </Empty>,
@@ -1325,6 +1338,7 @@ ShallowWrapper {
               "children": <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />,
               "className": undefined,
@@ -1339,6 +1353,7 @@ ShallowWrapper {
               "props": Object {
                 "alt": undefined,
                 "className": undefined,
+                "data-test": "no-result-found",
                 "src": "noResult.svg",
               },
               "ref": null,
@@ -1444,6 +1459,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />
               </Empty>
@@ -1703,6 +1719,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />
               </Empty>
@@ -1723,6 +1740,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />
               </Empty>,
@@ -1738,6 +1756,7 @@ ShallowWrapper {
                 "children": <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />,
                 "className": undefined,
@@ -1752,6 +1771,7 @@ ShallowWrapper {
                 "props": Object {
                   "alt": undefined,
                   "className": undefined,
+                  "data-test": "no-result-found",
                   "src": "noResult.svg",
                 },
                 "ref": null,
@@ -1923,6 +1943,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />
             </Empty>
@@ -2182,6 +2203,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />
             </Empty>
@@ -2202,6 +2224,7 @@ ShallowWrapper {
               <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />
             </Empty>,
@@ -2217,6 +2240,7 @@ ShallowWrapper {
               "children": <img
                 alt={undefined}
                 className={undefined}
+                data-test="no-result-found"
                 src="noResult.svg"
               />,
               "className": undefined,
@@ -2231,6 +2255,7 @@ ShallowWrapper {
               "props": Object {
                 "alt": undefined,
                 "className": undefined,
+                "data-test": "no-result-found",
                 "src": "noResult.svg",
               },
               "ref": null,
@@ -2336,6 +2361,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />
               </Empty>
@@ -2595,6 +2621,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />
               </Empty>
@@ -2615,6 +2642,7 @@ ShallowWrapper {
                 <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />
               </Empty>,
@@ -2630,6 +2658,7 @@ ShallowWrapper {
                 "children": <img
                   alt={undefined}
                   className={undefined}
+                  data-test="no-result-found"
                   src="noResult.svg"
                 />,
                 "className": undefined,
@@ -2644,6 +2673,7 @@ ShallowWrapper {
                 "props": Object {
                   "alt": undefined,
                   "className": undefined,
+                  "data-test": "no-result-found",
                   "src": "noResult.svg",
                 },
                 "ref": null,

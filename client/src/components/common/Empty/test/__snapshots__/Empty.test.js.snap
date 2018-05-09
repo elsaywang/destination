@@ -41,6 +41,7 @@ ShallowWrapper {
         </div>,
       ],
       "className": undefined,
+      "data-test": "empty",
     },
     "ref": null,
     "rendered": Array [
@@ -114,6 +115,7 @@ ShallowWrapper {
           </div>,
         ],
         "className": undefined,
+        "data-test": "empty",
       },
       "ref": null,
       "rendered": Array [
@@ -209,6 +211,7 @@ ShallowWrapper {
         </div>,
       ],
       "className": undefined,
+      "data-test": "empty",
     },
     "ref": null,
     "rendered": Array [
@@ -262,6 +265,7 @@ ShallowWrapper {
           </div>,
         ],
         "className": undefined,
+        "data-test": "empty",
       },
       "ref": null,
       "rendered": Array [
