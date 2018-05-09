@@ -59,6 +59,8 @@ class CustomDateRange extends Component {
                         onChange={onCustomStartDateChange}
                         min={this.getMinCustomStartDate()}
                         max={this.getMaxCustomStartDate()}
+                        valueFormat={customDateFormat}
+                        displayFormat="MM/DD/YYYY"
                         quiet
                     />
                 </Label>
@@ -71,6 +73,8 @@ class CustomDateRange extends Component {
                         onChange={onCustomEndDateChange}
                         min={this.getMinCustomEndDate()}
                         max={this.getMaxCustomEndDate()}
+                        valueFormat={customDateFormat}
+                        displayFormat="MM/DD/YYYY"
                         quiet
                     />
                 </Label>
