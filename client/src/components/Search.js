@@ -2,12 +2,12 @@ import React, { Component, Fragment } from 'react';
 import { GridColumn, GridRow } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
-import Datepicker from '@react/react-spectrum/Datepicker';
 import Select from '@react/react-spectrum/Select';
 import NumberInput from '@react/react-spectrum/NumberInput';
 import AddCircle from '@react/react-spectrum/Icon/AddCircle';
 import RemoveCircle from '@react/react-spectrum/Icon/RemoveCircle';
 import AdvancedSearch from './AdvancedSearch';
+import CustomDateRange from './CustomDateRange';
 import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
 
@@ -73,27 +73,12 @@ class Search extends Component {
         }
 
         return (
-            <Fragment>
-                <Label value="Start Date">
-                    <Datepicker
-                        className="custom-start-date"
-                        data-test="custom-start-date"
-                        value={this.props.customStartDate}
-                        onChange={this.props.onCustomStartDateChange}
-                        quiet
-                    />
-                </Label>
-
-                <Label value="End Date">
-                    <Datepicker
-                        className="custom-end-date"
-                        data-test="custom-end-date"
-                        value={this.props.customEndDate}
-                        onChange={this.props.onCustomEndDateChange}
-                        quiet
-                    />
-                </Label>
-            </Fragment>
+            <CustomDateRange
+                customStartDate={this.props.customStartDate}
+                customEndDate={this.props.customEndDate}
+                onCustomStartDateChange={this.props.onCustomStartDateChange}
+                onCustomEndDateChange={this.props.onCustomEndDateChange}
+            />
         );
     };
 

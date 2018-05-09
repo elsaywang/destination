@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Search from '../Search';
 import AdvancedSearch from '../AdvancedSearch';
+import CustomDateRange from '../CustomDateRange';
 import KeyValuePair from '../KeyValuePair';
 import Button from '@react/react-spectrum/Button';
-import Datepicker from '@react/react-spectrum/Datepicker';
 import Select from '@react/react-spectrum/Select';
 import signalStatuses from '../../constants/signalStatusOptions';
 import dateRangeOptions from '../../constants/dateRangeOptions';
@@ -155,6 +155,16 @@ describe('<Search /> component', () => {
             ).toBe(true);
         });
 
+        it('does not render <CustomDateRange /> by default, when the `isCustomDateRangeEnabled` prop is false', () => {
+            expect(wrapper.find(CustomDateRange).exists()).toBeFalsy();
+        });
+
+        it('renders <CustomDateRange /> when the `isCustomDateRangeEnabled` prop is true', () => {
+            const newWrapper = shallow(<Search {...state} isCustomDateRangeEnabled={true} />);
+
+            expect(newWrapper.find(CustomDateRange).exists()).toBeTruthy();
+        });
+
         it('renders <Button /> with label "Search"', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Search'),
@@ -183,16 +193,6 @@ describe('<Search /> component', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Clear All'),
             ).toBe(true);
-        });
-
-        it('does not render custom start and end datepickers by default, when "Custom Date Range" is not selected', () => {
-            expect(wrapper.find(Datepicker).length).toEqual(0);
-        });
-
-        it('renders custom start and end datepickers when the `isCustomDateRangeEnabled` prop is true', () => {
-            const newWrapper = shallow(<Search {...state} isCustomDateRangeEnabled={true} />);
-
-            expect(newWrapper.find(Datepicker).length).toEqual(2);
         });
     });
 });
