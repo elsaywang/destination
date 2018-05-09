@@ -50,7 +50,6 @@ class SearchContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getReportSuites();
         // Pre-populate search fields if user clicked view more button in dashboard
         this.setState({ ...this.state, ...this.props.savedSearchFields });
         //if user does not click any view more button in the dashboard, reset the carried over search results from dashboard
@@ -71,10 +70,15 @@ class SearchContainer extends Component {
                 sourceType,
             },
         });
-        // TODO: API call to update items in table results
+
+        this.props.callSearch(this.state);
     };
 
     onAdvancedSearchChange = value => {
+        if (value && !this.props.reportSuites.length) {
+            this.props.getReportSuites();
+        }
+
         this.setState({
             advanced: value,
             source: {
@@ -95,8 +99,6 @@ class SearchContainer extends Component {
     };
 
     onFilterSelect = value => {
-        // TODO: This is currently overly complex due to API restrictions,
-        // we should re-revisit when AAM- is complete
         const matchingReportSuite = this.props.reportSuites.find(
             reportSuite => reportSuite.name === value,
         );
@@ -106,12 +108,12 @@ class SearchContainer extends Component {
                 name: value,
                 dataSourceIds: [matchingReportSuite.dataSourceId],
                 reportSuiteIds: [matchingReportSuite.suite],
-                sourceType: 'ANALYTICS',
+                sourceType: this.state.source.sourceType,
             },
         });
     };
 
-    onKeySelect = (id, value) => {
+    onKeyChange = (id, value) => {
         let keyValuePairs = [...this.state.keyValuePairs];
 
         keyValuePairs.find(kvp => kvp.id === id).key = value;
@@ -255,7 +257,7 @@ class SearchContainer extends Component {
                             onAdvancedSearchChange={this.onAdvancedSearchChange}
                             onFilterChange={this.onFilterChange}
                             onFilterSelect={value => this.onFilterSelect(value)}
-                            onKeySelect={this.onKeySelect}
+                            onKeyChange={this.onKeyChange}
                             onValueChange={this.onValueChange}
                             onOperatorChange={this.onOperatorChange}
                             onAddClick={this.onAddClick}
@@ -299,12 +301,14 @@ class SearchContainer extends Component {
 
                 {Object.keys(this.props.results.list).length ? (
                     <div style={{ display: 'flex', marginTop: 20 }}>
-                        <div className={styles.filterListContainer}>
-                            <SignalTypeFilter
-                                onSignalTypeChange={this.handleSignalTypeChange}
-                                signalType={this.state.source.sourceType}
-                            />
-                        </div>
+                        {!this.state.advanced && (
+                            <div className={styles.filterListContainer}>
+                                <SignalTypeFilter
+                                    onSignalTypeChange={this.handleSignalTypeChange}
+                                    signalType={this.state.source.sourceType}
+                                />
+                            </div>
+                        )}
                         <div className={styles.tableContainer}>
                             <GridRow valign="middle">
                                 <GridColumn size={4}>

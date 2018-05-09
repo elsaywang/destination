@@ -5,7 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <KeyValuePair
-    onKeySelect={[MockFunction]}
+    enabled={false}
+    onKeyChange={[MockFunction]}
     onOperatorChange={[MockFunction]}
     onValueChange={[MockFunction]}
     pair={
@@ -16,6 +17,7 @@ ShallowWrapper {
         "value": "",
       }
     }
+    reportSuiteId="test"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -43,11 +45,12 @@ ShallowWrapper {
           >
             <Textfield
               autoFocus={false}
+              className={undefined}
               data-test="key-search-field"
               disabled={false}
               id="key0"
               invalid={false}
-              placeholder="Type a key"
+              placeholder="Enter a key"
               readOnly={false}
               required={false}
             />
@@ -98,7 +101,7 @@ ShallowWrapper {
             id="value0"
             invalid={false}
             onChange={[Function]}
-            placeholder="Type a value"
+            placeholder="Enter a value"
             readOnly={false}
             required={false}
             value=""
@@ -123,11 +126,12 @@ ShallowWrapper {
           >
             <Textfield
               autoFocus={false}
+              className={undefined}
               data-test="key-search-field"
               disabled={false}
               id="key0"
               invalid={false}
-              placeholder="Type a key"
+              placeholder="Enter a key"
               readOnly={false}
               required={false}
             />
@@ -144,11 +148,12 @@ ShallowWrapper {
             "allowCreate": false,
             "children": <Textfield
               autoFocus={false}
+              className={undefined}
               data-test="key-search-field"
               disabled={false}
               id="key0"
               invalid={false}
-              placeholder="Type a key"
+              placeholder="Enter a key"
               readOnly={false}
               required={false}
             />,
@@ -164,11 +169,12 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "autoFocus": false,
+              "className": undefined,
               "data-test": "key-search-field",
               "disabled": false,
               "id": "key0",
               "invalid": false,
-              "placeholder": "Type a key",
+              "placeholder": "Enter a key",
               "readOnly": false,
               "required": false,
             },
@@ -232,7 +238,7 @@ ShallowWrapper {
             id="value0"
             invalid={false}
             onChange={[Function]}
-            placeholder="Type a value"
+            placeholder="Enter a value"
             readOnly={false}
             required={false}
             value=""
@@ -253,7 +259,7 @@ ShallowWrapper {
             "id": "value0",
             "invalid": false,
             "onChange": [Function],
-            "placeholder": "Type a value",
+            "placeholder": "Enter a value",
             "readOnly": false,
             "required": false,
             "value": "",
@@ -265,7 +271,7 @@ ShallowWrapper {
         "type": [Function],
       },
     ],
-    "type": "div",
+    "type": "span",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -287,11 +293,12 @@ ShallowWrapper {
             >
               <Textfield
                 autoFocus={false}
+                className={undefined}
                 data-test="key-search-field"
                 disabled={false}
                 id="key0"
                 invalid={false}
-                placeholder="Type a key"
+                placeholder="Enter a key"
                 readOnly={false}
                 required={false}
               />
@@ -342,7 +349,7 @@ ShallowWrapper {
               id="value0"
               invalid={false}
               onChange={[Function]}
-              placeholder="Type a value"
+              placeholder="Enter a value"
               readOnly={false}
               required={false}
               value=""
@@ -367,11 +374,12 @@ ShallowWrapper {
             >
               <Textfield
                 autoFocus={false}
+                className={undefined}
                 data-test="key-search-field"
                 disabled={false}
                 id="key0"
                 invalid={false}
-                placeholder="Type a key"
+                placeholder="Enter a key"
                 readOnly={false}
                 required={false}
               />
@@ -388,11 +396,12 @@ ShallowWrapper {
               "allowCreate": false,
               "children": <Textfield
                 autoFocus={false}
+                className={undefined}
                 data-test="key-search-field"
                 disabled={false}
                 id="key0"
                 invalid={false}
-                placeholder="Type a key"
+                placeholder="Enter a key"
                 readOnly={false}
                 required={false}
               />,
@@ -408,11 +417,12 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "autoFocus": false,
+                "className": undefined,
                 "data-test": "key-search-field",
                 "disabled": false,
                 "id": "key0",
                 "invalid": false,
-                "placeholder": "Type a key",
+                "placeholder": "Enter a key",
                 "readOnly": false,
                 "required": false,
               },
@@ -476,7 +486,7 @@ ShallowWrapper {
               id="value0"
               invalid={false}
               onChange={[Function]}
-              placeholder="Type a value"
+              placeholder="Enter a value"
               readOnly={false}
               required={false}
               value=""
@@ -497,7 +507,7 @@ ShallowWrapper {
               "id": "value0",
               "invalid": false,
               "onChange": [Function],
-              "placeholder": "Type a value",
+              "placeholder": "Enter a value",
               "readOnly": false,
               "required": false,
               "value": "",
@@ -509,7 +519,7 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
-      "type": "div",
+      "type": "span",
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -13,7 +13,7 @@ class KeyValuePair extends Component {
         super(props);
 
         this.onSelectOperatorChange = this.props.onOperatorChange.bind(this, this.props.pair.id);
-        this.onKeySelect = this.props.onKeySelect.bind(this, this.props.pair.id);
+        this.onKeyChange = this.props.onKeyChange.bind(this, this.props.pair.id);
         this.onValueChange = this.props.onValueChange.bind(this, this.props.pair.id);
     }
 
@@ -21,23 +21,39 @@ class KeyValuePair extends Component {
         return fetch(`/api/signals/keys?search=${key}`).then(response => response.json());
     };
 
+    getKeysByReportSuiteId = () => {
+        const { reportSuiteId } = this.props;
+
+        return fetch(`/api/v1/report-suites/${reportSuiteId}/keys`)
+            .then(response => response.json())
+            .then(suites => suites.keys.map(suite => suite.name));
+    };
+
     render() {
         const { id, key, value, operator } = this.props.pair;
+        const { advanced } = this.props;
         const forKey = `key${id}`;
         const forValue = `value${id}`;
+        const keyPlaceholder = `Enter a key${advanced ? ' or key name' : ''}`;
+        const keyLabel = `Key${advanced ? ' or Key Name' : ''}`;
+        const valuePlaceholder = 'Enter a value';
+        const valueLabel = 'Value';
 
         return (
-            <div data-test="key-value-pair">
-                <Label value="Key" labelFor={forKey}>
+            <span data-test="key-value-pair">
+                <Label value={keyLabel} labelFor={forKey}>
                     <Autocomplete
-                        className={classNames(styles['key-search'], 'key-search')}
-                        getCompletions={this.getCompletions}
+                        className="key-search"
+                        getCompletions={
+                            advanced ? this.getKeysByReportSuiteId : this.getCompletions
+                        }
                         value={key}
-                        onChange={this.onKeySelect}>
+                        onChange={this.onKeyChange}>
                         <Textfield
+                            className={styles.textField}
                             data-test="key-search-field"
                             id={forKey}
-                            placeholder="Type a key"
+                            placeholder={keyPlaceholder}
                         />
                     </Autocomplete>
                 </Label>
@@ -47,18 +63,18 @@ class KeyValuePair extends Component {
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
                 />
-                <Label value="Value" labelFor={forValue}>
+                <Label value={valueLabel} labelFor={forValue}>
                     <Textfield
-                        className="value-search"
+                        className={classNames(styles.textField, 'value-search')}
                         data-test="value-search"
                         id={forValue}
                         value={value}
-                        placeholder="Type a value"
+                        placeholder={valuePlaceholder}
                         onChange={this.onValueChange}
                         invalid={!isValueValid(this.props.pair)}
                     />
                 </Label>
-            </div>
+            </span>
         );
     }
 }

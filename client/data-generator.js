@@ -19,6 +19,7 @@ var operators = [
     { label: '<=', value: '<=' },
     { label: 'contains', value: 'contains' },
 ];
+var signalTypes = ['ALL', 'ANALYTICS', 'ALF', 'REALTIME', 'ONBOARDED'];
 
 module.exports = () => {
     const data = {
@@ -27,6 +28,7 @@ module.exports = () => {
         traits: [],
         keys: [],
         reportSuites: [],
+        reportSuitesKeys: [],
     };
 
     const randomGenerateArray = (item, max = 5) => {
@@ -85,7 +87,7 @@ module.exports = () => {
             this.name = name || undefined;
             this.dataSourceIds = dataSourceIds || [faker.random.number()];
             this.reportSuiteIds = reportSuiteIds || null;
-            this.sourceType = sourceType || 'REALTIME';
+            this.sourceType = signalTypes[Math.floor(Math.random() * signalTypes.length)];
         }
     }
 
@@ -93,7 +95,10 @@ module.exports = () => {
         list: [
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
+                keyName: faker.random.word(),
+                valueName: faker.random.word(),
                 source: new Source(),
+                totalEventFires: faker.random.number(),
                 totalCounts: faker.random.number(),
                 percentageChange: 0.154,
                 includedInTraits: [1, 2, 3],
@@ -101,7 +106,10 @@ module.exports = () => {
             },
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
+                keyName: faker.random.word(),
+                valueName: faker.random.word(),
                 source: new Source(),
+                totalEventFires: faker.random.number(),
                 totalCounts: faker.random.number(),
                 percentageChange: -0.3711,
                 includedInTraits: [],
@@ -109,7 +117,10 @@ module.exports = () => {
             },
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
+                keyName: faker.random.word(),
+                valueName: faker.random.word(),
                 source: new Source(1234, null, 'ONBOARDED'),
+                totalEventFires: faker.random.number(),
                 totalCounts: faker.random.number(),
                 percentageChange: -0.9711,
                 includedInTraits: [131, 838],
@@ -117,8 +128,11 @@ module.exports = () => {
             },
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
+                keyName: faker.random.word(),
+                valueName: faker.random.word(),
                 source: new Source(null, 5678, 'ANALYTICS'),
                 totalCounts: faker.random.number(),
+                totalEventFires: faker.random.number(),
                 percentageChange: 0.8711,
                 includedInTraits: [],
                 signalStatus: 'UNUSED',
@@ -127,6 +141,44 @@ module.exports = () => {
         page: 0,
         pageSize: 0,
         total: 4,
+    };
+
+    data.reportSuitesKeys = {
+        reportSuiteId: 169626,
+        keys: [
+            {
+                id: 0,
+                name: 'test-1',
+            },
+            {
+                id: 1,
+                name: 'test-2',
+            },
+            {
+                id: 2,
+                name: 'test-3',
+            },
+            {
+                id: 3,
+                name: 'test-4',
+            },
+            {
+                id: 4,
+                name: 'test-5',
+            },
+            {
+                id: 5,
+                name: 'test-6',
+            },
+            {
+                id: 6,
+                name: 'test-7',
+            },
+            {
+                id: 7,
+                name: 'test-8',
+            },
+        ],
     };
 
     // Create 5 saved search
