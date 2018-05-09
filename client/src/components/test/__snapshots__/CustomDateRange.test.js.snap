@@ -33,8 +33,8 @@ ShallowWrapper {
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
-            max={null}
-            min={null}
+            max="2018-04-30"
+            min="2017-05-09"
             onChange={[MockFunction]}
             placeholder="Choose a date"
             placement="right"
@@ -56,8 +56,8 @@ ShallowWrapper {
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
-            max={null}
-            min={null}
+            max="2018-05-09"
+            min="2018-04-25"
             onChange={[MockFunction]}
             placeholder="Choose a date"
             placement="right"
@@ -85,8 +85,8 @@ ShallowWrapper {
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
-            max={null}
-            min={null}
+            max="2018-04-30"
+            min="2017-05-09"
             onChange={[MockFunction]}
             placeholder="Choose a date"
             placement="right"
@@ -111,8 +111,8 @@ ShallowWrapper {
             "headerFormat": "MMMM YYYY",
             "id": "react-spectrum-1",
             "invalid": false,
-            "max": null,
-            "min": null,
+            "max": "2018-04-30",
+            "min": "2017-05-09",
             "onChange": [MockFunction],
             "placeholder": "Choose a date",
             "placement": "right",
@@ -141,8 +141,8 @@ ShallowWrapper {
             headerFormat="MMMM YYYY"
             id="react-spectrum-1"
             invalid={false}
-            max={null}
-            min={null}
+            max="2018-05-09"
+            min="2018-04-25"
             onChange={[MockFunction]}
             placeholder="Choose a date"
             placement="right"
@@ -167,8 +167,8 @@ ShallowWrapper {
             "headerFormat": "MMMM YYYY",
             "id": "react-spectrum-1",
             "invalid": false,
-            "max": null,
-            "min": null,
+            "max": "2018-05-09",
+            "min": "2018-04-25",
             "onChange": [MockFunction],
             "placeholder": "Choose a date",
             "placement": "right",
@@ -205,8 +205,8 @@ ShallowWrapper {
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
-              max={null}
-              min={null}
+              max="2018-04-30"
+              min="2017-05-09"
               onChange={[MockFunction]}
               placeholder="Choose a date"
               placement="right"
@@ -228,8 +228,8 @@ ShallowWrapper {
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
-              max={null}
-              min={null}
+              max="2018-05-09"
+              min="2018-04-25"
               onChange={[MockFunction]}
               placeholder="Choose a date"
               placement="right"
@@ -257,8 +257,8 @@ ShallowWrapper {
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
-              max={null}
-              min={null}
+              max="2018-04-30"
+              min="2017-05-09"
               onChange={[MockFunction]}
               placeholder="Choose a date"
               placement="right"
@@ -283,8 +283,8 @@ ShallowWrapper {
               "headerFormat": "MMMM YYYY",
               "id": "react-spectrum-1",
               "invalid": false,
-              "max": null,
-              "min": null,
+              "max": "2018-04-30",
+              "min": "2017-05-09",
               "onChange": [MockFunction],
               "placeholder": "Choose a date",
               "placement": "right",
@@ -313,8 +313,8 @@ ShallowWrapper {
               headerFormat="MMMM YYYY"
               id="react-spectrum-1"
               invalid={false}
-              max={null}
-              min={null}
+              max="2018-05-09"
+              min="2018-04-25"
               onChange={[MockFunction]}
               placeholder="Choose a date"
               placement="right"
@@ -339,8 +339,8 @@ ShallowWrapper {
               "headerFormat": "MMMM YYYY",
               "id": "react-spectrum-1",
               "invalid": false,
-              "max": null,
-              "min": null,
+              "max": "2018-05-09",
+              "min": "2018-04-25",
               "onChange": [MockFunction],
               "placeholder": "Choose a date",
               "placement": "right",

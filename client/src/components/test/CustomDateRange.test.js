@@ -7,15 +7,6 @@ import Datepicker from '@react/react-spectrum/Datepicker';
 describe('<CustomDateRange /> component', () => {
     const mockFn = jest.fn();
 
-    const wrapper = shallow(
-        <CustomDateRange
-            customStartDate="2018-04-24"
-            customEndDate="2018-05-01"
-            onCustomStartDateChange={mockFn}
-            onCustomEndDateChange={mockFn}
-        />,
-    );
-
     beforeEach(() => {
         mockdate.set(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
     });
@@ -25,12 +16,90 @@ describe('<CustomDateRange /> component', () => {
     });
 
     describe('rendering', () => {
+        const wrapper = shallow(
+            <CustomDateRange
+                customStartDate="2018-04-24"
+                customEndDate="2018-05-01"
+                onCustomStartDateChange={mockFn}
+                onCustomEndDateChange={mockFn}
+            />,
+        );
+
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
         it('renders custom start and end date <Datepicker /> components', () => {
             expect(wrapper.find(Datepicker).length).toEqual(2);
+        });
+    });
+
+    describe('getMinCustomStartDate', () => {
+        // This will become dynamic as part of AAM-37270
+        it('should be hardcoded at 365 days ago in UTC', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-24" customEndDate="2018-05-01" />,
+            );
+            const actual = wrapper.instance().getMinCustomStartDate();
+            const expected = '2017-05-01';
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('getMaxCustomStartDate', () => {
+        it('should default to 1 day ago in UTC', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-24" customEndDate="2018-05-01" />,
+            );
+            const actual = wrapper.instance().getMaxCustomStartDate();
+            const expected = '2018-04-30';
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should be 1 day behind the custom end date', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-01" customEndDate="2018-04-15" />,
+            );
+            const actual = wrapper.instance().getMaxCustomStartDate();
+            const expected = '2018-04-14';
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('getMinCustomEndDate', () => {
+        it('should default to 6 days ago in UTC, since the default custom start date is 7 days ago', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-24" customEndDate="2018-05-01" />,
+            );
+            const actual = wrapper.instance().getMinCustomEndDate();
+            const expected = '2018-04-25';
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should be 1 day ahead of the custom start date', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-01" customEndDate="2018-04-15" />,
+            );
+            const actual = wrapper.instance().getMinCustomEndDate();
+            const expected = '2018-04-02';
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('getMaxCustomEndDate', () => {
+        it('should be today`s date in in UTC', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-24" customEndDate="2018-05-01" />,
+            );
+            const actual = wrapper.instance().getMaxCustomEndDate();
+            const expected = '2018-05-01';
+
+            expect(actual).toEqual(expected);
         });
     });
 });
