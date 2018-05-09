@@ -3,12 +3,12 @@ export const getEmptyInfo = searched =>
         ? {
               title: `No results found.`,
               message: `Refine the search query and try searching again.`,
-              imageAlt: `no results found`,
+              imageAlt: `No results found. Refine the search query and try searching again.`,
               dataTest: `no-result-found`,
           }
         : {
               title: `Start exploring.`,
               message: `Search by key-value pairs or use only filters to get insights on signals.`,
-              imageAlt: `start exploring`,
+              imageAlt: `Start exploring. Search by key-value pairs or use only filters to get insights on signals.`,
               dataTest: `start-exploring`,
           };
