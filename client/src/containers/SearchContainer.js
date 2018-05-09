@@ -16,6 +16,7 @@ import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
+import { customDateFormat } from '../constants/dateRangeConstants';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
@@ -165,15 +166,15 @@ class SearchContainer extends Component {
         });
     };
 
-    onCustomStartDateChange = value => {
+    onCustomStartDateChange = (valueText, value) => {
         this.setState({
-            customStartDate: value,
+            customStartDate: value.format(customDateFormat),
         });
     };
 
-    onCustomEndDateChange = value => {
+    onCustomEndDateChange = (valueText, value) => {
         this.setState({
-            customEndDate: value,
+            customEndDate: value.format(customDateFormat),
         });
     };
 
