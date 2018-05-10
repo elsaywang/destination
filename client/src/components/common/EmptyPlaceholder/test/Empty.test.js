@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Empty from '../Empty';
+import EmptyPlaceholder from '../EmptyPlaceholder';
 import Heading from '@react/react-spectrum/Heading';
 import explore from '../../../../images/explore.svg';
 import noResult from '../../../../images/noResult.svg';
 
-describe('<Empty/> component', () => {
+describe('<EmptyPlaceholder/> component', () => {
     const props = {
         title: 'No results found.',
         message: 'Refine the search query and try searching again.',
@@ -14,7 +14,7 @@ describe('<Empty/> component', () => {
     const NoResult = () => <img src={noResult} alt="noResult" />;
 
     describe('rendering when it does not contain any children component', () => {
-        const wrapper = shallow(<Empty {...props} />);
+        const wrapper = shallow(<EmptyPlaceholder {...props} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
@@ -57,10 +57,10 @@ describe('<Empty/> component', () => {
             message: 'Refine the search query and try searching again.',
         };
         const wrapper = shallow(
-            <Empty {...props}>
+            <EmptyPlaceholder {...props}>
                 <Explore />
                 <NoResult />
-            </Empty>,
+            </EmptyPlaceholder>,
         );
 
         it('matches snapshot', () => {

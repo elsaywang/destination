@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Empty.css';
+import styles from './EmptyPlaceholder.css';
 import classNames from 'classnames';
 import Heading from '@react/react-spectrum/Heading';
 
-function Empty(props) {
+function EmptyPlaceholder(props) {
     return (
         <div className={props.className} data-test="empty">
             {props.children}
@@ -16,9 +16,9 @@ function Empty(props) {
     );
 }
 
-Empty.propTypes = {
+EmptyPlaceholder.propTypes = {
     title: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
 };
 
-export default Empty;
+export default EmptyPlaceholder;

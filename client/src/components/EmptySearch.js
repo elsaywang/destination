@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Empty from './common/Empty';
+import EmptyPlaceholder from './common/EmptyPlaceholder';
 import styles from './EmptySearch.css';
 import Explore from '../images/explore.svg';
 import NoResult from '../images/noResult.svg';
@@ -38,7 +38,7 @@ function EmptySearch({ variant, className }) {
         }
     };
     return (
-        <Empty
+        <EmptyPlaceholder
             className={className}
             title={getEmptyOptions(variant).title}
             message={getEmptyOptions(variant).message}
@@ -49,7 +49,7 @@ function EmptySearch({ variant, className }) {
                 className={getImageClass()}
                 alt={getEmptyOptions(variant).imageAlt}
             />
-        </Empty>
+        </EmptyPlaceholder>
     );
 }
 

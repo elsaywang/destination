@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import EmptySearch from '../EmptySearch';
-import Empty from '../../components/common/Empty';
+import EmptyPlaceholder from '../../components/common/EmptyPlaceholder';
 import Explore from '../../images/explore.svg';
 import NoResult from '../../images/noResult.svg';
 
@@ -13,8 +13,8 @@ describe('<EmptySearch/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <Empty/> component with Explore Image', () => {
-            expect(wrapper.find(Empty).exists()).toBe(true);
+        it('renders <EmptyPlaceholder/> component with Explore Image', () => {
+            expect(wrapper.find(EmptyPlaceholder).exists()).toBe(true);
             expect(wrapper.find('img').props().src).toEqual(Explore);
         });
     });
@@ -25,8 +25,8 @@ describe('<EmptySearch/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <Empty/> component with NoResult Image', () => {
-            expect(wrapper.find(Empty).exists()).toBe(true);
+        it('renders <EmptyPlaceholder/> component with NoResult Image', () => {
+            expect(wrapper.find(EmptyPlaceholder).exists()).toBe(true);
             expect(wrapper.find('img').props().src).toEqual(NoResult);
         });
     });

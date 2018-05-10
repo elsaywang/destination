@@ -13,13 +13,14 @@ function Nav(props) {
             className={styles.tabList}
             selectedIndex={getSelectedIndex()}
             quiet
+            variant="compact"
             onChange={noOp}>
-            <Tab className={styles.tab} selected={props.location.pathname === '/'}>
+            <Tab selected={props.location.pathname === '/'}>
                 <NavLink to="/" className={styles.link}>
                     Dashboard
                 </NavLink>
             </Tab>
-            <Tab className={styles.tab} selected={props.location.pathname === '/search'}>
+            <Tab selected={props.location.pathname === '/search'}>
                 <NavLink to="/search" className={styles.link}>
                     Search
                 </NavLink>
