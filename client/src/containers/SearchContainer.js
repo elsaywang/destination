@@ -168,15 +168,15 @@ class SearchContainer extends Component {
         });
     };
 
-    onCustomStartDateChange = (valueText, value) => {
+    onCustomStartDateChange = value => {
         this.setState({
-            customStartDate: value.format(customDateFormat),
+            customStartDate: value,
         });
     };
 
-    onCustomEndDateChange = (valueText, value) => {
+    onCustomEndDateChange = value => {
         this.setState({
-            customEndDate: value.format(customDateFormat),
+            customEndDate: value,
         });
     };
 

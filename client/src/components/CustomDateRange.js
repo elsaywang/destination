@@ -3,13 +3,29 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import Datepicker from '@react/react-spectrum/Datepicker';
 import Label from './common/Label';
-import { customDateFormat, maxLookbackDays } from '../constants/dateRangeConstants';
+import {
+    customDateFormat,
+    dateInputFormats,
+    maxLookbackDays,
+} from '../constants/dateRangeConstants';
 import { getNow } from '../utils/dateRange';
 
 // The custom start and end dates must be at least 1 day apart.
 const minCustomDateRangeLength = 1;
 
 class CustomDateRange extends Component {
+    parseSelectedDate(valueText) {
+        return moment.utc(valueText, dateInputFormats).format(customDateFormat);
+    }
+
+    handleCustomStartDateChange = valueText => {
+        this.props.onCustomStartDateChange(this.parseSelectedDate(valueText));
+    };
+
+    handleCustomEndDateChange = valueText => {
+        this.props.onCustomEndDateChange(this.parseSelectedDate(valueText));
+    };
+
     getMinCustomStartDate() {
         return getNow()
             .startOf('day')
@@ -56,7 +72,7 @@ class CustomDateRange extends Component {
                         className="custom-start-date"
                         data-test="custom-start-date"
                         value={customStartDate}
-                        onChange={onCustomStartDateChange}
+                        onChange={this.handleCustomStartDateChange}
                         min={this.getMinCustomStartDate()}
                         max={this.getMaxCustomStartDate()}
                         valueFormat={customDateFormat}
@@ -70,7 +86,7 @@ class CustomDateRange extends Component {
                         className="custom-end-date"
                         data-test="custom-end-date"
                         value={customEndDate}
-                        onChange={onCustomEndDateChange}
+                        onChange={this.handleCustomEndDateChange}
                         min={this.getMinCustomEndDate()}
                         max={this.getMaxCustomEndDate()}
                         valueFormat={customDateFormat}
