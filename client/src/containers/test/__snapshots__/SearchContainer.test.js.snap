@@ -136,19 +136,10 @@ ShallowWrapper {
             offsetSize={4}
             size={8}
           >
-            <Empty
+            <EmptySearch
               className={undefined}
-              message="Search by key-value pairs or use only filters to get insights on signals."
-              messageStyle={undefined}
-              title="Start exploring."
-            >
-              <img
-                alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                className={undefined}
-                data-test="start-exploring"
-                src="explore.svg"
-              />
-            </Empty>
+              variant="explore"
+            />
           </GridColumn>
         </GridRow>,
       ],
@@ -412,19 +403,10 @@ ShallowWrapper {
             offsetSize={4}
             size={8}
           >
-            <Empty
+            <EmptySearch
               className={undefined}
-              message="Search by key-value pairs or use only filters to get insights on signals."
-              messageStyle={undefined}
-              title="Start exploring."
-            >
-              <img
-                alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                className={undefined}
-                data-test="start-exploring"
-                src="explore.svg"
-              />
-            </Empty>
+              variant="explore"
+            />
           </GridColumn>,
           "reverse": false,
         },
@@ -434,19 +416,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Empty
+            "children": <EmptySearch
               className={undefined}
-              message="Search by key-value pairs or use only filters to get insights on signals."
-              messageStyle={undefined}
-              title="Start exploring."
-            >
-              <img
-                alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                className={undefined}
-                data-test="start-exploring"
-                src="explore.svg"
-              />
-            </Empty>,
+              variant="explore"
+            />,
             "offsetSize": 4,
             "size": 8,
           },
@@ -456,32 +429,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": <img
-                alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                className={undefined}
-                data-test="start-exploring"
-                src="explore.svg"
-              />,
               "className": undefined,
-              "message": "Search by key-value pairs or use only filters to get insights on signals.",
-              "messageStyle": undefined,
-              "title": "Start exploring.",
+              "variant": "explore",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Start exploring. Search by key-value pairs or use only filters to get insights on signals.",
-                "className": undefined,
-                "data-test": "start-exploring",
-                "src": "explore.svg",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],
@@ -578,19 +530,10 @@ ShallowWrapper {
               offsetSize={4}
               size={8}
             >
-              <Empty
+              <EmptySearch
                 className={undefined}
-                message="Search by key-value pairs or use only filters to get insights on signals."
-                messageStyle={undefined}
-                title="Start exploring."
-              >
-                <img
-                  alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                  className={undefined}
-                  data-test="start-exploring"
-                  src="explore.svg"
-                />
-              </Empty>
+                variant="explore"
+              />
             </GridColumn>
           </GridRow>,
         ],
@@ -854,19 +797,10 @@ ShallowWrapper {
               offsetSize={4}
               size={8}
             >
-              <Empty
+              <EmptySearch
                 className={undefined}
-                message="Search by key-value pairs or use only filters to get insights on signals."
-                messageStyle={undefined}
-                title="Start exploring."
-              >
-                <img
-                  alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                  className={undefined}
-                  data-test="start-exploring"
-                  src="explore.svg"
-                />
-              </Empty>
+                variant="explore"
+              />
             </GridColumn>,
             "reverse": false,
           },
@@ -876,19 +810,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <Empty
+              "children": <EmptySearch
                 className={undefined}
-                message="Search by key-value pairs or use only filters to get insights on signals."
-                messageStyle={undefined}
-                title="Start exploring."
-              >
-                <img
-                  alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                  className={undefined}
-                  data-test="start-exploring"
-                  src="explore.svg"
-                />
-              </Empty>,
+                variant="explore"
+              />,
               "offsetSize": 4,
               "size": 8,
             },
@@ -898,32 +823,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <img
-                  alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-                  className={undefined}
-                  data-test="start-exploring"
-                  src="explore.svg"
-                />,
                 "className": undefined,
-                "message": "Search by key-value pairs or use only filters to get insights on signals.",
-                "messageStyle": undefined,
-                "title": "Start exploring.",
+                "variant": "explore",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Start exploring. Search by key-value pairs or use only filters to get insights on signals.",
-                  "className": undefined,
-                  "data-test": "start-exploring",
-                  "src": "explore.svg",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
+              "rendered": null,
               "type": [Function],
             },
             "type": [Function],
@@ -1086,19 +990,10 @@ ShallowWrapper {
             offsetSize={4}
             size={8}
           >
-            <Empty
+            <EmptySearch
               className={undefined}
-              message="Refine the search query and try searching again."
-              messageStyle={undefined}
-              title="No results found."
-            >
-              <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />
-            </Empty>
+              variant="noResult"
+            />
           </GridColumn>
         </GridRow>,
       ],
@@ -1362,19 +1257,10 @@ ShallowWrapper {
             offsetSize={4}
             size={8}
           >
-            <Empty
+            <EmptySearch
               className={undefined}
-              message="Refine the search query and try searching again."
-              messageStyle={undefined}
-              title="No results found."
-            >
-              <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />
-            </Empty>
+              variant="noResult"
+            />
           </GridColumn>,
           "reverse": false,
         },
@@ -1384,19 +1270,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Empty
+            "children": <EmptySearch
               className={undefined}
-              message="Refine the search query and try searching again."
-              messageStyle={undefined}
-              title="No results found."
-            >
-              <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />
-            </Empty>,
+              variant="noResult"
+            />,
             "offsetSize": 4,
             "size": 8,
           },
@@ -1406,32 +1283,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />,
               "className": undefined,
-              "message": "Refine the search query and try searching again.",
-              "messageStyle": undefined,
-              "title": "No results found.",
+              "variant": "noResult",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "No results found. Refine the search query and try searching again.",
-                "className": undefined,
-                "data-test": "no-result-found",
-                "src": "noResult.svg",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],
@@ -1528,19 +1384,10 @@ ShallowWrapper {
               offsetSize={4}
               size={8}
             >
-              <Empty
+              <EmptySearch
                 className={undefined}
-                message="Refine the search query and try searching again."
-                messageStyle={undefined}
-                title="No results found."
-              >
-                <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />
-              </Empty>
+                variant="noResult"
+              />
             </GridColumn>
           </GridRow>,
         ],
@@ -1804,19 +1651,10 @@ ShallowWrapper {
               offsetSize={4}
               size={8}
             >
-              <Empty
+              <EmptySearch
                 className={undefined}
-                message="Refine the search query and try searching again."
-                messageStyle={undefined}
-                title="No results found."
-              >
-                <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />
-              </Empty>
+                variant="noResult"
+              />
             </GridColumn>,
             "reverse": false,
           },
@@ -1826,19 +1664,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <Empty
+              "children": <EmptySearch
                 className={undefined}
-                message="Refine the search query and try searching again."
-                messageStyle={undefined}
-                title="No results found."
-              >
-                <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />
-              </Empty>,
+                variant="noResult"
+              />,
               "offsetSize": 4,
               "size": 8,
             },
@@ -1848,32 +1677,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />,
                 "className": undefined,
-                "message": "Refine the search query and try searching again.",
-                "messageStyle": undefined,
-                "title": "No results found.",
+                "variant": "noResult",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "No results found. Refine the search query and try searching again.",
-                  "className": undefined,
-                  "data-test": "no-result-found",
-                  "src": "noResult.svg",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
+              "rendered": null,
               "type": [Function],
             },
             "type": [Function],
@@ -2036,19 +1844,10 @@ ShallowWrapper {
             offsetSize={4}
             size={8}
           >
-            <Empty
+            <EmptySearch
               className={undefined}
-              message="Refine the search query and try searching again."
-              messageStyle={undefined}
-              title="No results found."
-            >
-              <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />
-            </Empty>
+              variant="noResult"
+            />
           </GridColumn>
         </GridRow>,
       ],
@@ -2312,19 +2111,10 @@ ShallowWrapper {
             offsetSize={4}
             size={8}
           >
-            <Empty
+            <EmptySearch
               className={undefined}
-              message="Refine the search query and try searching again."
-              messageStyle={undefined}
-              title="No results found."
-            >
-              <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />
-            </Empty>
+              variant="noResult"
+            />
           </GridColumn>,
           "reverse": false,
         },
@@ -2334,19 +2124,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Empty
+            "children": <EmptySearch
               className={undefined}
-              message="Refine the search query and try searching again."
-              messageStyle={undefined}
-              title="No results found."
-            >
-              <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />
-            </Empty>,
+              variant="noResult"
+            />,
             "offsetSize": 4,
             "size": 8,
           },
@@ -2356,32 +2137,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": <img
-                alt="No results found. Refine the search query and try searching again."
-                className={undefined}
-                data-test="no-result-found"
-                src="noResult.svg"
-              />,
               "className": undefined,
-              "message": "Refine the search query and try searching again.",
-              "messageStyle": undefined,
-              "title": "No results found.",
+              "variant": "noResult",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "No results found. Refine the search query and try searching again.",
-                "className": undefined,
-                "data-test": "no-result-found",
-                "src": "noResult.svg",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
+            "rendered": null,
             "type": [Function],
           },
           "type": [Function],
@@ -2478,19 +2238,10 @@ ShallowWrapper {
               offsetSize={4}
               size={8}
             >
-              <Empty
+              <EmptySearch
                 className={undefined}
-                message="Refine the search query and try searching again."
-                messageStyle={undefined}
-                title="No results found."
-              >
-                <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />
-              </Empty>
+                variant="noResult"
+              />
             </GridColumn>
           </GridRow>,
         ],
@@ -2754,19 +2505,10 @@ ShallowWrapper {
               offsetSize={4}
               size={8}
             >
-              <Empty
+              <EmptySearch
                 className={undefined}
-                message="Refine the search query and try searching again."
-                messageStyle={undefined}
-                title="No results found."
-              >
-                <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />
-              </Empty>
+                variant="noResult"
+              />
             </GridColumn>,
             "reverse": false,
           },
@@ -2776,19 +2518,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <Empty
+              "children": <EmptySearch
                 className={undefined}
-                message="Refine the search query and try searching again."
-                messageStyle={undefined}
-                title="No results found."
-              >
-                <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />
-              </Empty>,
+                variant="noResult"
+              />,
               "offsetSize": 4,
               "size": 8,
             },
@@ -2798,32 +2531,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <img
-                  alt="No results found. Refine the search query and try searching again."
-                  className={undefined}
-                  data-test="no-result-found"
-                  src="noResult.svg"
-                />,
                 "className": undefined,
-                "message": "Refine the search query and try searching again.",
-                "messageStyle": undefined,
-                "title": "No results found.",
+                "variant": "noResult",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "No results found. Refine the search query and try searching again.",
-                  "className": undefined,
-                  "data-test": "no-result-found",
-                  "src": "noResult.svg",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
+              "rendered": null,
               "type": [Function],
             },
             "type": [Function],

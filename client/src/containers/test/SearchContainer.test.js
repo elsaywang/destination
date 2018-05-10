@@ -7,9 +7,7 @@ import Search from '../../components/Search';
 import SignalTypeFilter from '../../components/SignalTypeFilter';
 import SignalsTable from '../../components/SignalsTable';
 import SavedSearch from '../../containers/SavedSearch';
-import Empty from '../../components/common/Empty';
-import Explore from '../../images/explore.svg';
-import NoResult from '../../images/noResult.svg';
+import EmptySearch from '../../components/EmptySearch';
 import SaveSearchExecution from '../../components/SaveSearchExecution';
 import configureStore from '../../configureStore';
 
@@ -38,9 +36,9 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(SavedSearch).exists()).toBe(true);
         });
 
-        it('renders <Empty/> component with Explore image', () => {
-            expect(wrapper.find(Empty).exists()).toBe(true);
-            expect(wrapper.find('img').props().src).toEqual(Explore);
+        it('renders <EmptySearch/> component with `explore` variant pass in props', () => {
+            expect(wrapper.find(EmptySearch).exists()).toBe(true);
+            expect(wrapper.find(EmptySearch).props().variant).toEqual('explore');
         });
 
         it('does not render <SignalSourceFilter /> component when there are no props.results passed in', () => {
@@ -100,8 +98,8 @@ describe('<SearchContainer /> component', () => {
                 expect(wrapper.find(SaveSearchExecution).exists()).toBe(true);
             });
 
-            it('does not render <Empty/> component', () => {
-                expect(wrapper.find(Empty).exists()).toBe(false);
+            it('does not render <EmptySearch/> component', () => {
+                expect(wrapper.find(EmptySearch).exists()).toBe(false);
             });
         });
 
@@ -114,9 +112,9 @@ describe('<SearchContainer /> component', () => {
                 });
                 wrapper.setState({ searched: true });
             });
-            it('renders <Empty/> component with NoResult Image', () => {
-                expect(wrapper.find(Empty).exists()).toBe(true);
-                expect(wrapper.find('img').props().src).toEqual(NoResult);
+            it('renders <EmptySearch/> component with `NoResult` variant pass in props', () => {
+                expect(wrapper.find(EmptySearch).exists()).toBe(true);
+                expect(wrapper.find(EmptySearch).props().variant).toEqual('noResult');
             });
         });
     });

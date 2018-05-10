@@ -17,10 +17,7 @@ import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { customDateFormat } from '../constants/dateRangeConstants';
-import Empty from '../components/common/Empty';
-import Explore from '../images/explore.svg';
-import NoResult from '../images/noResult.svg';
-import { getEmptyInfo } from '../constants/emptyOptions';
+import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
@@ -360,26 +357,10 @@ class SearchContainer extends Component {
                 ) : (
                     <GridRow>
                         <GridColumn size={8} offsetSize={4}>
-                            <Empty
+                            <EmptySearch
                                 className={styles.empty}
-                                title={getEmptyInfo(this.state.searched).title}
-                                message={getEmptyInfo(this.state.searched).message}
-                                messageStyle={
-                                    this.state.searched
-                                        ? styles.noResultMessage
-                                        : styles.exploreMessage
-                                }>
-                                <img
-                                    src={this.state.searched ? NoResult : Explore}
-                                    data-test={getEmptyInfo(this.state.searched).dataTest}
-                                    className={
-                                        this.state.searched
-                                            ? styles.noResultImage
-                                            : styles.exploreImage
-                                    }
-                                    alt={getEmptyInfo(this.state.searched).imageAlt}
-                                />
-                            </Empty>
+                                variant={this.state.searched ? 'noResult' : 'explore'}
+                            />
                         </GridColumn>
                     </GridRow>
                 )}
