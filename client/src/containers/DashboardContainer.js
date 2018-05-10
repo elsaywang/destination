@@ -15,7 +15,7 @@ class DashboardContainer extends Component {
         this.props.getSavedSearch();
     }
 
-    handleViewMoreForSavedSearch = search => {
+    handleViewAllForSavedSearch = search => {
         const { populateSearchFields, callSearch } = this.props;
 
         populateSearchFields(search);
@@ -50,7 +50,7 @@ class DashboardContainer extends Component {
                                                     element="a"
                                                     href="#/search"
                                                     onClick={() =>
-                                                        this.handleViewMoreForSavedSearch(search)
+                                                        this.handleViewAllForSavedSearch(search)
                                                     }
                                                 />
                                             </GridColumn>
