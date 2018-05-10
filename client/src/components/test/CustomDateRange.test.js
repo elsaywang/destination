@@ -16,20 +16,24 @@ describe('<CustomDateRange /> component', () => {
     });
 
     describe('rendering', () => {
-        const wrapper = shallow(
-            <CustomDateRange
-                customStartDate="2018-04-24"
-                customEndDate="2018-05-01"
-                onCustomStartDateChange={mockFn}
-                onCustomEndDateChange={mockFn}
-            />,
-        );
-
         it('matches snapshot', () => {
+            const wrapper = shallow(
+                <CustomDateRange
+                    customStartDate="2018-04-24"
+                    customEndDate="2018-05-01"
+                    onCustomStartDateChange={mockFn}
+                    onCustomEndDateChange={mockFn}
+                />,
+            );
+
             expect(wrapper).toMatchSnapshot();
         });
 
         it('renders custom start and end date <Datepicker /> components', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-24" customEndDate="2018-05-01" />,
+            );
+
             expect(wrapper.find(Datepicker).length).toEqual(2);
         });
     });
