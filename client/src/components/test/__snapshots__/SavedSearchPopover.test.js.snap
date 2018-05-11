@@ -6,11 +6,37 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearchPopover
     deleteSearch={[MockFunction]}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": Object {
+          "components.Layout.title": "Signals",
+        },
+        "now": [Function],
+        "textComponent": "span",
+      }
+    }
     isCurrentSearch={false}
     onSavedSearchClick={[MockFunction]}
     search={
       Object {
-        "endDate": "2018-04-25T12:15:25.260Z",
         "keyValuePairs": Array [
           Object {
             "key": "k-Licensed",
@@ -35,7 +61,7 @@ ShallowWrapper {
           "reportSuiteIds": Array [],
           "sourceType": "REALTIME",
         },
-        "startDate": "2018-04-25T10:41:43.179Z",
+        "viewRecordsFor": "7D",
       }
     }
   />,
@@ -53,7 +79,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <OverlayTrigger
-          boundariesElement="container"
+          boundariesElement={[Function]}
           crossOffset={0}
           data-test="saved-search-overlay-trigger"
           defaultShow={false}
@@ -155,9 +181,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Wed Apr 25 2018
-                   - 
-                  Wed Apr 25 2018
+                  Last 7 Days
                 </span>
               </FieldLabel>
             </div>
@@ -183,7 +207,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "boundariesElement": "container",
+          "boundariesElement": [Function],
           "children": Array [
             <Tag
               className={undefined}
@@ -277,9 +301,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Wed Apr 25 2018
-                     - 
-                    Wed Apr 25 2018
+                    Last 7 Days
                   </span>
                 </FieldLabel>
               </div>
@@ -404,9 +426,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Wed Apr 25 2018
-                       - 
-                      Wed Apr 25 2018
+                      Last 7 Days
                     </span>
                   </FieldLabel>
                 </div>,
@@ -548,9 +568,7 @@ ShallowWrapper {
                           }
                         }
                       >
-                        Wed Apr 25 2018
-                         - 
-                        Wed Apr 25 2018
+                        Last 7 Days
                       </span>
                     </FieldLabel>,
                   ],
@@ -671,9 +689,7 @@ ShallowWrapper {
                           }
                         }
                       >
-                        Wed Apr 25 2018
-                         - 
-                        Wed Apr 25 2018
+                        Last 7 Days
                       </span>,
                       "label": "View Records For",
                       "position": "left",
@@ -684,21 +700,13 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": Array [
-                          "Wed Apr 25 2018",
-                          " - ",
-                          "Wed Apr 25 2018",
-                        ],
+                        "children": "Last 7 Days",
                         "style": Object {
                           "verticalAlign": "bottom",
                         },
                       },
                       "ref": null,
-                      "rendered": Array [
-                        "Wed Apr 25 2018",
-                        " - ",
-                        "Wed Apr 25 2018",
-                      ],
+                      "rendered": "Last 7 Days",
                       "type": "span",
                     },
                     "type": [Function],
@@ -748,7 +756,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <OverlayTrigger
-            boundariesElement="container"
+            boundariesElement={[Function]}
             crossOffset={0}
             data-test="saved-search-overlay-trigger"
             defaultShow={false}
@@ -850,9 +858,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Wed Apr 25 2018
-                     - 
-                    Wed Apr 25 2018
+                    Last 7 Days
                   </span>
                 </FieldLabel>
               </div>
@@ -878,7 +884,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "boundariesElement": "container",
+            "boundariesElement": [Function],
             "children": Array [
               <Tag
                 className={undefined}
@@ -972,9 +978,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Wed Apr 25 2018
-                       - 
-                      Wed Apr 25 2018
+                      Last 7 Days
                     </span>
                   </FieldLabel>
                 </div>
@@ -1099,9 +1103,7 @@ ShallowWrapper {
                           }
                         }
                       >
-                        Wed Apr 25 2018
-                         - 
-                        Wed Apr 25 2018
+                        Last 7 Days
                       </span>
                     </FieldLabel>
                   </div>,
@@ -1243,9 +1245,7 @@ ShallowWrapper {
                             }
                           }
                         >
-                          Wed Apr 25 2018
-                           - 
-                          Wed Apr 25 2018
+                          Last 7 Days
                         </span>
                       </FieldLabel>,
                     ],
@@ -1366,9 +1366,7 @@ ShallowWrapper {
                             }
                           }
                         >
-                          Wed Apr 25 2018
-                           - 
-                          Wed Apr 25 2018
+                          Last 7 Days
                         </span>,
                         "label": "View Records For",
                         "position": "left",
@@ -1379,21 +1377,13 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": Array [
-                            "Wed Apr 25 2018",
-                            " - ",
-                            "Wed Apr 25 2018",
-                          ],
+                          "children": "Last 7 Days",
                           "style": Object {
                             "verticalAlign": "bottom",
                           },
                         },
                         "ref": null,
-                        "rendered": Array [
-                          "Wed Apr 25 2018",
-                          " - ",
-                          "Wed Apr 25 2018",
-                        ],
+                        "rendered": "Last 7 Days",
                         "type": "span",
                       },
                       "type": [Function],
@@ -1440,6 +1430,33 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "intl": Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": Object {
+          "components.Layout.title": "Signals",
+        },
+        "now": [Function],
+        "textComponent": "span",
       },
     },
   },

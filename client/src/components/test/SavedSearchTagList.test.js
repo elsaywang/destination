@@ -24,6 +24,9 @@ describe('<SavedSearchTagList /> component', () => {
             percentageChange: 45886,
             includedTraits: [0, 1, 2],
             signalStatus: 'USED',
+            viewRecordsFor: '7D',
+            customStartDate: '2018-04-24',
+            customEndDate: '2018-05-01',
         },
     ];
     const currentSearch = {
@@ -35,7 +38,7 @@ describe('<SavedSearchTagList /> component', () => {
             onSavedSearchClick={mockFn}
             deleteSearch={mockFn}
             currentSearch={currentSearch.name}
-        />
+        />,
     );
 
     describe('rendering', () => {

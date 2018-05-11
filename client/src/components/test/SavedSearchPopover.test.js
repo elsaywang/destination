@@ -4,6 +4,7 @@ import SavedSearchPopover from '../../components/SavedSearchPopover';
 import { Tag } from '@react/react-spectrum/TagList';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Popover from '@react/react-spectrum/Popover';
+import { createShallowIntlComponent } from '../../lib/i18n/testHelpers';
 import { formatSignal } from '../../utils/stringifySignals';
 import { getSignalStatusLabel } from '../../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../../constants/signalTypeOptions';
@@ -31,18 +32,17 @@ describe('<SavedSearchPopover /> component', () => {
         },
         minEventFires: 88991,
         signalStatus: 'USED',
-        startDate: '2018-04-25T10:41:43.179Z',
-        endDate: '2018-04-25T12:15:25.260Z',
+        viewRecordsFor: '7D',
         sortBy: 'Key Value Pairs',
     };
-    const wrapper = shallow(
+    const wrapper = createShallowIntlComponent(
         <SavedSearchPopover
             onSavedSearchClick={jest.fn()}
             search={search}
             isCurrentSearch={false}
             deleteSearch={jest.fn()}
         />,
-    );
+    ).dive();
 
     describe('rendering', () => {
         it('matches snapshot', () => {
@@ -101,6 +101,29 @@ describe('<SavedSearchPopover /> component', () => {
             expect(
                 wrapper.find(Popover).contains(getSignalTypeLabel(search.source.sourceType)),
             ).toBe(true);
+        });
+
+        it("renders <Popover /> containing user's saved search 'view records for' setting", () => {
+            expect(wrapper.find(Popover).contains('Last 7 Days')).toBe(true);
+        });
+
+        it("renders <Popover /> containing user's saved search custom date range setting, if selected", () => {
+            const newSearch = {
+                ...search,
+                viewRecordsFor: 'custom',
+                customStartDate: '2018-04-01',
+                customEndDate: '2018-04-15',
+            };
+            const newWrapper = createShallowIntlComponent(
+                <SavedSearchPopover
+                    onSavedSearchClick={jest.fn()}
+                    search={newSearch}
+                    isCurrentSearch={false}
+                    deleteSearch={jest.fn()}
+                />,
+            ).dive();
+
+            expect(newWrapper.find(Popover).contains('April 1, 2018 to April 15, 2018')).toBe(true);
         });
 
         it("renders <Popover /> containing user's saved search sorting selection", () => {

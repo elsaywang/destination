@@ -4,6 +4,8 @@ const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
 describe('Search Form Integration Tests', function() {
     before(function() {
+        cy.clock(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
+
         this.fetchSavedSearchDeferred = deferred();
         this.fetchReportSuitesDeferred = deferred();
 
@@ -32,6 +34,12 @@ describe('Search Form Integration Tests', function() {
                 return reportSuitesResponse.list;
             },
             ok: true,
+        });
+    });
+
+    after(function() {
+        cy.clock().then(function(clock) {
+            clock.restore();
         });
     });
 
@@ -215,6 +223,34 @@ describe('Search Form Integration Tests', function() {
                 .clear()
                 .type(value)
                 .should('have.value', String(value));
+        });
+    });
+
+    describe('when "Custom Date Range" in the View Records For select is selected', function() {
+        before(function() {
+            cy
+                .get('.view-records')
+                .click()
+                .get('.spectrum-SelectList-item:last')
+                .click();
+        });
+
+        beforeEach(function() {
+            cy.get('[data-test="custom-start-date"]').as('customStartDate');
+            cy.get('[data-test="custom-end-date"]').as('customEndDate');
+        });
+
+        it('should show custom start and end date datepickers', function() {
+            cy.get('@customStartDate').should('be.visible');
+            cy.get('@customEndDate').should('be.visible');
+        });
+
+        it('should default the custom start date to 7 days ago', function() {
+            cy.get('@customStartDate').should('have.value', '04/24/2018');
+        });
+
+        it('should default the custom end date to today', function() {
+            cy.get('@customEndDate').should('have.value', '05/01/2018');
         });
     });
 

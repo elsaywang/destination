@@ -16,21 +16,61 @@ describe('<CustomDateRange /> component', () => {
     });
 
     describe('rendering', () => {
-        const wrapper = shallow(
-            <CustomDateRange
-                customStartDate="2018-04-24"
-                customEndDate="2018-05-01"
-                onCustomStartDateChange={mockFn}
-                onCustomEndDateChange={mockFn}
-            />,
-        );
-
         it('matches snapshot', () => {
+            const wrapper = shallow(
+                <CustomDateRange
+                    customStartDate="2018-04-24"
+                    customEndDate="2018-05-01"
+                    onCustomStartDateChange={mockFn}
+                    onCustomEndDateChange={mockFn}
+                />,
+            );
+
             expect(wrapper).toMatchSnapshot();
         });
 
         it('renders custom start and end date <Datepicker /> components', () => {
+            const wrapper = shallow(
+                <CustomDateRange customStartDate="2018-04-24" customEndDate="2018-05-01" />,
+            );
+
             expect(wrapper.find(Datepicker).length).toEqual(2);
+        });
+    });
+
+    describe('handleCustomStartDateChange', () => {
+        it('should call `onCustomStartDateChange` with the selected date formatted as YYYY-MM-DD', () => {
+            const mockOnCustomStartDateChange = jest.fn();
+
+            const wrapper = shallow(
+                <CustomDateRange
+                    customStartDate="2018-04-24"
+                    customEndDate="2018-05-01"
+                    onCustomStartDateChange={mockOnCustomStartDateChange}
+                />,
+            );
+
+            wrapper.instance().handleCustomStartDateChange('04/28/18');
+
+            expect(mockOnCustomStartDateChange).toHaveBeenCalledWith('2018-04-28');
+        });
+    });
+
+    describe('handleCustomEndDateChange', () => {
+        it('should call `onCustomEndDateChange` with the selected date formatted as YYYY-MM-DD', () => {
+            const mockOnCustomEndDateChange = jest.fn();
+
+            const wrapper = shallow(
+                <CustomDateRange
+                    customStartDate="2018-04-24"
+                    customEndDate="2018-05-01"
+                    onCustomEndDateChange={mockOnCustomEndDateChange}
+                />,
+            );
+
+            wrapper.instance().handleCustomEndDateChange('04/29/18');
+
+            expect(mockOnCustomEndDateChange).toHaveBeenCalledWith('2018-04-29');
         });
     });
 

@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { IntlProvider, intlShape } from 'react-intl';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { getLocaleData } from './getLocaleData';
 
 const { locale, messages } = getLocaleData();
@@ -24,6 +24,24 @@ const { intl } = intlProvider.getChildContext();
 function nodeWithIntlProp(node) {
     return React.cloneElement(node, { intl });
 }
+
+/**
+ * Uses enzyme.shallow to create and return an enzyme ShallowWrapper with the provided children
+ * wrapped in an IntlProvider component
+ *
+ * @see {@link https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md#shallowwrapper-api}
+ * @see {@link https://gist.github.com/mirague/c05f4da0d781a9b339b501f1d5d33c37}
+ *
+ * @example
+ * const result = createShallowIntlComponent(<ComponentName />);
+ * expect(result.someEnzymeShallowWrapperApi()).someJestComparisonApi()
+ *
+ * @param node to be rendered with intl context
+ * @returns an enzyme ShallowWrapper - a wrapper instance around the rendered output
+ */
+export const createShallowIntlComponent = node => {
+    return shallow(nodeWithIntlProp(node), { context: { intl } });
+};
 
 /**
  * Uses enzyme.mount to create and return an enzyme ReactWrapper with the provided children

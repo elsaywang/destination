@@ -1,4 +1,4 @@
-const dateRangeOptions = [
+export const dateRangeOptions = [
     { label: 'Last 1 Day', value: '1D' },
     { label: 'Last 7 Days', value: '7D' },
     { label: 'Last 14 Days', value: '14D' },
@@ -6,4 +6,8 @@ const dateRangeOptions = [
     { label: 'Custom Date Range', value: 'custom' },
 ];
 
-export default dateRangeOptions;
+export const getDateRangeLabel = dateRangePreset => {
+    const dateRangeOption = dateRangeOptions.find(option => option.value === dateRangePreset);
+
+    return dateRangeOption ? dateRangeOption.label : '';
+};
