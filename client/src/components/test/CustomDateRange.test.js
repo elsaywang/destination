@@ -38,21 +38,6 @@ describe('<CustomDateRange /> component', () => {
         });
     });
 
-    describe('parseSelectedDate', () => {
-        it('should parse a date formatted like the `valueText` returned by the <Datepicker /> `onChange` handler (MM/DD/YYYY) and return it as YYYY-MM-DD', () => {
-            const actual = CustomDateRange.prototype.parseSelectedDate('04/28/2018');
-            const expected = '2018-04-28';
-
-            expect(actual).toEqual(expected);
-        });
-
-        it('should parse dates in other formats that a user may type directly into the datepicker, and return them formatted as YYYY-MM-DD', () => {
-            expect(CustomDateRange.prototype.parseSelectedDate('4/28/2018')).toEqual('2018-04-28');
-            expect(CustomDateRange.prototype.parseSelectedDate('04/28/18')).toEqual('2018-04-28');
-            expect(CustomDateRange.prototype.parseSelectedDate('4/28/18')).toEqual('2018-04-28');
-        });
-    });
-
     describe('handleCustomStartDateChange', () => {
         it('should call `onCustomStartDateChange` with the selected date formatted as YYYY-MM-DD', () => {
             const mockOnCustomStartDateChange = jest.fn();

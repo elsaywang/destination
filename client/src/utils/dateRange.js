@@ -1,6 +1,7 @@
 import moment from 'moment';
 import {
     customDateFormat,
+    dateInputFormats,
     validDateRangeDays,
     defaultDateRangeDays,
 } from '../constants/dateRangeConstants';
@@ -39,3 +40,12 @@ export const getDaysAgoTimestamp = start =>
     getNow()
         .subtract(getDaysAgo(start), 'days')
         .valueOf();
+
+export const parseDate = dateInput => moment.utc(dateInput, dateInputFormats);
+
+export const boundDate = ({ date, min, max }) => {
+    const lowerBoundedDate = moment.max(moment.utc(date), moment.utc(min));
+    const upperBoundedDate = moment.min(lowerBoundedDate, moment.utc(max));
+
+    return upperBoundedDate;
+};

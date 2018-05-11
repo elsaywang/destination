@@ -10,6 +10,8 @@ import {
     dateToDaysAgo,
     getDaysAgo,
     getDaysAgoTimestamp,
+    parseDate,
+    boundDate,
 } from '../dateRange';
 
 describe('date range utils', () => {
@@ -168,6 +170,56 @@ describe('date range utils', () => {
         it('should return the timestamp for the number of days ago from "now" that corresponds to the input if it is a date in the format YYYY-MM-DD', () => {
             const actual = getDaysAgoTimestamp('2018-04-17');
             const expected = 1523966400000; // Tue Apr 17 2018 12:00:00 GMT+0000 (GMT)
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('parseDate', () => {
+        it('should parse a date formatted like the `displayFormat` used in <Datepicker /> components (MM/DD/YYYY) and return it as a moment object', () => {
+            const actual = parseDate('04/28/2018').valueOf();
+            const expected = 1524873600000;
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should parse dates in other formats that a user may type directly into the datepicker, and return them formatted as YYYY-MM-DD', () => {
+            expect(parseDate('4/28/2018').valueOf()).toEqual(1524873600000);
+            expect(parseDate('04/28/18').valueOf()).toEqual(1524873600000);
+            expect(parseDate('4/28/18').valueOf()).toEqual(1524873600000);
+        });
+    });
+
+    describe('boundDate', () => {
+        it('should return the `date` if it is in between the `min` and `max`', () => {
+            const actual = boundDate({
+                date: '2018-05-01',
+                min: '2018-04-01',
+                max: '2018-06-01',
+            }).format('YYYY-MM-DD');
+            const expected = '2018-05-01';
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should return the `min` if the `date` is earlier than it', () => {
+            const actual = boundDate({
+                date: '2018-04-01',
+                min: '2018-05-01',
+                max: '2018-06-01',
+            }).format('YYYY-MM-DD');
+            const expected = '2018-05-01';
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should return the `max` if the `date` is later than it', () => {
+            const actual = boundDate({
+                date: '2018-06-01',
+                min: '2018-04-01',
+                max: '2018-05-01',
+            }).format('YYYY-MM-DD');
+            const expected = '2018-05-01';
 
             expect(actual).toEqual(expected);
         });
