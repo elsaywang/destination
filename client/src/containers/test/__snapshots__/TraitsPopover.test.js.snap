@@ -26,7 +26,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <OverlayTrigger
-        boundariesElement="container"
+        boundariesElement={[Function]}
         crossOffset={0}
         data-test="overlay-trigger"
         defaultShow={false}
@@ -70,7 +70,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "boundariesElement": "container",
+        "boundariesElement": [Function],
         "children": Array [
           <Button
             autoFocus={false}
@@ -169,7 +169,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <OverlayTrigger
-          boundariesElement="container"
+          boundariesElement={[Function]}
           crossOffset={0}
           data-test="overlay-trigger"
           defaultShow={false}
@@ -213,7 +213,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "boundariesElement": "container",
+          "boundariesElement": [Function],
           "children": Array [
             <Button
               autoFocus={false}
