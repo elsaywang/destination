@@ -7,6 +7,7 @@ import Search from '../../components/Search';
 import SignalTypeFilter from '../../components/SignalTypeFilter';
 import SignalsTable from '../../components/SignalsTable';
 import SavedSearch from '../../containers/SavedSearch';
+import EmptySearch from '../../components/EmptySearch';
 import SaveSearchExecution from '../../components/SaveSearchExecution';
 import configureStore from '../../configureStore';
 
@@ -33,6 +34,11 @@ describe('<SearchContainer /> component', () => {
 
         it('renders <SavedSearch /> component', () => {
             expect(wrapper.find(SavedSearch).exists()).toBe(true);
+        });
+
+        it('renders <EmptySearch/> component with `explore` variant pass in props', () => {
+            expect(wrapper.find(EmptySearch).exists()).toBe(true);
+            expect(wrapper.find(EmptySearch).props().variant).toEqual('explore');
         });
 
         it('does not render <SignalSourceFilter /> component when there are no props.results passed in', () => {
@@ -91,12 +97,32 @@ describe('<SearchContainer /> component', () => {
             it('renders <SaveSearchExecution /> component', () => {
                 expect(wrapper.find(SaveSearchExecution).exists()).toBe(true);
             });
+
+            it('does not render <EmptySearch/> component', () => {
+                expect(wrapper.find(EmptySearch).exists()).toBe(false);
+            });
+        });
+
+        describe('when table results are passed in as a prop without any search result returned ', () => {
+            beforeAll(() => {
+                wrapper.setProps({
+                    results: {
+                        list: [],
+                    },
+                });
+                wrapper.setState({ searched: true });
+            });
+            it('renders <EmptySearch/> component with `NoResult` variant pass in props', () => {
+                expect(wrapper.find(EmptySearch).exists()).toBe(true);
+                expect(wrapper.find(EmptySearch).props().variant).toEqual('noResult');
+            });
         });
     });
 
     describe('state changes based on events', () => {
         const initialState = {
             name: '',
+            searched: false,
             keyValuePairs: [
                 {
                     id: 0,
@@ -226,6 +252,7 @@ describe('<SearchContainer /> component', () => {
         it('.onClearAll() to reset state back to initial state', () => {
             wrapper.instance().onClearAll();
             expect(wrapper.state('name')).toEqual('');
+            expect(wrapper.state('searched')).toEqual(false);
             expect(wrapper.state('keyValuePairs')).toEqual([
                 {
                     id: 0,

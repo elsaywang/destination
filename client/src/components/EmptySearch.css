@@ -1,0 +1,14 @@
+:local(.noResultMessage) {
+    margin-top: -0.75em;
+}
+:local(.exploreMessage) {
+    margin: -0.75em 0 0 -1.9em;
+}
+:local(.noResultImage) {
+    width: 13em;
+    margin-left: 0.5em;
+}
+:local(.exploreImage) {
+    width: 20em;
+    margin-left: -0.25em;
+}

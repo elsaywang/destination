@@ -47,6 +47,11 @@ describe('Search Form Integration Tests', function() {
         cy.get('[data-test="search-form"]').should('exist');
     });
 
+    it('should show empty with start exploring image', function() {
+        cy.get('[data-test="empty"]').should('exist');
+        cy.get('[data-test="start-exploring"]').should('exist');
+    });
+
     describe('when Advanced toggle is clicked', function() {
         before(function() {
             cy.get('[data-test="advanced-search-toggle"]').click();
