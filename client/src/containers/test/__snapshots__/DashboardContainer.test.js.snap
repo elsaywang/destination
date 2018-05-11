@@ -188,7 +188,7 @@ ShallowWrapper {
                     element="a"
                     href="#/search"
                     invalid={false}
-                    label="View More"
+                    label="View All"
                     logic={false}
                     onClick={[Function]}
                     quiet={false}
@@ -270,7 +270,7 @@ ShallowWrapper {
                     element="a"
                     href="#/search"
                     invalid={false}
-                    label="View More"
+                    label="View All"
                     logic={false}
                     onClick={[Function]}
                     quiet={false}
@@ -363,7 +363,7 @@ ShallowWrapper {
                       element="a"
                       href="#/search"
                       invalid={false}
-                      label="View More"
+                      label="View All"
                       logic={false}
                       onClick={[Function]}
                       quiet={false}
@@ -448,7 +448,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -551,7 +551,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -579,7 +579,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -602,7 +602,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -624,7 +624,7 @@ ShallowWrapper {
                         "element": "a",
                         "href": "#/search",
                         "invalid": false,
-                        "label": "View More",
+                        "label": "View All",
                         "logic": false,
                         "onClick": [Function],
                         "quiet": false,
@@ -725,7 +725,7 @@ ShallowWrapper {
                       element="a"
                       href="#/search"
                       invalid={false}
-                      label="View More"
+                      label="View All"
                       logic={false}
                       onClick={[Function]}
                       quiet={false}
@@ -815,7 +815,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -918,7 +918,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -946,7 +946,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -969,7 +969,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -991,7 +991,7 @@ ShallowWrapper {
                         "element": "a",
                         "href": "#/search",
                         "invalid": false,
-                        "label": "View More",
+                        "label": "View All",
                         "logic": false,
                         "onClick": [Function],
                         "quiet": false,
@@ -1105,7 +1105,7 @@ ShallowWrapper {
                       element="a"
                       href="#/search"
                       invalid={false}
-                      label="View More"
+                      label="View All"
                       logic={false}
                       onClick={[Function]}
                       quiet={false}
@@ -1187,7 +1187,7 @@ ShallowWrapper {
                       element="a"
                       href="#/search"
                       invalid={false}
-                      label="View More"
+                      label="View All"
                       logic={false}
                       onClick={[Function]}
                       quiet={false}
@@ -1280,7 +1280,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -1365,7 +1365,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1468,7 +1468,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1496,7 +1496,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1519,7 +1519,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1541,7 +1541,7 @@ ShallowWrapper {
                           "element": "a",
                           "href": "#/search",
                           "invalid": false,
-                          "label": "View More",
+                          "label": "View All",
                           "logic": false,
                           "onClick": [Function],
                           "quiet": false,
@@ -1642,7 +1642,7 @@ ShallowWrapper {
                         element="a"
                         href="#/search"
                         invalid={false}
-                        label="View More"
+                        label="View All"
                         logic={false}
                         onClick={[Function]}
                         quiet={false}
@@ -1732,7 +1732,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1835,7 +1835,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1863,7 +1863,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1886,7 +1886,7 @@ ShallowWrapper {
                           element="a"
                           href="#/search"
                           invalid={false}
-                          label="View More"
+                          label="View All"
                           logic={false}
                           onClick={[Function]}
                           quiet={false}
@@ -1908,7 +1908,7 @@ ShallowWrapper {
                           "element": "a",
                           "href": "#/search",
                           "invalid": false,
-                          "label": "View More",
+                          "label": "View All",
                           "logic": false,
                           "onClick": [Function],
                           "quiet": false,

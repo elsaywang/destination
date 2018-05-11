@@ -6,7 +6,3 @@
 :local(.tabList) {
     margin-bottom: 1.25em;
 }
-
-:local(.tab) {
-    padding: 0.5em;
-}

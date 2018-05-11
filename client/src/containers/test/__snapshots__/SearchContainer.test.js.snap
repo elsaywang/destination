@@ -95,6 +95,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -128,7 +129,19 @@ ShallowWrapper {
             </div>
           </GridColumn>
         </GridRow>,
-        false,
+        <GridRow
+          reverse={false}
+        >
+          <GridColumn
+            offsetSize={4}
+            size={8}
+          >
+            <EmptySearch
+              className={undefined}
+              variant="explore"
+            />
+          </GridColumn>
+        </GridRow>,
       ],
     },
     "ref": null,
@@ -174,6 +187,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -227,6 +241,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={false}
               signalStatus="ALL"
               source={
                 Object {
@@ -276,6 +291,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "reportSuites": Array [],
+              "searched": false,
               "signalStatus": "ALL",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -378,7 +394,52 @@ ShallowWrapper {
         },
         "type": [Function],
       },
-      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <GridColumn
+            offsetSize={4}
+            size={8}
+          >
+            <EmptySearch
+              className={undefined}
+              variant="explore"
+            />
+          </GridColumn>,
+          "reverse": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <EmptySearch
+              className={undefined}
+              variant="explore"
+            />,
+            "offsetSize": 4,
+            "size": 8,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": undefined,
+              "variant": "explore",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
     ],
     "type": Symbol(react.fragment),
   },
@@ -428,6 +489,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -461,7 +523,19 @@ ShallowWrapper {
               </div>
             </GridColumn>
           </GridRow>,
-          false,
+          <GridRow
+            reverse={false}
+          >
+            <GridColumn
+              offsetSize={4}
+              size={8}
+            >
+              <EmptySearch
+                className={undefined}
+                variant="explore"
+              />
+            </GridColumn>
+          </GridRow>,
         ],
       },
       "ref": null,
@@ -507,6 +581,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -560,6 +635,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={false}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -609,6 +685,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "reportSuites": Array [],
+                "searched": false,
                 "signalStatus": "ALL",
                 "source": Object {
                   "dataSourceIds": Array [],
@@ -711,7 +788,52 @@ ShallowWrapper {
           },
           "type": [Function],
         },
-        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <GridColumn
+              offsetSize={4}
+              size={8}
+            >
+              <EmptySearch
+                className={undefined}
+                variant="explore"
+              />
+            </GridColumn>,
+            "reverse": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <EmptySearch
+                className={undefined}
+                variant="explore"
+              />,
+              "offsetSize": 4,
+              "size": 8,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": undefined,
+                "variant": "explore",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
       ],
       "type": Symbol(react.fragment),
     },
@@ -751,12 +873,7 @@ ShallowWrapper {
     reportSuites={Array []}
     results={
       Object {
-        "list": Array [
-          Object {
-            "id": 0,
-            "name": "test",
-          },
-        ],
+        "list": Array [],
       }
     }
     saveSearch={[Function]}
@@ -832,6 +949,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={true}
               signalStatus="ALL"
               source={
                 Object {
@@ -862,111 +980,22 @@ ShallowWrapper {
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
-              <div
-                className={undefined}
-              >
-                <SaveSearchExecution
-                  cancelSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
-              </div>
             </div>
           </GridColumn>
         </GridRow>,
-        <div
-          style={
-            Object {
-              "display": "flex",
-              "marginTop": 20,
-            }
-          }
+        <GridRow
+          reverse={false}
         >
-          <div
-            className={undefined}
+          <GridColumn
+            offsetSize={4}
+            size={8}
           >
-            <SignalTypeFilter
-              onSignalTypeChange={[Function]}
-              signalType={null}
+            <EmptySearch
+              className={undefined}
+              variant="noResult"
             />
-          </div>
-          <div
-            className={undefined}
-          >
-            <GridRow
-              reverse={false}
-              valign="middle"
-            >
-              <GridColumn
-                size={4}
-              >
-                <Heading
-                  size={3}
-                >
-                  Search Results for
-                </Heading>
-              </GridColumn>
-              <GridColumn
-                size={8}
-              >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    size={10}
-                  >
-                    <Connect(MultiSignalsTraitsCreationContainer) />
-                  </GridColumn>
-                  <GridColumn
-                    size={2}
-                  >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Export.csv"
-                      logic={false}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-            <GridRow
-              reverse={false}
-            >
-              <GridColumn
-                offsetSize={3}
-                size={9}
-              >
-                <Connect(TraitsCreationWarning) />
-              </GridColumn>
-            </GridRow>
-            <SignalsTable
-              isAdvancedSearchEnabled={false}
-              onSignalRecordsSelection={[Function]}
-              results={
-                Object {
-                  "list": Array [
-                    Object {
-                      "id": 0,
-                      "name": "test",
-                    },
-                  ],
-                }
-              }
-              signalType={null}
-              sortSearch={[Function]}
-            />
-          </div>
-        </div>,
+          </GridColumn>
+        </GridRow>,
       ],
     },
     "ref": null,
@@ -1012,6 +1041,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={true}
               signalStatus="ALL"
               source={
                 Object {
@@ -1065,6 +1095,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={true}
               signalStatus="ALL"
               source={
                 Object {
@@ -1114,6 +1145,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "reportSuites": Array [],
+              "searched": true,
               "signalStatus": "ALL",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -1149,18 +1181,6 @@ ShallowWrapper {
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
-              <div
-                className={undefined}
-              >
-                <SaveSearchExecution
-                  cancelSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
-              </div>
             </div>
           </GridColumn>,
           "reverse": false,
@@ -1182,18 +1202,6 @@ ShallowWrapper {
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
-              <div
-                className={undefined}
-              >
-                <SaveSearchExecution
-                  cancelSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
-              </div>
             </div>,
             "size": 12,
           },
@@ -1211,18 +1219,7 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />,
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>,
+                false,
               ],
               "className": undefined,
             },
@@ -1243,40 +1240,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />,
-                  "className": undefined,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "cancelSaveSearch": [Function],
-                    "changeSortingOrder": [Function],
-                    "confirmSaveThisSearch": [Function],
-                    "selectDefaultSorting": [Function],
-                    "trackSearchResultInDashboard": [Function],
-                    "updateSaveSearchName": [Function],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": "div",
-              },
+              false,
             ],
             "type": "div",
           },
@@ -1287,480 +1251,48 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <div
+          "children": <GridColumn
+            offsetSize={4}
+            size={8}
+          >
+            <EmptySearch
               className={undefined}
-            >
-              <SignalTypeFilter
-                onSignalTypeChange={[Function]}
-                signalType={null}
-              />
-            </div>,
-            <div
-              className={undefined}
-            >
-              <GridRow
-                reverse={false}
-                valign="middle"
-              >
-                <GridColumn
-                  size={4}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Search Results for
-                  </Heading>
-                </GridColumn>
-                <GridColumn
-                  size={8}
-                >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      size={10}
-                    >
-                      <Connect(MultiSignalsTraitsCreationContainer) />
-                    </GridColumn>
-                    <GridColumn
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
-                        label="Export.csv"
-                        logic={false}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
-              </GridRow>
-              <GridRow
-                reverse={false}
-              >
-                <GridColumn
-                  offsetSize={3}
-                  size={9}
-                >
-                  <Connect(TraitsCreationWarning) />
-                </GridColumn>
-              </GridRow>
-              <SignalsTable
-                isAdvancedSearchEnabled={false}
-                onSignalRecordsSelection={[Function]}
-                results={
-                  Object {
-                    "list": Array [
-                      Object {
-                        "id": 0,
-                        "name": "test",
-                      },
-                    ],
-                  }
-                }
-                signalType={null}
-                sortSearch={[Function]}
-              />
-            </div>,
-          ],
-          "style": Object {
-            "display": "flex",
-            "marginTop": 20,
-          },
+              variant="noResult"
+            />
+          </GridColumn>,
+          "reverse": false,
         },
         "ref": null,
-        "rendered": Array [
-          Object {
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <EmptySearch
+              className={undefined}
+              variant="noResult"
+            />,
+            "offsetSize": 4,
+            "size": 8,
+          },
+          "ref": null,
+          "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": <SignalTypeFilter
-                onSignalTypeChange={[Function]}
-                signalType={null}
-              />,
               "className": undefined,
+              "variant": "noResult",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "onSignalTypeChange": [Function],
-                "signalType": null,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <GridRow
-                  reverse={false}
-                  valign="middle"
-                >
-                  <GridColumn
-                    size={4}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Search Results for
-                    </Heading>
-                  </GridColumn>
-                  <GridColumn
-                    size={8}
-                  >
-                    <GridRow
-                      reverse={false}
-                    >
-                      <GridColumn
-                        size={10}
-                      >
-                        <Connect(MultiSignalsTraitsCreationContainer) />
-                      </GridColumn>
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
-                          label="Export.csv"
-                          logic={false}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
-                      </GridColumn>
-                    </GridRow>
-                  </GridColumn>
-                </GridRow>,
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={3}
-                    size={9}
-                  >
-                    <Connect(TraitsCreationWarning) />
-                  </GridColumn>
-                </GridRow>,
-                <SignalsTable
-                  isAdvancedSearchEnabled={false}
-                  onSignalRecordsSelection={[Function]}
-                  results={
-                    Object {
-                      "list": Array [
-                        Object {
-                          "id": 0,
-                          "name": "test",
-                        },
-                      ],
-                    }
-                  }
-                  signalType={null}
-                  sortSearch={[Function]}
-                />,
-              ],
-              "className": undefined,
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <GridColumn
-                      size={4}
-                    >
-                      <Heading
-                        size={3}
-                      >
-                        Search Results for
-                      </Heading>
-                    </GridColumn>,
-                    <GridColumn
-                      size={8}
-                    >
-                      <GridRow
-                        reverse={false}
-                      >
-                        <GridColumn
-                          size={10}
-                        >
-                          <Connect(MultiSignalsTraitsCreationContainer) />
-                        </GridColumn>
-                        <GridColumn
-                          size={2}
-                        >
-                          <Button
-                            autoFocus={false}
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Export.csv"
-                            logic={false}
-                            quiet={false}
-                            selected={false}
-                            variant="primary"
-                          />
-                        </GridColumn>
-                      </GridRow>
-                    </GridColumn>,
-                  ],
-                  "reverse": false,
-                  "valign": "middle",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Heading
-                        size={3}
-                      >
-                        Search Results for
-                      </Heading>,
-                      "size": 4,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "Search Results for",
-                        "size": 3,
-                      },
-                      "ref": null,
-                      "rendered": "Search Results for",
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <GridRow
-                        reverse={false}
-                      >
-                        <GridColumn
-                          size={10}
-                        >
-                          <Connect(MultiSignalsTraitsCreationContainer) />
-                        </GridColumn>
-                        <GridColumn
-                          size={2}
-                        >
-                          <Button
-                            autoFocus={false}
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Export.csv"
-                            logic={false}
-                            quiet={false}
-                            selected={false}
-                            variant="primary"
-                          />
-                        </GridColumn>
-                      </GridRow>,
-                      "size": 8,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          <GridColumn
-                            size={10}
-                          >
-                            <Connect(MultiSignalsTraitsCreationContainer) />
-                          </GridColumn>,
-                          <GridColumn
-                            size={2}
-                          >
-                            <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />
-                          </GridColumn>,
-                        ],
-                        "reverse": false,
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": <Connect(MultiSignalsTraitsCreationContainer) />,
-                            "size": 10,
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {},
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
-                          },
-                          "type": [Function],
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />,
-                            "size": 2,
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "autoFocus": false,
-                              "block": false,
-                              "disabled": false,
-                              "element": "button",
-                              "invalid": false,
-                              "label": "Export.csv",
-                              "logic": false,
-                              "quiet": false,
-                              "selected": false,
-                              "variant": "primary",
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
-                          },
-                          "type": [Function],
-                        },
-                      ],
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": <GridColumn
-                    offsetSize={3}
-                    size={9}
-                  >
-                    <Connect(TraitsCreationWarning) />
-                  </GridColumn>,
-                  "reverse": false,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <Connect(TraitsCreationWarning) />,
-                    "offsetSize": 3,
-                    "size": 9,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {},
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "isAdvancedSearchEnabled": false,
-                  "onSignalRecordsSelection": [Function],
-                  "results": Object {
-                    "list": Array [
-                      Object {
-                        "id": 0,
-                        "name": "test",
-                      },
-                    ],
-                  },
-                  "signalType": null,
-                  "sortSearch": [Function],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
+          "type": [Function],
+        },
+        "type": [Function],
       },
     ],
     "type": Symbol(react.fragment),
@@ -1811,6 +1343,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={true}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -1841,111 +1374,22 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>
               </div>
             </GridColumn>
           </GridRow>,
-          <div
-            style={
-              Object {
-                "display": "flex",
-                "marginTop": 20,
-              }
-            }
+          <GridRow
+            reverse={false}
           >
-            <div
-              className={undefined}
+            <GridColumn
+              offsetSize={4}
+              size={8}
             >
-              <SignalTypeFilter
-                onSignalTypeChange={[Function]}
-                signalType={null}
+              <EmptySearch
+                className={undefined}
+                variant="noResult"
               />
-            </div>
-            <div
-              className={undefined}
-            >
-              <GridRow
-                reverse={false}
-                valign="middle"
-              >
-                <GridColumn
-                  size={4}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Search Results for
-                  </Heading>
-                </GridColumn>
-                <GridColumn
-                  size={8}
-                >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      size={10}
-                    >
-                      <Connect(MultiSignalsTraitsCreationContainer) />
-                    </GridColumn>
-                    <GridColumn
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
-                        label="Export.csv"
-                        logic={false}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
-              </GridRow>
-              <GridRow
-                reverse={false}
-              >
-                <GridColumn
-                  offsetSize={3}
-                  size={9}
-                >
-                  <Connect(TraitsCreationWarning) />
-                </GridColumn>
-              </GridRow>
-              <SignalsTable
-                isAdvancedSearchEnabled={false}
-                onSignalRecordsSelection={[Function]}
-                results={
-                  Object {
-                    "list": Array [
-                      Object {
-                        "id": 0,
-                        "name": "test",
-                      },
-                    ],
-                  }
-                }
-                signalType={null}
-                sortSearch={[Function]}
-              />
-            </div>
-          </div>,
+            </GridColumn>
+          </GridRow>,
         ],
       },
       "ref": null,
@@ -1991,6 +1435,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={true}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -2044,6 +1489,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={true}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -2093,6 +1539,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "reportSuites": Array [],
+                "searched": true,
                 "signalStatus": "ALL",
                 "source": Object {
                   "dataSourceIds": Array [],
@@ -2128,18 +1575,6 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>
               </div>
             </GridColumn>,
             "reverse": false,
@@ -2161,18 +1596,6 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>
               </div>,
               "size": 12,
             },
@@ -2190,18 +1613,7 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />,
-                  <div
-                    className={undefined}
-                  >
-                    <SaveSearchExecution
-                      cancelSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
-                  </div>,
+                  false,
                 ],
                 "className": undefined,
               },
@@ -2222,40 +1634,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": [Function],
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <SaveSearchExecution
-                      cancelSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />,
-                    "className": undefined,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "cancelSaveSearch": [Function],
-                      "changeSortingOrder": [Function],
-                      "confirmSaveThisSearch": [Function],
-                      "selectDefaultSorting": [Function],
-                      "trackSearchResultInDashboard": [Function],
-                      "updateSaveSearchName": [Function],
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": "div",
-                },
+                false,
               ],
               "type": "div",
             },
@@ -2266,480 +1645,48 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <div
+            "children": <GridColumn
+              offsetSize={4}
+              size={8}
+            >
+              <EmptySearch
                 className={undefined}
-              >
-                <SignalTypeFilter
-                  onSignalTypeChange={[Function]}
-                  signalType={null}
-                />
-              </div>,
-              <div
-                className={undefined}
-              >
-                <GridRow
-                  reverse={false}
-                  valign="middle"
-                >
-                  <GridColumn
-                    size={4}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Search Results for
-                    </Heading>
-                  </GridColumn>
-                  <GridColumn
-                    size={8}
-                  >
-                    <GridRow
-                      reverse={false}
-                    >
-                      <GridColumn
-                        size={10}
-                      >
-                        <Connect(MultiSignalsTraitsCreationContainer) />
-                      </GridColumn>
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
-                          label="Export.csv"
-                          logic={false}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
-                      </GridColumn>
-                    </GridRow>
-                  </GridColumn>
-                </GridRow>
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={3}
-                    size={9}
-                  >
-                    <Connect(TraitsCreationWarning) />
-                  </GridColumn>
-                </GridRow>
-                <SignalsTable
-                  isAdvancedSearchEnabled={false}
-                  onSignalRecordsSelection={[Function]}
-                  results={
-                    Object {
-                      "list": Array [
-                        Object {
-                          "id": 0,
-                          "name": "test",
-                        },
-                      ],
-                    }
-                  }
-                  signalType={null}
-                  sortSearch={[Function]}
-                />
-              </div>,
-            ],
-            "style": Object {
-              "display": "flex",
-              "marginTop": 20,
-            },
+                variant="noResult"
+              />
+            </GridColumn>,
+            "reverse": false,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <EmptySearch
+                className={undefined}
+                variant="noResult"
+              />,
+              "offsetSize": 4,
+              "size": 8,
+            },
+            "ref": null,
+            "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": <SignalTypeFilter
-                  onSignalTypeChange={[Function]}
-                  signalType={null}
-                />,
                 "className": undefined,
+                "variant": "noResult",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "onSignalTypeChange": [Function],
-                  "signalType": null,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": "div",
+              "rendered": null,
+              "type": [Function],
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <GridRow
-                    reverse={false}
-                    valign="middle"
-                  >
-                    <GridColumn
-                      size={4}
-                    >
-                      <Heading
-                        size={3}
-                      >
-                        Search Results for
-                      </Heading>
-                    </GridColumn>
-                    <GridColumn
-                      size={8}
-                    >
-                      <GridRow
-                        reverse={false}
-                      >
-                        <GridColumn
-                          size={10}
-                        >
-                          <Connect(MultiSignalsTraitsCreationContainer) />
-                        </GridColumn>
-                        <GridColumn
-                          size={2}
-                        >
-                          <Button
-                            autoFocus={false}
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Export.csv"
-                            logic={false}
-                            quiet={false}
-                            selected={false}
-                            variant="primary"
-                          />
-                        </GridColumn>
-                      </GridRow>
-                    </GridColumn>
-                  </GridRow>,
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      offsetSize={3}
-                      size={9}
-                    >
-                      <Connect(TraitsCreationWarning) />
-                    </GridColumn>
-                  </GridRow>,
-                  <SignalsTable
-                    isAdvancedSearchEnabled={false}
-                    onSignalRecordsSelection={[Function]}
-                    results={
-                      Object {
-                        "list": Array [
-                          Object {
-                            "id": 0,
-                            "name": "test",
-                          },
-                        ],
-                      }
-                    }
-                    signalType={null}
-                    sortSearch={[Function]}
-                  />,
-                ],
-                "className": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      <GridColumn
-                        size={4}
-                      >
-                        <Heading
-                          size={3}
-                        >
-                          Search Results for
-                        </Heading>
-                      </GridColumn>,
-                      <GridColumn
-                        size={8}
-                      >
-                        <GridRow
-                          reverse={false}
-                        >
-                          <GridColumn
-                            size={10}
-                          >
-                            <Connect(MultiSignalsTraitsCreationContainer) />
-                          </GridColumn>
-                          <GridColumn
-                            size={2}
-                          >
-                            <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />
-                          </GridColumn>
-                        </GridRow>
-                      </GridColumn>,
-                    ],
-                    "reverse": false,
-                    "valign": "middle",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <Heading
-                          size={3}
-                        >
-                          Search Results for
-                        </Heading>,
-                        "size": 4,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": "Search Results for",
-                          "size": 3,
-                        },
-                        "ref": null,
-                        "rendered": "Search Results for",
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <GridRow
-                          reverse={false}
-                        >
-                          <GridColumn
-                            size={10}
-                          >
-                            <Connect(MultiSignalsTraitsCreationContainer) />
-                          </GridColumn>
-                          <GridColumn
-                            size={2}
-                          >
-                            <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />
-                          </GridColumn>
-                        </GridRow>,
-                        "size": 8,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": Array [
-                            <GridColumn
-                              size={10}
-                            >
-                              <Connect(MultiSignalsTraitsCreationContainer) />
-                            </GridColumn>,
-                            <GridColumn
-                              size={2}
-                            >
-                              <Button
-                                autoFocus={false}
-                                block={false}
-                                disabled={false}
-                                element="button"
-                                invalid={false}
-                                label="Export.csv"
-                                logic={false}
-                                quiet={false}
-                                selected={false}
-                                variant="primary"
-                              />
-                            </GridColumn>,
-                          ],
-                          "reverse": false,
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "children": <Connect(MultiSignalsTraitsCreationContainer) />,
-                              "size": 10,
-                            },
-                            "ref": null,
-                            "rendered": Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "class",
-                              "props": Object {},
-                              "ref": null,
-                              "rendered": null,
-                              "type": [Function],
-                            },
-                            "type": [Function],
-                          },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "children": <Button
-                                autoFocus={false}
-                                block={false}
-                                disabled={false}
-                                element="button"
-                                invalid={false}
-                                label="Export.csv"
-                                logic={false}
-                                quiet={false}
-                                selected={false}
-                                variant="primary"
-                              />,
-                              "size": 2,
-                            },
-                            "ref": null,
-                            "rendered": Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "class",
-                              "props": Object {
-                                "autoFocus": false,
-                                "block": false,
-                                "disabled": false,
-                                "element": "button",
-                                "invalid": false,
-                                "label": "Export.csv",
-                                "logic": false,
-                                "quiet": false,
-                                "selected": false,
-                                "variant": "primary",
-                              },
-                              "ref": null,
-                              "rendered": null,
-                              "type": [Function],
-                            },
-                            "type": [Function],
-                          },
-                        ],
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
-                  ],
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <GridColumn
-                      offsetSize={3}
-                      size={9}
-                    >
-                      <Connect(TraitsCreationWarning) />
-                    </GridColumn>,
-                    "reverse": false,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Connect(TraitsCreationWarning) />,
-                      "offsetSize": 3,
-                      "size": 9,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {},
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "isAdvancedSearchEnabled": false,
-                    "onSignalRecordsSelection": [Function],
-                    "results": Object {
-                      "list": Array [
-                        Object {
-                          "id": 0,
-                          "name": "test",
-                        },
-                      ],
-                    },
-                    "signalType": null,
-                    "sortSearch": [Function],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
+            "type": [Function],
+          },
+          "type": [Function],
         },
       ],
       "type": Symbol(react.fragment),
@@ -2780,12 +1727,7 @@ ShallowWrapper {
     reportSuites={Array []}
     results={
       Object {
-        "list": Array [
-          Object {
-            "id": 0,
-            "name": "test",
-          },
-        ],
+        "list": Array [],
       }
     }
     saveSearch={[Function]}
@@ -2861,6 +1803,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={true}
               signalStatus="ALL"
               source={
                 Object {
@@ -2891,111 +1834,22 @@ ShallowWrapper {
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
-              <div
-                className={undefined}
-              >
-                <SaveSearchExecution
-                  cancelSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
-              </div>
             </div>
           </GridColumn>
         </GridRow>,
-        <div
-          style={
-            Object {
-              "display": "flex",
-              "marginTop": 20,
-            }
-          }
+        <GridRow
+          reverse={false}
         >
-          <div
-            className={undefined}
+          <GridColumn
+            offsetSize={4}
+            size={8}
           >
-            <SignalTypeFilter
-              onSignalTypeChange={[Function]}
-              signalType={null}
+            <EmptySearch
+              className={undefined}
+              variant="noResult"
             />
-          </div>
-          <div
-            className={undefined}
-          >
-            <GridRow
-              reverse={false}
-              valign="middle"
-            >
-              <GridColumn
-                size={4}
-              >
-                <Heading
-                  size={3}
-                >
-                  Search Results for
-                </Heading>
-              </GridColumn>
-              <GridColumn
-                size={8}
-              >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    size={10}
-                  >
-                    <Connect(MultiSignalsTraitsCreationContainer) />
-                  </GridColumn>
-                  <GridColumn
-                    size={2}
-                  >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="button"
-                      invalid={false}
-                      label="Export.csv"
-                      logic={false}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-            <GridRow
-              reverse={false}
-            >
-              <GridColumn
-                offsetSize={3}
-                size={9}
-              >
-                <Connect(TraitsCreationWarning) />
-              </GridColumn>
-            </GridRow>
-            <SignalsTable
-              isAdvancedSearchEnabled={false}
-              onSignalRecordsSelection={[Function]}
-              results={
-                Object {
-                  "list": Array [
-                    Object {
-                      "id": 0,
-                      "name": "test",
-                    },
-                  ],
-                }
-              }
-              signalType={null}
-              sortSearch={[Function]}
-            />
-          </div>
-        </div>,
+          </GridColumn>
+        </GridRow>,
       ],
     },
     "ref": null,
@@ -3041,6 +1895,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={true}
               signalStatus="ALL"
               source={
                 Object {
@@ -3094,6 +1949,7 @@ ShallowWrapper {
               onValueChange={[Function]}
               onViewRecordsChange={[Function]}
               reportSuites={Array []}
+              searched={true}
               signalStatus="ALL"
               source={
                 Object {
@@ -3143,6 +1999,7 @@ ShallowWrapper {
               "onValueChange": [Function],
               "onViewRecordsChange": [Function],
               "reportSuites": Array [],
+              "searched": true,
               "signalStatus": "ALL",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -3178,18 +2035,6 @@ ShallowWrapper {
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
-              <div
-                className={undefined}
-              >
-                <SaveSearchExecution
-                  cancelSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
-              </div>
             </div>
           </GridColumn>,
           "reverse": false,
@@ -3211,18 +2056,6 @@ ShallowWrapper {
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
-              <div
-                className={undefined}
-              >
-                <SaveSearchExecution
-                  cancelSaveSearch={[Function]}
-                  changeSortingOrder={[Function]}
-                  confirmSaveThisSearch={[Function]}
-                  selectDefaultSorting={[Function]}
-                  trackSearchResultInDashboard={[Function]}
-                  updateSaveSearchName={[Function]}
-                />
-              </div>
             </div>,
             "size": 12,
           },
@@ -3240,18 +2073,7 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />,
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>,
+                false,
               ],
               "className": undefined,
             },
@@ -3272,40 +2094,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />,
-                  "className": undefined,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "cancelSaveSearch": [Function],
-                    "changeSortingOrder": [Function],
-                    "confirmSaveThisSearch": [Function],
-                    "selectDefaultSorting": [Function],
-                    "trackSearchResultInDashboard": [Function],
-                    "updateSaveSearchName": [Function],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": "div",
-              },
+              false,
             ],
             "type": "div",
           },
@@ -3316,480 +2105,48 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <div
+          "children": <GridColumn
+            offsetSize={4}
+            size={8}
+          >
+            <EmptySearch
               className={undefined}
-            >
-              <SignalTypeFilter
-                onSignalTypeChange={[Function]}
-                signalType={null}
-              />
-            </div>,
-            <div
-              className={undefined}
-            >
-              <GridRow
-                reverse={false}
-                valign="middle"
-              >
-                <GridColumn
-                  size={4}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Search Results for
-                  </Heading>
-                </GridColumn>
-                <GridColumn
-                  size={8}
-                >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      size={10}
-                    >
-                      <Connect(MultiSignalsTraitsCreationContainer) />
-                    </GridColumn>
-                    <GridColumn
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
-                        label="Export.csv"
-                        logic={false}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
-              </GridRow>
-              <GridRow
-                reverse={false}
-              >
-                <GridColumn
-                  offsetSize={3}
-                  size={9}
-                >
-                  <Connect(TraitsCreationWarning) />
-                </GridColumn>
-              </GridRow>
-              <SignalsTable
-                isAdvancedSearchEnabled={false}
-                onSignalRecordsSelection={[Function]}
-                results={
-                  Object {
-                    "list": Array [
-                      Object {
-                        "id": 0,
-                        "name": "test",
-                      },
-                    ],
-                  }
-                }
-                signalType={null}
-                sortSearch={[Function]}
-              />
-            </div>,
-          ],
-          "style": Object {
-            "display": "flex",
-            "marginTop": 20,
-          },
+              variant="noResult"
+            />
+          </GridColumn>,
+          "reverse": false,
         },
         "ref": null,
-        "rendered": Array [
-          Object {
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <EmptySearch
+              className={undefined}
+              variant="noResult"
+            />,
+            "offsetSize": 4,
+            "size": 8,
+          },
+          "ref": null,
+          "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": <SignalTypeFilter
-                onSignalTypeChange={[Function]}
-                signalType={null}
-              />,
               "className": undefined,
+              "variant": "noResult",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "onSignalTypeChange": [Function],
-                "signalType": null,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <GridRow
-                  reverse={false}
-                  valign="middle"
-                >
-                  <GridColumn
-                    size={4}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Search Results for
-                    </Heading>
-                  </GridColumn>
-                  <GridColumn
-                    size={8}
-                  >
-                    <GridRow
-                      reverse={false}
-                    >
-                      <GridColumn
-                        size={10}
-                      >
-                        <Connect(MultiSignalsTraitsCreationContainer) />
-                      </GridColumn>
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
-                          label="Export.csv"
-                          logic={false}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
-                      </GridColumn>
-                    </GridRow>
-                  </GridColumn>
-                </GridRow>,
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={3}
-                    size={9}
-                  >
-                    <Connect(TraitsCreationWarning) />
-                  </GridColumn>
-                </GridRow>,
-                <SignalsTable
-                  isAdvancedSearchEnabled={false}
-                  onSignalRecordsSelection={[Function]}
-                  results={
-                    Object {
-                      "list": Array [
-                        Object {
-                          "id": 0,
-                          "name": "test",
-                        },
-                      ],
-                    }
-                  }
-                  signalType={null}
-                  sortSearch={[Function]}
-                />,
-              ],
-              "className": undefined,
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <GridColumn
-                      size={4}
-                    >
-                      <Heading
-                        size={3}
-                      >
-                        Search Results for
-                      </Heading>
-                    </GridColumn>,
-                    <GridColumn
-                      size={8}
-                    >
-                      <GridRow
-                        reverse={false}
-                      >
-                        <GridColumn
-                          size={10}
-                        >
-                          <Connect(MultiSignalsTraitsCreationContainer) />
-                        </GridColumn>
-                        <GridColumn
-                          size={2}
-                        >
-                          <Button
-                            autoFocus={false}
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Export.csv"
-                            logic={false}
-                            quiet={false}
-                            selected={false}
-                            variant="primary"
-                          />
-                        </GridColumn>
-                      </GridRow>
-                    </GridColumn>,
-                  ],
-                  "reverse": false,
-                  "valign": "middle",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Heading
-                        size={3}
-                      >
-                        Search Results for
-                      </Heading>,
-                      "size": 4,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "Search Results for",
-                        "size": 3,
-                      },
-                      "ref": null,
-                      "rendered": "Search Results for",
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <GridRow
-                        reverse={false}
-                      >
-                        <GridColumn
-                          size={10}
-                        >
-                          <Connect(MultiSignalsTraitsCreationContainer) />
-                        </GridColumn>
-                        <GridColumn
-                          size={2}
-                        >
-                          <Button
-                            autoFocus={false}
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Export.csv"
-                            logic={false}
-                            quiet={false}
-                            selected={false}
-                            variant="primary"
-                          />
-                        </GridColumn>
-                      </GridRow>,
-                      "size": 8,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": Array [
-                          <GridColumn
-                            size={10}
-                          >
-                            <Connect(MultiSignalsTraitsCreationContainer) />
-                          </GridColumn>,
-                          <GridColumn
-                            size={2}
-                          >
-                            <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />
-                          </GridColumn>,
-                        ],
-                        "reverse": false,
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": <Connect(MultiSignalsTraitsCreationContainer) />,
-                            "size": 10,
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {},
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
-                          },
-                          "type": [Function],
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />,
-                            "size": 2,
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "autoFocus": false,
-                              "block": false,
-                              "disabled": false,
-                              "element": "button",
-                              "invalid": false,
-                              "label": "Export.csv",
-                              "logic": false,
-                              "quiet": false,
-                              "selected": false,
-                              "variant": "primary",
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
-                          },
-                          "type": [Function],
-                        },
-                      ],
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": <GridColumn
-                    offsetSize={3}
-                    size={9}
-                  >
-                    <Connect(TraitsCreationWarning) />
-                  </GridColumn>,
-                  "reverse": false,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <Connect(TraitsCreationWarning) />,
-                    "offsetSize": 3,
-                    "size": 9,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {},
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "isAdvancedSearchEnabled": false,
-                  "onSignalRecordsSelection": [Function],
-                  "results": Object {
-                    "list": Array [
-                      Object {
-                        "id": 0,
-                        "name": "test",
-                      },
-                    ],
-                  },
-                  "signalType": null,
-                  "sortSearch": [Function],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-        ],
-        "type": "div",
+          "type": [Function],
+        },
+        "type": [Function],
       },
     ],
     "type": Symbol(react.fragment),
@@ -3840,6 +2197,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={true}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -3870,111 +2228,22 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>
               </div>
             </GridColumn>
           </GridRow>,
-          <div
-            style={
-              Object {
-                "display": "flex",
-                "marginTop": 20,
-              }
-            }
+          <GridRow
+            reverse={false}
           >
-            <div
-              className={undefined}
+            <GridColumn
+              offsetSize={4}
+              size={8}
             >
-              <SignalTypeFilter
-                onSignalTypeChange={[Function]}
-                signalType={null}
+              <EmptySearch
+                className={undefined}
+                variant="noResult"
               />
-            </div>
-            <div
-              className={undefined}
-            >
-              <GridRow
-                reverse={false}
-                valign="middle"
-              >
-                <GridColumn
-                  size={4}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Search Results for
-                  </Heading>
-                </GridColumn>
-                <GridColumn
-                  size={8}
-                >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      size={10}
-                    >
-                      <Connect(MultiSignalsTraitsCreationContainer) />
-                    </GridColumn>
-                    <GridColumn
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="button"
-                        invalid={false}
-                        label="Export.csv"
-                        logic={false}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
-              </GridRow>
-              <GridRow
-                reverse={false}
-              >
-                <GridColumn
-                  offsetSize={3}
-                  size={9}
-                >
-                  <Connect(TraitsCreationWarning) />
-                </GridColumn>
-              </GridRow>
-              <SignalsTable
-                isAdvancedSearchEnabled={false}
-                onSignalRecordsSelection={[Function]}
-                results={
-                  Object {
-                    "list": Array [
-                      Object {
-                        "id": 0,
-                        "name": "test",
-                      },
-                    ],
-                  }
-                }
-                signalType={null}
-                sortSearch={[Function]}
-              />
-            </div>
-          </div>,
+            </GridColumn>
+          </GridRow>,
         ],
       },
       "ref": null,
@@ -4020,6 +2289,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={true}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -4073,6 +2343,7 @@ ShallowWrapper {
                 onValueChange={[Function]}
                 onViewRecordsChange={[Function]}
                 reportSuites={Array []}
+                searched={true}
                 signalStatus="ALL"
                 source={
                   Object {
@@ -4122,6 +2393,7 @@ ShallowWrapper {
                 "onValueChange": [Function],
                 "onViewRecordsChange": [Function],
                 "reportSuites": Array [],
+                "searched": true,
                 "signalStatus": "ALL",
                 "source": Object {
                   "dataSourceIds": Array [],
@@ -4157,18 +2429,6 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>
               </div>
             </GridColumn>,
             "reverse": false,
@@ -4190,18 +2450,6 @@ ShallowWrapper {
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
-                <div
-                  className={undefined}
-                >
-                  <SaveSearchExecution
-                    cancelSaveSearch={[Function]}
-                    changeSortingOrder={[Function]}
-                    confirmSaveThisSearch={[Function]}
-                    selectDefaultSorting={[Function]}
-                    trackSearchResultInDashboard={[Function]}
-                    updateSaveSearchName={[Function]}
-                  />
-                </div>
               </div>,
               "size": 12,
             },
@@ -4219,18 +2467,7 @@ ShallowWrapper {
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />,
-                  <div
-                    className={undefined}
-                  >
-                    <SaveSearchExecution
-                      cancelSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />
-                  </div>,
+                  false,
                 ],
                 "className": undefined,
               },
@@ -4251,40 +2488,7 @@ ShallowWrapper {
                   "rendered": null,
                   "type": [Function],
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <SaveSearchExecution
-                      cancelSaveSearch={[Function]}
-                      changeSortingOrder={[Function]}
-                      confirmSaveThisSearch={[Function]}
-                      selectDefaultSorting={[Function]}
-                      trackSearchResultInDashboard={[Function]}
-                      updateSaveSearchName={[Function]}
-                    />,
-                    "className": undefined,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "cancelSaveSearch": [Function],
-                      "changeSortingOrder": [Function],
-                      "confirmSaveThisSearch": [Function],
-                      "selectDefaultSorting": [Function],
-                      "trackSearchResultInDashboard": [Function],
-                      "updateSaveSearchName": [Function],
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": "div",
-                },
+                false,
               ],
               "type": "div",
             },
@@ -4295,480 +2499,48 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <div
+            "children": <GridColumn
+              offsetSize={4}
+              size={8}
+            >
+              <EmptySearch
                 className={undefined}
-              >
-                <SignalTypeFilter
-                  onSignalTypeChange={[Function]}
-                  signalType={null}
-                />
-              </div>,
-              <div
-                className={undefined}
-              >
-                <GridRow
-                  reverse={false}
-                  valign="middle"
-                >
-                  <GridColumn
-                    size={4}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Search Results for
-                    </Heading>
-                  </GridColumn>
-                  <GridColumn
-                    size={8}
-                  >
-                    <GridRow
-                      reverse={false}
-                    >
-                      <GridColumn
-                        size={10}
-                      >
-                        <Connect(MultiSignalsTraitsCreationContainer) />
-                      </GridColumn>
-                      <GridColumn
-                        size={2}
-                      >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="button"
-                          invalid={false}
-                          label="Export.csv"
-                          logic={false}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
-                      </GridColumn>
-                    </GridRow>
-                  </GridColumn>
-                </GridRow>
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={3}
-                    size={9}
-                  >
-                    <Connect(TraitsCreationWarning) />
-                  </GridColumn>
-                </GridRow>
-                <SignalsTable
-                  isAdvancedSearchEnabled={false}
-                  onSignalRecordsSelection={[Function]}
-                  results={
-                    Object {
-                      "list": Array [
-                        Object {
-                          "id": 0,
-                          "name": "test",
-                        },
-                      ],
-                    }
-                  }
-                  signalType={null}
-                  sortSearch={[Function]}
-                />
-              </div>,
-            ],
-            "style": Object {
-              "display": "flex",
-              "marginTop": 20,
-            },
+                variant="noResult"
+              />
+            </GridColumn>,
+            "reverse": false,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <EmptySearch
+                className={undefined}
+                variant="noResult"
+              />,
+              "offsetSize": 4,
+              "size": 8,
+            },
+            "ref": null,
+            "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": <SignalTypeFilter
-                  onSignalTypeChange={[Function]}
-                  signalType={null}
-                />,
                 "className": undefined,
+                "variant": "noResult",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "onSignalTypeChange": [Function],
-                  "signalType": null,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": "div",
+              "rendered": null,
+              "type": [Function],
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <GridRow
-                    reverse={false}
-                    valign="middle"
-                  >
-                    <GridColumn
-                      size={4}
-                    >
-                      <Heading
-                        size={3}
-                      >
-                        Search Results for
-                      </Heading>
-                    </GridColumn>
-                    <GridColumn
-                      size={8}
-                    >
-                      <GridRow
-                        reverse={false}
-                      >
-                        <GridColumn
-                          size={10}
-                        >
-                          <Connect(MultiSignalsTraitsCreationContainer) />
-                        </GridColumn>
-                        <GridColumn
-                          size={2}
-                        >
-                          <Button
-                            autoFocus={false}
-                            block={false}
-                            disabled={false}
-                            element="button"
-                            invalid={false}
-                            label="Export.csv"
-                            logic={false}
-                            quiet={false}
-                            selected={false}
-                            variant="primary"
-                          />
-                        </GridColumn>
-                      </GridRow>
-                    </GridColumn>
-                  </GridRow>,
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      offsetSize={3}
-                      size={9}
-                    >
-                      <Connect(TraitsCreationWarning) />
-                    </GridColumn>
-                  </GridRow>,
-                  <SignalsTable
-                    isAdvancedSearchEnabled={false}
-                    onSignalRecordsSelection={[Function]}
-                    results={
-                      Object {
-                        "list": Array [
-                          Object {
-                            "id": 0,
-                            "name": "test",
-                          },
-                        ],
-                      }
-                    }
-                    signalType={null}
-                    sortSearch={[Function]}
-                  />,
-                ],
-                "className": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      <GridColumn
-                        size={4}
-                      >
-                        <Heading
-                          size={3}
-                        >
-                          Search Results for
-                        </Heading>
-                      </GridColumn>,
-                      <GridColumn
-                        size={8}
-                      >
-                        <GridRow
-                          reverse={false}
-                        >
-                          <GridColumn
-                            size={10}
-                          >
-                            <Connect(MultiSignalsTraitsCreationContainer) />
-                          </GridColumn>
-                          <GridColumn
-                            size={2}
-                          >
-                            <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />
-                          </GridColumn>
-                        </GridRow>
-                      </GridColumn>,
-                    ],
-                    "reverse": false,
-                    "valign": "middle",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <Heading
-                          size={3}
-                        >
-                          Search Results for
-                        </Heading>,
-                        "size": 4,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": "Search Results for",
-                          "size": 3,
-                        },
-                        "ref": null,
-                        "rendered": "Search Results for",
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <GridRow
-                          reverse={false}
-                        >
-                          <GridColumn
-                            size={10}
-                          >
-                            <Connect(MultiSignalsTraitsCreationContainer) />
-                          </GridColumn>
-                          <GridColumn
-                            size={2}
-                          >
-                            <Button
-                              autoFocus={false}
-                              block={false}
-                              disabled={false}
-                              element="button"
-                              invalid={false}
-                              label="Export.csv"
-                              logic={false}
-                              quiet={false}
-                              selected={false}
-                              variant="primary"
-                            />
-                          </GridColumn>
-                        </GridRow>,
-                        "size": 8,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": Array [
-                            <GridColumn
-                              size={10}
-                            >
-                              <Connect(MultiSignalsTraitsCreationContainer) />
-                            </GridColumn>,
-                            <GridColumn
-                              size={2}
-                            >
-                              <Button
-                                autoFocus={false}
-                                block={false}
-                                disabled={false}
-                                element="button"
-                                invalid={false}
-                                label="Export.csv"
-                                logic={false}
-                                quiet={false}
-                                selected={false}
-                                variant="primary"
-                              />
-                            </GridColumn>,
-                          ],
-                          "reverse": false,
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "children": <Connect(MultiSignalsTraitsCreationContainer) />,
-                              "size": 10,
-                            },
-                            "ref": null,
-                            "rendered": Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "class",
-                              "props": Object {},
-                              "ref": null,
-                              "rendered": null,
-                              "type": [Function],
-                            },
-                            "type": [Function],
-                          },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "children": <Button
-                                autoFocus={false}
-                                block={false}
-                                disabled={false}
-                                element="button"
-                                invalid={false}
-                                label="Export.csv"
-                                logic={false}
-                                quiet={false}
-                                selected={false}
-                                variant="primary"
-                              />,
-                              "size": 2,
-                            },
-                            "ref": null,
-                            "rendered": Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "class",
-                              "props": Object {
-                                "autoFocus": false,
-                                "block": false,
-                                "disabled": false,
-                                "element": "button",
-                                "invalid": false,
-                                "label": "Export.csv",
-                                "logic": false,
-                                "quiet": false,
-                                "selected": false,
-                                "variant": "primary",
-                              },
-                              "ref": null,
-                              "rendered": null,
-                              "type": [Function],
-                            },
-                            "type": [Function],
-                          },
-                        ],
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
-                  ],
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <GridColumn
-                      offsetSize={3}
-                      size={9}
-                    >
-                      <Connect(TraitsCreationWarning) />
-                    </GridColumn>,
-                    "reverse": false,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Connect(TraitsCreationWarning) />,
-                      "offsetSize": 3,
-                      "size": 9,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {},
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "isAdvancedSearchEnabled": false,
-                    "onSignalRecordsSelection": [Function],
-                    "results": Object {
-                      "list": Array [
-                        Object {
-                          "id": 0,
-                          "name": "test",
-                        },
-                      ],
-                    },
-                    "signalType": null,
-                    "sortSearch": [Function],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
+            "type": [Function],
+          },
+          "type": [Function],
         },
       ],
       "type": Symbol(react.fragment),

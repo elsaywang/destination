@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmptyPlaceholder/> component rendering when it does contain children component matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EmptyPlaceholder
+    message="Refine the search query and try searching again."
+    title="No results found."
+  >
+    <Explore />
+    <NoResult />
+  </EmptyPlaceholder>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        Array [
+          <Explore />,
+          <NoResult />,
+        ],
+        <Heading
+          className={undefined}
+          size={2}
+        >
+          No results found.
+        </Heading>,
+        <div
+          className=""
+        >
+          Refine the search query and try searching again.
+        </div>,
+      ],
+      "className": undefined,
+      "data-test": "empty",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "No results found.",
+          "className": undefined,
+          "size": 2,
+        },
+        "ref": null,
+        "rendered": "No results found.",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Refine the search query and try searching again.",
+          "className": "",
+        },
+        "ref": null,
+        "rendered": "Refine the search query and try searching again.",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          Array [
+            <Explore />,
+            <NoResult />,
+          ],
+          <Heading
+            className={undefined}
+            size={2}
+          >
+            No results found.
+          </Heading>,
+          <div
+            className=""
+          >
+            Refine the search query and try searching again.
+          </div>,
+        ],
+        "className": undefined,
+        "data-test": "empty",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "No results found.",
+            "className": undefined,
+            "size": 2,
+          },
+          "ref": null,
+          "rendered": "No results found.",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Refine the search query and try searching again.",
+            "className": "",
+          },
+          "ref": null,
+          "rendered": "Refine the search query and try searching again.",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<EmptyPlaceholder/> component rendering when it does not contain any children component matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EmptyPlaceholder
+    message="Refine the search query and try searching again."
+    title="No results found."
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <Heading
+          className={undefined}
+          size={2}
+        >
+          No results found.
+        </Heading>,
+        <div
+          className=""
+        >
+          Refine the search query and try searching again.
+        </div>,
+      ],
+      "className": undefined,
+      "data-test": "empty",
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "No results found.",
+          "className": undefined,
+          "size": 2,
+        },
+        "ref": null,
+        "rendered": "No results found.",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Refine the search query and try searching again.",
+          "className": "",
+        },
+        "ref": null,
+        "rendered": "Refine the search query and try searching again.",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <Heading
+            className={undefined}
+            size={2}
+          >
+            No results found.
+          </Heading>,
+          <div
+            className=""
+          >
+            Refine the search query and try searching again.
+          </div>,
+        ],
+        "className": undefined,
+        "data-test": "empty",
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "No results found.",
+            "className": undefined,
+            "size": 2,
+          },
+          "ref": null,
+          "rendered": "No results found.",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Refine the search query and try searching again.",
+            "className": "",
+          },
+          "ref": null,
+          "rendered": "Refine the search query and try searching again.",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

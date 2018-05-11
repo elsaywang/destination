@@ -17,6 +17,7 @@ import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { customDateFormat } from '../constants/dateRangeConstants';
+import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
@@ -45,6 +46,7 @@ class SearchContainer extends Component {
             customStartDate: getDefaultCustomStartDate(),
             customEndDate: getDefaultCustomEndDate(),
             minEventFires: 1000,
+            searched: false,
         };
     }
 
@@ -55,6 +57,8 @@ class SearchContainer extends Component {
         //TODO: Extract all shared search fields state changes to redux
         if (!this.props.savedSearchFields.name) {
             this.onClearAll();
+        } else {
+            this.setState({ searched: true });
         }
     }
 
@@ -190,12 +194,14 @@ class SearchContainer extends Component {
         this.setState({
             ...this.state,
             ...savedSearch,
+            searched: true,
         });
         this.props.callSearch(savedSearch);
         this.props.populateSearchFields(savedSearch);
     };
 
     onSearch = () => {
+        this.setState({ searched: true });
         this.props.callSearch(this.state);
     };
 
@@ -226,6 +232,7 @@ class SearchContainer extends Component {
         this.props.clearSearchFields();
         this.setState({
             name: '',
+            searched: false,
             keyValuePairs: [
                 {
                     id: 0,
@@ -307,7 +314,7 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
 
-                {Object.keys(this.props.results.list).length > 0 && (
+                {Object.keys(this.props.results.list).length ? (
                     <div style={{ display: 'flex', marginTop: 20 }}>
                         {!this.state.advanced && (
                             <div className={styles.filterListContainer}>
@@ -347,6 +354,15 @@ class SearchContainer extends Component {
                             />
                         </div>
                     </div>
+                ) : (
+                    <GridRow>
+                        <GridColumn size={8} offsetSize={4}>
+                            <EmptySearch
+                                className={styles.empty}
+                                variant={this.state.searched ? 'noResult' : 'explore'}
+                            />
+                        </GridColumn>
+                    </GridRow>
                 )}
             </Fragment>
         );

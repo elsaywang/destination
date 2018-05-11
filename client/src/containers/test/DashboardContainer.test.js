@@ -149,10 +149,10 @@ describe('<DashboardContainer /> component', () => {
             );
         });
 
-        it('.handleViewMoreForSavedSearch() is called on the first saved search table', () => {
+        it('.handleViewAllForSavedSearch() is called on the first saved search table', () => {
             const wrapperInstance = wrapper.instance();
             const firstSavedSearch = wrapperInstance.props.savedSearch[0];
-            const spyOnClick = jest.spyOn(wrapperInstance, 'handleViewMoreForSavedSearch');
+            const spyOnClick = jest.spyOn(wrapperInstance, 'handleViewAllForSavedSearch');
             wrapper
                 .find(Button)
                 .at(0)
