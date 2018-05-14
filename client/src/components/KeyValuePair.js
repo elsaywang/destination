@@ -7,6 +7,7 @@ import operatorOptions from '../constants/operatorOptions';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';
 import { isValueValid } from '../utils/searchValidation';
+import InlineErrorMessage from './common/InlineErrorMessage';
 
 class KeyValuePair extends Component {
     constructor(props) {
@@ -17,16 +18,54 @@ class KeyValuePair extends Component {
         this.onValueChange = this.props.onValueChange.bind(this, this.props.pair.id);
     }
 
+    state = {
+        autocompleteError: false,
+        autocompleteErrorMessage: '',
+    };
+
     getCompletions = key => {
-        return fetch(`/api/signals/keys?search=${key}`).then(response => response.json());
+        return fetch(`/api/signals/keys?search=${key}`)
+            .then(response => {
+                if (response.ok) {
+                    this.setState({
+                        autocompleteError: false,
+                    });
+
+                    return response.json();
+                }
+
+                throw new Error(response.statusText);
+            })
+            .catch(error => {
+                this.setState({
+                    autocompleteError: true,
+                    autocompleteErrorMessage: error.message,
+                });
+            });
     };
 
     getKeysByReportSuiteId = () => {
         const { reportSuiteId } = this.props;
 
         return fetch(`/api/v1/report-suites/${reportSuiteId}/keys`)
-            .then(response => response.json())
-            .then(suites => suites.keys.map(suite => suite.name));
+            .then(response => {
+                if (response.ok) {
+                    this.setState({
+                        autocompleteError: false,
+                    });
+
+                    return response.json();
+                }
+
+                throw new Error(response.statusText);
+            })
+            .then(suites => suites.keys.map(suite => suite.name))
+            .catch(error => {
+                this.setState({
+                    autocompleteError: true,
+                    autocompleteErrorMessage: error.message,
+                });
+            });
     };
 
     render() {
@@ -41,7 +80,7 @@ class KeyValuePair extends Component {
 
         return (
             <span data-test="key-value-pair">
-                <Label value={keyLabel} labelFor={forKey}>
+                <Label value={keyLabel} labelFor={forKey} style={{ position: 'relative' }}>
                     <Autocomplete
                         className="key-search"
                         getCompletions={
@@ -54,8 +93,13 @@ class KeyValuePair extends Component {
                             data-test="key-search-field"
                             id={forKey}
                             placeholder={keyPlaceholder}
+                            invalid={this.state.autocompleteError}
                         />
                     </Autocomplete>
+                    <InlineErrorMessage
+                        isInvalid={this.state.autocompleteError}
+                        errorMessage={this.state.autocompleteErrorMessage}
+                    />
                 </Label>
                 <Select
                     className={classNames(styles.operator, 'operator')}
@@ -63,7 +107,7 @@ class KeyValuePair extends Component {
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
                 />
-                <Label value={valueLabel} labelFor={forValue}>
+                <Label value={valueLabel} labelFor={forValue} style={{ position: 'relative' }}>
                     <Textfield
                         className={classNames(styles.textField, 'value-search')}
                         data-test="value-search"
@@ -72,6 +116,10 @@ class KeyValuePair extends Component {
                         placeholder={valuePlaceholder}
                         onChange={this.onValueChange}
                         invalid={!isValueValid(this.props.pair)}
+                    />
+                    <InlineErrorMessage
+                        isInvalid={!isValueValid(this.props.pair)}
+                        errorMessage="It can only be numerical values when it's > or <."
                     />
                 </Label>
             </span>

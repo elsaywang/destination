@@ -16,7 +16,6 @@ import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
-import { customDateFormat } from '../constants/dateRangeConstants';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
 

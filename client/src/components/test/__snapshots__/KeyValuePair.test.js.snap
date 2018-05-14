@@ -34,6 +34,11 @@ ShallowWrapper {
       "children": Array [
         <Label
           labelFor="key0"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
           value="Key"
         >
           <Autocomplete
@@ -55,6 +60,10 @@ ShallowWrapper {
               required={false}
             />
           </Autocomplete>
+          <InlineErrorMessage
+            errorMessage=""
+            isInvalid={false}
+          />
         </Label>,
         <Select
           className="operator"
@@ -91,6 +100,11 @@ ShallowWrapper {
         />,
         <Label
           labelFor="value0"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
           value="Value"
         >
           <Textfield
@@ -106,6 +120,10 @@ ShallowWrapper {
             required={false}
             value=""
           />
+          <InlineErrorMessage
+            errorMessage="It can only be numerical values when it's > or <."
+            isInvalid={false}
+          />
         </Label>,
       ],
       "data-test": "key-value-pair",
@@ -117,73 +135,96 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Autocomplete
-            allowCreate={false}
-            className="key-search"
-            getCompletions={[Function]}
-            onChange={[Function]}
-            value=""
-          >
-            <Textfield
-              autoFocus={false}
-              className={undefined}
-              data-test="key-search-field"
-              disabled={false}
-              id="key0"
-              invalid={false}
-              placeholder="Enter a key"
-              readOnly={false}
-              required={false}
-            />
-          </Autocomplete>,
+          "children": Array [
+            <Autocomplete
+              allowCreate={false}
+              className="key-search"
+              getCompletions={[Function]}
+              onChange={[Function]}
+              value=""
+            >
+              <Textfield
+                autoFocus={false}
+                className={undefined}
+                data-test="key-search-field"
+                disabled={false}
+                id="key0"
+                invalid={false}
+                placeholder="Enter a key"
+                readOnly={false}
+                required={false}
+              />
+            </Autocomplete>,
+            <InlineErrorMessage
+              errorMessage=""
+              isInvalid={false}
+            />,
+          ],
           "labelFor": "key0",
+          "style": Object {
+            "position": "relative",
+          },
           "value": "Key",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "allowCreate": false,
-            "children": <Textfield
-              autoFocus={false}
-              className={undefined}
-              data-test="key-search-field"
-              disabled={false}
-              id="key0"
-              invalid={false}
-              placeholder="Enter a key"
-              readOnly={false}
-              required={false}
-            />,
-            "className": "key-search",
-            "getCompletions": [Function],
-            "onChange": [Function],
-            "value": "",
-          },
-          "ref": null,
-          "rendered": Object {
+        "rendered": Array [
+          Object {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "autoFocus": false,
-              "className": undefined,
-              "data-test": "key-search-field",
-              "disabled": false,
-              "id": "key0",
-              "invalid": false,
-              "placeholder": "Enter a key",
-              "readOnly": false,
-              "required": false,
+              "allowCreate": false,
+              "children": <Textfield
+                autoFocus={false}
+                className={undefined}
+                data-test="key-search-field"
+                disabled={false}
+                id="key0"
+                invalid={false}
+                placeholder="Enter a key"
+                readOnly={false}
+                required={false}
+              />,
+              "className": "key-search",
+              "getCompletions": [Function],
+              "onChange": [Function],
+              "value": "",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "autoFocus": false,
+                "className": undefined,
+                "data-test": "key-search-field",
+                "disabled": false,
+                "id": "key0",
+                "invalid": false,
+                "placeholder": "Enter a key",
+                "readOnly": false,
+                "required": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "errorMessage": "",
+              "isInvalid": false,
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          "type": [Function],
-        },
+        ],
         "type": [Function],
       },
       Object {
@@ -230,44 +271,67 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Textfield
-            autoFocus={false}
-            className="value-search"
-            data-test="value-search"
-            disabled={false}
-            id="value0"
-            invalid={false}
-            onChange={[Function]}
-            placeholder="Enter a value"
-            readOnly={false}
-            required={false}
-            value=""
-          />,
+          "children": Array [
+            <Textfield
+              autoFocus={false}
+              className="value-search"
+              data-test="value-search"
+              disabled={false}
+              id="value0"
+              invalid={false}
+              onChange={[Function]}
+              placeholder="Enter a value"
+              readOnly={false}
+              required={false}
+              value=""
+            />,
+            <InlineErrorMessage
+              errorMessage="It can only be numerical values when it's > or <."
+              isInvalid={false}
+            />,
+          ],
           "labelFor": "value0",
+          "style": Object {
+            "position": "relative",
+          },
           "value": "Value",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "autoFocus": false,
-            "className": "value-search",
-            "data-test": "value-search",
-            "disabled": false,
-            "id": "value0",
-            "invalid": false,
-            "onChange": [Function],
-            "placeholder": "Enter a value",
-            "readOnly": false,
-            "required": false,
-            "value": "",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "autoFocus": false,
+              "className": "value-search",
+              "data-test": "value-search",
+              "disabled": false,
+              "id": "value0",
+              "invalid": false,
+              "onChange": [Function],
+              "placeholder": "Enter a value",
+              "readOnly": false,
+              "required": false,
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "errorMessage": "It can only be numerical values when it's > or <.",
+              "isInvalid": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
@@ -282,6 +346,11 @@ ShallowWrapper {
         "children": Array [
           <Label
             labelFor="key0"
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
             value="Key"
           >
             <Autocomplete
@@ -303,6 +372,10 @@ ShallowWrapper {
                 required={false}
               />
             </Autocomplete>
+            <InlineErrorMessage
+              errorMessage=""
+              isInvalid={false}
+            />
           </Label>,
           <Select
             className="operator"
@@ -339,6 +412,11 @@ ShallowWrapper {
           />,
           <Label
             labelFor="value0"
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
             value="Value"
           >
             <Textfield
@@ -354,6 +432,10 @@ ShallowWrapper {
               required={false}
               value=""
             />
+            <InlineErrorMessage
+              errorMessage="It can only be numerical values when it's > or <."
+              isInvalid={false}
+            />
           </Label>,
         ],
         "data-test": "key-value-pair",
@@ -365,73 +447,96 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Autocomplete
-              allowCreate={false}
-              className="key-search"
-              getCompletions={[Function]}
-              onChange={[Function]}
-              value=""
-            >
-              <Textfield
-                autoFocus={false}
-                className={undefined}
-                data-test="key-search-field"
-                disabled={false}
-                id="key0"
-                invalid={false}
-                placeholder="Enter a key"
-                readOnly={false}
-                required={false}
-              />
-            </Autocomplete>,
+            "children": Array [
+              <Autocomplete
+                allowCreate={false}
+                className="key-search"
+                getCompletions={[Function]}
+                onChange={[Function]}
+                value=""
+              >
+                <Textfield
+                  autoFocus={false}
+                  className={undefined}
+                  data-test="key-search-field"
+                  disabled={false}
+                  id="key0"
+                  invalid={false}
+                  placeholder="Enter a key"
+                  readOnly={false}
+                  required={false}
+                />
+              </Autocomplete>,
+              <InlineErrorMessage
+                errorMessage=""
+                isInvalid={false}
+              />,
+            ],
             "labelFor": "key0",
+            "style": Object {
+              "position": "relative",
+            },
             "value": "Key",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "allowCreate": false,
-              "children": <Textfield
-                autoFocus={false}
-                className={undefined}
-                data-test="key-search-field"
-                disabled={false}
-                id="key0"
-                invalid={false}
-                placeholder="Enter a key"
-                readOnly={false}
-                required={false}
-              />,
-              "className": "key-search",
-              "getCompletions": [Function],
-              "onChange": [Function],
-              "value": "",
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "autoFocus": false,
-                "className": undefined,
-                "data-test": "key-search-field",
-                "disabled": false,
-                "id": "key0",
-                "invalid": false,
-                "placeholder": "Enter a key",
-                "readOnly": false,
-                "required": false,
+                "allowCreate": false,
+                "children": <Textfield
+                  autoFocus={false}
+                  className={undefined}
+                  data-test="key-search-field"
+                  disabled={false}
+                  id="key0"
+                  invalid={false}
+                  placeholder="Enter a key"
+                  readOnly={false}
+                  required={false}
+                />,
+                "className": "key-search",
+                "getCompletions": [Function],
+                "onChange": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "autoFocus": false,
+                  "className": undefined,
+                  "data-test": "key-search-field",
+                  "disabled": false,
+                  "id": "key0",
+                  "invalid": false,
+                  "placeholder": "Enter a key",
+                  "readOnly": false,
+                  "required": false,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "",
+                "isInvalid": false,
               },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            "type": [Function],
-          },
+          ],
           "type": [Function],
         },
         Object {
@@ -478,44 +583,67 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Textfield
-              autoFocus={false}
-              className="value-search"
-              data-test="value-search"
-              disabled={false}
-              id="value0"
-              invalid={false}
-              onChange={[Function]}
-              placeholder="Enter a value"
-              readOnly={false}
-              required={false}
-              value=""
-            />,
+            "children": Array [
+              <Textfield
+                autoFocus={false}
+                className="value-search"
+                data-test="value-search"
+                disabled={false}
+                id="value0"
+                invalid={false}
+                onChange={[Function]}
+                placeholder="Enter a value"
+                readOnly={false}
+                required={false}
+                value=""
+              />,
+              <InlineErrorMessage
+                errorMessage="It can only be numerical values when it's > or <."
+                isInvalid={false}
+              />,
+            ],
             "labelFor": "value0",
+            "style": Object {
+              "position": "relative",
+            },
             "value": "Value",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "autoFocus": false,
-              "className": "value-search",
-              "data-test": "value-search",
-              "disabled": false,
-              "id": "value0",
-              "invalid": false,
-              "onChange": [Function],
-              "placeholder": "Enter a value",
-              "readOnly": false,
-              "required": false,
-              "value": "",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "autoFocus": false,
+                "className": "value-search",
+                "data-test": "value-search",
+                "disabled": false,
+                "id": "value0",
+                "invalid": false,
+                "onChange": [Function],
+                "placeholder": "Enter a value",
+                "readOnly": false,
+                "required": false,
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "errorMessage": "It can only be numerical values when it's > or <.",
+                "isInvalid": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],

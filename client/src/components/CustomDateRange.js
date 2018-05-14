@@ -62,12 +62,7 @@ class CustomDateRange extends Component {
     }
 
     render() {
-        const {
-            customStartDate,
-            onCustomStartDateChange,
-            customEndDate,
-            onCustomEndDateChange,
-        } = this.props;
+        const { customStartDate, customEndDate } = this.props;
 
         return (
             <Fragment>

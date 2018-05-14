@@ -22,6 +22,10 @@ describe('Validation Spec', function() {
                 cy.get('[data-test="value-search"]:first').should('not.have.class', 'is-invalid');
             });
 
+            it('should not show an error message', function() {
+                cy.get('[data-test="inline-error-message"]').should('have.length', 0);
+            });
+
             it('should have enabled Search button', function() {
                 cy.get('[data-test="search-button"]').should('be.enabled');
             });
@@ -40,6 +44,10 @@ describe('Validation Spec', function() {
             it('should show up as invalid for value field', function() {
                 cy.get('[data-test="value-search"]:eq(1)').should('have.class', 'is-invalid');
                 cy.get('[data-test="value-search"]:eq(1)').should('have.attr', 'aria-invalid');
+            });
+
+            it('should show an error message', function() {
+                cy.get('[data-test="inline-error-message"]').should('have.length', 1);
             });
 
             it('should have disabled Search button', function() {

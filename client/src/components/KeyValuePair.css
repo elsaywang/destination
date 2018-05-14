@@ -1,7 +1,9 @@
 :local(.operator) {
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 :local(.textField) {
-    min-width: 250px;
+    min-width: 275px;
+    margin-bottom: 10px;
 }

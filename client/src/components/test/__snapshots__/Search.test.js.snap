@@ -88,9 +88,9 @@ ShallowWrapper {
                     size={12}
                     style={
                       Object {
-                        "alignItems": "flex-end",
+                        "alignItems": "baseline",
                         "display": "flex",
-                        "marginBottom": 10,
+                        "marginBottom": "1rem",
                       }
                     }
                   >
@@ -285,9 +285,9 @@ ShallowWrapper {
                       size={12}
                       style={
                         Object {
-                          "alignItems": "flex-end",
+                          "alignItems": "baseline",
                           "display": "flex",
-                          "marginBottom": 10,
+                          "marginBottom": "1rem",
                         }
                       }
                     >
@@ -489,9 +489,9 @@ ShallowWrapper {
                       size={12}
                       style={
                         Object {
-                          "alignItems": "flex-end",
+                          "alignItems": "baseline",
                           "display": "flex",
-                          "marginBottom": 10,
+                          "marginBottom": "1rem",
                         }
                       }
                     >
@@ -672,9 +672,9 @@ ShallowWrapper {
                         size={12}
                         style={
                           Object {
-                            "alignItems": "flex-end",
+                            "alignItems": "baseline",
                             "display": "flex",
-                            "marginBottom": 10,
+                            "marginBottom": "1rem",
                           }
                         }
                       >
@@ -853,9 +853,9 @@ ShallowWrapper {
                         size={12}
                         style={
                           Object {
-                            "alignItems": "flex-end",
+                            "alignItems": "baseline",
                             "display": "flex",
-                            "marginBottom": 10,
+                            "marginBottom": "1rem",
                           }
                         }
                       >
@@ -1029,9 +1029,9 @@ ShallowWrapper {
                             size={12}
                             style={
                               Object {
-                                "alignItems": "flex-end",
+                                "alignItems": "baseline",
                                 "display": "flex",
-                                "marginBottom": 10,
+                                "marginBottom": "1rem",
                               }
                             }
                           >
@@ -1202,9 +1202,9 @@ ShallowWrapper {
                           size={12}
                           style={
                             Object {
-                              "alignItems": "flex-end",
+                              "alignItems": "baseline",
                               "display": "flex",
-                              "marginBottom": 10,
+                              "marginBottom": "1rem",
                             }
                           }
                         >
@@ -1282,9 +1282,9 @@ ShallowWrapper {
                           ],
                           "size": 12,
                           "style": Object {
-                            "alignItems": "flex-end",
+                            "alignItems": "baseline",
                             "display": "flex",
-                            "marginBottom": 10,
+                            "marginBottom": "1rem",
                           },
                         },
                         "ref": null,
@@ -1886,9 +1886,9 @@ ShallowWrapper {
                       size={12}
                       style={
                         Object {
-                          "alignItems": "flex-end",
+                          "alignItems": "baseline",
                           "display": "flex",
-                          "marginBottom": 10,
+                          "marginBottom": "1rem",
                         }
                       }
                     >
@@ -2083,9 +2083,9 @@ ShallowWrapper {
                         size={12}
                         style={
                           Object {
-                            "alignItems": "flex-end",
+                            "alignItems": "baseline",
                             "display": "flex",
-                            "marginBottom": 10,
+                            "marginBottom": "1rem",
                           }
                         }
                       >
@@ -2287,9 +2287,9 @@ ShallowWrapper {
                         size={12}
                         style={
                           Object {
-                            "alignItems": "flex-end",
+                            "alignItems": "baseline",
                             "display": "flex",
-                            "marginBottom": 10,
+                            "marginBottom": "1rem",
                           }
                         }
                       >
@@ -2470,9 +2470,9 @@ ShallowWrapper {
                           size={12}
                           style={
                             Object {
-                              "alignItems": "flex-end",
+                              "alignItems": "baseline",
                               "display": "flex",
-                              "marginBottom": 10,
+                              "marginBottom": "1rem",
                             }
                           }
                         >
@@ -2651,9 +2651,9 @@ ShallowWrapper {
                           size={12}
                           style={
                             Object {
-                              "alignItems": "flex-end",
+                              "alignItems": "baseline",
                               "display": "flex",
-                              "marginBottom": 10,
+                              "marginBottom": "1rem",
                             }
                           }
                         >
@@ -2827,9 +2827,9 @@ ShallowWrapper {
                               size={12}
                               style={
                                 Object {
-                                  "alignItems": "flex-end",
+                                  "alignItems": "baseline",
                                   "display": "flex",
-                                  "marginBottom": 10,
+                                  "marginBottom": "1rem",
                                 }
                               }
                             >
@@ -3000,9 +3000,9 @@ ShallowWrapper {
                             size={12}
                             style={
                               Object {
-                                "alignItems": "flex-end",
+                                "alignItems": "baseline",
                                 "display": "flex",
-                                "marginBottom": 10,
+                                "marginBottom": "1rem",
                               }
                             }
                           >
@@ -3080,9 +3080,9 @@ ShallowWrapper {
                             ],
                             "size": 12,
                             "style": Object {
-                              "alignItems": "flex-end",
+                              "alignItems": "baseline",
                               "display": "flex",
-                              "marginBottom": 10,
+                              "marginBottom": "1rem",
                             },
                           },
                           "ref": null,

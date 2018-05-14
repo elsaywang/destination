@@ -1,0 +1,6 @@
+:local(.error) {
+    position: absolute;
+    left: 0;
+    top: 68px;
+    color: var(--spectrum-semantic-negative-color-default);
+}

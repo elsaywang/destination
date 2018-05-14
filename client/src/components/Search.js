@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { GridColumn, GridRow } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
@@ -37,7 +37,7 @@ class Search extends Component {
             <GridRow key={pair.id}>
                 <GridColumn
                     size={12}
-                    style={{ display: 'flex', alignItems: 'flex-end', marginBottom: 10 }}>
+                    style={{ display: 'flex', alignItems: 'baseline', marginBottom: '1rem' }}>
                     <KeyValuePair
                         key={pair.id}
                         pair={pair}

@@ -1,3 +1,4 @@
+/* eslint no-useless-escape:0 */
 import { isG6CompliantNumber } from './searchValidation';
 import { isEmpty } from './index';
 

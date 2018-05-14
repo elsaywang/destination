@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
 import { Tag } from '@react/react-spectrum/TagList';
@@ -30,8 +30,8 @@ class SavedSearchPopover extends Component {
             timeZone: 'UTC',
         };
 
-        return `${intl.formatDate(search.customStartDate, formatDateOptions)} to ${intl.formatDate(
-            search.customEndDate,
+        return `${intl.formatDate(customStartDate, formatDateOptions)} to ${intl.formatDate(
+            customEndDate,
             formatDateOptions,
         )}`;
     }
