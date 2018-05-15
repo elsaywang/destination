@@ -179,35 +179,35 @@ module.exports = () => {
         reportSuiteId: 169626,
         keys: [
             {
-                id: 0,
-                name: 'test-1',
+                id: 'eVar1',
+                name: 'Product Page',
             },
             {
-                id: 1,
-                name: 'test-2',
+                id: 'eVar2',
+                name: 'Product Page',
             },
             {
-                id: 2,
-                name: 'test-3',
+                id: 'eVar3',
+                name: 'Shopping Cart',
             },
             {
-                id: 3,
-                name: 'test-4',
+                id: 'eVar4',
+                name: 'Membership',
             },
             {
-                id: 4,
-                name: 'test-5',
+                id: 'eVar5',
+                name: 'Shopping Cart',
             },
             {
-                id: 5,
-                name: 'test-6',
+                id: 'eVar6',
+                name: 'Membership',
             },
             {
-                id: 6,
+                id: 'eVar7',
                 name: 'test-7',
             },
             {
-                id: 7,
+                id: 'eVar8',
                 name: 'test-8',
             },
         ],

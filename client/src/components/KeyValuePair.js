@@ -59,7 +59,14 @@ class KeyValuePair extends Component {
 
                 throw new Error(response.statusText);
             })
-            .then(suites => suites.keys.map(suite => suite.name))
+            .then(
+                suites =>
+                    suites.keys &&
+                    suites.keys.map(suite => ({
+                        label: `${suite.id} (${suite.name})`,
+                        id: suite.id,
+                    })),
+            )
             .catch(error => {
                 this.setState({
                     autocompleteError: true,
