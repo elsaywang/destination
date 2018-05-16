@@ -30,9 +30,9 @@ function EmptySearch({ variant, className }) {
     const getImageSrc = () => {
         switch (variant) {
             case 'explore':
-                return `//${baseUrl}${Explore}`;
+                return `//${baseUrl}${Explore}`; // eslint-disable-line
             case 'noResult':
-                return `//${baseUrl}${NoResult}`;
+                return `//${baseUrl}${NoResult}`; // eslint-disable-line
             default:
                 return '';
         }
