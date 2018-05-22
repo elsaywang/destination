@@ -1,4 +1,4 @@
-import aamFetch, { getOptionsWithAAMAuth } from '../fetch';
+import fetch, { getOptionsWithAAMAuth } from '../fetch';
 
 jest.mock('../../lib/getCsrfToken', () => ({ getCsrfToken: () => 'abc' }));
 
@@ -106,20 +106,20 @@ describe('fetch util', () => {
         });
 
         it('should call the global fetch polyfill', () => {
-            aamFetch('/url', {});
+            fetch('/url', {});
 
             expect(fetchSpy.mock.calls.length).toEqual(1);
         });
 
         it('should match the global fetch polyfill signature of (input[, init])', () => {
-            aamFetch('/url', {});
+            fetch('/url', {});
 
             expect(fetchSpy.mock.calls[0][0]).toEqual('/url');
             expect(fetchSpy.mock.calls[0][1]).toBeDefined();
         });
 
         it('should add AAM authentication to the `fetch` call', () => {
-            aamFetch('/url', {
+            fetch('/url', {
                 body: '{}',
                 cache: 'no-cache',
                 method: 'POST',

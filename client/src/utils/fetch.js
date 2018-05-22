@@ -10,6 +10,6 @@ export const getOptionsWithAAMAuth = (options = { headers: {} }) => ({
     credentials: 'same-origin',
 });
 
-export default function(url, options) {
-    return fetch(url, getOptionsWithAAMAuth(options));
-}
+const fetch = (url, options) => window.fetch(url, getOptionsWithAAMAuth(options));
+
+export default fetch;
