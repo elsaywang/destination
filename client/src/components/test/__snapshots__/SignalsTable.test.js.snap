@@ -28,6 +28,13 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 />
 `;
 
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 5`] = `
+<TraitsCreation
+  categoryType={undefined}
+  keyValuePairs={undefined}
+/>
+`;
+
 exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render one key-value pair as \`\${key}=\${value}\` inside a div 1`] = `
 <div>
   <div>

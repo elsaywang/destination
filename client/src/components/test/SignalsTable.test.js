@@ -238,6 +238,7 @@ describe('<SignalsTable /> component', () => {
                     { sids: [], sourceType: 'ANALYTICS' },
                     { sids: [], sourceType: 'ONBOARDED' },
                     { sids: [], sourceType: 'REALTIME' },
+                    { sids: [], sourceType: 'ALF' },
                     { sids: [], sourceType: '-' },
                 ];
 

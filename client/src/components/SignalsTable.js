@@ -11,7 +11,6 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { isNumeric } from '../utils/isNumeric';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
@@ -73,19 +72,16 @@ class SignalsTable extends Component {
         }));
     }
 
-    // TEMP: ALF signals will soon have their own signal type
-    isALF(signal) {
-        return isNumeric(signal.source.dataSourceIds);
-    }
-
     formatSignalType(signal) {
         const { sourceType } = signal.source;
 
         switch (sourceType) {
             case 'ANALYTICS':
                 return 'Adobe Analytics';
+            case 'ALF':
+                return 'Actionable Log Files';
             case 'REALTIME':
-                return this.isALF(signal) ? 'Actionable Log Files' : 'General Online Data';
+                return 'General Online Data';
             case 'ONBOARDED':
                 return 'Onboarded Records';
             default:
@@ -99,6 +95,8 @@ class SignalsTable extends Component {
         switch (sourceType) {
             case 'ANALYTICS':
                 return reportSuiteIds;
+            case 'ALF':
+                return '—';
             case 'REALTIME':
                 return '—';
             case 'ONBOARDED':
