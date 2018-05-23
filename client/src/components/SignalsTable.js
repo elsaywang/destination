@@ -62,7 +62,6 @@ class SignalsTable extends Component {
         }
     }
 
-    // These new methods will live somewhere else
     formatSignalsList(signals) {
         return signals.map(signal => ({
             ...signal,
@@ -85,7 +84,7 @@ class SignalsTable extends Component {
             case 'ONBOARDED':
                 return 'Onboarded Records';
             default:
-                return '';
+                return '—';
         }
     }
 
@@ -94,13 +93,13 @@ class SignalsTable extends Component {
 
         switch (sourceType) {
             case 'ANALYTICS':
-                return reportSuiteIds;
+                return reportSuiteIds && reportSuiteIds.length ? reportSuiteIds.join('') : '—';
             case 'ALF':
                 return '—';
             case 'REALTIME':
                 return '—';
             case 'ONBOARDED':
-                return dataSourceIds;
+                return dataSourceIds && dataSourceIds.length ? dataSourceIds.join('') : '—';
             default:
                 return '—';
         }

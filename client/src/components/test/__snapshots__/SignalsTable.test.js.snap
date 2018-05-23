@@ -68,6 +68,9 @@ ShallowWrapper {
             "name": "test1",
             "percentageChange": 0.1234,
             "source": Object {
+              "reportSuiteIds": Array [
+                123,
+              ],
               "sourceType": "ANALYTICS",
             },
           },
@@ -76,6 +79,9 @@ ShallowWrapper {
             "name": "test2",
             "percentageChange": -0.5678,
             "source": Object {
+              "dataSourceIds": Array [
+                456,
+              ],
               "sourceType": "ONBOARDED",
             },
           },
@@ -147,9 +153,12 @@ ShallowWrapper {
           },
           "name": "test1",
           "percentageChange": 0.1234,
-          "signalSource": undefined,
+          "signalSource": "123",
           "signalType": "Adobe Analytics",
           "source": Object {
+            "reportSuiteIds": Array [
+              123,
+            ],
             "sourceType": "ANALYTICS",
           },
         },
@@ -162,9 +171,12 @@ ShallowWrapper {
           },
           "name": "test2",
           "percentageChange": -0.5678,
-          "signalSource": undefined,
+          "signalSource": "456",
           "signalType": "Onboarded Records",
           "source": Object {
+            "dataSourceIds": Array [
+              456,
+            ],
             "sourceType": "ONBOARDED",
           },
         },
@@ -233,9 +245,12 @@ ShallowWrapper {
             },
             "name": "test1",
             "percentageChange": 0.1234,
-            "signalSource": undefined,
+            "signalSource": "123",
             "signalType": "Adobe Analytics",
             "source": Object {
+              "reportSuiteIds": Array [
+                123,
+              ],
               "sourceType": "ANALYTICS",
             },
           },
@@ -248,9 +263,12 @@ ShallowWrapper {
             },
             "name": "test2",
             "percentageChange": -0.5678,
-            "signalSource": undefined,
+            "signalSource": "456",
             "signalType": "Onboarded Records",
             "source": Object {
+              "dataSourceIds": Array [
+                456,
+              ],
               "sourceType": "ONBOARDED",
             },
           },

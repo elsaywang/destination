@@ -17,13 +17,13 @@ describe('<SignalsTable /> component', () => {
                     {
                         id: 0,
                         name: 'test1',
-                        source: { sourceType: 'ANALYTICS' },
+                        source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
                         percentageChange: 0.1234,
                     },
                     {
                         id: 1,
                         name: 'test2',
-                        source: { sourceType: 'ONBOARDED' },
+                        source: { sourceType: 'ONBOARDED', dataSourceIds: [456] },
                         percentageChange: -0.5678,
                     },
                 ],
@@ -272,6 +272,144 @@ describe('<SignalsTable /> component', () => {
                         2,
                         3,
                     ]);
+                });
+            });
+        });
+    });
+
+    describe('Formatting LIST API response for the table', () => {
+        describe('formatSignalsList', () => {
+            it('should return the list of signals, where each signal has additional custom data for the `signalType`, `signalSource`, and `includedInTraits` columns', () => {
+                const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+                const instance = newWrapper.instance();
+                const signals = [{}];
+
+                instance.formatSignalType = jest.fn(() => 'Adobe Analytics');
+                instance.formatSignalSource = jest.fn(() => '—');
+                instance.formatIncludedInTraits = jest.fn(() => []);
+
+                expect(instance.formatSignalsList(signals)).toEqual([
+                    {
+                        signalType: 'Adobe Analytics',
+                        signalSource: '—',
+                        includedInTraits: [],
+                    },
+                ]);
+            });
+        });
+
+        describe('formatSignalType', () => {
+            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const { formatSignalType } = newWrapper.instance();
+
+            it('should return "Adobe Analytics" when the signal`s `sourceType` is "ANALYTICS"', () => {
+                const signal = { source: { sourceType: 'ANALYTICS' } };
+
+                expect(formatSignalType(signal)).toEqual('Adobe Analytics');
+            });
+
+            it('should return "General Online Data" when the signal`s `sourceType` is "REALTIME"', () => {
+                const signal = { source: { sourceType: 'REALTIME' } };
+
+                expect(formatSignalType(signal)).toEqual('General Online Data');
+            });
+
+            it('should return "Actionable Log Files" when the signal`s `sourceType` is "ALF"', () => {
+                const signal = { source: { sourceType: 'ALF' } };
+
+                expect(formatSignalType(signal)).toEqual('Actionable Log Files');
+            });
+
+            it('should return "Onboarded Records" when the signal`s `sourceType` is "ONBOARDED"', () => {
+                const signal = { source: { sourceType: 'ONBOARDED' } };
+
+                expect(formatSignalType(signal)).toEqual('Onboarded Records');
+            });
+
+            it('should return "—" (emdash) string when the signal`s `sourceType` is anything else (should never happen)', () => {
+                const signal = { source: { sourceType: 'INVALID' } };
+
+                expect(formatSignalType(signal)).toEqual('—');
+            });
+        });
+
+        describe('formatSignalSource', () => {
+            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const { formatSignalSource } = newWrapper.instance();
+
+            // TODO: it should actually return the names of the report suite
+            it('should return the signal`s report suite ID when its `sourceType` is "ANALYTICS"', () => {
+                const signal = { source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] } };
+
+                expect(formatSignalSource(signal)).toEqual('123');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ANALYTICS" and `reportSuiteIds` is null (should never happen)', () => {
+                const signal = { source: { sourceType: 'ANALYTICS', reportSuiteIds: null } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ANALYTICS" and `reportSuiteIds` is empty (should never happen)', () => {
+                const signal = { source: { sourceType: 'ANALYTICS', reportSuiteIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            // TODO: it should actually return the names of the datasource
+            it('should return the signal`s datasource ID when its `sourceType` is "ONBOARDED"', () => {
+                const signal = { source: { sourceType: 'ONBOARDED', dataSourceIds: [456] } };
+
+                expect(formatSignalSource(signal)).toEqual('456');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ONBOARDED" and `dataSourceIds` is null (should never happen)', () => {
+                const signal = { source: { sourceType: 'ONBOARDED', dataSourceIds: null } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ONBOARDED" and `dataSourceIds` is empty (should never happen)', () => {
+                const signal = { source: { sourceType: 'ONBOARDED', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ALF"', () => {
+                const signal = { source: { sourceType: 'ALF', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "REALTIME"', () => {
+                const signal = { source: { sourceType: 'REALTIME', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is anything else (should never happen)', () => {
+                const signal = { source: { sourceType: 'INVALID', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+        });
+
+        describe('formatIncludedInTraits', () => {
+            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const { formatIncludedInTraits } = newWrapper.instance();
+
+            it('should return an object containing the signal`s `keyValuePairs`, `includedInTraits` (renamed as `sids`), and `categoryType`', () => {
+                const signal = {
+                    keyValuePairs: [{}],
+                    includedInTraits: [123],
+                    categoryType: 'REALTIME',
+                    totalCount: 10,
+                };
+
+                expect(formatIncludedInTraits(signal)).toEqual({
+                    keyValuePairs: [{}],
+                    sids: [123],
+                    categoryType: 'REALTIME',
                 });
             });
         });
