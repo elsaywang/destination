@@ -108,7 +108,9 @@ class SignalsTable extends Component {
     formatIncludedInTraits(signal) {
         const { keyValuePairs, includedInTraits, categoryType } = signal;
 
-        return { keyValuePairs, sids: includedInTraits, categoryType };
+        const sids = includedInTraits === null ? [] : includedInTraits;
+
+        return { keyValuePairs, sids, categoryType };
     }
 
     renderKeyValuePairs(keyValuePairs) {

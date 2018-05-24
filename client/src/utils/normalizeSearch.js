@@ -10,10 +10,10 @@ const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
 const normalizeSourceType = ({ source }) => (source.sourceType === 'ALL' ? '' : source.sourceType);
 
 const normalizeDataSourceIds = ({ advanced, source }) =>
-    advanced && source.dataSourceIds ? source.dataSourceIds : 0;
+    advanced && source.dataSourceIds ? source.dataSourceIds : null;
 
 const normalizeReportSuiteIds = ({ advanced, source }) =>
-    advanced && source.reportSuiteIds ? source.reportSuiteIds : '';
+    advanced && source.reportSuiteIds ? source.reportSuiteIds : null;
 
 export const normalizeSearch = search => ({
     search: stringifySignal(search),
