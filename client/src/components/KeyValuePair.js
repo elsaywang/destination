@@ -25,7 +25,7 @@ class KeyValuePair extends Component {
     };
 
     getCompletions = key => {
-        return fetch(`/api/signals/keys?search=${key}`)
+        return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
             .then(response => {
                 if (response.ok) {
                     this.setState({
