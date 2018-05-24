@@ -1,3 +1,4 @@
+import fetch from '../utils/fetch';
 import { createAction } from 'redux-actions';
 
 export const GET_REPORT_SUITES = 'GET_REPORT_SUITES';
