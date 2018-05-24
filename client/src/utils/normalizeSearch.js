@@ -15,6 +15,8 @@ const normalizeDataSourceIds = ({ advanced, source }) =>
 const normalizeReportSuiteIds = ({ advanced, source }) =>
     advanced && source.reportSuiteIds ? source.reportSuiteIds : null;
 
+const normalizeSignalStatus = ({ signalStatus }) => (signalStatus === 'ALL' ? null : signalStatus);
+
 export const normalizeSearch = search => ({
     search: stringifySignal(search),
     pageSize: 0,
@@ -27,7 +29,7 @@ export const normalizeSearch = search => ({
         dataSourceIds: normalizeDataSourceIds(search),
         reportSuiteIds: normalizeReportSuiteIds(search),
     },
-    signalStatus: search.signalStatus,
+    signalStatus: normalizeSignalStatus(search),
     minEventFires: search.minEventFires,
     descending: true,
 });

@@ -34,7 +34,7 @@ describe('normalizeSearch util', () => {
         pageSize: 0,
         pid: 0,
         search: 'key=="value"',
-        signalStatus: 'ALL',
+        signalStatus: null,
         source: {
             sourceType: null,
             dataSourceIds: null,
@@ -226,6 +226,27 @@ describe('normalizeSearch util', () => {
             const { reportSuiteIds: actual } = source;
             const expected = null;
 
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('normalizing signal status', () => {
+        it('should set `signalStatus` to `null` if it is "ALL"', () => {
+            const { signalStatus: actual } = normalizeSearch({
+                ...baseSearch,
+                signalStatus: 'ALL',
+            });
+            const expected = null;
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should keep `signalStatus` the same if it is anything other than "ALL"', () => {
+            const { signalStatus: actual } = normalizeSearch({
+                ...baseSearch,
+                signalStatus: 'USED',
+            });
+            const expected = 'USED';
 
             expect(actual).toEqual(expected);
         });
