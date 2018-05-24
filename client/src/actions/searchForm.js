@@ -1,3 +1,4 @@
+import fetch from '../utils/fetch';
 import { createAction } from 'redux-actions';
 import { normalizeSearch } from '../utils/normalizeSearch';
 
@@ -12,13 +13,7 @@ export const callSearch = createAction(CALL_SEARCH, async search => {
         method: 'POST',
     };
 
-    // TODO: pass in options above when making a real API call,
-    // currently the json-server does not return anything for a POST call
-    const result = await fetch('/api/signals/list');
-
-    // TODO: This will allow us to see the API request body until we call the
-    // real API.
-    console.log(normalizedSearch);
+    const result = await fetch('/portal/api/v1/signals/list', options);
 
     return result.json();
 });
