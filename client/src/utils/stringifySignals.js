@@ -5,7 +5,7 @@ import { isEmpty } from './index';
 const orDelimiter = ' OR ';
 const andDelimiter = ' AND ';
 
-const formatString = value => (isEmpty(value) ? String.raw`\"\"` : value);
+const formatString = value => (isEmpty(value) ? String.raw`""` : value);
 const formatOperator = operator => (operator === 'contains' ? ` ${operator} ` : operator);
 
 export const stringifyKeyValuePair = ({ key = '', operator = '==', value = '' }) => {

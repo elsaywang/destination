@@ -10,29 +10,29 @@ describe('formatKeyValuePair', () => {
 
         expect(formatKeyValuePair(keyValuePair)).toEqual('eVar1>"xyz123"');
     });
-    it('should stingify empty key in quotation marks', () => {
+    it('should stringify empty key in quotation marks', () => {
         const keyValuePair = {
             key: '',
             value: 'xyz123',
         };
 
-        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"=="xyz123"`);
+        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`""=="xyz123"`);
     });
-    it('should stingify empty value in quotation marks', () => {
+    it('should stringify empty value in quotation marks', () => {
         const keyValuePair = {
             key: 'eVar1',
             value: '',
         };
 
-        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`eVar1==\"\"`);
+        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`eVar1==""`);
     });
-    it('should stingify empty key and value in quotation marks', () => {
+    it('should stringify empty key and value in quotation marks', () => {
         const keyValuePair = {
             key: '',
             value: '',
         };
 
-        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`\"\"==\"\"`);
+        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`""==""`);
     });
 });
 
