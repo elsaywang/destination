@@ -119,7 +119,7 @@ ShallowWrapper {
               Search Query
             </Heading>
             <div>
-              k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+              "k-Licensed"&gt;=67425 AND "k-Gorgeous Wooden Shirt"&lt;=98396
             </div>
             <Heading
               className={undefined}
@@ -239,7 +239,7 @@ ShallowWrapper {
                 Search Query
               </Heading>
               <div>
-                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                "k-Licensed"&gt;=67425 AND "k-Gorgeous Wooden Shirt"&lt;=98396
               </div>
               <Heading
                 className={undefined}
@@ -364,7 +364,7 @@ ShallowWrapper {
                   Search Query
                 </Heading>,
                 <div>
-                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                  "k-Licensed"&gt;=67425 AND "k-Gorgeous Wooden Shirt"&lt;=98396
                 </div>,
                 <Heading
                   className={undefined}
@@ -490,10 +490,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                  "children": "\\"k-Licensed\\">=67425 AND \\"k-Gorgeous Wooden Shirt\\"<=98396",
                 },
                 "ref": null,
-                "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                "rendered": "\\"k-Licensed\\">=67425 AND \\"k-Gorgeous Wooden Shirt\\"<=98396",
                 "type": "div",
               },
               Object {
@@ -796,7 +796,7 @@ ShallowWrapper {
                 Search Query
               </Heading>
               <div>
-                k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                "k-Licensed"&gt;=67425 AND "k-Gorgeous Wooden Shirt"&lt;=98396
               </div>
               <Heading
                 className={undefined}
@@ -916,7 +916,7 @@ ShallowWrapper {
                   Search Query
                 </Heading>
                 <div>
-                  k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                  "k-Licensed"&gt;=67425 AND "k-Gorgeous Wooden Shirt"&lt;=98396
                 </div>
                 <Heading
                   className={undefined}
@@ -1041,7 +1041,7 @@ ShallowWrapper {
                     Search Query
                   </Heading>,
                   <div>
-                    k-Licensed&gt;=67425 AND k-Gorgeous Wooden Shirt&lt;=98396
+                    "k-Licensed"&gt;=67425 AND "k-Gorgeous Wooden Shirt"&lt;=98396
                   </div>,
                   <Heading
                     className={undefined}
@@ -1167,10 +1167,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                    "children": "\\"k-Licensed\\">=67425 AND \\"k-Gorgeous Wooden Shirt\\"<=98396",
                   },
                   "ref": null,
-                  "rendered": "k-Licensed>=67425 AND k-Gorgeous Wooden Shirt<=98396",
+                  "rendered": "\\"k-Licensed\\">=67425 AND \\"k-Gorgeous Wooden Shirt\\"<=98396",
                   "type": "div",
                 },
                 Object {

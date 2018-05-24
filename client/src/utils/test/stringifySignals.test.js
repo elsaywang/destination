@@ -8,7 +8,7 @@ describe('formatKeyValuePair', () => {
             value: 'xyz123',
         };
 
-        expect(formatKeyValuePair(keyValuePair)).toEqual('eVar1>"xyz123"');
+        expect(formatKeyValuePair(keyValuePair)).toEqual('"eVar1">"xyz123"');
     });
     it('should stringify empty key in quotation marks', () => {
         const keyValuePair = {
@@ -24,7 +24,7 @@ describe('formatKeyValuePair', () => {
             value: '',
         };
 
-        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`eVar1==""`);
+        expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`"eVar1"==""`);
     });
     it('should stringify empty key and value in quotation marks', () => {
         const keyValuePair = {
@@ -49,7 +49,7 @@ describe('stringifySignals', () => {
             },
         ];
 
-        expect(stringifySignals(signals)).toEqual('eVar1=="xyz123"');
+        expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123"');
     });
     it('should stringify multiple key-value pairs from a single signal', () => {
         const signals = [
@@ -67,7 +67,7 @@ describe('stringifySignals', () => {
             },
         ];
 
-        expect(stringifySignals(signals)).toEqual('eVar1=="xyz123" AND abc123=="cba321"');
+        expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123" AND "abc123"=="cba321"');
     });
     it('should stringify single key-value pairs from multiple signals', () => {
         const signals = [
@@ -89,7 +89,7 @@ describe('stringifySignals', () => {
             },
         ];
 
-        expect(stringifySignals(signals)).toEqual('eVar1=="xyz123" OR def456=="qrs789"');
+        expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123" OR "def456"=="qrs789"');
     });
     it('should stringify multiple key-value pairs from multiple signals', () => {
         const signals = [
@@ -120,7 +120,7 @@ describe('stringifySignals', () => {
         ];
 
         expect(stringifySignals(signals)).toEqual(
-            'eVar1=="xyz123" AND eVar2=="zyx321" OR def456=="qrs789" AND ghi000=="ihg000"',
+            '"eVar1"=="xyz123" AND "eVar2"=="zyx321" OR "def456"=="qrs789" AND "ghi000"=="ihg000"',
         );
     });
     it('should stringify empty key-value pairs as an empty string', () => {

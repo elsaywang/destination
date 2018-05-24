@@ -9,7 +9,8 @@ const formatString = value => (isEmpty(value) ? String.raw`""` : value);
 const formatOperator = operator => (operator === 'contains' ? ` ${operator} ` : operator);
 
 export const stringifyKeyValuePair = ({ key = '', operator = '==', value = '' }) => {
-    const formattedKey = formatString(key);
+    const normalizedKey = `\"${key}\"`;
+    const formattedKey = formatString(normalizedKey);
     const normalizedValue = isG6CompliantNumber(value) ? value : `\"${value}\"`;
     const formattedValue = formatString(normalizedValue);
 
@@ -17,7 +18,8 @@ export const stringifyKeyValuePair = ({ key = '', operator = '==', value = '' })
 };
 
 export const formatKeyValuePair = ({ key = '', operator = '==', value = '' }) => {
-    const formattedKey = formatString(key);
+    const normalizedKey = `\"${key}\"`;
+    const formattedKey = formatString(normalizedKey);
     const normalizedValue = isG6CompliantNumber(value) ? value : `\"${value}\"`;
     const formattedValue = formatString(normalizedValue);
 
