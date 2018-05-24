@@ -157,20 +157,16 @@ describe('<SignalsTable /> component', () => {
                 expect(getTotalCountColumnTitle(getColumns('ALL'))).toEqual('Total Counts');
             });
 
-            it('should be named "Total Event Fires" when the "Adobe Analytics" signal type filter is selected', () => {
-                expect(getTotalCountColumnTitle(getColumns('ANALYTICS'))).toEqual(
-                    'Total Event Fires',
-                );
+            it('should be named "Event Fires" when the "Adobe Analytics" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('ANALYTICS'))).toEqual('Event Fires');
             });
 
-            it('should be named "Total Event Fires" when the "Actionable Log Files" signal type filter is selected', () => {
-                expect(getTotalCountColumnTitle(getColumns('ALF'))).toEqual('Total Event Fires');
+            it('should be named "Event Fires" when the "Actionable Log Files" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('ALF'))).toEqual('Event Fires');
             });
 
-            it('should be named "Total Event Fires" when the "General Online Data" signal type filter is selected', () => {
-                expect(getTotalCountColumnTitle(getColumns('REALTIME'))).toEqual(
-                    'Total Event Fires',
-                );
+            it('should be named "Event Fires" when the "General Online Data" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('REALTIME'))).toEqual('Event Fires');
             });
 
             it('should be named "Total Records" when the "Onboarded Records" signal type filter is selected', () => {

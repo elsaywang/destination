@@ -108,7 +108,7 @@ describe('<DashboardContainer /> component', () => {
                             signalStatus: 'USED',
                             startDate: '2018-04-28T22:35:51.313Z',
                             endDate: '2018-04-29T09:22:26.931Z',
-                            sortBy: 'Total Event Fires',
+                            sortBy: 'Event Fires',
                         },
                     ],
                 },

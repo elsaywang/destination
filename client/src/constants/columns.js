@@ -46,15 +46,15 @@ const signalSource = {
     sortable: true,
 };
 /**
- * The "Total Counts", "Total Event Fires", and "Total Records" column will
+ * The "Total Counts", "Event Fires", and "Total Records" column will
  * all use the `totalCount` (no 's') column key. They're all used to display the
  * `totalCount` property of a signal, but we use different labels depending on
  * the selected signal type filter.
  *
  * All - "Total Counts"
- * Adobe Analytics - "Total Event Fires"
- * Actionable Log Files - "Total Event Fires"
- * General Online Data - "Total Event Fires"
+ * Adobe Analytics - "Event Fires"
+ * Actionable Log Files - "Event Fires"
+ * General Online Data - "Event Fires"
  * Onboarded Records - "Total Records"
  */
 const totalCounts = {
@@ -63,8 +63,8 @@ const totalCounts = {
     width: 100,
     sortable: true,
 };
-const totalEventFires = {
-    title: 'Total Event Fires',
+const eventFires = {
+    title: 'Event Fires',
     key: columnKeys.totalCount,
     width: 100,
     sortable: true,
@@ -104,7 +104,7 @@ export const analyticsColumns = [
     keyValuePairs,
     signalType,
     signalSource,
-    totalEventFires,
+    eventFires,
     percentageChange,
     includedInTraits,
 ];
@@ -113,7 +113,7 @@ export const advancedAnalyticsColumns = [
     keyValuePairs,
     keyName,
     valueName,
-    totalEventFires,
+    eventFires,
     percentageChange,
     includedInTraits,
 ];
@@ -121,7 +121,7 @@ export const advancedAnalyticsColumns = [
 export const actionableLogFilesColumns = [
     keyValuePairs,
     signalType,
-    totalEventFires,
+    eventFires,
     percentageChange,
     includedInTraits,
 ];
@@ -147,7 +147,7 @@ export const columns = [
     signalType,
     signalSource,
     totalCounts,
-    totalEventFires,
+    eventFires,
     totalRecords,
     percentageChange,
     includedInTraits,

@@ -7,7 +7,8 @@ var sortingTypes = [
     'Signal Type',
     'Signal Source',
     'Total Counts',
-    'Total Event Fires',
+    'Event Fires',
+    'Total Records',
     'Percentage Change',
     'Included In Traits',
 ];

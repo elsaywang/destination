@@ -121,7 +121,7 @@ ShallowWrapper {
             "minEventFires": 33675,
             "name": "Stephen Sanford",
             "signalStatus": "USED",
-            "sortBy": "Total Event Fires",
+            "sortBy": "Event Fires",
             "source": Object {
               "categoryType": "Real-Time",
               "dataSourceIds": 81638,
@@ -304,7 +304,7 @@ ShallowWrapper {
                 "minEventFires": 33675,
                 "name": "Stephen Sanford",
                 "signalStatus": "USED",
-                "sortBy": "Total Event Fires",
+                "sortBy": "Event Fires",
                 "source": Object {
                   "categoryType": "Real-Time",
                   "dataSourceIds": 81638,
@@ -759,7 +759,7 @@ ShallowWrapper {
                   "minEventFires": 33675,
                   "name": "Stephen Sanford",
                   "signalStatus": "USED",
-                  "sortBy": "Total Event Fires",
+                  "sortBy": "Event Fires",
                   "source": Object {
                     "categoryType": "Real-Time",
                     "dataSourceIds": 81638,
@@ -1037,7 +1037,7 @@ ShallowWrapper {
                 "minEventFires": 33675,
                 "name": "Stephen Sanford",
                 "signalStatus": "USED",
-                "sortBy": "Total Event Fires",
+                "sortBy": "Event Fires",
                 "source": Object {
                   "categoryType": "Real-Time",
                   "dataSourceIds": 81638,
@@ -1221,7 +1221,7 @@ ShallowWrapper {
                   "minEventFires": 33675,
                   "name": "Stephen Sanford",
                   "signalStatus": "USED",
-                  "sortBy": "Total Event Fires",
+                  "sortBy": "Event Fires",
                   "source": Object {
                     "categoryType": "Real-Time",
                     "dataSourceIds": 81638,
@@ -1676,7 +1676,7 @@ ShallowWrapper {
                     "minEventFires": 33675,
                     "name": "Stephen Sanford",
                     "signalStatus": "USED",
-                    "sortBy": "Total Event Fires",
+                    "sortBy": "Event Fires",
                     "source": Object {
                       "categoryType": "Real-Time",
                       "dataSourceIds": 81638,
@@ -1954,7 +1954,7 @@ ShallowWrapper {
                   "minEventFires": 33675,
                   "name": "Stephen Sanford",
                   "signalStatus": "USED",
-                  "sortBy": "Total Event Fires",
+                  "sortBy": "Event Fires",
                   "source": Object {
                     "categoryType": "Real-Time",
                     "dataSourceIds": 81638,
