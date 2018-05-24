@@ -21,7 +21,7 @@ class SignalsTable extends Component {
         switch (column.key) {
             case 'keyValuePairs':
                 return this.renderKeyValuePairs(data);
-            case 'totalCounts':
+            case 'totalCount':
                 return this.renderTotalCounts(data);
             case 'percentageChange':
                 return this.renderPercentageChange(data);

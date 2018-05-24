@@ -7,8 +7,7 @@ export const columnKeys = {
     valueName: 'valueName',
     signalType: 'signalType',
     signalSource: 'signalSource',
-    totalCounts: 'totalCounts',
-    totalEventFires: 'totalEventFires',
+    totalCount: 'totalCount',
     percentageChange: 'percentageChange',
     includedInTraits: 'includedInTraits',
 };
@@ -46,15 +45,33 @@ const signalSource = {
     width: 180,
     sortable: true,
 };
+/**
+ * The "Total Counts", "Total Event Fires", and "Total Records" column will
+ * all use the `totalCount` (no 's') column key. They're all used to display the
+ * `totalCount` property of a signal, but we use different labels depending on
+ * the selected signal type filter.
+ *
+ * All - "Total Counts"
+ * Adobe Analytics - "Total Event Fires"
+ * Actionable Log Files - "Total Event Fires"
+ * General Online Data - "Total Event Fires"
+ * Onboarded Records - "Total Records"
+ */
 const totalCounts = {
     title: 'Total Counts',
-    key: columnKeys.totalCounts,
+    key: columnKeys.totalCount,
     width: 100,
     sortable: true,
 };
 const totalEventFires = {
     title: 'Total Event Fires',
-    key: columnKeys.totalEventFires,
+    key: columnKeys.totalCount,
+    width: 100,
+    sortable: true,
+};
+const totalRecords = {
+    title: 'Total Records',
+    key: columnKeys.totalCount,
     width: 100,
     sortable: true,
 };
@@ -83,8 +100,14 @@ export const allSignalsColumns = [
     includedInTraits,
 ];
 
-// These are the same for now
-export const analyticsColumns = [...allSignalsColumns];
+export const analyticsColumns = [
+    keyValuePairs,
+    signalType,
+    signalSource,
+    totalEventFires,
+    percentageChange,
+    includedInTraits,
+];
 
 export const advancedAnalyticsColumns = [
     keyValuePairs,
@@ -98,13 +121,34 @@ export const advancedAnalyticsColumns = [
 export const actionableLogFilesColumns = [
     keyValuePairs,
     signalType,
-    totalCounts,
+    totalEventFires,
     percentageChange,
     includedInTraits,
 ];
 
-// These are the same for now
 export const generalOnlineDataColumns = [...actionableLogFilesColumns];
 
-// These are the same for now
-export const onboardedRecordsColumns = [...allSignalsColumns];
+export const onboardedRecordsColumns = [
+    keyValuePairs,
+    signalType,
+    signalSource,
+    totalRecords,
+    percentageChange,
+    includedInTraits,
+];
+
+/**
+ * All columns
+ */
+export const columns = [
+    keyValuePairs,
+    keyName,
+    valueName,
+    signalType,
+    signalSource,
+    totalCounts,
+    totalEventFires,
+    totalRecords,
+    percentageChange,
+    includedInTraits,
+];

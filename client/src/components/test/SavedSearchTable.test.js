@@ -70,7 +70,7 @@ describe('<SavedSearchTable/> component', () => {
                     reportSuiteIds: null,
                     sourceType: 'REALTIME',
                 },
-                totalCounts: 21456,
+                totalCount: 21456,
                 percentageChange: 0.154,
                 includedInTraits: [1, 2, 3],
                 signalStatus: 'USED',

@@ -13,7 +13,7 @@
                 "reportSuiteIds": [],
                 "sourceType": "REALTIME"
             },
-            "totalCounts": 71071,
+            "totalCount": 71071,
             "percentageChange": 0.154,
             "includedInTraits": [1, 2, 3],
             "signalStatus": "USED"
@@ -31,7 +31,7 @@
                 "reportSuiteIds": [],
                 "sourceType": "REALTIME"
             },
-            "totalCounts": 69967,
+            "totalCount": 69967,
             "percentageChange": -0.3711,
             "includedInTraits": [],
             "signalStatus": "UNUSED"
@@ -49,7 +49,7 @@
                 "reportSuiteIds": [],
                 "sourceType": "ONBOARDED"
             },
-            "totalCounts": 14793,
+            "totalCount": 14793,
             "percentageChange": -0.9711,
             "includedInTraits": [131, 838],
             "signalStatus": "USED"
@@ -72,7 +72,7 @@
                 "reportSuiteIds": [5678],
                 "sourceType": "ANALYTICS"
             },
-            "totalCounts": 21124,
+            "totalCount": 21124,
             "percentageChange": 0.8711,
             "includedInTraits": [],
             "signalStatus": "UNUSED"
