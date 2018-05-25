@@ -1,6 +1,26 @@
+const deferred = require('../utils/deferred');
+const savedSearchResponse = require('../fixtures/savedSearch.json');
+
 describe('Validation Spec', function() {
     before(function() {
-        cy.visit('#/search');
+        this.fetchSavedSearchDeferred = deferred();
+
+        cy.visit('#/search', {
+            onBeforeLoad(win) {
+                cy
+                    .stub(win, 'fetch')
+                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
+                    .as('fetchSavedSearch')
+                    .returns(this.fetchSavedSearchDeferred.promise);
+            },
+        });
+
+        this.fetchSavedSearchDeferred.resolve({
+            json() {
+                return savedSearchResponse.savedSearch;
+            },
+            ok: true,
+        });
     });
 
     describe('when adding another key value pair', function() {
