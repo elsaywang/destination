@@ -5,7 +5,7 @@ import EmptyPlaceholder from '../../components/common/EmptyPlaceholder';
 import Explore from '../../images/explore.svg';
 import NoResult from '../../images/noResult.svg';
 
-describe('<EmptySearch/> component', () => {
+xdescribe('<EmptySearch/> component', () => {
     describe('when variant is `explore` passes in props', () => {
         const wrapper = shallow(<EmptySearch variant="explore" />);
 
