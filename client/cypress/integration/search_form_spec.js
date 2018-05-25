@@ -3,7 +3,7 @@ const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
 describe('Search Form Integration Tests', function() {
-    before(function() {
+    beforeEach(function() {
         cy.clock(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
 
         this.fetchSavedSearchDeferred = deferred();
@@ -13,10 +13,10 @@ describe('Search Form Integration Tests', function() {
             onBeforeLoad(win) {
                 cy
                     .stub(win, 'fetch')
-                    .withArgs('/api/v1/users/self/annotations/aam-portal')
+                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
                     .returns(this.fetchSavedSearchDeferred.promise)
-                    .withArgs('/api/v1/report-suites')
+                    .withArgs('/portal/api/v1/report-suites')
                     .as('fetchReportSuites')
                     .returns(this.fetchReportSuitesDeferred.promise);
             },
@@ -37,7 +37,7 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    after(function() {
+    afterEach(function() {
         cy.clock().then(function(clock) {
             clock.restore();
         });
@@ -53,11 +53,8 @@ describe('Search Form Integration Tests', function() {
     });
 
     describe('when Advanced toggle is clicked', function() {
-        before(function() {
-            cy.get('[data-test="advanced-search-toggle"]').click();
-        });
-
         beforeEach(function() {
+            cy.get('[data-test="advanced-search-toggle"]').click();
             cy.get('[data-test="advanced-search-filter"]').as('advancedFilter');
         });
 
@@ -159,6 +156,7 @@ describe('Search Form Integration Tests', function() {
     describe('when 3 rows are added', function() {
         it('should render 3 rows with remove buttons and no Add button', function() {
             cy.get('[data-test="add-button"]').click();
+            cy.get('[data-test="add-button"]').click();
 
             cy.get('[data-test="key-value-pair"]').should('have.length', 3);
             cy.get('[data-test="remove-button"]').should('have.length', 2);
@@ -168,6 +166,8 @@ describe('Search Form Integration Tests', function() {
 
     describe('when Remove button is clicked', function() {
         it('should remove a row', function() {
+            cy.get('[data-test="add-button"]').click();
+            cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="remove-button"]:last').click();
 
             cy.get('[data-test="key-value-pair"]').should('have.length', 2);
@@ -176,6 +176,9 @@ describe('Search Form Integration Tests', function() {
 
     describe('when rows are removed down to 1', function() {
         it('should only show the Add button next to a row', function() {
+            cy.get('[data-test="add-button"]').click();
+            cy.get('[data-test="add-button"]').click();
+            cy.get('[data-test="remove-button"]:last').click();
             cy.get('[data-test="remove-button"]').click();
 
             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
@@ -227,15 +230,12 @@ describe('Search Form Integration Tests', function() {
     });
 
     describe('when "Custom Date Range" in the View Records For select is selected', function() {
-        before(function() {
+        beforeEach(function() {
             cy
                 .get('.view-records')
                 .click()
                 .get('.spectrum-SelectList-item:last')
                 .click();
-        });
-
-        beforeEach(function() {
             cy.get('[data-test="custom-start-date"]').as('customStartDate');
             cy.get('[data-test="custom-end-date"]').as('customEndDate');
         });
@@ -255,7 +255,34 @@ describe('Search Form Integration Tests', function() {
     });
 
     describe('when Clear All button is clicked', function() {
-        before(function() {
+        beforeEach(function() {
+            const minCounts = 50000;
+
+            cy.get('[data-test="advanced-search-toggle"]').click();
+            cy.get('[data-test="advanced-search-filter"]').type('te{enter}');
+
+            cy.get('[data-test="add-button"]').click();
+            cy.get('[data-test="add-button"]').click();
+
+            cy
+                .get('.signal-status')
+                .click()
+                .get('[role=option]:last')
+                .click();
+
+            cy
+                .get('.view-records')
+                .click()
+                .get('.spectrum-SelectList-item:first')
+                .click();
+
+            cy
+                .get('[data-test="min-counts"]')
+                .clear()
+                .type(minCounts);
+
+            cy.get('[data-test="search-button"]').click();
+
             cy.get('[data-test="clear-all-button"]').click();
         });
 

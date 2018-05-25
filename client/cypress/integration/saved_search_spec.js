@@ -16,7 +16,7 @@ describe('Saved Search Integration Test', function() {
                     .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
                     .returns(this.fetchSavedSearchDeferred.promise)
-                    .withArgs('/api/signals/list')
+                    .withArgs('/portal/api/v1/signals/list')
                     .as('fetchSearchResults')
                     .returns(this.fetchSearchResultsDeferred.promise)
                     .withArgs('/portal/api/v1/report-suites')
