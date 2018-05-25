@@ -168,7 +168,7 @@ module.exports = () => {
             },
         ],
         page: 0,
-        pageSize: 0,
+        pageSize: 20,
         total: 4,
     };
 

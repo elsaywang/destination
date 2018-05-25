@@ -31,7 +31,7 @@ describe('normalizeSearch util', () => {
         endDate: null,
         minEventFires: 1000,
         page: 0,
-        pageSize: 0,
+        pageSize: 20,
         search: '"key"=="value"',
         signalStatus: null,
         source: {

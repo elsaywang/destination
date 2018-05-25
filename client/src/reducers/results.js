@@ -4,7 +4,7 @@ import { CALL_SEARCH_FULFILLED, CLEAR_SEARCH, SORT_SEARCH_FULFILLED } from '../a
 const initialState = {
     list: [],
     page: 0,
-    pageSize: 0,
+    pageSize: 20,
     total: 0,
 };
 
