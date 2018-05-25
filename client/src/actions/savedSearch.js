@@ -1,4 +1,5 @@
 import { createAction } from 'redux-actions';
+import fetch from '../utils/fetch';
 
 export const GET_SAVED_SEARCH = 'GET_SAVED_SEARCH';
 export const GET_SAVED_SEARCH_FULFILLED = 'GET_SAVED_SEARCH_FULFILLED';
@@ -31,7 +32,7 @@ export const saveSearch = createAction(SAVE_SEARCH, async search => {
     // TODO: normalize this request to api expected request
     try {
         const result = await fetch('/portal/api/v1/users/self/annotations/aam-portal', {
-            method: 'put',
+            method: 'PUT',
             body: JSON.stringify(search),
         });
         //TODO: handle response as correct search to pass to reducer.

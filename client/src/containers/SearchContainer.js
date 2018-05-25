@@ -210,7 +210,7 @@ class SearchContainer extends Component {
 
     handleSaveThisSearchConfirm = search => {
         const { thisSearch, savedSearch, saveSearch } = this.props;
-        const maxId = savedSearch[savedSearch.length - 1].id;
+        const maxId = savedSearch.length ? savedSearch[savedSearch.length - 1].id : -1;
 
         const thisSearchWithKeyValuePairs = {
             id: maxId + 1,
