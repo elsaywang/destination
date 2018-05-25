@@ -5,6 +5,7 @@ import styles from './EmptySearch.css';
 import Explore from '../images/explore.svg';
 import NoResult from '../images/noResult.svg';
 import { getEmptyOptions } from '../constants/emptyOptions';
+import { getStaticUrl } from '../lib/getStaticUrl';
 
 function EmptySearch({ variant, className }) {
     const getMessageStyle = () => {
@@ -30,9 +31,9 @@ function EmptySearch({ variant, className }) {
     const getImageSrc = () => {
         switch (variant) {
             case 'explore':
-                return `//${baseUrl}${Explore}`; // eslint-disable-line
+                return `//${getStaticUrl()}${Explore}`;
             case 'noResult':
-                return `//${baseUrl}${NoResult}`; // eslint-disable-line
+                return `//${getStaticUrl()}${NoResult}`;
             default:
                 return '';
         }
