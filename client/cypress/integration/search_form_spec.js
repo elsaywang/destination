@@ -83,8 +83,6 @@ describe('Search Form Integration Tests', function() {
                         expect($filter.val()).to.contains($text.text());
                     });
                 });
-
-            cy.get('[data-test="search-form"]').click();
         });
     });
 
