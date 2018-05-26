@@ -143,7 +143,7 @@ describe('saveSearch reducer', () => {
                     signalStatus: 'USED',
                     startDate: '2018-04-28T18:13:54.899Z',
                     endDate: '2018-04-28T06:13:52.825Z',
-                    sortBy: 'Total Event Fires',
+                    sortBy: 'Event Fires',
                 },
                 {
                     name: 'Ms. Guy Pagac',
@@ -166,7 +166,7 @@ describe('saveSearch reducer', () => {
                     signalStatus: 'USED',
                     startDate: '2018-04-28T21:18:33.376Z',
                     endDate: '2018-04-28T17:07:28.540Z',
-                    sortBy: 'Total Event Fires',
+                    sortBy: 'Event Fires',
                 },
             ],
         };

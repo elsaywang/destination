@@ -28,7 +28,7 @@ describe('results reducer', () => {
         expect(listReducer([], action)[0].categoryType).toEqual('REALTIME');
     });
 
-    it('adds a `categoryType` of "ANALYTICS" for signals with a source type of "REALTIME"', () => {
+    it('adds a `categoryType` of "REALTIME" for signals with a source type of "ANALYTICS"', () => {
         const list = [{ source: { sourceType: 'ANALYTICS' } }];
         const action = {
             type: CALL_SEARCH_FULFILLED,
@@ -38,7 +38,7 @@ describe('results reducer', () => {
         expect(listReducer([], action)[0].categoryType).toEqual('REALTIME');
     });
 
-    it('adds a `categoryType` of "ALF" for signals with a source type of "REALTIME"', () => {
+    it('adds a `categoryType` of "REALTIME" for signals with a source type of "ALF"', () => {
         const list = [{ source: { sourceType: 'ALF' } }];
         const action = {
             type: CALL_SEARCH_FULFILLED,
@@ -48,7 +48,7 @@ describe('results reducer', () => {
         expect(listReducer([], action)[0].categoryType).toEqual('REALTIME');
     });
 
-    it('adds a `categoryType` of "ONBOARDED" for signals with a source type of "REALTIME"', () => {
+    it('adds a `categoryType` of "ONBOARDED" for signals with a source type of "ONBOARDED"', () => {
         const list = [{ source: { sourceType: 'ONBOARDED' } }];
         const action = {
             type: CALL_SEARCH_FULFILLED,

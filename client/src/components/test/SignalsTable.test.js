@@ -17,13 +17,13 @@ describe('<SignalsTable /> component', () => {
                     {
                         id: 0,
                         name: 'test1',
-                        source: { sourceType: 'ANALYTICS' },
+                        source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
                         percentageChange: 0.1234,
                     },
                     {
                         id: 1,
                         name: 'test2',
-                        source: { sourceType: 'ONBOARDED' },
+                        source: { sourceType: 'ONBOARDED', dataSourceIds: [456] },
                         percentageChange: -0.5678,
                     },
                 ],
@@ -54,8 +54,7 @@ describe('<SignalsTable /> component', () => {
             valueName,
             signalType,
             signalSource,
-            totalCounts,
-            totalEventFires,
+            totalCount,
             percentageChange,
             includedInTraits,
         } = columnKeys;
@@ -67,13 +66,12 @@ describe('<SignalsTable /> component', () => {
             expect(actualAllSignalsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(signalSource)).toBeTruthy();
-            expect(actualAllSignalsColumnsIncludes(totalCounts)).toBeTruthy();
+            expect(actualAllSignalsColumnsIncludes(totalCount)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAllSignalsColumnsIncludes(keyName)).toBeFalsy();
             expect(actualAllSignalsColumnsIncludes(valueName)).toBeFalsy();
-            expect(actualAllSignalsColumnsIncludes(totalEventFires)).toBeFalsy();
         });
 
         it('should return the correct columns when the "Adobe Analytics" signal type filter is selected and Advanced Search is disabled', () => {
@@ -83,13 +81,12 @@ describe('<SignalsTable /> component', () => {
             expect(actualAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(signalSource)).toBeTruthy();
-            expect(actualAnalyticsColumnsIncludes(totalCounts)).toBeTruthy();
+            expect(actualAnalyticsColumnsIncludes(totalCount)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAnalyticsColumnsIncludes(keyName)).toBeFalsy();
             expect(actualAnalyticsColumnsIncludes(valueName)).toBeFalsy();
-            expect(actualAnalyticsColumnsIncludes(totalEventFires)).toBeFalsy();
         });
 
         it('should return the correct columns when the "Adobe Analytics" signal type filter is selected and Advanced Search is enabled', () => {
@@ -99,13 +96,12 @@ describe('<SignalsTable /> component', () => {
             expect(actualAdvancedAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(keyName)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(valueName)).toBeTruthy();
-            expect(actualAdvancedAnalyticsColumnsIncludes(totalEventFires)).toBeTruthy();
+            expect(actualAdvancedAnalyticsColumnsIncludes(totalCount)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAdvancedAnalyticsColumnsIncludes(signalType)).toBeFalsy();
             expect(actualAdvancedAnalyticsColumnsIncludes(signalSource)).toBeFalsy();
-            expect(actualAdvancedAnalyticsColumnsIncludes(totalCounts)).toBeFalsy();
         });
 
         it('should return the correct columns when the "Actionable Log Files" signal type filter is selected', () => {
@@ -114,14 +110,13 @@ describe('<SignalsTable /> component', () => {
 
             expect(actualActionableLogFilesColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(signalType)).toBeTruthy();
-            expect(actualActionableLogFilesColumnsIncludes(totalCounts)).toBeTruthy();
+            expect(actualActionableLogFilesColumnsIncludes(totalCount)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualActionableLogFilesColumnsIncludes(keyName)).toBeFalsy();
             expect(actualActionableLogFilesColumnsIncludes(valueName)).toBeFalsy();
             expect(actualActionableLogFilesColumnsIncludes(signalSource)).toBeFalsy();
-            expect(actualActionableLogFilesColumnsIncludes(totalEventFires)).toBeFalsy();
         });
 
         it('should return the correct columns when the "General Online Data" signal type filter is selected', () => {
@@ -130,14 +125,13 @@ describe('<SignalsTable /> component', () => {
 
             expect(actualGeneralOnlineDataColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(signalType)).toBeTruthy();
-            expect(actualGeneralOnlineDataColumnsIncludes(totalCounts)).toBeTruthy();
+            expect(actualGeneralOnlineDataColumnsIncludes(totalCount)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualGeneralOnlineDataColumnsIncludes(keyName)).toBeFalsy();
             expect(actualGeneralOnlineDataColumnsIncludes(valueName)).toBeFalsy();
             expect(actualGeneralOnlineDataColumnsIncludes(signalSource)).toBeFalsy();
-            expect(actualGeneralOnlineDataColumnsIncludes(totalEventFires)).toBeFalsy();
         });
 
         it('should return the correct columns when the "Onboarded Records" signal type filter is selected', () => {
@@ -147,13 +141,37 @@ describe('<SignalsTable /> component', () => {
             expect(actualOnboardedRecordsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(signalSource)).toBeTruthy();
-            expect(actualOnboardedRecordsColumnsIncludes(totalCounts)).toBeTruthy();
+            expect(actualOnboardedRecordsColumnsIncludes(totalCount)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualOnboardedRecordsColumnsIncludes(keyName)).toBeFalsy();
             expect(actualOnboardedRecordsColumnsIncludes(valueName)).toBeFalsy();
-            expect(actualOnboardedRecordsColumnsIncludes(totalEventFires)).toBeFalsy();
+        });
+
+        describe('"Total Counts" column name variations', () => {
+            const getTotalCountColumnTitle = columns =>
+                columns.find(column => column.key === totalCount).title;
+
+            it('should be named "Total Counts" when the "All" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('ALL'))).toEqual('Total Counts');
+            });
+
+            it('should be named "Event Fires" when the "Adobe Analytics" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('ANALYTICS'))).toEqual('Event Fires');
+            });
+
+            it('should be named "Event Fires" when the "Actionable Log Files" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('ALF'))).toEqual('Event Fires');
+            });
+
+            it('should be named "Event Fires" when the "General Online Data" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('REALTIME'))).toEqual('Event Fires');
+            });
+
+            it('should be named "Total Records" when the "Onboarded Records" signal type filter is selected', () => {
+                expect(getTotalCountColumnTitle(getColumns('ONBOARDED'))).toEqual('Total Records');
+            });
         });
     });
 
@@ -174,8 +192,8 @@ describe('<SignalsTable /> component', () => {
             it('should call `renderKeyValuePairs` for cells in the `keyValuePairs` column', () => {
                 verifyRenderMethodInColumn('renderKeyValuePairs', 'keyValuePairs', []);
             });
-            it('should call `renderTotalCounts` for cells in the `totalCounts` column', () => {
-                verifyRenderMethodInColumn('renderTotalCounts', 'totalCounts', 123456789);
+            it('should call `renderTotalCounts` for cells in the `totalCount` column', () => {
+                verifyRenderMethodInColumn('renderTotalCounts', 'totalCount', 123456789);
             });
             it('should call `renderPercentageChange` for cells in the `percentageChange` column', () => {
                 verifyRenderMethodInColumn('renderPercentageChange', 'percentageChange', 0.1234);
@@ -238,6 +256,7 @@ describe('<SignalsTable /> component', () => {
                     { sids: [], sourceType: 'ANALYTICS' },
                     { sids: [], sourceType: 'ONBOARDED' },
                     { sids: [], sourceType: 'REALTIME' },
+                    { sids: [], sourceType: 'ALF' },
                     { sids: [], sourceType: '-' },
                 ];
 
@@ -271,6 +290,144 @@ describe('<SignalsTable /> component', () => {
                         2,
                         3,
                     ]);
+                });
+            });
+        });
+    });
+
+    describe('Formatting LIST API response for the table', () => {
+        describe('formatSignalsList', () => {
+            it('should return the list of signals, where each signal has additional custom data for the `signalType`, `signalSource`, and `includedInTraits` columns', () => {
+                const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+                const instance = newWrapper.instance();
+                const signals = [{}];
+
+                instance.formatSignalType = jest.fn(() => 'Adobe Analytics');
+                instance.formatSignalSource = jest.fn(() => '—');
+                instance.formatIncludedInTraits = jest.fn(() => []);
+
+                expect(instance.formatSignalsList(signals)).toEqual([
+                    {
+                        signalType: 'Adobe Analytics',
+                        signalSource: '—',
+                        includedInTraits: [],
+                    },
+                ]);
+            });
+        });
+
+        describe('formatSignalType', () => {
+            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const { formatSignalType } = newWrapper.instance();
+
+            it('should return "Adobe Analytics" when the signal`s `sourceType` is "ANALYTICS"', () => {
+                const signal = { source: { sourceType: 'ANALYTICS' } };
+
+                expect(formatSignalType(signal)).toEqual('Adobe Analytics');
+            });
+
+            it('should return "General Online Data" when the signal`s `sourceType` is "REALTIME"', () => {
+                const signal = { source: { sourceType: 'REALTIME' } };
+
+                expect(formatSignalType(signal)).toEqual('General Online Data');
+            });
+
+            it('should return "Actionable Log Files" when the signal`s `sourceType` is "ALF"', () => {
+                const signal = { source: { sourceType: 'ALF' } };
+
+                expect(formatSignalType(signal)).toEqual('Actionable Log Files');
+            });
+
+            it('should return "Onboarded Records" when the signal`s `sourceType` is "ONBOARDED"', () => {
+                const signal = { source: { sourceType: 'ONBOARDED' } };
+
+                expect(formatSignalType(signal)).toEqual('Onboarded Records');
+            });
+
+            it('should return "—" (emdash) string when the signal`s `sourceType` is anything else (should never happen)', () => {
+                const signal = { source: { sourceType: 'INVALID' } };
+
+                expect(formatSignalType(signal)).toEqual('—');
+            });
+        });
+
+        describe('formatSignalSource', () => {
+            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const { formatSignalSource } = newWrapper.instance();
+
+            // TODO: it should actually return the names of the report suite
+            it('should return the signal`s report suite ID when its `sourceType` is "ANALYTICS"', () => {
+                const signal = { source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] } };
+
+                expect(formatSignalSource(signal)).toEqual('123');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ANALYTICS" and `reportSuiteIds` is null (should never happen)', () => {
+                const signal = { source: { sourceType: 'ANALYTICS', reportSuiteIds: null } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ANALYTICS" and `reportSuiteIds` is empty (should never happen)', () => {
+                const signal = { source: { sourceType: 'ANALYTICS', reportSuiteIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            // TODO: it should actually return the names of the datasource
+            it('should return the signal`s datasource ID when its `sourceType` is "ONBOARDED"', () => {
+                const signal = { source: { sourceType: 'ONBOARDED', dataSourceIds: [456] } };
+
+                expect(formatSignalSource(signal)).toEqual('456');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ONBOARDED" and `dataSourceIds` is null (should never happen)', () => {
+                const signal = { source: { sourceType: 'ONBOARDED', dataSourceIds: null } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ONBOARDED" and `dataSourceIds` is empty (should never happen)', () => {
+                const signal = { source: { sourceType: 'ONBOARDED', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "ALF"', () => {
+                const signal = { source: { sourceType: 'ALF', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is "REALTIME"', () => {
+                const signal = { source: { sourceType: 'REALTIME', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return "—" (emdash) when the signal`s `sourceType` is anything else (should never happen)', () => {
+                const signal = { source: { sourceType: 'INVALID', dataSourceIds: [] } };
+
+                expect(formatSignalSource(signal)).toEqual('—');
+            });
+        });
+
+        describe('formatIncludedInTraits', () => {
+            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const { formatIncludedInTraits } = newWrapper.instance();
+
+            it('should return an object containing the signal`s `keyValuePairs`, `includedInTraits` (renamed as `sids`), and `categoryType`', () => {
+                const signal = {
+                    keyValuePairs: [{}],
+                    includedInTraits: [123],
+                    categoryType: 'REALTIME',
+                    totalCount: 10,
+                };
+
+                expect(formatIncludedInTraits(signal)).toEqual({
+                    keyValuePairs: [{}],
+                    sids: [123],
+                    categoryType: 'REALTIME',
                 });
             });
         });

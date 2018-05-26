@@ -11,7 +11,6 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { isNumeric } from '../utils/isNumeric';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
@@ -22,7 +21,7 @@ class SignalsTable extends Component {
         switch (column.key) {
             case 'keyValuePairs':
                 return this.renderKeyValuePairs(data);
-            case 'totalCounts':
+            case 'totalCount':
                 return this.renderTotalCounts(data);
             case 'percentageChange':
                 return this.renderPercentageChange(data);
@@ -63,7 +62,6 @@ class SignalsTable extends Component {
         }
     }
 
-    // These new methods will live somewhere else
     formatSignalsList(signals) {
         return signals.map(signal => ({
             ...signal,
@@ -73,23 +71,20 @@ class SignalsTable extends Component {
         }));
     }
 
-    // TEMP: ALF signals will soon have their own signal type
-    isALF(signal) {
-        return isNumeric(signal.source.dataSourceIds);
-    }
-
     formatSignalType(signal) {
         const { sourceType } = signal.source;
 
         switch (sourceType) {
             case 'ANALYTICS':
                 return 'Adobe Analytics';
+            case 'ALF':
+                return 'Actionable Log Files';
             case 'REALTIME':
-                return this.isALF(signal) ? 'Actionable Log Files' : 'General Online Data';
+                return 'General Online Data';
             case 'ONBOARDED':
                 return 'Onboarded Records';
             default:
-                return '';
+                return '—';
         }
     }
 
@@ -98,11 +93,13 @@ class SignalsTable extends Component {
 
         switch (sourceType) {
             case 'ANALYTICS':
-                return reportSuiteIds;
+                return reportSuiteIds && reportSuiteIds.length ? reportSuiteIds.join('') : '—';
+            case 'ALF':
+                return '—';
             case 'REALTIME':
                 return '—';
             case 'ONBOARDED':
-                return dataSourceIds;
+                return dataSourceIds && dataSourceIds.length ? dataSourceIds.join('') : '—';
             default:
                 return '—';
         }
@@ -111,7 +108,9 @@ class SignalsTable extends Component {
     formatIncludedInTraits(signal) {
         const { keyValuePairs, includedInTraits, categoryType } = signal;
 
-        return { keyValuePairs, sids: includedInTraits, categoryType };
+        const sids = includedInTraits === null ? [] : includedInTraits;
+
+        return { keyValuePairs, sids, categoryType };
     }
 
     renderKeyValuePairs(keyValuePairs) {
@@ -165,7 +164,7 @@ class SignalsTable extends Component {
             results,
             signalType,
             isAdvancedSearchEnabled,
-            sortSearch,
+            onSortSearch,
             allowsSelection,
         } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
@@ -177,7 +176,7 @@ class SignalsTable extends Component {
                 items={items}
                 columns={columns}
                 renderCell={this.renderCell}
-                sortSearch={sortSearch}
+                sortSearch={onSortSearch}
                 onSelectionChange={this.handleSelectionChange}
                 allowsSelection={allowsSelection}
             />
@@ -190,7 +189,7 @@ SignalsTable.propTypes = {
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
     onSignalRecordsSelection: PropTypes.func,
-    sortSearch: PropTypes.func,
+    onSortSearch: PropTypes.func,
     allowsSelection: PropTypes.bool,
 };
 

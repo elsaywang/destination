@@ -6,6 +6,7 @@ import Label from './common/Label';
 import operatorOptions from '../constants/operatorOptions';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';
+import fetch from '../utils/fetch';
 import { isValueValid } from '../utils/searchValidation';
 import InlineErrorMessage from './common/InlineErrorMessage';
 
@@ -24,7 +25,7 @@ class KeyValuePair extends Component {
     };
 
     getCompletions = key => {
-        return fetch(`/api/signals/keys?search=${key}`)
+        return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
             .then(response => {
                 if (response.ok) {
                     this.setState({
@@ -47,7 +48,7 @@ class KeyValuePair extends Component {
     getKeysByReportSuiteId = () => {
         const { reportSuiteId } = this.props;
 
-        return fetch(`/api/v1/report-suites/${reportSuiteId}/keys`)
+        return fetch(`/portal/api/v1/report-suites/dimensions/${reportSuiteId}`)
             .then(response => {
                 if (response.ok) {
                     this.setState({
@@ -59,13 +60,11 @@ class KeyValuePair extends Component {
 
                 throw new Error(response.statusText);
             })
-            .then(
-                suites =>
-                    suites.keys &&
-                    suites.keys.map(suite => ({
-                        label: `${suite.id} (${suite.name})`,
-                        id: suite.id,
-                    })),
+            .then(suites =>
+                suites.map(suite => ({
+                    label: `${suite.id} (${suite.name})`,
+                    id: suite.id,
+                })),
             )
             .catch(error => {
                 this.setState({

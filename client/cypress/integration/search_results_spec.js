@@ -14,13 +14,13 @@ describe('when Search button is clicked, and it has search results', function() 
             onBeforeLoad(win) {
                 cy
                     .stub(win, 'fetch')
-                    .withArgs('/api/v1/users/self/annotations/aam-portal')
+                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
                     .returns(this.fetchSavedSearchDeferred.promise)
-                    .withArgs('/api/signals/list')
+                    .withArgs('/portal/api/v1/signals/list')
                     .as('fetchSearchResults')
                     .returns(this.fetchSearchResultsDeferred.promise)
-                    .withArgs('/api/v1/report-suites')
+                    .withArgs('/portal/api/v1/report-suites')
                     .as('fetchReportSuites')
                     .returns(this.fetchReportSuitesDeferred.promise);
             },
@@ -64,13 +64,13 @@ describe('when Search button is clicked, and it has no search result', function(
             onBeforeLoad(win) {
                 cy
                     .stub(win, 'fetch')
-                    .withArgs('/api/v1/users/self/annotations/aam-portal')
+                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
                     .returns(this.fetchSavedSearchDeferred.promise)
-                    .withArgs('/api/signals/list')
+                    .withArgs('/portal/api/signals/list')
                     .as('fetchSearchResults')
                     .returns(this.fetchSearchResultsDeferred.promise)
-                    .withArgs('/api/v1/report-suites')
+                    .withArgs('/portal/api/v1/report-suites')
                     .as('fetchReportSuites')
                     .returns(this.fetchReportSuitesDeferred.promise);
             },

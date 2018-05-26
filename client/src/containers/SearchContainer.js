@@ -204,9 +204,13 @@ class SearchContainer extends Component {
         this.props.callSearch(this.state);
     };
 
+    handleSortSearch = (sortColumn, sortDir) => {
+        this.props.sortSearch(this.state, sortColumn, sortDir);
+    };
+
     handleSaveThisSearchConfirm = search => {
         const { thisSearch, savedSearch, saveSearch } = this.props;
-        const maxId = savedSearch[savedSearch.length - 1].id;
+        const maxId = savedSearch.length ? savedSearch[savedSearch.length - 1].id : -1;
 
         const thisSearchWithKeyValuePairs = {
             id: maxId + 1,
@@ -348,7 +352,7 @@ class SearchContainer extends Component {
                                 results={this.props.results}
                                 signalType={this.state.source.sourceType}
                                 isAdvancedSearchEnabled={this.state.advanced}
-                                sortSearch={this.props.sortSearch}
+                                onSortSearch={this.handleSortSearch}
                                 onSignalRecordsSelection={this.props.selectSignals}
                             />
                         </div>

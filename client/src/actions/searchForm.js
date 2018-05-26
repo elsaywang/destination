@@ -1,3 +1,4 @@
+import fetch from '../utils/fetch';
 import { createAction } from 'redux-actions';
 import { normalizeSearch } from '../utils/normalizeSearch';
 
@@ -12,13 +13,7 @@ export const callSearch = createAction(CALL_SEARCH, async search => {
         method: 'POST',
     };
 
-    // TODO: pass in options above when making a real API call,
-    // currently the json-server does not return anything for a POST call
-    const result = await fetch('/api/signals/list');
-
-    // TODO: This will allow us to see the API request body until we call the
-    // real API.
-    console.log(normalizedSearch);
+    const result = await fetch('/portal/api/v1/signals/list', options);
 
     return result.json();
 });
@@ -26,10 +21,20 @@ export const callSearch = createAction(CALL_SEARCH, async search => {
 export const SORT_SEARCH = 'SORT_SEARCH';
 export const SORT_SEARCH_FULFILLED = 'SORT_SEARCH_FULFILLED';
 export const SORT_SEARCH_REJECTED = 'SORT_SEARCH_REJECTED';
-export const sortSearch = createAction(SORT_SEARCH, (sortColumn, sortDir) => {
-    const order = sortDir ? 'desc' : 'asc';
+export const sortSearch = createAction(SORT_SEARCH, (search, sortBy, sortDir) => {
+    const descending = sortDir === -1;
+    const normalizedSearch = normalizeSearch(search);
+    const options = {
+        body: JSON.stringify({
+            ...normalizedSearch,
+            sortBy,
+            descending,
+        }),
+        cache: 'no-cache',
+        method: 'POST',
+    };
 
-    return fetch(`/api/signals/list?_sort=${sortColumn}?_order=${order}`).then(
+    return fetch(`/portal/api/v1/signals/list`, options).then(
         result => result.json(),
         error => {
             throw new Error(error);

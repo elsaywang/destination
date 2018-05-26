@@ -46,8 +46,6 @@
     "json-server": "json-server data-generator.js --port 3002 --routes ./routes.json",
     "externalize": "rm -f ./src/lib/i18n/messages/en.json && NODE_ENV=development node_modules/.bin/extract-messages -l=en --flat true -o ./src/lib/i18n/messages './src/**/!(*.test).js'"
   },
-  "homepage": "./",
-  "proxy": "http://localhost:3002",
   "devDependencies": {
     "@aam/eslint-config-aam": "^1.2.0",
     "eslint-plugin-prettier": "^2.6.0",

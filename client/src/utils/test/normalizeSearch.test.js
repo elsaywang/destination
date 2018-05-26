@@ -18,9 +18,9 @@ describe('normalizeSearch util', () => {
         name: '',
         signalStatus: 'ALL',
         source: {
-            dataSourceIds: [],
+            dataSourceIds: null,
             name: '',
-            reportSuiteIds: [],
+            reportSuiteIds: null,
             sourceType: null,
         },
         viewRecordsFor: '7D',
@@ -31,14 +31,13 @@ describe('normalizeSearch util', () => {
         endDate: null,
         minEventFires: 1000,
         page: 0,
-        pageSize: 0,
-        pid: 0,
-        search: 'key=="value"',
-        signalStatus: 'ALL',
+        pageSize: 20,
+        search: '"key"=="value"',
+        signalStatus: null,
         source: {
             sourceType: null,
-            dataSourceIds: 0,
-            reportSuiteIds: '',
+            dataSourceIds: null,
+            reportSuiteIds: null,
         },
         startDate: 1524528000000, // Tuesday, April 24, 2018 12:00:00 AM
     };
@@ -152,7 +151,7 @@ describe('normalizeSearch util', () => {
             expect(actual).toEqual(expected);
         });
 
-        it('should return 0 if the `dataSourceIds` array does not exist', () => {
+        it('should return `null` if the `dataSourceIds` array does not exist', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
                 advanced: true,
@@ -162,12 +161,12 @@ describe('normalizeSearch util', () => {
                 },
             });
             const { dataSourceIds: actual } = source;
-            const expected = 0;
+            const expected = null;
 
             expect(actual).toEqual(expected);
         });
 
-        it('should return 0 if `advanced` is false', () => {
+        it('should return `null` if `advanced` is false', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
                 advanced: false,
@@ -177,7 +176,7 @@ describe('normalizeSearch util', () => {
                 },
             });
             const { dataSourceIds: actual } = source;
-            const expected = 0;
+            const expected = null;
 
             expect(actual).toEqual(expected);
         });
@@ -199,7 +198,7 @@ describe('normalizeSearch util', () => {
             expect(actual).toEqual(expected);
         });
 
-        it('should return an empty string if the `reportSuiteIds` array does not exist', () => {
+        it('should return `null` if the `reportSuiteIds` array does not exist', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
                 advanced: true,
@@ -209,12 +208,12 @@ describe('normalizeSearch util', () => {
                 },
             });
             const { reportSuiteIds: actual } = source;
-            const expected = '';
+            const expected = null;
 
             expect(actual).toEqual(expected);
         });
 
-        it('should return an empty string if `advanced` is false', () => {
+        it('should return `null` if `advanced` is false', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
                 advanced: false,
@@ -224,7 +223,29 @@ describe('normalizeSearch util', () => {
                 },
             });
             const { reportSuiteIds: actual } = source;
-            const expected = '';
+            const expected = null;
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('normalizing signal status', () => {
+        it('should set `signalStatus` to `null` if it is "ALL"', () => {
+            const { signalStatus: actual } = normalizeSearch({
+                ...baseSearch,
+                signalStatus: 'ALL',
+            });
+            const expected = null;
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should keep `signalStatus` the same if it is anything other than "ALL"', () => {
+            const { signalStatus: actual } = normalizeSearch({
+                ...baseSearch,
+                signalStatus: 'USED',
+            });
+            const expected = 'USED';
 
             expect(actual).toEqual(expected);
         });

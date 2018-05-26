@@ -1,8 +1,8 @@
 {
-    "/api/traits": "/traits",
-    "/api/signals/list": "/list",
-    "/api/signals/keys": "/keys",
-    "/api/v1/users/self/annotations/aam-portal": "/savedSearch",
-    "/api/v1/report-suites": "/reportSuites",
-    "/api/v1/report-suites/*/keys": "/reportSuitesKeys"
+    "/portal/api/traits": "/traits",
+    "/portal/api/signals/list": "/list",
+    "/portal/api/signals/keys": "/keys",
+    "/portal/api/v1/users/self/annotations/aam-portal": "/savedSearch",
+    "/portal/api/v1/report-suites": "/reportSuites",
+    "/portal/api/v1/report-suites/*/keys": "/reportSuitesKeys"
 }

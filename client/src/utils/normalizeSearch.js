@@ -10,15 +10,16 @@ const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
 const normalizeSourceType = ({ source }) => (source.sourceType === 'ALL' ? '' : source.sourceType);
 
 const normalizeDataSourceIds = ({ advanced, source }) =>
-    advanced && source.dataSourceIds ? source.dataSourceIds : 0;
+    advanced && source.dataSourceIds ? source.dataSourceIds : null;
 
 const normalizeReportSuiteIds = ({ advanced, source }) =>
-    advanced && source.reportSuiteIds ? source.reportSuiteIds : '';
+    advanced && source.reportSuiteIds ? source.reportSuiteIds : null;
+
+const normalizeSignalStatus = ({ signalStatus }) => (signalStatus === 'ALL' ? null : signalStatus);
 
 export const normalizeSearch = search => ({
     search: stringifySignal(search),
-    pageSize: 0,
-    pid: 0,
+    pageSize: 20,
     page: 0,
     startDate: normalizeStartDate(search),
     endDate: normalizeEndDate(search),
@@ -27,7 +28,7 @@ export const normalizeSearch = search => ({
         dataSourceIds: normalizeDataSourceIds(search),
         reportSuiteIds: normalizeReportSuiteIds(search),
     },
-    signalStatus: search.signalStatus,
+    signalStatus: normalizeSignalStatus(search),
     minEventFires: search.minEventFires,
     descending: true,
 });

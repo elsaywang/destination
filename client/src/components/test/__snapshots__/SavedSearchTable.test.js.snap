@@ -123,7 +123,7 @@ ShallowWrapper {
           "reportSuiteIds": null,
           "sourceType": "REALTIME",
         },
-        "totalCounts": 21456,
+        "totalCount": 21456,
       }
     }
   />,
@@ -161,7 +161,7 @@ ShallowWrapper {
           "reportSuiteIds": null,
           "sourceType": "REALTIME",
         },
-        "totalCounts": 21456,
+        "totalCount": 21456,
       },
     },
     "ref": null,
@@ -196,7 +196,7 @@ ShallowWrapper {
             "reportSuiteIds": null,
             "sourceType": "REALTIME",
           },
-          "totalCounts": 21456,
+          "totalCount": 21456,
         },
       },
       "ref": null,

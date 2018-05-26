@@ -7,7 +7,8 @@ var sortingTypes = [
     'Signal Type',
     'Signal Source',
     'Total Counts',
-    'Total Event Fires',
+    'Event Fires',
+    'Total Records',
     'Percentage Change',
     'Included In Traits',
 ];
@@ -118,8 +119,8 @@ module.exports = () => {
         constructor(name, dataSourceIds, reportSuiteIds, sourceType) {
             this.name = name || undefined;
             this.dataSourceIds = dataSourceIds || [faker.random.number()];
-            this.reportSuiteIds = reportSuiteIds || null;
-            this.sourceType = signalTypes[Math.floor(Math.random() * signalTypes.length)];
+            this.reportSuiteIds = reportSuiteIds || [faker.random.number()];
+            this.sourceType = signalTypes[Math.floor(Math.random() * (signalTypes.length - 1)) + 1];
         }
     }
 
@@ -130,8 +131,7 @@ module.exports = () => {
                 keyName: faker.random.word(),
                 valueName: faker.random.word(),
                 source: new Source(),
-                totalEventFires: faker.random.number(),
-                totalCounts: faker.random.number(),
+                totalCount: faker.random.number(),
                 percentageChange: 0.154,
                 includedInTraits: [1, 2, 3],
                 signalStatus: 'USED',
@@ -141,8 +141,7 @@ module.exports = () => {
                 keyName: faker.random.word(),
                 valueName: faker.random.word(),
                 source: new Source(),
-                totalEventFires: faker.random.number(),
-                totalCounts: faker.random.number(),
+                totalCount: faker.random.number(),
                 percentageChange: -0.3711,
                 includedInTraits: [],
                 signalStatus: 'UNUSED',
@@ -151,9 +150,8 @@ module.exports = () => {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
                 keyName: faker.random.word(),
                 valueName: faker.random.word(),
-                source: new Source(1234, null, 'ONBOARDED'),
-                totalEventFires: faker.random.number(),
-                totalCounts: faker.random.number(),
+                source: new Source(null, [1234], null, 'ONBOARDED'),
+                totalCount: faker.random.number(),
                 percentageChange: -0.9711,
                 includedInTraits: [131, 838],
                 signalStatus: 'USED',
@@ -162,16 +160,15 @@ module.exports = () => {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
                 keyName: faker.random.word(),
                 valueName: faker.random.word(),
-                source: new Source(null, 5678, 'ANALYTICS'),
-                totalCounts: faker.random.number(),
-                totalEventFires: faker.random.number(),
+                source: new Source(null, null, [5678], 'ANALYTICS'),
+                totalCount: faker.random.number(),
                 percentageChange: 0.8711,
                 includedInTraits: [],
                 signalStatus: 'UNUSED',
             },
         ],
         page: 0,
-        pageSize: 0,
+        pageSize: 20,
         total: 4,
     };
 
