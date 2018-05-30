@@ -106,10 +106,10 @@ class SearchContainer extends Component {
 
         this.setState({
             source: {
+                ...this.state.source,
                 name: value,
-                dataSourceIds: [matchingReportSuite.dataSourceId],
+                dataSourceIds: [],
                 reportSuiteIds: [matchingReportSuite.suite],
-                sourceType: this.state.source.sourceType,
             },
         });
     };
