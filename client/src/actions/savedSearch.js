@@ -3,10 +3,9 @@ import fetch from '../utils/fetch';
 import { createAsyncAction } from '../utils/createAsyncAction';
 
 export const GET_SAVED_SEARCH = 'GET_SAVED_SEARCH';
-export const GET_SAVED_SEARCH_FULFILLED = 'GET_SAVED_SEARCH_FULFILLED';
 export const GET_SAVED_SEARCH_REJECTED = 'GET_SAVED_SEARCH_REJECTED';
 export const getSavedSearch = createAsyncAction(GET_SAVED_SEARCH, () =>
-    fetch('/portal/api/v1/users/self/annotations/aam-portal')
+    fetch('/portal/api/v1/users/self/annotations/aam-portal'),
 );
 
 export const UPDATE_SAVE_SEARCH_NAME = 'UPDATE_SAVE_SEARCH_NAME';
@@ -25,7 +24,6 @@ export const CANCEL_SAVE_SEARCH = 'CANCEL_SAVE_SEARCH';
 export const cancelSaveSearch = createAction(CANCEL_SAVE_SEARCH);
 
 export const SAVE_SEARCH = 'SAVE_SEARCH';
-export const SAVE_SEARCH_FULFILLED = 'SAVE_SEARCH_FULFILLED';
 export const SAVE_SEARCH_REJECTED = 'SAVE_SEARCH_REJECTED';
 export const saveSearch = createAction(SAVE_SEARCH, async search => {
     // TODO: normalize this request to api expected request

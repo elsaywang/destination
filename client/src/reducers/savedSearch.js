@@ -1,8 +1,8 @@
 import { handleActions } from 'redux-actions';
 import {
-    GET_SAVED_SEARCH_FULFILLED,
+    GET_SAVED_SEARCH,
     UPDATE_SAVE_SEARCH_NAME,
-    SAVE_SEARCH_FULFILLED,
+    SAVE_SEARCH,
     TRACK_SEARCH_RESULT_IN_DASHBOARD,
     SELECT_DEFAULT_SORTING,
     CHANGE_SORTING_ORDER,
@@ -26,19 +26,19 @@ const addId = (obj, i) => ({
 
 const list = handleActions(
     {
-        [GET_SAVED_SEARCH_FULFILLED]: (state, action) =>
+        [GET_SAVED_SEARCH]: (state, action) =>
             action.payload.map(savedSearch => ({
                 ...savedSearch,
                 keyValuePairs: savedSearch.keyValuePairs.map(addId),
             })),
-        [SAVE_SEARCH_FULFILLED]: (state, action) => action.payload,
+        [SAVE_SEARCH]: (state, action) => action.payload,
     },
     initialState.list,
 );
 
 const saveSearch = handleActions(
     {
-        [SAVE_SEARCH_FULFILLED]: () => ({
+        [SAVE_SEARCH]: () => ({
             ...initialState.saveSearch,
         }),
         [UPDATE_SAVE_SEARCH_NAME]: (state, action) => ({
@@ -76,8 +76,8 @@ const handleSaveSearch = (state, action) => ({
 
 export default handleActions(
     {
-        [GET_SAVED_SEARCH_FULFILLED]: handleSavedSearchList,
-        [SAVE_SEARCH_FULFILLED]: (state, action) => ({
+        [GET_SAVED_SEARCH]: handleSavedSearchList,
+        [SAVE_SEARCH]: (state, action) => ({
             list: list(state.list, action),
             saveSearch: saveSearch(state.saveSearch, action),
         }),
