@@ -26,8 +26,8 @@ describe('Advanced Search', () => {
             sourceName="test"
             reportSuites={reportSuites}
             enabled={false}
-            onFilterChange={mockFn}
-            onFilterSelect={mockFn}
+            onReportSuiteChange={mockFn}
+            onReportSuiteSelect={mockFn}
             onAdvancedSearchChange={mockFn}
         />,
     );

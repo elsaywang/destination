@@ -90,25 +90,26 @@ class SearchContainer extends Component {
         });
     };
 
-    onFilterChange = value => {
+    onReportSuiteChange = value => {
         this.setState({
             source: {
+                ...this.state.source,
                 name: value,
             },
         });
     };
 
-    onFilterSelect = value => {
+    onReportSuiteSelect = value => {
         const matchingReportSuite = this.props.reportSuites.find(
             reportSuite => reportSuite.name === value,
         );
 
         this.setState({
             source: {
+                ...this.state.source,
                 name: value,
-                dataSourceIds: [matchingReportSuite.dataSourceId],
+                dataSourceIds: [],
                 reportSuiteIds: [matchingReportSuite.suite],
-                sourceType: this.state.source.sourceType,
             },
         });
     };
@@ -270,8 +271,8 @@ class SearchContainer extends Component {
                             {...this.state}
                             reportSuites={this.props.reportSuites}
                             onAdvancedSearchChange={this.onAdvancedSearchChange}
-                            onFilterChange={this.onFilterChange}
-                            onFilterSelect={value => this.onFilterSelect(value)}
+                            onReportSuiteChange={this.onReportSuiteChange}
+                            onReportSuiteSelect={value => this.onReportSuiteSelect(value)}
                             onKeyChange={this.onKeyChange}
                             onValueChange={this.onValueChange}
                             onOperatorChange={this.onOperatorChange}

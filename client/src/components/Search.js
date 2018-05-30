@@ -123,8 +123,10 @@ class Search extends Component {
                             {this.props.advanced && (
                                 <AdvancedSearch
                                     enabled={this.props.advanced}
-                                    onFilterChange={this.props.onFilterChange}
-                                    onFilterSelect={value => this.props.onFilterSelect(value)}
+                                    onReportSuiteChange={this.props.onReportSuiteChange}
+                                    onReportSuiteSelect={value =>
+                                        this.props.onReportSuiteSelect(value)
+                                    }
                                     sourceName={this.props.source.name}
                                     reportSuites={this.props.reportSuites}
                                 />

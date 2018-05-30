@@ -7,8 +7,8 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <AdvancedSearch
     enabled={false}
     onAdvancedSearchChange={[MockFunction]}
-    onFilterChange={[MockFunction]}
-    onFilterSelect={[MockFunction]}
+    onReportSuiteChange={[MockFunction]}
+    onReportSuiteSelect={[MockFunction]}
     reportSuites={
       Array [
         Object {
