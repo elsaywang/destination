@@ -31,7 +31,7 @@ class SavedSearchTable extends Component {
     }
 
     componentWillUnmount() {
-        // Need to cancle asynchronous task in the componentWillUnmount method when user exits the current view before data is loaded
+        // Need to cancel async task in the componentWillUnmount method when user exits the current view before data is loaded
         // Or else it will be warning: Can't call setState (or forceUpdate) on an unmounted component.
         clearTimeout(this.timerHandle);
     }
@@ -40,6 +40,7 @@ class SavedSearchTable extends Component {
         const { isAdvancedSearchEnabled, allowsSelection } = this.props;
         const hasSearchResults = Boolean(Object.keys(tableResults).length);
         const WrappedSignalsTable = withLoadingSpinner(SignalsTable);
+
         return (
             <WrappedSignalsTable
                 isLoaded={hasSearchResults}

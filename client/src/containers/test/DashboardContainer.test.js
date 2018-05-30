@@ -7,6 +7,7 @@ import configureStore from '../../configureStore';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import Well from '@react/react-spectrum/Well';
+import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
 describe('<DashboardContainer /> component', () => {
     const store = configureStore();
@@ -53,6 +54,21 @@ describe('<DashboardContainer /> component', () => {
             it('does not render any <SavedSearchTable/> component', () => {
                 expect(wrapper.find(SavedSearchTable).exists()).toBeFalsy();
             });
+        });
+    });
+
+    describe('when savedSearch API call fails', () => {
+        beforeAll(() => {
+            wrapper.setProps({
+                error: {
+                    hasError: true,
+                    errorMessage: '',
+                },
+            });
+        });
+
+        it('should render <InlineErrorMessage /> when there is an error', () => {
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
     });
 

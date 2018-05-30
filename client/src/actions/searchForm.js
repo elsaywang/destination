@@ -1,21 +1,30 @@
 import fetch from '../utils/fetch';
 import { createAction } from 'redux-actions';
+import { createAsyncAction } from '../utils/createAsyncAction';
 import { normalizeSearch } from '../utils/normalizeSearch';
+
+export const TOGGLE_ADVANCED_SEARCH = 'TOGGLE_ADVANCED_SEARCH';
+export const toggleAdvancedSearch = createAction(TOGGLE_ADVANCED_SEARCH);
 
 export const CALL_SEARCH = 'CALL_SEARCH';
 export const CALL_SEARCH_FULFILLED = 'CALL_SEARCH_FULFILLED';
 export const CALL_SEARCH_REJECTED = 'CALL_SEARCH_REJECTED';
-export const callSearch = createAction(CALL_SEARCH, async search => {
+export const callSearch = createAsyncAction(CALL_SEARCH, search => {
     const normalizedSearch = normalizeSearch(search);
+
+    // TODO: pass in options when making a real API call,
+    // currently the json-server does not return anything for a POST call
     const options = {
         body: JSON.stringify(normalizedSearch),
         cache: 'no-cache',
         method: 'POST',
     };
 
-    const result = await fetch('/portal/api/v1/signals/list', options);
+    // TODO: This will allow us to see the API request body until we call the
+    // real API.
+    console.log(normalizedSearch);
 
-    return result.json();
+    return fetch('/portal/api/v1/signals/list');
 });
 
 export const SORT_SEARCH = 'SORT_SEARCH';

@@ -49,12 +49,47 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "This is an error message.",
-      "className": undefined,
-      "data-test": "inline-error-message",
+      "children": Array [
+        <Alert
+          size="S"
+        />,
+        " ",
+        <span
+          className={undefined}
+        >
+          This is an error message.
+        </span>,
+      ],
+      "className": "",
+      "data-test": "inline-error",
     },
     "ref": null,
-    "rendered": "This is an error message.",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "size": "S",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      " ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "This is an error message.",
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": "This is an error message.",
+        "type": "span",
+      },
+    ],
     "type": "span",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -63,12 +98,47 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "This is an error message.",
-        "className": undefined,
-        "data-test": "inline-error-message",
+        "children": Array [
+          <Alert
+            size="S"
+          />,
+          " ",
+          <span
+            className={undefined}
+          >
+            This is an error message.
+          </span>,
+        ],
+        "className": "",
+        "data-test": "inline-error",
       },
       "ref": null,
-      "rendered": "This is an error message.",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "size": "S",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        " ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "This is an error message.",
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": "This is an error message.",
+          "type": "span",
+        },
+      ],
       "type": "span",
     },
   ],

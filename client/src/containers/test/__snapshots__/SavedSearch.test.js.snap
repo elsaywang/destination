@@ -13,6 +13,12 @@ ShallowWrapper {
         ],
       }
     }
+    error={
+      Object {
+        "errorMessage": "",
+        "hasError": false,
+      }
+    }
     getSavedSearch={
       [MockFunction] {
         "calls": Array [
@@ -114,6 +120,10 @@ ShallowWrapper {
             }
           }
         />,
+        <InlineErrorMessage
+          errorMessage=""
+          isInvalid={false}
+        />,
       ],
       "data-test": "saved-search",
     },
@@ -171,6 +181,18 @@ ShallowWrapper {
               Array [],
             ],
           },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "errorMessage": "",
+          "isInvalid": false,
         },
         "ref": null,
         "rendered": null,
@@ -234,6 +256,10 @@ ShallowWrapper {
               }
             }
           />,
+          <InlineErrorMessage
+            errorMessage=""
+            isInvalid={false}
+          />,
         ],
         "data-test": "saved-search",
       },
@@ -291,6 +317,18 @@ ShallowWrapper {
                 Array [],
               ],
             },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "errorMessage": "",
+            "isInvalid": false,
           },
           "ref": null,
           "rendered": null,

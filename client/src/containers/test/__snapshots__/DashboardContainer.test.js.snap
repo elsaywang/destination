@@ -6,6 +6,12 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashboardContainer
     callSearch={[Function]}
+    error={
+      Object {
+        "errorMessage": "",
+        "hasError": false,
+      }
+    }
     getSavedSearch={[Function]}
     populateSearchFields={[Function]}
     savedSearch={
@@ -32,10 +38,44 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [],
+      "children": Array [
+        <div>
+          <InlineErrorMessage
+            errorMessage=""
+            isInvalid={false}
+          />
+        </div>,
+        Array [],
+      ],
     },
     "ref": null,
-    "rendered": Array [],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <InlineErrorMessage
+            errorMessage=""
+            isInvalid={false}
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "errorMessage": "",
+            "isInvalid": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
     "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
@@ -44,10 +84,44 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": Array [],
+        "children": Array [
+          <div>
+            <InlineErrorMessage
+              errorMessage=""
+              isInvalid={false}
+            />
+          </div>,
+          Array [],
+        ],
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <InlineErrorMessage
+              errorMessage=""
+              isInvalid={false}
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "errorMessage": "",
+              "isInvalid": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
       "type": Symbol(react.fragment),
     },
   ],
@@ -76,6 +150,12 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashboardContainer
     callSearch={[MockFunction]}
+    error={
+      Object {
+        "errorMessage": "",
+        "hasError": true,
+      }
+    }
     getSavedSearch={[Function]}
     populateSearchFields={[MockFunction]}
     savedSearch={
@@ -147,179 +227,212 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Well
-          className={undefined}
-          data-test="saved-search-dashboard"
-        >
-          <GridRow
-            reverse={false}
-            valign="middle"
-          >
-            <GridColumn
-              size={5}
-            >
-              <div
-                className={undefined}
-              >
-                <Heading
-                  size={3}
-                >
-                  Clovis Simonis
-                </Heading>
-                <span
-                  className={undefined}
-                />
-              </div>
-            </GridColumn>
-            <GridColumn
-              size={7}
-            >
-              <GridRow
-                reverse={false}
-              >
-                <GridColumn
-                  offsetSize={10}
-                  size={2}
-                >
-                  <Button
-                    autoFocus={false}
-                    block={false}
-                    disabled={false}
-                    element="a"
-                    href="#/search"
-                    invalid={false}
-                    label="View All"
-                    logic={false}
-                    onClick={[Function]}
-                    quiet={false}
-                    selected={false}
-                    variant="primary"
-                  />
-                </GridColumn>
-              </GridRow>
-            </GridColumn>
-          </GridRow>
-          <SavedSearchTable
-            allowsSelection={false}
-            getResultsBySavedSearch={[MockFunction]}
-            isAdvancedSearchEnabled={false}
-            savedSearch={
-              Object {
-                "endDate": "2018-04-29T05:55:48.852Z",
-                "id": 0,
-                "keyValuePairs": Array [
-                  Object {
-                    "key": "k-bandwidth",
-                    "operator": "<",
-                    "value": 80692,
-                  },
-                ],
-                "minEventFires": 91445,
-                "name": "Clovis Simonis",
-                "signalStatus": "USED",
-                "sortBy": "Key Name",
-                "source": Object {
-                  "categoryType": "Real-Time",
-                  "dataSourceIds": 30634,
-                  "reportSuiteIds": null,
-                  "sourceType": "REALTIME",
-                },
-                "startDate": "2018-04-29T16:37:33.894Z",
-              }
-            }
+        <div>
+          <InlineErrorMessage
+            errorMessage=""
+            isInvalid={true}
           />
-        </Well>,
-        <Well
-          className={undefined}
-          data-test="saved-search-dashboard"
-        >
-          <GridRow
-            reverse={false}
-            valign="middle"
+        </div>,
+        Array [
+          <Well
+            className={undefined}
+            data-test="saved-search-dashboard"
           >
-            <GridColumn
-              size={5}
+            <GridRow
+              reverse={false}
+              valign="middle"
             >
-              <div
-                className={undefined}
+              <GridColumn
+                size={5}
               >
-                <Heading
-                  size={3}
-                >
-                  Stephen Sanford
-                </Heading>
-                <span
+                <div
                   className={undefined}
-                />
-              </div>
-            </GridColumn>
-            <GridColumn
-              size={7}
-            >
-              <GridRow
-                reverse={false}
-              >
-                <GridColumn
-                  offsetSize={10}
-                  size={2}
                 >
-                  <Button
-                    autoFocus={false}
-                    block={false}
-                    disabled={false}
-                    element="a"
-                    href="#/search"
-                    invalid={false}
-                    label="View All"
-                    logic={false}
-                    onClick={[Function]}
-                    quiet={false}
-                    selected={false}
-                    variant="primary"
+                  <Heading
+                    size={3}
+                  >
+                    Clovis Simonis
+                  </Heading>
+                  <span
+                    className={undefined}
                   />
-                </GridColumn>
-              </GridRow>
-            </GridColumn>
-          </GridRow>
-          <SavedSearchTable
-            allowsSelection={false}
-            getResultsBySavedSearch={[MockFunction]}
-            isAdvancedSearchEnabled={false}
-            savedSearch={
-              Object {
-                "endDate": "2018-04-29T09:22:26.931Z",
-                "id": 1,
-                "keyValuePairs": Array [
-                  Object {
-                    "key": "k-Customer",
-                    "operator": "<",
-                    "value": 83989,
+                </div>
+              </GridColumn>
+              <GridColumn
+                size={7}
+              >
+                <GridRow
+                  reverse={false}
+                >
+                  <GridColumn
+                    offsetSize={10}
+                    size={2}
+                  >
+                    <Button
+                      autoFocus={false}
+                      block={false}
+                      disabled={false}
+                      element="a"
+                      href="#/search"
+                      invalid={false}
+                      label="View All"
+                      logic={false}
+                      onClick={[Function]}
+                      quiet={false}
+                      selected={false}
+                      variant="primary"
+                    />
+                  </GridColumn>
+                </GridRow>
+              </GridColumn>
+            </GridRow>
+            <SavedSearchTable
+              allowsSelection={false}
+              getResultsBySavedSearch={[MockFunction]}
+              isAdvancedSearchEnabled={false}
+              savedSearch={
+                Object {
+                  "endDate": "2018-04-29T05:55:48.852Z",
+                  "id": 0,
+                  "keyValuePairs": Array [
+                    Object {
+                      "key": "k-bandwidth",
+                      "operator": "<",
+                      "value": 80692,
+                    },
+                  ],
+                  "minEventFires": 91445,
+                  "name": "Clovis Simonis",
+                  "signalStatus": "USED",
+                  "sortBy": "Key Name",
+                  "source": Object {
+                    "categoryType": "Real-Time",
+                    "dataSourceIds": 30634,
+                    "reportSuiteIds": null,
+                    "sourceType": "REALTIME",
                   },
-                  Object {
-                    "key": "k-coherent",
-                    "operator": "<=",
-                    "value": 54800,
-                  },
-                ],
-                "minEventFires": 33675,
-                "name": "Stephen Sanford",
-                "signalStatus": "USED",
-                "sortBy": "Event Fires",
-                "source": Object {
-                  "categoryType": "Real-Time",
-                  "dataSourceIds": 81638,
-                  "reportSuiteIds": null,
-                  "sourceType": "REALTIME",
-                },
-                "startDate": "2018-04-28T22:35:51.313Z",
+                  "startDate": "2018-04-29T16:37:33.894Z",
+                }
               }
-            }
-          />
-        </Well>,
+            />
+          </Well>,
+          <Well
+            className={undefined}
+            data-test="saved-search-dashboard"
+          >
+            <GridRow
+              reverse={false}
+              valign="middle"
+            >
+              <GridColumn
+                size={5}
+              >
+                <div
+                  className={undefined}
+                >
+                  <Heading
+                    size={3}
+                  >
+                    Stephen Sanford
+                  </Heading>
+                  <span
+                    className={undefined}
+                  />
+                </div>
+              </GridColumn>
+              <GridColumn
+                size={7}
+              >
+                <GridRow
+                  reverse={false}
+                >
+                  <GridColumn
+                    offsetSize={10}
+                    size={2}
+                  >
+                    <Button
+                      autoFocus={false}
+                      block={false}
+                      disabled={false}
+                      element="a"
+                      href="#/search"
+                      invalid={false}
+                      label="View All"
+                      logic={false}
+                      onClick={[Function]}
+                      quiet={false}
+                      selected={false}
+                      variant="primary"
+                    />
+                  </GridColumn>
+                </GridRow>
+              </GridColumn>
+            </GridRow>
+            <SavedSearchTable
+              allowsSelection={false}
+              getResultsBySavedSearch={[MockFunction]}
+              isAdvancedSearchEnabled={false}
+              savedSearch={
+                Object {
+                  "endDate": "2018-04-29T09:22:26.931Z",
+                  "id": 1,
+                  "keyValuePairs": Array [
+                    Object {
+                      "key": "k-Customer",
+                      "operator": "<",
+                      "value": 83989,
+                    },
+                    Object {
+                      "key": "k-coherent",
+                      "operator": "<=",
+                      "value": 54800,
+                    },
+                  ],
+                  "minEventFires": 33675,
+                  "name": "Stephen Sanford",
+                  "signalStatus": "USED",
+                  "sortBy": "Event Fires",
+                  "source": Object {
+                    "categoryType": "Real-Time",
+                    "dataSourceIds": 81638,
+                    "reportSuiteIds": null,
+                    "sourceType": "REALTIME",
+                  },
+                  "startDate": "2018-04-28T22:35:51.313Z",
+                }
+              }
+            />
+          </Well>,
+        ],
       ],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <InlineErrorMessage
+            errorMessage=""
+            isInvalid={true}
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "errorMessage": "",
+            "isInvalid": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": "Clovis Simonis",
@@ -1064,179 +1177,212 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Well
-            className={undefined}
-            data-test="saved-search-dashboard"
-          >
-            <GridRow
-              reverse={false}
-              valign="middle"
-            >
-              <GridColumn
-                size={5}
-              >
-                <div
-                  className={undefined}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Clovis Simonis
-                  </Heading>
-                  <span
-                    className={undefined}
-                  />
-                </div>
-              </GridColumn>
-              <GridColumn
-                size={7}
-              >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
-                  >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View All"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-            <SavedSearchTable
-              allowsSelection={false}
-              getResultsBySavedSearch={[MockFunction]}
-              isAdvancedSearchEnabled={false}
-              savedSearch={
-                Object {
-                  "endDate": "2018-04-29T05:55:48.852Z",
-                  "id": 0,
-                  "keyValuePairs": Array [
-                    Object {
-                      "key": "k-bandwidth",
-                      "operator": "<",
-                      "value": 80692,
-                    },
-                  ],
-                  "minEventFires": 91445,
-                  "name": "Clovis Simonis",
-                  "signalStatus": "USED",
-                  "sortBy": "Key Name",
-                  "source": Object {
-                    "categoryType": "Real-Time",
-                    "dataSourceIds": 30634,
-                    "reportSuiteIds": null,
-                    "sourceType": "REALTIME",
-                  },
-                  "startDate": "2018-04-29T16:37:33.894Z",
-                }
-              }
+          <div>
+            <InlineErrorMessage
+              errorMessage=""
+              isInvalid={true}
             />
-          </Well>,
-          <Well
-            className={undefined}
-            data-test="saved-search-dashboard"
-          >
-            <GridRow
-              reverse={false}
-              valign="middle"
+          </div>,
+          Array [
+            <Well
+              className={undefined}
+              data-test="saved-search-dashboard"
             >
-              <GridColumn
-                size={5}
+              <GridRow
+                reverse={false}
+                valign="middle"
               >
-                <div
-                  className={undefined}
+                <GridColumn
+                  size={5}
                 >
-                  <Heading
-                    size={3}
-                  >
-                    Stephen Sanford
-                  </Heading>
-                  <span
+                  <div
                     className={undefined}
-                  />
-                </div>
-              </GridColumn>
-              <GridColumn
-                size={7}
-              >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
                   >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View All"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
+                    <Heading
+                      size={3}
+                    >
+                      Clovis Simonis
+                    </Heading>
+                    <span
+                      className={undefined}
                     />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-            <SavedSearchTable
-              allowsSelection={false}
-              getResultsBySavedSearch={[MockFunction]}
-              isAdvancedSearchEnabled={false}
-              savedSearch={
-                Object {
-                  "endDate": "2018-04-29T09:22:26.931Z",
-                  "id": 1,
-                  "keyValuePairs": Array [
-                    Object {
-                      "key": "k-Customer",
-                      "operator": "<",
-                      "value": 83989,
+                  </div>
+                </GridColumn>
+                <GridColumn
+                  size={7}
+                >
+                  <GridRow
+                    reverse={false}
+                  >
+                    <GridColumn
+                      offsetSize={10}
+                      size={2}
+                    >
+                      <Button
+                        autoFocus={false}
+                        block={false}
+                        disabled={false}
+                        element="a"
+                        href="#/search"
+                        invalid={false}
+                        label="View All"
+                        logic={false}
+                        onClick={[Function]}
+                        quiet={false}
+                        selected={false}
+                        variant="primary"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                </GridColumn>
+              </GridRow>
+              <SavedSearchTable
+                allowsSelection={false}
+                getResultsBySavedSearch={[MockFunction]}
+                isAdvancedSearchEnabled={false}
+                savedSearch={
+                  Object {
+                    "endDate": "2018-04-29T05:55:48.852Z",
+                    "id": 0,
+                    "keyValuePairs": Array [
+                      Object {
+                        "key": "k-bandwidth",
+                        "operator": "<",
+                        "value": 80692,
+                      },
+                    ],
+                    "minEventFires": 91445,
+                    "name": "Clovis Simonis",
+                    "signalStatus": "USED",
+                    "sortBy": "Key Name",
+                    "source": Object {
+                      "categoryType": "Real-Time",
+                      "dataSourceIds": 30634,
+                      "reportSuiteIds": null,
+                      "sourceType": "REALTIME",
                     },
-                    Object {
-                      "key": "k-coherent",
-                      "operator": "<=",
-                      "value": 54800,
-                    },
-                  ],
-                  "minEventFires": 33675,
-                  "name": "Stephen Sanford",
-                  "signalStatus": "USED",
-                  "sortBy": "Event Fires",
-                  "source": Object {
-                    "categoryType": "Real-Time",
-                    "dataSourceIds": 81638,
-                    "reportSuiteIds": null,
-                    "sourceType": "REALTIME",
-                  },
-                  "startDate": "2018-04-28T22:35:51.313Z",
+                    "startDate": "2018-04-29T16:37:33.894Z",
+                  }
                 }
-              }
-            />
-          </Well>,
+              />
+            </Well>,
+            <Well
+              className={undefined}
+              data-test="saved-search-dashboard"
+            >
+              <GridRow
+                reverse={false}
+                valign="middle"
+              >
+                <GridColumn
+                  size={5}
+                >
+                  <div
+                    className={undefined}
+                  >
+                    <Heading
+                      size={3}
+                    >
+                      Stephen Sanford
+                    </Heading>
+                    <span
+                      className={undefined}
+                    />
+                  </div>
+                </GridColumn>
+                <GridColumn
+                  size={7}
+                >
+                  <GridRow
+                    reverse={false}
+                  >
+                    <GridColumn
+                      offsetSize={10}
+                      size={2}
+                    >
+                      <Button
+                        autoFocus={false}
+                        block={false}
+                        disabled={false}
+                        element="a"
+                        href="#/search"
+                        invalid={false}
+                        label="View All"
+                        logic={false}
+                        onClick={[Function]}
+                        quiet={false}
+                        selected={false}
+                        variant="primary"
+                      />
+                    </GridColumn>
+                  </GridRow>
+                </GridColumn>
+              </GridRow>
+              <SavedSearchTable
+                allowsSelection={false}
+                getResultsBySavedSearch={[MockFunction]}
+                isAdvancedSearchEnabled={false}
+                savedSearch={
+                  Object {
+                    "endDate": "2018-04-29T09:22:26.931Z",
+                    "id": 1,
+                    "keyValuePairs": Array [
+                      Object {
+                        "key": "k-Customer",
+                        "operator": "<",
+                        "value": 83989,
+                      },
+                      Object {
+                        "key": "k-coherent",
+                        "operator": "<=",
+                        "value": 54800,
+                      },
+                    ],
+                    "minEventFires": 33675,
+                    "name": "Stephen Sanford",
+                    "signalStatus": "USED",
+                    "sortBy": "Event Fires",
+                    "source": Object {
+                      "categoryType": "Real-Time",
+                      "dataSourceIds": 81638,
+                      "reportSuiteIds": null,
+                      "sourceType": "REALTIME",
+                    },
+                    "startDate": "2018-04-28T22:35:51.313Z",
+                  }
+                }
+              />
+            </Well>,
+          ],
         ],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <InlineErrorMessage
+              errorMessage=""
+              isInvalid={true}
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "errorMessage": "",
+              "isInvalid": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": "Clovis Simonis",

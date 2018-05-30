@@ -15,8 +15,8 @@ describe('<InlineErrorMessage /> component', () => {
         });
 
         it('renders <InlineErrorMessage /> component with an error message', () => {
-            expect(wrapper.find('[data-test="inline-error-message"]').exists()).toBe(true);
-            expect(wrapper.text()).toBe(errorMessage);
+            expect(wrapper.find('[data-test="inline-error"]').exists()).toBe(true);
+            expect(wrapper.text()).toContain(errorMessage);
         });
     });
 
@@ -30,7 +30,7 @@ describe('<InlineErrorMessage /> component', () => {
         });
 
         it('renders <InlineErrorMessage /> component with no error message', () => {
-            expect(wrapper.find('[data-test="inline-error-message"]').exists()).toBe(false);
+            expect(wrapper.find('[data-test="inline-error"]').exists()).toBe(false);
             expect(wrapper.text()).toBe('');
         });
     });

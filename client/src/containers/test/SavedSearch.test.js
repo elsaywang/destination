@@ -4,6 +4,7 @@ import Heading from '@react/react-spectrum/Heading';
 import SavedSearch from '../SavedSearch';
 import SavedSearchTagList from '../../components/SavedSearchTagList';
 import withLoadingSpinner from '../../components/withLoadingSpinner';
+import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
 describe('<SavedSearch /> component', () => {
     const mockFn = jest.fn();
@@ -29,6 +30,10 @@ describe('<SavedSearch /> component', () => {
     const currentSearch = {
         name: 'Watson Cartwright',
     };
+    const error = {
+        hasError: false,
+        errorMessage: '',
+    };
     const wrapper = shallow(
         <SavedSearch
             list={list}
@@ -36,6 +41,7 @@ describe('<SavedSearch /> component', () => {
             onSavedSearchClick={mockFn}
             currentSearch={currentSearch.name}
             deleteSearch={mockFn}
+            error={error}
         />,
     );
 
@@ -50,6 +56,17 @@ describe('<SavedSearch /> component', () => {
 
         it('renders <Heading />', () => {
             expect(wrapper.find(Heading).exists()).toBe(true);
+        });
+
+        it('renders <InlineErrorMessage /> instead of saved search tags when there is an error retrieving saved searches', () => {
+            wrapper.setProps({
+                error: {
+                    hasError: true,
+                    errorMessage: 'Error!',
+                },
+            });
+
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
     });
 });

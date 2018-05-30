@@ -103,6 +103,7 @@ class KeyValuePair extends Component {
                         />
                     </Autocomplete>
                     <InlineErrorMessage
+                        className={styles.error}
                         isInvalid={this.state.autocompleteError}
                         errorMessage={this.state.autocompleteErrorMessage}
                     />
@@ -124,6 +125,7 @@ class KeyValuePair extends Component {
                         invalid={!isValueValid(this.props.pair)}
                     />
                     <InlineErrorMessage
+                        className={styles.error}
                         isInvalid={!isValueValid(this.props.pair)}
                         errorMessage="It can only be numerical values when it's > or <."
                     />

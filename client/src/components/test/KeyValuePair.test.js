@@ -5,6 +5,7 @@ import KeyValuePair from '../KeyValuePair';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
 import Textfield from '@react/react-spectrum/Textfield';
+import InlineErrorMessage from '../common/InlineErrorMessage';
 
 describe('<KeyValuePair /> component', () => {
     const mockFn = jest.fn();
@@ -55,7 +56,7 @@ describe('<KeyValuePair /> component', () => {
             ).toBe(true);
         });
 
-        it('renders <Textfield /> as invalid if value is invalid', () => {
+        it('renders <Textfield /> as invalid if value is invalid and show error message', () => {
             const newPair = {
                 key: '',
                 operator: '>',
@@ -72,6 +73,7 @@ describe('<KeyValuePair /> component', () => {
                     .filter('[data-test="value-search"]')
                     .props().invalid,
             ).toBe(true);
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
     });
 });

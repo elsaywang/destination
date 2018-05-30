@@ -1,1 +1,7 @@
 @import '~@spectrum/spectrum-variables/css/spectrum-light.css';
+
+:local(.flexAlignBottom) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}

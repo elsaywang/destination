@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Heading from '@react/react-spectrum/Heading';
 import SavedSearchTagList from '../components/SavedSearchTagList';
 import withLoadingSpinner from '../components/withLoadingSpinner';
+import InlineErrorMessage from '../components/common/InlineErrorMessage';
 
 class SavedSearch extends Component {
     componentDidMount() {
@@ -11,17 +12,21 @@ class SavedSearch extends Component {
 
     render() {
         const WrappedSavedSearchTagList = withLoadingSpinner(SavedSearchTagList);
+        const { hasError, errorMessage } = this.props.error;
 
         return (
             <div data-test="saved-search">
                 <Heading size={6}>Saved Search</Heading>
-                <WrappedSavedSearchTagList
-                    isLoaded={Boolean(this.props.list.length)}
-                    list={this.props.list}
-                    onSavedSearchClick={this.props.onSavedSearchClick}
-                    currentSearch={this.props.currentSearch}
-                    deleteSearch={this.props.deleteSearch}
-                />
+                {!hasError && (
+                    <WrappedSavedSearchTagList
+                        isLoaded={Boolean(this.props.list.length)}
+                        list={this.props.list}
+                        onSavedSearchClick={this.props.onSavedSearchClick}
+                        currentSearch={this.props.currentSearch}
+                        deleteSearch={this.props.deleteSearch}
+                    />
+                )}
+                <InlineErrorMessage isInvalid={hasError} errorMessage={errorMessage} />
             </div>
         );
     }
@@ -33,6 +38,7 @@ SavedSearch.propTypes = {
     onSavedSearchClick: PropTypes.func.isRequired,
     currentSearch: PropTypes.string.isRequired,
     deleteSearch: PropTypes.func.isRequired,
+    error: PropTypes.object.isRequired,
 };
 
 export default SavedSearch;

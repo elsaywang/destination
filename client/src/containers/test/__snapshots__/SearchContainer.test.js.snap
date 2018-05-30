@@ -10,6 +10,22 @@ ShallowWrapper {
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     clearSearchFields={[Function]}
+    errors={
+      Object {
+        "reportSuites": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+        "savedSearch": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+        "searchForm": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+      }
+    }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     populateSearchFields={[Function]}
@@ -40,6 +56,7 @@ ShallowWrapper {
         "sortBy": "",
       }
     }
+    toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
   />,
@@ -66,6 +83,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -122,6 +155,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -158,6 +197,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -212,6 +267,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -264,6 +335,20 @@ ShallowWrapper {
               "advanced": false,
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",
+              "errors": Object {
+                "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "savedSearch": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "searchForm": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+              },
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -323,6 +408,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -344,6 +435,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -361,6 +458,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -378,6 +481,10 @@ ShallowWrapper {
                 "props": Object {
                   "currentSearch": "",
                   "deleteSearch": [Function],
+                  "error": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -460,6 +567,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -516,6 +639,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -552,6 +681,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -606,6 +751,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -658,6 +819,20 @@ ShallowWrapper {
                 "advanced": false,
                 "customEndDate": "2018-05-01",
                 "customStartDate": "2018-04-24",
+                "errors": Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                },
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -717,6 +892,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -738,6 +919,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -755,6 +942,12 @@ ShallowWrapper {
                   <SavedSearch
                     currentSearch=""
                     deleteSearch={[Function]}
+                    error={
+                      Object {
+                        "errorMessage": "",
+                        "hasError": false,
+                      }
+                    }
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -772,6 +965,10 @@ ShallowWrapper {
                   "props": Object {
                     "currentSearch": "",
                     "deleteSearch": [Function],
+                    "error": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],
@@ -867,6 +1064,22 @@ ShallowWrapper {
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     clearSearchFields={[Function]}
+    errors={
+      Object {
+        "reportSuites": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+        "savedSearch": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+        "searchForm": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+      }
+    }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     populateSearchFields={[Function]}
@@ -894,6 +1107,7 @@ ShallowWrapper {
         "sortBy": "",
       }
     }
+    toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
   />,
@@ -920,6 +1134,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -976,6 +1206,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1012,6 +1248,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1066,6 +1318,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1118,6 +1386,20 @@ ShallowWrapper {
               "advanced": false,
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",
+              "errors": Object {
+                "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "savedSearch": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "searchForm": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+              },
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -1177,6 +1459,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1198,6 +1486,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1215,6 +1509,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -1232,6 +1532,10 @@ ShallowWrapper {
                 "props": Object {
                   "currentSearch": "",
                   "deleteSearch": [Function],
+                  "error": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -1314,6 +1618,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -1370,6 +1690,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -1406,6 +1732,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -1460,6 +1802,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -1512,6 +1870,20 @@ ShallowWrapper {
                 "advanced": false,
                 "customEndDate": "2018-05-01",
                 "customStartDate": "2018-04-24",
+                "errors": Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                },
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -1571,6 +1943,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -1592,6 +1970,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -1609,6 +1993,12 @@ ShallowWrapper {
                   <SavedSearch
                     currentSearch=""
                     deleteSearch={[Function]}
+                    error={
+                      Object {
+                        "errorMessage": "",
+                        "hasError": false,
+                      }
+                    }
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -1626,6 +2016,10 @@ ShallowWrapper {
                   "props": Object {
                     "currentSearch": "",
                     "deleteSearch": [Function],
+                    "error": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],
@@ -1721,6 +2115,22 @@ ShallowWrapper {
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     clearSearchFields={[Function]}
+    errors={
+      Object {
+        "reportSuites": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+        "savedSearch": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+        "searchForm": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
+      }
+    }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     populateSearchFields={[Function]}
@@ -1748,6 +2158,7 @@ ShallowWrapper {
         "sortBy": "",
       }
     }
+    toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
   />,
@@ -1774,6 +2185,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1830,6 +2257,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -1866,6 +2299,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1920,6 +2369,22 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              errors={
+                Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                }
+              }
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1972,6 +2437,20 @@ ShallowWrapper {
               "advanced": false,
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",
+              "errors": Object {
+                "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "savedSearch": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "searchForm": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+              },
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -2031,6 +2510,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -2052,6 +2537,12 @@ ShallowWrapper {
               <SavedSearch
                 currentSearch=""
                 deleteSearch={[Function]}
+                error={
+                  Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  }
+                }
                 getSavedSearch={[Function]}
                 list={Array []}
                 onSavedSearchClick={[Function]}
@@ -2069,6 +2560,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2086,6 +2583,10 @@ ShallowWrapper {
                 "props": Object {
                   "currentSearch": "",
                   "deleteSearch": [Function],
+                  "error": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "getSavedSearch": [Function],
                   "list": Array [],
                   "onSavedSearchClick": [Function],
@@ -2168,6 +2669,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -2224,6 +2741,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2260,6 +2783,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -2314,6 +2853,22 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                errors={
+                  Object {
+                    "reportSuites": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "savedSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                    "searchForm": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
+                  }
+                }
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -2366,6 +2921,20 @@ ShallowWrapper {
                 "advanced": false,
                 "customEndDate": "2018-05-01",
                 "customStartDate": "2018-04-24",
+                "errors": Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "searchForm": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                },
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -2425,6 +2994,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2446,6 +3021,12 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  error={
+                    Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    }
+                  }
                   getSavedSearch={[Function]}
                   list={Array []}
                   onSavedSearchClick={[Function]}
@@ -2463,6 +3044,12 @@ ShallowWrapper {
                   <SavedSearch
                     currentSearch=""
                     deleteSearch={[Function]}
+                    error={
+                      Object {
+                        "errorMessage": "",
+                        "hasError": false,
+                      }
+                    }
                     getSavedSearch={[Function]}
                     list={Array []}
                     onSavedSearchClick={[Function]}
@@ -2480,6 +3067,10 @@ ShallowWrapper {
                   "props": Object {
                     "currentSearch": "",
                     "deleteSearch": [Function],
+                    "error": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "getSavedSearch": [Function],
                     "list": Array [],
                     "onSavedSearchClick": [Function],

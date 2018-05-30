@@ -9,6 +9,7 @@ import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import styles from './DashboardContainer.css';
 import SavedSearchTable from '../components/SavedSearchTable';
+import InlineErrorMessage from '../components/common/InlineErrorMessage';
 
 class DashboardContainer extends Component {
     componentDidMount() {
@@ -25,6 +26,12 @@ class DashboardContainer extends Component {
     render() {
         return (
             <Fragment>
+                <div>
+                    <InlineErrorMessage
+                        isInvalid={this.props.error.hasError}
+                        errorMessage={this.props.error.errorMessage}
+                    />
+                </div>
                 {this.props.savedSearch.list.map(
                     search =>
                         Object.keys(search).length && (
@@ -71,8 +78,9 @@ class DashboardContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ savedSearch }) => ({
+const mapStateToProps = ({ savedSearch, errors }) => ({
     savedSearch,
+    error: errors.savedSearch,
 });
 const actionCreators = {
     callSearch,

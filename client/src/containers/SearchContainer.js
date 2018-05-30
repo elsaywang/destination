@@ -79,6 +79,8 @@ class SearchContainer extends Component {
             this.props.getReportSuites();
         }
 
+        this.props.toggleAdvancedSearch(value);
+
         this.setState({
             advanced: value,
             source: {
@@ -286,6 +288,7 @@ class SearchContainer extends Component {
                             onSearch={this.onSearch}
                             onClearAll={this.onClearAll}
                             isCustomDateRangeEnabled={this.isCustomDateRangeEnabled()}
+                            errors={this.props.errors}
                         />
                     </GridColumn>
                 </GridRow>
@@ -299,6 +302,7 @@ class SearchContainer extends Component {
                                 list={this.props.savedSearch}
                                 onSavedSearchClick={this.onSavedSearchClick}
                                 currentSearch={this.state.name}
+                                error={this.props.errors.savedSearch}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
                                 <div className={styles.saveSearchExecution}>
@@ -373,12 +377,13 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearch, savedSearchFields, reportSuites }) => ({
+const mapStateToProps = ({ results, savedSearch, savedSearchFields, reportSuites, errors }) => ({
     results,
     savedSearchFields,
     savedSearch: savedSearch.list,
     thisSearch: savedSearch.saveSearch,
     reportSuites,
+    errors,
 });
 const actionCreators = {
     ...searchFormActionCreators,

@@ -4,6 +4,7 @@ import savedSearch from './savedSearch';
 import savedSearchFields from './savedSearchFields';
 import selectedSignals from './selectedSignals';
 import reportSuites from './reportSuites';
+import errors from './errors';
 
 export default combineReducers({
     results,
@@ -11,4 +12,5 @@ export default combineReducers({
     savedSearchFields,
     selectedSignals,
     reportSuites,
+    errors,
 });

@@ -43,7 +43,7 @@ describe('Validation Spec', function() {
             });
 
             it('should not show an error message', function() {
-                cy.get('[data-test="inline-error-message"]').should('have.length', 0);
+                cy.get('[data-test="inline-error"]').should('have.length', 0);
             });
 
             it('should have enabled Search button', function() {
@@ -67,7 +67,7 @@ describe('Validation Spec', function() {
             });
 
             it('should show an error message', function() {
-                cy.get('[data-test="inline-error-message"]').should('have.length', 1);
+                cy.get('[data-test="inline-error"]').should('have.length', 1);
             });
 
             it('should have disabled Search button', function() {

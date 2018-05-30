@@ -10,6 +10,7 @@ import Switch from '@react/react-spectrum/Switch';
 import signalStatuses from '../../constants/signalStatusOptions';
 import { dateRangeOptions } from '../../constants/dateRangeOptions';
 import { isFormValid } from '../../utils/searchValidation';
+import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
 describe('<Search /> component', () => {
     const state = {
@@ -34,12 +35,26 @@ describe('<Search /> component', () => {
         customStartDate: '04-24-2018',
         customEndDate: '05-01-2018',
         minEventFires: 1000,
+        reportSuites: [],
+        errors: {
+            searchForm: {
+                hasError: false,
+                errorMessage: '',
+            },
+            savedSearch: {
+                hasError: false,
+                errorMessage: '',
+            },
+            reportSuites: {
+                hasError: false,
+                errorMessage: '',
+            },
+        },
     };
     const mockFn = jest.fn();
     const wrapper = shallow(
         <Search
             {...state}
-            reportSuites={[]}
             onAdvancedSearchChange={mockFn}
             onKeySelect={mockFn}
             onValueChange={mockFn}
@@ -76,6 +91,20 @@ describe('<Search /> component', () => {
         it('renders <AdvancedSearch /> when advanced is toggled on', () => {
             wrapper.setProps({ advanced: true });
             expect(wrapper.find(AdvancedSearch).exists()).toBe(true);
+        });
+
+        it('renders <InlineErrorMessage /> when there is an error retrieving report suites', () => {
+            wrapper.setProps({
+                errors: {
+                    ...state.errors,
+                    reportSuites: {
+                        hasError: true,
+                        errorMessage: 'Error!',
+                    },
+                },
+            });
+
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
 
         it('renders <KeyValuePair /> according to number of keyValuePairs in the state', () => {
@@ -207,6 +236,20 @@ describe('<Search /> component', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Clear All'),
             ).toBe(true);
+        });
+
+        it('should render <InlineErrorMessage /> when there is an error', () => {
+            wrapper.setProps({
+                errors: {
+                    ...state.errors,
+                    searchForm: {
+                        hasError: true,
+                        errorMessage: 'Error!',
+                    },
+                },
+            });
+
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
     });
 });

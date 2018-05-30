@@ -11,6 +11,8 @@ import AdvancedSearch from './AdvancedSearch';
 import CustomDateRange from './CustomDateRange';
 import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
+import InlineErrorMessage from './common/InlineErrorMessage';
+import styles from './Search.css';
 
 import { dateRangeOptions as viewRecordsOptions } from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
@@ -35,9 +37,7 @@ class Search extends Component {
 
         return (
             <GridRow key={pair.id}>
-                <GridColumn
-                    size={12}
-                    style={{ display: 'flex', alignItems: 'baseline', marginBottom: '1rem' }}>
+                <GridColumn size={12} className={styles.keyValuePairs}>
                     <KeyValuePair
                         key={pair.id}
                         pair={pair}
@@ -89,19 +89,20 @@ class Search extends Component {
     };
 
     renderCTAs = () => (
-        <GridColumn size={3}>
+        <GridColumn className={styles.ctas}>
+            <Button
+                label="Clear All"
+                data-test="clear-all-button"
+                onClick={this.props.onClearAll}
+                quiet
+                variant="secondary"
+            />
             <Button
                 label="Search"
                 data-test="search-button"
                 onClick={this.props.onSearch}
                 variant="cta"
                 disabled={!isFormValid(this.props)}
-            />
-            <Button
-                label="Clear All"
-                data-test="clear-all-button"
-                onClick={this.props.onClearAll}
-                variant="secondary"
             />
         </GridColumn>
     );
@@ -118,6 +119,12 @@ class Search extends Component {
                         aria-label="Advanced Search"
                         label="Advanced search for Adobe Analytics"
                     />
+                    <div>
+                        <InlineErrorMessage
+                            isInvalid={this.props.errors.reportSuites.hasError}
+                            errorMessage={this.props.errors.reportSuites.errorMessage}
+                        />
+                    </div>
                     <Well>
                         <div data-test="search-form">
                             {this.props.advanced && (
@@ -137,7 +144,7 @@ class Search extends Component {
                                     {this.props.keyValuePairs.map(this.renderKVPFields)}
 
                                     <GridRow>
-                                        <GridColumn size={7}>
+                                        <GridColumn size={10}>
                                             <Label value="Signal Status">
                                                 <Select
                                                     className="signal-status"
@@ -175,6 +182,11 @@ class Search extends Component {
 
                                         {this.renderCTAs()}
                                     </GridRow>
+                                    <InlineErrorMessage
+                                        className={styles.error}
+                                        isInvalid={this.props.errors.searchForm.hasError}
+                                        errorMessage={this.props.errors.searchForm.errorMessage}
+                                    />
                                 </GridColumn>
                             </GridRow>
                         </div>

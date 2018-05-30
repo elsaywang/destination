@@ -37,7 +37,7 @@ class TraitsPopover extends Component {
                 traits,
             });
         } catch (error) {
-            await this.setStateAsyncthis({
+            await this.setStateAsync({
                 loading: false,
                 error,
             });
