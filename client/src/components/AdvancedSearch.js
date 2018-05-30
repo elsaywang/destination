@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import ComboBox from '@react/react-spectrum/ComboBox';
 import styles from './AdvancedSearch.css';
 
-const AdvancedSearch = ({ enabled, sourceName, onFilterChange, onFilterSelect, reportSuites }) => {
+const AdvancedSearch = ({
+    enabled,
+    sourceName,
+    onReportSuiteChange,
+    onReportSuiteSelect,
+    reportSuites,
+}) => {
     const options = reportSuites.map(rs => rs.name);
 
     return (
@@ -13,8 +19,8 @@ const AdvancedSearch = ({ enabled, sourceName, onFilterChange, onFilterSelect, r
                 value={enabled ? sourceName : ''}
                 data-test="advanced-search-filter"
                 placeholder="Filter by report suite"
-                onChange={onFilterChange}
-                onSelect={value => onFilterSelect(value)}
+                onChange={onReportSuiteChange}
+                onSelect={value => onReportSuiteSelect(value)}
                 options={options}
                 disabled={!enabled}
                 quiet
@@ -26,8 +32,8 @@ const AdvancedSearch = ({ enabled, sourceName, onFilterChange, onFilterSelect, r
 AdvancedSearch.propTypes = {
     enabled: PropTypes.bool.isRequired,
     sourceName: PropTypes.string,
-    onFilterChange: PropTypes.func.isRequired,
-    onFilterSelect: PropTypes.func.isRequired,
+    onReportSuiteChange: PropTypes.func.isRequired,
+    onReportSuiteSelect: PropTypes.func.isRequired,
     reportSuites: PropTypes.array.isRequired,
 };
 

@@ -84,12 +84,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -176,12 +176,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -230,12 +230,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -280,12 +280,12 @@ ShallowWrapper {
               "onClearAll": [Function],
               "onCustomEndDateChange": [Function],
               "onCustomStartDateChange": [Function],
-              "onFilterChange": [Function],
-              "onFilterSelect": [Function],
               "onKeyChange": [Function],
               "onMinEventFiresChange": [Function],
               "onOperatorChange": [Function],
               "onRemoveClick": [Function],
+              "onReportSuiteChange": [Function],
+              "onReportSuiteSelect": [Function],
               "onSearch": [Function],
               "onSignalStatusChange": [Function],
               "onValueChange": [Function],
@@ -478,12 +478,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -570,12 +570,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -624,12 +624,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -674,12 +674,12 @@ ShallowWrapper {
                 "onClearAll": [Function],
                 "onCustomEndDateChange": [Function],
                 "onCustomStartDateChange": [Function],
-                "onFilterChange": [Function],
-                "onFilterSelect": [Function],
                 "onKeyChange": [Function],
                 "onMinEventFiresChange": [Function],
                 "onOperatorChange": [Function],
                 "onRemoveClick": [Function],
+                "onReportSuiteChange": [Function],
+                "onReportSuiteSelect": [Function],
                 "onSearch": [Function],
                 "onSignalStatusChange": [Function],
                 "onValueChange": [Function],
@@ -938,12 +938,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -1030,12 +1030,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -1084,12 +1084,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -1134,12 +1134,12 @@ ShallowWrapper {
               "onClearAll": [Function],
               "onCustomEndDateChange": [Function],
               "onCustomStartDateChange": [Function],
-              "onFilterChange": [Function],
-              "onFilterSelect": [Function],
               "onKeyChange": [Function],
               "onMinEventFiresChange": [Function],
               "onOperatorChange": [Function],
               "onRemoveClick": [Function],
+              "onReportSuiteChange": [Function],
+              "onReportSuiteSelect": [Function],
               "onSearch": [Function],
               "onSignalStatusChange": [Function],
               "onValueChange": [Function],
@@ -1332,12 +1332,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -1424,12 +1424,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -1478,12 +1478,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -1528,12 +1528,12 @@ ShallowWrapper {
                 "onClearAll": [Function],
                 "onCustomEndDateChange": [Function],
                 "onCustomStartDateChange": [Function],
-                "onFilterChange": [Function],
-                "onFilterSelect": [Function],
                 "onKeyChange": [Function],
                 "onMinEventFiresChange": [Function],
                 "onOperatorChange": [Function],
                 "onRemoveClick": [Function],
+                "onReportSuiteChange": [Function],
+                "onReportSuiteSelect": [Function],
                 "onSearch": [Function],
                 "onSignalStatusChange": [Function],
                 "onValueChange": [Function],
@@ -1792,12 +1792,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -1884,12 +1884,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -1938,12 +1938,12 @@ ShallowWrapper {
               onClearAll={[Function]}
               onCustomEndDateChange={[Function]}
               onCustomStartDateChange={[Function]}
-              onFilterChange={[Function]}
-              onFilterSelect={[Function]}
               onKeyChange={[Function]}
               onMinEventFiresChange={[Function]}
               onOperatorChange={[Function]}
               onRemoveClick={[Function]}
+              onReportSuiteChange={[Function]}
+              onReportSuiteSelect={[Function]}
               onSearch={[Function]}
               onSignalStatusChange={[Function]}
               onValueChange={[Function]}
@@ -1988,12 +1988,12 @@ ShallowWrapper {
               "onClearAll": [Function],
               "onCustomEndDateChange": [Function],
               "onCustomStartDateChange": [Function],
-              "onFilterChange": [Function],
-              "onFilterSelect": [Function],
               "onKeyChange": [Function],
               "onMinEventFiresChange": [Function],
               "onOperatorChange": [Function],
               "onRemoveClick": [Function],
+              "onReportSuiteChange": [Function],
+              "onReportSuiteSelect": [Function],
               "onSearch": [Function],
               "onSignalStatusChange": [Function],
               "onValueChange": [Function],
@@ -2186,12 +2186,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -2278,12 +2278,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -2332,12 +2332,12 @@ ShallowWrapper {
                 onClearAll={[Function]}
                 onCustomEndDateChange={[Function]}
                 onCustomStartDateChange={[Function]}
-                onFilterChange={[Function]}
-                onFilterSelect={[Function]}
                 onKeyChange={[Function]}
                 onMinEventFiresChange={[Function]}
                 onOperatorChange={[Function]}
                 onRemoveClick={[Function]}
+                onReportSuiteChange={[Function]}
+                onReportSuiteSelect={[Function]}
                 onSearch={[Function]}
                 onSignalStatusChange={[Function]}
                 onValueChange={[Function]}
@@ -2382,12 +2382,12 @@ ShallowWrapper {
                 "onClearAll": [Function],
                 "onCustomEndDateChange": [Function],
                 "onCustomStartDateChange": [Function],
-                "onFilterChange": [Function],
-                "onFilterSelect": [Function],
                 "onKeyChange": [Function],
                 "onMinEventFiresChange": [Function],
                 "onOperatorChange": [Function],
                 "onRemoveClick": [Function],
+                "onReportSuiteChange": [Function],
+                "onReportSuiteSelect": [Function],
                 "onSearch": [Function],
                 "onSignalStatusChange": [Function],
                 "onValueChange": [Function],

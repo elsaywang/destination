@@ -26,12 +26,12 @@ ShallowWrapper {
     onClearAll={[MockFunction]}
     onCustomEndDateChange={[MockFunction]}
     onCustomStartDateChange={[MockFunction]}
-    onFilterChange={[MockFunction]}
-    onFilterSelect={[MockFunction]}
     onKeySelect={[MockFunction]}
     onMinEventFiresChange={[MockFunction]}
     onOperatorChange={[MockFunction]}
     onRemoveClick={[MockFunction]}
+    onReportSuiteChange={[MockFunction]}
+    onReportSuiteSelect={[MockFunction]}
     onSearch={[MockFunction]}
     onSignalStatusChange={[MockFunction]}
     onValueChange={[MockFunction]}

@@ -185,14 +185,14 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').name).toBe('');
         });
 
-        it('.onFilterChange() changes source name state to the given value', () => {
+        it('.onReportSuiteChange() changes source name state to the given value', () => {
             expect(wrapper.state('source').name).toBe(initialState.source.name);
 
-            wrapper.instance().onFilterChange('test report suite');
+            wrapper.instance().onReportSuiteChange('test report suite');
             expect(wrapper.state('source').name).toBe('test report suite');
         });
 
-        it('.onFilterSelect() changes source state to reflect the report suite that corresponds to the given value', () => {
+        it('.onReportSuiteSelect() changes source state to reflect the report suite that corresponds to the given value', () => {
             wrapper.setProps({
                 reportSuites: [
                     {
@@ -202,7 +202,7 @@ describe('<SearchContainer /> component', () => {
                 ],
             });
 
-            wrapper.instance().onFilterSelect('test report suite');
+            wrapper.instance().onReportSuiteSelect('test report suite');
 
             expect(wrapper.state('source')).toEqual({
                 name: 'test report suite',

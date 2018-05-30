@@ -90,7 +90,7 @@ class SearchContainer extends Component {
         });
     };
 
-    onFilterChange = value => {
+    onReportSuiteChange = value => {
         this.setState({
             source: {
                 ...this.state.source,
@@ -99,7 +99,7 @@ class SearchContainer extends Component {
         });
     };
 
-    onFilterSelect = value => {
+    onReportSuiteSelect = value => {
         const matchingReportSuite = this.props.reportSuites.find(
             reportSuite => reportSuite.name === value,
         );
@@ -271,8 +271,8 @@ class SearchContainer extends Component {
                             {...this.state}
                             reportSuites={this.props.reportSuites}
                             onAdvancedSearchChange={this.onAdvancedSearchChange}
-                            onFilterChange={this.onFilterChange}
-                            onFilterSelect={value => this.onFilterSelect(value)}
+                            onReportSuiteChange={this.onReportSuiteChange}
+                            onReportSuiteSelect={value => this.onReportSuiteSelect(value)}
                             onKeyChange={this.onKeyChange}
                             onValueChange={this.onValueChange}
                             onOperatorChange={this.onOperatorChange}
