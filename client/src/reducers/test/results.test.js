@@ -1,8 +1,8 @@
-import { getList, list as listReducer } from '../results';
+import { getList, handleList } from '../results';
 import { CALL_SEARCH } from '../../actions/searchForm';
 
 describe('results reducer', () => {
-    describe('list nested reducer', () => {
+    describe('handleList', () => {
         it('adds a `categoryType` property to each signal in the returned array', () => {
             const list = [
                 { source: { sourceType: 'REALTIME' } },
@@ -13,8 +13,8 @@ describe('results reducer', () => {
                 payload: { list },
             };
 
-            expect(listReducer([], action)[0].categoryType).toBeDefined();
-            expect(listReducer([], action)[1].categoryType).toBeDefined();
+            expect(handleList([], action)[0].categoryType).toBeDefined();
+            expect(handleList([], action)[1].categoryType).toBeDefined();
         });
     });
 
@@ -25,7 +25,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(listReducer([], action)[0].categoryType).toEqual('REALTIME');
+        expect(handleList([], action)[0].categoryType).toEqual('REALTIME');
     });
 
     it('adds a `categoryType` of "REALTIME" for signals with a source type of "ANALYTICS"', () => {
@@ -35,7 +35,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(listReducer([], action)[0].categoryType).toEqual('REALTIME');
+        expect(handleList([], action)[0].categoryType).toEqual('REALTIME');
     });
 
     it('adds a `categoryType` of "REALTIME" for signals with a source type of "ALF"', () => {
@@ -45,7 +45,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(listReducer([], action)[0].categoryType).toEqual('REALTIME');
+        expect(handleList([], action)[0].categoryType).toEqual('REALTIME');
     });
 
     it('adds a `categoryType` of "ONBOARDED" for signals with a source type of "ONBOARDED"', () => {
@@ -55,7 +55,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(listReducer([], action)[0].categoryType).toEqual('ONBOARDED');
+        expect(handleList([], action)[0].categoryType).toEqual('ONBOARDED');
     });
 
     describe('selectors', () => {
@@ -67,4 +67,6 @@ describe('results reducer', () => {
             });
         });
     });
+
+    // TODO: Add tests for CALL_SEARCH vs LOAD_MORE
 });

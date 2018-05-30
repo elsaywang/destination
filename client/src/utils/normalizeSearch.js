@@ -19,8 +19,6 @@ const normalizeSignalStatus = ({ signalStatus }) => (signalStatus === 'ALL' ? nu
 
 export const normalizeSearch = search => ({
     search: stringifySignal(search),
-    pageSize: 20,
-    page: 0,
     startDate: normalizeStartDate(search),
     endDate: normalizeEndDate(search),
     source: {
