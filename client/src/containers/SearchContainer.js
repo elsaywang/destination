@@ -93,6 +93,7 @@ class SearchContainer extends Component {
     onFilterChange = value => {
         this.setState({
             source: {
+                ...this.state.source,
                 name: value,
             },
         });
