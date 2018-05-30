@@ -185,6 +185,33 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').name).toBe('');
         });
 
+        it('.onFilterChange() changes source name state to the given value', () => {
+            expect(wrapper.state('source').name).toBe(initialState.source.name);
+
+            wrapper.instance().onFilterChange('test report suite');
+            expect(wrapper.state('source').name).toBe('test report suite');
+        });
+
+        it('.onFilterSelect() changes source state to reflect the report suite that corresponds to the given value', () => {
+            wrapper.setProps({
+                reportSuites: [
+                    {
+                        name: 'test report suite',
+                        suite: 'test-report-suite-123',
+                    },
+                ],
+            });
+
+            wrapper.instance().onFilterSelect('test report suite');
+
+            expect(wrapper.state('source')).toEqual({
+                name: 'test report suite',
+                dataSourceIds: [],
+                reportSuiteIds: ['test-report-suite-123'],
+                sourceType: 'ANALYTICS',
+            });
+        });
+
         it('.onKeyChange() changes key state to given value at corresponding id in keyValuePairs[]', () => {
             const value = 'test';
             const id = 0;
