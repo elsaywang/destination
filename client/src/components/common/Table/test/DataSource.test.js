@@ -12,14 +12,18 @@ describe('<DataSource /> component', () => {
         expect(() => new DataSource()).toThrow();
     });
 
-    it('should override the 4 methods of the react-spectrum `TableViewDataSource` that refer to the table items, so that class can be used in a standardized way', () => {
-        const mockDataSource = { items, sortItems, reloadData, onLoadMore };
+    it('should override the 3 methods of the react-spectrum `TableViewDataSource` that refer to the table items, so that class can be used in a standardized way', () => {
+        const mockDataSource = { items, sortItems, reloadData };
 
         // Call methods from prototype--creating a `new` DataSource will throw
         // since `getColumns` is not defined.
         expect(() => DataSource.prototype.getNumberOfRows.call(mockDataSource)).not.toThrow();
         expect(() => DataSource.prototype.getCell.call(mockDataSource, column, 0)).not.toThrow();
         expect(() => DataSource.prototype.sort.call(mockDataSource, column, 1)).not.toThrow();
-        expect(() => DataSource.prototype.loadMore.call(mockDataSource, column, 1)).not.toThrow();
+    });
+
+    it('should override react-spectrum `TableViewDataSource` loadMore method if implemented', () => {
+        const mockDataSource = { items, sortItems, reloadData, onLoadMore };
+        expect(() => DataSource.prototype.loadMore.call(mockDataSource)).not.toThrow();
     });
 });

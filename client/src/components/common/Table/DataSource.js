@@ -28,7 +28,7 @@ class DataSource extends TableViewDataSource {
             this.items.sort((a, b) => (a[key] < b[key] ? -direction : direction));
         }
     }
-
+    // Override
     async loadMore() {
         this.onLoadMore();
     }
