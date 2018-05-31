@@ -60,6 +60,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalsTable
     allowsSelection={true}
+    onLoadMore={[MockFunction]}
     results={
       Object {
         "list": Array [
@@ -181,7 +182,7 @@ ShallowWrapper {
           },
         },
       ],
-      "onLoadMore": undefined,
+      "onLoadMore": [MockFunction],
       "onSelectionChange": [Function],
       "renderCell": [Function],
       "sortSearch": undefined,
@@ -274,7 +275,7 @@ ShallowWrapper {
             },
           },
         ],
-        "onLoadMore": undefined,
+        "onLoadMore": [MockFunction],
         "onSelectionChange": [Function],
         "renderCell": [Function],
         "sortSearch": undefined,

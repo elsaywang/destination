@@ -192,6 +192,7 @@ SignalsTable.propTypes = {
     isAdvancedSearchEnabled: PropTypes.bool,
     onSignalRecordsSelection: PropTypes.func,
     onSortSearch: PropTypes.func,
+    onLoadMore: PropTypes.func,
     allowsSelection: PropTypes.bool,
 };
 
