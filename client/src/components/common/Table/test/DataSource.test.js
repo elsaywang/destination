@@ -1,5 +1,6 @@
 import React from 'react';
 import DataSource from '../DataSource';
+import withColumns from '../withColumns';
 
 describe('<DataSource /> component', () => {
     const items = [{ key: 'item' }];
@@ -22,8 +23,15 @@ describe('<DataSource /> component', () => {
         expect(() => DataSource.prototype.sort.call(mockDataSource, column, 1)).not.toThrow();
     });
 
-    it('should override react-spectrum `TableViewDataSource` loadMore method if implemented', () => {
-        const mockDataSource = { items, sortItems, reloadData, onLoadMore };
-        expect(() => DataSource.prototype.loadMore.call(mockDataSource)).not.toThrow();
+    it('should override react-spectrum `TableViewDataSource` loadMore method if implemented, and it would be called', () => {
+        const DataSourceWithColumns = withColumns(DataSource, column);
+        const ds = new DataSourceWithColumns({
+            items,
+            sortItems,
+            onLoadMore,
+        });
+        const spyOnLoadMore = jest.spyOn(ds, 'onLoadMore');
+        expect(() => ds.loadMore()).not.toThrow();
+        expect(spyOnLoadMore).toHaveBeenCalled();
     });
 });
