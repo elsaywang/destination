@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SignalsTable from './SignalsTable';
 import withLoadingSpinner from './withLoadingSpinner';
+import { fetchSignals } from '../utils/fetchSignals';
 
 class SavedSearchTable extends Component {
     state = {
@@ -9,32 +10,14 @@ class SavedSearchTable extends Component {
         error: '',
     };
 
-    setStateAsync(state, ms) {
-        return new Promise(
-            resolve => (this.timerHandle = setTimeout(() => resolve(this.setState(state)), ms)),
-        );
-    }
-
     async componentDidMount() {
-        try {
-            const { savedSearch, getResultsBySavedSearch } = this.props;
-            const results = await getResultsBySavedSearch(savedSearch);
-            await this.setStateAsync({ tableResults: results.value }, 1000);
-        } catch (error) {
-            await this.setStateAsync(
-                {
-                    error,
-                },
-                1000,
-            );
-        }
+        const { savedSearch, getResultsBySavedSearch } = this.props;
+        const results = await fetchSignals({ search: savedSearch });
+        const list = await results.json();
+
+        this.setState({ tableResults: list });
     }
 
-    componentWillUnmount() {
-        // Need to cancel async task in the componentWillUnmount method when user exits the current view before data is loaded
-        // Or else it will be warning: Can't call setState (or forceUpdate) on an unmounted component.
-        clearTimeout(this.timerHandle);
-    }
     render() {
         const { tableResults } = this.state;
         const { isAdvancedSearchEnabled, allowsSelection } = this.props;

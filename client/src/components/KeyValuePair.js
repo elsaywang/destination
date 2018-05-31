@@ -37,6 +37,7 @@ class KeyValuePair extends Component {
 
                 throw new Error(response.statusText);
             })
+            .then(json => json.map(key => key.signalKey))
             .catch(error => {
                 this.setState({
                     autocompleteError: true,
@@ -62,8 +63,8 @@ class KeyValuePair extends Component {
             })
             .then(suites =>
                 suites.map(suite => ({
-                    label: `${suite.id} (${suite.name})`,
-                    id: suite.id,
+                    label: `${suite.signalKey} (${suite.signalName})`,
+                    id: suite.signalKey,
                 })),
             )
             .catch(error => {
