@@ -46,10 +46,12 @@ class KeyValuePair extends Component {
             });
     };
 
-    getKeysByReportSuiteId = () => {
+    getKeysByReportSuiteId = key => {
         const { reportSuiteId } = this.props;
 
-        return fetch(`/portal/api/v1/report-suites/dimensions/${reportSuiteId}`)
+        return fetch(
+            `/portal/api/v1/signals/keys?search=${key}&reportSuiteId=${reportSuiteId}&total=8`,
+        )
             .then(response => {
                 if (response.ok) {
                     this.setState({
@@ -63,7 +65,7 @@ class KeyValuePair extends Component {
             })
             .then(suites =>
                 suites.map(suite => ({
-                    label: `${suite.signalKey} (${suite.signalName})`,
+                    label: `${suite.signalKey} (${suite.signalKeyName})`,
                     id: suite.signalKey,
                 })),
             )
@@ -93,7 +95,6 @@ class KeyValuePair extends Component {
                         getCompletions={
                             advanced ? this.getKeysByReportSuiteId : this.getCompletions
                         }
-                        value={key}
                         onChange={this.onKeyChange}>
                         <Textfield
                             className={styles.textField}

@@ -46,7 +46,6 @@ ShallowWrapper {
             className="key-search"
             getCompletions={[Function]}
             onChange={[Function]}
-            value=""
           >
             <Textfield
               autoFocus={false}
@@ -143,7 +142,6 @@ ShallowWrapper {
               className="key-search"
               getCompletions={[Function]}
               onChange={[Function]}
-              value=""
             >
               <Textfield
                 autoFocus={false}
@@ -191,7 +189,6 @@ ShallowWrapper {
               "className": "key-search",
               "getCompletions": [Function],
               "onChange": [Function],
-              "value": "",
             },
             "ref": null,
             "rendered": Object {
@@ -364,7 +361,6 @@ ShallowWrapper {
               className="key-search"
               getCompletions={[Function]}
               onChange={[Function]}
-              value=""
             >
               <Textfield
                 autoFocus={false}
@@ -461,7 +457,6 @@ ShallowWrapper {
                 className="key-search"
                 getCompletions={[Function]}
                 onChange={[Function]}
-                value=""
               >
                 <Textfield
                   autoFocus={false}
@@ -509,7 +504,6 @@ ShallowWrapper {
                 "className": "key-search",
                 "getCompletions": [Function],
                 "onChange": [Function],
-                "value": "",
               },
               "ref": null,
               "rendered": Object {
