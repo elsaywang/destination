@@ -208,10 +208,10 @@ class SearchContainer extends Component {
     };
 
     handleLoadMore = () => {
-        const { pageSize } = this.props.results;
+        const { page } = this.props.results;
 
         this.props.loadMore(this.state, {
-            page: this.props.results.page + 1,
+            page: page + 1,
         });
     };
 

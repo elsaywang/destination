@@ -27,12 +27,14 @@ describe('<Table /> component', () => {
     const renderCell = (column, data) => <span>{data}</span>;
     const sortSearch = jest.fn();
     const onSelectionChange = jest.fn();
+    const onLoadMore = jest.fn();
     const wrapper = shallow(
         <Table
             items={items}
             columns={columns}
             renderCell={renderCell}
             sortSearch={sortSearch}
+            onLoadMore={onLoadMore}
             onSelectionChange={onSelectionChange}
         />,
     );

@@ -29,6 +29,7 @@ ShallowWrapper {
         },
       ]
     }
+    onLoadMore={[MockFunction]}
     onSelectionChange={[MockFunction]}
     renderCell={[Function]}
     sortSearch={[MockFunction]}
@@ -72,7 +73,7 @@ ShallowWrapper {
                 "name": "Mongo",
               },
             ],
-            "onLoadMore": [Function],
+            "onLoadMore": [MockFunction],
             "sortColumn": null,
             "sortDir": -1,
             "sortSearch": [MockFunction],
@@ -118,7 +119,7 @@ ShallowWrapper {
               "name": "Mongo",
             },
           ],
-          "onLoadMore": [Function],
+          "onLoadMore": [MockFunction],
           "sortColumn": null,
           "sortDir": -1,
           "sortSearch": [MockFunction],
@@ -165,7 +166,7 @@ ShallowWrapper {
                   "name": "Mongo",
                 },
               ],
-              "onLoadMore": [Function],
+              "onLoadMore": [MockFunction],
               "sortColumn": null,
               "sortDir": -1,
               "sortSearch": [MockFunction],
@@ -211,7 +212,7 @@ ShallowWrapper {
                 "name": "Mongo",
               },
             ],
-            "onLoadMore": [Function],
+            "onLoadMore": [MockFunction],
             "sortColumn": null,
             "sortDir": -1,
             "sortSearch": [MockFunction],
