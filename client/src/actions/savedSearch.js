@@ -25,18 +25,9 @@ export const cancelSaveSearch = createAction(CANCEL_SAVE_SEARCH);
 
 export const SAVE_SEARCH = 'SAVE_SEARCH';
 export const SAVE_SEARCH_REJECTED = 'SAVE_SEARCH_REJECTED';
-export const saveSearch = createAction(SAVE_SEARCH, async search => {
-    // TODO: normalize this request to api expected request
-    try {
-        const result = await fetch('/portal/api/v1/users/self/annotations/aam-portal', {
-            method: 'PUT',
-            body: JSON.stringify(search),
-        });
-        //TODO: handle response as correct search to pass to reducer.
-        //return result.json();
-        //Assume response status code is 200
-        return search;
-    } catch (error) {
-        throw new Error(error);
-    }
-});
+export const saveSearch = createAsyncAction(SAVE_SEARCH, search =>
+    fetch('/portal/api/v1/users/self/annotations/aam-portal', {
+        method: 'PUT',
+        body: JSON.stringify(search),
+    }),
+);
