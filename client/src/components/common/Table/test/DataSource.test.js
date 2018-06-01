@@ -31,7 +31,7 @@ describe('<DataSource /> component', () => {
             onLoadMore,
         });
         const spyOnLoadMore = jest.spyOn(ds, 'onLoadMore');
-        expect(() => ds.loadMore()).not.toThrow();
+        ds.loadMore();
         expect(spyOnLoadMore).toHaveBeenCalled();
     });
 });
