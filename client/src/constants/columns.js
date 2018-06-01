@@ -137,6 +137,8 @@ export const onboardedRecordsColumns = [
     includedInTraits,
 ];
 
+export const sortColumns = [keyValuePairs, totalCounts, percentageChange];
+
 /**
  * All columns
  */
