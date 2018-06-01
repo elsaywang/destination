@@ -7,7 +7,7 @@ import operatorOptions from '../constants/operatorOptions';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';
 import fetch from '../utils/fetch';
-import { isValueValid } from '../utils/searchValidation';
+import { isValueValid, isKeyEmptyWithValue } from '../utils/searchValidation';
 import InlineErrorMessage from './common/InlineErrorMessage';
 
 class KeyValuePair extends Component {
@@ -16,7 +16,7 @@ class KeyValuePair extends Component {
 
         this.onSelectOperatorChange = this.props.onOperatorChange.bind(this, this.props.pair.id);
         this.onKeyChange = this.props.onKeyChange.bind(this, this.props.pair.id);
-        this.onValueChange = this.props.onValueChange.bind(this, this.props.pair.id);
+        this.onValueChange = this.onValueChange.bind(this);
     }
 
     state = {
@@ -75,6 +75,25 @@ class KeyValuePair extends Component {
                     autocompleteErrorMessage: error.message,
                 });
             });
+    };
+
+    setAutocompleteErrorMessage = pair => {
+        if (isKeyEmptyWithValue(pair)) {
+            this.setState({
+                autocompleteError: true,
+                autocompleteErrorMessage: 'Key cannot be empty when Value is specified.',
+            });
+        } else {
+            this.setState({
+                autocompleteError: false,
+                autocompleteErrorMessage: '',
+            });
+        }
+    };
+
+    onValueChange = value => {
+        this.props.onValueChange(this.props.pair.id, value);
+        this.setAutocompleteErrorMessage(this.props.pair);
     };
 
     render() {
