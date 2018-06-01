@@ -4,11 +4,12 @@ import classNames from 'classnames';
 import Alert from '@react/react-spectrum/Icon/Alert';
 import styles from './InlineErrorMessage.css';
 
-const InlineErrorMessage = ({ isInvalid, errorMessage, className }) => {
+const InlineErrorMessage = ({ isInvalid, errorMessage, className, showIcon = true }) => {
     if (isInvalid) {
         return (
             <span data-test="inline-error" className={classNames(styles.error, className)}>
-                <Alert size="S" /> <span className={styles.errorMessage}>{errorMessage}</span>
+                {showIcon && <Alert size="S" />}{' '}
+                <span className={styles.errorMessage}>{errorMessage}</span>
             </span>
         );
     }
@@ -20,6 +21,7 @@ InlineErrorMessage.propTypes = {
     isInvalid: PropTypes.bool.isRequired,
     errorMessage: PropTypes.string.isRequired,
     className: PropTypes.string,
+    showIcon: PropTypes.bool,
 };
 
 export default InlineErrorMessage;

@@ -128,6 +128,7 @@ class KeyValuePair extends Component {
                         className={styles.error}
                         isInvalid={this.state.autocompleteError}
                         errorMessage={this.state.autocompleteErrorMessage}
+                        showIcon={false}
                     />
                 </Label>
                 <Select
@@ -150,6 +151,7 @@ class KeyValuePair extends Component {
                         className={styles.error}
                         isInvalid={!isValueValid(this.props.pair)}
                         errorMessage="It can only be numerical values when it's > or <."
+                        showIcon={false}
                     />
                 </Label>
             </span>
