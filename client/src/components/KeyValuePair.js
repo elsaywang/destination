@@ -95,6 +95,7 @@ class KeyValuePair extends Component {
                         getCompletions={
                             advanced ? this.getKeysByReportSuiteId : this.getCompletions
                         }
+                        value={key}
                         onChange={this.onKeyChange}>
                         <Textfield
                             className={styles.textField}
