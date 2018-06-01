@@ -28,6 +28,7 @@ ShallowWrapper {
     }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
+    loadMore={[Function]}
     populateSearchFields={[Function]}
     reportSuites={Array []}
     results={
@@ -1082,6 +1083,7 @@ ShallowWrapper {
     }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
+    loadMore={[Function]}
     populateSearchFields={[Function]}
     reportSuites={Array []}
     results={
@@ -2133,6 +2135,7 @@ ShallowWrapper {
     }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
+    loadMore={[Function]}
     populateSearchFields={[Function]}
     reportSuites={Array []}
     results={

@@ -29,6 +29,7 @@ class Table extends Component {
             columns,
             renderCell,
             sortSearch,
+            onLoadMore,
             onSelectionChange,
             dataTest,
             allowsSelection,
@@ -37,6 +38,7 @@ class Table extends Component {
         const dataSource = new DataSourceWithColumns({
             items,
             sortSearch,
+            onLoadMore,
         });
         const height = this.getTableHeight(items);
 

@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { CALL_SEARCH, CLEAR_SEARCH, SORT_SEARCH } from '../actions/searchForm';
+import { CALL_SEARCH, LOAD_MORE, CLEAR_SEARCH, SORT_SEARCH } from '../actions/searchForm';
 
 const initialState = {
     list: [],
@@ -8,22 +8,21 @@ const initialState = {
     total: 0,
 };
 
-export const list = handleActions(
-    {
-        [CALL_SEARCH]: (state, action) =>
-            action.payload.list.map(signal => ({
-                ...signal,
-                categoryType: signal.source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
-            })),
-    },
-    initialState.list,
-);
+export const handleList = (state, action) =>
+    action.payload.list.map(signal => ({
+        ...signal,
+        categoryType: signal.source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
+    }));
 
 const results = handleActions(
     {
         [CALL_SEARCH]: (state, action) => ({
-            ...state,
-            list: list(getList(state), action),
+            ...action.payload,
+            list: handleList(getList(state), action),
+        }),
+        [LOAD_MORE]: (state, action) => ({
+            ...action.payload,
+            list: [...getList(state), ...handleList(getList(state), action)],
         }),
         [CLEAR_SEARCH]: state => ({
             ...state,

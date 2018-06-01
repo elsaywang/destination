@@ -207,6 +207,14 @@ class SearchContainer extends Component {
         this.props.callSearch(this.state);
     };
 
+    handleLoadMore = () => {
+        const { page } = this.props.results;
+
+        this.props.loadMore(this.state, {
+            page: page + 1,
+        });
+    };
+
     handleSortSearch = (sortColumn, sortDir) => {
         this.props.sortSearch(this.state, sortColumn, sortDir);
     };
@@ -359,6 +367,7 @@ class SearchContainer extends Component {
                                 isAdvancedSearchEnabled={this.state.advanced}
                                 onSortSearch={this.handleSortSearch}
                                 onSignalRecordsSelection={this.props.selectSignals}
+                                onLoadMore={this.handleLoadMore}
                             />
                         </div>
                     </div>

@@ -165,6 +165,7 @@ class SignalsTable extends Component {
             signalType,
             isAdvancedSearchEnabled,
             onSortSearch,
+            onLoadMore,
             allowsSelection,
         } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
@@ -177,6 +178,7 @@ class SignalsTable extends Component {
                 columns={columns}
                 renderCell={this.renderCell}
                 sortSearch={onSortSearch}
+                onLoadMore={onLoadMore}
                 onSelectionChange={this.handleSelectionChange}
                 allowsSelection={allowsSelection}
             />
@@ -190,6 +192,7 @@ SignalsTable.propTypes = {
     isAdvancedSearchEnabled: PropTypes.bool,
     onSignalRecordsSelection: PropTypes.func,
     onSortSearch: PropTypes.func,
+    onLoadMore: PropTypes.func,
     allowsSelection: PropTypes.bool,
 };
 
