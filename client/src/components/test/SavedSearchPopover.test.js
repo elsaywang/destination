@@ -21,7 +21,7 @@ describe('<SavedSearchPopover /> component', () => {
             {
                 key: 'k-Gorgeous Wooden Shirt',
                 operator: '<=',
-                value: 98396,
+                value: 98397,
             },
         ],
         source: {
