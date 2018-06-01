@@ -28,9 +28,7 @@ class KeyValuePair extends Component {
         return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
             .then(response => {
                 if (response.ok) {
-                    this.setState({
-                        autocompleteError: false,
-                    });
+                    this.setAutocompleteErrorMessage();
 
                     return response.json();
                 }
@@ -54,9 +52,7 @@ class KeyValuePair extends Component {
         )
             .then(response => {
                 if (response.ok) {
-                    this.setState({
-                        autocompleteError: false,
-                    });
+                    this.setAutocompleteErrorMessage();
 
                     return response.json();
                 }
@@ -77,8 +73,8 @@ class KeyValuePair extends Component {
             });
     };
 
-    setAutocompleteErrorMessage = pair => {
-        if (isKeyEmptyWithValue(pair)) {
+    setAutocompleteErrorMessage = () => {
+        if (isKeyEmptyWithValue(this.props.pair)) {
             this.setState({
                 autocompleteError: true,
                 autocompleteErrorMessage: 'Key cannot be empty when Value is specified.',
@@ -93,7 +89,7 @@ class KeyValuePair extends Component {
 
     onValueChange = value => {
         this.props.onValueChange(this.props.pair.id, value);
-        this.setAutocompleteErrorMessage(this.props.pair);
+        this.setAutocompleteErrorMessage();
     };
 
     render() {

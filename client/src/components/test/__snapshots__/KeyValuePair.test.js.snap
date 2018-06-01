@@ -64,6 +64,7 @@ ShallowWrapper {
             className={undefined}
             errorMessage=""
             isInvalid={false}
+            showIcon={false}
           />
         </Label>,
         <Select
@@ -125,6 +126,7 @@ ShallowWrapper {
             className={undefined}
             errorMessage="It can only be numerical values when it's > or <."
             isInvalid={false}
+            showIcon={false}
           />
         </Label>,
       ],
@@ -161,6 +163,7 @@ ShallowWrapper {
               className={undefined}
               errorMessage=""
               isInvalid={false}
+              showIcon={false}
             />,
           ],
           "labelFor": "key0",
@@ -223,6 +226,7 @@ ShallowWrapper {
               "className": undefined,
               "errorMessage": "",
               "isInvalid": false,
+              "showIcon": false,
             },
             "ref": null,
             "rendered": null,
@@ -293,6 +297,7 @@ ShallowWrapper {
               className={undefined}
               errorMessage="It can only be numerical values when it's > or <."
               isInvalid={false}
+              showIcon={false}
             />,
           ],
           "labelFor": "value0",
@@ -332,6 +337,7 @@ ShallowWrapper {
               "className": undefined,
               "errorMessage": "It can only be numerical values when it's > or <.",
               "isInvalid": false,
+              "showIcon": false,
             },
             "ref": null,
             "rendered": null,
@@ -382,6 +388,7 @@ ShallowWrapper {
               className={undefined}
               errorMessage=""
               isInvalid={false}
+              showIcon={false}
             />
           </Label>,
           <Select
@@ -443,6 +450,7 @@ ShallowWrapper {
               className={undefined}
               errorMessage="It can only be numerical values when it's > or <."
               isInvalid={false}
+              showIcon={false}
             />
           </Label>,
         ],
@@ -479,6 +487,7 @@ ShallowWrapper {
                 className={undefined}
                 errorMessage=""
                 isInvalid={false}
+                showIcon={false}
               />,
             ],
             "labelFor": "key0",
@@ -541,6 +550,7 @@ ShallowWrapper {
                 "className": undefined,
                 "errorMessage": "",
                 "isInvalid": false,
+                "showIcon": false,
               },
               "ref": null,
               "rendered": null,
@@ -611,6 +621,7 @@ ShallowWrapper {
                 className={undefined}
                 errorMessage="It can only be numerical values when it's > or <."
                 isInvalid={false}
+                showIcon={false}
               />,
             ],
             "labelFor": "value0",
@@ -650,6 +661,7 @@ ShallowWrapper {
                 "className": undefined,
                 "errorMessage": "It can only be numerical values when it's > or <.",
                 "isInvalid": false,
+                "showIcon": false,
               },
               "ref": null,
               "rendered": null,
