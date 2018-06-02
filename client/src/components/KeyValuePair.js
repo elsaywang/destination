@@ -77,7 +77,7 @@ class KeyValuePair extends Component {
         if (isKeyEmptyWithValue(this.props.pair)) {
             this.setState({
                 autocompleteError: true,
-                autocompleteErrorMessage: 'Key cannot be empty when Value is specified.',
+                autocompleteErrorMessage: 'Key cannot be empty when value is specified.',
             });
         } else {
             this.setState({
