@@ -8,7 +8,7 @@ const InlineErrorMessage = ({ isInvalid, errorMessage, className, showIcon = tru
     if (isInvalid) {
         return (
             <span data-test="inline-error" className={classNames(styles.error, className)}>
-                {showIcon && <Alert size="S" />}{' '}
+                {showIcon && <Alert size="S" />}
                 <span className={styles.errorMessage}>{errorMessage}</span>
             </span>
         );
