@@ -75,6 +75,10 @@ describe('Search Validation Utils', () => {
         it('should return false when given a non-empty key and non-empty value', () => {
             expect(validationUtils.isKeyEmptyWithValue({ key: 'abc', value: 'abc' })).toBe(false);
         });
+
+        it('should return false when given a empty key and empty value', () => {
+            expect(validationUtils.isKeyEmptyWithValue({ key: '', value: '' })).toBe(false);
+        });
     });
 
     describe('areAllValuesValid() should check if all values in key value pairs are valid', () => {
