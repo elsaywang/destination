@@ -61,7 +61,7 @@ node ("docker") {
 
         // publish screenshots in a zip file if they are generated.
         if (fileExists("${workspace}/artifacts/ui-build/cypress/screenshots")) {
-            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/cypress/screenshots", glob: '*.png', zipFile: 'cypress_errors_ss.zip'
+            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/cypress/screenshots", glob: '*.png', zipFile: "cypress_errors_ss.${env.BUILD_ID}.zip"
         }
 
         // publish video if there is videos to publish
