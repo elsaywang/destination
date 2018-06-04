@@ -63,18 +63,39 @@ describe('Search Validation Utils', () => {
         });
     });
 
+    describe('isKeyEmptyWithValue()', () => {
+        it('should return true when given an empty key and non-empty value', () => {
+            expect(validationUtils.isKeyEmptyWithValue({ key: '', value: 'ada' })).toBe(true);
+        });
+
+        it('should return false when given a non-empty key and empty value', () => {
+            expect(validationUtils.isKeyEmptyWithValue({ key: 'abc', value: '' })).toBe(false);
+        });
+
+        it('should return false when given a non-empty key and non-empty value', () => {
+            expect(validationUtils.isKeyEmptyWithValue({ key: 'abc', value: 'abc' })).toBe(false);
+        });
+
+        it('should return false when given a empty key and empty value', () => {
+            expect(validationUtils.isKeyEmptyWithValue({ key: '', value: '' })).toBe(false);
+        });
+    });
+
     describe('areAllValuesValid() should check if all values in key value pairs are valid', () => {
         it('given an array of key value pairs with all valid values, it should return true', () => {
             const keyValuePairs = [
                 {
+                    key: '',
                     operator: '==',
                     value: '',
                 },
                 {
+                    key: 'abc',
                     operator: 'contains',
                     value: 'abc',
                 },
                 {
+                    key: 'abc',
                     operator: '>=',
                     value: '1',
                 },
@@ -86,20 +107,54 @@ describe('Search Validation Utils', () => {
         it('given an array of key value pairs with one invalid value, it should return false', () => {
             const keyValuePairs = [
                 {
+                    key: 'abc',
                     operator: '==',
                     value: 'a',
                 },
                 {
-                    operator: 'contains',
-                    value: '1',
-                },
-                {
+                    key: 'abc',
                     operator: '>=',
                     value: 'a',
                 },
             ];
 
             expect(validationUtils.areAllValuesValid(keyValuePairs)).toBe(false);
+        });
+    });
+
+    describe('isAnyKeyEmptyWithValue() should check if any key is empty with value', () => {
+        it('given an array of key value pairs with one empty key with non-empty value, it should return true', () => {
+            const keyValuePairs = [
+                {
+                    key: '',
+                    operator: '==',
+                    value: 'adada',
+                },
+                {
+                    key: 'ada',
+                    operator: 'contains',
+                    value: 'abc',
+                },
+            ];
+
+            expect(validationUtils.isAnyKeyEmptyWithValue(keyValuePairs)).toBe(true);
+        });
+
+        it('given an array of key value pairs with all valid values, it should return false', () => {
+            const keyValuePairs = [
+                {
+                    key: '',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: 'ada',
+                    operator: 'contains',
+                    value: 'abc',
+                },
+            ];
+
+            expect(validationUtils.isAnyKeyEmptyWithValue(keyValuePairs)).toBe(false);
         });
     });
 });

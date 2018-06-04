@@ -24,8 +24,11 @@ export const isValueValid = ({ operator, value }) => {
     );
 };
 
+export const isKeyEmptyWithValue = ({ key, value }) => isEmpty(key) && !isEmpty(value);
+
+export const isAnyKeyEmptyWithValue = keyValuePairs => keyValuePairs.some(isKeyEmptyWithValue);
+
 export const areAllValuesValid = keyValuePairs => keyValuePairs.every(isValueValid);
 
-export const isFormValid = formState => {
-    return areAllValuesValid(formState.keyValuePairs);
-};
+export const isFormValid = ({ keyValuePairs }) =>
+    areAllValuesValid(keyValuePairs) && !isAnyKeyEmptyWithValue(keyValuePairs);

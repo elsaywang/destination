@@ -7,7 +7,7 @@ import operatorOptions from '../constants/operatorOptions';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';
 import fetch from '../utils/fetch';
-import { isValueValid } from '../utils/searchValidation';
+import { isValueValid, isKeyEmptyWithValue } from '../utils/searchValidation';
 import InlineErrorMessage from './common/InlineErrorMessage';
 
 class KeyValuePair extends Component {
@@ -16,7 +16,7 @@ class KeyValuePair extends Component {
 
         this.onSelectOperatorChange = this.props.onOperatorChange.bind(this, this.props.pair.id);
         this.onKeyChange = this.props.onKeyChange.bind(this, this.props.pair.id);
-        this.onValueChange = this.props.onValueChange.bind(this, this.props.pair.id);
+        this.onValueChange = this.onValueChange.bind(this);
     }
 
     state = {
@@ -28,9 +28,7 @@ class KeyValuePair extends Component {
         return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
             .then(response => {
                 if (response.ok) {
-                    this.setState({
-                        autocompleteError: false,
-                    });
+                    this.setAutocompleteErrorMessage();
 
                     return response.json();
                 }
@@ -54,9 +52,7 @@ class KeyValuePair extends Component {
         )
             .then(response => {
                 if (response.ok) {
-                    this.setState({
-                        autocompleteError: false,
-                    });
+                    this.setAutocompleteErrorMessage();
 
                     return response.json();
                 }
@@ -75,6 +71,25 @@ class KeyValuePair extends Component {
                     autocompleteErrorMessage: error.message,
                 });
             });
+    };
+
+    setAutocompleteErrorMessage = () => {
+        if (isKeyEmptyWithValue(this.props.pair)) {
+            this.setState({
+                autocompleteError: true,
+                autocompleteErrorMessage: 'Key cannot be empty when value is specified.',
+            });
+        } else {
+            this.setState({
+                autocompleteError: false,
+                autocompleteErrorMessage: '',
+            });
+        }
+    };
+
+    onValueChange = value => {
+        this.props.onValueChange(this.props.pair.id, value);
+        this.setAutocompleteErrorMessage();
     };
 
     render() {
@@ -109,6 +124,7 @@ class KeyValuePair extends Component {
                         className={styles.error}
                         isInvalid={this.state.autocompleteError}
                         errorMessage={this.state.autocompleteErrorMessage}
+                        showIcon={false}
                     />
                 </Label>
                 <Select
@@ -131,6 +147,7 @@ class KeyValuePair extends Component {
                         className={styles.error}
                         isInvalid={!isValueValid(this.props.pair)}
                         errorMessage="It can only be numerical values when it's > or <."
+                        showIcon={false}
                     />
                 </Label>
             </span>
