@@ -123,7 +123,7 @@ describe('Search Validation Utils', () => {
     });
 
     describe('isAnyKeyEmptyWithValue() should check if any key is empty with value', () => {
-        it('given an array of key value pairs with all valid values, it should return true', () => {
+        it('given an array of key value pairs with one empty key with non-empty value, it should return true', () => {
             const keyValuePairs = [
                 {
                     key: '',
@@ -140,7 +140,7 @@ describe('Search Validation Utils', () => {
             expect(validationUtils.isAnyKeyEmptyWithValue(keyValuePairs)).toBe(true);
         });
 
-        it('given an array of key value pairs with one invalid value, it should return false', () => {
+        it('given an array of key value pairs with all valid values, it should return false', () => {
             const keyValuePairs = [
                 {
                     key: '',
