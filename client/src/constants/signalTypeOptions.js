@@ -1,4 +1,4 @@
-const signalTypeOptions = [
+export const signalTypeOptions = [
     { label: `All`, value: 'ALL' },
     { label: `Adobe Analytics`, value: 'ANALYTICS' },
     { label: `Actionable Log Files`, value: 'ALF' },

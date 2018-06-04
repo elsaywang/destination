@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
 import Heading from '@react/react-spectrum/Heading';
 import styles from './SignalTypeFilter.css';
-import { getSignalTypeOptions } from '../constants/signalTypeOptions';
+import { signalTypeOptions } from '../constants/signalTypeOptions';
 
 class SignalTypeFilter extends Component {
+    // Phase 2 feature is commented out
     state = {
         counts: {
             ALL: 72093,
@@ -17,7 +18,7 @@ class SignalTypeFilter extends Component {
     };
 
     handleSignalTypeChange = tabIndex => {
-        const signalTypeOptions = getSignalTypeOptions(this.state.counts);
+        // const signalTypeOptions = getSignalTypeOptions(this.state.counts);
         const { value } = signalTypeOptions[tabIndex];
 
         this.props.onSignalTypeChange(value);
@@ -30,7 +31,7 @@ class SignalTypeFilter extends Component {
     );
 
     render() {
-        const signalTypeOptions = getSignalTypeOptions(this.state.counts);
+        // const signalTypeOptions = getSignalTypeOptions(this.state.counts);
 
         return (
             <Fragment>
