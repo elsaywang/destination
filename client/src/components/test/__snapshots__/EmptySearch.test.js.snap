@@ -23,7 +23,7 @@ ShallowWrapper {
         alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
         className={undefined}
         data-test="start-exploring"
-        src="//localhost:3000/explore.svg"
+        src="localhost:3000/explore.svg"
       />,
       "className": undefined,
       "message": "Search by key-value pairs or use only filters to get insights on signals.",
@@ -39,7 +39,7 @@ ShallowWrapper {
         "alt": "Start exploring. Search by key-value pairs or use only filters to get insights on signals.",
         "className": undefined,
         "data-test": "start-exploring",
-        "src": "//localhost:3000/explore.svg",
+        "src": "localhost:3000/explore.svg",
       },
       "ref": null,
       "rendered": null,
@@ -57,7 +57,7 @@ ShallowWrapper {
           alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
           className={undefined}
           data-test="start-exploring"
-          src="//localhost:3000/explore.svg"
+          src="localhost:3000/explore.svg"
         />,
         "className": undefined,
         "message": "Search by key-value pairs or use only filters to get insights on signals.",
@@ -73,7 +73,7 @@ ShallowWrapper {
           "alt": "Start exploring. Search by key-value pairs or use only filters to get insights on signals.",
           "className": undefined,
           "data-test": "start-exploring",
-          "src": "//localhost:3000/explore.svg",
+          "src": "localhost:3000/explore.svg",
         },
         "ref": null,
         "rendered": null,
@@ -115,7 +115,7 @@ ShallowWrapper {
         alt="No results found. Refine the search query and try searching again."
         className={undefined}
         data-test="no-result-found"
-        src="//localhost:3000/noResult.svg"
+        src="localhost:3000/noResult.svg"
       />,
       "className": undefined,
       "message": "Refine the search query and try searching again.",
@@ -131,7 +131,7 @@ ShallowWrapper {
         "alt": "No results found. Refine the search query and try searching again.",
         "className": undefined,
         "data-test": "no-result-found",
-        "src": "//localhost:3000/noResult.svg",
+        "src": "localhost:3000/noResult.svg",
       },
       "ref": null,
       "rendered": null,
@@ -149,7 +149,7 @@ ShallowWrapper {
           alt="No results found. Refine the search query and try searching again."
           className={undefined}
           data-test="no-result-found"
-          src="//localhost:3000/noResult.svg"
+          src="localhost:3000/noResult.svg"
         />,
         "className": undefined,
         "message": "Refine the search query and try searching again.",
@@ -165,7 +165,7 @@ ShallowWrapper {
           "alt": "No results found. Refine the search query and try searching again.",
           "className": undefined,
           "data-test": "no-result-found",
-          "src": "//localhost:3000/noResult.svg",
+          "src": "localhost:3000/noResult.svg",
         },
         "ref": null,
         "rendered": null,

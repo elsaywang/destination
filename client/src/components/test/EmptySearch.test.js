@@ -19,7 +19,7 @@ describe('<EmptySearch/> component', () => {
 
         it('renders <EmptyPlaceholder/> component with Explore Image', () => {
             expect(wrapper.find(EmptyPlaceholder).exists()).toBe(true);
-            expect(wrapper.find('img').props().src).toEqual(`//localhost:3000/${Explore}`);
+            expect(wrapper.find('img').props().src).toEqual(`localhost:3000/${Explore}`);
         });
     });
     describe('when variant is `noResult` passes in props', () => {
@@ -31,7 +31,7 @@ describe('<EmptySearch/> component', () => {
 
         it('renders <EmptyPlaceholder/> component with NoResult Image', () => {
             expect(wrapper.find(EmptyPlaceholder).exists()).toBe(true);
-            expect(wrapper.find('img').props().src).toEqual(`//localhost:3000/${NoResult}`);
+            expect(wrapper.find('img').props().src).toEqual(`localhost:3000/${NoResult}`);
         });
     });
 });
