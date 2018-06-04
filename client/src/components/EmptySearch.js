@@ -31,9 +31,9 @@ function EmptySearch({ variant, className }) {
     const getImageSrc = () => {
         switch (variant) {
             case 'explore':
-                return `//${getStaticUrl()}${Explore}`;
+                return `${getStaticUrl()}${Explore}`;
             case 'noResult':
-                return `//${getStaticUrl()}${NoResult}`;
+                return `${getStaticUrl()}${NoResult}`;
             default:
                 return '';
         }
