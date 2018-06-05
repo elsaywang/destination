@@ -20,7 +20,7 @@ class SavedSearchTable extends Component {
 
     render() {
         const { tableResults } = this.state;
-        const { isAdvancedSearchEnabled, allowsSelection } = this.props;
+        const { isAdvancedSearchEnabled, allowsSelection, canCreateTrait } = this.props;
         const hasSearchResults = Boolean(Object.keys(tableResults).length);
         const WrappedSignalsTable = withLoadingSpinner(SignalsTable);
 
@@ -28,7 +28,9 @@ class SavedSearchTable extends Component {
             <WrappedSignalsTable
                 isLoaded={hasSearchResults}
                 results={tableResults}
-                {...{ isAdvancedSearchEnabled, allowsSelection }}
+                canCreateTrait={canCreateTrait}
+                isAdvancedSearchEnabled={isAdvancedSearchEnabled}
+                allowsSelection={allowsSelection}
             />
         );
     }
@@ -39,6 +41,7 @@ SavedSearchTable.propTypes = {
     getResultsBySavedSearch: PropTypes.func,
     isAdvancedSearchEnabled: PropTypes.bool,
     allowsSelection: PropTypes.bool,
+    canCreateTrait: PropTypes.bool,
 };
 
 export default SavedSearchTable;

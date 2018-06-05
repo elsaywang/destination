@@ -1,10 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SingleSignalTraitsCreation/> component matches the snapshot 1`] = `
+exports[`<SingleSignalTraitsCreation/> component when user does not have trait creation permission matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
+    canCreateTrait={false}
+    createTraitUrl="testUrl"
+    traitsCreationLabelText="Create Rule-Based Trait"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): "0 Traits",
+  Symbol(enzyme.__nodes__): Array [
+    "0 Traits",
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SingleSignalTraitsCreation/> component when user has trait creation permission matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
+    canCreateTrait={true}
     createTraitUrl="testUrl"
     traitsCreationLabelText="Create Rule-Based Trait"
   />,

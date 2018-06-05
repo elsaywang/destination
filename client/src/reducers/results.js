@@ -1,5 +1,10 @@
 import { handleActions } from 'redux-actions';
-import { CALL_SEARCH, LOAD_MORE, CLEAR_SEARCH, SORT_SEARCH } from '../actions/searchForm';
+import {
+    CALL_SEARCH_FULFILLED,
+    LOAD_MORE_FULFILLED,
+    CLEAR_SEARCH,
+    SORT_SEARCH_FULFILLED,
+} from '../actions/searchForm';
 
 const initialState = {
     list: [],
@@ -16,11 +21,11 @@ export const handleList = (state, action) =>
 
 const results = handleActions(
     {
-        [CALL_SEARCH]: (state, action) => ({
+        [CALL_SEARCH_FULFILLED]: (state, action) => ({
             ...action.payload,
             list: handleList(getList(state), action),
         }),
-        [LOAD_MORE]: (state, action) => ({
+        [LOAD_MORE_FULFILLED]: (state, action) => ({
             ...action.payload,
             list: [...getList(state), ...handleList(getList(state), action)],
         }),
@@ -28,7 +33,7 @@ const results = handleActions(
             ...state,
             list: [],
         }),
-        [SORT_SEARCH]: (state, action) => {
+        [SORT_SEARCH_FULFILLED]: (state, action) => {
             return {
                 ...state,
                 list: action.payload.list.reverse(),

@@ -12,7 +12,9 @@ ShallowWrapper {
         "hasError": false,
       }
     }
+    fetchUserRoles={[Function]}
     getSavedSearch={[Function]}
+    permissions={Object {}}
     populateSearchFields={[Function]}
     savedSearch={
       Object {
@@ -156,7 +158,9 @@ ShallowWrapper {
         "hasError": true,
       }
     }
+    fetchUserRoles={[Function]}
     getSavedSearch={[Function]}
+    permissions={Object {}}
     populateSearchFields={[MockFunction]}
     savedSearch={
       Object {
@@ -288,6 +292,7 @@ ShallowWrapper {
             </GridRow>
             <SavedSearchTable
               allowsSelection={false}
+              canCreateTrait={undefined}
               getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
@@ -370,6 +375,7 @@ ShallowWrapper {
             </GridRow>
             <SavedSearchTable
               allowsSelection={false}
+              canCreateTrait={undefined}
               getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
@@ -489,6 +495,7 @@ ShallowWrapper {
             </GridRow>,
             <SavedSearchTable
               allowsSelection={false}
+              canCreateTrait={undefined}
               getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
@@ -763,6 +770,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "allowsSelection": false,
+              "canCreateTrait": undefined,
               "getResultsBySavedSearch": [MockFunction],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
@@ -851,6 +859,7 @@ ShallowWrapper {
             </GridRow>,
             <SavedSearchTable
               allowsSelection={false}
+              canCreateTrait={undefined}
               getResultsBySavedSearch={[MockFunction]}
               isAdvancedSearchEnabled={false}
               savedSearch={
@@ -1130,6 +1139,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "allowsSelection": false,
+              "canCreateTrait": undefined,
               "getResultsBySavedSearch": [MockFunction],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
@@ -1238,6 +1248,7 @@ ShallowWrapper {
               </GridRow>
               <SavedSearchTable
                 allowsSelection={false}
+                canCreateTrait={undefined}
                 getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
@@ -1320,6 +1331,7 @@ ShallowWrapper {
               </GridRow>
               <SavedSearchTable
                 allowsSelection={false}
+                canCreateTrait={undefined}
                 getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
@@ -1439,6 +1451,7 @@ ShallowWrapper {
               </GridRow>,
               <SavedSearchTable
                 allowsSelection={false}
+                canCreateTrait={undefined}
                 getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
@@ -1713,6 +1726,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "allowsSelection": false,
+                "canCreateTrait": undefined,
                 "getResultsBySavedSearch": [MockFunction],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
@@ -1801,6 +1815,7 @@ ShallowWrapper {
               </GridRow>,
               <SavedSearchTable
                 allowsSelection={false}
+                canCreateTrait={undefined}
                 getResultsBySavedSearch={[MockFunction]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
@@ -2080,6 +2095,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "allowsSelection": false,
+                "canCreateTrait": undefined,
                 "getResultsBySavedSearch": [MockFunction],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {

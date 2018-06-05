@@ -25,16 +25,20 @@ class TraitsCreation extends Component {
     }
 
     render() {
-        const { multiCreation, selectedSignals } = this.props;
+        const { multiCreation, selectedSignals, canCreateTrait } = this.props;
 
         const createTraitUrl = this.getCreateTraitURL();
 
         return multiCreation ? (
-            <MultiSignalsTraitsCreation {...{ createTraitUrl, selectedSignals }} />
+            <MultiSignalsTraitsCreation
+                createTraitUrl={createTraitUrl}
+                selectedSignals={selectedSignals}
+            />
         ) : (
             <SingleSignalTraitsCreation
-                {...{ createTraitUrl }}
+                createTraitUrl={createTraitUrl}
                 traitsCreationLabelText={this.getLinkText()}
+                canCreateTrait={canCreateTrait}
             />
         );
     }
@@ -49,6 +53,7 @@ TraitsCreation.propTypes = {
         hasWarning: PropTypes.bool,
         records: PropTypes.array,
     }),
+    canCreateTrait: PropTypes.bool,
 };
 
 export default TraitsCreation;

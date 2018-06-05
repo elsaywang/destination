@@ -33,7 +33,6 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "categoryType": undefined,
       "multiCreation": true,
       "selectedSignals": Object {
         "hasWarning": false,
@@ -59,7 +58,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "categoryType": undefined,
         "multiCreation": true,
         "selectedSignals": Object {
           "hasWarning": false,

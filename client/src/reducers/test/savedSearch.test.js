@@ -4,7 +4,7 @@ import {
     TRACK_SEARCH_RESULT_IN_DASHBOARD,
     SELECT_DEFAULT_SORTING,
     CHANGE_SORTING_ORDER,
-    SAVE_SEARCH,
+    SAVE_SEARCH_FULFILLED,
     CANCEL_SAVE_SEARCH,
 } from '../../actions/savedSearch';
 import saveSearchReducer from '../savedSearch';
@@ -118,7 +118,7 @@ describe('saveSearch reducer', () => {
     });
 
     //TODO:need to update the action payload once integrated with API
-    it('should handle SAVE_SEARCH', () => {
+    it('should handle SAVE_SEARCH_FULFILLED', () => {
         const currentState = {
             ...initialState,
             list: [
@@ -171,7 +171,7 @@ describe('saveSearch reducer', () => {
             ],
         };
         const action = {
-            type: SAVE_SEARCH,
+            type: SAVE_SEARCH_FULFILLED,
             payload: currentState.list,
         };
 

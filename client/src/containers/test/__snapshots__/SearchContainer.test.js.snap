@@ -26,9 +26,11 @@ ShallowWrapper {
         },
       }
     }
+    fetchUserRoles={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     loadMore={[Function]}
+    permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
     results={
@@ -1081,9 +1083,11 @@ ShallowWrapper {
         },
       }
     }
+    fetchUserRoles={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     loadMore={[Function]}
+    permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
     results={
@@ -2133,9 +2137,11 @@ ShallowWrapper {
         },
       }
     }
+    fetchUserRoles={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     loadMore={[Function]}
+    permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
     results={

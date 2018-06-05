@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { callSearch } from '../actions/searchForm';
 import { getSavedSearch } from '../actions/savedSearch';
 import { populateSearchFields } from '../actions/savedSearchFields';
+import { fetchUserRoles } from '../actions/permissions';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
@@ -14,6 +15,10 @@ import InlineErrorMessage from '../components/common/InlineErrorMessage';
 class DashboardContainer extends Component {
     componentDidMount() {
         this.props.getSavedSearch();
+
+        if (!Object.keys(this.props.permissions).length) {
+            this.props.fetchUserRoles();
+        }
     }
 
     handleViewAllForSavedSearch = search => {
@@ -69,6 +74,7 @@ class DashboardContainer extends Component {
                                     getResultsBySavedSearch={this.props.callSearch}
                                     isAdvancedSearchEnabled={false}
                                     allowsSelection={false}
+                                    canCreateTrait={this.props.permissions.canCreateTrait}
                                 />
                             </Well>
                         ),
@@ -78,14 +84,19 @@ class DashboardContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ savedSearch, errors }) => ({
+const mapStateToProps = ({ savedSearch, errors, permissions }) => ({
     savedSearch,
     error: errors.savedSearch,
+    permissions,
 });
 const actionCreators = {
     callSearch,
     getSavedSearch,
     populateSearchFields,
+    fetchUserRoles,
 };
 
-export default connect(mapStateToProps, actionCreators)(DashboardContainer);
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(DashboardContainer);

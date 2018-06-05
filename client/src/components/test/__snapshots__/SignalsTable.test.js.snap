@@ -2,6 +2,7 @@
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 1`] = `
 <TraitsCreation
+  canCreateTrait={undefined}
   categoryType={undefined}
   keyValuePairs={undefined}
 />
@@ -9,6 +10,7 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 2`] = `
 <TraitsCreation
+  canCreateTrait={undefined}
   categoryType={undefined}
   keyValuePairs={undefined}
 />
@@ -16,6 +18,7 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 3`] = `
 <TraitsCreation
+  canCreateTrait={undefined}
   categoryType={undefined}
   keyValuePairs={undefined}
 />
@@ -23,6 +26,7 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 4`] = `
 <TraitsCreation
+  canCreateTrait={undefined}
   categoryType={undefined}
   keyValuePairs={undefined}
 />
@@ -30,6 +34,7 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 5`] = `
 <TraitsCreation
+  canCreateTrait={undefined}
   categoryType={undefined}
   keyValuePairs={undefined}
 />

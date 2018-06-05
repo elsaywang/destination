@@ -3,6 +3,7 @@ import * as savedSearchActionCreators from '../actions/savedSearch';
 import { selectSignals } from '../actions/selectSignals';
 import { populateSearchFields, clearSearchFields } from '../actions/savedSearchFields';
 import { getReportSuites } from '../actions/reportSuites';
+import { fetchUserRoles } from '../actions/permissions';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
@@ -58,6 +59,10 @@ class SearchContainer extends Component {
             this.onClearAll();
         } else {
             this.setState({ searched: true });
+        }
+
+        if (!Object.keys(this.props.permissions).length) {
+            this.props.fetchUserRoles();
         }
     }
 
@@ -348,7 +353,11 @@ class SearchContainer extends Component {
                                 <GridColumn size={8}>
                                     <GridRow>
                                         <GridColumn size={10}>
-                                            <MultiSignalsTraitsCreationContainer />
+                                            <MultiSignalsTraitsCreationContainer
+                                                canCreateTrait={
+                                                    this.props.permissions.canCreateTrait
+                                                }
+                                            />
                                         </GridColumn>
                                         <GridColumn size={2}>
                                             <Button label="Export.csv" variant="primary" />
@@ -368,6 +377,8 @@ class SearchContainer extends Component {
                                 onSortSearch={this.handleSortSearch}
                                 onSignalRecordsSelection={this.props.selectSignals}
                                 onLoadMore={this.handleLoadMore}
+                                canCreateTrait={this.props.permissions.canCreateTrait}
+                                allowsSelection={this.props.permissions.canCreateTrait}
                             />
                         </div>
                     </div>
@@ -386,13 +397,21 @@ class SearchContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ results, savedSearch, savedSearchFields, reportSuites, errors }) => ({
+const mapStateToProps = ({
+    results,
+    savedSearch,
+    savedSearchFields,
+    reportSuites,
+    errors,
+    permissions,
+}) => ({
     results,
     savedSearchFields,
     savedSearch: savedSearch.list,
     thisSearch: savedSearch.saveSearch,
     reportSuites,
     errors,
+    permissions,
 });
 const actionCreators = {
     ...searchFormActionCreators,
@@ -401,6 +420,10 @@ const actionCreators = {
     populateSearchFields,
     clearSearchFields,
     getReportSuites,
+    fetchUserRoles,
 };
 
-export default connect(mapStateToProps, actionCreators)(SearchContainer);
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(SearchContainer);

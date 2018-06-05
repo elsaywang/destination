@@ -39,6 +39,7 @@ export const formatSelectedSignalsSelectionMessage = (
             ' Selected',
         );
     }
+
     return '';
 };
 
@@ -52,13 +53,16 @@ export const renderSelectedSignalsMessage = rowRecords => {
     if (!rowRecords.length) {
         return '';
     }
+
     const totalOnboardedRecords = getTotalOnboardedRecords(rowRecords);
     const totalRealTimeRecords = getTotalRealTimeRecords(rowRecords);
+
     return formatSelectedSignalsSelectionMessage(totalOnboardedRecords, totalRealTimeRecords);
 };
 
 export const hasWarning = rowRecords => {
     const totalOnboardedRecords = getTotalOnboardedRecords(rowRecords);
     const totalRealTimeRecords = getTotalRealTimeRecords(rowRecords);
+
     return totalOnboardedRecords > 0 && totalRealTimeRecords > 0;
 };

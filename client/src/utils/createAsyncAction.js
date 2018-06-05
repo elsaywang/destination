@@ -6,11 +6,9 @@ function createAsyncAction(type, fn) {
             response = await fn(...args);
 
             if (response.ok) {
-                const json = await response.json();
-
                 dispatch({
                     type: `${type}`,
-                    payload: json,
+                    payload: response.json(),
                 });
             } else {
                 throw new Error(response.statusText);

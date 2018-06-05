@@ -1,8 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import TraitsCreation from '../TraitsCreation';
-import Add from '@react/react-spectrum/Icon/Add';
-import Link from '@react/react-spectrum/Link';
 import MultiSignalsTraitsCreation from '../MultiSignalsTraitsCreation';
 import SingleSignalTraitsCreation from '../SingleSignalTraitsCreation';
 import { stringifySignals } from '../../../../utils/stringifySignals';
@@ -15,6 +13,7 @@ describe('<TraitsCreation /> component', () => {
         const props = {
             categoryType: 'ONBOARDED',
             keyValuePairs: [],
+            canCreateTrait: true,
         };
 
         const wrapper = shallow(<TraitsCreation {...props} />);
