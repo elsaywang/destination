@@ -1,11 +1,11 @@
 import { stringifySignal } from './stringifySignals';
-import { getDaysAgoTimestamp } from './dateRange';
+import { getDaysAgoUTCMidnight } from './dateRange';
 
 const normalizeStartDate = ({ viewRecordsFor, customStartDate }) =>
-    getDaysAgoTimestamp(viewRecordsFor === 'custom' ? customStartDate : viewRecordsFor);
+    getDaysAgoUTCMidnight(viewRecordsFor === 'custom' ? customStartDate : viewRecordsFor);
 
 const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
-    viewRecordsFor === 'custom' ? getDaysAgoTimestamp(customEndDate) : null;
+    viewRecordsFor === 'custom' ? getDaysAgoUTCMidnight(customEndDate) : null;
 
 const normalizeSourceType = ({ source }) => (source.sourceType === 'ALL' ? '' : source.sourceType);
 

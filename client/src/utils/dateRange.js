@@ -36,7 +36,7 @@ export const dateToDaysAgo = (date, format = customDateFormat) =>
 export const getDaysAgo = start =>
     isDateRangePreset(start) ? dateRangePresetToDays(start) : dateToDaysAgo(start);
 
-export const getDaysAgoTimestamp = start =>
+export const getDaysAgoUTCMidnight = start =>
     getNow()
         .subtract(getDaysAgo(start), 'days')
         .startOf('day')
