@@ -39,6 +39,7 @@ export const getDaysAgo = start =>
 export const getDaysAgoTimestamp = start =>
     getNow()
         .subtract(getDaysAgo(start), 'days')
+        .startOf('day')
         .valueOf();
 
 export const parseDate = dateInput => moment.utc(dateInput, dateInputFormats);

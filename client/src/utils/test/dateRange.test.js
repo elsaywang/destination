@@ -162,14 +162,14 @@ describe('date range utils', () => {
     describe('getDaysAgoTimestamp', () => {
         it('should return the timestamp for the number of days ago from "now" that corresponds to the input if it is a date range preset', () => {
             const actual = getDaysAgoTimestamp('7D');
-            const expected = 1524571200000; // Tue Apr 24 2018 12:00:00 GMT+0000 (GMT)
+            const expected = 1524528000000; // Tue Apr 24 2018 00:00:00 GMT+0000 (GMT)
 
             expect(actual).toEqual(expected);
         });
 
         it('should return the timestamp for the number of days ago from "now" that corresponds to the input if it is a date in the format YYYY-MM-DD', () => {
             const actual = getDaysAgoTimestamp('2018-04-17');
-            const expected = 1523966400000; // Tue Apr 17 2018 12:00:00 GMT+0000 (GMT)
+            const expected = 1523923200000; // Tue Apr 17 2018 00:00:00 GMT+0000 (GMT)
 
             expect(actual).toEqual(expected);
         });
