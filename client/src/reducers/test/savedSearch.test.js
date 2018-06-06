@@ -6,12 +6,14 @@ import {
     CHANGE_SORTING_ORDER,
     SAVE_SEARCH_FULFILLED,
     CANCEL_SAVE_SEARCH,
+    GET_SAVED_SEARCH_LIMIT_FULFILLED,
 } from '../../actions/savedSearch';
 import saveSearchReducer from '../savedSearch';
 
 describe('saveSearch reducer', () => {
     const initialState = {
         list: [],
+        limit: 0,
         saveSearch: {
             name: '',
             includeInDashboard: false,
@@ -194,5 +196,22 @@ describe('saveSearch reducer', () => {
         };
 
         expect(saveSearchReducer(currentState, action)).toEqual(initialState);
+    });
+
+    it('should handle GET_SAVED_SEARCH_LIMIT_FULFILLED', () => {
+        const currentState = {
+            ...initialState,
+            limit: 5,
+        };
+        const payload = { maxSignalRetentionDays: 180, maxSignalSavedSearches: 10 };
+        const nextState = {
+            ...initialState,
+            limit: 10,
+        };
+        const action = {
+            type: GET_SAVED_SEARCH_LIMIT_FULFILLED,
+            payload,
+        };
+        expect(saveSearchReducer(currentState, action)).toEqual(nextState);
     });
 });

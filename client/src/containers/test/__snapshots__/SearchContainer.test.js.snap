@@ -29,6 +29,7 @@ ShallowWrapper {
     fetchUserRoles={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
+    getSavedSearchLimit={[Function]}
     loadMore={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
@@ -48,6 +49,7 @@ ShallowWrapper {
         "name": "",
       }
     }
+    savedSearchLimit={10}
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
@@ -1086,6 +1088,7 @@ ShallowWrapper {
     fetchUserRoles={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
+    getSavedSearchLimit={[Function]}
     loadMore={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
@@ -1102,6 +1105,7 @@ ShallowWrapper {
         "name": "",
       }
     }
+    savedSearchLimit={10}
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}
@@ -2140,6 +2144,7 @@ ShallowWrapper {
     fetchUserRoles={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
+    getSavedSearchLimit={[Function]}
     loadMore={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
@@ -2156,6 +2161,7 @@ ShallowWrapper {
         "name": "",
       }
     }
+    savedSearchLimit={10}
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     sortSearch={[Function]}

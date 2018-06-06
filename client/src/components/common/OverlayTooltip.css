@@ -1,0 +1,4 @@
+:local(.toolTip) {
+    color: var(--spectrum-global-color-grey700);
+    align-items: center;
+}

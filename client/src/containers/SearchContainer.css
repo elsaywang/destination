@@ -21,6 +21,11 @@
     margin-top: 2.8rem;
 }
 
+:local(.saveSearchExecutionTooltip) {
+    display: inline-block;
+    padding-top: 3.15rem;
+}
+
 :local(.empty) {
     margin-top: 80px;
 }
