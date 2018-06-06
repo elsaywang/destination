@@ -23,3 +23,7 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('getRequestParams', requestAlias =>
+    cy.get(requestAlias).then($request => JSON.parse($request.lastCall.args[1].body)),
+);
