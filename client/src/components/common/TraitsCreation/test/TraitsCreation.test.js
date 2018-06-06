@@ -13,7 +13,7 @@ describe('<TraitsCreation /> component', () => {
         const props = {
             categoryType: 'ONBOARDED',
             keyValuePairs: [],
-            canCreateTrait: true,
+            canCreateTraits: true,
         };
 
         const wrapper = shallow(<TraitsCreation {...props} />);

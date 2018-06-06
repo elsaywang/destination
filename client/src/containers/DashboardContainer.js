@@ -74,7 +74,7 @@ class DashboardContainer extends Component {
                                     getResultsBySavedSearch={this.props.callSearch}
                                     isAdvancedSearchEnabled={false}
                                     allowsSelection={false}
-                                    canCreateTrait={this.props.permissions.canCreateTrait}
+                                    canCreateTraits={this.props.permissions.canCreateTraits}
                                 />
                             </Well>
                         ),
@@ -96,7 +96,4 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(
-    mapStateToProps,
-    actionCreators,
-)(DashboardContainer);
+export default connect(mapStateToProps, actionCreators)(DashboardContainer);

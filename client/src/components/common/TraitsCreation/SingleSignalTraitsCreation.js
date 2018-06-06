@@ -6,9 +6,9 @@ import Add from '@react/react-spectrum/Icon/Add';
 const SingleSignalTraitsCreation = ({
     createTraitUrl,
     traitsCreationLabelText,
-    canCreateTrait,
+    canCreateTraits,
 }) => {
-    if (canCreateTrait) {
+    if (canCreateTraits) {
         return (
             <a className="spectrum-Link" href={createTraitUrl}>
                 <div className={styles.singleCreation}>
@@ -25,7 +25,7 @@ const SingleSignalTraitsCreation = ({
 SingleSignalTraitsCreation.propTypes = {
     createTraitUrl: PropTypes.string,
     traitsCreationLabelText: PropTypes.string,
-    canCreateTrait: PropTypes.bool,
+    canCreateTraits: PropTypes.bool,
 };
 
 export default SingleSignalTraitsCreation;

@@ -354,8 +354,8 @@ class SearchContainer extends Component {
                                     <GridRow>
                                         <GridColumn size={10}>
                                             <MultiSignalsTraitsCreationContainer
-                                                canCreateTrait={
-                                                    this.props.permissions.canCreateTrait
+                                                canCreateTraits={
+                                                    this.props.permissions.canCreateTraits
                                                 }
                                             />
                                         </GridColumn>
@@ -377,8 +377,8 @@ class SearchContainer extends Component {
                                 onSortSearch={this.handleSortSearch}
                                 onSignalRecordsSelection={this.props.selectSignals}
                                 onLoadMore={this.handleLoadMore}
-                                canCreateTrait={this.props.permissions.canCreateTrait}
-                                allowsSelection={this.props.permissions.canCreateTrait}
+                                canCreateTraits={this.props.permissions.canCreateTraits}
+                                allowsSelection={this.props.permissions.canCreateTraits}
                             />
                         </div>
                     </div>
@@ -423,7 +423,4 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(
-    mapStateToProps,
-    actionCreators,
-)(SearchContainer);
+export default connect(mapStateToProps, actionCreators)(SearchContainer);

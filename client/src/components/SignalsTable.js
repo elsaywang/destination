@@ -151,7 +151,7 @@ class SignalsTable extends Component {
         if (number === 0) {
             return (
                 <TraitsCreation
-                    canCreateTrait={this.props.canCreateTrait}
+                    canCreateTraits={this.props.canCreateTraits}
                     keyValuePairs={keyValuePairs}
                     categoryType={categoryType}
                 />
@@ -200,7 +200,7 @@ SignalsTable.propTypes = {
     onSortSearch: PropTypes.func,
     onLoadMore: PropTypes.func,
     allowsSelection: PropTypes.bool,
-    canCreateTrait: PropTypes.bool,
+    canCreateTraits: PropTypes.bool,
 };
 
 export default SignalsTable;

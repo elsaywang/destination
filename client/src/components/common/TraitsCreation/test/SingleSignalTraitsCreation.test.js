@@ -9,7 +9,7 @@ describe('<SingleSignalTraitsCreation/> component', () => {
     const props = {
         createTraitUrl: 'testUrl',
         traitsCreationLabelText: 'Create Rule-Based Trait',
-        canCreateTrait: true,
+        canCreateTraits: true,
     };
 
     describe('when user has trait creation permission', () => {
@@ -46,7 +46,7 @@ describe('<SingleSignalTraitsCreation/> component', () => {
     describe('when user does not have trait creation permission', () => {
         const newProps = {
             ...props,
-            canCreateTrait: false,
+            canCreateTraits: false,
         };
         const noTraitCreationWrapper = shallow(<SingleSignalTraitsCreation {...newProps} />);
 
