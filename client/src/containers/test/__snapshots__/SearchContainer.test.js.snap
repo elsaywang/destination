@@ -27,9 +27,11 @@ ShallowWrapper {
       }
     }
     fetchUserRoles={[Function]}
+    finalizedSavedSearchList={Array []}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
+    isSavedSearchLimitReached={false}
     loadMore={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
@@ -1086,9 +1088,11 @@ ShallowWrapper {
       }
     }
     fetchUserRoles={[Function]}
+    finalizedSavedSearchList={Array []}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
+    isSavedSearchLimitReached={false}
     loadMore={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
@@ -2142,9 +2146,11 @@ ShallowWrapper {
       }
     }
     fetchUserRoles={[Function]}
+    finalizedSavedSearchList={Array []}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
+    isSavedSearchLimitReached={false}
     loadMore={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}

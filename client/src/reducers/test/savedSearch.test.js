@@ -8,7 +8,12 @@ import {
     CANCEL_SAVE_SEARCH,
     GET_SAVED_SEARCH_LIMIT_FULFILLED,
 } from '../../actions/savedSearch';
-import saveSearchReducer from '../savedSearch';
+import saveSearchReducer, {
+    getLimit,
+    getSavedSearchList,
+    isSavedSearchLimitReached,
+    getNormalizedSavedSearchList,
+} from '../savedSearch';
 
 describe('saveSearch reducer', () => {
     const initialState = {
@@ -213,5 +218,95 @@ describe('saveSearch reducer', () => {
             payload,
         };
         expect(saveSearchReducer(currentState, action)).toEqual(nextState);
+    });
+
+    describe('test on selectors', () => {
+        describe('getLimit', () => {
+            it('should return `limit` property', () => {
+                const state = { limit: 5 };
+                expect(getLimit(state)).toEqual(5);
+            });
+        });
+
+        describe('getSavedSearchList', () => {
+            it('should return `list` property', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                };
+                expect(getSavedSearchList(state)).toEqual(state.list);
+            });
+        });
+
+        describe('isSavedSearchLimitReached', () => {
+            it('should be true if `list` length is equal to `limit` ', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 3,
+                };
+                expect(isSavedSearchLimitReached(state)).toBeTruthy();
+            });
+
+            it('should be true if `list` length is greater than `limit` ', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 2,
+                };
+                expect(isSavedSearchLimitReached(state)).toBeTruthy();
+            });
+
+            it('should be false if `list` length is smaller than `limit` ', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 5,
+                };
+                expect(isSavedSearchLimitReached(state)).toBeFalsy();
+            });
+        });
+
+        describe('getNormalizedSavedSearchList', () => {
+            it('should return original SavedSearchList if limit is not reached', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 5,
+                };
+                expect(getNormalizedSavedSearchList(state)).toEqual(state.list);
+            });
+
+            it('should return truncated SavedSearchList if limit is reached', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 2,
+                };
+                const expectedSavedSearchList = [
+                    { name: 'test1', kvp: 'ewr-key1' },
+                    { name: 'test2', kvp: 'ewr-key2' },
+                ];
+                expect(getNormalizedSavedSearchList(state)).toEqual(expectedSavedSearchList);
+            });
+        });
     });
 });

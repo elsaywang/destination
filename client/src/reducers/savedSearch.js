@@ -9,10 +9,11 @@ import {
     CANCEL_SAVE_SEARCH,
     GET_SAVED_SEARCH_LIMIT_FULFILLED,
 } from '../actions/savedSearch';
+import { defaultSavedSearchLimit } from '../constants/limitConstants.js';
 
 const initialState = {
     list: [],
-    limit: 10,
+    limit: defaultSavedSearchLimit,
     saveSearch: {
         name: '',
         includeInDashboard: false,
@@ -108,3 +109,12 @@ export default handleActions(
     },
     initialState,
 );
+
+export const getLimit = state => state.limit;
+export const getSavedSearchList = state => state.list;
+export const isSavedSearchLimitReached = state =>
+    Boolean(getSavedSearchList(state).length >= getLimit(state));
+export const getNormalizedSavedSearchList = state =>
+    isSavedSearchLimitReached(state)
+        ? [...getSavedSearchList(state)].slice(0, getLimit(state))
+        : getSavedSearchList(state);

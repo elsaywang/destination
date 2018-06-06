@@ -8,7 +8,7 @@ import Info from '@react/react-spectrum/Icon/Info';
 
 const OverlayTooltip = ({ message, className }) => {
     return (
-        <div className={classNames(styles.toolTip, className)} data-test="overlay-tooltip">
+        <div className={classNames(styles.tooltip, className)} data-test="overlay-tooltip">
             <OverlayTrigger trigger="hover" placement="right">
                 <Info size="S" />
                 <Tooltip>{message}</Tooltip>

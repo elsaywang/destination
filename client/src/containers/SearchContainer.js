@@ -17,8 +17,8 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
+import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
-import { isLimitReached, normalizeSavedSearchList } from '../utils/savedSearch';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
@@ -67,7 +67,7 @@ class SearchContainer extends Component {
         if (!Object.keys(this.props.permissions).length) {
             this.props.fetchUserRoles();
         }
-        this.props.getSavedSearchLimit(5);
+        this.props.getSavedSearchLimit();
     }
 
     handleSignalTypeChange = sourceType => {
@@ -281,14 +281,8 @@ class SearchContainer extends Component {
 
     isCustomDateRangeEnabled = () => this.state.viewRecordsFor === 'custom';
 
-    isSavedSearchLimitReached = () =>
-        isLimitReached(this.props.savedSearch, this.props.savedSearchLimit);
-
-    finalizeSavedSearchList = () =>
-        normalizeSavedSearchList(this.props.savedSearch, this.props.savedSearchLimit);
-
     saveThisSearchMessage = () =>
-        getTooltipMessage(this.isSavedSearchLimitReached(), this.props.savedSearchLimit);
+        getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
 
     render() {
         return (
@@ -325,7 +319,7 @@ class SearchContainer extends Component {
                             <SavedSearch
                                 getSavedSearch={this.props.getSavedSearch}
                                 deleteSearch={this.deleteSearch}
-                                list={this.finalizeSavedSearchList()}
+                                list={this.props.finalizedSavedSearchList}
                                 onSavedSearchClick={this.onSavedSearchClick}
                                 currentSearch={this.state.name}
                                 error={this.props.errors.savedSearch}
@@ -334,7 +328,7 @@ class SearchContainer extends Component {
                                 <Fragment>
                                     <div className={styles.saveSearchExecution}>
                                         <SaveSearchExecution
-                                            disabled={this.isSavedSearchLimitReached()}
+                                            disabled={this.props.isSavedSearchLimitReached}
                                             confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
                                             cancelSaveSearch={this.props.cancelSaveSearch}
                                             updateSaveSearchName={this.props.updateSaveSearchName}
@@ -430,6 +424,8 @@ const mapStateToProps = ({
     savedSearch: savedSearch.list,
     savedSearchLimit: savedSearch.limit,
     thisSearch: savedSearch.saveSearch,
+    isSavedSearchLimitReached: isSavedSearchLimitReached(savedSearch),
+    finalizedSavedSearchList: getNormalizedSavedSearchList(savedSearch),
     reportSuites,
     errors,
     permissions,
