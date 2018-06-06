@@ -5,7 +5,7 @@ TODO: We will need to migrate this into a shared module later.
 */
 
 export default function getPermissions(roles) {
-    const canCreateTrait = roles.includes('CREATE_TRAITS');
+    const canCreateTraits = roles.includes('CREATE_TRAITS');
     const canViewTraits = roles.includes('VIEW_TRAITS');
     const canViewSegments = roles.includes('VIEW_SEGMENTS');
     const canCreateDestinations = roles.includes('CREATE_DESTINATIONS');
@@ -21,7 +21,7 @@ export default function getPermissions(roles) {
     const hasAnalyticsDestinationAccess = roles.includes('FEATURE_ANALYTICS_DESTINATION');
 
     return {
-        canCreateTrait,
+        canCreateTraits,
         canViewTraits,
         canViewSegments,
         canCreateDestinations,

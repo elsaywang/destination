@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
-    canCreateTrait={false}
+    canCreateTraits={false}
     createTraitUrl="testUrl"
     traitsCreationLabelText="Create Rule-Based Trait"
   />,
@@ -35,7 +35,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
-    canCreateTrait={true}
+    canCreateTraits={true}
     createTraitUrl="testUrl"
     traitsCreationLabelText="Create Rule-Based Trait"
   />,

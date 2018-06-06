@@ -18,7 +18,7 @@ MultiSignalsTraitsCreationContainer.propTypes = {
         hasWarning: PropTypes.bool,
         records: PropTypes.array,
     }),
-    canCreateTrait: PropTypes.bool,
+    canCreateTraits: PropTypes.bool,
 };
 
 const mapStateToProps = ({ selectedSignals }) => ({
