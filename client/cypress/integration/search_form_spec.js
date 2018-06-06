@@ -1,4 +1,5 @@
 const deferred = require('../utils/deferred');
+const searchResultsResponse = require('../fixtures/emptySearchResults.json');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
@@ -6,6 +7,7 @@ describe('Search Form Integration Tests', function() {
     beforeEach(function() {
         cy.clock(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
 
+        this.fetchSearchResultsDeferred = deferred();
         this.fetchSavedSearchDeferred = deferred();
         this.fetchReportSuitesDeferred = deferred();
 
@@ -13,6 +15,9 @@ describe('Search Form Integration Tests', function() {
             onBeforeLoad(win) {
                 cy
                     .stub(win, 'fetch')
+                    .withArgs('/portal/api/v1/signals/list')
+                    .as('fetchSearchResults')
+                    .returns(this.fetchSearchResultsDeferred.promise)
                     .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
                     .returns(this.fetchSavedSearchDeferred.promise)
@@ -20,6 +25,13 @@ describe('Search Form Integration Tests', function() {
                     .as('fetchReportSuites')
                     .returns(this.fetchReportSuitesDeferred.promise);
             },
+        });
+
+        this.fetchSearchResultsDeferred.resolve({
+            json() {
+                return searchResultsResponse;
+            },
+            ok: true,
         });
 
         this.fetchSavedSearchDeferred.resolve({
@@ -293,6 +305,68 @@ describe('Search Form Integration Tests', function() {
             cy.get('.view-records').should('contain', '7 Days');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
             cy.get('[data-test="signals-table"]').should('have.length', 0);
+        });
+    });
+
+    describe('Normalizing search form inputs into API request parameters', function() {
+        describe('View Records For dropdown', function() {
+            describe('When a date range preset is selected (ex: "Last X Days")', function() {
+                it('`startDate` should be X days ago at UTC midnight in ms and endDate should be null', function() {
+                    const expectedStartDates = [
+                        1525046400000, // 1 day ago (April 30), UTC midnight
+                        1524528000000, // 7 days ago (April 24), UTC midnight
+                        1523923200000, // 14 days ago (April 17), UTC midnight
+                        1522540800000, // 30 days ago (April 1), UTC midnight
+                    ];
+
+                    for (let i = 0; i < expectedStartDates.length; i++) {
+                        cy
+                            .get('.view-records')
+                            .click()
+                            .get(`.spectrum-SelectList-item:nth-child(${i + 1})`)
+                            .click()
+                            .get('[data-test="search-button"]')
+                            .click()
+                            .then(() =>
+                                cy
+                                    .getRequestParams('@fetchSearchResults')
+                                    .then(({ startDate, endDate }) => {
+                                        expect(startDate).to.equal(expectedStartDates[i]);
+                                        expect(endDate).to.equal(null);
+                                    }),
+                            );
+                    }
+                });
+            });
+
+            describe('When a custom date range is selected', function() {
+                it('`startDate` and `endDate` should be the selected dates at UTC midnight in ms', function() {
+                    const expectedStartDate = 1524355200000; // April 22, UTC midnight
+                    const expectedEndDate = 1524528000000; // April 24, UTC midnight
+
+                    cy
+                        .get('.view-records')
+                        .click()
+                        .get(`.spectrum-SelectList-item:last-child`)
+                        .click()
+                        .get('[data-test="custom-start-date"]')
+                        .clear()
+                        .type('04/22/18')
+                        .get('[data-test="custom-end-date"]')
+                        .clear()
+                        .type('04/24/18')
+                        .get('[data-test="search-button"]')
+                        .click()
+                        .then(() =>
+                            cy
+                                .getRequestParams('@fetchSearchResults')
+                                .then(({ startDate, endDate }) => {
+                                    expect(startDate).to.equal(expectedStartDate);
+                                    expect(endDate).to.equal(expectedEndDate);
+                                }),
+                        );
+                });
+            });
         });
     });
 });
