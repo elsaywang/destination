@@ -11,6 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
+import { baseRowHeight } from '../constants/rows';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
@@ -165,9 +166,12 @@ class SignalsTable extends Component {
         );
     };
 
+    getRowHeight = totalKeyValuePairs => totalKeyValuePairs * baseRowHeight;
+
     render() {
         const {
             results,
+            totalKeyValuePairs,
             signalType,
             isAdvancedSearchEnabled,
             onSortSearch,
@@ -176,12 +180,14 @@ class SignalsTable extends Component {
         } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
         const items = this.formatSignalsList(results.list);
+        const rowHeight = this.getRowHeight(totalKeyValuePairs);
 
         return (
             <Table
                 dataTest="signals-table"
                 items={items}
                 columns={columns}
+                rowHeight={rowHeight}
                 renderCell={this.renderCell}
                 sortSearch={onSortSearch}
                 onLoadMore={onLoadMore}
@@ -194,6 +200,7 @@ class SignalsTable extends Component {
 
 SignalsTable.propTypes = {
     results: PropTypes.object,
+    totalKeyValuePairs: PropTypes.number,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
     onSignalRecordsSelection: PropTypes.func,

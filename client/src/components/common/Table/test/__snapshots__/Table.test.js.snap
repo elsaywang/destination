@@ -32,6 +32,7 @@ ShallowWrapper {
     onLoadMore={[MockFunction]}
     onSelectionChange={[MockFunction]}
     renderCell={[Function]}
+    rowHeight={48}
     sortSearch={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -81,6 +82,7 @@ ShallowWrapper {
         }
         onSelectionChange={[MockFunction]}
         renderCell={[Function]}
+        rowHeight={48}
       />,
       "className": "table-wrapper",
       "data-test": undefined,
@@ -126,6 +128,7 @@ ShallowWrapper {
         },
         "onSelectionChange": [MockFunction],
         "renderCell": [Function],
+        "rowHeight": 48,
       },
       "ref": null,
       "rendered": null,
@@ -174,6 +177,7 @@ ShallowWrapper {
           }
           onSelectionChange={[MockFunction]}
           renderCell={[Function]}
+          rowHeight={48}
         />,
         "className": "table-wrapper",
         "data-test": undefined,
@@ -219,6 +223,7 @@ ShallowWrapper {
           },
           "onSelectionChange": [MockFunction],
           "renderCell": [Function],
+          "rowHeight": 48,
         },
         "ref": null,
         "rendered": null,

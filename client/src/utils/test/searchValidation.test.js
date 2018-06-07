@@ -81,6 +81,16 @@ describe('Search Validation Utils', () => {
         });
     });
 
+    describe('isKeyEmpty()', () => {
+        it('should return true when given an empty key', () => {
+            expect(validationUtils.isKeyEmpty({ key: '' })).toBe(true);
+        });
+
+        it('should return false when given a non-empty key', () => {
+            expect(validationUtils.isKeyEmpty({ key: 'abc' })).toBe(false);
+        });
+    });
+
     describe('areAllValuesValid() should check if all values in key value pairs are valid', () => {
         it('given an array of key value pairs with all valid values, it should return true', () => {
             const keyValuePairs = [
@@ -155,6 +165,101 @@ describe('Search Validation Utils', () => {
             ];
 
             expect(validationUtils.isAnyKeyEmptyWithValue(keyValuePairs)).toBe(false);
+        });
+    });
+
+    describe('getTotalValidKeyValuePairs() should return total amount of valid key values pairs', () => {
+        it('given an array of valid key value pairs with all key value is empty, it should return 1', () => {
+            const keyValuePairs = [
+                {
+                    key: '',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '',
+                    operator: '==',
+                    value: '',
+                },
+            ];
+            expect(validationUtils.getTotalValidKeyValuePairs(keyValuePairs)).toEqual(1);
+        });
+
+        it('given an array of valid key value pairs with more than 1 key value is empty, it should return total nonEmptyKey sets plus 1', () => {
+            const keyValuePairs = [
+                {
+                    key: '',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '2',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '1',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '1',
+                    operator: '==',
+                    value: '',
+                },
+            ];
+            expect(validationUtils.getTotalValidKeyValuePairs(keyValuePairs)).toEqual(4);
+        });
+
+        it('given an array of valid key value pairs with no empty key, it should return total keyValuePairs', () => {
+            const keyValuePairs = [
+                {
+                    key: '3',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '9',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '1',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '2',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '1',
+                    operator: '==',
+                    value: '',
+                },
+                {
+                    key: '1',
+                    operator: '==',
+                    value: '',
+                },
+            ];
+            expect(validationUtils.getTotalValidKeyValuePairs(keyValuePairs)).toEqual(6);
         });
     });
 });

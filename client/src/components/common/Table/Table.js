@@ -15,9 +15,8 @@ class Table extends Component {
      * Dynamically set the height of the table's container to show up to a
      * certain number of rows.
      */
-    getTableHeight(items, maxRows = 10) {
+    getTableHeight(items, rowHeight, maxRows = 10) {
         const headHeight = 40;
-        const rowHeight = 48;
         const bodyHeight = Math.min(items.length, maxRows) * rowHeight;
 
         return `${headHeight + bodyHeight}px`;
@@ -27,6 +26,7 @@ class Table extends Component {
         const {
             items,
             columns,
+            rowHeight,
             renderCell,
             sortSearch,
             onLoadMore,
@@ -40,13 +40,14 @@ class Table extends Component {
             sortSearch,
             onLoadMore,
         });
-        const height = this.getTableHeight(items);
+        const height = this.getTableHeight(items, rowHeight);
 
         return (
             <div data-test={dataTest} className="table-wrapper" style={{ height }}>
                 <TableView
                     dataSource={dataSource}
                     renderCell={renderCell}
+                    rowHeight={rowHeight}
                     onSelectionChange={onSelectionChange}
                     allowsSelection={allowsSelection}
                 />
@@ -59,6 +60,7 @@ Table.propTypes = {
     items: PropTypes.array.isRequired,
     columns: PropTypes.array.isRequired,
     renderCell: PropTypes.func.isRequired,
+    rowHeight: PropTypes.number.isRequired,
     onSelectionChange: PropTypes.func,
     sortSearch: PropTypes.func,
     dataTest: PropTypes.string,
