@@ -96,4 +96,7 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(mapStateToProps, actionCreators)(DashboardContainer);
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(DashboardContainer);

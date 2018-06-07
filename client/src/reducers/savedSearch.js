@@ -7,10 +7,13 @@ import {
     SELECT_DEFAULT_SORTING,
     CHANGE_SORTING_ORDER,
     CANCEL_SAVE_SEARCH,
+    GET_SAVED_SEARCH_LIMIT_FULFILLED,
 } from '../actions/savedSearch';
+import { defaultSavedSearchLimit } from '../constants/limitConstants.js';
 
 const initialState = {
     list: [],
+    limit: defaultSavedSearchLimit,
     saveSearch: {
         name: '',
         includeInDashboard: false,
@@ -64,6 +67,16 @@ const saveSearch = handleActions(
     initialState.saveSearch,
 );
 
+const limit = handleActions(
+    {
+        [GET_SAVED_SEARCH_LIMIT_FULFILLED]: (state, action) => ({
+            ...state,
+            limit: action.payload.maxSignalSavedSearches,
+        }),
+    },
+    initialState.limit,
+);
+
 const handleSavedSearchList = (state, action) => ({
     ...state,
     list: list(state.list, action),
@@ -74,10 +87,17 @@ const handleSaveSearch = (state, action) => ({
     saveSearch: saveSearch(state.saveSearch, action),
 });
 
+const handleSavedSearchListLimit = (state, action) => ({
+    ...state,
+    ...limit(state.limit, action),
+});
+
 export default handleActions(
     {
         [GET_SAVED_SEARCH_FULFILLED]: handleSavedSearchList,
+        [GET_SAVED_SEARCH_LIMIT_FULFILLED]: handleSavedSearchListLimit,
         [SAVE_SEARCH_FULFILLED]: (state, action) => ({
+            limit: limit(state.limit, action),
             list: list(state.list, action),
             saveSearch: saveSearch(state.saveSearch, action),
         }),
@@ -89,3 +109,12 @@ export default handleActions(
     },
     initialState,
 );
+
+export const getLimit = state => state.limit;
+export const getSavedSearchList = state => state.list;
+export const isSavedSearchLimitReached = state =>
+    Boolean(getSavedSearchList(state).length >= getLimit(state));
+export const getNormalizedSavedSearchList = state =>
+    isSavedSearchLimitReached(state)
+        ? [...getSavedSearchList(state)].slice(0, getLimit(state))
+        : getSavedSearchList(state);

@@ -33,3 +33,10 @@ export const saveSearch = createAsyncAction(SAVE_SEARCH, search =>
         body: JSON.stringify(search),
     }),
 );
+
+export const GET_SAVED_SEARCH_LIMIT = 'GET_SAVED_SEARCH_LIMIT';
+export const GET_SAVED_SEARCH_LIMIT_FULFILLED = 'GET_SAVED_SEARCH_LIMIT_FULFILLED';
+export const GET_SAVED_SEARCH_LIMIT_REJECTED = 'GET_SAVED_SEARCH_LIMIT_REJECTED';
+export const getSavedSearchLimit = createAsyncAction(GET_SAVED_SEARCH_LIMIT, () =>
+    fetch('/portal/api/v1/signals/limits'),
+);

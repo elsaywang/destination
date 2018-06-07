@@ -8,6 +8,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
+import OverlayTooltip from '../components/common/OverlayTooltip';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import MultiSignalsTraitsCreationContainer from './MultiSignalsTraitsCreationContainer';
 import TraitsCreationWarning from './TraitsCreationWarning';
@@ -16,7 +17,9 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
+import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
+import { getTooltipMessage } from '../constants/tooltipMessageOptions';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
 
@@ -64,6 +67,7 @@ class SearchContainer extends Component {
         if (!Object.keys(this.props.permissions).length) {
             this.props.fetchUserRoles();
         }
+        this.props.getSavedSearchLimit();
     }
 
     handleSignalTypeChange = sourceType => {
@@ -277,6 +281,9 @@ class SearchContainer extends Component {
 
     isCustomDateRangeEnabled = () => this.state.viewRecordsFor === 'custom';
 
+    saveThisSearchMessage = () =>
+        getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
+
     render() {
         return (
             <Fragment>
@@ -312,24 +319,31 @@ class SearchContainer extends Component {
                             <SavedSearch
                                 getSavedSearch={this.props.getSavedSearch}
                                 deleteSearch={this.deleteSearch}
-                                list={this.props.savedSearch}
+                                list={this.props.finalizedSavedSearchList}
                                 onSavedSearchClick={this.onSavedSearchClick}
                                 currentSearch={this.state.name}
                                 error={this.props.errors.savedSearch}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
-                                <div className={styles.saveSearchExecution}>
-                                    <SaveSearchExecution
-                                        confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
-                                        cancelSaveSearch={this.props.cancelSaveSearch}
-                                        updateSaveSearchName={this.props.updateSaveSearchName}
-                                        trackSearchResultInDashboard={
-                                            this.props.trackSearchResultInDashboard
-                                        }
-                                        selectDefaultSorting={this.props.selectDefaultSorting}
-                                        changeSortingOrder={this.props.changeSortingOrder}
+                                <Fragment>
+                                    <div className={styles.saveSearchExecution}>
+                                        <SaveSearchExecution
+                                            disabled={this.props.isSavedSearchLimitReached}
+                                            confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
+                                            cancelSaveSearch={this.props.cancelSaveSearch}
+                                            updateSaveSearchName={this.props.updateSaveSearchName}
+                                            trackSearchResultInDashboard={
+                                                this.props.trackSearchResultInDashboard
+                                            }
+                                            selectDefaultSorting={this.props.selectDefaultSorting}
+                                            changeSortingOrder={this.props.changeSortingOrder}
+                                        />
+                                    </div>
+                                    <OverlayTooltip
+                                        className={styles.saveSearchExecutionTooltip}
+                                        message={this.saveThisSearchMessage()}
                                     />
-                                </div>
+                                </Fragment>
                             )}
                         </div>
                     </GridColumn>
@@ -408,7 +422,10 @@ const mapStateToProps = ({
     results,
     savedSearchFields,
     savedSearch: savedSearch.list,
+    savedSearchLimit: savedSearch.limit,
     thisSearch: savedSearch.saveSearch,
+    isSavedSearchLimitReached: isSavedSearchLimitReached(savedSearch),
+    finalizedSavedSearchList: getNormalizedSavedSearchList(savedSearch),
     reportSuites,
     errors,
     permissions,
@@ -423,4 +440,7 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(mapStateToProps, actionCreators)(SearchContainer);
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(SearchContainer);

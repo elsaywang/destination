@@ -14,6 +14,7 @@ import { saveSearch } from './saveSearchExecutionMessages';
 class SaveSearchExecution extends Component {
     render() {
         const {
+            disabled,
             confirmSaveThisSearch,
             updateSaveSearchName,
             cancelSaveSearch,
@@ -41,6 +42,7 @@ class SaveSearchExecution extends Component {
                     variant="action"
                     quiet
                     icon={<Add />}
+                    disabled={disabled}
                 />
                 <Dialog
                     className={styles.triggerDialog}
@@ -64,6 +66,7 @@ class SaveSearchExecution extends Component {
 }
 
 SaveSearchExecution.propTypes = {
+    disabled: PropTypes.bool,
     confirmSaveThisSearch: PropTypes.func,
     cancelSaveSearch: PropTypes.func,
     updateSaveSearchName: PropTypes.func,
