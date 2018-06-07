@@ -52,14 +52,11 @@ ShallowWrapper {
         "minEventFires": 88991,
         "name": "Loren Waters",
         "signalStatus": "USED",
-        "sortBy": "Key Value Pairs",
+        "sortBy": "percentageChange",
         "source": Object {
-          "categoryType": "Real-Time",
-          "dataSourceIds": Array [
-            86195,
-          ],
+          "dataSourceIds": Array [],
           "reportSuiteIds": Array [],
-          "sourceType": "REALTIME",
+          "sourceType": null,
         },
         "viewRecordsFor": "7D",
       }
@@ -157,20 +154,6 @@ ShallowWrapper {
                 </span>
               </FieldLabel>
               <FieldLabel
-                label="Signal Type"
-                position="left"
-              >
-                <span
-                  style={
-                    Object {
-                      "verticalAlign": "bottom",
-                    }
-                  }
-                >
-                  General Online Data
-                </span>
-              </FieldLabel>
-              <FieldLabel
                 label="View Records For"
                 position="left"
               >
@@ -192,7 +175,7 @@ ShallowWrapper {
               Sorting
             </Heading>
             <div>
-              Key Value Pairs
+              Percentage Change
             </div>
           </Popover>
         </OverlayTrigger>,
@@ -277,20 +260,6 @@ ShallowWrapper {
                   </span>
                 </FieldLabel>
                 <FieldLabel
-                  label="Signal Type"
-                  position="left"
-                >
-                  <span
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    General Online Data
-                  </span>
-                </FieldLabel>
-                <FieldLabel
                   label="View Records For"
                   position="left"
                 >
@@ -312,7 +281,7 @@ ShallowWrapper {
                 Sorting
               </Heading>
               <div>
-                Key Value Pairs
+                Percentage Change
               </div>
             </Popover>,
           ],
@@ -402,20 +371,6 @@ ShallowWrapper {
                     </span>
                   </FieldLabel>
                   <FieldLabel
-                    label="Signal Type"
-                    position="left"
-                  >
-                    <span
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      General Online Data
-                    </span>
-                  </FieldLabel>
-                  <FieldLabel
                     label="View Records For"
                     position="left"
                   >
@@ -437,7 +392,7 @@ ShallowWrapper {
                   Sorting
                 </Heading>,
                 <div>
-                  Key Value Pairs
+                  Percentage Change
                 </div>,
               ],
               "data-test": "saved-search-popover",
@@ -543,20 +498,7 @@ ShallowWrapper {
                         Real-Time
                       </span>
                     </FieldLabel>,
-                    <FieldLabel
-                      label="Signal Type"
-                      position="left"
-                    >
-                      <span
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        General Online Data
-                      </span>
-                    </FieldLabel>,
+                    null,
                     <FieldLabel
                       label="View Records For"
                       position="left"
@@ -643,40 +585,7 @@ ShallowWrapper {
                     },
                     "type": [Function],
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": <span
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        General Online Data
-                      </span>,
-                      "label": "Signal Type",
-                      "position": "left",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "General Online Data",
-                        "style": Object {
-                          "verticalAlign": "bottom",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": "General Online Data",
-                      "type": "span",
-                    },
-                    "type": [Function],
-                  },
+                  null,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -732,10 +641,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Key Value Pairs",
+                  "children": "Percentage Change",
                 },
                 "ref": null,
-                "rendered": "Key Value Pairs",
+                "rendered": "Percentage Change",
                 "type": "div",
               },
             ],
@@ -834,20 +743,6 @@ ShallowWrapper {
                   </span>
                 </FieldLabel>
                 <FieldLabel
-                  label="Signal Type"
-                  position="left"
-                >
-                  <span
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    General Online Data
-                  </span>
-                </FieldLabel>
-                <FieldLabel
                   label="View Records For"
                   position="left"
                 >
@@ -869,7 +764,7 @@ ShallowWrapper {
                 Sorting
               </Heading>
               <div>
-                Key Value Pairs
+                Percentage Change
               </div>
             </Popover>
           </OverlayTrigger>,
@@ -954,20 +849,6 @@ ShallowWrapper {
                     </span>
                   </FieldLabel>
                   <FieldLabel
-                    label="Signal Type"
-                    position="left"
-                  >
-                    <span
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      General Online Data
-                    </span>
-                  </FieldLabel>
-                  <FieldLabel
                     label="View Records For"
                     position="left"
                   >
@@ -989,7 +870,7 @@ ShallowWrapper {
                   Sorting
                 </Heading>
                 <div>
-                  Key Value Pairs
+                  Percentage Change
                 </div>
               </Popover>,
             ],
@@ -1079,20 +960,6 @@ ShallowWrapper {
                       </span>
                     </FieldLabel>
                     <FieldLabel
-                      label="Signal Type"
-                      position="left"
-                    >
-                      <span
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        General Online Data
-                      </span>
-                    </FieldLabel>
-                    <FieldLabel
                       label="View Records For"
                       position="left"
                     >
@@ -1114,7 +981,7 @@ ShallowWrapper {
                     Sorting
                   </Heading>,
                   <div>
-                    Key Value Pairs
+                    Percentage Change
                   </div>,
                 ],
                 "data-test": "saved-search-popover",
@@ -1220,20 +1087,7 @@ ShallowWrapper {
                           Real-Time
                         </span>
                       </FieldLabel>,
-                      <FieldLabel
-                        label="Signal Type"
-                        position="left"
-                      >
-                        <span
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
-                          }
-                        >
-                          General Online Data
-                        </span>
-                      </FieldLabel>,
+                      null,
                       <FieldLabel
                         label="View Records For"
                         position="left"
@@ -1320,40 +1174,7 @@ ShallowWrapper {
                       },
                       "type": [Function],
                     },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": <span
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
-                          }
-                        >
-                          General Online Data
-                        </span>,
-                        "label": "Signal Type",
-                        "position": "left",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "General Online Data",
-                          "style": Object {
-                            "verticalAlign": "bottom",
-                          },
-                        },
-                        "ref": null,
-                        "rendered": "General Online Data",
-                        "type": "span",
-                      },
-                      "type": [Function],
-                    },
+                    null,
                     Object {
                       "instance": null,
                       "key": undefined,
@@ -1409,10 +1230,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Key Value Pairs",
+                    "children": "Percentage Change",
                   },
                   "ref": null,
-                  "rendered": "Key Value Pairs",
+                  "rendered": "Percentage Change",
                   "type": "div",
                 },
               ],

@@ -12,3 +12,9 @@ export const radioGroupOptions = [
     { label: 'Descending', value: descending },
     { label: 'Ascending', value: ascending },
 ];
+
+export const getSortLabel = sortBy => {
+    const sortingOption = sortingOptions.find(option => option.value === sortBy);
+
+    return sortingOption ? sortingOption.label : '';
+};

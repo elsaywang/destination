@@ -56,7 +56,7 @@ ShallowWrapper {
         "descending": false,
         "includeInDashboard": false,
         "name": "",
-        "sortBy": "",
+        "sortBy": "percentageChange",
       }
     }
     toggleAdvancedSearch={[Function]}
@@ -1110,7 +1110,7 @@ ShallowWrapper {
         "descending": false,
         "includeInDashboard": false,
         "name": "",
-        "sortBy": "",
+        "sortBy": "percentageChange",
       }
     }
     toggleAdvancedSearch={[Function]}
@@ -2164,7 +2164,7 @@ ShallowWrapper {
         "descending": false,
         "includeInDashboard": false,
         "name": "",
-        "sortBy": "",
+        "sortBy": "percentageChange",
       }
     }
     toggleAdvancedSearch={[Function]}

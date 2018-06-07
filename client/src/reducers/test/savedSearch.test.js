@@ -15,7 +15,7 @@ describe('saveSearch reducer', () => {
         saveSearch: {
             name: '',
             includeInDashboard: false,
-            sortBy: '',
+            sortBy: 'percentageChange',
             descending: false,
         },
     };
@@ -45,7 +45,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: false,
-                sortBy: '',
+                sortBy: 'percentageChange',
                 descending: false,
             },
         };
@@ -59,7 +59,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sortBy: '',
+                sortBy: 'percentageChange',
                 descending: false,
             },
         });
@@ -71,13 +71,13 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sortBy: '',
+                sortBy: 'percentageChange',
                 descending: false,
             },
         };
         const action = {
             type: SELECT_DEFAULT_SORTING,
-            payload: 'Key-Value Pair',
+            payload: 'keyValuePairs',
         };
 
         expect(saveSearchReducer(currentState, action)).toEqual({
@@ -85,7 +85,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sortBy: 'Key-Value Pair',
+                sortBy: 'keyValuePairs',
                 descending: false,
             },
         });
@@ -97,7 +97,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sortBy: 'Key-Value Pair',
+                sortBy: 'keyValuePairs',
                 descending: false,
             },
         };
@@ -111,7 +111,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sortBy: 'Key-Value Pair',
+                sortBy: 'keyValuePairs',
                 descending: true,
             },
         });
@@ -143,7 +143,7 @@ describe('saveSearch reducer', () => {
                     signalStatus: 'USED',
                     startDate: '2018-04-28T18:13:54.899Z',
                     endDate: '2018-04-28T06:13:52.825Z',
-                    sortBy: 'Event Fires',
+                    sortBy: 'totalCount',
                 },
                 {
                     name: 'Ms. Guy Pagac',
@@ -166,7 +166,7 @@ describe('saveSearch reducer', () => {
                     signalStatus: 'USED',
                     startDate: '2018-04-28T21:18:33.376Z',
                     endDate: '2018-04-28T17:07:28.540Z',
-                    sortBy: 'Event Fires',
+                    sortBy: 'totalCount',
                 },
             ],
         };
@@ -184,7 +184,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'Test',
                 includeInDashboard: false,
-                sortBy: '',
+                sortBy: 'percentageChange',
                 descending: false,
             },
         };
