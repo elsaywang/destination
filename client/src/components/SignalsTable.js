@@ -166,7 +166,9 @@ class SignalsTable extends Component {
         );
     };
 
-    getRowHeight = totalKeyValuePairs => totalKeyValuePairs * baseRowHeight;
+    getRowHeight(totalKeyValuePairs) {
+        return totalKeyValuePairs * baseRowHeight;
+    }
 
     render() {
         const {

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { FormattedNumber } from 'react-intl';
 import { columnKeys } from '../../constants/columns';
+import { baseRowHeight } from '../../constants/rows';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 import PercentageChange from '../../components/common/PercentageChange';
@@ -31,6 +32,7 @@ describe('<SignalsTable /> component', () => {
             signalType="ALL"
             sortSearch={mockFn}
             onLoadMore={mockFn}
+            totalKeyValuePairs={3}
             allowsSelection
         />,
     );
@@ -173,6 +175,15 @@ describe('<SignalsTable /> component', () => {
             it('should be named "Total Records" when the "Onboarded Records" signal type filter is selected', () => {
                 expect(getTotalCountColumnTitle(getColumns('ONBOARDED'))).toEqual('Total Records');
             });
+        });
+    });
+
+    describe('getRowHeight', () => {
+        const { getRowHeight } = wrapper.instance();
+        it('should should return the correct rowHeight based on the `totalKeyValuePairs` passed in', () => {
+            const totalKeyValuePairs = 4;
+            const expectedRowHeight = totalKeyValuePairs * baseRowHeight;
+            expect(getRowHeight(totalKeyValuePairs)).toEqual(expectedRowHeight);
         });
     });
 
