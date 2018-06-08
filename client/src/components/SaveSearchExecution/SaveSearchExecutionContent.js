@@ -54,6 +54,7 @@ class SaveSearchExecutionContent extends Component {
                         <Select
                             options={sortingOptions}
                             onChange={this.props.onDefaultSortingChange}
+                            value="percentageChange"
                         />
                         <div className={styles.contentRadioGroup}>
                             <RadioGroup>

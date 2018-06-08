@@ -10,6 +10,7 @@ import { getDateRangeLabel } from '../constants/dateRangeOptions';
 import { getSignalStatusLabel } from '../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../constants/signalTypeOptions';
 import { getSignalCategory } from '../constants/signalCategoryOptions';
+import { getSortLabel } from '../constants/sortOptions';
 import styles from './SavedSearchPopover.css';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
@@ -43,6 +44,41 @@ class SavedSearchPopover extends Component {
         return isCustomDateRangeEnabled
             ? this.getCustomDateRangeLabel()
             : getDateRangeLabel(search.viewRecordsFor);
+    }
+
+    getSignalTypeFilterLabel(source) {
+        if (source.reportSuiteIds.length) {
+            return 'Report Suite';
+        }
+
+        if (source.dataSourceIds.length) {
+            return 'Onboarded Record';
+        }
+
+        return '';
+    }
+
+    renderSignalSource(source) {
+        const signalTypeBlock = (
+            <FieldLabel position="left" label="Signal Source">
+                <span style={{ verticalAlign: 'bottom' }}>
+                    {getSignalTypeLabel(source.sourceType)}
+                </span>
+            </FieldLabel>
+        );
+        const signalTypeFilter = (
+            <FieldLabel position="left" label={this.getSignalTypeFilterLabel(source)}>
+                <span style={{ verticalAlign: 'bottom' }}>{source.name}</span>
+            </FieldLabel>
+        );
+
+        return source.reportSuiteIds.length || source.dataSourceIds.length ? (
+            <div>
+                {signalTypeBlock} {signalTypeFilter}
+            </div>
+        ) : (
+            { signalTypeBlock }
+        );
     }
 
     render() {
@@ -88,11 +124,7 @@ class SavedSearchPopover extends Component {
                                 </span>
                             </FieldLabel>
 
-                            <FieldLabel position="left" label="Signal Type">
-                                <span style={{ verticalAlign: 'bottom' }}>
-                                    {getSignalTypeLabel(search.source.sourceType)}
-                                </span>
-                            </FieldLabel>
+                            {search.source.sourceType && this.renderSignalSource(search.source)}
 
                             <FieldLabel position="left" label="View Records For">
                                 <span style={{ verticalAlign: 'bottom' }}>
@@ -104,7 +136,7 @@ class SavedSearchPopover extends Component {
                         <Heading size="5" className={styles.heading}>
                             Sorting
                         </Heading>
-                        <div>{search.sortBy}</div>
+                        <div>{getSortLabel(search.sortBy)}</div>
                     </Popover>
                 </OverlayTrigger>
                 {isCurrentSearch && (

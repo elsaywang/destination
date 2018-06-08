@@ -17,7 +17,7 @@ const initialState = {
     saveSearch: {
         name: '',
         includeInDashboard: false,
-        sortBy: '',
+        sortBy: 'percentageChange',
         descending: false,
     },
 };

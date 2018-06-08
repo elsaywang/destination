@@ -4,10 +4,12 @@ import SavedSearchPopover from '../../components/SavedSearchPopover';
 import { Tag } from '@react/react-spectrum/TagList';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Popover from '@react/react-spectrum/Popover';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { createShallowIntlComponent } from '../../lib/i18n/testHelpers';
-import { formatSignal } from '../../utils/stringifySignals';
 import { getSignalStatusLabel } from '../../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../../constants/signalTypeOptions';
+import { getSignalCategory } from '../../constants/signalCategoryOptions';
+import { getSortLabel } from '../../constants/sortOptions';
 
 describe('<SavedSearchPopover /> component', () => {
     const search = {
@@ -25,15 +27,14 @@ describe('<SavedSearchPopover /> component', () => {
             },
         ],
         source: {
-            dataSourceIds: [86195],
+            dataSourceIds: [],
             reportSuiteIds: [],
-            sourceType: 'REALTIME',
-            categoryType: 'Real-Time',
+            sourceType: null,
         },
         minEventFires: 88991,
         signalStatus: 'USED',
         viewRecordsFor: '7D',
-        sortBy: 'Key Value Pairs',
+        sortBy: 'percentageChange',
     };
     const wrapper = createShallowIntlComponent(
         <SavedSearchPopover
@@ -69,6 +70,7 @@ describe('<SavedSearchPopover /> component', () => {
 
             expect(overlayTrigger.find(Tag).props().value).toEqual(search.name);
         });
+
         it('renders <Tag /> with id value is null when isCurrentSearch props is false', () => {
             const overlayTrigger = wrapper.find(OverlayTrigger);
 
@@ -83,51 +85,133 @@ describe('<SavedSearchPopover /> component', () => {
             expect(overlayTrigger.find(Tag).props().id).toEqual('isCurrentSearch');
         });
 
-        it("renders <Popover /> containing user's saved search name", () => {
-            expect(wrapper.find(Popover).contains(search.name)).toBe(true);
-        });
+        describe('renders <Popover />', () => {
+            it("contains user's saved search name", () => {
+                expect(wrapper.find(Popover).contains(search.name)).toBe(true);
+            });
 
-        it("renders <Popover /> containing user's saved search signal status", () => {
-            expect(wrapper.find(Popover).contains(getSignalStatusLabel(search.signalStatus))).toBe(
-                true,
-            );
-        });
+            it("contains user's saved search signal status", () => {
+                expect(
+                    wrapper.find(Popover).contains(getSignalStatusLabel(search.signalStatus)),
+                ).toBe(true);
+            });
 
-        it("renders <Popover /> containing user's saved search data type", () => {
-            expect(wrapper.find(Popover).contains(search.source.categoryType)).toBe(true);
-        });
+            it("contains user's saved search signal category type", () => {
+                expect(
+                    wrapper.find(Popover).contains(getSignalCategory(search.source.sourceType)),
+                ).toBe(true);
+            });
 
-        it("renders <Popover /> containing user's saved search source type", () => {
-            expect(
-                wrapper.find(Popover).contains(getSignalTypeLabel(search.source.sourceType)),
-            ).toBe(true);
-        });
+            it("does not contain user's saved search signal source type if signal source is null", () => {
+                expect(
+                    wrapper.find(Popover).contains(getSignalTypeLabel(search.source.sourceType)),
+                ).toBe(false);
+            });
 
-        it("renders <Popover /> containing user's saved search 'view records for' setting", () => {
-            expect(wrapper.find(Popover).contains('Last 7 Days')).toBe(true);
-        });
+            it("contains user's saved search signal source type, filter type 'Report Suite', and name if signal source is 'ANALYTICS'", () => {
+                const newSearch = {
+                    ...search,
+                    source: {
+                        name: 'Test Report Suite',
+                        dataSourceIds: [],
+                        reportSuiteIds: [1],
+                        sourceType: 'ANALYTICS',
+                    },
+                };
+                const newWrapper = createShallowIntlComponent(
+                    <SavedSearchPopover
+                        onSavedSearchClick={jest.fn()}
+                        search={newSearch}
+                        isCurrentSearch={false}
+                        deleteSearch={jest.fn()}
+                    />,
+                ).dive();
 
-        it("renders <Popover /> containing user's saved search custom date range setting, if selected", () => {
-            const newSearch = {
-                ...search,
-                viewRecordsFor: 'custom',
-                customStartDate: '2018-04-01',
-                customEndDate: '2018-04-15',
-            };
-            const newWrapper = createShallowIntlComponent(
-                <SavedSearchPopover
-                    onSavedSearchClick={jest.fn()}
-                    search={newSearch}
-                    isCurrentSearch={false}
-                    deleteSearch={jest.fn()}
-                />,
-            ).dive();
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Signal Source').length,
+                ).toEqual(1);
+                expect(
+                    newWrapper
+                        .find(Popover)
+                        .contains(getSignalTypeLabel(newSearch.source.sourceType)),
+                ).toBe(true);
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Report Suite').length,
+                ).toEqual(1);
+                expect(newWrapper.find(Popover).contains(newSearch.source.name)).toBe(true);
+            });
 
-            expect(newWrapper.find(Popover).contains('April 1, 2018 to April 15, 2018')).toBe(true);
-        });
+            it("contains user's saved search signal source type, filter type 'Onboarded Record', and name if signal source is 'ANALYTICS'", () => {
+                const newSearch = {
+                    ...search,
+                    source: {
+                        name: 'Onboarded',
+                        dataSourceIds: [1],
+                        reportSuiteIds: [],
+                        sourceType: 'ANALYTICS',
+                    },
+                };
+                const newWrapper = createShallowIntlComponent(
+                    <SavedSearchPopover
+                        onSavedSearchClick={jest.fn()}
+                        search={newSearch}
+                        isCurrentSearch={false}
+                        deleteSearch={jest.fn()}
+                    />,
+                ).dive();
 
-        it("renders <Popover /> containing user's saved search sorting selection", () => {
-            expect(wrapper.find(Popover).contains(search.sortBy)).toBe(true);
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Signal Source').length,
+                ).toEqual(1);
+                expect(
+                    newWrapper
+                        .find(Popover)
+                        .contains(getSignalTypeLabel(newSearch.source.sourceType)),
+                ).toBe(true);
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Onboarded Record').length,
+                ).toEqual(1);
+                expect(
+                    newWrapper.find(Popover).contains(getSignalTypeLabel(newSearch.source.name)),
+                );
+            });
+
+            it("contains user's saved search 'view records for' setting", () => {
+                expect(wrapper.find(Popover).contains('Last 7 Days')).toBe(true);
+            });
+
+            it("contains user's saved search custom date range setting, if selected", () => {
+                const newSearch = {
+                    ...search,
+                    viewRecordsFor: 'custom',
+                    customStartDate: '2018-04-01',
+                    customEndDate: '2018-04-15',
+                };
+                const newWrapper = createShallowIntlComponent(
+                    <SavedSearchPopover
+                        onSavedSearchClick={jest.fn()}
+                        search={newSearch}
+                        isCurrentSearch={false}
+                        deleteSearch={jest.fn()}
+                    />,
+                ).dive();
+
+                expect(newWrapper.find(Popover).contains('April 1, 2018 to April 15, 2018')).toBe(
+                    true,
+                );
+            });
+
+            it("contains user's saved search sorting selection", () => {
+                expect(wrapper.find(Popover).contains(getSortLabel(search.sortBy))).toBe(true);
+            });
         });
     });
 });
