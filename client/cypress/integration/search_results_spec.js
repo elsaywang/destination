@@ -22,15 +22,18 @@ describe('Search Form Results Integration Tests', function() {
             },
         });
     });
+
     describe('when Search button is clicked', function() {
-        describe('it has search results', function() {
+        describe('when search results exist', function() {
             it('should render results table', function() {
                 cy.get('[data-test="search-button"]').click();
-                cy.get('[data-test="signals-table"]').should('have.length', 1);
+
+                cy.get('[data-test="signals-table"]').should('exist');
+                cy.get('[data-test="empty"]').should('not.exist');
             });
         });
 
-        describe('it has no search result', function() {
+        describe('when no search results exist', function() {
             beforeEach(function() {
                 cy.get('@fetchSearchResults').then(function($stub) {
                     $stub
@@ -39,16 +42,21 @@ describe('Search Form Results Integration Tests', function() {
                 });
             });
 
-            it('should not render results table', function() {
+            it('should render empty state with no results found image', function() {
                 cy.get('[data-test="search-button"]').click();
-                cy.get('[data-test="signals-table"]').should('have.length', 0);
-            });
 
-            it('should render empty with no results found image', function() {
-                cy.get('[data-test="search-button"]').click();
                 cy.get('[data-test="empty"]').should('exist');
                 cy.get('[data-test="no-result-found"]').should('exist');
+                cy.get('[data-test="signals-table"]').should('not.exist');
             });
+        });
+    });
+
+    describe('before Search button is clicked', function() {
+        it('should show empty state with start exploring image', function() {
+            cy.get('[data-test="empty"]').should('exist');
+            cy.get('[data-test="start-exploring"]').should('exist');
+            cy.get('[data-test="signals-table"]').should('not.exist');
         });
     });
 });
