@@ -1,52 +1,29 @@
-const deferred = require('../utils/deferred');
+const mockResponse = require('../utils/mockResponse');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
-describe.skip('Saved Search Integration Test', function() {
+describe('Saved Search Integration Test', function() {
     beforeEach(function() {
-        this.fetchSavedSearchDeferred = deferred();
-        this.fetchSearchResultsDeferred = deferred();
-        this.fetchReportSuitesDeferred = deferred();
-
         cy.visit('#/search', {
             onBeforeLoad(win) {
-                cy.stub(win, 'fetch')
+                cy
+                    .stub(win, 'fetch')
                     .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
-                    .returns(this.fetchSavedSearchDeferred.promise)
+                    .returns(mockResponse(savedSearchResponse.savedSearch))
                     .withArgs('/portal/api/v1/signals/list')
                     .as('fetchSearchResults')
-                    .returns(this.fetchSearchResultsDeferred.promise)
+                    .returns(mockResponse(searchResultsResponse))
                     .withArgs('/portal/api/v1/report-suites')
                     .as('fetchReportSuites')
-                    .returns(this.fetchReportSuitesDeferred.promise);
+                    .returns(mockResponse(reportSuitesResponse.list));
             },
-        });
-
-        this.fetchSavedSearchDeferred.resolve({
-            json() {
-                return savedSearchResponse.savedSearch;
-            },
-            ok: true,
-        });
-
-        this.fetchSearchResultsDeferred.resolve({
-            json() {
-                return searchResultsResponse;
-            },
-            ok: true,
-        });
-
-        this.fetchReportSuitesDeferred.resolve({
-            json() {
-                return reportSuitesResponse.list;
-            },
-            ok: true,
         });
     });
     it("requests user's saved searches", function() {
-        cy.window()
+        cy
+            .window()
             .its('fetch')
             .should('be.calledWith', '/portal/api/v1/users/self/annotations/aam-portal');
     });
@@ -74,10 +51,9 @@ describe.skip('Saved Search Integration Test', function() {
         });
 
         it('should pre-fill Key-Value Pair fields', function() {
-            cy.get('[data-test="key-value-pair"]').should(
-                'have.length',
-                savedSearchResponse.savedSearch[0].keyValuePairs.length,
-            );
+            cy
+                .get('[data-test="key-value-pair"]')
+                .should('have.length', savedSearchResponse.savedSearch[0].keyValuePairs.length);
 
             cy.get('[data-test="key-search-field"]:first').should(function($value) {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].keyValuePairs[0].key);
@@ -146,9 +122,9 @@ describe.skip('Saved Search Integration Test', function() {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
                     });
 
-                    cy.get(
-                        '.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--secondary',
-                    ).click();
+                    cy
+                        .get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--secondary')
+                        .click();
                     cy.get('[data-test="save-this-search-button"]').click();
                     cy.get('[data-test="save-this-search-name-field"]').should('be.empty');
                 });
@@ -163,15 +139,17 @@ describe.skip('Saved Search Integration Test', function() {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
                     });
 
-                    cy.get(
-                        '.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary',
-                    ).click();
+                    cy
+                        .get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary')
+                        .click();
 
-                    cy.get('[data-test="saved-search-tag"]')
+                    cy
+                        .get('[data-test="saved-search-tag"]')
                         .contains(searchName)
                         .should('exist');
 
-                    cy.get('[data-test="saved-search-tag"]')
+                    cy
+                        .get('[data-test="saved-search-tag"]')
                         .contains(searchName)
                         .trigger('mouseover');
                     cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
@@ -183,15 +161,13 @@ describe.skip('Saved Search Integration Test', function() {
             it("should remove that saved search from user's saved search", function() {
                 cy.get('#isCurrentSearch ~ button').click();
 
-                cy.get('[data-test="saved-search-tag"]').should(
-                    'have.length',
-                    savedSearchResponse.savedSearch.length - 1,
-                );
+                cy
+                    .get('[data-test="saved-search-tag"]')
+                    .should('have.length', savedSearchResponse.savedSearch.length - 1);
 
-                cy.get('[data-test="saved-search-tag"]:first').should(
-                    'not.have.text',
-                    savedSearchResponse.savedSearch[0].name,
-                );
+                cy
+                    .get('[data-test="saved-search-tag"]:first')
+                    .should('not.have.text', savedSearchResponse.savedSearch[0].name);
             });
         });
     });
