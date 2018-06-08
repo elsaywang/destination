@@ -8,7 +8,7 @@ WORKDIR /usr/src/app/client
 # install and cache app dependencies
 ADD package.json /usr/src/app/client/package.json
 ADD .npmrc /usr/src/app/client/.npmrc
-RUN CI=true npm install --only=production
+RUN npm install --only=production
 
 ## add source code and build app
 ADD public /usr/src/app/client/public
