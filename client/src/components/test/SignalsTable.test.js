@@ -54,7 +54,6 @@ describe('<SignalsTable /> component', () => {
         const {
             keyValuePairs,
             keyName,
-            valueName,
             signalType,
             signalSource,
             totalCount,
@@ -74,7 +73,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualAllSignalsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAllSignalsColumnsIncludes(keyName)).toBeFalsy();
-            expect(actualAllSignalsColumnsIncludes(valueName)).toBeFalsy();
         });
 
         it('should return the correct columns when the "Adobe Analytics" signal type filter is selected and Advanced Search is disabled', () => {
@@ -89,7 +87,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualAnalyticsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAnalyticsColumnsIncludes(keyName)).toBeFalsy();
-            expect(actualAnalyticsColumnsIncludes(valueName)).toBeFalsy();
         });
 
         it('should return the correct columns when the "Adobe Analytics" signal type filter is selected and Advanced Search is enabled', () => {
@@ -98,7 +95,6 @@ describe('<SignalsTable /> component', () => {
 
             expect(actualAdvancedAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(keyName)).toBeTruthy();
-            expect(actualAdvancedAnalyticsColumnsIncludes(valueName)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(totalCount)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(includedInTraits)).toBeTruthy();
@@ -118,7 +114,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualActionableLogFilesColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualActionableLogFilesColumnsIncludes(keyName)).toBeFalsy();
-            expect(actualActionableLogFilesColumnsIncludes(valueName)).toBeFalsy();
             expect(actualActionableLogFilesColumnsIncludes(signalSource)).toBeFalsy();
         });
 
@@ -133,7 +128,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualGeneralOnlineDataColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualGeneralOnlineDataColumnsIncludes(keyName)).toBeFalsy();
-            expect(actualGeneralOnlineDataColumnsIncludes(valueName)).toBeFalsy();
             expect(actualGeneralOnlineDataColumnsIncludes(signalSource)).toBeFalsy();
         });
 
@@ -149,7 +143,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualOnboardedRecordsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualOnboardedRecordsColumnsIncludes(keyName)).toBeFalsy();
-            expect(actualOnboardedRecordsColumnsIncludes(valueName)).toBeFalsy();
         });
 
         describe('"Total Counts" column name variations', () => {
