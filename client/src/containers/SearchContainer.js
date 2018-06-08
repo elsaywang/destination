@@ -19,7 +19,6 @@ import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
-import { getTotalValidKeyValuePairs } from '../utils/searchValidation';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
@@ -285,8 +284,6 @@ class SearchContainer extends Component {
     saveThisSearchMessage = () =>
         getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
 
-    totalValidKeyValuePairs = () => getTotalValidKeyValuePairs(this.state.keyValuePairs);
-
     render() {
         return (
             <Fragment>
@@ -390,7 +387,7 @@ class SearchContainer extends Component {
                             <SignalsTable
                                 results={this.props.results}
                                 signalType={this.state.source.sourceType}
-                                totalKeyValuePairs={this.totalValidKeyValuePairs()}
+                                totalKeyValuePairs={this.state.keyValuePairs.length}
                                 isAdvancedSearchEnabled={this.state.advanced}
                                 onSortSearch={this.handleSortSearch}
                                 onSignalRecordsSelection={this.props.selectSignals}

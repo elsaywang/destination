@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { TableView } from '@react/react-spectrum/TableView';
 import DataSource from './DataSource';
 import withColumns from './withColumns';
+import { defaultRowHeight, defaultMaxRows, defaultHeadHeight } from '../../../constants/rows';
 
 /**
  * Table component that wraps the react-spectrum table components
@@ -15,8 +16,8 @@ class Table extends Component {
      * Dynamically set the height of the table's container to show up to a
      * certain number of rows.
      */
-    getTableHeight(items, rowHeight, maxRows = 10) {
-        const headHeight = 40;
+    getTableHeight(items, rowHeight = defaultRowHeight, maxRows = defaultMaxRows) {
+        const headHeight = defaultHeadHeight;
         const bodyHeight = Math.min(items.length, maxRows) * rowHeight;
 
         return `${headHeight + bodyHeight}px`;
@@ -60,7 +61,7 @@ Table.propTypes = {
     items: PropTypes.array.isRequired,
     columns: PropTypes.array.isRequired,
     renderCell: PropTypes.func.isRequired,
-    rowHeight: PropTypes.number.isRequired,
+    rowHeight: PropTypes.number,
     onSelectionChange: PropTypes.func,
     sortSearch: PropTypes.func,
     dataTest: PropTypes.string,

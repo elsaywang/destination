@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import SignalsTable from './SignalsTable';
 import withLoadingSpinner from './withLoadingSpinner';
 import { fetchSignals } from '../utils/fetchSignals';
-import { getTotalValidKeyValuePairs } from '../utils/searchValidation';
 
 class SavedSearchTable extends Component {
     state = {
@@ -29,7 +28,7 @@ class SavedSearchTable extends Component {
         } = this.props;
         const hasSearchResults = Boolean(Object.keys(tableResults).length);
         const WrappedSignalsTable = withLoadingSpinner(SignalsTable);
-        const totalKeyValuePairs = getTotalValidKeyValuePairs(savedSearch.keyValuePairs);
+        const totalKeyValuePairs = savedSearch.keyValuePairs.length;
 
         return (
             <WrappedSignalsTable

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { TableView } from '@react/react-spectrum/TableView';
 import Table from '../Table';
+import { defaultRowHeight } from '../../../../constants/rows';
 
 describe('<Table /> component', () => {
     const items = [
@@ -28,12 +29,10 @@ describe('<Table /> component', () => {
     const sortSearch = jest.fn();
     const onSelectionChange = jest.fn();
     const onLoadMore = jest.fn();
-    const rowHeight = 48;
     const wrapper = shallow(
         <Table
             items={items}
             columns={columns}
-            rowHeight={rowHeight}
             renderCell={renderCell}
             sortSearch={sortSearch}
             onLoadMore={onLoadMore}
@@ -75,19 +74,23 @@ describe('<Table /> component', () => {
             const { getTableHeight } = new Table();
 
             it('should return a string ending in px', () => {
-                expect(getTableHeight(items, rowHeight).substr(-2)).toEqual('px');
+                expect(getTableHeight(items).substr(-2)).toEqual('px');
             });
 
             it('should return the amount of pixels that exactly fits the amount of rows in the table', () => {
-                expect(getTableHeight(items, rowHeight)).toEqual('136px');
+                expect(getTableHeight(items)).toEqual('136px');
             });
 
             it('should return a maximum height if more rows than `maxRows` are passed in', () => {
-                expect(getTableHeight(new Array(15), rowHeight)).toEqual('520px');
+                expect(getTableHeight(new Array(15))).toEqual('520px');
             });
 
             it('should return a maximum height if more rows than a custom `maxRows` are passed in', () => {
-                expect(getTableHeight(items, rowHeight, 1)).toEqual('88px');
+                expect(getTableHeight(items, defaultRowHeight, 1)).toEqual('88px');
+            });
+
+            it('should return the amount of pixels that fits the amount of rows and based on the custom `rowHeight` passed in', () => {
+                expect(getTableHeight(items, 50)).toEqual('140px');
             });
 
             // TODO

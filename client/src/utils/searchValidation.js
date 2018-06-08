@@ -26,17 +26,9 @@ export const isValueValid = ({ operator, value }) => {
 
 export const isKeyEmptyWithValue = ({ key, value }) => isEmpty(key) && !isEmpty(value);
 
-export const isKeyEmpty = ({ key }) => isEmpty(key);
-
 export const isAnyKeyEmptyWithValue = keyValuePairs => keyValuePairs.some(isKeyEmptyWithValue);
 
 export const areAllValuesValid = keyValuePairs => keyValuePairs.every(isValueValid);
 
 export const isFormValid = ({ keyValuePairs }) =>
     areAllValuesValid(keyValuePairs) && !isAnyKeyEmptyWithValue(keyValuePairs);
-
-export const getTotalValidKeyValuePairs = keyValuePairs => {
-    const totalKeyValuePairs = getTotal(keyValuePairs);
-    const totalEmptyKeySets = getTotal(keyValuePairs.filter(({ key }) => isKeyEmpty({ key })));
-    return totalEmptyKeySets > 1 ? totalKeyValuePairs - totalEmptyKeySets + 1 : totalKeyValuePairs;
-};
