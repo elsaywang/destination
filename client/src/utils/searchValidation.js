@@ -1,4 +1,4 @@
-import { isEmpty, getTotal } from './index';
+import { isEmpty } from './index';
 
 export const isG6CompliantNumber = value =>
     !(/[^-.0-9]/.test(value) || /.+[-]+$/.test(value) || /\..*\.+$/.test(value));

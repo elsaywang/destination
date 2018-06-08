@@ -1,4 +1,4 @@
-import { isEmpty, getTotal } from '../index';
+import { isEmpty } from '../index';
 
 describe('isEmpty() should check if string or array passed in is empty', () => {
     it('given an empty string, it should return true', () => {
