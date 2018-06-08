@@ -130,9 +130,7 @@ describe('Saved Search Integration Test', function() {
 
             // TODO: add more fields to add values, pending AAM-36729
             describe('when user fills out fields in modal, and clicks "Save" button', function() {
-                it("should save the user's current search", function() {
-                    const searchName = 'Test1234';
-
+                beforeEach(function() {
                     cy.get('@fetchSavedSearch').then(function($stub) {
                         const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
                             newSavedSearchResponse,
@@ -142,6 +140,10 @@ describe('Saved Search Integration Test', function() {
                             .as('fetchSavedSearchAfterCreate')
                             .returns(mockResponse(mockResponseAfterCreate));
                     });
+                });
+
+                it("should save the user's current search", function() {
+                    const searchName = 'Test1234';
 
                     cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
