@@ -6,7 +6,6 @@ import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Popover from '@react/react-spectrum/Popover';
 import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { createShallowIntlComponent } from '../../lib/i18n/testHelpers';
-import { formatSignal } from '../../utils/stringifySignals';
 import { getSignalStatusLabel } from '../../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../../constants/signalTypeOptions';
 import { getSignalCategory } from '../../constants/signalCategoryOptions';
@@ -104,7 +103,85 @@ describe('<SavedSearchPopover /> component', () => {
             });
 
             it("does not contain user's saved search signal source type if signal source is null", () => {
-                expect(wrapper.find(Popover).contains('Signal Source')).toBe(false);
+                expect(
+                    wrapper.find(Popover).contains(getSignalTypeLabel(search.source.sourceType)),
+                ).toBe(false);
+            });
+
+            it("contains user's saved search signal source type, filter type 'Report Suite', and name if signal source is 'ANALYTICS'", () => {
+                const newSearch = {
+                    ...search,
+                    source: {
+                        name: 'Test Report Suite',
+                        dataSourceIds: [],
+                        reportSuiteIds: [1],
+                        sourceType: 'ANALYTICS',
+                    },
+                };
+                const newWrapper = createShallowIntlComponent(
+                    <SavedSearchPopover
+                        onSavedSearchClick={jest.fn()}
+                        search={newSearch}
+                        isCurrentSearch={false}
+                        deleteSearch={jest.fn()}
+                    />,
+                ).dive();
+
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Signal Source').length,
+                ).toEqual(1);
+                expect(
+                    newWrapper
+                        .find(Popover)
+                        .contains(getSignalTypeLabel(newSearch.source.sourceType)),
+                ).toBe(true);
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Report Suite').length,
+                ).toEqual(1);
+                expect(newWrapper.find(Popover).contains(newSearch.source.name)).toBe(true);
+            });
+
+            it("contains user's saved search signal source type, filter type 'Onboarded Record', and name if signal source is 'ANALYTICS'", () => {
+                const newSearch = {
+                    ...search,
+                    source: {
+                        name: 'Onboarded',
+                        dataSourceIds: [1],
+                        reportSuiteIds: [],
+                        sourceType: 'ANALYTICS',
+                    },
+                };
+                const newWrapper = createShallowIntlComponent(
+                    <SavedSearchPopover
+                        onSavedSearchClick={jest.fn()}
+                        search={newSearch}
+                        isCurrentSearch={false}
+                        deleteSearch={jest.fn()}
+                    />,
+                ).dive();
+
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Signal Source').length,
+                ).toEqual(1);
+                expect(
+                    newWrapper
+                        .find(Popover)
+                        .contains(getSignalTypeLabel(newSearch.source.sourceType)),
+                ).toBe(true);
+                expect(
+                    newWrapper
+                        .find(FieldLabel)
+                        .filterWhere(node => node.props().label === 'Onboarded Record').length,
+                ).toEqual(1);
+                expect(
+                    newWrapper.find(Popover).contains(getSignalTypeLabel(newSearch.source.name)),
+                );
             });
 
             it("contains user's saved search 'view records for' setting", () => {
