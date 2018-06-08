@@ -1,5 +1,6 @@
 const mockResponse = require('../utils/mockResponse');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
+const newSavedSearchResponse = require('../fixtures/newSavedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
@@ -135,6 +136,16 @@ describe('Saved Search Integration Test', function() {
                 it("should save the user's current search", function() {
                     const searchName = 'Test1234';
 
+                    cy.get('@fetchSavedSearch').then(function($stub) {
+                        const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
+                            newSavedSearchResponse,
+                        );
+
+                        $stub
+                            .as('fetchSavedSearchAfterCreate')
+                            .returns(mockResponse(mockResponseAfterCreate));
+                    });
+
                     cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
                     });
@@ -159,6 +170,14 @@ describe('Saved Search Integration Test', function() {
 
         describe('when the delete button next to it is clicked', function() {
             it("should remove that saved search from user's saved search", function() {
+                cy.get('@fetchSavedSearch').then(function($stub) {
+                    const mockResponseAfterDelete = savedSearchResponse.savedSearch.slice(1);
+
+                    $stub
+                        .as('fetchSavedSearchAfterDelete')
+                        .returns(mockResponse(mockResponseAfterDelete));
+                });
+
                 cy.get('#isCurrentSearch ~ button').click();
 
                 cy
