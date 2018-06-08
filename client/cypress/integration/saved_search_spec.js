@@ -67,11 +67,8 @@ describe('Saved Search Integration Test', function() {
             });
         });
 
-        // TODO: why is this breaking on build only...
-        it.skip('should pre-fill Advanced Search fields', function() {
-            cy.get('.advanced-search-toggle').should(function($value) {
-                expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].advanced);
-            });
+        it('should pre-fill Advanced Search fields', function() {
+            cy.get('[data-test="advanced-search-toggle"]').should('be.checked');
 
             cy.get('[data-test="advanced-search-filter"]').should(function($value) {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].source.name);
