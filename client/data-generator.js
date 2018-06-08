@@ -129,7 +129,7 @@ module.exports = () => {
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
                 keyName: faker.random.word(),
-                valueName: faker.random.word(),
+                value: faker.random.word(),
                 source: new Source(),
                 totalCount: faker.random.number(),
                 percentageChange: 0.154,
@@ -139,7 +139,7 @@ module.exports = () => {
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
                 keyName: faker.random.word(),
-                valueName: faker.random.word(),
+                value: faker.random.word(),
                 source: new Source(),
                 totalCount: faker.random.number(),
                 percentageChange: -0.3711,
@@ -149,7 +149,7 @@ module.exports = () => {
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
                 keyName: faker.random.word(),
-                valueName: faker.random.word(),
+                value: faker.random.word(),
                 source: new Source(null, [1234], null, 'ONBOARDED'),
                 totalCount: faker.random.number(),
                 percentageChange: -0.9711,
@@ -159,7 +159,7 @@ module.exports = () => {
             {
                 keyValuePairs: randomGenerateArray(Kvp, 2),
                 keyName: faker.random.word(),
-                valueName: faker.random.word(),
+                value: faker.random.word(),
                 source: new Source(null, null, [5678], 'ANALYTICS'),
                 totalCount: faker.random.number(),
                 percentageChange: 0.8711,

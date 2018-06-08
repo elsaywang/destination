@@ -4,7 +4,6 @@
 export const columnKeys = {
     keyValuePairs: 'keyValuePairs',
     keyName: 'keyName',
-    valueName: 'valueName',
     signalType: 'signalType',
     signalSource: 'signalSource',
     totalCount: 'totalCount',
@@ -24,13 +23,7 @@ const keyValuePairs = {
 const keyName = {
     title: 'Key Name',
     key: columnKeys.keyName,
-    width: 150,
-    sortable: true,
-};
-const valueName = {
-    title: 'Value Name',
-    key: columnKeys.valueName,
-    width: 150,
+    width: 200,
     sortable: true,
 };
 const signalType = {
@@ -112,7 +105,6 @@ export const analyticsColumns = [
 export const advancedAnalyticsColumns = [
     keyValuePairs,
     keyName,
-    valueName,
     eventFires,
     percentageChange,
     includedInTraits,
@@ -145,7 +137,6 @@ export const sortColumns = [keyValuePairs, totalCounts, percentageChange];
 export const columns = [
     keyValuePairs,
     keyName,
-    valueName,
     signalType,
     signalSource,
     totalCounts,
