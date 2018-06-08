@@ -2,6 +2,7 @@ const mockResponse = require('../utils/mockResponse');
 const searchResultsResponse = require('../fixtures/emptySearchResults.json');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
+const signalKeysResponse = require('../fixtures/signalKeys.json');
 
 describe('Search Form Integration Tests', function() {
     beforeEach(function() {
@@ -19,7 +20,10 @@ describe('Search Form Integration Tests', function() {
                     .returns(mockResponse(savedSearchResponse.savedSearch))
                     .withArgs('/portal/api/v1/report-suites')
                     .as('fetchReportSuites')
-                    .returns(mockResponse(reportSuitesResponse.list));
+                    .returns(mockResponse(reportSuitesResponse.list))
+                    .withArgs('/portal/api/v1/signals/keys?search=a&total=8')
+                    .as('fetchSignalKeys')
+                    .returns(mockResponse(signalKeysResponse));
             },
         });
     });
@@ -73,23 +77,19 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe.skip('when typing in text in Key input', function() {
+    describe('when typing in text in Key input', function() {
         beforeEach(function() {
             cy.get('[data-test="key-search-field"]').as('keyInput');
+            cy.get('@keyInput').type('a');
         });
 
         it('should show autocomplete with suggestions', function() {
-            cy
-                .get('@keyInput')
-                .type('k')
-                .wait('@getResults');
-
             cy.get('.spectrum-Popover.is-open').should('have.length', 1);
+            cy.get('.spectrum-SelectList-item').should('have.length', 8);
         });
 
         describe('when an option is clicked', function() {
             it('should have the same key value as clicked option', function() {
-                cy.wait('@getResults');
                 cy
                     .get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
                     .click()
