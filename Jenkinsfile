@@ -33,6 +33,9 @@ node ("docker") {
         }
 
         stage ('Generate Release ZIP File') {
+            if (fileExists("${env.BRANCH_NAME}-bundle.zip")) {
+                sh 'rm ${env.BRANCH_NAME}-bundle.zip'
+            }
             zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/build/", glob: '**/*.*', zipFile: "${env.BRANCH_NAME}-bundle.zip"
         }
 
