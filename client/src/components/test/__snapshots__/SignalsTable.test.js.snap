@@ -96,6 +96,7 @@ ShallowWrapper {
     }
     signalType="ALL"
     sortSearch={[MockFunction]}
+    totalKeyValuePairs={3}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -190,6 +191,7 @@ ShallowWrapper {
       "onLoadMore": [MockFunction],
       "onSelectionChange": [Function],
       "renderCell": [Function],
+      "rowHeight": 90,
       "sortSearch": undefined,
     },
     "ref": null,
@@ -283,6 +285,7 @@ ShallowWrapper {
         "onLoadMore": [MockFunction],
         "onSelectionChange": [Function],
         "renderCell": [Function],
+        "rowHeight": 90,
         "sortSearch": undefined,
       },
       "ref": null,

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { TableView } from '@react/react-spectrum/TableView';
 import Table from '../Table';
+import { defaultRowHeight } from '../../../../constants/rows';
 
 describe('<Table /> component', () => {
     const items = [
@@ -85,7 +86,11 @@ describe('<Table /> component', () => {
             });
 
             it('should return a maximum height if more rows than a custom `maxRows` are passed in', () => {
-                expect(getTableHeight(items, 1)).toEqual('88px');
+                expect(getTableHeight(items, defaultRowHeight, 1)).toEqual('88px');
+            });
+
+            it('should return the amount of pixels that fits the amount of rows and based on the custom `rowHeight` passed in', () => {
+                expect(getTableHeight(items, 50)).toEqual('140px');
             });
 
             // TODO

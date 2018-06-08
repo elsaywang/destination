@@ -81,6 +81,7 @@ ShallowWrapper {
         }
         onSelectionChange={[MockFunction]}
         renderCell={[Function]}
+        rowHeight={undefined}
       />,
       "className": "table-wrapper",
       "data-test": undefined,
@@ -126,6 +127,7 @@ ShallowWrapper {
         },
         "onSelectionChange": [MockFunction],
         "renderCell": [Function],
+        "rowHeight": undefined,
       },
       "ref": null,
       "rendered": null,
@@ -174,6 +176,7 @@ ShallowWrapper {
           }
           onSelectionChange={[MockFunction]}
           renderCell={[Function]}
+          rowHeight={undefined}
         />,
         "className": "table-wrapper",
         "data-test": undefined,
@@ -219,6 +222,7 @@ ShallowWrapper {
           },
           "onSelectionChange": [MockFunction],
           "renderCell": [Function],
+          "rowHeight": undefined,
         },
         "ref": null,
         "rendered": null,

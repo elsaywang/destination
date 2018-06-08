@@ -10,6 +10,7 @@ ShallowWrapper {
     isAdvancedSearchEnabled={false}
     isLoaded={false}
     results={Object {}}
+    totalKeyValuePairs={1}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -58,6 +59,7 @@ ShallowWrapper {
     isAdvancedSearchEnabled={false}
     isLoaded={false}
     results={Object {}}
+    totalKeyValuePairs={1}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -129,6 +131,7 @@ ShallowWrapper {
         "totalCount": 21456,
       }
     }
+    totalKeyValuePairs={1}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -167,6 +170,7 @@ ShallowWrapper {
         },
         "totalCount": 21456,
       },
+      "totalKeyValuePairs": 1,
     },
     "ref": null,
     "rendered": null,
@@ -203,6 +207,7 @@ ShallowWrapper {
           },
           "totalCount": 21456,
         },
+        "totalKeyValuePairs": 1,
       },
       "ref": null,
       "rendered": null,

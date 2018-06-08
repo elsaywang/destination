@@ -387,6 +387,7 @@ class SearchContainer extends Component {
                             <SignalsTable
                                 results={this.props.results}
                                 signalType={this.state.source.sourceType}
+                                totalKeyValuePairs={this.state.keyValuePairs.length}
                                 isAdvancedSearchEnabled={this.state.advanced}
                                 onSortSearch={this.handleSortSearch}
                                 onSignalRecordsSelection={this.props.selectSignals}

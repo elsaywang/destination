@@ -20,14 +20,21 @@ class SavedSearchTable extends Component {
 
     render() {
         const { tableResults } = this.state;
-        const { isAdvancedSearchEnabled, allowsSelection, canCreateTraits } = this.props;
+        const {
+            isAdvancedSearchEnabled,
+            allowsSelection,
+            canCreateTraits,
+            savedSearch,
+        } = this.props;
         const hasSearchResults = Boolean(Object.keys(tableResults).length);
         const WrappedSignalsTable = withLoadingSpinner(SignalsTable);
+        const totalKeyValuePairs = savedSearch.keyValuePairs.length;
 
         return (
             <WrappedSignalsTable
                 isLoaded={hasSearchResults}
                 results={tableResults}
+                totalKeyValuePairs={totalKeyValuePairs}
                 canCreateTraits={canCreateTraits}
                 isAdvancedSearchEnabled={isAdvancedSearchEnabled}
                 allowsSelection={allowsSelection}
