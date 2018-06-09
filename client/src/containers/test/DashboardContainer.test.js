@@ -20,19 +20,9 @@ describe('<DashboardContainer /> component', () => {
         .dive();
 
     describe('rendering', () => {
-        describe('when savedSearch prop with no records passed in ', () => {
+        describe('when visibleSavedSearchList prop with no records passed in ', () => {
             beforeAll(() => {
-                wrapper.setProps({
-                    savedSearch: {
-                        list: [],
-                        saveSearch: {
-                            name: '',
-                            includeInDashboard: false,
-                            sortBy: '',
-                            descending: false,
-                        },
-                    },
-                });
+                wrapper.setProps({ visibleSavedSearchList: [] });
             });
 
             it('matches snapshot', () => {
@@ -72,62 +62,60 @@ describe('<DashboardContainer /> component', () => {
         });
     });
 
-    describe('when savedSearch with records is passed in as a prop', () => {
+    describe('when `visibleSavedSearchList` is passed in as a prop', () => {
         beforeAll(() => {
             wrapper.setProps({
-                savedSearch: {
-                    list: [
-                        {
-                            name: 'Clovis Simonis',
-                            id: 0,
-                            keyValuePairs: [
-                                {
-                                    key: 'k-bandwidth',
-                                    operator: '<',
-                                    value: 80692,
-                                },
-                            ],
-                            source: {
-                                dataSourceIds: 30634,
-                                reportSuiteIds: null,
-                                sourceType: 'REALTIME',
-                                categoryType: 'Real-Time',
+                visibleSavedSearchList: [
+                    {
+                        name: 'Clovis Simonis',
+                        id: 0,
+                        keyValuePairs: [
+                            {
+                                key: 'k-bandwidth',
+                                operator: '<',
+                                value: 80692,
                             },
-                            minEventFires: 91445,
-                            signalStatus: 'USED',
-                            startDate: '2018-04-29T16:37:33.894Z',
-                            endDate: '2018-04-29T05:55:48.852Z',
-                            sortBy: 'Key Name',
+                        ],
+                        source: {
+                            dataSourceIds: 30634,
+                            reportSuiteIds: null,
+                            sourceType: 'REALTIME',
+                            categoryType: 'Real-Time',
                         },
-                        {
-                            name: 'Stephen Sanford',
-                            id: 1,
-                            keyValuePairs: [
-                                {
-                                    key: 'k-Customer',
-                                    operator: '<',
-                                    value: 83989,
-                                },
-                                {
-                                    key: 'k-coherent',
-                                    operator: '<=',
-                                    value: 54800,
-                                },
-                            ],
-                            source: {
-                                dataSourceIds: 81638,
-                                reportSuiteIds: null,
-                                sourceType: 'REALTIME',
-                                categoryType: 'Real-Time',
+                        minEventFires: 91445,
+                        signalStatus: 'USED',
+                        startDate: '2018-04-29T16:37:33.894Z',
+                        endDate: '2018-04-29T05:55:48.852Z',
+                        sortBy: 'Key Name',
+                    },
+                    {
+                        name: 'Stephen Sanford',
+                        id: 1,
+                        keyValuePairs: [
+                            {
+                                key: 'k-Customer',
+                                operator: '<',
+                                value: 83989,
                             },
-                            minEventFires: 33675,
-                            signalStatus: 'USED',
-                            startDate: '2018-04-28T22:35:51.313Z',
-                            endDate: '2018-04-29T09:22:26.931Z',
-                            sortBy: 'Event Fires',
+                            {
+                                key: 'k-coherent',
+                                operator: '<=',
+                                value: 54800,
+                            },
+                        ],
+                        source: {
+                            dataSourceIds: 81638,
+                            reportSuiteIds: null,
+                            sourceType: 'REALTIME',
+                            categoryType: 'Real-Time',
                         },
-                    ],
-                },
+                        minEventFires: 33675,
+                        signalStatus: 'USED',
+                        startDate: '2018-04-28T22:35:51.313Z',
+                        endDate: '2018-04-29T09:22:26.931Z',
+                        sortBy: 'Event Fires',
+                    },
+                ],
                 populateSearchFields: jest.fn(),
                 callSearch: jest.fn(),
             });
@@ -137,37 +125,37 @@ describe('<DashboardContainer /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders the same number of <Well/> components as savedSearch props length', () => {
+        it('renders the same number of <Well/> components as `visibleSavedSearchList` length', () => {
             expect(wrapper.find(Well).exists()).toBeTruthy();
             expect(wrapper.find(Well)).toHaveLength(
-                wrapper.instance().props.savedSearch.list.length,
+                wrapper.instance().props.visibleSavedSearchList.length,
             );
         });
 
-        it('renders the same number of <Heading/> components as savedSearch props length', () => {
+        it('renders the same number of <Heading/> components as `visibleSavedSearchList` length', () => {
             expect(wrapper.find(Heading).exists()).toBeTruthy();
             expect(wrapper.find(Heading)).toHaveLength(
-                wrapper.instance().props.savedSearch.list.length,
+                wrapper.instance().props.visibleSavedSearchList.length,
             );
         });
 
-        it('renders the same number of <Button/> components as savedSearch props length', () => {
+        it('renders the same number of <Button/> components as `visibleSavedSearchList` length', () => {
             expect(wrapper.find(Button).exists()).toBeTruthy();
             expect(wrapper.find(Button)).toHaveLength(
-                wrapper.instance().props.savedSearch.list.length,
+                wrapper.instance().props.visibleSavedSearchList.length,
             );
         });
 
-        it('renders the same number of <SavedSearchTable/> components as savedSearch props length', () => {
+        it('renders the same number of <SavedSearchTable/> components as `visibleSavedSearchList` length', () => {
             expect(wrapper.find(SavedSearchTable).exists()).toBeTruthy();
             expect(wrapper.find(SavedSearchTable)).toHaveLength(
-                wrapper.instance().props.savedSearch.list.length,
+                wrapper.instance().props.visibleSavedSearchList.length,
             );
         });
 
         it('.handleViewAllForSavedSearch() is called on the first saved search table', () => {
             const wrapperInstance = wrapper.instance();
-            const firstSavedSearch = wrapperInstance.props.savedSearch[0];
+            const firstSavedSearch = wrapperInstance.props.visibleSavedSearchList[0];
             const spyOnClick = jest.spyOn(wrapperInstance, 'handleViewAllForSavedSearch');
             wrapper
                 .find(Button)

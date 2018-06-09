@@ -40,3 +40,9 @@ export const GET_SAVED_SEARCH_LIMIT_REJECTED = 'GET_SAVED_SEARCH_LIMIT_REJECTED'
 export const getSavedSearchLimit = createAsyncAction(GET_SAVED_SEARCH_LIMIT, () =>
     fetch('/portal/api/v1/signals/limits'),
 );
+
+export const LOAD_MORE_SAVED_SEARCH = 'LOAD_MORE_SAVED_SEARCH';
+export const loadMoreSavedSearch = createAction(LOAD_MORE_SAVED_SEARCH);
+
+export const RESET_VISIBLE_SAVED_SEARCH = 'RESET_VISIBLE_SAVED_SEARCH';
+export const resetVisibleSavedSearch = createAction(RESET_VISIBLE_SAVED_SEARCH);

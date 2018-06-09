@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DashboardContainer /> component rendering when savedSearch prop with no records passed in  matches snapshot 1`] = `
+exports[`<DashboardContainer /> component rendering when visibleSavedSearchList prop with no records passed in  matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -14,19 +14,12 @@ ShallowWrapper {
     }
     fetchUserRoles={[Function]}
     getSavedSearch={[Function]}
+    loadMoreSavedSearch={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
-    savedSearch={
-      Object {
-        "list": Array [],
-        "saveSearch": Object {
-          "descending": false,
-          "includeInDashboard": false,
-          "name": "",
-          "sortBy": "",
-        },
-      }
-    }
+    resetVisibleSavedSearch={[Function]}
+    savedSearchListTrackedInDashboard={Array []}
+    visibleSavedSearchList={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -146,7 +139,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`<DashboardContainer /> component when savedSearch with records is passed in as a prop matches snapshot 1`] = `
+exports[`<DashboardContainer /> component when \`visibleSavedSearchList\` is passed in as a prop matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -160,62 +153,63 @@ ShallowWrapper {
     }
     fetchUserRoles={[Function]}
     getSavedSearch={[Function]}
+    loadMoreSavedSearch={[Function]}
     permissions={Object {}}
     populateSearchFields={[MockFunction]}
-    savedSearch={
-      Object {
-        "list": Array [
-          Object {
-            "endDate": "2018-04-29T05:55:48.852Z",
-            "id": 0,
-            "keyValuePairs": Array [
-              Object {
-                "key": "k-bandwidth",
-                "operator": "<",
-                "value": 80692,
-              },
-            ],
-            "minEventFires": 91445,
-            "name": "Clovis Simonis",
-            "signalStatus": "USED",
-            "sortBy": "Key Name",
-            "source": Object {
-              "categoryType": "Real-Time",
-              "dataSourceIds": 30634,
-              "reportSuiteIds": null,
-              "sourceType": "REALTIME",
+    resetVisibleSavedSearch={[Function]}
+    savedSearchListTrackedInDashboard={Array []}
+    visibleSavedSearchList={
+      Array [
+        Object {
+          "endDate": "2018-04-29T05:55:48.852Z",
+          "id": 0,
+          "keyValuePairs": Array [
+            Object {
+              "key": "k-bandwidth",
+              "operator": "<",
+              "value": 80692,
             },
-            "startDate": "2018-04-29T16:37:33.894Z",
+          ],
+          "minEventFires": 91445,
+          "name": "Clovis Simonis",
+          "signalStatus": "USED",
+          "sortBy": "Key Name",
+          "source": Object {
+            "categoryType": "Real-Time",
+            "dataSourceIds": 30634,
+            "reportSuiteIds": null,
+            "sourceType": "REALTIME",
           },
-          Object {
-            "endDate": "2018-04-29T09:22:26.931Z",
-            "id": 1,
-            "keyValuePairs": Array [
-              Object {
-                "key": "k-Customer",
-                "operator": "<",
-                "value": 83989,
-              },
-              Object {
-                "key": "k-coherent",
-                "operator": "<=",
-                "value": 54800,
-              },
-            ],
-            "minEventFires": 33675,
-            "name": "Stephen Sanford",
-            "signalStatus": "USED",
-            "sortBy": "Event Fires",
-            "source": Object {
-              "categoryType": "Real-Time",
-              "dataSourceIds": 81638,
-              "reportSuiteIds": null,
-              "sourceType": "REALTIME",
+          "startDate": "2018-04-29T16:37:33.894Z",
+        },
+        Object {
+          "endDate": "2018-04-29T09:22:26.931Z",
+          "id": 1,
+          "keyValuePairs": Array [
+            Object {
+              "key": "k-Customer",
+              "operator": "<",
+              "value": 83989,
             },
-            "startDate": "2018-04-28T22:35:51.313Z",
+            Object {
+              "key": "k-coherent",
+              "operator": "<=",
+              "value": 54800,
+            },
+          ],
+          "minEventFires": 33675,
+          "name": "Stephen Sanford",
+          "signalStatus": "USED",
+          "sortBy": "Event Fires",
+          "source": Object {
+            "categoryType": "Real-Time",
+            "dataSourceIds": 81638,
+            "reportSuiteIds": null,
+            "sourceType": "REALTIME",
           },
-        ],
-      }
+          "startDate": "2018-04-28T22:35:51.313Z",
+        },
+      ]
     }
   />,
   Symbol(enzyme.__renderer__): Object {
