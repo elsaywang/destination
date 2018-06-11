@@ -7,7 +7,7 @@ import {
     resetVisibleSavedSearch,
 } from '../actions/savedSearch';
 import {
-    getSavedSearchListTrackedInDashboard,
+    getTrackedInDashboardSavedSearchList,
     getVisibleSavedSearchList,
 } from '../reducers/savedSearch';
 import { populateSearchFields } from '../actions/savedSearchFields';
@@ -43,9 +43,9 @@ class DashboardContainer extends Component {
     };
 
     onScroll = e => {
-        const { visibleSavedSearchList, savedSearchListTrackedInDashboard } = this.props;
+        const { visibleSavedSearchList, trackedInDashboardSavedSearchList } = this.props;
         const isBottom = Boolean(window.innerHeight + window.scrollY >= document.body.offsetHeight);
-        if (isBottom && visibleSavedSearchList.length < savedSearchListTrackedInDashboard.length) {
+        if (isBottom && visibleSavedSearchList.length < trackedInDashboardSavedSearchList.length) {
             this.props.loadMoreSavedSearch();
         }
     };
@@ -107,7 +107,7 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = ({ savedSearch, errors, permissions }) => ({
-    savedSearchListTrackedInDashboard: getSavedSearchListTrackedInDashboard(savedSearch),
+    trackedInDashboardSavedSearchList: getTrackedInDashboardSavedSearchList(savedSearch),
     error: errors.savedSearch,
     permissions,
     visibleSavedSearchList: getVisibleSavedSearchList(savedSearch),

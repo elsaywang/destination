@@ -19,7 +19,7 @@ import {
 const initialState = {
     list: [],
     limit: defaultSavedSearchLimit,
-    totalVisibleInDashboard: defaultTotalVisibleSavedSearch,
+    totalVisibleSavedSearch: defaultTotalVisibleSavedSearch,
     saveSearch: {
         name: '',
         includeInDashboard: false,
@@ -83,17 +83,17 @@ const limit = handleActions(
     initialState.limit,
 );
 
-const totalVisibleInDashboard = handleActions(
+const totalVisibleSavedSearch = handleActions(
     {
         [LOAD_MORE_SAVED_SEARCH]: (state, action) => ({
             ...state,
-            totalVisibleInDashboard: state + 1,
+            totalVisibleSavedSearch: state + 1,
         }),
         [RESET_VISIBLE_SAVED_SEARCH]: () => ({
-            totalVisibleInDashboard: initialState.totalVisibleInDashboard,
+            totalVisibleSavedSearch: initialState.totalVisibleSavedSearch,
         }),
     },
-    initialState.totalVisibleInDashboard,
+    initialState.totalVisibleSavedSearch,
 );
 
 const handleSavedSearchList = (state, action) => ({
@@ -113,7 +113,7 @@ const handleSavedSearchListLimit = (state, action) => ({
 
 const handleLoadMoreSavedSearch = (state, action) => ({
     ...state,
-    ...totalVisibleInDashboard(state.totalVisibleInDashboard, action),
+    ...totalVisibleSavedSearch(state.totalVisibleSavedSearch, action),
 });
 
 export default handleActions(
@@ -126,7 +126,7 @@ export default handleActions(
             limit: limit(state.limit, action),
             list: list(state.list, action),
             saveSearch: saveSearch(state.saveSearch, action),
-            totalVisibleInDashboard: totalVisibleInDashboard(state.totalVisibleInDashboard, action),
+            totalVisibleSavedSearch: totalVisibleSavedSearch(state.totalVisibleSavedSearch, action),
         }),
         [UPDATE_SAVE_SEARCH_NAME]: handleSaveSearch,
         [TRACK_SEARCH_RESULT_IN_DASHBOARD]: handleSaveSearch,
@@ -146,8 +146,11 @@ export const getNormalizedSavedSearchList = state =>
         ? [...getSavedSearchList(state)].slice(0, getLimit(state))
         : getSavedSearchList(state);
 
-export const getTotalVisible = state => state.totalVisibleInDashboard;
-export const getSavedSearchListTrackedInDashboard = state =>
+export const getTotalVisibleSavedSearchCount = state => state.totalVisibleSavedSearch;
+export const getTrackedInDashboardSavedSearchList = state =>
     getSavedSearchList(state).filter(({ includeInDashboard }) => includeInDashboard);
 export const getVisibleSavedSearchList = state =>
-    [...getSavedSearchListTrackedInDashboard(state)].slice(0, getTotalVisible(state));
+    [...getTrackedInDashboardSavedSearchList(state)].slice(
+        0,
+        getTotalVisibleSavedSearchCount(state),
+    );

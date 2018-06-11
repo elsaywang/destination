@@ -13,8 +13,8 @@ import saveSearchReducer, {
     getSavedSearchList,
     isSavedSearchLimitReached,
     getNormalizedSavedSearchList,
-    getTotalVisible,
-    getSavedSearchListTrackedInDashboard,
+    getTotalVisibleSavedSearchCount,
+    getTrackedInDashboardSavedSearchList,
     getVisibleSavedSearchList,
 } from '../savedSearch';
 
@@ -28,7 +28,7 @@ describe('saveSearch reducer', () => {
             sortBy: 'percentageChange',
             descending: false,
         },
-        totalVisibleInDashboard: 2,
+        totalVisibleSavedSearch: 2,
     };
 
     it('should return the initial state', () => {
@@ -313,16 +313,18 @@ describe('saveSearch reducer', () => {
             });
         });
 
-        describe('getTotalVisible', () => {
+        describe('getTotalVisibleSavedSearchCount', () => {
             it('should return total count visible saved search', () => {
                 const state = {
-                    totalVisibleInDashboard: 2,
+                    totalVisibleSavedSearch: 2,
                 };
-                expect(getTotalVisible(state)).toEqual(state.totalVisibleInDashboard);
+                expect(getTotalVisibleSavedSearchCount(state)).toEqual(
+                    state.totalVisibleSavedSearch,
+                );
             });
         });
 
-        describe('getSavedSearchListTrackedInDashboard', () => {
+        describe('getTrackedInDashboardSavedSearchList', () => {
             it('should return empty list if every `includeInDashboard` is falsy', () => {
                 const state = {
                     list: [
@@ -331,7 +333,7 @@ describe('saveSearch reducer', () => {
                         { name: 'test3', kvp: 'ewr-key3', includeInDashboard: false },
                     ],
                 };
-                expect(getSavedSearchListTrackedInDashboard(state)).toEqual([]);
+                expect(getTrackedInDashboardSavedSearchList(state)).toEqual([]);
             });
             it('should return the saved search list with all `includeInDashboard` is truthy', () => {
                 const state = {
@@ -347,12 +349,12 @@ describe('saveSearch reducer', () => {
                     { name: 'test1', kvp: 'ewr-key1', includeInDashboard: true },
                     { name: 'test5', kvp: 'ewr-key5', includeInDashboard: true },
                 ];
-                expect(getSavedSearchListTrackedInDashboard(state)).toEqual(expectedList);
+                expect(getTrackedInDashboardSavedSearchList(state)).toEqual(expectedList);
             });
         });
 
         describe('getVisibleSavedSearchList', () => {
-            it('should return the tracked in dashboard saved search list with same length as totalVisibleInDashboard', () => {
+            it('should return the tracked in dashboard saved search list with same length as totalVisibleSavedSearch', () => {
                 const state = {
                     list: [
                         { name: 'test1', kvp: 'ewr-key1', includeInDashboard: true },
@@ -363,7 +365,7 @@ describe('saveSearch reducer', () => {
                         { name: 'test6', kvp: 'ewr-key6', includeInDashboard: true },
                         { name: 'test7', kvp: 'ewr-key6', includeInDashboard: false },
                     ],
-                    totalVisibleInDashboard: 2,
+                    totalVisibleSavedSearch: 2,
                 };
                 const expectedList = [
                     { name: 'test1', kvp: 'ewr-key1', includeInDashboard: true },

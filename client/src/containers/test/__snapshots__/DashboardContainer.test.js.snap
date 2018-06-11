@@ -18,7 +18,7 @@ ShallowWrapper {
     permissions={Object {}}
     populateSearchFields={[Function]}
     resetVisibleSavedSearch={[Function]}
-    savedSearchListTrackedInDashboard={Array []}
+    trackedInDashboardSavedSearchList={Array []}
     visibleSavedSearchList={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -157,7 +157,7 @@ ShallowWrapper {
     permissions={Object {}}
     populateSearchFields={[MockFunction]}
     resetVisibleSavedSearch={[Function]}
-    savedSearchListTrackedInDashboard={Array []}
+    trackedInDashboardSavedSearchList={Array []}
     visibleSavedSearchList={
       Array [
         Object {
