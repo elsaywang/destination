@@ -10,6 +10,8 @@ import Layout from './components/Layout';
 import Nav from './components/Nav';
 import DashboardContainer from './containers/DashboardContainer';
 import SearchContainer from './containers/SearchContainer';
+import './lib/tour-guide';
+import './lib/tour-guide-initializer';
 
 const { locale, messages } = getLocaleData();
 const store = configureStore();
