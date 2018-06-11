@@ -152,6 +152,7 @@ class SavedSearchPopover extends Component {
                             modaltrigger
                         />
                         <Dialog
+                            data-test="saved-search-delete-modal"
                             modalcontent
                             title="Delete Saved Search"
                             confirmLabel="Confirm"
