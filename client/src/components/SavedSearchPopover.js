@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
 import { Tag } from '@react/react-spectrum/TagList';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
+import ModalTrigger from '@react/react-spectrum/ModalTrigger';
+import Dialog from '@react/react-spectrum/Dialog';
 import Popover from '@react/react-spectrum/Popover';
 import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { formatSignal } from '../utils/stringifySignals';
@@ -140,14 +142,26 @@ class SavedSearchPopover extends Component {
                     </Popover>
                 </OverlayTrigger>
                 {isCurrentSearch && (
-                    <Button
-                        data-test="saved-search-delete-button"
-                        className={styles.button}
-                        label={null}
-                        onClick={boundDeleteClick}
-                        variant="action"
-                        icon={<DeleteOutline size="XS" />}
-                    />
+                    <ModalTrigger>
+                        <Button
+                            data-test="saved-search-delete-button"
+                            className={styles.button}
+                            label={null}
+                            variant="action"
+                            icon={<DeleteOutline size="XS" />}
+                            modaltrigger
+                        />
+                        <Dialog
+                            modalcontent
+                            title="Delete Saved Search"
+                            confirmLabel="Confirm"
+                            size="S"
+                            cancelLabel="Cancel"
+                            onConfirm={boundDeleteClick}
+                            variant="error">
+                            <span>Do you want to delete this saved search?</span>
+                        </Dialog>
+                    </ModalTrigger>
                 )}
             </span>
         );
