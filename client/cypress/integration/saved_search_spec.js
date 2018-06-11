@@ -205,4 +205,24 @@ describe('Saved Search Integration Test', function() {
             cy.get('[data-test="saved-search-overlay-trigger"]').should('have.length', 1);
         });
     });
+
+    describe.only('Preset saved searches', function() {
+        it('should render first when user-defined saved searches exist', () => {});
+
+        it('should render when no user-defined saved searches exist', () => {});
+
+        it('should be "Top Unused Signals" and "New Unused Signals", in that order', () => {});
+
+        it('clicking "Top Unused Signals" should populate form correctly and call correct search', () => {});
+
+        it('clicking "New Unused Signals" should populate form correctly and call correct search, including `filterNewSignals: true`', () => {});
+
+        it('should not be editable', () => {});
+
+        it('should not be deletable', () => {});
+
+        it('should not be included in the PUT call executed after saving a new search', () => {});
+
+        it('should be counted toward the limit of max saved searches', () => {});
+    });
 });
