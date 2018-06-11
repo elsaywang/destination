@@ -1,7 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { callSearch } from '../actions/searchForm';
-import { getSavedSearch } from '../actions/savedSearch';
+import {
+    getSavedSearch,
+    loadMoreSavedSearch,
+    resetVisibleSavedSearch,
+} from '../actions/savedSearch';
+import {
+    getTrackedInDashboardSavedSearchList,
+    getVisibleSavedSearchList,
+} from '../reducers/savedSearch';
 import { populateSearchFields } from '../actions/savedSearchFields';
 import { fetchUserRoles } from '../actions/permissions';
 import Heading from '@react/react-spectrum/Heading';
@@ -19,6 +27,12 @@ class DashboardContainer extends Component {
         if (!Object.keys(this.props.permissions).length) {
             this.props.fetchUserRoles();
         }
+        window.addEventListener('scroll', this.onScroll);
+    }
+
+    componentWillUnmount() {
+        this.props.resetVisibleSavedSearch();
+        window.removeEventListener('scroll', this.onScroll);
     }
 
     handleViewAllForSavedSearch = search => {
@@ -26,6 +40,14 @@ class DashboardContainer extends Component {
 
         populateSearchFields(search);
         callSearch(search);
+    };
+
+    onScroll = e => {
+        const { visibleSavedSearchList, trackedInDashboardSavedSearchList } = this.props;
+        const isBottom = Boolean(window.innerHeight + window.scrollY >= document.body.offsetHeight);
+        if (isBottom && visibleSavedSearchList.length < trackedInDashboardSavedSearchList.length) {
+            this.props.loadMoreSavedSearch();
+        }
     };
 
     render() {
@@ -37,7 +59,7 @@ class DashboardContainer extends Component {
                         errorMessage={this.props.error.errorMessage}
                     />
                 </div>
-                {this.props.savedSearch.list.map(
+                {this.props.visibleSavedSearchList.map(
                     search =>
                         Object.keys(search).length && (
                             <Well
@@ -85,13 +107,16 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = ({ savedSearch, errors, permissions }) => ({
-    savedSearch,
+    trackedInDashboardSavedSearchList: getTrackedInDashboardSavedSearchList(savedSearch),
     error: errors.savedSearch,
     permissions,
+    visibleSavedSearchList: getVisibleSavedSearchList(savedSearch),
 });
 const actionCreators = {
     callSearch,
     getSavedSearch,
+    loadMoreSavedSearch,
+    resetVisibleSavedSearch,
     populateSearchFields,
     fetchUserRoles,
 };

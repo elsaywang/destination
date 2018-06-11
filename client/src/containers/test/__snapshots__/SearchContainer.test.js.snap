@@ -33,9 +33,11 @@ ShallowWrapper {
     getSavedSearchLimit={[Function]}
     isSavedSearchLimitReached={false}
     loadMore={[Function]}
+    loadMoreSavedSearch={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
+    resetVisibleSavedSearch={[Function]}
     results={
       Object {
         "list": Array [],
@@ -1094,9 +1096,11 @@ ShallowWrapper {
     getSavedSearchLimit={[Function]}
     isSavedSearchLimitReached={false}
     loadMore={[Function]}
+    loadMoreSavedSearch={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
+    resetVisibleSavedSearch={[Function]}
     results={
       Object {
         "list": Array [],
@@ -2152,9 +2156,11 @@ ShallowWrapper {
     getSavedSearchLimit={[Function]}
     isSavedSearchLimitReached={false}
     loadMore={[Function]}
+    loadMoreSavedSearch={[Function]}
     permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
+    resetVisibleSavedSearch={[Function]}
     results={
       Object {
         "list": Array [],
