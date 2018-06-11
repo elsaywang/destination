@@ -317,6 +317,7 @@ class SearchContainer extends Component {
                     <GridColumn size={12}>
                         <div className={styles.saveSearch}>
                             <SavedSearch
+                                isLoaded={this.props.isSavedSearchLoaded}
                                 getSavedSearch={this.props.getSavedSearch}
                                 deleteSearch={this.deleteSearch}
                                 list={this.props.finalizedSavedSearchList}
@@ -426,6 +427,7 @@ const mapStateToProps = ({
     savedSearchLimit: savedSearch.limit,
     thisSearch: savedSearch.saveSearch,
     isSavedSearchLimitReached: isSavedSearchLimitReached(savedSearch),
+    isSavedSearchLoaded: savedSearch.isLoaded,
     finalizedSavedSearchList: getNormalizedSavedSearchList(savedSearch),
     reportSuites,
     errors,

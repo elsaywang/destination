@@ -32,6 +32,7 @@ ShallowWrapper {
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
     isSavedSearchLimitReached={false}
+    isSavedSearchLoaded={false}
     loadMore={[Function]}
     loadMoreSavedSearch={[Function]}
     permissions={Object {}}
@@ -171,6 +172,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -424,6 +426,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -451,6 +454,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -474,6 +478,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />,
@@ -495,6 +500,7 @@ ShallowWrapper {
                     "hasError": false,
                   },
                   "getSavedSearch": [Function],
+                  "isLoaded": false,
                   "list": Array [],
                   "onSavedSearchClick": [Function],
                 },
@@ -655,6 +661,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -908,6 +915,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -935,6 +943,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -958,6 +967,7 @@ ShallowWrapper {
                       }
                     }
                     getSavedSearch={[Function]}
+                    isLoaded={false}
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />,
@@ -979,6 +989,7 @@ ShallowWrapper {
                       "hasError": false,
                     },
                     "getSavedSearch": [Function],
+                    "isLoaded": false,
                     "list": Array [],
                     "onSavedSearchClick": [Function],
                   },
@@ -1095,6 +1106,7 @@ ShallowWrapper {
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
     isSavedSearchLimitReached={false}
+    isSavedSearchLoaded={false}
     loadMore={[Function]}
     loadMoreSavedSearch={[Function]}
     permissions={Object {}}
@@ -1231,6 +1243,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -1484,6 +1497,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -1511,6 +1525,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -1534,6 +1549,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />,
@@ -1555,6 +1571,7 @@ ShallowWrapper {
                     "hasError": false,
                   },
                   "getSavedSearch": [Function],
+                  "isLoaded": false,
                   "list": Array [],
                   "onSavedSearchClick": [Function],
                 },
@@ -1715,6 +1732,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -1968,6 +1986,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -1995,6 +2014,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -2018,6 +2038,7 @@ ShallowWrapper {
                       }
                     }
                     getSavedSearch={[Function]}
+                    isLoaded={false}
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />,
@@ -2039,6 +2060,7 @@ ShallowWrapper {
                       "hasError": false,
                     },
                     "getSavedSearch": [Function],
+                    "isLoaded": false,
                     "list": Array [],
                     "onSavedSearchClick": [Function],
                   },
@@ -2155,6 +2177,7 @@ ShallowWrapper {
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
     isSavedSearchLimitReached={false}
+    isSavedSearchLoaded={false}
     loadMore={[Function]}
     loadMoreSavedSearch={[Function]}
     permissions={Object {}}
@@ -2291,6 +2314,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -2544,6 +2568,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -2571,6 +2596,7 @@ ShallowWrapper {
                   }
                 }
                 getSavedSearch={[Function]}
+                isLoaded={false}
                 list={Array []}
                 onSavedSearchClick={[Function]}
               />
@@ -2594,6 +2620,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />,
@@ -2615,6 +2642,7 @@ ShallowWrapper {
                     "hasError": false,
                   },
                   "getSavedSearch": [Function],
+                  "isLoaded": false,
                   "list": Array [],
                   "onSavedSearchClick": [Function],
                 },
@@ -2775,6 +2803,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -3028,6 +3057,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -3055,6 +3085,7 @@ ShallowWrapper {
                     }
                   }
                   getSavedSearch={[Function]}
+                  isLoaded={false}
                   list={Array []}
                   onSavedSearchClick={[Function]}
                 />
@@ -3078,6 +3109,7 @@ ShallowWrapper {
                       }
                     }
                     getSavedSearch={[Function]}
+                    isLoaded={false}
                     list={Array []}
                     onSavedSearchClick={[Function]}
                   />,
@@ -3099,6 +3131,7 @@ ShallowWrapper {
                       "hasError": false,
                     },
                     "getSavedSearch": [Function],
+                    "isLoaded": false,
                     "list": Array [],
                     "onSavedSearchClick": [Function],
                   },
