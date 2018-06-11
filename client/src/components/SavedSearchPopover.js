@@ -155,12 +155,14 @@ class SavedSearchPopover extends Component {
                             data-test="saved-search-delete-modal"
                             modalcontent
                             title="Delete Saved Search"
-                            confirmLabel="Confirm"
+                            confirmLabel="Delete"
                             size="S"
                             cancelLabel="Cancel"
                             onConfirm={boundDeleteClick}
-                            variant="error">
-                            <span>Do you want to delete this saved search?</span>
+                            variant="destructive">
+                            <span>
+                                Are you sure you want to delete this saved search: {search.name}?
+                            </span>
                         </Dialog>
                     </ModalTrigger>
                 )}
