@@ -1,36 +1,29 @@
-const deferred = require('../utils/deferred');
+const mockResponse = require('../utils/mockResponse');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 
 describe('Validation Spec', function() {
-    before(function() {
-        this.fetchSavedSearchDeferred = deferred();
-
+    beforeEach(function() {
         cy.visit('#/search', {
             onBeforeLoad(win) {
-                cy.stub(win, 'fetch')
+                cy
+                    .stub(win, 'fetch')
                     .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
-                    .returns(this.fetchSavedSearchDeferred.promise);
+                    .returns(mockResponse(savedSearchResponse.savedSearch));
             },
-        });
-
-        this.fetchSavedSearchDeferred.resolve({
-            json() {
-                return savedSearchResponse.savedSearch;
-            },
-            ok: true,
         });
     });
 
     describe('when adding another key value pair', function() {
-        before(function() {
+        beforeEach(function() {
             cy.get('[data-test="add-button"]').click();
         });
 
         describe('when entering first key value pair validly', function() {
-            before(function() {
+            beforeEach(function() {
                 cy.get('[data-test="key-search-field"]:first').type('test');
-                cy.get('.operator:first')
+                cy
+                    .get('.operator:first')
                     .click()
                     .get('[role=option]:last')
                     .click();
@@ -51,8 +44,9 @@ describe('Validation Spec', function() {
         });
 
         describe('when entering second key value pair invalidly,', function() {
-            before(function() {
-                cy.get('.operator:eq(1)')
+            beforeEach(function() {
+                cy
+                    .get('.operator:eq(1)')
                     .click()
                     .get('.spectrum-SelectList-item:nth-child(2)')
                     .click();
@@ -65,10 +59,9 @@ describe('Validation Spec', function() {
             });
 
             it('should show an error message', function() {
-                cy.get('[data-test="value-search"]:eq(1) ~ [data-test="inline-error"]').should(
-                    'have.length',
-                    1,
-                );
+                cy
+                    .get('[data-test="value-search"]:eq(1) ~ [data-test="inline-error"]')
+                    .should('have.length', 1);
             });
 
             it('should have disabled Search button', function() {
@@ -78,29 +71,12 @@ describe('Validation Spec', function() {
     });
 
     describe('additional validation', function() {
-        before(function() {
-            this.fetchSavedSearchDeferred = deferred();
-
-            cy.visit('#/search', {
-                onBeforeLoad(win) {
-                    cy.stub(win, 'fetch')
-                        .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
-                        .as('fetchSavedSearch')
-                        .returns(this.fetchSavedSearchDeferred.promise);
-                },
-            });
-
-            this.fetchSavedSearchDeferred.resolve({
-                json() {
-                    return savedSearchResponse.savedSearch;
-                },
-                ok: true,
-            });
-        });
-
         describe('non-empty value and an empty key', function() {
-            it('should not allow you to search', function() {
+            beforeEach(function() {
                 cy.get('[data-test="value-search"]').type('a');
+            });
+
+            it('should not allow you to search', function() {
                 cy.get('[data-test="search-button"]').should('be.disabled');
             });
 
