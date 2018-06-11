@@ -28,6 +28,7 @@
 
 :local(.empty) {
     margin-top: 80px;
+    text-align: center;
 }
 :local(.noResultMessage) {
     margin-top: -0.75em;

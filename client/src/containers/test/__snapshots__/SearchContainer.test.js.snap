@@ -179,8 +179,7 @@ ShallowWrapper {
           reverse={false}
         >
           <GridColumn
-            offsetSize={4}
-            size={8}
+            size={12}
           >
             <EmptySearch
               className={undefined}
@@ -514,8 +513,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <GridColumn
-            offsetSize={4}
-            size={8}
+            size={12}
           >
             <EmptySearch
               className={undefined}
@@ -534,8 +532,7 @@ ShallowWrapper {
               className={undefined}
               variant="explore"
             />,
-            "offsetSize": 4,
-            "size": 8,
+            "size": 12,
           },
           "ref": null,
           "rendered": Object {
@@ -663,8 +660,7 @@ ShallowWrapper {
             reverse={false}
           >
             <GridColumn
-              offsetSize={4}
-              size={8}
+              size={12}
             >
               <EmptySearch
                 className={undefined}
@@ -998,8 +994,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <GridColumn
-              offsetSize={4}
-              size={8}
+              size={12}
             >
               <EmptySearch
                 className={undefined}
@@ -1018,8 +1013,7 @@ ShallowWrapper {
                 className={undefined}
                 variant="explore"
               />,
-              "offsetSize": 4,
-              "size": 8,
+              "size": 12,
             },
             "ref": null,
             "rendered": Object {
@@ -1237,8 +1231,7 @@ ShallowWrapper {
           reverse={false}
         >
           <GridColumn
-            offsetSize={4}
-            size={8}
+            size={12}
           >
             <EmptySearch
               className={undefined}
@@ -1572,8 +1565,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <GridColumn
-            offsetSize={4}
-            size={8}
+            size={12}
           >
             <EmptySearch
               className={undefined}
@@ -1592,8 +1584,7 @@ ShallowWrapper {
               className={undefined}
               variant="noResult"
             />,
-            "offsetSize": 4,
-            "size": 8,
+            "size": 12,
           },
           "ref": null,
           "rendered": Object {
@@ -1721,8 +1712,7 @@ ShallowWrapper {
             reverse={false}
           >
             <GridColumn
-              offsetSize={4}
-              size={8}
+              size={12}
             >
               <EmptySearch
                 className={undefined}
@@ -2056,8 +2046,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <GridColumn
-              offsetSize={4}
-              size={8}
+              size={12}
             >
               <EmptySearch
                 className={undefined}
@@ -2076,8 +2065,7 @@ ShallowWrapper {
                 className={undefined}
                 variant="noResult"
               />,
-              "offsetSize": 4,
-              "size": 8,
+              "size": 12,
             },
             "ref": null,
             "rendered": Object {
@@ -2295,8 +2283,7 @@ ShallowWrapper {
           reverse={false}
         >
           <GridColumn
-            offsetSize={4}
-            size={8}
+            size={12}
           >
             <EmptySearch
               className={undefined}
@@ -2630,8 +2617,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <GridColumn
-            offsetSize={4}
-            size={8}
+            size={12}
           >
             <EmptySearch
               className={undefined}
@@ -2650,8 +2636,7 @@ ShallowWrapper {
               className={undefined}
               variant="noResult"
             />,
-            "offsetSize": 4,
-            "size": 8,
+            "size": 12,
           },
           "ref": null,
           "rendered": Object {
@@ -2779,8 +2764,7 @@ ShallowWrapper {
             reverse={false}
           >
             <GridColumn
-              offsetSize={4}
-              size={8}
+              size={12}
             >
               <EmptySearch
                 className={undefined}
@@ -3114,8 +3098,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <GridColumn
-              offsetSize={4}
-              size={8}
+              size={12}
             >
               <EmptySearch
                 className={undefined}
@@ -3134,8 +3117,7 @@ ShallowWrapper {
                 className={undefined}
                 variant="noResult"
               />,
-              "offsetSize": 4,
-              "size": 8,
+              "size": 12,
             },
             "ref": null,
             "rendered": Object {
