@@ -177,7 +177,7 @@ describe('Saved Search Integration Test', function() {
                 cy.get('#isCurrentSearch ~ div > [data-test="saved-search-delete-button"]').click();
 
                 cy.get(
-                    '[data-test="saved-search-delete-modal"] ~ .spectrum-Dialog-footer .spectrum-Button--primary',
+                    '[data-test="saved-search-delete-modal"] ~ .spectrum-Dialog-footer .spectrum-Button--warning',
                 ).click();
 
                 cy.get('[data-test="saved-search-tag"]').should(
