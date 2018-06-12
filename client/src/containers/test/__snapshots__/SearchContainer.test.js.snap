@@ -109,6 +109,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -223,6 +225,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -293,6 +297,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -359,6 +365,8 @@ ShallowWrapper {
                   "hasError": false,
                 },
               },
+              "eventFiresMinimum": 0,
+              "eventFiresStep": 1000,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -595,6 +603,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -709,6 +719,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -779,6 +791,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -845,6 +859,8 @@ ShallowWrapper {
                     "hasError": false,
                   },
                 },
+                "eventFiresMinimum": 0,
+                "eventFiresStep": 1000,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -1174,6 +1190,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1288,6 +1306,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1358,6 +1378,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -1424,6 +1446,8 @@ ShallowWrapper {
                   "hasError": false,
                 },
               },
+              "eventFiresMinimum": 0,
+              "eventFiresStep": 1000,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -1660,6 +1684,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -1774,6 +1800,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -1844,6 +1872,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -1910,6 +1940,8 @@ ShallowWrapper {
                     "hasError": false,
                   },
                 },
+                "eventFiresMinimum": 0,
+                "eventFiresStep": 1000,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -2239,6 +2271,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -2353,6 +2387,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -2423,6 +2459,8 @@ ShallowWrapper {
                   },
                 }
               }
+              eventFiresMinimum={0}
+              eventFiresStep={1000}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                 Array [
@@ -2489,6 +2527,8 @@ ShallowWrapper {
                   "hasError": false,
                 },
               },
+              "eventFiresMinimum": 0,
+              "eventFiresStep": 1000,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -2725,6 +2765,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -2839,6 +2881,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -2909,6 +2953,8 @@ ShallowWrapper {
                     },
                   }
                 }
+                eventFiresMinimum={0}
+                eventFiresStep={1000}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                   Array [
@@ -2975,6 +3021,8 @@ ShallowWrapper {
                     "hasError": false,
                   },
                 },
+                "eventFiresMinimum": 0,
+                "eventFiresStep": 1000,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {

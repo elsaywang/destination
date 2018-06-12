@@ -175,6 +175,8 @@ class Search extends Component {
                                                     data-test="min-counts"
                                                     onChange={this.props.onMinEventFiresChange}
                                                     value={this.props.minEventFires}
+                                                    min={this.props.eventFiresMinimum}
+                                                    step={this.props.eventFiresStep}
                                                     quiet
                                                 />
                                             </Label>

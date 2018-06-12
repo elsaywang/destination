@@ -20,6 +20,7 @@ import SaveSearchExecution from '../components/SaveSearchExecution';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
+import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
 
@@ -309,6 +310,8 @@ class SearchContainer extends Component {
                             onClearAll={this.onClearAll}
                             isCustomDateRangeEnabled={this.isCustomDateRangeEnabled()}
                             errors={this.props.errors}
+                            eventFiresMinimum={defaultEventFiresMinimum}
+                            eventFiresStep={defaultEventFiresStep}
                         />
                     </GridColumn>
                 </GridRow>
