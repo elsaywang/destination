@@ -399,7 +399,7 @@ class SearchContainer extends Component {
                     </div>
                 ) : (
                     <GridRow>
-                        <GridColumn size={8} offsetSize={4}>
+                        <GridColumn size={12}>
                             <EmptySearch
                                 className={styles.empty}
                                 variant={this.state.searched ? 'noResult' : 'explore'}
