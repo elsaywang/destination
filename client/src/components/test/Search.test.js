@@ -71,6 +71,8 @@ describe('<Search /> component', () => {
             onSearch={mockFn}
             onClearAll={mockFn}
             isCustomDateRangeEnabled={false}
+            eventFiresMinimum={0}
+            eventFiresStep={1000}
         />,
     );
 
