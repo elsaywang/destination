@@ -20,6 +20,7 @@ const initialState = {
     list: [],
     limit: defaultSavedSearchLimit,
     totalVisibleSavedSearch: defaultTotalVisibleSavedSearch,
+    isLoaded: false,
     saveSearch: {
         name: '',
         includeInDashboard: false,
@@ -99,6 +100,7 @@ const totalVisibleSavedSearch = handleActions(
 const handleSavedSearchList = (state, action) => ({
     ...state,
     list: list(state.list, action),
+    isLoaded: true,
 });
 
 const handleSaveSearch = (state, action) => ({
@@ -123,6 +125,7 @@ export default handleActions(
         [LOAD_MORE_SAVED_SEARCH]: handleLoadMoreSavedSearch,
         [RESET_VISIBLE_SAVED_SEARCH]: handleLoadMoreSavedSearch,
         [SAVE_SEARCH_FULFILLED]: (state, action) => ({
+            ...state,
             limit: limit(state.limit, action),
             list: list(state.list, action),
             saveSearch: saveSearch(state.saveSearch, action),

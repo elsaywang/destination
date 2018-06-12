@@ -86,7 +86,7 @@ ShallowWrapper {
               ],
             }
           }
-          isLoaded={true}
+          isLoaded={undefined}
           list={
             Array [
               Object {
@@ -152,7 +152,7 @@ ShallowWrapper {
               Array [],
             ],
           },
-          "isLoaded": true,
+          "isLoaded": undefined,
           "list": Array [
             Object {
               "id": 17966,
@@ -222,7 +222,7 @@ ShallowWrapper {
                 ],
               }
             }
-            isLoaded={true}
+            isLoaded={undefined}
             list={
               Array [
                 Object {
@@ -288,7 +288,7 @@ ShallowWrapper {
                 Array [],
               ],
             },
-            "isLoaded": true,
+            "isLoaded": undefined,
             "list": Array [
               Object {
                 "id": 17966,

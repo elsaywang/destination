@@ -8,8 +8,7 @@ describe('Saved Search Integration Test', function() {
     beforeEach(function() {
         cy.visit('#/search', {
             onBeforeLoad(win) {
-                cy
-                    .stub(win, 'fetch')
+                cy.stub(win, 'fetch')
                     .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
                     .as('fetchSavedSearch')
                     .returns(mockResponse(savedSearchResponse.savedSearch))
@@ -23,8 +22,7 @@ describe('Saved Search Integration Test', function() {
         });
     });
     it("requests user's saved searches", function() {
-        cy
-            .window()
+        cy.window()
             .its('fetch')
             .should('be.calledWith', '/portal/api/v1/users/self/annotations/aam-portal');
     });
@@ -52,9 +50,10 @@ describe('Saved Search Integration Test', function() {
         });
 
         it('should pre-fill Key-Value Pair fields', function() {
-            cy
-                .get('[data-test="key-value-pair"]')
-                .should('have.length', savedSearchResponse.savedSearch[0].keyValuePairs.length);
+            cy.get('[data-test="key-value-pair"]').should(
+                'have.length',
+                savedSearchResponse.savedSearch[0].keyValuePairs.length,
+            );
 
             cy.get('[data-test="key-search-field"]:first').should(function($value) {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].keyValuePairs[0].key);
@@ -120,9 +119,9 @@ describe('Saved Search Integration Test', function() {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
                     });
 
-                    cy
-                        .get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--secondary')
-                        .click();
+                    cy.get(
+                        '.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--secondary',
+                    ).click();
                     cy.get('[data-test="save-this-search-button"]').click();
                     cy.get('[data-test="save-this-search-name-field"]').should('be.empty');
                 });
@@ -149,17 +148,15 @@ describe('Saved Search Integration Test', function() {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
                     });
 
-                    cy
-                        .get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary')
-                        .click();
+                    cy.get(
+                        '.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary',
+                    ).click();
 
-                    cy
-                        .get('[data-test="saved-search-tag"]')
+                    cy.get('[data-test="saved-search-tag"]')
                         .contains(searchName)
                         .should('exist');
 
-                    cy
-                        .get('[data-test="saved-search-tag"]')
+                    cy.get('[data-test="saved-search-tag"]')
                         .contains(searchName)
                         .trigger('mouseover');
                     cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
@@ -177,15 +174,21 @@ describe('Saved Search Integration Test', function() {
                         .returns(mockResponse(mockResponseAfterDelete));
                 });
 
-                cy.get('#isCurrentSearch ~ button').click();
+                cy.get('#isCurrentSearch ~ div > [data-test="saved-search-delete-button"]').click();
 
-                cy
-                    .get('[data-test="saved-search-tag"]')
-                    .should('have.length', savedSearchResponse.savedSearch.length - 1);
+                cy.get(
+                    '[data-test="saved-search-delete-modal"] ~ .spectrum-Dialog-footer .spectrum-Button--warning',
+                ).click();
 
-                cy
-                    .get('[data-test="saved-search-tag"]:first')
-                    .should('not.have.text', savedSearchResponse.savedSearch[0].name);
+                cy.get('[data-test="saved-search-tag"]').should(
+                    'have.length',
+                    savedSearchResponse.savedSearch.length - 1,
+                );
+
+                cy.get('[data-test="saved-search-tag"]:first').should(
+                    'not.have.text',
+                    savedSearchResponse.savedSearch[0].name,
+                );
             });
         });
     });

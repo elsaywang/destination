@@ -19,7 +19,7 @@ class SavedSearch extends Component {
                 <Heading size={6}>Saved Search</Heading>
                 {!hasError && (
                     <WrappedSavedSearchTagList
-                        isLoaded={Boolean(this.props.list.length)}
+                        isLoaded={this.props.isLoaded}
                         list={this.props.list}
                         onSavedSearchClick={this.props.onSavedSearchClick}
                         currentSearch={this.props.currentSearch}
@@ -33,6 +33,7 @@ class SavedSearch extends Component {
 }
 
 SavedSearch.propTypes = {
+    isLoaded: PropTypes.bool,
     list: PropTypes.array.isRequired,
     getSavedSearch: PropTypes.func.isRequired,
     onSavedSearchClick: PropTypes.func.isRequired,
