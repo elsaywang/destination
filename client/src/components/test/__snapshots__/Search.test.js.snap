@@ -24,6 +24,8 @@ ShallowWrapper {
         },
       }
     }
+    eventFiresMinimum={0}
+    eventFiresStep={1000}
     isCustomDateRangeEnabled={false}
     keyValuePairs={
       Array [
@@ -220,11 +222,12 @@ ShallowWrapper {
                         disabled={false}
                         incrementTitle="Increment"
                         invalid={false}
+                        min={0}
                         onChange={[MockFunction]}
                         placeholder="Enter a number"
                         quiet={true}
                         readOnly={false}
-                        step={1}
+                        step={1000}
                         value={1000}
                       />
                     </Label>
@@ -423,11 +426,12 @@ ShallowWrapper {
                           disabled={false}
                           incrementTitle="Increment"
                           invalid={false}
+                          min={0}
                           onChange={[MockFunction]}
                           placeholder="Enter a number"
                           quiet={true}
                           readOnly={false}
-                          step={1}
+                          step={1000}
                           value={1000}
                         />
                       </Label>
@@ -652,11 +656,12 @@ ShallowWrapper {
                           disabled={false}
                           incrementTitle="Increment"
                           invalid={false}
+                          min={0}
                           onChange={[MockFunction]}
                           placeholder="Enter a number"
                           quiet={true}
                           readOnly={false}
-                          step={1}
+                          step={1000}
                           value={1000}
                         />
                       </Label>
@@ -835,11 +840,12 @@ ShallowWrapper {
                             disabled={false}
                             incrementTitle="Increment"
                             invalid={false}
+                            min={0}
                             onChange={[MockFunction]}
                             placeholder="Enter a number"
                             quiet={true}
                             readOnly={false}
-                            step={1}
+                            step={1000}
                             value={1000}
                           />
                         </Label>
@@ -1016,11 +1022,12 @@ ShallowWrapper {
                             disabled={false}
                             incrementTitle="Increment"
                             invalid={false}
+                            min={0}
                             onChange={[MockFunction]}
                             placeholder="Enter a number"
                             quiet={true}
                             readOnly={false}
-                            step={1}
+                            step={1000}
                             value={1000}
                           />
                         </Label>
@@ -1193,11 +1200,12 @@ ShallowWrapper {
                               disabled={false}
                               incrementTitle="Increment"
                               invalid={false}
+                              min={0}
                               onChange={[MockFunction]}
                               placeholder="Enter a number"
                               quiet={true}
                               readOnly={false}
-                              step={1}
+                              step={1000}
                               value={1000}
                             />
                           </Label>
@@ -1463,11 +1471,12 @@ ShallowWrapper {
                                 disabled={false}
                                 incrementTitle="Increment"
                                 invalid={false}
+                                min={0}
                                 onChange={[MockFunction]}
                                 placeholder="Enter a number"
                                 quiet={true}
                                 readOnly={false}
-                                step={1}
+                                step={1000}
                                 value={1000}
                               />
                             </Label>
@@ -1589,11 +1598,12 @@ ShallowWrapper {
                                   disabled={false}
                                   incrementTitle="Increment"
                                   invalid={false}
+                                  min={0}
                                   onChange={[MockFunction]}
                                   placeholder="Enter a number"
                                   quiet={true}
                                   readOnly={false}
-                                  step={1}
+                                  step={1000}
                                   value={1000}
                                 />
                               </Label>,
@@ -1755,11 +1765,12 @@ ShallowWrapper {
                                   disabled={false}
                                   incrementTitle="Increment"
                                   invalid={false}
+                                  min={0}
                                   onChange={[MockFunction]}
                                   placeholder="Enter a number"
                                   quiet={true}
                                   readOnly={false}
-                                  step={1}
+                                  step={1000}
                                   value={1000}
                                 />,
                                 "value": "Minimum Counts",
@@ -1776,11 +1787,12 @@ ShallowWrapper {
                                   "disabled": false,
                                   "incrementTitle": "Increment",
                                   "invalid": false,
+                                  "min": 0,
                                   "onChange": [MockFunction],
                                   "placeholder": "Enter a number",
                                   "quiet": true,
                                   "readOnly": false,
-                                  "step": 1,
+                                  "step": 1000,
                                   "value": 1000,
                                 },
                                 "ref": null,
@@ -2060,11 +2072,12 @@ ShallowWrapper {
                           disabled={false}
                           incrementTitle="Increment"
                           invalid={false}
+                          min={0}
                           onChange={[MockFunction]}
                           placeholder="Enter a number"
                           quiet={true}
                           readOnly={false}
-                          step={1}
+                          step={1000}
                           value={1000}
                         />
                       </Label>
@@ -2263,11 +2276,12 @@ ShallowWrapper {
                             disabled={false}
                             incrementTitle="Increment"
                             invalid={false}
+                            min={0}
                             onChange={[MockFunction]}
                             placeholder="Enter a number"
                             quiet={true}
                             readOnly={false}
-                            step={1}
+                            step={1000}
                             value={1000}
                           />
                         </Label>
@@ -2492,11 +2506,12 @@ ShallowWrapper {
                             disabled={false}
                             incrementTitle="Increment"
                             invalid={false}
+                            min={0}
                             onChange={[MockFunction]}
                             placeholder="Enter a number"
                             quiet={true}
                             readOnly={false}
-                            step={1}
+                            step={1000}
                             value={1000}
                           />
                         </Label>
@@ -2675,11 +2690,12 @@ ShallowWrapper {
                               disabled={false}
                               incrementTitle="Increment"
                               invalid={false}
+                              min={0}
                               onChange={[MockFunction]}
                               placeholder="Enter a number"
                               quiet={true}
                               readOnly={false}
-                              step={1}
+                              step={1000}
                               value={1000}
                             />
                           </Label>
@@ -2856,11 +2872,12 @@ ShallowWrapper {
                               disabled={false}
                               incrementTitle="Increment"
                               invalid={false}
+                              min={0}
                               onChange={[MockFunction]}
                               placeholder="Enter a number"
                               quiet={true}
                               readOnly={false}
-                              step={1}
+                              step={1000}
                               value={1000}
                             />
                           </Label>
@@ -3033,11 +3050,12 @@ ShallowWrapper {
                                 disabled={false}
                                 incrementTitle="Increment"
                                 invalid={false}
+                                min={0}
                                 onChange={[MockFunction]}
                                 placeholder="Enter a number"
                                 quiet={true}
                                 readOnly={false}
-                                step={1}
+                                step={1000}
                                 value={1000}
                               />
                             </Label>
@@ -3303,11 +3321,12 @@ ShallowWrapper {
                                   disabled={false}
                                   incrementTitle="Increment"
                                   invalid={false}
+                                  min={0}
                                   onChange={[MockFunction]}
                                   placeholder="Enter a number"
                                   quiet={true}
                                   readOnly={false}
-                                  step={1}
+                                  step={1000}
                                   value={1000}
                                 />
                               </Label>
@@ -3429,11 +3448,12 @@ ShallowWrapper {
                                     disabled={false}
                                     incrementTitle="Increment"
                                     invalid={false}
+                                    min={0}
                                     onChange={[MockFunction]}
                                     placeholder="Enter a number"
                                     quiet={true}
                                     readOnly={false}
-                                    step={1}
+                                    step={1000}
                                     value={1000}
                                   />
                                 </Label>,
@@ -3595,11 +3615,12 @@ ShallowWrapper {
                                     disabled={false}
                                     incrementTitle="Increment"
                                     invalid={false}
+                                    min={0}
                                     onChange={[MockFunction]}
                                     placeholder="Enter a number"
                                     quiet={true}
                                     readOnly={false}
-                                    step={1}
+                                    step={1000}
                                     value={1000}
                                   />,
                                   "value": "Minimum Counts",
@@ -3616,11 +3637,12 @@ ShallowWrapper {
                                     "disabled": false,
                                     "incrementTitle": "Increment",
                                     "invalid": false,
+                                    "min": 0,
                                     "onChange": [MockFunction],
                                     "placeholder": "Enter a number",
                                     "quiet": true,
                                     "readOnly": false,
-                                    "step": 1,
+                                    "step": 1000,
                                     "value": 1000,
                                   },
                                   "ref": null,
