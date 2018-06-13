@@ -232,11 +232,10 @@ class SearchContainer extends Component {
     handleSaveThisSearchConfirm = search => {
         const { thisSearch, savedSearch, saveSearch } = this.props;
         const maxId = savedSearch.length ? savedSearch[savedSearch.length - 1].id : -1;
-
         const thisSearchWithKeyValuePairs = {
-            id: maxId + 1,
             ...this.state,
             ...thisSearch,
+            id: maxId + 1,
         };
         const newSavedSearch = [...savedSearch, thisSearchWithKeyValuePairs];
 
