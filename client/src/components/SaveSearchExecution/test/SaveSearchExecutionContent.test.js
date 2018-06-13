@@ -26,7 +26,11 @@ describe('<SaveSearchExecutionContent /> component', () => {
             onSortingOrderChange={mockFn}
         />,
     );
-    describe('rendering', () => {
+    describe('rendering when Checkbox is unchecked', () => {
+        beforeAll(() => {
+            wrapper.instance().toggleCheckbox(false);
+        });
+
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
         });
@@ -43,6 +47,12 @@ describe('<SaveSearchExecutionContent /> component', () => {
         it(`renders <Checkbox/> with correct label and default is unchecked`, () => {
             expect(wrapper.state('isTrackInDashboardChecked')).toBeFalsy();
             expect(wrapper.find(Checkbox).exists()).toBeTruthy();
+        });
+
+        it('renders <Label/> children of <Select/> and <RadioGroup/> including 2 <Radio/>', () => {
+            expect(wrapper.find(Select)).toBeTruthy();
+            expect(wrapper.find(RadioGroup).exists()).toBeTruthy();
+            expect(wrapper.find(Radio).length).toBe(2);
         });
     });
 

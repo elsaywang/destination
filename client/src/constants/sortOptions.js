@@ -8,6 +8,8 @@ export const sortingOptions = sortColumns.map(({ title, key }) => ({
     value: key,
 }));
 
+export const defaultSortingKey = 'percentageChange';
+
 export const radioGroupOptions = [
     { label: 'Descending', value: descending },
     { label: 'Ascending', value: ascending },
