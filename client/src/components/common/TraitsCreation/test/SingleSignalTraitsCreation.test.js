@@ -7,9 +7,9 @@ import SingleSignalTraitsCreation from '../SingleSignalTraitsCreation';
 describe('<SingleSignalTraitsCreation/> component', () => {
     const mockFn = jest.fn();
     const props = {
-        createTraitUrl: 'testUrl',
         traitsCreationLabelText: 'Create Rule-Based Trait',
         canCreateTraits: true,
+        storeSessionAndNavigateToTraits: mockFn,
     };
 
     describe('when user has trait creation permission', () => {
@@ -28,18 +28,6 @@ describe('<SingleSignalTraitsCreation/> component', () => {
             expect(
                 wrapper.containsMatchingElement(<div>{props.traitsCreationLabelText}</div>),
             ).toBeTruthy();
-        });
-
-        describe('<a> child element that hyperlinks to trait create page', () => {
-            const anchor = wrapper.find('a');
-
-            it('renders', () => {
-                expect(anchor.exists()).toBeTruthy();
-            });
-
-            it('has the `createTraitUrl` prop as its href', () => {
-                expect(anchor.props().href).toEqual('testUrl');
-            });
         });
     });
 
