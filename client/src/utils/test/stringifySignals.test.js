@@ -127,38 +127,88 @@ describe('stringifySignals', () => {
         expect(stringifySignals([])).toEqual('');
     });
     describe('value formatting', () => {
-        it('should wrap the value with double quotes if it is a string', () => {
-            const signals = [
-                {
-                    keyValuePairs: [
-                        {
-                            key: 'eVar1',
-                            value: 'xyz123',
-                        },
-                    ],
-                },
-            ];
+        describe('when operator is textual', () => {
+            it('should wrap the value with double quotes if it is a string', () => {
+                const signals = [
+                    {
+                        keyValuePairs: [
+                            {
+                                key: 'eVar1',
+                                value: 'xyz123',
+                                operator: '==',
+                            },
+                            {
+                                key: 'eVar2',
+                                value: 'xyz456',
+                                operator: 'contains',
+                            },
+                        ],
+                    },
+                ];
 
-            expect(stringifySignals(signals).includes('"xyz123"')).toBeTruthy();
+                expect(stringifySignals(signals).includes('"xyz123"')).toBeTruthy();
+                expect(stringifySignals(signals).includes('"xyz456"')).toBeTruthy();
+            });
+            it('should wrap the value with double quotes if it is a number', () => {
+                const signals = [
+                    {
+                        keyValuePairs: [
+                            {
+                                key: 'eVar1',
+                                value: 123,
+                                operator: '==',
+                            },
+                            {
+                                key: 'eVar2',
+                                value: -0.123,
+                                operator: 'contains',
+                            },
+                        ],
+                    },
+                ];
+
+                expect(stringifySignals(signals).includes('"123"')).toBeTruthy();
+                expect(stringifySignals(signals).includes('"-0.123"')).toBeTruthy();
+            });
         });
-        it('should not wrap the value with double quotes if it is a number', () => {
-            const signals = [
-                {
-                    keyValuePairs: [
-                        {
-                            key: 'eVar1',
-                            value: 123,
-                        },
-                        {
-                            key: 'eVar1',
-                            value: -0.123,
-                        },
-                    ],
-                },
-            ];
+        describe('when operator is numeric comparison', () => {
+            it('should not wrap the value with double quotes if it is a number', () => {
+                const signals = [
+                    {
+                        keyValuePairs: [
+                            {
+                                key: 'eVar1',
+                                value: 123,
+                                operator: '<',
+                            },
+                            {
+                                key: 'eVar2',
+                                value: -0.123,
+                                operator: '>',
+                            },
+                            {
+                                key: 'eVar3',
+                                value: 456,
+                                operator: '<=',
+                            },
+                            {
+                                key: 'eVar4',
+                                value: -0.456,
+                                operator: '>=',
+                            },
+                        ],
+                    },
+                ];
 
-            expect(stringifySignals(signals).includes('"123"')).toBeFalsy();
-            expect(stringifySignals(signals).includes('"-0.123"')).toBeFalsy();
+                expect(stringifySignals(signals).includes('"123"')).toBeFalsy();
+                expect(stringifySignals(signals).includes('"-0.123"')).toBeFalsy();
+                expect(stringifySignals(signals).includes('"456"')).toBeFalsy();
+                expect(stringifySignals(signals).includes('"-0.456"')).toBeFalsy();
+                expect(stringifySignals(signals).includes('123')).toBeTruthy();
+                expect(stringifySignals(signals).includes('-0.123')).toBeTruthy();
+                expect(stringifySignals(signals).includes('456')).toBeTruthy();
+                expect(stringifySignals(signals).includes('-0.456')).toBeTruthy();
+            });
         });
     });
 });

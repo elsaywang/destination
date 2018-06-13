@@ -1,5 +1,5 @@
 /* eslint no-useless-escape:0 */
-import { isG6CompliantNumber } from './searchValidation';
+import { isComparisonOperator } from './searchValidation';
 import { isEmpty } from './index';
 
 const orDelimiter = ' OR ';
@@ -11,7 +11,7 @@ const formatOperator = operator => (operator === 'contains' ? ` ${operator} ` : 
 export const stringifyKeyValuePair = ({ key = '', operator = '==', value = '' }) => {
     const normalizedKey = `\"${key}\"`;
     const formattedKey = formatString(normalizedKey);
-    const normalizedValue = isG6CompliantNumber(value) ? value : `\"${value}\"`;
+    const normalizedValue = isComparisonOperator(operator) ? value : `\"${value}\"`;
     const formattedValue = formatString(normalizedValue);
 
     return `${formattedKey}${operator}${formattedValue}`;
@@ -20,7 +20,7 @@ export const stringifyKeyValuePair = ({ key = '', operator = '==', value = '' })
 export const formatKeyValuePair = ({ key = '', operator = '==', value = '' }) => {
     const normalizedKey = `\"${key}\"`;
     const formattedKey = formatString(normalizedKey);
-    const normalizedValue = isG6CompliantNumber(value) ? value : `\"${value}\"`;
+    const normalizedValue = isComparisonOperator(value) ? value : `\"${value}\"`;
     const formattedValue = formatString(normalizedValue);
 
     return `${formattedKey}${formatOperator(operator)}${formattedValue}`;
