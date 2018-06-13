@@ -1,17 +1,23 @@
-const mockResponse = require('../utils/mockResponse');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
+const signalKeysResponse = require('../fixtures/signalKeys.json');
+const reportSuitesResponse = require('../fixtures/reportSuites.json');
+const reportSuitesKeysResponse = require('../fixtures/reportSuitesKeys.json');
 
 describe('Validation Spec', function() {
     beforeEach(function() {
-        cy.visit('#/search', {
-            onBeforeLoad(win) {
-                cy
-                    .stub(win, 'fetch')
-                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
-                    .as('fetchSavedSearch')
-                    .returns(mockResponse(savedSearchResponse.savedSearch));
-            },
-        });
+        cy.server();
+        cy
+            .route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            )
+            .as('fetchSavedSearch');
+        cy
+            .route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse)
+            .as('fetchSignalKeys');
+        cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
+
+        cy.visit('#/search');
     });
 
     describe('when adding another key value pair', function() {

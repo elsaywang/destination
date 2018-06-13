@@ -19,7 +19,7 @@ describe('Search Form Integration Tests', function() {
             .as('fetchSearchResults');
         cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
         cy
-            .route('/portal/api/v1/signals/keys?search=a&total=8', signalKeysResponse)
+            .route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse)
             .as('fetchSignalKeys');
 
         cy.visit('#/search');
