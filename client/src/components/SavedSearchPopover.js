@@ -48,7 +48,7 @@ class SavedSearchPopover extends Component {
             : getDateRangeLabel(search.viewRecordsFor);
     }
 
-    getSignalTypeFilterLabel(source) {
+    getSignalSourceLabel(source) {
         if (source.reportSuiteIds.length) {
             return 'Report Suite';
         }
@@ -61,26 +61,11 @@ class SavedSearchPopover extends Component {
     }
 
     renderSignalSource(source) {
-        const signalTypeBlock = (
-            <FieldLabel position="left" label="Signal Source">
-                <span style={{ verticalAlign: 'bottom' }}>
-                    {getSignalTypeLabel(source.sourceType)}
-                </span>
-            </FieldLabel>
-        );
-        const signalTypeFilter = (
-            <FieldLabel position="left" label={this.getSignalTypeFilterLabel(source)}>
+        return source.reportSuiteIds.length || source.dataSourceIds.length ? (
+            <FieldLabel position="left" label={this.getSignalSourceLabel(source)}>
                 <span style={{ verticalAlign: 'bottom' }}>{source.name}</span>
             </FieldLabel>
-        );
-
-        return source.reportSuiteIds.length || source.dataSourceIds.length ? (
-            <div>
-                {signalTypeBlock} {signalTypeFilter}
-            </div>
-        ) : (
-            { signalTypeBlock }
-        );
+        ) : null;
     }
 
     render() {
@@ -125,6 +110,14 @@ class SavedSearchPopover extends Component {
                                     {getSignalCategory(search.source.sourceType)}
                                 </span>
                             </FieldLabel>
+
+                            {search.source.sourceType && (
+                                <FieldLabel position="left" label="Signal Type">
+                                    <span style={{ verticalAlign: 'bottom' }}>
+                                        {getSignalTypeLabel(search.source.sourceType)}
+                                    </span>
+                                </FieldLabel>
+                            )}
 
                             {search.source.sourceType && this.renderSignalSource(search.source)}
 

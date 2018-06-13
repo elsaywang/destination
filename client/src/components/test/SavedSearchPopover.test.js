@@ -108,7 +108,7 @@ describe('<SavedSearchPopover /> component', () => {
                 ).toBe(false);
             });
 
-            it("contains user's saved search signal source type, filter type 'Report Suite', and name if signal source is 'ANALYTICS'", () => {
+            it("contains user's saved search signal category, signal type, 'Report Suite', and name if signal source is 'ANALYTICS'", () => {
                 const newSearch = {
                     ...search,
                     source: {
@@ -130,7 +130,7 @@ describe('<SavedSearchPopover /> component', () => {
                 expect(
                     newWrapper
                         .find(FieldLabel)
-                        .filterWhere(node => node.props().label === 'Signal Source').length,
+                        .filterWhere(node => node.props().label === 'Signal Category').length,
                 ).toEqual(1);
                 expect(
                     newWrapper
@@ -145,7 +145,7 @@ describe('<SavedSearchPopover /> component', () => {
                 expect(newWrapper.find(Popover).contains(newSearch.source.name)).toBe(true);
             });
 
-            it("contains user's saved search signal source type, filter type 'Onboarded Record', and name if signal source is 'ANALYTICS'", () => {
+            it("contains user's saved search signal category, signal type, 'Onboarded Record', and name if signal source is 'ANALYTICS'", () => {
                 const newSearch = {
                     ...search,
                     source: {
@@ -167,7 +167,7 @@ describe('<SavedSearchPopover /> component', () => {
                 expect(
                     newWrapper
                         .find(FieldLabel)
-                        .filterWhere(node => node.props().label === 'Signal Source').length,
+                        .filterWhere(node => node.props().label === 'Signal Category').length,
                 ).toEqual(1);
                 expect(
                     newWrapper

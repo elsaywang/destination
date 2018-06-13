@@ -11,8 +11,8 @@
                 }
             ],
             "source": {
-                "name": "reportSuite-114",
-                "dataSourceIds": [30634],
+                "name": "",
+                "dataSourceIds": [],
                 "reportSuiteIds": [],
                 "sourceType": "REALTIME"
             },
@@ -41,7 +41,7 @@
                 }
             ],
             "source": {
-                "name": "reportSuite-213",
+                "name": "dataSource-213",
                 "dataSourceIds": [81638],
                 "reportSuiteIds": [],
                 "sourceType": "ONBOARDED"
@@ -74,7 +74,7 @@
                 "name": "",
                 "dataSourceIds": [],
                 "reportSuiteIds": [],
-                "sourceType": null
+                "sourceType": "ALL"
             },
             "minEventFires": 66009,
             "signalStatus": "USED",
@@ -82,7 +82,7 @@
             "customStartDate": "2018-04-24",
             "customEndDate": "2018-05-01",
             "sortBy": "Included In Traits",
-            "categoryType": "Real-Time",
+            "categoryType": "",
             "advanced": false
         },
         {
@@ -102,9 +102,9 @@
             ],
             "source": {
                 "name": "reportSuite-3242",
-                "dataSourceIds": [20179],
+                "dataSourceIds": [],
                 "reportSuiteIds": [],
-                "sourceType": "REALTIME"
+                "sourceType": "ANALYTICS"
             },
             "minEventFires": 2542,
             "signalStatus": "UNUSED",
@@ -134,7 +134,7 @@
                 "name": "",
                 "dataSourceIds": [],
                 "reportSuiteIds": [],
-                "sourceType": null
+                "sourceType": "ALF"
             },
             "minEventFires": 65935,
             "signalStatus": "USED",
@@ -142,7 +142,7 @@
             "customStartDate": "2018-04-24",
             "customEndDate": "2018-05-01",
             "sortBy": "Value Name",
-            "categoryType": "Onboarded",
+            "categoryType": "Real-Time",
             "advanced": false
         }
     ]

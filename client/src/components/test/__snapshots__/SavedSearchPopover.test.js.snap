@@ -502,6 +502,7 @@ ShallowWrapper {
                       </span>
                     </FieldLabel>,
                     null,
+                    null,
                     <FieldLabel
                       label="View Records For"
                       position="left"
@@ -588,6 +589,7 @@ ShallowWrapper {
                     },
                     "type": [Function],
                   },
+                  null,
                   null,
                   Object {
                     "instance": null,
@@ -1094,6 +1096,7 @@ ShallowWrapper {
                         </span>
                       </FieldLabel>,
                       null,
+                      null,
                       <FieldLabel
                         label="View Records For"
                         position="left"
@@ -1180,6 +1183,7 @@ ShallowWrapper {
                       },
                       "type": [Function],
                     },
+                    null,
                     null,
                     Object {
                       "instance": null,
