@@ -27,3 +27,8 @@
 Cypress.Commands.add('getRequestParams', requestAlias =>
     cy.get(requestAlias).then($request => JSON.parse($request.lastCall.args[1].body)),
 );
+
+// Until 'fetch' can be properly mocked, remove `fetch` to force tests to executes XHRs.
+Cypress.on('window:before:load', win => {
+    win.fetch = null;
+});

@@ -1,30 +1,27 @@
-const mockResponse = require('../utils/mockResponse');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const newSavedSearchResponse = require('../fixtures/newSavedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
-const reportSuitesResponse = require('../fixtures/reportSuites.json');
 
 describe('Saved Search Integration Test', function() {
     beforeEach(function() {
-        cy.visit('#/search', {
-            onBeforeLoad(win) {
-                cy.stub(win, 'fetch')
-                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
-                    .as('fetchSavedSearch')
-                    .returns(mockResponse(savedSearchResponse.savedSearch))
-                    .withArgs('/portal/api/v1/signals/list')
-                    .as('fetchSearchResults')
-                    .returns(mockResponse(searchResultsResponse))
-                    .withArgs('/portal/api/v1/report-suites')
-                    .as('fetchReportSuites')
-                    .returns(mockResponse(reportSuitesResponse.list));
-            },
-        });
+        cy.server();
+        cy
+            .route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            )
+            .as('fetchSavedSearch');
+        cy
+            .route('POST', '/portal/api/v1/signals/list', searchResultsResponse)
+            .as('fetchSearchResults');
+
+        cy.visit('#/search');
     });
     it("requests user's saved searches", function() {
-        cy.window()
-            .its('fetch')
-            .should('be.calledWith', '/portal/api/v1/users/self/annotations/aam-portal');
+        cy
+            .wait('@fetchSavedSearch')
+            .its('status')
+            .should('eq', 200);
     });
 
     it("should show user's saved searches, with no delete buttons visible", function() {
@@ -50,10 +47,9 @@ describe('Saved Search Integration Test', function() {
         });
 
         it('should pre-fill Key-Value Pair fields', function() {
-            cy.get('[data-test="key-value-pair"]').should(
-                'have.length',
-                savedSearchResponse.savedSearch[0].keyValuePairs.length,
-            );
+            cy
+                .get('[data-test="key-value-pair"]')
+                .should('have.length', savedSearchResponse.savedSearch[0].keyValuePairs.length);
 
             cy.get('[data-test="key-search-field"]:first').should(function($value) {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].keyValuePairs[0].key);
@@ -119,9 +115,9 @@ describe('Saved Search Integration Test', function() {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
                     });
 
-                    cy.get(
-                        '.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--secondary',
-                    ).click();
+                    cy
+                        .get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--secondary')
+                        .click();
                     cy.get('[data-test="save-this-search-button"]').click();
                     cy.get('[data-test="save-this-search-name-field"]').should('be.empty');
                 });
@@ -130,15 +126,17 @@ describe('Saved Search Integration Test', function() {
             // TODO: add more fields to add values, pending AAM-36729
             describe('when user fills out fields in modal, and clicks "Save" button', function() {
                 beforeEach(function() {
-                    cy.get('@fetchSavedSearch').then(function($stub) {
-                        const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
-                            newSavedSearchResponse,
-                        );
+                    const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
+                        newSavedSearchResponse,
+                    );
 
-                        $stub
-                            .as('fetchSavedSearchAfterCreate')
-                            .returns(mockResponse(mockResponseAfterCreate));
-                    });
+                    cy
+                        .route(
+                            'PUT',
+                            '/portal/api/v1/users/self/annotations/aam-portal',
+                            mockResponseAfterCreate,
+                        )
+                        .as('fetchSavedSearchAfterCreate');
                 });
 
                 it("should save the user's current search", function() {
@@ -148,15 +146,19 @@ describe('Saved Search Integration Test', function() {
                         cy.get('[data-test="save-this-search-name-field"]').type(searchName);
                     });
 
-                    cy.get(
-                        '.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary',
-                    ).click();
+                    cy
+                        .get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary')
+                        .click();
 
-                    cy.get('[data-test="saved-search-tag"]')
+                    cy.wait('@fetchSavedSearchAfterCreate');
+
+                    cy
+                        .get('[data-test="saved-search-tag"]')
                         .contains(searchName)
                         .should('exist');
 
-                    cy.get('[data-test="saved-search-tag"]')
+                    cy
+                        .get('[data-test="saved-search-tag"]')
                         .contains(searchName)
                         .trigger('mouseover');
                     cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
@@ -166,29 +168,33 @@ describe('Saved Search Integration Test', function() {
 
         describe('when the delete button next to it is clicked', function() {
             it("should remove that saved search from user's saved search", function() {
-                cy.get('@fetchSavedSearch').then(function($stub) {
-                    const mockResponseAfterDelete = savedSearchResponse.savedSearch.slice(1);
+                const mockResponseAfterDelete = savedSearchResponse.savedSearch.slice(1);
 
-                    $stub
-                        .as('fetchSavedSearchAfterDelete')
-                        .returns(mockResponse(mockResponseAfterDelete));
-                });
+                cy
+                    .route(
+                        'PUT',
+                        '/portal/api/v1/users/self/annotations/aam-portal',
+                        mockResponseAfterDelete,
+                    )
+                    .as('fetchSavedSearchAfterDelete');
 
                 cy.get('#isCurrentSearch ~ div > [data-test="saved-search-delete-button"]').click();
 
-                cy.get(
-                    '[data-test="saved-search-delete-modal"] ~ .spectrum-Dialog-footer .spectrum-Button--warning',
-                ).click();
+                cy
+                    .get(
+                        '[data-test="saved-search-delete-modal"] ~ .spectrum-Dialog-footer .spectrum-Button--warning',
+                    )
+                    .click();
 
-                cy.get('[data-test="saved-search-tag"]').should(
-                    'have.length',
-                    savedSearchResponse.savedSearch.length - 1,
-                );
+                cy.wait('@fetchSavedSearchAfterDelete');
 
-                cy.get('[data-test="saved-search-tag"]:first').should(
-                    'not.have.text',
-                    savedSearchResponse.savedSearch[0].name,
-                );
+                cy
+                    .get('[data-test="saved-search-tag"]')
+                    .should('have.length', savedSearchResponse.savedSearch.length - 1);
+
+                cy
+                    .get('[data-test="saved-search-tag"]:first')
+                    .should('not.have.text', savedSearchResponse.savedSearch[0].name);
             });
         });
     });
