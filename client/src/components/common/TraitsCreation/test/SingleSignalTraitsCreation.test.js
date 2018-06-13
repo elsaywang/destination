@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Add from '@react/react-spectrum/Icon/Add';
-import Link from '@react/react-spectrum/Link';
 import SingleSignalTraitsCreation from '../SingleSignalTraitsCreation';
 
 describe('<SingleSignalTraitsCreation/> component', () => {

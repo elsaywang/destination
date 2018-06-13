@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
 import MultiSignalsTraitsCreation from './MultiSignalsTraitsCreation';
 import SingleSignalTraitsCreation from './SingleSignalTraitsCreation';
 import { createOnboardedTraitUrl, createRuleBasedTraitUrl } from '../../../utils/urls';
