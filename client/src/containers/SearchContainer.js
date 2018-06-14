@@ -72,16 +72,17 @@ class SearchContainer extends Component {
     }
 
     handleSignalTypeChange = sourceType => {
-        this.setState({
-            source: {
-                name: '',
-                dataSourceIds: [],
-                reportSuiteIds: [],
-                sourceType,
+        this.setState(
+            {
+                source: {
+                    name: '',
+                    dataSourceIds: [],
+                    reportSuiteIds: [],
+                    sourceType,
+                },
             },
-        });
-
-        this.props.callSearch(this.state);
+            () => this.props.callSearch(this.state),
+        );
     };
 
     onAdvancedSearchChange = value => {
