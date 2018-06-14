@@ -1,26 +1,14 @@
-const mockResponse = require('../utils/mockResponse');
-const savedSearchResponse = require('../fixtures/savedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
-const datasourcesResponse = require('../fixtures/reportSuites.json');
 const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json');
 
 describe('Search Form Results Integration Tests', function() {
     beforeEach(function() {
-        cy.visit('#/search', {
-            onBeforeLoad(win) {
-                cy
-                    .stub(win, 'fetch')
-                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
-                    .as('fetchSavedSearch')
-                    .returns(mockResponse(savedSearchResponse.savedSearch))
-                    .withArgs('/portal/api/v1/signals/list')
-                    .as('fetchSearchResults')
-                    .returns(mockResponse(searchResultsResponse))
-                    .withArgs('/portal/api/v1/report-suites')
-                    .as('fetchReportSuites')
-                    .returns(mockResponse(datasourcesResponse.list));
-            },
-        });
+        cy.server();
+        cy
+            .route('POST', '/portal/api/v1/signals/list', searchResultsResponse)
+            .as('fetchSearchResults');
+
+        cy.visit('#/search');
     });
 
     describe('when Search button is clicked', function() {
@@ -35,11 +23,9 @@ describe('Search Form Results Integration Tests', function() {
 
         describe('when no search results exist', function() {
             beforeEach(function() {
-                cy.get('@fetchSearchResults').then(function($stub) {
-                    $stub
-                        .as('fetchEmptySearchResults')
-                        .returns(mockResponse(emptySearchResultsResponse));
-                });
+                cy
+                    .route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse)
+                    .as('fetchEmptySearchResults');
             });
 
             it('should render empty state with no results found image', function() {

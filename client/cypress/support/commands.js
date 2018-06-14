@@ -25,5 +25,10 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('getRequestParams', requestAlias =>
-    cy.get(requestAlias).then($request => JSON.parse($request.lastCall.args[1].body)),
+    cy.get(requestAlias).then($xhr => $xhr.request.body),
 );
+
+// Until 'fetch' can be properly mocked, remove `fetch` to force tests to executes XHRs.
+Cypress.on('window:before:load', win => {
+    win.fetch = null;
+});

@@ -1,4 +1,3 @@
-const mockResponse = require('../utils/mockResponse');
 const searchResultsResponse = require('../fixtures/emptySearchResults.json');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
@@ -8,24 +7,22 @@ describe('Search Form Integration Tests', function() {
     beforeEach(function() {
         cy.clock(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
 
-        cy.visit('#/search', {
-            onBeforeLoad(win) {
-                cy
-                    .stub(win, 'fetch')
-                    .withArgs('/portal/api/v1/signals/list')
-                    .as('fetchSearchResults')
-                    .returns(mockResponse(searchResultsResponse))
-                    .withArgs('/portal/api/v1/users/self/annotations/aam-portal')
-                    .as('fetchSavedSearch')
-                    .returns(mockResponse(savedSearchResponse.savedSearch))
-                    .withArgs('/portal/api/v1/report-suites')
-                    .as('fetchReportSuites')
-                    .returns(mockResponse(reportSuitesResponse.list))
-                    .withArgs('/portal/api/v1/signals/keys?search=a&total=8')
-                    .as('fetchSignalKeys')
-                    .returns(mockResponse(signalKeysResponse));
-            },
-        });
+        cy.server();
+        cy
+            .route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            )
+            .as('fetchSavedSearch');
+        cy
+            .route('POST', '/portal/api/v1/signals/list', searchResultsResponse)
+            .as('fetchSearchResults');
+        cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
+        cy
+            .route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse)
+            .as('fetchSignalKeys');
+
+        cy.visit('#/search');
     });
 
     afterEach(function() {
@@ -42,6 +39,7 @@ describe('Search Form Integration Tests', function() {
         beforeEach(function() {
             cy.get('[data-test="advanced-search-toggle"]').click();
             cy.get('[data-test="advanced-search-filter"]').as('advancedFilter');
+            cy.wait('@fetchReportSuites');
         });
 
         it('should enable filter to filter by user-friendly key names', function() {
@@ -76,6 +74,7 @@ describe('Search Form Integration Tests', function() {
         beforeEach(function() {
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
+            cy.wait('@fetchSignalKeys');
         });
 
         it('should show autocomplete with suggestions', function() {
