@@ -27,7 +27,61 @@ ShallowWrapper {
       }
     }
     fetchUserRoles={[Function]}
-    finalizedSavedSearchList={Array []}
+    finalizedSavedSearchList={
+      Array [
+        Object {
+          "advanced": false,
+          "descending": false,
+          "includeInDashboard": true,
+          "keyValuePairs": Array [
+            Object {
+              "id": 0,
+              "key": "",
+              "operator": "==",
+              "value": "",
+            },
+          ],
+          "minEventFires": 1000,
+          "name": "Top Unused Signals",
+          "presetId": "top-unused-signals",
+          "signalStatus": "ALL",
+          "sortBy": "percentageChange",
+          "source": Object {
+            "dataSourceIds": Array [],
+            "name": "",
+            "reportSuiteIds": Array [],
+            "sourceType": null,
+          },
+          "viewRecordsFor": "7D",
+        },
+        Object {
+          "advanced": false,
+          "descending": false,
+          "filterNewSignals": true,
+          "includeInDashboard": true,
+          "keyValuePairs": Array [
+            Object {
+              "id": 0,
+              "key": "",
+              "operator": "==",
+              "value": "",
+            },
+          ],
+          "minEventFires": 1000,
+          "name": "New Unused Signals",
+          "presetId": "new-unused-signals",
+          "signalStatus": "ALL",
+          "sortBy": "percentageChange",
+          "source": Object {
+            "dataSourceIds": Array [],
+            "name": "",
+            "reportSuiteIds": Array [],
+            "sourceType": null,
+          },
+          "viewRecordsFor": "7D",
+        },
+      ]
+    }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
@@ -175,7 +229,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>
@@ -434,7 +542,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>
@@ -462,7 +624,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>,
@@ -486,7 +702,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />,
                 false,
@@ -508,7 +778,59 @@ ShallowWrapper {
                   },
                   "getSavedSearch": [Function],
                   "isLoaded": false,
-                  "list": Array [],
+                  "list": Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ],
                   "onSavedSearchClick": [Function],
                 },
                 "ref": null,
@@ -669,7 +991,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>
@@ -928,7 +1304,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>
@@ -956,7 +1386,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>,
@@ -980,7 +1464,61 @@ ShallowWrapper {
                     }
                     getSavedSearch={[Function]}
                     isLoaded={false}
-                    list={Array []}
+                    list={
+                      Array [
+                        Object {
+                          "advanced": false,
+                          "descending": false,
+                          "includeInDashboard": true,
+                          "keyValuePairs": Array [
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "==",
+                              "value": "",
+                            },
+                          ],
+                          "minEventFires": 1000,
+                          "name": "Top Unused Signals",
+                          "presetId": "top-unused-signals",
+                          "signalStatus": "ALL",
+                          "sortBy": "percentageChange",
+                          "source": Object {
+                            "dataSourceIds": Array [],
+                            "name": "",
+                            "reportSuiteIds": Array [],
+                            "sourceType": null,
+                          },
+                          "viewRecordsFor": "7D",
+                        },
+                        Object {
+                          "advanced": false,
+                          "descending": false,
+                          "filterNewSignals": true,
+                          "includeInDashboard": true,
+                          "keyValuePairs": Array [
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "==",
+                              "value": "",
+                            },
+                          ],
+                          "minEventFires": 1000,
+                          "name": "New Unused Signals",
+                          "presetId": "new-unused-signals",
+                          "signalStatus": "ALL",
+                          "sortBy": "percentageChange",
+                          "source": Object {
+                            "dataSourceIds": Array [],
+                            "name": "",
+                            "reportSuiteIds": Array [],
+                            "sourceType": null,
+                          },
+                          "viewRecordsFor": "7D",
+                        },
+                      ]
+                    }
                     onSavedSearchClick={[Function]}
                   />,
                   false,
@@ -1002,7 +1540,59 @@ ShallowWrapper {
                     },
                     "getSavedSearch": [Function],
                     "isLoaded": false,
-                    "list": Array [],
+                    "list": Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ],
                     "onSavedSearchClick": [Function],
                   },
                   "ref": null,
@@ -1111,7 +1701,61 @@ ShallowWrapper {
       }
     }
     fetchUserRoles={[Function]}
-    finalizedSavedSearchList={Array []}
+    finalizedSavedSearchList={
+      Array [
+        Object {
+          "advanced": false,
+          "descending": false,
+          "includeInDashboard": true,
+          "keyValuePairs": Array [
+            Object {
+              "id": 0,
+              "key": "",
+              "operator": "==",
+              "value": "",
+            },
+          ],
+          "minEventFires": 1000,
+          "name": "Top Unused Signals",
+          "presetId": "top-unused-signals",
+          "signalStatus": "ALL",
+          "sortBy": "percentageChange",
+          "source": Object {
+            "dataSourceIds": Array [],
+            "name": "",
+            "reportSuiteIds": Array [],
+            "sourceType": null,
+          },
+          "viewRecordsFor": "7D",
+        },
+        Object {
+          "advanced": false,
+          "descending": false,
+          "filterNewSignals": true,
+          "includeInDashboard": true,
+          "keyValuePairs": Array [
+            Object {
+              "id": 0,
+              "key": "",
+              "operator": "==",
+              "value": "",
+            },
+          ],
+          "minEventFires": 1000,
+          "name": "New Unused Signals",
+          "presetId": "new-unused-signals",
+          "signalStatus": "ALL",
+          "sortBy": "percentageChange",
+          "source": Object {
+            "dataSourceIds": Array [],
+            "name": "",
+            "reportSuiteIds": Array [],
+            "sourceType": null,
+          },
+          "viewRecordsFor": "7D",
+        },
+      ]
+    }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
@@ -1256,7 +1900,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>
@@ -1515,7 +2213,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>
@@ -1543,7 +2295,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>,
@@ -1567,7 +2373,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />,
                 false,
@@ -1589,7 +2449,59 @@ ShallowWrapper {
                   },
                   "getSavedSearch": [Function],
                   "isLoaded": false,
-                  "list": Array [],
+                  "list": Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ],
                   "onSavedSearchClick": [Function],
                 },
                 "ref": null,
@@ -1750,7 +2662,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>
@@ -2009,7 +2975,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>
@@ -2037,7 +3057,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>,
@@ -2061,7 +3135,61 @@ ShallowWrapper {
                     }
                     getSavedSearch={[Function]}
                     isLoaded={false}
-                    list={Array []}
+                    list={
+                      Array [
+                        Object {
+                          "advanced": false,
+                          "descending": false,
+                          "includeInDashboard": true,
+                          "keyValuePairs": Array [
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "==",
+                              "value": "",
+                            },
+                          ],
+                          "minEventFires": 1000,
+                          "name": "Top Unused Signals",
+                          "presetId": "top-unused-signals",
+                          "signalStatus": "ALL",
+                          "sortBy": "percentageChange",
+                          "source": Object {
+                            "dataSourceIds": Array [],
+                            "name": "",
+                            "reportSuiteIds": Array [],
+                            "sourceType": null,
+                          },
+                          "viewRecordsFor": "7D",
+                        },
+                        Object {
+                          "advanced": false,
+                          "descending": false,
+                          "filterNewSignals": true,
+                          "includeInDashboard": true,
+                          "keyValuePairs": Array [
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "==",
+                              "value": "",
+                            },
+                          ],
+                          "minEventFires": 1000,
+                          "name": "New Unused Signals",
+                          "presetId": "new-unused-signals",
+                          "signalStatus": "ALL",
+                          "sortBy": "percentageChange",
+                          "source": Object {
+                            "dataSourceIds": Array [],
+                            "name": "",
+                            "reportSuiteIds": Array [],
+                            "sourceType": null,
+                          },
+                          "viewRecordsFor": "7D",
+                        },
+                      ]
+                    }
                     onSavedSearchClick={[Function]}
                   />,
                   false,
@@ -2083,7 +3211,59 @@ ShallowWrapper {
                     },
                     "getSavedSearch": [Function],
                     "isLoaded": false,
-                    "list": Array [],
+                    "list": Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ],
                     "onSavedSearchClick": [Function],
                   },
                   "ref": null,
@@ -2192,7 +3372,61 @@ ShallowWrapper {
       }
     }
     fetchUserRoles={[Function]}
-    finalizedSavedSearchList={Array []}
+    finalizedSavedSearchList={
+      Array [
+        Object {
+          "advanced": false,
+          "descending": false,
+          "includeInDashboard": true,
+          "keyValuePairs": Array [
+            Object {
+              "id": 0,
+              "key": "",
+              "operator": "==",
+              "value": "",
+            },
+          ],
+          "minEventFires": 1000,
+          "name": "Top Unused Signals",
+          "presetId": "top-unused-signals",
+          "signalStatus": "ALL",
+          "sortBy": "percentageChange",
+          "source": Object {
+            "dataSourceIds": Array [],
+            "name": "",
+            "reportSuiteIds": Array [],
+            "sourceType": null,
+          },
+          "viewRecordsFor": "7D",
+        },
+        Object {
+          "advanced": false,
+          "descending": false,
+          "filterNewSignals": true,
+          "includeInDashboard": true,
+          "keyValuePairs": Array [
+            Object {
+              "id": 0,
+              "key": "",
+              "operator": "==",
+              "value": "",
+            },
+          ],
+          "minEventFires": 1000,
+          "name": "New Unused Signals",
+          "presetId": "new-unused-signals",
+          "signalStatus": "ALL",
+          "sortBy": "percentageChange",
+          "source": Object {
+            "dataSourceIds": Array [],
+            "name": "",
+            "reportSuiteIds": Array [],
+            "sourceType": null,
+          },
+          "viewRecordsFor": "7D",
+        },
+      ]
+    }
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     getSavedSearchLimit={[Function]}
@@ -2337,7 +3571,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>
@@ -2596,7 +3884,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>
@@ -2624,7 +3966,61 @@ ShallowWrapper {
                 }
                 getSavedSearch={[Function]}
                 isLoaded={false}
-                list={Array []}
+                list={
+                  Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ]
+                }
                 onSavedSearchClick={[Function]}
               />
             </div>,
@@ -2648,7 +4044,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />,
                 false,
@@ -2670,7 +4120,59 @@ ShallowWrapper {
                   },
                   "getSavedSearch": [Function],
                   "isLoaded": false,
-                  "list": Array [],
+                  "list": Array [
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "Top Unused Signals",
+                      "presetId": "top-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                    Object {
+                      "advanced": false,
+                      "descending": false,
+                      "filterNewSignals": true,
+                      "includeInDashboard": true,
+                      "keyValuePairs": Array [
+                        Object {
+                          "id": 0,
+                          "key": "",
+                          "operator": "==",
+                          "value": "",
+                        },
+                      ],
+                      "minEventFires": 1000,
+                      "name": "New Unused Signals",
+                      "presetId": "new-unused-signals",
+                      "signalStatus": "ALL",
+                      "sortBy": "percentageChange",
+                      "source": Object {
+                        "dataSourceIds": Array [],
+                        "name": "",
+                        "reportSuiteIds": Array [],
+                        "sourceType": null,
+                      },
+                      "viewRecordsFor": "7D",
+                    },
+                  ],
                   "onSavedSearchClick": [Function],
                 },
                 "ref": null,
@@ -2831,7 +4333,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>
@@ -3090,7 +4646,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>
@@ -3118,7 +4728,61 @@ ShallowWrapper {
                   }
                   getSavedSearch={[Function]}
                   isLoaded={false}
-                  list={Array []}
+                  list={
+                    Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ]
+                  }
                   onSavedSearchClick={[Function]}
                 />
               </div>,
@@ -3142,7 +4806,61 @@ ShallowWrapper {
                     }
                     getSavedSearch={[Function]}
                     isLoaded={false}
-                    list={Array []}
+                    list={
+                      Array [
+                        Object {
+                          "advanced": false,
+                          "descending": false,
+                          "includeInDashboard": true,
+                          "keyValuePairs": Array [
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "==",
+                              "value": "",
+                            },
+                          ],
+                          "minEventFires": 1000,
+                          "name": "Top Unused Signals",
+                          "presetId": "top-unused-signals",
+                          "signalStatus": "ALL",
+                          "sortBy": "percentageChange",
+                          "source": Object {
+                            "dataSourceIds": Array [],
+                            "name": "",
+                            "reportSuiteIds": Array [],
+                            "sourceType": null,
+                          },
+                          "viewRecordsFor": "7D",
+                        },
+                        Object {
+                          "advanced": false,
+                          "descending": false,
+                          "filterNewSignals": true,
+                          "includeInDashboard": true,
+                          "keyValuePairs": Array [
+                            Object {
+                              "id": 0,
+                              "key": "",
+                              "operator": "==",
+                              "value": "",
+                            },
+                          ],
+                          "minEventFires": 1000,
+                          "name": "New Unused Signals",
+                          "presetId": "new-unused-signals",
+                          "signalStatus": "ALL",
+                          "sortBy": "percentageChange",
+                          "source": Object {
+                            "dataSourceIds": Array [],
+                            "name": "",
+                            "reportSuiteIds": Array [],
+                            "sourceType": null,
+                          },
+                          "viewRecordsFor": "7D",
+                        },
+                      ]
+                    }
                     onSavedSearchClick={[Function]}
                   />,
                   false,
@@ -3164,7 +4882,59 @@ ShallowWrapper {
                     },
                     "getSavedSearch": [Function],
                     "isLoaded": false,
-                    "list": Array [],
+                    "list": Array [
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "Top Unused Signals",
+                        "presetId": "top-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                      Object {
+                        "advanced": false,
+                        "descending": false,
+                        "filterNewSignals": true,
+                        "includeInDashboard": true,
+                        "keyValuePairs": Array [
+                          Object {
+                            "id": 0,
+                            "key": "",
+                            "operator": "==",
+                            "value": "",
+                          },
+                        ],
+                        "minEventFires": 1000,
+                        "name": "New Unused Signals",
+                        "presetId": "new-unused-signals",
+                        "signalStatus": "ALL",
+                        "sortBy": "percentageChange",
+                        "source": Object {
+                          "dataSourceIds": Array [],
+                          "name": "",
+                          "reportSuiteIds": Array [],
+                          "sourceType": null,
+                        },
+                        "viewRecordsFor": "7D",
+                      },
+                    ],
                     "onSavedSearchClick": [Function],
                   },
                   "ref": null,

@@ -208,23 +208,28 @@ describe('Saved Search Integration Test', function() {
         });
     });
 
-    describe('Preset saved searches', function() {
+    describe.only('Preset saved searches', function() {
         beforeEach(() => {
-            cy.get('[data-saved-search="top-unused-signals"]').as('topUnusedSignalsTag');
-            cy.get('[data-saved-search="new-unused-signals"]').as('newUnusedSignalsTag');
+            cy.get('[data-saved-search-preset="top-unused-signals"]').as('topUnusedSignalsTag');
+            cy.get('[data-saved-search-preset="new-unused-signals"]').as('newUnusedSignalsTag');
         });
 
         it('should render first when user-defined saved searches exist', () => {
             cy.get('@topUnusedSignalsTag').should('be.visible');
             cy.get('@newUnusedSignalsTag').should('be.visible');
+
             cy
                 .get('[data-test="saved-search-tag"]:first')
-                .should('have.attr', 'data-saved-search', 'top-unused-signals');
+                .should('have.attr', 'data-saved-search-preset', 'top-unused-signals');
             cy
-                .get('[data-test="saved-search-tag"]:nth-of-type(2)')
-                .should('have.attr', 'data-saved-search', 'new-unused-signals');
+                .get(
+                    '[data-test="saved-search-tag-list"] > span:nth-child(2) > [data-test="saved-search-tag"]',
+                )
+                .should('have.attr', 'data-saved-search-preset', 'new-unused-signals');
             cy
-                .get('[data-test="saved-search-tag"]:nth-of-type(3)')
+                .get(
+                    '[data-test="saved-search-tag-list"] > span:nth-child(3) > [data-test="saved-search-tag"]',
+                )
                 .should('have.text', savedSearchResponse.savedSearch[0].name);
         });
 
@@ -348,15 +353,10 @@ describe('Saved Search Integration Test', function() {
 
             cy.getRequestParams('@createSavedSearch').then(savedSearchList => {
                 expect(
-                    savedSearchList.find(
-                        savedSearch => savedSearch.presetId === 'top-unused-signals',
-                    ),
-                ).to.be.undefined;
-                expect(
-                    savedSearchList.find(
-                        savedSearch => savedSearch.presetId === 'new-unused-signals',
-                    ),
-                ).to.be.undefined;
+                    savedSearchList.filter(
+                        savedSearch => typeof savedSearch.presetId !== 'undefined',
+                    ).length,
+                ).to.eq(0);
             });
         });
 

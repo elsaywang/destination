@@ -88,6 +88,7 @@ ShallowWrapper {
         >
           <Tag
             className={undefined}
+            data-saved-search-preset={undefined}
             data-test="saved-search-tag"
             id={null}
             onClick={[Function]}
@@ -107,7 +108,9 @@ ShallowWrapper {
             >
               Name
             </Heading>
-            <div>
+            <div
+              data-test="saved-search-popover-name"
+            >
               Loren Waters
             </div>
             <Heading
@@ -116,7 +119,9 @@ ShallowWrapper {
             >
               Search Query
             </Heading>
-            <div>
+            <div
+              data-test="saved-search-popover-search-query"
+            >
               "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
             </div>
             <Heading
@@ -131,6 +136,7 @@ ShallowWrapper {
                 position="left"
               >
                 <span
+                  data-test="saved-search-popover-signal-status"
                   style={
                     Object {
                       "verticalAlign": "bottom",
@@ -145,6 +151,7 @@ ShallowWrapper {
                 position="left"
               >
                 <span
+                  data-test="saved-search-popover-signal-category"
                   style={
                     Object {
                       "verticalAlign": "bottom",
@@ -159,6 +166,7 @@ ShallowWrapper {
                 position="left"
               >
                 <span
+                  data-test="saved-search-popover-view-records-for"
                   style={
                     Object {
                       "verticalAlign": "bottom",
@@ -175,7 +183,9 @@ ShallowWrapper {
             >
               Sorting
             </Heading>
-            <div>
+            <div
+              data-test="saved-search-popover-sort-by"
+            >
               Percentage Change
             </div>
           </Popover>
@@ -195,6 +205,7 @@ ShallowWrapper {
           "children": Array [
             <Tag
               className={undefined}
+              data-saved-search-preset={undefined}
               data-test="saved-search-tag"
               id={null}
               onClick={[Function]}
@@ -214,7 +225,9 @@ ShallowWrapper {
               >
                 Name
               </Heading>
-              <div>
+              <div
+                data-test="saved-search-popover-name"
+              >
                 Loren Waters
               </div>
               <Heading
@@ -223,7 +236,9 @@ ShallowWrapper {
               >
                 Search Query
               </Heading>
-              <div>
+              <div
+                data-test="saved-search-popover-search-query"
+              >
                 "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
               </div>
               <Heading
@@ -238,6 +253,7 @@ ShallowWrapper {
                   position="left"
                 >
                   <span
+                    data-test="saved-search-popover-signal-status"
                     style={
                       Object {
                         "verticalAlign": "bottom",
@@ -252,6 +268,7 @@ ShallowWrapper {
                   position="left"
                 >
                   <span
+                    data-test="saved-search-popover-signal-category"
                     style={
                       Object {
                         "verticalAlign": "bottom",
@@ -266,6 +283,7 @@ ShallowWrapper {
                   position="left"
                 >
                   <span
+                    data-test="saved-search-popover-view-records-for"
                     style={
                       Object {
                         "verticalAlign": "bottom",
@@ -282,7 +300,9 @@ ShallowWrapper {
               >
                 Sorting
               </Heading>
-              <div>
+              <div
+                data-test="saved-search-popover-sort-by"
+              >
                 Percentage Change
               </div>
             </Popover>,
@@ -304,6 +324,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "className": undefined,
+              "data-saved-search-preset": undefined,
               "data-test": "saved-search-tag",
               "id": null,
               "onClick": [Function],
@@ -325,7 +346,9 @@ ShallowWrapper {
                 >
                   Name
                 </Heading>,
-                <div>
+                <div
+                  data-test="saved-search-popover-name"
+                >
                   Loren Waters
                 </div>,
                 <Heading
@@ -334,7 +357,9 @@ ShallowWrapper {
                 >
                   Search Query
                 </Heading>,
-                <div>
+                <div
+                  data-test="saved-search-popover-search-query"
+                >
                   "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
                 </div>,
                 <Heading
@@ -349,6 +374,7 @@ ShallowWrapper {
                     position="left"
                   >
                     <span
+                      data-test="saved-search-popover-signal-status"
                       style={
                         Object {
                           "verticalAlign": "bottom",
@@ -363,6 +389,7 @@ ShallowWrapper {
                     position="left"
                   >
                     <span
+                      data-test="saved-search-popover-signal-category"
                       style={
                         Object {
                           "verticalAlign": "bottom",
@@ -377,6 +404,7 @@ ShallowWrapper {
                     position="left"
                   >
                     <span
+                      data-test="saved-search-popover-view-records-for"
                       style={
                         Object {
                           "verticalAlign": "bottom",
@@ -393,7 +421,9 @@ ShallowWrapper {
                 >
                   Sorting
                 </Heading>,
-                <div>
+                <div
+                  data-test="saved-search-popover-sort-by"
+                >
                   Percentage Change
                 </div>,
               ],
@@ -425,6 +455,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Loren Waters",
+                  "data-test": "saved-search-popover-name",
                 },
                 "ref": null,
                 "rendered": "Loren Waters",
@@ -449,6 +480,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "\\"k-Licensed\\">=\\"67425\\" AND \\"k-Gorgeous Wooden Shirt\\"<=\\"98397\\"",
+                  "data-test": "saved-search-popover-search-query",
                 },
                 "ref": null,
                 "rendered": "\\"k-Licensed\\">=\\"67425\\" AND \\"k-Gorgeous Wooden Shirt\\"<=\\"98397\\"",
@@ -478,6 +510,7 @@ ShallowWrapper {
                       position="left"
                     >
                       <span
+                        data-test="saved-search-popover-signal-status"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -492,6 +525,7 @@ ShallowWrapper {
                       position="left"
                     >
                       <span
+                        data-test="saved-search-popover-signal-category"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -508,6 +542,7 @@ ShallowWrapper {
                       position="left"
                     >
                       <span
+                        data-test="saved-search-popover-view-records-for"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -527,6 +562,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": <span
+                        data-test="saved-search-popover-signal-status"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -545,6 +581,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "Signals Included in Traits",
+                        "data-test": "saved-search-popover-signal-status",
                         "style": Object {
                           "verticalAlign": "bottom",
                         },
@@ -561,6 +598,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": <span
+                        data-test="saved-search-popover-signal-category"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -579,6 +617,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "Real-Time",
+                        "data-test": "saved-search-popover-signal-category",
                         "style": Object {
                           "verticalAlign": "bottom",
                         },
@@ -597,6 +636,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": <span
+                        data-test="saved-search-popover-view-records-for"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -615,6 +655,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "Last 7 Days",
+                        "data-test": "saved-search-popover-view-records-for",
                         "style": Object {
                           "verticalAlign": "bottom",
                         },
@@ -647,6 +688,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Percentage Change",
+                  "data-test": "saved-search-popover-sort-by",
                 },
                 "ref": null,
                 "rendered": "Percentage Change",
@@ -682,6 +724,7 @@ ShallowWrapper {
           >
             <Tag
               className={undefined}
+              data-saved-search-preset={undefined}
               data-test="saved-search-tag"
               id={null}
               onClick={[Function]}
@@ -701,7 +744,9 @@ ShallowWrapper {
               >
                 Name
               </Heading>
-              <div>
+              <div
+                data-test="saved-search-popover-name"
+              >
                 Loren Waters
               </div>
               <Heading
@@ -710,7 +755,9 @@ ShallowWrapper {
               >
                 Search Query
               </Heading>
-              <div>
+              <div
+                data-test="saved-search-popover-search-query"
+              >
                 "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
               </div>
               <Heading
@@ -725,6 +772,7 @@ ShallowWrapper {
                   position="left"
                 >
                   <span
+                    data-test="saved-search-popover-signal-status"
                     style={
                       Object {
                         "verticalAlign": "bottom",
@@ -739,6 +787,7 @@ ShallowWrapper {
                   position="left"
                 >
                   <span
+                    data-test="saved-search-popover-signal-category"
                     style={
                       Object {
                         "verticalAlign": "bottom",
@@ -753,6 +802,7 @@ ShallowWrapper {
                   position="left"
                 >
                   <span
+                    data-test="saved-search-popover-view-records-for"
                     style={
                       Object {
                         "verticalAlign": "bottom",
@@ -769,7 +819,9 @@ ShallowWrapper {
               >
                 Sorting
               </Heading>
-              <div>
+              <div
+                data-test="saved-search-popover-sort-by"
+              >
                 Percentage Change
               </div>
             </Popover>
@@ -789,6 +841,7 @@ ShallowWrapper {
             "children": Array [
               <Tag
                 className={undefined}
+                data-saved-search-preset={undefined}
                 data-test="saved-search-tag"
                 id={null}
                 onClick={[Function]}
@@ -808,7 +861,9 @@ ShallowWrapper {
                 >
                   Name
                 </Heading>
-                <div>
+                <div
+                  data-test="saved-search-popover-name"
+                >
                   Loren Waters
                 </div>
                 <Heading
@@ -817,7 +872,9 @@ ShallowWrapper {
                 >
                   Search Query
                 </Heading>
-                <div>
+                <div
+                  data-test="saved-search-popover-search-query"
+                >
                   "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
                 </div>
                 <Heading
@@ -832,6 +889,7 @@ ShallowWrapper {
                     position="left"
                   >
                     <span
+                      data-test="saved-search-popover-signal-status"
                       style={
                         Object {
                           "verticalAlign": "bottom",
@@ -846,6 +904,7 @@ ShallowWrapper {
                     position="left"
                   >
                     <span
+                      data-test="saved-search-popover-signal-category"
                       style={
                         Object {
                           "verticalAlign": "bottom",
@@ -860,6 +919,7 @@ ShallowWrapper {
                     position="left"
                   >
                     <span
+                      data-test="saved-search-popover-view-records-for"
                       style={
                         Object {
                           "verticalAlign": "bottom",
@@ -876,7 +936,9 @@ ShallowWrapper {
                 >
                   Sorting
                 </Heading>
-                <div>
+                <div
+                  data-test="saved-search-popover-sort-by"
+                >
                   Percentage Change
                 </div>
               </Popover>,
@@ -898,6 +960,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "className": undefined,
+                "data-saved-search-preset": undefined,
                 "data-test": "saved-search-tag",
                 "id": null,
                 "onClick": [Function],
@@ -919,7 +982,9 @@ ShallowWrapper {
                   >
                     Name
                   </Heading>,
-                  <div>
+                  <div
+                    data-test="saved-search-popover-name"
+                  >
                     Loren Waters
                   </div>,
                   <Heading
@@ -928,7 +993,9 @@ ShallowWrapper {
                   >
                     Search Query
                   </Heading>,
-                  <div>
+                  <div
+                    data-test="saved-search-popover-search-query"
+                  >
                     "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
                   </div>,
                   <Heading
@@ -943,6 +1010,7 @@ ShallowWrapper {
                       position="left"
                     >
                       <span
+                        data-test="saved-search-popover-signal-status"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -957,6 +1025,7 @@ ShallowWrapper {
                       position="left"
                     >
                       <span
+                        data-test="saved-search-popover-signal-category"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -971,6 +1040,7 @@ ShallowWrapper {
                       position="left"
                     >
                       <span
+                        data-test="saved-search-popover-view-records-for"
                         style={
                           Object {
                             "verticalAlign": "bottom",
@@ -987,7 +1057,9 @@ ShallowWrapper {
                   >
                     Sorting
                   </Heading>,
-                  <div>
+                  <div
+                    data-test="saved-search-popover-sort-by"
+                  >
                     Percentage Change
                   </div>,
                 ],
@@ -1019,6 +1091,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Loren Waters",
+                    "data-test": "saved-search-popover-name",
                   },
                   "ref": null,
                   "rendered": "Loren Waters",
@@ -1043,6 +1116,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "\\"k-Licensed\\">=\\"67425\\" AND \\"k-Gorgeous Wooden Shirt\\"<=\\"98397\\"",
+                    "data-test": "saved-search-popover-search-query",
                   },
                   "ref": null,
                   "rendered": "\\"k-Licensed\\">=\\"67425\\" AND \\"k-Gorgeous Wooden Shirt\\"<=\\"98397\\"",
@@ -1072,6 +1146,7 @@ ShallowWrapper {
                         position="left"
                       >
                         <span
+                          data-test="saved-search-popover-signal-status"
                           style={
                             Object {
                               "verticalAlign": "bottom",
@@ -1086,6 +1161,7 @@ ShallowWrapper {
                         position="left"
                       >
                         <span
+                          data-test="saved-search-popover-signal-category"
                           style={
                             Object {
                               "verticalAlign": "bottom",
@@ -1102,6 +1178,7 @@ ShallowWrapper {
                         position="left"
                       >
                         <span
+                          data-test="saved-search-popover-view-records-for"
                           style={
                             Object {
                               "verticalAlign": "bottom",
@@ -1121,6 +1198,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": <span
+                          data-test="saved-search-popover-signal-status"
                           style={
                             Object {
                               "verticalAlign": "bottom",
@@ -1139,6 +1217,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": "Signals Included in Traits",
+                          "data-test": "saved-search-popover-signal-status",
                           "style": Object {
                             "verticalAlign": "bottom",
                           },
@@ -1155,6 +1234,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": <span
+                          data-test="saved-search-popover-signal-category"
                           style={
                             Object {
                               "verticalAlign": "bottom",
@@ -1173,6 +1253,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": "Real-Time",
+                          "data-test": "saved-search-popover-signal-category",
                           "style": Object {
                             "verticalAlign": "bottom",
                           },
@@ -1191,6 +1272,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": <span
+                          data-test="saved-search-popover-view-records-for"
                           style={
                             Object {
                               "verticalAlign": "bottom",
@@ -1209,6 +1291,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": "Last 7 Days",
+                          "data-test": "saved-search-popover-view-records-for",
                           "style": Object {
                             "verticalAlign": "bottom",
                           },
@@ -1241,6 +1324,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Percentage Change",
+                    "data-test": "saved-search-popover-sort-by",
                   },
                   "ref": null,
                   "rendered": "Percentage Change",
