@@ -58,6 +58,7 @@ ShallowWrapper {
           open={true}
           placement="bottom"
           title="Included in 3 Traits"
+          trapFocus={true}
           variant="default"
         >
           <Wait />
@@ -93,6 +94,7 @@ ShallowWrapper {
             open={true}
             placement="bottom"
             title="Included in 3 Traits"
+            trapFocus={true}
             variant="default"
           >
             <Wait />
@@ -143,6 +145,7 @@ ShallowWrapper {
             "open": true,
             "placement": "bottom",
             "title": "Included in 3 Traits",
+            "trapFocus": true,
             "variant": "default",
           },
           "ref": null,
@@ -201,6 +204,7 @@ ShallowWrapper {
             open={true}
             placement="bottom"
             title="Included in 3 Traits"
+            trapFocus={true}
             variant="default"
           >
             <Wait />
@@ -236,6 +240,7 @@ ShallowWrapper {
               open={true}
               placement="bottom"
               title="Included in 3 Traits"
+              trapFocus={true}
               variant="default"
             >
               <Wait />
@@ -286,6 +291,7 @@ ShallowWrapper {
               "open": true,
               "placement": "bottom",
               "title": "Included in 3 Traits",
+              "trapFocus": true,
               "variant": "default",
             },
             "ref": null,
