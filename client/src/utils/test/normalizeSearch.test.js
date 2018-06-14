@@ -21,7 +21,7 @@ describe('normalizeSearch util', () => {
             dataSourceIds: null,
             name: '',
             reportSuiteIds: null,
-            sourceType: null,
+            sourceType: 'ALL',
         },
         viewRecordsFor: '7D',
     };
@@ -104,7 +104,7 @@ describe('normalizeSearch util', () => {
     });
 
     describe('normalizing source type', () => {
-        it('should set `sourceType` to an empty string if it is "ALL"', () => {
+        it('should set `sourceType` to `null` if it is "ALL"', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
                 source: {
@@ -113,7 +113,7 @@ describe('normalizeSearch util', () => {
                 },
             });
             const { sourceType: actual } = source;
-            const expected = '';
+            const expected = null;
 
             expect(actual).toEqual(expected);
         });

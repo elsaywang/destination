@@ -147,7 +147,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -263,7 +263,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -335,7 +335,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -400,7 +400,7 @@ ShallowWrapper {
                 "dataSourceIds": Array [],
                 "name": "",
                 "reportSuiteIds": Array [],
-                "sourceType": null,
+                "sourceType": "ALL",
               },
               "viewRecordsFor": "7D",
             },
@@ -641,7 +641,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -757,7 +757,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -829,7 +829,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -894,7 +894,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 },
                 "viewRecordsFor": "7D",
               },
@@ -1228,7 +1228,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -1344,7 +1344,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -1416,7 +1416,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -1481,7 +1481,7 @@ ShallowWrapper {
                 "dataSourceIds": Array [],
                 "name": "",
                 "reportSuiteIds": Array [],
-                "sourceType": null,
+                "sourceType": "ALL",
               },
               "viewRecordsFor": "7D",
             },
@@ -1722,7 +1722,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -1838,7 +1838,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -1910,7 +1910,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -1975,7 +1975,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 },
                 "viewRecordsFor": "7D",
               },
@@ -2309,7 +2309,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -2425,7 +2425,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -2497,7 +2497,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 }
               }
               viewRecordsFor="7D"
@@ -2562,7 +2562,7 @@ ShallowWrapper {
                 "dataSourceIds": Array [],
                 "name": "",
                 "reportSuiteIds": Array [],
-                "sourceType": null,
+                "sourceType": "ALL",
               },
               "viewRecordsFor": "7D",
             },
@@ -2803,7 +2803,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -2919,7 +2919,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -2991,7 +2991,7 @@ ShallowWrapper {
                     "dataSourceIds": Array [],
                     "name": "",
                     "reportSuiteIds": Array [],
-                    "sourceType": null,
+                    "sourceType": "ALL",
                   }
                 }
                 viewRecordsFor="7D"
@@ -3056,7 +3056,7 @@ ShallowWrapper {
                   "dataSourceIds": Array [],
                   "name": "",
                   "reportSuiteIds": Array [],
-                  "sourceType": null,
+                  "sourceType": "ALL",
                 },
                 "viewRecordsFor": "7D",
               },

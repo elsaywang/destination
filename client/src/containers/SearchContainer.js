@@ -44,7 +44,7 @@ class SearchContainer extends Component {
                 name: '',
                 dataSourceIds: [],
                 reportSuiteIds: [],
-                sourceType: null,
+                sourceType: 'ALL',
             },
             viewRecordsFor: '7D',
             customStartDate: getDefaultCustomStartDate(),
@@ -270,7 +270,7 @@ class SearchContainer extends Component {
                 name: '',
                 dataSourceIds: [],
                 reportSuiteIds: [],
-                sourceType: null,
+                sourceType: 'ALL',
             },
             viewRecordsFor: '7D',
             customStartDate: getDefaultCustomStartDate(),
@@ -445,7 +445,4 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(
-    mapStateToProps,
-    actionCreators,
-)(SearchContainer);
+export default connect(mapStateToProps, actionCreators)(SearchContainer);

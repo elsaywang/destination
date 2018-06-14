@@ -135,7 +135,7 @@ describe('<SearchContainer /> component', () => {
             advanced: false,
             source: {
                 name: '',
-                sourceType: null,
+                sourceType: 'ALL',
                 dataSourceIds: [],
                 reportSuiteIds: [],
             },
@@ -291,7 +291,7 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('signalStatus')).toEqual('ALL');
             expect(wrapper.state('advanced')).toEqual(false);
             expect(wrapper.state('source').name).toEqual('');
-            expect(wrapper.state('source').sourceType).toEqual(null);
+            expect(wrapper.state('source').sourceType).toEqual('ALL');
             expect(wrapper.state('source').reportSuiteIds).toEqual([]);
             expect(wrapper.state('source').dataSourceIds).toEqual([]);
             expect(wrapper.state('viewRecordsFor')).toEqual('7D');
