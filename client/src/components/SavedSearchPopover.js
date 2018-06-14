@@ -63,7 +63,11 @@ class SavedSearchPopover extends Component {
     renderSignalSource(source) {
         return source.reportSuiteIds.length || source.dataSourceIds.length ? (
             <FieldLabel position="left" label={this.getSignalSourceLabel(source)}>
-                <span style={{ verticalAlign: 'bottom' }}>{source.name}</span>
+                <span
+                    style={{ verticalAlign: 'bottom' }}
+                    data-test="saved-search-popover-signal-source">
+                    {source.name}
+                </span>
             </FieldLabel>
         ) : null;
     }
@@ -87,12 +91,14 @@ class SavedSearchPopover extends Component {
                         <Heading size="5" className={styles.heading}>
                             Name
                         </Heading>
-                        <div>{search.name}</div>
+                        <div data-test="saved-search-popover-name">{search.name}</div>
 
                         <Heading size="5" className={styles.heading}>
                             Search Query
                         </Heading>
-                        <div>{formatSignal(search)}</div>
+                        <div data-test="saved-search-popover-search-query">
+                            {formatSignal(search)}
+                        </div>
 
                         <Heading size="5" className={styles.heading}>
                             Filters
@@ -100,20 +106,26 @@ class SavedSearchPopover extends Component {
 
                         <div>
                             <FieldLabel position="left" label="Signal Status">
-                                <span style={{ verticalAlign: 'bottom' }}>
+                                <span
+                                    style={{ verticalAlign: 'bottom' }}
+                                    data-test="saved-search-popover-signal-status">
                                     {getSignalStatusLabel(search.signalStatus)}
                                 </span>
                             </FieldLabel>
 
                             <FieldLabel position="left" label="Signal Category">
-                                <span style={{ verticalAlign: 'bottom' }}>
+                                <span
+                                    style={{ verticalAlign: 'bottom' }}
+                                    data-test="saved-search-popover-signal-category">
                                     {getSignalCategory(search.source.sourceType)}
                                 </span>
                             </FieldLabel>
 
                             {search.source.sourceType && (
                                 <FieldLabel position="left" label="Signal Type">
-                                    <span style={{ verticalAlign: 'bottom' }}>
+                                    <span
+                                        style={{ verticalAlign: 'bottom' }}
+                                        data-test="saved-search-popover-signal-type">
                                         {getSignalTypeLabel(search.source.sourceType)}
                                     </span>
                                 </FieldLabel>
@@ -122,7 +134,9 @@ class SavedSearchPopover extends Component {
                             {search.source.sourceType && this.renderSignalSource(search.source)}
 
                             <FieldLabel position="left" label="View Records For">
-                                <span style={{ verticalAlign: 'bottom' }}>
+                                <span
+                                    style={{ verticalAlign: 'bottom' }}
+                                    data-test="saved-search-popover-view-records-for">
                                     {this.getViewRecordsForLabel()}
                                 </span>
                             </FieldLabel>
@@ -131,7 +145,9 @@ class SavedSearchPopover extends Component {
                         <Heading size="5" className={styles.heading}>
                             Sorting
                         </Heading>
-                        <div>{getSortLabel(search.sortBy)}</div>
+                        <div data-test="saved-search-popover-sort-by">
+                            {getSortLabel(search.sortBy)}
+                        </div>
                     </Popover>
                 </OverlayTrigger>
                 {isCurrentSearch && (

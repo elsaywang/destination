@@ -11,7 +11,7 @@ const OverlayTooltip = ({ message, className }) => {
         <div className={classNames(styles.tooltip, className)} data-test="overlay-tooltip">
             <OverlayTrigger trigger="hover" placement="right">
                 <Info size="S" />
-                <Tooltip>{message}</Tooltip>
+                <Tooltip data-test="saved-search-limit-message">{message}</Tooltip>
             </OverlayTrigger>
         </div>
     );

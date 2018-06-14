@@ -69,6 +69,7 @@ ShallowWrapper {
         </Label>,
         <Select
           className="operator"
+          data-test="operator"
           onChange={[Function]}
           options={
             Array [
@@ -241,6 +242,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "operator",
+          "data-test": "operator",
           "onChange": [Function],
           "options": Array [
             Object {
@@ -393,6 +395,7 @@ ShallowWrapper {
           </Label>,
           <Select
             className="operator"
+            data-test="operator"
             onChange={[Function]}
             options={
               Array [
@@ -565,6 +568,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "className": "operator",
+            "data-test": "operator",
             "onChange": [Function],
             "options": Array [
               Object {
