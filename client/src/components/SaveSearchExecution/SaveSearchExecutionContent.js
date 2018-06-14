@@ -14,7 +14,12 @@ import {
     checkBoxLabel,
     defaultSorting,
 } from './saveSearchExecutionMessages.js';
-import { descending, sortingOptions, radioGroupOptions } from '../../constants/sortOptions';
+import {
+    descending,
+    sortingOptions,
+    radioGroupOptions,
+    defaultSortingKey,
+} from '../../constants/sortOptions';
 
 class SaveSearchExecutionContent extends Component {
     state = {
@@ -49,27 +54,25 @@ class SaveSearchExecutionContent extends Component {
                         checked={this.state.isTrackInDashboardChecked}
                     />
                 </div>
-                {this.state.isTrackInDashboardChecked && (
-                    <Label value={defaultSorting} labelFor={defaultSorting}>
-                        <Select
-                            options={sortingOptions}
-                            onChange={this.props.onDefaultSortingChange}
-                            value="percentageChange"
-                        />
-                        <div className={styles.contentRadioGroup}>
-                            <RadioGroup>
-                                {radioGroupOptions.map(({ label, value }) => (
-                                    <Radio
-                                        key={value}
-                                        {...{ label, value }}
-                                        checked={value === descending}
-                                        onChange={this.handleRadioChange}
-                                    />
-                                ))}
-                            </RadioGroup>
-                        </div>
-                    </Label>
-                )}
+                <Label value={defaultSorting} labelFor={defaultSorting}>
+                    <Select
+                        options={sortingOptions}
+                        onChange={this.props.onDefaultSortingChange}
+                        defaultValue={defaultSortingKey}
+                    />
+                    <div className={styles.contentRadioGroup}>
+                        <RadioGroup>
+                            {radioGroupOptions.map(({ label, value }) => (
+                                <Radio
+                                    key={value}
+                                    {...{ label, value }}
+                                    checked={value === descending}
+                                    onChange={this.handleRadioChange}
+                                />
+                            ))}
+                        </RadioGroup>
+                    </div>
+                </Label>
             </div>
         );
     }
