@@ -60,6 +60,14 @@ class SavedSearchPopover extends Component {
         return '';
     }
 
+    canDelete() {
+        const { isCurrentSearch, search } = this.props;
+        const { presetId } = search;
+        const isSavedSearchPreset = Boolean(presetId);
+
+        return isCurrentSearch && !isSavedSearchPreset;
+    }
+
     renderSignalSource(source) {
         return source.reportSuiteIds.length || source.dataSourceIds.length ? (
             <FieldLabel position="left" label={this.getSignalSourceLabel(source)}>
@@ -151,7 +159,7 @@ class SavedSearchPopover extends Component {
                         </div>
                     </Popover>
                 </OverlayTrigger>
-                {isCurrentSearch && (
+                {this.canDelete() && (
                     <ModalTrigger>
                         <Button
                             data-test="saved-search-delete-button"

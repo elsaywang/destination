@@ -12,40 +12,40 @@ import { getSignalCategory } from '../../constants/signalCategoryOptions';
 import { getSortLabel } from '../../constants/sortOptions';
 
 describe('<SavedSearchPopover /> component', () => {
-    const search = {
-        name: 'Loren Waters',
-        keyValuePairs: [
-            {
-                key: 'k-Licensed',
-                operator: '>=',
-                value: 67425,
-            },
-            {
-                key: 'k-Gorgeous Wooden Shirt',
-                operator: '<=',
-                value: 98397,
-            },
-        ],
-        source: {
-            dataSourceIds: [],
-            reportSuiteIds: [],
-            sourceType: null,
-        },
-        minEventFires: 88991,
-        signalStatus: 'USED',
-        viewRecordsFor: '7D',
-        sortBy: 'percentageChange',
-    };
-    const wrapper = createShallowIntlComponent(
-        <SavedSearchPopover
-            onSavedSearchClick={jest.fn()}
-            search={search}
-            isCurrentSearch={false}
-            deleteSearch={jest.fn()}
-        />,
-    ).dive();
-
     describe('rendering', () => {
+        const search = {
+            name: 'Loren Waters',
+            keyValuePairs: [
+                {
+                    key: 'k-Licensed',
+                    operator: '>=',
+                    value: 67425,
+                },
+                {
+                    key: 'k-Gorgeous Wooden Shirt',
+                    operator: '<=',
+                    value: 98397,
+                },
+            ],
+            source: {
+                dataSourceIds: [],
+                reportSuiteIds: [],
+                sourceType: null,
+            },
+            minEventFires: 88991,
+            signalStatus: 'USED',
+            viewRecordsFor: '7D',
+            sortBy: 'percentageChange',
+        };
+        const wrapper = createShallowIntlComponent(
+            <SavedSearchPopover
+                onSavedSearchClick={jest.fn()}
+                search={search}
+                isCurrentSearch={false}
+                deleteSearch={jest.fn()}
+            />,
+        ).dive();
+
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
         });
@@ -212,6 +212,72 @@ describe('<SavedSearchPopover /> component', () => {
             it("contains user's saved search sorting selection", () => {
                 expect(wrapper.find(Popover).contains(getSortLabel(search.sortBy))).toBe(true);
             });
+        });
+    });
+
+    describe('canDelete', () => {
+        const search = {
+            name: 'Loren Waters',
+            keyValuePairs: [
+                {
+                    key: 'k-Licensed',
+                    operator: '>=',
+                    value: 67425,
+                },
+            ],
+            source: {
+                dataSourceIds: [],
+                reportSuiteIds: [],
+                sourceType: null,
+            },
+            minEventFires: 88991,
+            signalStatus: 'USED',
+            viewRecordsFor: '7D',
+            sortBy: 'percentageChange',
+        };
+
+        it('should return true if the saved search is selected and not a preset', () => {
+            const wrapper = createShallowIntlComponent(
+                <SavedSearchPopover
+                    onSavedSearchClick={jest.fn()}
+                    search={search}
+                    isCurrentSearch={true}
+                    deleteSearch={jest.fn()}
+                />,
+            ).dive();
+
+            expect(wrapper.instance().canDelete()).toBe(true);
+        });
+
+        it('should return false if the saved search is selected and a preset', () => {
+            const searchPreset = {
+                ...search,
+                presetId: 'top-unused-signals',
+            };
+
+            const wrapper = createShallowIntlComponent(
+                <SavedSearchPopover
+                    onSavedSearchClick={jest.fn()}
+                    search={searchPreset}
+                    isCurrentSearch={true}
+                    deleteSearch={jest.fn()}
+                />,
+            ).dive();
+
+            expect(wrapper.instance().canDelete()).toBe(false);
+        });
+
+        it('should return false if the saved search is not selected', () => {
+            const wrapper = createShallowIntlComponent(
+                <SavedSearchPopover
+                    onSavedSearchClick={jest.fn()}
+                    search={search}
+                    isCurrentSearch={false}
+                    deleteSearch={jest.fn()}
+                />,
+            ).dive();
+
+            expect(wrapper.instance().canDelete()).toBe(false);
         });
     });
 });
