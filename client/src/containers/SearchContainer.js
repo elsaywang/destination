@@ -20,6 +20,7 @@ import SaveSearchExecution from '../components/SaveSearchExecution';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
+import { getMessageForSearchBySignalTypeLabel } from '../utils/signalType';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
@@ -214,8 +215,7 @@ class SearchContainer extends Component {
     };
 
     onSearch = () => {
-        this.setState({ searched: true });
-        this.props.callSearch(this.state);
+        this.setState({ searched: true }, () => this.props.callSearch(this.state));
     };
 
     handleLoadMore = () => {
@@ -284,6 +284,9 @@ class SearchContainer extends Component {
 
     saveThisSearchMessage = () =>
         getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
+
+    getSearchResultsMessage = () =>
+        getMessageForSearchBySignalTypeLabel(this.state.name, this.state.source.sourceType);
 
     render() {
         return (
@@ -366,7 +369,9 @@ class SearchContainer extends Component {
                         <div className={styles.tableContainer}>
                             <GridRow valign="middle">
                                 <GridColumn size={4}>
-                                    <Heading size={3}>Search Results for</Heading>
+                                    <Heading size={3}>
+                                        Search Results {this.getSearchResultsMessage()}
+                                    </Heading>
                                 </GridColumn>
                                 <GridColumn size={8}>
                                     <GridRow>
@@ -446,4 +451,7 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(mapStateToProps, actionCreators)(SearchContainer);
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(SearchContainer);

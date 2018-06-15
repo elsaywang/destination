@@ -104,7 +104,7 @@ describe('normalizeSearch util', () => {
     });
 
     describe('normalizing source type', () => {
-        it('should set `sourceType` to `null` if it is "ALL"', () => {
+        it('should set `sourceType` to null if it is "ALL"', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
                 source: {

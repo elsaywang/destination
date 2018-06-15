@@ -61,25 +61,19 @@ class SavedSearchPopover extends Component {
     }
 
     renderSignalSource(source) {
-        const signalTypeBlock = (
-            <FieldLabel position="left" label="Signal Source">
-                <span style={{ verticalAlign: 'bottom' }}>
-                    {getSignalTypeLabel(source.sourceType)}
-                </span>
-            </FieldLabel>
-        );
-        const signalTypeFilter = (
-            <FieldLabel position="left" label={this.getSignalTypeFilterLabel(source)}>
-                <span style={{ verticalAlign: 'bottom' }}>{source.name}</span>
-            </FieldLabel>
-        );
-
-        return source.reportSuiteIds.length || source.dataSourceIds.length ? (
+        return (
             <div>
-                {signalTypeBlock} {signalTypeFilter}
+                <FieldLabel position="left" label="Signal Source">
+                    <span style={{ verticalAlign: 'bottom' }}>
+                        {getSignalTypeLabel(source.sourceType)}
+                    </span>
+                </FieldLabel>
+                {source.reportSuiteIds.length || source.dataSourceIds.length ? (
+                    <FieldLabel position="left" label={this.getSignalTypeFilterLabel(source)}>
+                        <span style={{ verticalAlign: 'bottom' }}>{source.name}</span>
+                    </FieldLabel>
+                ) : null}
             </div>
-        ) : (
-            { signalTypeBlock }
         );
     }
 
