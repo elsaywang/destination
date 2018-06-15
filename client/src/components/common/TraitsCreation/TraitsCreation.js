@@ -7,15 +7,9 @@ import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
     getCreateTraitURL() {
-        const { categoryType, keyValuePairs, multiCreation, selectedSignals } = this.props;
-        const signals = multiCreation ? selectedSignals.records : [{ keyValuePairs }];
-        const signalsParams = {
-            signals: stringifySignals(signals),
-        };
+        const { categoryType } = this.props;
 
-        return categoryType === 'ONBOARDED'
-            ? createOnboardedTraitUrl(signalsParams)
-            : createRuleBasedTraitUrl(signalsParams);
+        return categoryType === 'ONBOARDED' ? createOnboardedTraitUrl() : createRuleBasedTraitUrl();
     }
 
     getLinkText() {
@@ -24,21 +18,33 @@ class TraitsCreation extends Component {
         return categoryType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-Based Trait';
     }
 
+    storeSessionAndNavigateToTraits = e => {
+        e.preventDefault();
+
+        const { keyValuePairs, multiCreation, selectedSignals } = this.props;
+        const signals = multiCreation ? selectedSignals.records : [{ keyValuePairs }];
+        const signalsParams = {
+            signals: stringifySignals(signals),
+        };
+
+        sessionStorage.setItem('signalsParams', JSON.stringify(signalsParams));
+
+        window.location.assign(this.getCreateTraitURL());
+    };
+
     render() {
         const { multiCreation, selectedSignals, canCreateTraits } = this.props;
 
-        const createTraitUrl = this.getCreateTraitURL();
-
         return multiCreation ? (
             <MultiSignalsTraitsCreation
-                createTraitUrl={createTraitUrl}
                 selectedSignals={selectedSignals}
+                storeSessionAndNavigateToTraits={this.storeSessionAndNavigateToTraits}
             />
         ) : (
             <SingleSignalTraitsCreation
-                createTraitUrl={createTraitUrl}
                 traitsCreationLabelText={this.getLinkText()}
                 canCreateTraits={canCreateTraits}
+                storeSessionAndNavigateToTraits={this.storeSessionAndNavigateToTraits}
             />
         );
     }

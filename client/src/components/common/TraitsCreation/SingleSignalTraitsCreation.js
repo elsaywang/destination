@@ -2,20 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TraitsCreation.css';
 import Add from '@react/react-spectrum/Icon/Add';
+import classNames from 'classnames';
 
 const SingleSignalTraitsCreation = ({
-    createTraitUrl,
     traitsCreationLabelText,
     canCreateTraits,
+    storeSessionAndNavigateToTraits,
 }) => {
     if (canCreateTraits) {
         return (
-            <a className="spectrum-Link" href={createTraitUrl}>
-                <div className={styles.singleCreation}>
-                    <Add size="S" />
-                    <div className={styles.singleCreationlinkText}>{traitsCreationLabelText}</div>
-                </div>
-            </a>
+            <div
+                className={classNames('spectrum-Link', styles.singleCreation)}
+                onClick={storeSessionAndNavigateToTraits}
+                data-test="single-signal-trait-creation">
+                <Add size="S" />
+                <div className={styles.singleCreationlinkText}>{traitsCreationLabelText}</div>
+            </div>
         );
     }
 
@@ -23,9 +25,9 @@ const SingleSignalTraitsCreation = ({
 };
 
 SingleSignalTraitsCreation.propTypes = {
-    createTraitUrl: PropTypes.string,
     traitsCreationLabelText: PropTypes.string,
     canCreateTraits: PropTypes.bool,
+    storeSessionAndNavigateToTraits: PropTypes.func.isRequired,
 };
 
 export default SingleSignalTraitsCreation;

@@ -39,6 +39,7 @@ ShallowWrapper {
           className={undefined}
           confirmDisabled={false}
           confirmLabel="Save"
+          keyboardConfirm={false}
           modalcontent={true}
           mode="centered"
           onCancel={undefined}
@@ -99,6 +100,7 @@ ShallowWrapper {
           "className": undefined,
           "confirmDisabled": false,
           "confirmLabel": "Save",
+          "keyboardConfirm": false,
           "modalcontent": true,
           "mode": "centered",
           "onCancel": undefined,
@@ -157,6 +159,7 @@ ShallowWrapper {
             className={undefined}
             confirmDisabled={false}
             confirmLabel="Save"
+            keyboardConfirm={false}
             modalcontent={true}
             mode="centered"
             onCancel={undefined}
@@ -217,6 +220,7 @@ ShallowWrapper {
             "className": undefined,
             "confirmDisabled": false,
             "confirmLabel": "Save",
+            "keyboardConfirm": false,
             "modalcontent": true,
             "mode": "centered",
             "onCancel": undefined,

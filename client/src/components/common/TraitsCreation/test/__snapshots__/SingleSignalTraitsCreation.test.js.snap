@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
     canCreateTraits={false}
-    createTraitUrl="testUrl"
+    storeSessionAndNavigateToTraits={[MockFunction]}
     traitsCreationLabelText="Create Rule-Based Trait"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -36,7 +36,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
     canCreateTraits={true}
-    createTraitUrl="testUrl"
+    storeSessionAndNavigateToTraits={[MockFunction]}
     traitsCreationLabelText="Create Rule-Based Trait"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -51,23 +51,50 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className={undefined}
-      >
+      "children": Array [
         <Add
           size="S"
-        />
+        />,
         <div
           className={undefined}
         >
           Create Rule-Based Trait
-        </div>
-      </div>,
+        </div>,
+      ],
       "className": "spectrum-Link",
-      "href": "testUrl",
+      "data-test": "single-signal-trait-creation",
+      "onClick": [MockFunction],
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "size": "S",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Create Rule-Based Trait",
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": "Create Rule-Based Trait",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -82,7 +109,9 @@ ShallowWrapper {
             Create Rule-Based Trait
           </div>,
         ],
-        "className": undefined,
+        "className": "spectrum-Link",
+        "data-test": "single-signal-trait-creation",
+        "onClick": [MockFunction],
       },
       "ref": null,
       "rendered": Array [
@@ -111,77 +140,6 @@ ShallowWrapper {
         },
       ],
       "type": "div",
-    },
-    "type": "a",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className={undefined}
-        >
-          <Add
-            size="S"
-          />
-          <div
-            className={undefined}
-          >
-            Create Rule-Based Trait
-          </div>
-        </div>,
-        "className": "spectrum-Link",
-        "href": "testUrl",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <Add
-              size="S"
-            />,
-            <div
-              className={undefined}
-            >
-              Create Rule-Based Trait
-            </div>,
-          ],
-          "className": undefined,
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "size": "S",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Create Rule-Based Trait",
-              "className": undefined,
-            },
-            "ref": null,
-            "rendered": "Create Rule-Based Trait",
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-      "type": "a",
     },
   ],
   Symbol(enzyme.__options__): Object {

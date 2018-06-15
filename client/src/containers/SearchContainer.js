@@ -114,7 +114,7 @@ class SearchContainer extends Component {
 
     onReportSuiteSelect = value => {
         const matchingReportSuite = this.props.reportSuites.find(
-            reportSuite => reportSuite.name === value,
+            reportSuite => reportSuite.name.toLowerCase() === value.toLowerCase(),
         );
 
         this.setState({

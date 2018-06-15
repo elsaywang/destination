@@ -5,13 +5,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreation
-    createTraitUrl="testUrl"
     selectedSignals={
       Object {
         "hasWarning": false,
         "selectionMessage": "",
       }
     }
+    storeSessionAndNavigateToTraits={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -31,23 +31,21 @@ ShallowWrapper {
         >
           
         </span>,
-        <a
-          href="testUrl"
-        >
-          <Button
-            autoFocus={false}
-            block={false}
-            disabled={false}
-            element="button"
-            icon={<Add />}
-            invalid={false}
-            label="Create Trait From Multiple Signals"
-            logic={false}
-            quiet={false}
-            selected={false}
-            variant="action"
-          />
-        </a>,
+        <Button
+          autoFocus={false}
+          block={false}
+          data-test="multi-signals-trait-creation"
+          disabled={false}
+          element="button"
+          icon={<Add />}
+          invalid={false}
+          label="Create Trait From Multiple Signals"
+          logic={false}
+          onClick={[MockFunction]}
+          quiet={false}
+          selected={false}
+          variant="action"
+        />,
       ],
       "className": undefined,
     },
@@ -68,46 +66,25 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": <Button
-            autoFocus={false}
-            block={false}
-            disabled={false}
-            element="button"
-            icon={<Add />}
-            invalid={false}
-            label="Create Trait From Multiple Signals"
-            logic={false}
-            quiet={false}
-            selected={false}
-            variant="action"
-          />,
-          "href": "testUrl",
+          "autoFocus": false,
+          "block": false,
+          "data-test": "multi-signals-trait-creation",
+          "disabled": false,
+          "element": "button",
+          "icon": <Add />,
+          "invalid": false,
+          "label": "Create Trait From Multiple Signals",
+          "logic": false,
+          "onClick": [MockFunction],
+          "quiet": false,
+          "selected": false,
+          "variant": "action",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "autoFocus": false,
-            "block": false,
-            "disabled": false,
-            "element": "button",
-            "icon": <Add />,
-            "invalid": false,
-            "label": "Create Trait From Multiple Signals",
-            "logic": false,
-            "quiet": false,
-            "selected": false,
-            "variant": "action",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": "a",
+        "rendered": null,
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -124,23 +101,21 @@ ShallowWrapper {
           >
             
           </span>,
-          <a
-            href="testUrl"
-          >
-            <Button
-              autoFocus={false}
-              block={false}
-              disabled={false}
-              element="button"
-              icon={<Add />}
-              invalid={false}
-              label="Create Trait From Multiple Signals"
-              logic={false}
-              quiet={false}
-              selected={false}
-              variant="action"
-            />
-          </a>,
+          <Button
+            autoFocus={false}
+            block={false}
+            data-test="multi-signals-trait-creation"
+            disabled={false}
+            element="button"
+            icon={<Add />}
+            invalid={false}
+            label="Create Trait From Multiple Signals"
+            logic={false}
+            onClick={[MockFunction]}
+            quiet={false}
+            selected={false}
+            variant="action"
+          />,
         ],
         "className": undefined,
       },
@@ -161,46 +136,25 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <Button
-              autoFocus={false}
-              block={false}
-              disabled={false}
-              element="button"
-              icon={<Add />}
-              invalid={false}
-              label="Create Trait From Multiple Signals"
-              logic={false}
-              quiet={false}
-              selected={false}
-              variant="action"
-            />,
-            "href": "testUrl",
+            "autoFocus": false,
+            "block": false,
+            "data-test": "multi-signals-trait-creation",
+            "disabled": false,
+            "element": "button",
+            "icon": <Add />,
+            "invalid": false,
+            "label": "Create Trait From Multiple Signals",
+            "logic": false,
+            "onClick": [MockFunction],
+            "quiet": false,
+            "selected": false,
+            "variant": "action",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "autoFocus": false,
-              "block": false,
-              "disabled": false,
-              "element": "button",
-              "icon": <Add />,
-              "invalid": false,
-              "label": "Create Trait From Multiple Signals",
-              "logic": false,
-              "quiet": false,
-              "selected": false,
-              "variant": "action",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": "a",
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

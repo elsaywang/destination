@@ -7,8 +7,8 @@ import Add from '@react/react-spectrum/Icon/Add';
 describe('<MultiSignalsTraitsCreation/> component', () => {
     const mockFn = jest.fn();
     const props = {
-        createTraitUrl: 'testUrl',
         selectedSignals: { selectionMessage: '', hasWarning: false },
+        storeSessionAndNavigateToTraits: mockFn,
     };
     const wrapper = shallow(<MultiSignalsTraitsCreation {...props} />);
 
@@ -20,27 +20,6 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
         expect(
             wrapper.containsMatchingElement(<span>{props.selectedSignals.selectionMessage}</span>),
         ).toBeTruthy();
-    });
-
-    describe('<a> child element that hyperlinks to trait create page', () => {
-        const anchor = wrapper.find('a');
-
-        it('renders', () => {
-            expect(anchor.exists()).toBeTruthy();
-        });
-
-        it('has the `createTraitUrl` prop as its href', () => {
-            expect(anchor.props().href).toEqual('testUrl');
-        });
-
-        it('has a <Button /> child element', () => {
-            expect(
-                anchor
-                    .shallow()
-                    .find(Button)
-                    .exists(),
-            ).toBeTruthy();
-        });
     });
 
     describe('<Button /> child component', () => {

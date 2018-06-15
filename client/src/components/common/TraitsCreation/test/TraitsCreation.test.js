@@ -5,9 +5,6 @@ import MultiSignalsTraitsCreation from '../MultiSignalsTraitsCreation';
 import SingleSignalTraitsCreation from '../SingleSignalTraitsCreation';
 import { stringifySignals } from '../../../../utils/stringifySignals';
 
-jest.mock('../../../../utils/stringifySignals');
-stringifySignals.mockImplementation(() => '');
-
 describe('<TraitsCreation /> component', () => {
     describe('rendering when it is used in Single-Signal Traits Creation', () => {
         const props = {
@@ -32,7 +29,7 @@ describe('<TraitsCreation /> component', () => {
         });
 
         describe('Trait creation label', () => {
-            it('is for creaitng an onboarded trait when the single signal is an onboarded signal', () => {
+            it('is for creating an onboarded trait when the single signal is an onboarded signal', () => {
                 wrapper.setProps({ categoryType: 'ONBOARDED' });
 
                 expect(
@@ -73,31 +70,11 @@ describe('<TraitsCreation /> component', () => {
     });
 
     describe('getCreateTraitURL', () => {
-        stringifySignals.mockClear();
         const props = {
             categoryType: 'ONBOARDED',
             keyValuePairs: [],
         };
         const wrapper = shallow(<TraitsCreation {...props} />);
-
-        it('for single-signal trait creation, calls `stringifySignals` on an array of an object containing the `keyValuePairs` prop', () => {
-            const keyValuePairs = [{ key: 'key1', value: 'value1' }];
-            const expectedSignals = [{ keyValuePairs }];
-
-            wrapper.setProps({ keyValuePairs });
-
-            expect(stringifySignals).toBeCalledWith(expectedSignals);
-        });
-
-        it("for multi-signal trait creation, calls `stringifySignals` on the `selectedSignals` prop's `records`", () => {
-            const selectedSignals = {
-                records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
-            };
-
-            wrapper.setProps({ selectedSignals });
-
-            expect(stringifySignals).toBeCalledWith(selectedSignals.records);
-        });
 
         it('returns the Create Rule-Based Trait URL when the `categoryType` is "REALTIME"', () => {
             wrapper.setProps({
@@ -125,6 +102,58 @@ describe('<TraitsCreation /> component', () => {
                     .getCreateTraitURL()
                     .endsWith('#new/onboarded'),
             ).toBeTruthy();
+        });
+    });
+
+    describe('storeSessionAndNavigateToTraits', () => {
+        const props = {
+            categoryType: 'ONBOARDED',
+            keyValuePairs: [],
+        };
+        const wrapper = shallow(<TraitsCreation {...props} />);
+        const event = {
+            preventDefault: () => {},
+        };
+
+        beforeEach(() => {
+            window.location.assign = jest.fn();
+        });
+
+        it('for single-signal trait creation, should store signalsParams in sessionStorage based on keyValuePairs', () => {
+            const keyValuePairs = [{ key: 'key1', value: 'value1' }];
+            const expectedSignals = [{ keyValuePairs }];
+            const signalsParams = {
+                signals: stringifySignals(expectedSignals),
+            };
+
+            wrapper.setProps({ keyValuePairs });
+            wrapper.instance().storeSessionAndNavigateToTraits(event);
+
+            const KEY = 'signalsParams';
+            const VALUE = JSON.stringify(signalsParams);
+
+            expect(sessionStorage.setItem).toHaveBeenLastCalledWith(KEY, VALUE);
+            expect(sessionStorage.__STORE__[KEY]).toBe(VALUE);
+            expect(Object.keys(sessionStorage.__STORE__).length).toBe(1);
+        });
+
+        it("for multi-signal trait creation, should store signalsParams in sessionStorage based on the `selectedSignals` prop's `records`", () => {
+            const selectedSignals = {
+                records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
+            };
+            const signalsParams = {
+                signals: stringifySignals(selectedSignals.records),
+            };
+
+            wrapper.setProps({ selectedSignals });
+            wrapper.instance().storeSessionAndNavigateToTraits(event);
+
+            const KEY = 'signalsParams';
+            const VALUE = JSON.stringify(signalsParams);
+
+            expect(sessionStorage.setItem).toHaveBeenLastCalledWith(KEY, VALUE);
+            expect(sessionStorage.__STORE__[KEY]).toBe(VALUE);
+            expect(Object.keys(sessionStorage.__STORE__).length).toBe(1);
         });
     });
 });
