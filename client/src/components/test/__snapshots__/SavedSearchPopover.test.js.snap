@@ -98,6 +98,7 @@ ShallowWrapper {
             open={true}
             placement="bottom"
             title="Loren Waters"
+            trapFocus={true}
             variant="default"
           >
             <Heading
@@ -204,6 +205,7 @@ ShallowWrapper {
               open={true}
               placement="bottom"
               title="Loren Waters"
+              trapFocus={true}
               variant="default"
             >
               <Heading
@@ -399,6 +401,7 @@ ShallowWrapper {
               "open": true,
               "placement": "bottom",
               "title": "Loren Waters",
+              "trapFocus": true,
               "variant": "default",
             },
             "ref": null,
@@ -687,6 +690,7 @@ ShallowWrapper {
               open={true}
               placement="bottom"
               title="Loren Waters"
+              trapFocus={true}
               variant="default"
             >
               <Heading
@@ -793,6 +797,7 @@ ShallowWrapper {
                 open={true}
                 placement="bottom"
                 title="Loren Waters"
+                trapFocus={true}
                 variant="default"
               >
                 <Heading
@@ -988,6 +993,7 @@ ShallowWrapper {
                 "open": true,
                 "placement": "bottom",
                 "title": "Loren Waters",
+                "trapFocus": true,
                 "variant": "default",
               },
               "ref": null,
