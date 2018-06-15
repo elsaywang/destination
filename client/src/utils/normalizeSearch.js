@@ -7,7 +7,8 @@ const normalizeStartDate = ({ viewRecordsFor, customStartDate }) =>
 const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
     viewRecordsFor === 'custom' ? getDaysAgoUTCMidnight(customEndDate) : null;
 
-const normalizeSourceType = ({ source }) => (source.sourceType === 'ALL' ? '' : source.sourceType);
+const normalizeSourceType = ({ source }) =>
+    source.sourceType === 'ALL' ? null : source.sourceType;
 
 const normalizeDataSourceIds = ({ advanced, source }) =>
     advanced && source.dataSourceIds ? source.dataSourceIds : null;

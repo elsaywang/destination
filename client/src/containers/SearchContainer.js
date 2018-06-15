@@ -44,7 +44,7 @@ class SearchContainer extends Component {
                 name: '',
                 dataSourceIds: [],
                 reportSuiteIds: [],
-                sourceType: null,
+                sourceType: 'ALL',
             },
             viewRecordsFor: '7D',
             customStartDate: getDefaultCustomStartDate(),
@@ -72,16 +72,17 @@ class SearchContainer extends Component {
     }
 
     handleSignalTypeChange = sourceType => {
-        this.setState({
-            source: {
-                name: '',
-                dataSourceIds: [],
-                reportSuiteIds: [],
-                sourceType,
+        this.setState(
+            {
+                source: {
+                    name: '',
+                    dataSourceIds: [],
+                    reportSuiteIds: [],
+                    sourceType,
+                },
             },
-        });
-
-        this.props.callSearch(this.state);
+            () => this.props.callSearch(this.state),
+        );
     };
 
     onAdvancedSearchChange = value => {
@@ -270,7 +271,7 @@ class SearchContainer extends Component {
                 name: '',
                 dataSourceIds: [],
                 reportSuiteIds: [],
-                sourceType: null,
+                sourceType: 'ALL',
             },
             viewRecordsFor: '7D',
             customStartDate: getDefaultCustomStartDate(),
