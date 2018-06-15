@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
 import Heading from '@react/react-spectrum/Heading';
 import styles from './SignalTypeFilter.css';
-import { signalTypeOptions, getSignalTypeOptions } from '../constants/signalTypeOptions';
+import { signalTypeOptions } from '../constants/signalTypeOptions';
 
 class SignalTypeFilter extends Component {
     // Phase 2 feature is commented out
