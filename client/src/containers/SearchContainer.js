@@ -113,7 +113,7 @@ class SearchContainer extends Component {
 
     onReportSuiteSelect = value => {
         const matchingReportSuite = this.props.reportSuites.find(
-            reportSuite => reportSuite.name === value,
+            reportSuite => reportSuite.name.toLowerCase() === value.toLowerCase(),
         );
 
         this.setState({
@@ -445,7 +445,4 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(
-    mapStateToProps,
-    actionCreators,
-)(SearchContainer);
+export default connect(mapStateToProps, actionCreators)(SearchContainer);
