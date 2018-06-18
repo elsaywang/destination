@@ -23,6 +23,7 @@ ShallowWrapper {
         Object {
           "advanced": false,
           "descending": false,
+          "filterNewSignals": false,
           "includeInDashboard": true,
           "keyValuePairs": Array [
             Object {
@@ -216,6 +217,7 @@ ShallowWrapper {
         Object {
           "advanced": false,
           "descending": false,
+          "filterNewSignals": false,
           "includeInDashboard": true,
           "keyValuePairs": Array [
             Object {

@@ -46,6 +46,7 @@ class SearchContainer extends Component {
                 reportSuiteIds: [],
                 sourceType: 'ALL',
             },
+            filterNewSignals: false,
             viewRecordsFor: '7D',
             customStartDate: getDefaultCustomStartDate(),
             customEndDate: getDefaultCustomEndDate(),
@@ -80,6 +81,7 @@ class SearchContainer extends Component {
                     reportSuiteIds: [],
                     sourceType,
                 },
+                filterNewSignals: false,
             },
             () => this.props.callSearch(this.state),
         );
@@ -214,7 +216,7 @@ class SearchContainer extends Component {
     };
 
     onSearch = () => {
-        this.setState({ searched: true });
+        this.setState({ searched: true, filterNewSignals: false });
         this.props.callSearch(this.state);
     };
 
@@ -235,6 +237,7 @@ class SearchContainer extends Component {
         const maxId = savedSearch.length ? savedSearch[savedSearch.length - 1].id : -1;
         const thisSearchWithKeyValuePairs = {
             ...this.state,
+            filterNewSignals: false,
             ...thisSearch,
             id: maxId + 1,
         };
@@ -273,6 +276,7 @@ class SearchContainer extends Component {
                 reportSuiteIds: [],
                 sourceType: 'ALL',
             },
+            filterNewSignals: false,
             viewRecordsFor: '7D',
             customStartDate: getDefaultCustomStartDate(),
             customEndDate: getDefaultCustomEndDate(),
@@ -446,4 +450,7 @@ const actionCreators = {
     fetchUserRoles,
 };
 
-export default connect(mapStateToProps, actionCreators)(SearchContainer);
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(SearchContainer);

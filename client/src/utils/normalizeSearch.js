@@ -18,6 +18,9 @@ const normalizeReportSuiteIds = ({ advanced, source }) =>
 
 const normalizeSignalStatus = ({ signalStatus }) => (signalStatus === 'ALL' ? null : signalStatus);
 
+const normalizeFilterNewSignals = ({ filterNewSignals }) =>
+    filterNewSignals && { filterNewSignals };
+
 export const normalizeSearch = search => ({
     search: stringifySignal(search),
     startDate: normalizeStartDate(search),
@@ -29,5 +32,6 @@ export const normalizeSearch = search => ({
     },
     signalStatus: normalizeSignalStatus(search),
     minEventFires: search.minEventFires,
+    ...normalizeFilterNewSignals(search),
     descending: true,
 });

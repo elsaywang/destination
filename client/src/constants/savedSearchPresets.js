@@ -5,6 +5,7 @@ export const topUnusedSignals = {
     includeInDashboard: true,
     keyValuePairs: [{ id: 0, key: '', operator: '==', value: '' }],
     minEventFires: 1000,
+    filterNewSignals: false,
     name: 'Top Unused Signals',
     signalStatus: 'ALL',
     sortBy: 'percentageChange',
