@@ -20,7 +20,7 @@ import SaveSearchExecution from '../components/SaveSearchExecution';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
-import { getMessageForSearchBySignalTypeLabel } from '../utils/signalType';
+import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
@@ -262,6 +262,9 @@ class SearchContainer extends Component {
     saveThisSearchMessage = () =>
         getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
 
+    getSearchResultsMessage = () =>
+        getSearchResultsMessageBySignalTypeLabel(this.state.name, this.state.source.sourceType);
+
     render() {
         return (
             <Fragment>
@@ -344,11 +347,7 @@ class SearchContainer extends Component {
                             <GridRow valign="middle">
                                 <GridColumn size={4}>
                                     <Heading size={3}>
-                                        Search Results{' '}
-                                        {getMessageForSearchBySignalTypeLabel(
-                                            this.state.name,
-                                            this.state.source.sourceType,
-                                        )}
+                                        Search Results {this.getSearchResultsMessage()}
                                     </Heading>
                                 </GridColumn>
                                 <GridColumn size={8}>
