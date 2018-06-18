@@ -537,6 +537,7 @@ ShallowWrapper {
                     </FieldLabel>,
                     null,
                     null,
+                    undefined,
                     <FieldLabel
                       label="View Records For"
                       position="left"
@@ -630,6 +631,7 @@ ShallowWrapper {
                   },
                   null,
                   null,
+                  undefined,
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -1173,6 +1175,7 @@ ShallowWrapper {
                       </FieldLabel>,
                       null,
                       null,
+                      undefined,
                       <FieldLabel
                         label="View Records For"
                         position="left"
@@ -1266,6 +1269,7 @@ ShallowWrapper {
                     },
                     null,
                     null,
+                    undefined,
                     Object {
                       "instance": null,
                       "key": undefined,

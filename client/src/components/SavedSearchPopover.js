@@ -142,6 +142,16 @@ class SavedSearchPopover extends Component {
 
                             {search.source.sourceType && this.renderSignalSource(search.source)}
 
+                            {search.filterNewSignals && (
+                                <FieldLabel position="left" label="New Signals">
+                                    <span
+                                        style={{ verticalAlign: 'bottom' }}
+                                        data-test="saved-search-popover-filter-new">
+                                        Yes
+                                    </span>
+                                </FieldLabel>
+                            )}
+
                             <FieldLabel position="left" label="View Records For">
                                 <span
                                     style={{ verticalAlign: 'bottom' }}
