@@ -10,11 +10,6 @@ describe('signalType Util', () => {
     });
 
     describe('test on `getSignalTypeLabelMessage` func', () => {
-        it('should return empty message when signal type is `null`', () => {
-            const signalType = null;
-            expect(getSignalTypeLabelMessage(signalType)).toBe('');
-        });
-
         it('should return `in All Signals` message when signal type is `ALL`', () => {
             expect(getSignalTypeLabelMessage('ALL')).toBe('in All Signals');
         });

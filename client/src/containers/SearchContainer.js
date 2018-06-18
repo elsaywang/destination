@@ -262,9 +262,6 @@ class SearchContainer extends Component {
     saveThisSearchMessage = () =>
         getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
 
-    getSearchResultsMessage = () =>
-        getMessageForSearchBySignalTypeLabel(this.state.name, this.state.source.sourceType);
-
     render() {
         return (
             <Fragment>
@@ -347,7 +344,11 @@ class SearchContainer extends Component {
                             <GridRow valign="middle">
                                 <GridColumn size={4}>
                                     <Heading size={3}>
-                                        Search Results {this.getSearchResultsMessage()}
+                                        Search Results{' '}
+                                        {getMessageForSearchBySignalTypeLabel(
+                                            this.state.name,
+                                            this.state.source.sourceType,
+                                        )}
                                     </Heading>
                                 </GridColumn>
                                 <GridColumn size={8}>
