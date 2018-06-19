@@ -3,6 +3,7 @@
         {
             "name": "Clovis Simonis",
             "id": 0,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-bandwidth",
@@ -28,6 +29,7 @@
         {
             "name": "Stephen Sanford",
             "id": 1,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-Customer",
@@ -58,6 +60,7 @@
         {
             "name": "Angus Koss V",
             "id": 2,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-optimizing",
@@ -88,6 +91,7 @@
         {
             "name": "Stella Kling",
             "id": 3,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-hack",
@@ -118,6 +122,7 @@
         {
             "name": "Demarco Stiedemann",
             "id": 4,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-Supervisor",
@@ -148,6 +153,7 @@
         {
             "name": "Bing Thursday",
             "id": 5,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-optimizing",
@@ -178,6 +184,7 @@
         {
             "name": "Largo Quaker",
             "id": 6,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-back",
@@ -208,6 +215,7 @@
         {
             "name": "Mariah Bergdorff",
             "id": 7,
+            "presetId": null,
             "keyValuePairs": [
                 {
                     "key": "k-ground",

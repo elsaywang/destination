@@ -82,7 +82,7 @@ class SearchContainer extends Component {
                     sourceType,
                 },
                 filterNewSignals: false,
-                presetId: undefined,
+                presetId: null,
             },
             () => this.props.callSearch(this.state),
         );
@@ -209,7 +209,7 @@ class SearchContainer extends Component {
     onSavedSearchClick = savedSearch => {
         this.setState({
             ...this.state,
-            presetId: undefined,
+            presetId: null,
             ...savedSearch,
             searched: true,
         });
@@ -221,7 +221,7 @@ class SearchContainer extends Component {
         this.setState({
             searched: true,
             filterNewSignals: false,
-            presetId: undefined,
+            presetId: null,
         });
         this.props.callSearch(this.state);
     };
@@ -245,7 +245,7 @@ class SearchContainer extends Component {
             ...this.state,
             filterNewSignals: false,
             ...thisSearch,
-            presetId: undefined,
+            presetId: null,
             id: maxId + 1,
         };
         const newSavedSearch = [...savedSearch, thisSearchWithKeyValuePairs];
