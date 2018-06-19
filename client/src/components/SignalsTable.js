@@ -135,7 +135,7 @@ class SignalsTable extends Component {
 
     renderPercentageChange = percentageChange => {
         if (percentageChange === null || !isNumeric(percentageChange)) {
-            return '-';
+            return '—';
         }
         const maxPercentageMagnitude = Math.max(
             ...this.props.results.list.map(item => Math.abs(item.percentageChange)),

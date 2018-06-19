@@ -259,7 +259,7 @@ describe('<SignalsTable /> component', () => {
                     const nonePercentageChangeWrapper = shallow(
                         <div>{renderPercentageChange(test)}</div>,
                     );
-                    expect(nonePercentageChangeWrapper.text()).toEqual('-');
+                    expect(nonePercentageChangeWrapper.text()).toEqual('—');
                 });
             });
         });
