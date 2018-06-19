@@ -16,6 +16,10 @@ ShallowWrapper {
           "errorMessage": "",
           "hasError": false,
         },
+        "saveSearch": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
         "savedSearch": Object {
           "errorMessage": "",
           "hasError": false,
@@ -151,6 +155,10 @@ ShallowWrapper {
               errors={
                 Object {
                   "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
                   },
@@ -326,6 +334,10 @@ ShallowWrapper {
                     "errorMessage": "",
                     "hasError": false,
                   },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "savedSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -399,6 +411,10 @@ ShallowWrapper {
                     "errorMessage": "",
                     "hasError": false,
                   },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "savedSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -466,6 +482,10 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "errors": Object {
                 "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "saveSearch": Object {
                   "errorMessage": "",
                   "hasError": false,
                 },
@@ -925,6 +945,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -1097,6 +1121,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -1170,6 +1198,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -1237,6 +1269,10 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "errors": Object {
                   "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
                   },
@@ -1709,6 +1745,10 @@ ShallowWrapper {
           "errorMessage": "",
           "hasError": false,
         },
+        "saveSearch": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
         "savedSearch": Object {
           "errorMessage": "",
           "hasError": false,
@@ -1841,6 +1881,10 @@ ShallowWrapper {
               errors={
                 Object {
                   "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
                   },
@@ -2016,6 +2060,10 @@ ShallowWrapper {
                     "errorMessage": "",
                     "hasError": false,
                   },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "savedSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -2089,6 +2137,10 @@ ShallowWrapper {
                     "errorMessage": "",
                     "hasError": false,
                   },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "savedSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -2156,6 +2208,10 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "errors": Object {
                 "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "saveSearch": Object {
                   "errorMessage": "",
                   "hasError": false,
                 },
@@ -2615,6 +2671,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -2787,6 +2847,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -2860,6 +2924,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -2927,6 +2995,10 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "errors": Object {
                   "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
                   },
@@ -3399,6 +3471,10 @@ ShallowWrapper {
           "errorMessage": "",
           "hasError": false,
         },
+        "saveSearch": Object {
+          "errorMessage": "",
+          "hasError": false,
+        },
         "savedSearch": Object {
           "errorMessage": "",
           "hasError": false,
@@ -3531,6 +3607,10 @@ ShallowWrapper {
               errors={
                 Object {
                   "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
                   },
@@ -3706,6 +3786,10 @@ ShallowWrapper {
                     "errorMessage": "",
                     "hasError": false,
                   },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "savedSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -3779,6 +3863,10 @@ ShallowWrapper {
                     "errorMessage": "",
                     "hasError": false,
                   },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "savedSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -3846,6 +3934,10 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "errors": Object {
                 "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "saveSearch": Object {
                   "errorMessage": "",
                   "hasError": false,
                 },
@@ -4305,6 +4397,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -4477,6 +4573,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -4550,6 +4650,10 @@ ShallowWrapper {
                       "errorMessage": "",
                       "hasError": false,
                     },
+                    "saveSearch": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "savedSearch": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -4617,6 +4721,10 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "errors": Object {
                   "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
                     "errorMessage": "",
                     "hasError": false,
                   },

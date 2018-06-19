@@ -336,6 +336,7 @@ class SearchContainer extends Component {
                                             }
                                             selectDefaultSorting={this.props.selectDefaultSorting}
                                             changeSortingOrder={this.props.changeSortingOrder}
+                                            error={this.props.errors.saveSearch}
                                         />
                                     </div>
                                     <OverlayTooltip
