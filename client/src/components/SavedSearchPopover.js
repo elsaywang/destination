@@ -69,12 +69,16 @@ class SavedSearchPopover extends Component {
     }
 
     renderSignalSource(source) {
-        return source.reportSuiteIds.length || source.dataSourceIds.length ? (
+        const { sourceType, reportSuiteIds, dataSourceIds, name } = source;
+        const hasSignalSource =
+            sourceType !== 'ALL' && (reportSuiteIds.length || dataSourceIds.length);
+
+        return hasSignalSource ? (
             <FieldLabel position="left" label={this.getSignalSourceLabel(source)}>
                 <span
                     style={{ verticalAlign: 'bottom' }}
                     data-test="saved-search-popover-signal-source">
-                    {source.name}
+                    {name}
                 </span>
             </FieldLabel>
         ) : null;
@@ -131,7 +135,7 @@ class SavedSearchPopover extends Component {
                                 </span>
                             </FieldLabel>
 
-                            {search.source.sourceType && (
+                            {search.source.sourceType !== 'ALL' && (
                                 <FieldLabel position="left" label="Signal Type">
                                     <span
                                         style={{ verticalAlign: 'bottom' }}
@@ -141,7 +145,7 @@ class SavedSearchPopover extends Component {
                                 </FieldLabel>
                             )}
 
-                            {search.source.sourceType && this.renderSignalSource(search.source)}
+                            {this.renderSignalSource(search.source)}
 
                             {search.filterNewSignals && (
                                 <FieldLabel position="left" label="New Signals">

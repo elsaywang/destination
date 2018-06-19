@@ -162,6 +162,21 @@ ShallowWrapper {
                 </span>
               </FieldLabel>
               <FieldLabel
+                label="Signal Type"
+                position="left"
+              >
+                <span
+                  data-test="saved-search-popover-signal-type"
+                  style={
+                    Object {
+                      "verticalAlign": "bottom",
+                    }
+                  }
+                >
+                  
+                </span>
+              </FieldLabel>
+              <FieldLabel
                 label="View Records For"
                 position="left"
               >
@@ -276,6 +291,21 @@ ShallowWrapper {
                     }
                   >
                     Real-Time
+                  </span>
+                </FieldLabel>
+                <FieldLabel
+                  label="Signal Type"
+                  position="left"
+                >
+                  <span
+                    data-test="saved-search-popover-signal-type"
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    
                   </span>
                 </FieldLabel>
                 <FieldLabel
@@ -397,6 +427,21 @@ ShallowWrapper {
                       }
                     >
                       Real-Time
+                    </span>
+                  </FieldLabel>
+                  <FieldLabel
+                    label="Signal Type"
+                    position="left"
+                  >
+                    <span
+                      data-test="saved-search-popover-signal-type"
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      
                     </span>
                   </FieldLabel>
                   <FieldLabel
@@ -535,7 +580,21 @@ ShallowWrapper {
                         Real-Time
                       </span>
                     </FieldLabel>,
-                    null,
+                    <FieldLabel
+                      label="Signal Type"
+                      position="left"
+                    >
+                      <span
+                        data-test="saved-search-popover-signal-type"
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        
+                      </span>
+                    </FieldLabel>,
                     null,
                     undefined,
                     <FieldLabel
@@ -629,7 +688,42 @@ ShallowWrapper {
                     },
                     "type": [Function],
                   },
-                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": <span
+                        data-test="saved-search-popover-signal-type"
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        
+                      </span>,
+                      "label": "Signal Type",
+                      "position": "left",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "",
+                        "data-test": "saved-search-popover-signal-type",
+                        "style": Object {
+                          "verticalAlign": "bottom",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "",
+                      "type": "span",
+                    },
+                    "type": [Function],
+                  },
                   null,
                   undefined,
                   Object {
@@ -800,6 +894,21 @@ ShallowWrapper {
                   </span>
                 </FieldLabel>
                 <FieldLabel
+                  label="Signal Type"
+                  position="left"
+                >
+                  <span
+                    data-test="saved-search-popover-signal-type"
+                    style={
+                      Object {
+                        "verticalAlign": "bottom",
+                      }
+                    }
+                  >
+                    
+                  </span>
+                </FieldLabel>
+                <FieldLabel
                   label="View Records For"
                   position="left"
                 >
@@ -914,6 +1023,21 @@ ShallowWrapper {
                       }
                     >
                       Real-Time
+                    </span>
+                  </FieldLabel>
+                  <FieldLabel
+                    label="Signal Type"
+                    position="left"
+                  >
+                    <span
+                      data-test="saved-search-popover-signal-type"
+                      style={
+                        Object {
+                          "verticalAlign": "bottom",
+                        }
+                      }
+                    >
+                      
                     </span>
                   </FieldLabel>
                   <FieldLabel
@@ -1035,6 +1159,21 @@ ShallowWrapper {
                         }
                       >
                         Real-Time
+                      </span>
+                    </FieldLabel>
+                    <FieldLabel
+                      label="Signal Type"
+                      position="left"
+                    >
+                      <span
+                        data-test="saved-search-popover-signal-type"
+                        style={
+                          Object {
+                            "verticalAlign": "bottom",
+                          }
+                        }
+                      >
+                        
                       </span>
                     </FieldLabel>
                     <FieldLabel
@@ -1173,7 +1312,21 @@ ShallowWrapper {
                           Real-Time
                         </span>
                       </FieldLabel>,
-                      null,
+                      <FieldLabel
+                        label="Signal Type"
+                        position="left"
+                      >
+                        <span
+                          data-test="saved-search-popover-signal-type"
+                          style={
+                            Object {
+                              "verticalAlign": "bottom",
+                            }
+                          }
+                        >
+                          
+                        </span>
+                      </FieldLabel>,
                       null,
                       undefined,
                       <FieldLabel
@@ -1267,7 +1420,42 @@ ShallowWrapper {
                       },
                       "type": [Function],
                     },
-                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": <span
+                          data-test="saved-search-popover-signal-type"
+                          style={
+                            Object {
+                              "verticalAlign": "bottom",
+                            }
+                          }
+                        >
+                          
+                        </span>,
+                        "label": "Signal Type",
+                        "position": "left",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "",
+                          "data-test": "saved-search-popover-signal-type",
+                          "style": Object {
+                            "verticalAlign": "bottom",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": "",
+                        "type": "span",
+                      },
+                      "type": [Function],
+                    },
                     null,
                     undefined,
                     Object {

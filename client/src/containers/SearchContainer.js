@@ -20,15 +20,15 @@ import SaveSearchExecution from '../components/SaveSearchExecution';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
+import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
-    constructor() {
-        super();
-
-        this.state = {
+    state = this.initialState();
+    initialState() {
+        return {
             name: '',
             keyValuePairs: [
                 {
@@ -218,12 +218,16 @@ class SearchContainer extends Component {
     };
 
     onSearch = () => {
-        this.setState({
-            searched: true,
-            filterNewSignals: false,
-            presetId: null,
-        });
-        this.props.callSearch(this.state);
+        this.setState(
+            {
+                searched: true,
+                filterNewSignals: false,
+                presetId: null,
+            },
+            () => {
+                this.props.callSearch(this.state);
+            },
+        );
     };
 
     handleLoadMore = () => {
@@ -259,42 +263,22 @@ class SearchContainer extends Component {
         const newSavedSearch = [...savedSearch.slice(0, index), ...savedSearch.slice(index + 1)];
 
         saveSearch(newSavedSearch);
+        this.setState(this.initialState());
     };
 
     onClearAll = () => {
         this.props.clearSearch();
         this.props.clearSearchFields();
-        this.setState({
-            name: '',
-            searched: false,
-            keyValuePairs: [
-                {
-                    id: 0,
-                    key: '',
-                    operator: '==',
-                    value: '',
-                },
-            ],
-            signalStatus: 'ALL',
-            advanced: false,
-            source: {
-                name: '',
-                dataSourceIds: [],
-                reportSuiteIds: [],
-                sourceType: 'ALL',
-            },
-            filterNewSignals: false,
-            viewRecordsFor: '7D',
-            customStartDate: getDefaultCustomStartDate(),
-            customEndDate: getDefaultCustomEndDate(),
-            minEventFires: 1000,
-        });
+        this.setState(this.initialState());
     };
 
     isCustomDateRangeEnabled = () => this.state.viewRecordsFor === 'custom';
 
     saveThisSearchMessage = () =>
         getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
+
+    getSearchResultsMessage = () =>
+        getSearchResultsMessageBySignalTypeLabel(this.state.name, this.state.source.sourceType);
 
     render() {
         return (
@@ -377,7 +361,9 @@ class SearchContainer extends Component {
                         <div className={styles.tableContainer}>
                             <GridRow valign="middle">
                                 <GridColumn size={4}>
-                                    <Heading size={3}>Search Results for</Heading>
+                                    <Heading size={3}>
+                                        Search Results {this.getSearchResultsMessage()}
+                                    </Heading>
                                 </GridColumn>
                                 <GridColumn size={8}>
                                     <GridRow>
