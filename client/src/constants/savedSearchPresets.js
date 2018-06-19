@@ -13,7 +13,7 @@ export const topUnusedSignals = {
         dataSourceIds: [],
         name: '',
         reportSuiteIds: [],
-        sourceType: null,
+        sourceType: 'ALL',
     },
     viewRecordsFor: '7D',
 };

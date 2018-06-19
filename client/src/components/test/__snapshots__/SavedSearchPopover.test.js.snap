@@ -88,6 +88,7 @@ ShallowWrapper {
         >
           <Tag
             className={undefined}
+            data-saved-search-id={undefined}
             data-saved-search-preset={undefined}
             data-test="saved-search-tag"
             id={null}
@@ -220,6 +221,7 @@ ShallowWrapper {
           "children": Array [
             <Tag
               className={undefined}
+              data-saved-search-id={undefined}
               data-saved-search-preset={undefined}
               data-test="saved-search-tag"
               id={null}
@@ -354,6 +356,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "className": undefined,
+              "data-saved-search-id": undefined,
               "data-saved-search-preset": undefined,
               "data-test": "saved-search-tag",
               "id": null,
@@ -820,6 +823,7 @@ ShallowWrapper {
           >
             <Tag
               className={undefined}
+              data-saved-search-id={undefined}
               data-saved-search-preset={undefined}
               data-test="saved-search-tag"
               id={null}
@@ -952,6 +956,7 @@ ShallowWrapper {
             "children": Array [
               <Tag
                 className={undefined}
+                data-saved-search-id={undefined}
                 data-saved-search-preset={undefined}
                 data-test="saved-search-tag"
                 id={null}
@@ -1086,6 +1091,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "className": undefined,
+                "data-saved-search-id": undefined,
                 "data-saved-search-preset": undefined,
                 "data-test": "saved-search-tag",
                 "id": null,
