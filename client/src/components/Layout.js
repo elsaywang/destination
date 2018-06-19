@@ -1,8 +1,8 @@
 import React from 'react';
+import ReactSpectrumProvider from '@react/react-spectrum/Provider';
 import Heading from '@react/react-spectrum/Heading';
 import { Grid } from '@react/react-spectrum/Grid';
 import { defineMessages, FormattedMessage } from 'react-intl';
-import '@react/react-spectrum/page';
 import './Layout.css';
 
 const messages = defineMessages({
@@ -15,12 +15,14 @@ const messages = defineMessages({
 
 function Layout(props) {
     return (
-        <Grid>
-            <FormattedMessage {...messages.title}>
-                {text => <Heading>{text}</Heading>}
-            </FormattedMessage>
-            {props.children}
-        </Grid>
+        <ReactSpectrumProvider scale="medium">
+            <Grid style={{ overflow: 'auto' }}>
+                <FormattedMessage {...messages.title}>
+                    {text => <Heading>{text}</Heading>}
+                </FormattedMessage>
+                {props.children}
+            </Grid>
+        </ReactSpectrumProvider>
     );
 }
 
