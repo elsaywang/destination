@@ -1,5 +1,5 @@
 import mockdate from 'mockdate';
-import { normalizeSearch, normalizeStartDate, normalizeEndDate } from '../normalizeSearch';
+import { normalizeSearch } from '../normalizeSearch';
 
 describe('normalizeSearch util', () => {
     const baseSearch = {
@@ -17,6 +17,7 @@ describe('normalizeSearch util', () => {
         minEventFires: 1000,
         name: '',
         signalStatus: 'ALL',
+        filterNewSignals: false,
         source: {
             dataSourceIds: null,
             name: '',
@@ -244,6 +245,24 @@ describe('normalizeSearch util', () => {
                 signalStatus: 'USED',
             });
             const expected = 'USED';
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('normalizing filtering new signals', () => {
+        it('should exclude `filterNewSignals` if it is `false`', () => {
+            const { filterNewSignals: actual } = normalizeSearch(baseSearch);
+
+            expect(actual).toBeUndefined();
+        });
+
+        it('should return `filterNewSignals` if it is true', () => {
+            const { filterNewSignals: actual } = normalizeSearch({
+                ...baseSearch,
+                filterNewSignals: true,
+            });
+            const expected = true;
 
             expect(actual).toEqual(expected);
         });

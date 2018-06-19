@@ -46,6 +46,7 @@ class SearchContainer extends Component {
                 reportSuiteIds: [],
                 sourceType: 'ALL',
             },
+            filterNewSignals: false,
             viewRecordsFor: '7D',
             customStartDate: getDefaultCustomStartDate(),
             customEndDate: getDefaultCustomEndDate(),
@@ -80,6 +81,8 @@ class SearchContainer extends Component {
                     reportSuiteIds: [],
                     sourceType,
                 },
+                filterNewSignals: false,
+                presetId: null,
             },
             () => this.props.callSearch(this.state),
         );
@@ -206,6 +209,7 @@ class SearchContainer extends Component {
     onSavedSearchClick = savedSearch => {
         this.setState({
             ...this.state,
+            presetId: null,
             ...savedSearch,
             searched: true,
         });
@@ -214,7 +218,16 @@ class SearchContainer extends Component {
     };
 
     onSearch = () => {
-        this.setState({ searched: true }, () => this.props.callSearch(this.state));
+        this.setState(
+            {
+                searched: true,
+                filterNewSignals: false,
+                presetId: null,
+            },
+            () => {
+                this.props.callSearch(this.state);
+            },
+        );
     };
 
     handleLoadMore = () => {
@@ -234,7 +247,9 @@ class SearchContainer extends Component {
         const maxId = savedSearch.length ? savedSearch[savedSearch.length - 1].id : -1;
         const thisSearchWithKeyValuePairs = {
             ...this.state,
+            filterNewSignals: false,
             ...thisSearch,
+            presetId: null,
             id: maxId + 1,
         };
         const newSavedSearch = [...savedSearch, thisSearchWithKeyValuePairs];

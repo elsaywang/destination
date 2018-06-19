@@ -1,6 +1,7 @@
 {
     "name": "Test1234",
     "id": 0,
+    "presetId": null,
     "keyValuePairs": [
         {
             "key": "k-bandwidth",

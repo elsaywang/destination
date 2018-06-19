@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`saved search presets constants matches snapshot 1`] = `
+Array [
+  Object {
+    "advanced": false,
+    "descending": false,
+    "filterNewSignals": false,
+    "includeInDashboard": true,
+    "keyValuePairs": Array [
+      Object {
+        "id": 0,
+        "key": "",
+        "operator": "==",
+        "value": "",
+      },
+    ],
+    "minEventFires": 1000,
+    "name": "Top Unused Signals",
+    "presetId": "top-unused-signals",
+    "signalStatus": "ALL",
+    "sortBy": "percentageChange",
+    "source": Object {
+      "dataSourceIds": Array [],
+      "name": "",
+      "reportSuiteIds": Array [],
+      "sourceType": "ALL",
+    },
+    "viewRecordsFor": "7D",
+  },
+  Object {
+    "advanced": false,
+    "descending": false,
+    "filterNewSignals": true,
+    "includeInDashboard": true,
+    "keyValuePairs": Array [
+      Object {
+        "id": 0,
+        "key": "",
+        "operator": "==",
+        "value": "",
+      },
+    ],
+    "minEventFires": 1000,
+    "name": "New Unused Signals",
+    "presetId": "new-unused-signals",
+    "signalStatus": "ALL",
+    "sortBy": "percentageChange",
+    "source": Object {
+      "dataSourceIds": Array [],
+      "name": "",
+      "reportSuiteIds": Array [],
+      "sourceType": "ALL",
+    },
+    "viewRecordsFor": "7D",
+  },
+]
+`;

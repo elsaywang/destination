@@ -33,6 +33,7 @@ ShallowWrapper {
           size="S"
         />
         <Tooltip
+          data-test="saved-search-limit-message"
           open={true}
           placement="right"
           variant="inspect"
@@ -55,6 +56,7 @@ ShallowWrapper {
             size="S"
           />,
           <Tooltip
+            data-test="saved-search-limit-message"
             open={true}
             placement="right"
             variant="inspect"
@@ -89,6 +91,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "You may save up to 10 searches",
+            "data-test": "saved-search-limit-message",
             "open": true,
             "placement": "right",
             "variant": "inspect",
@@ -122,6 +125,7 @@ ShallowWrapper {
             size="S"
           />
           <Tooltip
+            data-test="saved-search-limit-message"
             open={true}
             placement="right"
             variant="inspect"
@@ -144,6 +148,7 @@ ShallowWrapper {
               size="S"
             />,
             <Tooltip
+              data-test="saved-search-limit-message"
               open={true}
               placement="right"
               variant="inspect"
@@ -178,6 +183,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "You may save up to 10 searches",
+              "data-test": "saved-search-limit-message",
               "open": true,
               "placement": "right",
               "variant": "inspect",

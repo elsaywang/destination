@@ -11,6 +11,7 @@ import {
     LOAD_MORE_SAVED_SEARCH,
     RESET_VISIBLE_SAVED_SEARCH,
 } from '../actions/savedSearch';
+import { savedSearchPresets } from '../constants/savedSearchPresets';
 import {
     defaultSavedSearchLimit,
     defaultTotalVisibleSavedSearch,
@@ -141,7 +142,7 @@ export default handleActions(
 );
 
 export const getLimit = state => state.limit;
-export const getSavedSearchList = state => state.list;
+export const getSavedSearchList = state => [...savedSearchPresets, ...state.list];
 export const isSavedSearchLimitReached = state =>
     Boolean(getSavedSearchList(state).length >= getLimit(state));
 export const getNormalizedSavedSearchList = state =>

@@ -17,6 +17,22 @@ import saveSearchReducer, {
     getTrackedInDashboardSavedSearchList,
     getVisibleSavedSearchList,
 } from '../savedSearch';
+import { savedSearchPresets } from '../../constants/savedSearchPresets';
+
+jest.mock('../../constants/savedSearchPresets', () => ({
+    savedSearchPresets: [
+        {
+            name: 'Top Unused Signals',
+            presetId: 'top-unused-signals',
+            includeInDashboard: true,
+        },
+        {
+            name: 'New Unused Signals',
+            presetId: 'new-unused-signals',
+            includeInDashboard: true,
+        },
+    ],
+}));
 
 describe('saveSearch reducer', () => {
     const initialState = {
@@ -233,20 +249,69 @@ describe('saveSearch reducer', () => {
         });
 
         describe('getSavedSearchList', () => {
-            it('should return `list` property', () => {
+            it('should return saved search presets concatenated with `list` property', () => {
+                const state = {
+                    list: [{ name: 'test1' }, { name: 'test2' }, { name: 'test3' }],
+                };
+                expect(getSavedSearchList(state)).toEqual([...savedSearchPresets, ...state.list]);
+            });
+        });
+
+        describe('isSavedSearchLimitReached', () => {
+            it('should be true if presets length plus `list` length is equal to `limit` ', () => {
                 const state = {
                     list: [
                         { name: 'test1', kvp: 'ewr-key1' },
                         { name: 'test2', kvp: 'ewr-key2' },
                         { name: 'test3', kvp: 'ewr-ke3' },
                     ],
+                    limit: 5,
                 };
-                expect(getSavedSearchList(state)).toEqual(state.list);
+                expect(isSavedSearchLimitReached(state)).toBeTruthy();
+            });
+
+            it('should be true if presets length plus `list` length is greater than `limit` ', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 4,
+                };
+                expect(isSavedSearchLimitReached(state)).toBeTruthy();
+            });
+
+            it('should be false if presets length plus `list` length is smaller than `limit` ', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 6,
+                };
+                expect(isSavedSearchLimitReached(state)).toBeFalsy();
             });
         });
 
-        describe('isSavedSearchLimitReached', () => {
-            it('should be true if `list` length is equal to `limit` ', () => {
+        describe('getNormalizedSavedSearchList', () => {
+            it('should return saved search presets concatenated with original SavedSearchList if limit is not exceeded', () => {
+                const state = {
+                    list: [
+                        { name: 'test1', kvp: 'ewr-key1' },
+                        { name: 'test2', kvp: 'ewr-key2' },
+                        { name: 'test3', kvp: 'ewr-ke3' },
+                    ],
+                    limit: 5,
+                };
+                expect(getNormalizedSavedSearchList(state)).toEqual([
+                    ...savedSearchPresets,
+                    ...state.list,
+                ]);
+            });
+
+            it('should return saved search presets concanenated with original SavedSearchList, truncated, if limit is exceeded', () => {
                 const state = {
                     list: [
                         { name: 'test1', kvp: 'ewr-key1' },
@@ -255,59 +320,9 @@ describe('saveSearch reducer', () => {
                     ],
                     limit: 3,
                 };
-                expect(isSavedSearchLimitReached(state)).toBeTruthy();
-            });
-
-            it('should be true if `list` length is greater than `limit` ', () => {
-                const state = {
-                    list: [
-                        { name: 'test1', kvp: 'ewr-key1' },
-                        { name: 'test2', kvp: 'ewr-key2' },
-                        { name: 'test3', kvp: 'ewr-ke3' },
-                    ],
-                    limit: 2,
-                };
-                expect(isSavedSearchLimitReached(state)).toBeTruthy();
-            });
-
-            it('should be false if `list` length is smaller than `limit` ', () => {
-                const state = {
-                    list: [
-                        { name: 'test1', kvp: 'ewr-key1' },
-                        { name: 'test2', kvp: 'ewr-key2' },
-                        { name: 'test3', kvp: 'ewr-ke3' },
-                    ],
-                    limit: 5,
-                };
-                expect(isSavedSearchLimitReached(state)).toBeFalsy();
-            });
-        });
-
-        describe('getNormalizedSavedSearchList', () => {
-            it('should return original SavedSearchList if limit is not reached', () => {
-                const state = {
-                    list: [
-                        { name: 'test1', kvp: 'ewr-key1' },
-                        { name: 'test2', kvp: 'ewr-key2' },
-                        { name: 'test3', kvp: 'ewr-ke3' },
-                    ],
-                    limit: 5,
-                };
-                expect(getNormalizedSavedSearchList(state)).toEqual(state.list);
-            });
-
-            it('should return truncated SavedSearchList if limit is reached', () => {
-                const state = {
-                    list: [
-                        { name: 'test1', kvp: 'ewr-key1' },
-                        { name: 'test2', kvp: 'ewr-key2' },
-                        { name: 'test3', kvp: 'ewr-ke3' },
-                    ],
-                    limit: 2,
-                };
                 const expectedSavedSearchList = [
+                    ...savedSearchPresets,
                     { name: 'test1', kvp: 'ewr-key1' },
-                    { name: 'test2', kvp: 'ewr-key2' },
                 ];
                 expect(getNormalizedSavedSearchList(state)).toEqual(expectedSavedSearchList);
             });
@@ -333,7 +348,7 @@ describe('saveSearch reducer', () => {
                         { name: 'test3', kvp: 'ewr-key3', includeInDashboard: false },
                     ],
                 };
-                expect(getTrackedInDashboardSavedSearchList(state)).toEqual([]);
+                expect(getTrackedInDashboardSavedSearchList(state)).toEqual(savedSearchPresets);
             });
             it('should return the saved search list with all `includeInDashboard` is truthy', () => {
                 const state = {
@@ -349,7 +364,10 @@ describe('saveSearch reducer', () => {
                     { name: 'test1', kvp: 'ewr-key1', includeInDashboard: true },
                     { name: 'test5', kvp: 'ewr-key5', includeInDashboard: true },
                 ];
-                expect(getTrackedInDashboardSavedSearchList(state)).toEqual(expectedList);
+                expect(getTrackedInDashboardSavedSearchList(state)).toEqual([
+                    ...savedSearchPresets,
+                    ...expectedList,
+                ]);
             });
         });
 
@@ -365,11 +383,11 @@ describe('saveSearch reducer', () => {
                         { name: 'test6', kvp: 'ewr-key6', includeInDashboard: true },
                         { name: 'test7', kvp: 'ewr-key6', includeInDashboard: false },
                     ],
-                    totalVisibleSavedSearch: 2,
+                    totalVisibleSavedSearch: 3,
                 };
                 const expectedList = [
+                    ...savedSearchPresets,
                     { name: 'test1', kvp: 'ewr-key1', includeInDashboard: true },
-                    { name: 'test4', kvp: 'ewr-ke4', includeInDashboard: true },
                 ];
                 expect(getVisibleSavedSearchList(state)).toEqual(expectedList);
             });

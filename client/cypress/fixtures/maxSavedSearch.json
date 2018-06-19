@@ -149,6 +149,99 @@
             "sortBy": "Value Name",
             "categoryType": "Real-Time",
             "advanced": false
+        },
+        {
+            "name": "Bing Thursday",
+            "id": 5,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-optimizing",
+                    "operator": ">",
+                    "value": 14505
+                },
+                {
+                    "key": "k-New Zealand",
+                    "operator": "<=",
+                    "value": 28275
+                }
+            ],
+            "source": {
+                "name": "",
+                "dataSourceIds": [],
+                "reportSuiteIds": [],
+                "sourceType": null
+            },
+            "minEventFires": 66009,
+            "signalStatus": "USED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Included In Traits",
+            "categoryType": "Real-Time",
+            "advanced": false
+        },
+        {
+            "name": "Largo Quaker",
+            "id": 6,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-back",
+                    "operator": ">=",
+                    "value": 24478
+                },
+                {
+                    "key": "k-lasers",
+                    "operator": "<",
+                    "value": 32006
+                }
+            ],
+            "source": {
+                "name": "",
+                "dataSourceIds": [],
+                "reportSuiteIds": [],
+                "sourceType": "REALTIME"
+            },
+            "minEventFires": 2542,
+            "signalStatus": "UNUSED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Included In Traits",
+            "categoryType": "Real-Time",
+            "advanced": true
+        },
+        {
+            "name": "Mariah Bergdorff",
+            "id": 7,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-ground",
+                    "operator": "<=",
+                    "value": 36516
+                },
+                {
+                    "key": "k-fence",
+                    "operator": "==",
+                    "value": "v-Drive"
+                }
+            ],
+            "source": {
+                "name": "",
+                "dataSourceIds": [],
+                "reportSuiteIds": [],
+                "sourceType": "ONBOARDED"
+            },
+            "minEventFires": 65935,
+            "signalStatus": "USED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Value Name",
+            "categoryType": "Onboarded",
+            "advanced": false
         }
     ]
 }

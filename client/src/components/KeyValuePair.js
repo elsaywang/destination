@@ -132,6 +132,7 @@ class KeyValuePair extends Component {
                     value={operator}
                     onChange={this.onSelectOperatorChange}
                     options={operatorOptions}
+                    data-test="operator"
                 />
                 <Label value={valueLabel} labelFor={forValue} style={{ position: 'relative' }}>
                     <Textfield
