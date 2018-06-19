@@ -89,6 +89,7 @@ class SavedSearchPopover extends Component {
                 <OverlayTrigger trigger="hover" data-test="saved-search-overlay-trigger">
                     <Tag
                         data-test="saved-search-tag"
+                        data-saved-search-id={search.id}
                         data-saved-search-preset={search.presetId}
                         id={isCurrentSearch ? 'isCurrentSearch' : null}
                         className={styles.tag}
