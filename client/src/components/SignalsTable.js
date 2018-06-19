@@ -13,6 +13,7 @@ import {
 } from '../constants/columns';
 import { baseRowHeight } from '../constants/rows';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
+import { isNumeric } from '../utils/isNumeric';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
@@ -133,6 +134,9 @@ class SignalsTable extends Component {
     }
 
     renderPercentageChange = percentageChange => {
+        if (percentageChange === null || !isNumeric(percentageChange)) {
+            return '-';
+        }
         const maxPercentageMagnitude = Math.max(
             ...this.props.results.list.map(item => Math.abs(item.percentageChange)),
         );

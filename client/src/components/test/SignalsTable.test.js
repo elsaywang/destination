@@ -252,6 +252,16 @@ describe('<SignalsTable /> component', () => {
                     percentageChangeWrapper.find(PercentageChange).props().maxPercentageMagnitude,
                 ).toEqual(0.5678);
             });
+
+            it('renders `-` when `null` or non-numeric value is passed in ', () => {
+                const tests = ['test', undefined, null];
+                tests.map(test => {
+                    const nonePercentageChangeWrapper = shallow(
+                        <div>{renderPercentageChange(test)}</div>,
+                    );
+                    expect(nonePercentageChangeWrapper.text()).toEqual('-');
+                });
+            });
         });
 
         describe('renderIncludedInTraits', () => {
