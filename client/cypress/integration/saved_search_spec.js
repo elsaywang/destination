@@ -261,7 +261,7 @@ describe('Saved Search Integration Test', function() {
             cy.get('[data-test="saved-search-popover-search-query"]').should('have.text', '""==""');
             cy.get('[data-test="saved-search-popover-signal-category"]').should(
                 'have.text',
-                'Real-Time',
+                'Real-Time and Onboarded',
             );
             cy.get('[data-test="saved-search-popover-signal-type"]').should('not.be.visible');
             cy.get('[data-test="saved-search-popover-signal-source"]').should('not.be.visible');
@@ -285,7 +285,7 @@ describe('Saved Search Integration Test', function() {
             cy.get('[data-test="saved-search-popover-search-query"]').should('have.text', '""==""');
             cy.get('[data-test="saved-search-popover-signal-category"]').should(
                 'have.text',
-                'Real-Time',
+                'Real-Time and Onboarded',
             );
             cy.get('[data-test="saved-search-popover-signal-type"]').should('not.be.visible');
             cy.get('[data-test="saved-search-popover-signal-source"]').should('not.be.visible');
