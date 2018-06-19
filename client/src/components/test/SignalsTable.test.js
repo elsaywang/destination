@@ -254,7 +254,7 @@ describe('<SignalsTable /> component', () => {
             });
 
             it('renders `-` when `null` or non-numeric value is passed in ', () => {
-                const tests = ['test', undefined, null];
+                const tests = ['test', undefined, null, ''];
                 tests.map(test => {
                     const nonePercentageChangeWrapper = shallow(
                         <div>{renderPercentageChange(test)}</div>,
