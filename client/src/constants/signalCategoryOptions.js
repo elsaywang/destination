@@ -4,7 +4,7 @@ export const getSignalCategory = type => {
     }
 
     if (type === 'ALL') {
-        return '';
+        return 'Real-Time and Onboarded';
     }
 
     return 'Real-Time';
