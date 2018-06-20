@@ -49,6 +49,7 @@ class SaveSearchExecutionContent extends Component {
                 </Label>
                 <div className={styles.contentCheckBox}>
                     <Checkbox
+                        data-test="save-this-search-checkbox"
                         label={checkBoxLabel}
                         onChange={this.toggleCheckbox}
                         checked={this.state.isTrackInDashboardChecked}
