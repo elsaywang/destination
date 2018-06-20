@@ -10,6 +10,7 @@ import ModalTrigger from '@react/react-spectrum/ModalTrigger';
 import Dialog from '@react/react-spectrum/Dialog';
 import SaveSearchExecutionContent from './SaveSearchExecutionContent';
 import { saveSearch } from './saveSearchExecutionMessages';
+import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
 class SaveSearchExecution extends Component {
     render() {
@@ -21,7 +22,9 @@ class SaveSearchExecution extends Component {
             trackSearchResultInDashboard,
             selectDefaultSorting,
             changeSortingOrder,
+            error,
         } = this.props;
+        const { hasError, errorMessage } = error;
         return (
             // TODO: switch back to OverlayTrigger once PopOver is fixed
             //     <OverlayTrigger trigger="click" placement="bottom" onHide={cancelSaveSearch}>
@@ -35,32 +38,36 @@ class SaveSearchExecution extends Component {
             //             />
             //         </Popover>
             //     </OverlayTrigger>
-            <ModalTrigger>
-                <Button
-                    data-test="save-this-search-button"
-                    label={saveSearch}
-                    variant="action"
-                    quiet
-                    icon={<Add />}
-                    disabled={disabled}
-                />
-                <Dialog
-                    className={styles.triggerDialog}
-                    modalcontent
-                    confirmLabel="Save"
-                    size="S"
-                    variant="information"
-                    cancelLabel="Cancel"
-                    onConfirm={confirmSaveThisSearch}
-                    onCancel={cancelSaveSearch}>
-                    <SaveSearchExecutionContent
-                        onSaveSearchNameChange={updateSaveSearchName}
-                        onTrackResultInDashboardChange={trackSearchResultInDashboard}
-                        onDefaultSortingChange={selectDefaultSorting}
-                        onSortingOrderChange={changeSortingOrder}
+            hasError ? (
+                <InlineErrorMessage isInvalid={hasError} errorMessage={errorMessage} />
+            ) : (
+                <ModalTrigger>
+                    <Button
+                        data-test="save-this-search-button"
+                        label={saveSearch}
+                        variant="action"
+                        quiet
+                        icon={<Add />}
+                        disabled={disabled}
                     />
-                </Dialog>
-            </ModalTrigger>
+                    <Dialog
+                        className={styles.triggerDialog}
+                        modalcontent
+                        confirmLabel="Save"
+                        size="S"
+                        variant="information"
+                        cancelLabel="Cancel"
+                        onConfirm={confirmSaveThisSearch}
+                        onCancel={cancelSaveSearch}>
+                        <SaveSearchExecutionContent
+                            onSaveSearchNameChange={updateSaveSearchName}
+                            onTrackResultInDashboardChange={trackSearchResultInDashboard}
+                            onDefaultSortingChange={selectDefaultSorting}
+                            onSortingOrderChange={changeSortingOrder}
+                        />
+                    </Dialog>
+                </ModalTrigger>
+            )
         );
     }
 }
@@ -73,6 +80,7 @@ SaveSearchExecution.propTypes = {
     trackSearchResultInDashboard: PropTypes.func,
     selectDefaultSorting: PropTypes.func,
     changeSortingOrder: PropTypes.func,
+    error: PropTypes.object,
 };
 
 export default SaveSearchExecution;

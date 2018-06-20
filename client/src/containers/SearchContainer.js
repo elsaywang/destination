@@ -339,10 +339,12 @@ class SearchContainer extends Component {
                                             error={this.props.errors.saveSearch}
                                         />
                                     </div>
-                                    <OverlayTooltip
-                                        className={styles.saveSearchExecutionTooltip}
-                                        message={this.saveThisSearchMessage()}
-                                    />
+                                    {!this.props.errors.saveSearch.hasError && (
+                                        <OverlayTooltip
+                                            className={styles.saveSearchExecutionTooltip}
+                                            message={this.saveThisSearchMessage()}
+                                        />
+                                    )}
                                 </Fragment>
                             )}
                         </div>
