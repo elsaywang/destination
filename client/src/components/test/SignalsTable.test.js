@@ -184,14 +184,15 @@ describe('<SignalsTable /> component', () => {
         const instance = wrapper.instance();
 
         afterEach(() => {
-            jest.restoreAllMocks();
+            // jest.restoreAllMocks();
         });
 
         describe('renderCell', () => {
             const verifyRenderMethodInColumn = (renderMethodName, columnKey, data) => {
-                jest.spyOn(instance, renderMethodName);
+                const spy = jest.spyOn(instance, renderMethodName);
                 instance.renderCell({ key: columnKey }, data);
                 expect(instance[renderMethodName]).toHaveBeenCalledWith(data);
+                spy.mockRestore();
             };
 
             it('should call `renderKeyValuePairs` for cells in the `keyValuePairs` column', () => {
