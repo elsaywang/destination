@@ -19,6 +19,7 @@
 
 :local(.saveSearchExecution) {
     margin-top: 2.8rem;
+    display: flex;
 }
 
 :local(.saveSearchExecutionTooltip) {
