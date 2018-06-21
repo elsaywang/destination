@@ -6,55 +6,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearchTagList
     currentSearch="Watson Cartwright"
-    deleteSearch={[MockFunction]}
+    deleteSearch={[Function]}
     list={
-      Array [
-        Object {
-          "customEndDate": "2018-05-01",
-          "customStartDate": "2018-04-24",
-          "id": 17966,
-          "includedTraits": Array [
-            0,
-            1,
-            2,
-          ],
-          "keyValuePairs": Array [
-            Object {
-              "key": "k-monitor",
-              "operator": ">",
-              "value": "v-programming",
-            },
-          ],
-          "name": "Germaine Wiza",
-          "percentageChange": 45886,
-          "signalStatus": "USED",
-          "source": "Buckinghamshire",
-          "totalCount": 59925,
-          "type": "Lek",
-          "viewRecordsFor": "7D",
-        },
-      ]
-    }
-    onSavedSearchClick={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <InjectIntl(SavedSearchPopover)
-          deleteSearch={[MockFunction]}
-          isCurrentSearch={false}
-          onSavedSearchClick={[MockFunction]}
-          search={
+        Array [
             Object {
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",
@@ -78,9 +32,55 @@ ShallowWrapper {
               "totalCount": 59925,
               "type": "Lek",
               "viewRecordsFor": "7D",
-            }
+            },
+          ]
+    }
+    onSavedSearchClick={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <InjectIntl(SavedSearchPopover)
+          deleteSearch={[Function]}
+          isCurrentSearch={false}
+          onSavedSearchClick={[Function]}
+          search={
+                    Object {
+                              "customEndDate": "2018-05-01",
+                              "customStartDate": "2018-04-24",
+                              "id": 17966,
+                              "includedTraits": Array [
+                                0,
+                                1,
+                                2,
+                              ],
+                              "keyValuePairs": Array [
+                                Object {
+                                  "key": "k-monitor",
+                                  "operator": ">",
+                                  "value": "v-programming",
+                                },
+                              ],
+                              "name": "Germaine Wiza",
+                              "percentageChange": 45886,
+                              "signalStatus": "USED",
+                              "source": "Buckinghamshire",
+                              "totalCount": 59925,
+                              "type": "Lek",
+                              "viewRecordsFor": "7D",
+                            }
           }
-        />,
+/>,
       ],
       "data-test": "saved-search-tag-list",
       "disabled": false,
@@ -98,9 +98,9 @@ ShallowWrapper {
         "key": "Germaine Wiza",
         "nodeType": "class",
         "props": Object {
-          "deleteSearch": [MockFunction],
+          "deleteSearch": [Function],
           "isCurrentSearch": false,
-          "onSavedSearchClick": [MockFunction],
+          "onSavedSearchClick": [Function],
           "search": Object {
             "customEndDate": "2018-05-01",
             "customStartDate": "2018-04-24",
@@ -141,36 +141,36 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <InjectIntl(SavedSearchPopover)
-            deleteSearch={[MockFunction]}
+            deleteSearch={[Function]}
             isCurrentSearch={false}
-            onSavedSearchClick={[MockFunction]}
+            onSavedSearchClick={[Function]}
             search={
-              Object {
-                "customEndDate": "2018-05-01",
-                "customStartDate": "2018-04-24",
-                "id": 17966,
-                "includedTraits": Array [
-                  0,
-                  1,
-                  2,
-                ],
-                "keyValuePairs": Array [
-                  Object {
-                    "key": "k-monitor",
-                    "operator": ">",
-                    "value": "v-programming",
-                  },
-                ],
-                "name": "Germaine Wiza",
-                "percentageChange": 45886,
-                "signalStatus": "USED",
-                "source": "Buckinghamshire",
-                "totalCount": 59925,
-                "type": "Lek",
-                "viewRecordsFor": "7D",
-              }
+                        Object {
+                                    "customEndDate": "2018-05-01",
+                                    "customStartDate": "2018-04-24",
+                                    "id": 17966,
+                                    "includedTraits": Array [
+                                      0,
+                                      1,
+                                      2,
+                                    ],
+                                    "keyValuePairs": Array [
+                                      Object {
+                                        "key": "k-monitor",
+                                        "operator": ">",
+                                        "value": "v-programming",
+                                      },
+                                    ],
+                                    "name": "Germaine Wiza",
+                                    "percentageChange": 45886,
+                                    "signalStatus": "USED",
+                                    "source": "Buckinghamshire",
+                                    "totalCount": 59925,
+                                    "type": "Lek",
+                                    "viewRecordsFor": "7D",
+                                  }
             }
-          />,
+/>,
         ],
         "data-test": "saved-search-tag-list",
         "disabled": false,
@@ -188,9 +188,9 @@ ShallowWrapper {
           "key": "Germaine Wiza",
           "nodeType": "class",
           "props": Object {
-            "deleteSearch": [MockFunction],
+            "deleteSearch": [Function],
             "isCurrentSearch": false,
-            "onSavedSearchClick": [MockFunction],
+            "onSavedSearchClick": [Function],
             "search": Object {
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",

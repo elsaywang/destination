@@ -7,10 +7,10 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <EmptyPlaceholder
     message="Refine the search query and try searching again."
     title="No results found."
-  >
+>
     <Explore />
     <NoResult />
-  </EmptyPlaceholder>,
+</EmptyPlaceholder>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -31,14 +31,14 @@ ShallowWrapper {
         <Heading
           className={undefined}
           size={2}
-        >
+>
           No results found.
-        </Heading>,
+</Heading>,
         <div
           className=""
-        >
+>
           Refine the search query and try searching again.
-        </div>,
+</div>,
       ],
       "className": undefined,
       "data-test": "empty",
@@ -105,14 +105,14 @@ ShallowWrapper {
           <Heading
             className={undefined}
             size={2}
-          >
+>
             No results found.
-          </Heading>,
+</Heading>,
           <div
             className=""
-          >
+>
             Refine the search query and try searching again.
-          </div>,
+</div>,
         ],
         "className": undefined,
         "data-test": "empty",
@@ -183,7 +183,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <EmptyPlaceholder
     message="Refine the search query and try searching again."
     title="No results found."
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -201,14 +201,14 @@ ShallowWrapper {
         <Heading
           className={undefined}
           size={2}
-        >
+>
           No results found.
-        </Heading>,
+</Heading>,
         <div
           className=""
-        >
+>
           Refine the search query and try searching again.
-        </div>,
+</div>,
       ],
       "className": undefined,
       "data-test": "empty",
@@ -255,14 +255,14 @@ ShallowWrapper {
           <Heading
             className={undefined}
             size={2}
-          >
+>
             No results found.
-          </Heading>,
+</Heading>,
           <div
             className=""
-          >
+>
             Refine the search query and try searching again.
-          </div>,
+</div>,
         ],
         "className": undefined,
         "data-test": "empty",

@@ -6,9 +6,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
     canCreateTraits={false}
-    storeSessionAndNavigateToTraits={[MockFunction]}
+    storeSessionAndNavigateToTraits={[Function]}
     traitsCreationLabelText="Create Rule-Based Trait"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -36,9 +36,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SingleSignalTraitsCreation
     canCreateTraits={true}
-    storeSessionAndNavigateToTraits={[MockFunction]}
+    storeSessionAndNavigateToTraits={[Function]}
     traitsCreationLabelText="Create Rule-Based Trait"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -54,16 +54,16 @@ ShallowWrapper {
       "children": Array [
         <Add
           size="S"
-        />,
+/>,
         <div
           className={undefined}
-        >
+>
           Create Rule-Based Trait
-        </div>,
+</div>,
       ],
       "className": "spectrum-Link",
       "data-test": "single-signal-trait-creation",
-      "onClick": [MockFunction],
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -102,16 +102,16 @@ ShallowWrapper {
         "children": Array [
           <Add
             size="S"
-          />,
+/>,
           <div
             className={undefined}
-          >
+>
             Create Rule-Based Trait
-          </div>,
+</div>,
         ],
         "className": "spectrum-Link",
         "data-test": "single-signal-trait-creation",
-        "onClick": [MockFunction],
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [

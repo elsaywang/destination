@@ -6,19 +6,19 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <KeyValuePair
     enabled={false}
-    onKeyChange={[MockFunction]}
-    onOperatorChange={[MockFunction]}
-    onValueChange={[MockFunction]}
+    onKeyChange={[Function]}
+    onOperatorChange={[Function]}
+    onValueChange={[Function]}
     pair={
-      Object {
-        "id": 0,
-        "key": "",
-        "operator": "==",
-        "value": "",
-      }
+        Object {
+            "id": 0,
+            "key": "",
+            "operator": "==",
+            "value": "",
+          }
     }
     reportSuiteId="test"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -35,101 +35,101 @@ ShallowWrapper {
         <Label
           labelFor="key0"
           style={
-            Object {
-              "position": "relative",
-            }
+                    Object {
+                              "position": "relative",
+                            }
           }
           value="Key"
-        >
+>
           <Autocomplete
-            allowCreate={false}
-            className="key-search"
-            getCompletions={[Function]}
-            onChange={[Function]}
-            value=""
+                    allowCreate={false}
+                    className="key-search"
+                    getCompletions={[Function]}
+                    onChange={[Function]}
+                    value=""
           >
-            <Textfield
-              autoFocus={false}
-              className={undefined}
-              data-test="key-search-field"
-              disabled={false}
-              id="key0"
-              invalid={false}
-              placeholder="Enter a key"
-              readOnly={false}
-              required={false}
-            />
+                    <Textfield
+                              autoFocus={false}
+                              className={undefined}
+                              data-test="key-search-field"
+                              disabled={false}
+                              id="key0"
+                              invalid={false}
+                              placeholder="Enter a key"
+                              readOnly={false}
+                              required={false}
+                    />
           </Autocomplete>
           <InlineErrorMessage
-            className={undefined}
-            errorMessage=""
-            isInvalid={false}
-            showIcon={false}
+                    className={undefined}
+                    errorMessage=""
+                    isInvalid={false}
+                    showIcon={false}
           />
-        </Label>,
+</Label>,
         <Select
           className="operator"
           data-test="operator"
           onChange={[Function]}
           options={
-            Array [
-              Object {
-                "label": "==",
-                "value": "==",
-              },
-              Object {
-                "label": ">",
-                "value": ">",
-              },
-              Object {
-                "label": "<",
-                "value": "<",
-              },
-              Object {
-                "label": ">=",
-                "value": ">=",
-              },
-              Object {
-                "label": "<=",
-                "value": "<=",
-              },
-              Object {
-                "label": "contains",
-                "value": "contains",
-              },
-            ]
+                    Array [
+                              Object {
+                                "label": "==",
+                                "value": "==",
+                              },
+                              Object {
+                                "label": ">",
+                                "value": ">",
+                              },
+                              Object {
+                                "label": "<",
+                                "value": "<",
+                              },
+                              Object {
+                                "label": ">=",
+                                "value": ">=",
+                              },
+                              Object {
+                                "label": "<=",
+                                "value": "<=",
+                              },
+                              Object {
+                                "label": "contains",
+                                "value": "contains",
+                              },
+                            ]
           }
           value="=="
-        />,
+/>,
         <Label
           labelFor="value0"
           style={
-            Object {
-              "position": "relative",
-            }
+                    Object {
+                              "position": "relative",
+                            }
           }
           value="Value"
-        >
+>
           <Textfield
-            autoFocus={false}
-            className="value-search"
-            data-test="value-search"
-            disabled={false}
-            id="value0"
-            invalid={false}
-            onChange={[Function]}
-            placeholder="Enter a value"
-            readOnly={false}
-            required={false}
-            value=""
+                    autoFocus={false}
+                    className="value-search"
+                    data-test="value-search"
+                    disabled={false}
+                    id="value0"
+                    invalid={false}
+                    onChange={[Function]}
+                    placeholder="Enter a value"
+                    readOnly={false}
+                    required={false}
+                    value=""
           />
           <InlineErrorMessage
-            className={undefined}
-            errorMessage="It can only be numerical values when it's > or <."
-            isInvalid={false}
-            showIcon={false}
+                    className={undefined}
+                    errorMessage="It can only be numerical values when it's > or <."
+                    isInvalid={false}
+                    showIcon={false}
           />
-        </Label>,
+</Label>,
       ],
       "data-test": "key-value-pair",
     },
@@ -147,25 +147,25 @@ ShallowWrapper {
               getCompletions={[Function]}
               onChange={[Function]}
               value=""
-            >
+>
               <Textfield
-                autoFocus={false}
-                className={undefined}
-                data-test="key-search-field"
-                disabled={false}
-                id="key0"
-                invalid={false}
-                placeholder="Enter a key"
-                readOnly={false}
-                required={false}
+                            autoFocus={false}
+                            className={undefined}
+                            data-test="key-search-field"
+                            disabled={false}
+                            id="key0"
+                            invalid={false}
+                            placeholder="Enter a key"
+                            readOnly={false}
+                            required={false}
               />
-            </Autocomplete>,
+</Autocomplete>,
             <InlineErrorMessage
               className={undefined}
               errorMessage=""
               isInvalid={false}
               showIcon={false}
-            />,
+/>,
           ],
           "labelFor": "key0",
           "style": Object {
@@ -191,7 +191,7 @@ ShallowWrapper {
                 placeholder="Enter a key"
                 readOnly={false}
                 required={false}
-              />,
+/>,
               "className": "key-search",
               "getCompletions": [Function],
               "onChange": [Function],
@@ -294,13 +294,13 @@ ShallowWrapper {
               readOnly={false}
               required={false}
               value=""
-            />,
+/>,
             <InlineErrorMessage
               className={undefined}
               errorMessage="It can only be numerical values when it's > or <."
               isInvalid={false}
               showIcon={false}
-            />,
+/>,
           ],
           "labelFor": "value0",
           "style": Object {
@@ -361,101 +361,101 @@ ShallowWrapper {
           <Label
             labelFor="key0"
             style={
-              Object {
-                "position": "relative",
-              }
+                        Object {
+                                    "position": "relative",
+                                  }
             }
             value="Key"
-          >
+>
             <Autocomplete
-              allowCreate={false}
-              className="key-search"
-              getCompletions={[Function]}
-              onChange={[Function]}
-              value=""
+                        allowCreate={false}
+                        className="key-search"
+                        getCompletions={[Function]}
+                        onChange={[Function]}
+                        value=""
             >
-              <Textfield
-                autoFocus={false}
-                className={undefined}
-                data-test="key-search-field"
-                disabled={false}
-                id="key0"
-                invalid={false}
-                placeholder="Enter a key"
-                readOnly={false}
-                required={false}
-              />
+                        <Textfield
+                                    autoFocus={false}
+                                    className={undefined}
+                                    data-test="key-search-field"
+                                    disabled={false}
+                                    id="key0"
+                                    invalid={false}
+                                    placeholder="Enter a key"
+                                    readOnly={false}
+                                    required={false}
+                        />
             </Autocomplete>
             <InlineErrorMessage
-              className={undefined}
-              errorMessage=""
-              isInvalid={false}
-              showIcon={false}
+                        className={undefined}
+                        errorMessage=""
+                        isInvalid={false}
+                        showIcon={false}
             />
-          </Label>,
+</Label>,
           <Select
             className="operator"
             data-test="operator"
             onChange={[Function]}
             options={
-              Array [
-                Object {
-                  "label": "==",
-                  "value": "==",
-                },
-                Object {
-                  "label": ">",
-                  "value": ">",
-                },
-                Object {
-                  "label": "<",
-                  "value": "<",
-                },
-                Object {
-                  "label": ">=",
-                  "value": ">=",
-                },
-                Object {
-                  "label": "<=",
-                  "value": "<=",
-                },
-                Object {
-                  "label": "contains",
-                  "value": "contains",
-                },
-              ]
+                        Array [
+                                    Object {
+                                      "label": "==",
+                                      "value": "==",
+                                    },
+                                    Object {
+                                      "label": ">",
+                                      "value": ">",
+                                    },
+                                    Object {
+                                      "label": "<",
+                                      "value": "<",
+                                    },
+                                    Object {
+                                      "label": ">=",
+                                      "value": ">=",
+                                    },
+                                    Object {
+                                      "label": "<=",
+                                      "value": "<=",
+                                    },
+                                    Object {
+                                      "label": "contains",
+                                      "value": "contains",
+                                    },
+                                  ]
             }
             value="=="
-          />,
+/>,
           <Label
             labelFor="value0"
             style={
-              Object {
-                "position": "relative",
-              }
+                        Object {
+                                    "position": "relative",
+                                  }
             }
             value="Value"
-          >
+>
             <Textfield
-              autoFocus={false}
-              className="value-search"
-              data-test="value-search"
-              disabled={false}
-              id="value0"
-              invalid={false}
-              onChange={[Function]}
-              placeholder="Enter a value"
-              readOnly={false}
-              required={false}
-              value=""
+                        autoFocus={false}
+                        className="value-search"
+                        data-test="value-search"
+                        disabled={false}
+                        id="value0"
+                        invalid={false}
+                        onChange={[Function]}
+                        placeholder="Enter a value"
+                        readOnly={false}
+                        required={false}
+                        value=""
             />
             <InlineErrorMessage
-              className={undefined}
-              errorMessage="It can only be numerical values when it's > or <."
-              isInvalid={false}
-              showIcon={false}
+                        className={undefined}
+                        errorMessage="It can only be numerical values when it's > or <."
+                        isInvalid={false}
+                        showIcon={false}
             />
-          </Label>,
+</Label>,
         ],
         "data-test": "key-value-pair",
       },
@@ -473,25 +473,25 @@ ShallowWrapper {
                 getCompletions={[Function]}
                 onChange={[Function]}
                 value=""
-              >
+>
                 <Textfield
-                  autoFocus={false}
-                  className={undefined}
-                  data-test="key-search-field"
-                  disabled={false}
-                  id="key0"
-                  invalid={false}
-                  placeholder="Enter a key"
-                  readOnly={false}
-                  required={false}
+                                autoFocus={false}
+                                className={undefined}
+                                data-test="key-search-field"
+                                disabled={false}
+                                id="key0"
+                                invalid={false}
+                                placeholder="Enter a key"
+                                readOnly={false}
+                                required={false}
                 />
-              </Autocomplete>,
+</Autocomplete>,
               <InlineErrorMessage
                 className={undefined}
                 errorMessage=""
                 isInvalid={false}
                 showIcon={false}
-              />,
+/>,
             ],
             "labelFor": "key0",
             "style": Object {
@@ -517,7 +517,7 @@ ShallowWrapper {
                   placeholder="Enter a key"
                   readOnly={false}
                   required={false}
-                />,
+/>,
                 "className": "key-search",
                 "getCompletions": [Function],
                 "onChange": [Function],
@@ -620,13 +620,13 @@ ShallowWrapper {
                 readOnly={false}
                 required={false}
                 value=""
-              />,
+/>,
               <InlineErrorMessage
                 className={undefined}
                 errorMessage="It can only be numerical values when it's > or <."
                 isInvalid={false}
                 showIcon={false}
-              />,
+/>,
             ],
             "labelFor": "value0",
             "style": Object {

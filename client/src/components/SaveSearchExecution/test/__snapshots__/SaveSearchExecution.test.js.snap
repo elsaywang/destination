@@ -7,12 +7,12 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SaveSearchExecution
     disabled={false}
     error={
-      Object {
-        "errorMessage": "Invalid Method",
-        "hasError": true,
-      }
+        Object {
+            "errorMessage": "Invalid Method",
+            "hasError": true,
+          }
     }
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -61,20 +61,20 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SaveSearchExecution
-    cancelSaveSearch={[MockFunction]}
-    changeSortingOrder={[MockFunction]}
-    confirmSaveThisSearch={[MockFunction]}
+    cancelSaveSearch={[Function]}
+    changeSortingOrder={[Function]}
+    confirmSaveThisSearch={[Function]}
     disabled={true}
     error={
-      Object {
-        "errorMessage": "",
-        "hasError": false,
-      }
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
     }
-    selectDefaultSorting={[MockFunction]}
-    trackSearchResultInDashboard={[MockFunction]}
-    updateSaveSearchName={[MockFunction]}
-  />,
+    selectDefaultSorting={[Function]}
+    trackSearchResultInDashboard={[Function]}
+    updateSaveSearchName={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -101,7 +101,7 @@ ShallowWrapper {
           quiet={true}
           selected={false}
           variant="action"
-        />,
+/>,
         <Dialog
           autoFocusButton={null}
           backdropClickable={false}
@@ -112,21 +112,21 @@ ShallowWrapper {
           keyboardConfirm={false}
           modalcontent={true}
           mode="centered"
-          onCancel={[MockFunction]}
+          onCancel={[Function]}
           onClose={[Function]}
-          onConfirm={[MockFunction]}
+          onConfirm={[Function]}
           open={true}
           role="dialog"
           size="S"
           variant="information"
-        >
+>
           <SaveSearchExecutionContent
-            onDefaultSortingChange={[MockFunction]}
-            onSaveSearchNameChange={[MockFunction]}
-            onSortingOrderChange={[MockFunction]}
-            onTrackResultInDashboardChange={[MockFunction]}
+                    onDefaultSortingChange={[Function]}
+                    onSaveSearchNameChange={[Function]}
+                    onSortingOrderChange={[Function]}
+                    onTrackResultInDashboardChange={[Function]}
           />
-        </Dialog>,
+</Dialog>,
       ],
     },
     "ref": null,
@@ -162,20 +162,20 @@ ShallowWrapper {
           "backdropClickable": false,
           "cancelLabel": "Cancel",
           "children": <SaveSearchExecutionContent
-            onDefaultSortingChange={[MockFunction]}
-            onSaveSearchNameChange={[MockFunction]}
-            onSortingOrderChange={[MockFunction]}
-            onTrackResultInDashboardChange={[MockFunction]}
-          />,
+            onDefaultSortingChange={[Function]}
+            onSaveSearchNameChange={[Function]}
+            onSortingOrderChange={[Function]}
+            onTrackResultInDashboardChange={[Function]}
+/>,
           "className": undefined,
           "confirmDisabled": false,
           "confirmLabel": "Save",
           "keyboardConfirm": false,
           "modalcontent": true,
           "mode": "centered",
-          "onCancel": [MockFunction],
+          "onCancel": [Function],
           "onClose": [Function],
-          "onConfirm": [MockFunction],
+          "onConfirm": [Function],
           "open": true,
           "role": "dialog",
           "size": "S",
@@ -187,10 +187,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "onDefaultSortingChange": [MockFunction],
-            "onSaveSearchNameChange": [MockFunction],
-            "onSortingOrderChange": [MockFunction],
-            "onTrackResultInDashboardChange": [MockFunction],
+            "onDefaultSortingChange": [Function],
+            "onSaveSearchNameChange": [Function],
+            "onSortingOrderChange": [Function],
+            "onTrackResultInDashboardChange": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -221,7 +221,7 @@ ShallowWrapper {
             quiet={true}
             selected={false}
             variant="action"
-          />,
+/>,
           <Dialog
             autoFocusButton={null}
             backdropClickable={false}
@@ -232,21 +232,21 @@ ShallowWrapper {
             keyboardConfirm={false}
             modalcontent={true}
             mode="centered"
-            onCancel={[MockFunction]}
+            onCancel={[Function]}
             onClose={[Function]}
-            onConfirm={[MockFunction]}
+            onConfirm={[Function]}
             open={true}
             role="dialog"
             size="S"
             variant="information"
-          >
+>
             <SaveSearchExecutionContent
-              onDefaultSortingChange={[MockFunction]}
-              onSaveSearchNameChange={[MockFunction]}
-              onSortingOrderChange={[MockFunction]}
-              onTrackResultInDashboardChange={[MockFunction]}
+                        onDefaultSortingChange={[Function]}
+                        onSaveSearchNameChange={[Function]}
+                        onSortingOrderChange={[Function]}
+                        onTrackResultInDashboardChange={[Function]}
             />
-          </Dialog>,
+</Dialog>,
         ],
       },
       "ref": null,
@@ -282,20 +282,20 @@ ShallowWrapper {
             "backdropClickable": false,
             "cancelLabel": "Cancel",
             "children": <SaveSearchExecutionContent
-              onDefaultSortingChange={[MockFunction]}
-              onSaveSearchNameChange={[MockFunction]}
-              onSortingOrderChange={[MockFunction]}
-              onTrackResultInDashboardChange={[MockFunction]}
-            />,
+              onDefaultSortingChange={[Function]}
+              onSaveSearchNameChange={[Function]}
+              onSortingOrderChange={[Function]}
+              onTrackResultInDashboardChange={[Function]}
+/>,
             "className": undefined,
             "confirmDisabled": false,
             "confirmLabel": "Save",
             "keyboardConfirm": false,
             "modalcontent": true,
             "mode": "centered",
-            "onCancel": [MockFunction],
+            "onCancel": [Function],
             "onClose": [Function],
-            "onConfirm": [MockFunction],
+            "onConfirm": [Function],
             "open": true,
             "role": "dialog",
             "size": "S",
@@ -307,10 +307,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "onDefaultSortingChange": [MockFunction],
-              "onSaveSearchNameChange": [MockFunction],
-              "onSortingOrderChange": [MockFunction],
-              "onTrackResultInDashboardChange": [MockFunction],
+              "onDefaultSortingChange": [Function],
+              "onSaveSearchNameChange": [Function],
+              "onSortingOrderChange": [Function],
+              "onTrackResultInDashboardChange": [Function],
             },
             "ref": null,
             "rendered": null,

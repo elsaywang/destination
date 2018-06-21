@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <OverlayTooltip
     message="You may save up to 10 searches"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -28,19 +28,19 @@ ShallowWrapper {
         offset={0}
         placement="right"
         trigger="hover"
-      >
+>
         <Info
-          size="S"
+                size="S"
         />
         <Tooltip
-          data-test="saved-search-limit-message"
-          open={true}
-          placement="right"
-          variant="inspect"
+                data-test="saved-search-limit-message"
+                open={true}
+                placement="right"
+                variant="inspect"
         >
-          You may save up to 10 searches
+                You may save up to 10 searches
         </Tooltip>
-      </OverlayTrigger>,
+</OverlayTrigger>,
       "className": "",
       "data-test": "overlay-tooltip",
     },
@@ -54,15 +54,15 @@ ShallowWrapper {
         "children": Array [
           <Info
             size="S"
-          />,
+/>,
           <Tooltip
             data-test="saved-search-limit-message"
             open={true}
             placement="right"
             variant="inspect"
-          >
+>
             You may save up to 10 searches
-          </Tooltip>,
+</Tooltip>,
         ],
         "crossOffset": 0,
         "defaultShow": false,
@@ -120,19 +120,19 @@ ShallowWrapper {
           offset={0}
           placement="right"
           trigger="hover"
-        >
+>
           <Info
-            size="S"
+                    size="S"
           />
           <Tooltip
-            data-test="saved-search-limit-message"
-            open={true}
-            placement="right"
-            variant="inspect"
+                    data-test="saved-search-limit-message"
+                    open={true}
+                    placement="right"
+                    variant="inspect"
           >
-            You may save up to 10 searches
+                    You may save up to 10 searches
           </Tooltip>
-        </OverlayTrigger>,
+</OverlayTrigger>,
         "className": "",
         "data-test": "overlay-tooltip",
       },
@@ -146,15 +146,15 @@ ShallowWrapper {
           "children": Array [
             <Info
               size="S"
-            />,
+/>,
             <Tooltip
               data-test="saved-search-limit-message"
               open={true}
               placement="right"
               variant="inspect"
-            >
+>
               You may save up to 10 searches
-            </Tooltip>,
+</Tooltip>,
           ],
           "crossOffset": 0,
           "defaultShow": false,

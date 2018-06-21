@@ -21,10 +21,10 @@ ShallowWrapper {
         <Alert
           size="S"
           variant="warning"
-        />,
+/>,
         <div
           className={undefined}
-        />,
+/>,
       ],
       "className": undefined,
     },
@@ -67,10 +67,10 @@ ShallowWrapper {
           <Alert
             size="S"
             variant="warning"
-          />,
+/>,
           <div
             className={undefined}
-          />,
+/>,
         ],
         "className": undefined,
       },
@@ -120,7 +120,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Warning>
     <Unknown />
-  </Warning>,
+</Warning>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -137,12 +137,12 @@ ShallowWrapper {
         <Alert
           size="S"
           variant="warning"
-        />,
+/>,
         <div
           className={undefined}
-        >
+>
           <Unknown />
-        </div>,
+</div>,
       ],
       "className": undefined,
     },
@@ -193,12 +193,12 @@ ShallowWrapper {
           <Alert
             size="S"
             variant="warning"
-          />,
+/>,
           <div
             className={undefined}
-          >
+>
             <Unknown />
-          </div>,
+</div>,
         ],
         "className": undefined,
       },
@@ -256,7 +256,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Warning>
     <WarningMessage />
-  </Warning>,
+</Warning>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -273,12 +273,12 @@ ShallowWrapper {
         <Alert
           size="S"
           variant="warning"
-        />,
+/>,
         <div
           className={undefined}
-        >
+>
           <WarningMessage />
-        </div>,
+</div>,
       ],
       "className": undefined,
     },
@@ -329,12 +329,12 @@ ShallowWrapper {
           <Alert
             size="S"
             variant="warning"
-          />,
+/>,
           <div
             className={undefined}
-          >
+>
             <WarningMessage />
-          </div>,
+</div>,
         ],
         "className": undefined,
       },

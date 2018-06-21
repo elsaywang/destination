@@ -6,34 +6,34 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Table
     columns={
-      Array [
-        Object {
-          "key": "name",
-          "title": "Name",
-        },
-        Object {
-          "key": "description",
-          "title": "Description",
-        },
-      ]
+        Array [
+            Object {
+              "key": "name",
+              "title": "Name",
+            },
+            Object {
+              "key": "description",
+              "title": "Description",
+            },
+          ]
     }
     items={
-      Array [
-        Object {
-          "description": "Good dog",
-          "name": "Coffee",
-        },
-        Object {
-          "description": "Bad dog",
-          "name": "Mongo",
-        },
-      ]
+        Array [
+            Object {
+              "description": "Good dog",
+              "name": "Coffee",
+            },
+            Object {
+              "description": "Bad dog",
+              "name": "Mongo",
+            },
+          ]
     }
-    onLoadMore={[MockFunction]}
-    onSelectionChange={[MockFunction]}
+    onLoadMore={[Function]}
+    onSelectionChange={[Function]}
     renderCell={[Function]}
-    sortSearch={[MockFunction]}
-  />,
+    sortSearch={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -49,40 +49,40 @@ ShallowWrapper {
       "children": <TableView
         allowsSelection={true}
         dataSource={
-          DataSource {
-            "_events": Object {},
-            "_eventsCount": 0,
-            "_maxListeners": undefined,
-            "columns": Array [
-              Object {
-                "key": "name",
-                "title": "Name",
-              },
-              Object {
-                "key": "description",
-                "title": "Description",
-              },
-            ],
-            "items": Array [
-              Object {
-                "description": "Good dog",
-                "name": "Coffee",
-              },
-              Object {
-                "description": "Bad dog",
-                "name": "Mongo",
-              },
-            ],
-            "onLoadMore": [MockFunction],
-            "sortColumn": null,
-            "sortDir": -1,
-            "sortSearch": [MockFunction],
-          }
+                DataSource {
+                        "_events": Object {},
+                        "_eventsCount": 0,
+                        "_maxListeners": undefined,
+                        "columns": Array [
+                          Object {
+                            "key": "name",
+                            "title": "Name",
+                          },
+                          Object {
+                            "key": "description",
+                            "title": "Description",
+                          },
+                        ],
+                        "items": Array [
+                          Object {
+                            "description": "Good dog",
+                            "name": "Coffee",
+                          },
+                          Object {
+                            "description": "Bad dog",
+                            "name": "Mongo",
+                          },
+                        ],
+                        "onLoadMore": [Function],
+                        "sortColumn": null,
+                        "sortDir": -1,
+                        "sortSearch": [Function],
+                      }
         }
-        onSelectionChange={[MockFunction]}
+        onSelectionChange={[Function]}
         renderCell={[Function]}
         rowHeight={undefined}
-      />,
+/>,
       "className": "table-wrapper",
       "data-test": undefined,
       "style": Object {
@@ -120,12 +120,12 @@ ShallowWrapper {
               "name": "Mongo",
             },
           ],
-          "onLoadMore": [MockFunction],
+          "onLoadMore": [Function],
           "sortColumn": null,
           "sortDir": -1,
-          "sortSearch": [MockFunction],
+          "sortSearch": [Function],
         },
-        "onSelectionChange": [MockFunction],
+        "onSelectionChange": [Function],
         "renderCell": [Function],
         "rowHeight": undefined,
       },
@@ -144,40 +144,40 @@ ShallowWrapper {
         "children": <TableView
           allowsSelection={true}
           dataSource={
-            DataSource {
-              "_events": Object {},
-              "_eventsCount": 0,
-              "_maxListeners": undefined,
-              "columns": Array [
-                Object {
-                  "key": "name",
-                  "title": "Name",
-                },
-                Object {
-                  "key": "description",
-                  "title": "Description",
-                },
-              ],
-              "items": Array [
-                Object {
-                  "description": "Good dog",
-                  "name": "Coffee",
-                },
-                Object {
-                  "description": "Bad dog",
-                  "name": "Mongo",
-                },
-              ],
-              "onLoadMore": [MockFunction],
-              "sortColumn": null,
-              "sortDir": -1,
-              "sortSearch": [MockFunction],
-            }
+                    DataSource {
+                              "_events": Object {},
+                              "_eventsCount": 0,
+                              "_maxListeners": undefined,
+                              "columns": Array [
+                                Object {
+                                  "key": "name",
+                                  "title": "Name",
+                                },
+                                Object {
+                                  "key": "description",
+                                  "title": "Description",
+                                },
+                              ],
+                              "items": Array [
+                                Object {
+                                  "description": "Good dog",
+                                  "name": "Coffee",
+                                },
+                                Object {
+                                  "description": "Bad dog",
+                                  "name": "Mongo",
+                                },
+                              ],
+                              "onLoadMore": [Function],
+                              "sortColumn": null,
+                              "sortDir": -1,
+                              "sortSearch": [Function],
+                            }
           }
-          onSelectionChange={[MockFunction]}
+          onSelectionChange={[Function]}
           renderCell={[Function]}
           rowHeight={undefined}
-        />,
+/>,
         "className": "table-wrapper",
         "data-test": undefined,
         "style": Object {
@@ -215,12 +215,12 @@ ShallowWrapper {
                 "name": "Mongo",
               },
             ],
-            "onLoadMore": [MockFunction],
+            "onLoadMore": [Function],
             "sortColumn": null,
             "sortDir": -1,
-            "sortSearch": [MockFunction],
+            "sortSearch": [Function],
           },
-          "onSelectionChange": [MockFunction],
+          "onSelectionChange": [Function],
           "renderCell": [Function],
           "rowHeight": undefined,
         },

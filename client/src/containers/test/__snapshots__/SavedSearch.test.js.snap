@@ -6,59 +6,41 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearch
     currentSearch="Watson Cartwright"
-    deleteSearch={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-      }
-    }
+    deleteSearch={[Function]}
     error={
-      Object {
-        "errorMessage": "",
-        "hasError": false,
-      }
-    }
-    getSavedSearch={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-      }
-    }
-    list={
-      Array [
         Object {
-          "id": 17966,
-          "includedTraits": Array [
-            0,
-            1,
-            2,
-          ],
-          "keyValuePairs": Array [
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
+    getSavedSearch={[Function]}
+    list={
+        Array [
             Object {
-              "key": "k-monitor",
-              "operator": ">",
-              "value": "v-programming",
+              "id": 17966,
+              "includedTraits": Array [
+                0,
+                1,
+                2,
+              ],
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-monitor",
+                  "operator": ">",
+                  "value": "v-programming",
+                },
+              ],
+              "name": "Germaine Wiza",
+              "percentageChange": 45886,
+              "signalStatus": "USED",
+              "source": "Buckinghamshire",
+              "totalCount": 59925,
+              "type": "Lek",
             },
-          ],
-          "name": "Germaine Wiza",
-          "percentageChange": 45886,
-          "signalStatus": "USED",
-          "source": "Buckinghamshire",
-          "totalCount": 59925,
-          "type": "Lek",
-        },
-      ]
+          ]
     }
-    onSavedSearchClick={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-      }
-    }
-  />,
+    onSavedSearchClick={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -74,56 +56,44 @@ ShallowWrapper {
       "children": Array [
         <Heading
           size={6}
-        >
+>
           Saved Search
-        </Heading>,
+</Heading>,
         <load
           currentSearch="Watson Cartwright"
-          deleteSearch={
-            [MockFunction] {
-              "calls": Array [
-                Array [],
-              ],
-            }
-          }
+          deleteSearch={[Function]}
           isLoaded={undefined}
           list={
-            Array [
-              Object {
-                "id": 17966,
-                "includedTraits": Array [
-                  0,
-                  1,
-                  2,
-                ],
-                "keyValuePairs": Array [
-                  Object {
-                    "key": "k-monitor",
-                    "operator": ">",
-                    "value": "v-programming",
-                  },
-                ],
-                "name": "Germaine Wiza",
-                "percentageChange": 45886,
-                "signalStatus": "USED",
-                "source": "Buckinghamshire",
-                "totalCount": 59925,
-                "type": "Lek",
-              },
-            ]
+                    Array [
+                              Object {
+                                "id": 17966,
+                                "includedTraits": Array [
+                                  0,
+                                  1,
+                                  2,
+                                ],
+                                "keyValuePairs": Array [
+                                  Object {
+                                    "key": "k-monitor",
+                                    "operator": ">",
+                                    "value": "v-programming",
+                                  },
+                                ],
+                                "name": "Germaine Wiza",
+                                "percentageChange": 45886,
+                                "signalStatus": "USED",
+                                "source": "Buckinghamshire",
+                                "totalCount": 59925,
+                                "type": "Lek",
+                              },
+                            ]
           }
-          onSavedSearchClick={
-            [MockFunction] {
-              "calls": Array [
-                Array [],
-              ],
-            }
-          }
-        />,
+          onSavedSearchClick={[Function]}
+/>,
         <InlineErrorMessage
           errorMessage=""
           isInvalid={false}
-        />,
+/>,
       ],
       "data-test": "saved-search",
     },
@@ -147,11 +117,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "currentSearch": "Watson Cartwright",
-          "deleteSearch": [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-          },
+          "deleteSearch": [Function],
           "isLoaded": undefined,
           "list": Array [
             Object {
@@ -176,11 +142,7 @@ ShallowWrapper {
               "type": "Lek",
             },
           ],
-          "onSavedSearchClick": [MockFunction] {
-            "calls": Array [
-              Array [],
-            ],
-          },
+          "onSavedSearchClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -210,56 +172,44 @@ ShallowWrapper {
         "children": Array [
           <Heading
             size={6}
-          >
+>
             Saved Search
-          </Heading>,
+</Heading>,
           <load
             currentSearch="Watson Cartwright"
-            deleteSearch={
-              [MockFunction] {
-                "calls": Array [
-                  Array [],
-                ],
-              }
-            }
+            deleteSearch={[Function]}
             isLoaded={undefined}
             list={
-              Array [
-                Object {
-                  "id": 17966,
-                  "includedTraits": Array [
-                    0,
-                    1,
-                    2,
-                  ],
-                  "keyValuePairs": Array [
-                    Object {
-                      "key": "k-monitor",
-                      "operator": ">",
-                      "value": "v-programming",
-                    },
-                  ],
-                  "name": "Germaine Wiza",
-                  "percentageChange": 45886,
-                  "signalStatus": "USED",
-                  "source": "Buckinghamshire",
-                  "totalCount": 59925,
-                  "type": "Lek",
-                },
-              ]
+                        Array [
+                                    Object {
+                                      "id": 17966,
+                                      "includedTraits": Array [
+                                        0,
+                                        1,
+                                        2,
+                                      ],
+                                      "keyValuePairs": Array [
+                                        Object {
+                                          "key": "k-monitor",
+                                          "operator": ">",
+                                          "value": "v-programming",
+                                        },
+                                      ],
+                                      "name": "Germaine Wiza",
+                                      "percentageChange": 45886,
+                                      "signalStatus": "USED",
+                                      "source": "Buckinghamshire",
+                                      "totalCount": 59925,
+                                      "type": "Lek",
+                                    },
+                                  ]
             }
-            onSavedSearchClick={
-              [MockFunction] {
-                "calls": Array [
-                  Array [],
-                ],
-              }
-            }
-          />,
+            onSavedSearchClick={[Function]}
+/>,
           <InlineErrorMessage
             errorMessage=""
             isInvalid={false}
-          />,
+/>,
         ],
         "data-test": "saved-search",
       },
@@ -283,11 +233,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "currentSearch": "Watson Cartwright",
-            "deleteSearch": [MockFunction] {
-              "calls": Array [
-                Array [],
-              ],
-            },
+            "deleteSearch": [Function],
             "isLoaded": undefined,
             "list": Array [
               Object {
@@ -312,11 +258,7 @@ ShallowWrapper {
                 "type": "Lek",
               },
             ],
-            "onSavedSearchClick": [MockFunction] {
-              "calls": Array [
-                Array [],
-              ],
-            },
+            "onSavedSearchClick": [Function],
           },
           "ref": null,
           "rendered": null,

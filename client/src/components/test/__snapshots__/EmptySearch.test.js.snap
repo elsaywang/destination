@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EmptySearch
     variant="explore"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -24,7 +24,7 @@ ShallowWrapper {
         className={undefined}
         data-test="start-exploring"
         src="localhost:3000/explore.svg"
-      />,
+/>,
       "className": undefined,
       "message": "Search by key-value pairs or use only filters to get insights on signals.",
       "messageStyle": undefined,
@@ -58,7 +58,7 @@ ShallowWrapper {
           className={undefined}
           data-test="start-exploring"
           src="localhost:3000/explore.svg"
-        />,
+/>,
         "className": undefined,
         "message": "Search by key-value pairs or use only filters to get insights on signals.",
         "messageStyle": undefined,
@@ -98,7 +98,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EmptySearch
     variant="noResult"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -116,7 +116,7 @@ ShallowWrapper {
         className={undefined}
         data-test="no-result-found"
         src="localhost:3000/noResult.svg"
-      />,
+/>,
       "className": undefined,
       "message": "Refine the search query and try searching again.",
       "messageStyle": undefined,
@@ -150,7 +150,7 @@ ShallowWrapper {
           className={undefined}
           data-test="no-result-found"
           src="localhost:3000/noResult.svg"
-        />,
+/>,
         "className": undefined,
         "message": "Refine the search query and try searching again.",
         "messageStyle": undefined,
