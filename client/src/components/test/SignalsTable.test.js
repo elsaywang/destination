@@ -182,15 +182,14 @@ describe('<SignalsTable /> component', () => {
     describe('Rendering cells', () => {
         const instance = wrapper.instance();
 
-        afterEach(() => {
-            // jest.restoreAllMocks();
-        });
-
         describe('renderCell', () => {
             const verifyRenderMethodInColumn = (renderMethodName, columnKey, data) => {
                 const spy = jest.spyOn(instance, renderMethodName);
+
                 instance.renderCell({ key: columnKey }, data);
+
                 expect(instance[renderMethodName]).toHaveBeenCalledWith(data);
+
                 spy.mockRestore();
             };
 
