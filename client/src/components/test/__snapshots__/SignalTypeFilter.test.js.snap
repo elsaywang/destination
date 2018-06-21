@@ -5,9 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
-    onSignalTypeChange={[MockFunction]}
+    onSignalTypeChange={[Function]}
     signalType="ALL"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -24,57 +24,57 @@ ShallowWrapper {
         <Heading
           className={undefined}
           size={3}
-        >
+>
           Filter by Signal Type
-        </Heading>,
+</Heading>,
         <TabList
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
           variant="compact"
-        >
+>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={true}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={true}
           >
-            All
+                    All
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Adobe Analytics
+                    Adobe Analytics
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Actionable Log Files
+                    Actionable Log Files
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            General Online Data
+                    General Online Data
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Onboarded Records
+                    Onboarded Records
           </Tab>
-        </TabList>,
+</TabList>,
       ],
     },
     "ref": null,
@@ -103,41 +103,41 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={true}
-            >
+>
               All
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               Adobe Analytics
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               Actionable Log Files
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               General Online Data
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               Onboarded Records
-            </Tab>,
+</Tab>,
           ],
           "className": undefined,
           "onChange": [Function],
@@ -238,57 +238,57 @@ ShallowWrapper {
           <Heading
             className={undefined}
             size={3}
-          >
+>
             Filter by Signal Type
-          </Heading>,
+</Heading>,
           <TabList
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
             variant="compact"
-          >
+>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={true}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={true}
             >
-              All
+                        All
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Adobe Analytics
+                        Adobe Analytics
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Actionable Log Files
+                        Actionable Log Files
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              General Online Data
+                        General Online Data
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Onboarded Records
+                        Onboarded Records
             </Tab>
-          </TabList>,
+</TabList>,
         ],
       },
       "ref": null,
@@ -317,41 +317,41 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={true}
-              >
+>
                 All
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 Adobe Analytics
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 Actionable Log Files
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 General Online Data
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 Onboarded Records
-              </Tab>,
+</Tab>,
             ],
             "className": undefined,
             "onChange": [Function],
@@ -458,9 +458,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
-    onSignalTypeChange={[MockFunction]}
+    onSignalTypeChange={[Function]}
     signalType="ANALYTICS"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -477,57 +477,57 @@ ShallowWrapper {
         <Heading
           className={undefined}
           size={3}
-        >
+>
           Filter by Signal Type
-        </Heading>,
+</Heading>,
         <TabList
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
           variant="compact"
-        >
+>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            All
+                    All
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={true}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={true}
           >
-            Adobe Analytics
+                    Adobe Analytics
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Actionable Log Files
+                    Actionable Log Files
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            General Online Data
+                    General Online Data
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Onboarded Records
+                    Onboarded Records
           </Tab>
-        </TabList>,
+</TabList>,
       ],
     },
     "ref": null,
@@ -556,41 +556,41 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               All
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={true}
-            >
+>
               Adobe Analytics
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               Actionable Log Files
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               General Online Data
-            </Tab>,
+</Tab>,
             <Tab
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
+>
               Onboarded Records
-            </Tab>,
+</Tab>,
           ],
           "className": undefined,
           "onChange": [Function],
@@ -691,57 +691,57 @@ ShallowWrapper {
           <Heading
             className={undefined}
             size={3}
-          >
+>
             Filter by Signal Type
-          </Heading>,
+</Heading>,
           <TabList
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
             variant="compact"
-          >
+>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              All
+                        All
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={true}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={true}
             >
-              Adobe Analytics
+                        Adobe Analytics
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Actionable Log Files
+                        Actionable Log Files
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              General Online Data
+                        General Online Data
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Onboarded Records
+                        Onboarded Records
             </Tab>
-          </TabList>,
+</TabList>,
         ],
       },
       "ref": null,
@@ -770,41 +770,41 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 All
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={true}
-              >
+>
                 Adobe Analytics
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 Actionable Log Files
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 General Online Data
-              </Tab>,
+</Tab>,
               <Tab
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
+>
                 Onboarded Records
-              </Tab>,
+</Tab>,
             ],
             "className": undefined,
             "onChange": [Function],

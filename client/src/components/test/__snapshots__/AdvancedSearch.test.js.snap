@@ -6,29 +6,29 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdvancedSearch
     enabled={false}
-    onAdvancedSearchChange={[MockFunction]}
-    onReportSuiteChange={[MockFunction]}
-    onReportSuiteSelect={[MockFunction]}
+    onAdvancedSearchChange={[Function]}
+    onReportSuiteChange={[Function]}
+    onReportSuiteSelect={[Function]}
     reportSuites={
-      Array [
-        Object {
-          "dataSourceId": 168815,
-          "datacenter": "sin",
-          "name": "Test Report Suite Edited1505153440289",
-          "pid": 1194,
-          "suite": "test-report-suite-edited1505153440289",
-        },
-        Object {
-          "dataSourceId": 169626,
-          "datacenter": "sin",
-          "name": "Test Report Suite Edited1505154745046",
-          "pid": 1194,
-          "suite": "test-report-suite-edited1505154745046",
-        },
-      ]
+        Array [
+            Object {
+              "dataSourceId": 168815,
+              "datacenter": "sin",
+              "name": "Test Report Suite Edited1505153440289",
+              "pid": 1194,
+              "suite": "test-report-suite-edited1505153440289",
+            },
+            Object {
+              "dataSourceId": 169626,
+              "datacenter": "sin",
+              "name": "Test Report Suite Edited1505154745046",
+              "pid": 1194,
+              "suite": "test-report-suite-edited1505154745046",
+            },
+          ]
     }
     sourceName="test"
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -44,24 +44,24 @@ ShallowWrapper {
       "children": Array [
         <span>
           Search and see results in friendly names:  
-        </span>,
+</span>,
         <ComboBox
           data-test="advanced-search-filter"
           disabled={true}
           invalid={false}
-          onChange={[MockFunction]}
+          onChange={[Function]}
           onSelect={[Function]}
           options={
-            Array [
-              "Test Report Suite Edited1505153440289",
-              "Test Report Suite Edited1505154745046",
-            ]
+                    Array [
+                              "Test Report Suite Edited1505153440289",
+                              "Test Report Suite Edited1505154745046",
+                            ]
           }
           placeholder="Filter by report suite"
           quiet={true}
           required={false}
           value=""
-        />,
+/>,
       ],
       "className": undefined,
       "data-test": "advanced-search",
@@ -87,7 +87,7 @@ ShallowWrapper {
           "data-test": "advanced-search-filter",
           "disabled": true,
           "invalid": false,
-          "onChange": [MockFunction],
+          "onChange": [Function],
           "onSelect": [Function],
           "options": Array [
             "Test Report Suite Edited1505153440289",
@@ -114,24 +114,24 @@ ShallowWrapper {
         "children": Array [
           <span>
             Search and see results in friendly names:  
-          </span>,
+</span>,
           <ComboBox
             data-test="advanced-search-filter"
             disabled={true}
             invalid={false}
-            onChange={[MockFunction]}
+            onChange={[Function]}
             onSelect={[Function]}
             options={
-              Array [
-                "Test Report Suite Edited1505153440289",
-                "Test Report Suite Edited1505154745046",
-              ]
+                        Array [
+                                    "Test Report Suite Edited1505153440289",
+                                    "Test Report Suite Edited1505154745046",
+                                  ]
             }
             placeholder="Filter by report suite"
             quiet={true}
             required={false}
             value=""
-          />,
+/>,
         ],
         "className": undefined,
         "data-test": "advanced-search",
@@ -157,7 +157,7 @@ ShallowWrapper {
             "data-test": "advanced-search-filter",
             "disabled": true,
             "invalid": false,
-            "onChange": [MockFunction],
+            "onChange": [Function],
             "onSelect": [Function],
             "options": Array [
               "Test Report Suite Edited1505153440289",

@@ -7,13 +7,13 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <TraitsCreation
     multiCreation={true}
     selectedSignals={
-      Object {
-        "hasWarning": false,
-        "records": Array [],
-        "selectionMessage": "",
-      }
+        Object {
+            "hasWarning": false,
+            "records": Array [],
+            "selectionMessage": "",
+          }
     }
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -73,7 +73,7 @@ ShallowWrapper {
     canCreateTraits={true}
     categoryType="ONBOARDED"
     keyValuePairs={Array []}
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],

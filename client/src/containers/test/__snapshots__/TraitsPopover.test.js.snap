@@ -6,13 +6,13 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsPopover
     sids={
-      Array [
-        1,
-        2,
-        3,
-      ]
+        Array [
+            1,
+            2,
+            3,
+          ]
     }
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -36,34 +36,34 @@ ShallowWrapper {
         onShow={[Function]}
         placement="bottom"
         trigger="click"
-      >
+>
         <Button
-          autoFocus={false}
-          block={false}
-          data-test="overlay-trigger-button"
-          disabled={false}
-          element="button"
-          icon={<ChevronDown />}
-          invalid={false}
-          label=""
-          logic={false}
-          quiet={true}
-          selected={false}
-          variant="action"
+                autoFocus={false}
+                block={false}
+                data-test="overlay-trigger-button"
+                disabled={false}
+                element="button"
+                icon={<ChevronDown />}
+                invalid={false}
+                label=""
+                logic={false}
+                quiet={true}
+                selected={false}
+                variant="action"
         >
-          3 Traits
+                3 Traits
         </Button>
         <Popover
-          data-test="overlay-trigger-popover"
-          open={true}
-          placement="bottom"
-          title="Included in 3 Traits"
-          trapFocus={true}
-          variant="default"
+                data-test="overlay-trigger-popover"
+                open={true}
+                placement="bottom"
+                title="Included in 3 Traits"
+                trapFocus={true}
+                variant="default"
         >
-          <Wait />
+                <Wait />
         </Popover>
-      </OverlayTrigger>,
+</OverlayTrigger>,
     },
     "ref": null,
     "rendered": Object {
@@ -86,9 +86,9 @@ ShallowWrapper {
             quiet={true}
             selected={false}
             variant="action"
-          >
+>
             3 Traits
-          </Button>,
+</Button>,
           <Popover
             data-test="overlay-trigger-popover"
             open={true}
@@ -96,9 +96,9 @@ ShallowWrapper {
             title="Included in 3 Traits"
             trapFocus={true}
             variant="default"
-          >
+>
             <Wait />
-          </Popover>,
+</Popover>,
         ],
         "crossOffset": 0,
         "data-test": "overlay-trigger",
@@ -182,34 +182,34 @@ ShallowWrapper {
           onShow={[Function]}
           placement="bottom"
           trigger="click"
-        >
+>
           <Button
-            autoFocus={false}
-            block={false}
-            data-test="overlay-trigger-button"
-            disabled={false}
-            element="button"
-            icon={<ChevronDown />}
-            invalid={false}
-            label=""
-            logic={false}
-            quiet={true}
-            selected={false}
-            variant="action"
+                    autoFocus={false}
+                    block={false}
+                    data-test="overlay-trigger-button"
+                    disabled={false}
+                    element="button"
+                    icon={<ChevronDown />}
+                    invalid={false}
+                    label=""
+                    logic={false}
+                    quiet={true}
+                    selected={false}
+                    variant="action"
           >
-            3 Traits
+                    3 Traits
           </Button>
           <Popover
-            data-test="overlay-trigger-popover"
-            open={true}
-            placement="bottom"
-            title="Included in 3 Traits"
-            trapFocus={true}
-            variant="default"
+                    data-test="overlay-trigger-popover"
+                    open={true}
+                    placement="bottom"
+                    title="Included in 3 Traits"
+                    trapFocus={true}
+                    variant="default"
           >
-            <Wait />
+                    <Wait />
           </Popover>
-        </OverlayTrigger>,
+</OverlayTrigger>,
       },
       "ref": null,
       "rendered": Object {
@@ -232,9 +232,9 @@ ShallowWrapper {
               quiet={true}
               selected={false}
               variant="action"
-            >
+>
               3 Traits
-            </Button>,
+</Button>,
             <Popover
               data-test="overlay-trigger-popover"
               open={true}
@@ -242,9 +242,9 @@ ShallowWrapper {
               title="Included in 3 Traits"
               trapFocus={true}
               variant="default"
-            >
+>
               <Wait />
-            </Popover>,
+</Popover>,
           ],
           "crossOffset": 0,
           "data-test": "overlay-trigger",

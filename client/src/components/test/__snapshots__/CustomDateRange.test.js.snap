@@ -7,9 +7,9 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <CustomDateRange
     customEndDate="2018-05-01"
     customStartDate="2018-04-24"
-    onCustomEndDateChange={[MockFunction]}
-    onCustomStartDateChange={[MockFunction]}
-  />,
+    onCustomEndDateChange={[Function]}
+    onCustomStartDateChange={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -25,54 +25,54 @@ ShallowWrapper {
       "children": Array [
         <Label
           value="Start Date"
-        >
+>
           <Datepicker
-            className="custom-start-date"
-            data-test="custom-start-date"
-            disabled={false}
-            displayFormat="MM/DD/YYYY"
-            headerFormat="MMMM YYYY"
-            id="react-spectrum-1"
-            invalid={false}
-            max="2018-04-30"
-            min="2017-05-01"
-            onChange={[Function]}
-            placeholder="Choose a date"
-            placement="right"
-            quiet={true}
-            readOnly={false}
-            required={false}
-            startDay={0}
-            type="date"
-            value="2018-04-24"
-            valueFormat="YYYY-MM-DD"
+                    className="custom-start-date"
+                    data-test="custom-start-date"
+                    disabled={false}
+                    displayFormat="MM/DD/YYYY"
+                    headerFormat="MMMM YYYY"
+                    id="react-spectrum-1"
+                    invalid={false}
+                    max="2018-04-30"
+                    min="2017-05-01"
+                    onChange={[Function]}
+                    placeholder="Choose a date"
+                    placement="right"
+                    quiet={true}
+                    readOnly={false}
+                    required={false}
+                    startDay={0}
+                    type="date"
+                    value="2018-04-24"
+                    valueFormat="YYYY-MM-DD"
           />
-        </Label>,
+</Label>,
         <Label
           value="End Date"
-        >
+>
           <Datepicker
-            className="custom-end-date"
-            data-test="custom-end-date"
-            disabled={false}
-            displayFormat="MM/DD/YYYY"
-            headerFormat="MMMM YYYY"
-            id="react-spectrum-1"
-            invalid={false}
-            max="2018-05-01"
-            min="2018-04-25"
-            onChange={[Function]}
-            placeholder="Choose a date"
-            placement="right"
-            quiet={true}
-            readOnly={false}
-            required={false}
-            startDay={0}
-            type="date"
-            value="2018-05-01"
-            valueFormat="YYYY-MM-DD"
+                    className="custom-end-date"
+                    data-test="custom-end-date"
+                    disabled={false}
+                    displayFormat="MM/DD/YYYY"
+                    headerFormat="MMMM YYYY"
+                    id="react-spectrum-1"
+                    invalid={false}
+                    max="2018-05-01"
+                    min="2018-04-25"
+                    onChange={[Function]}
+                    placeholder="Choose a date"
+                    placement="right"
+                    quiet={true}
+                    readOnly={false}
+                    required={false}
+                    startDay={0}
+                    type="date"
+                    value="2018-05-01"
+                    valueFormat="YYYY-MM-DD"
           />
-        </Label>,
+</Label>,
       ],
     },
     "ref": null,
@@ -102,7 +102,7 @@ ShallowWrapper {
             type="date"
             value="2018-04-24"
             valueFormat="YYYY-MM-DD"
-          />,
+/>,
           "value": "Start Date",
         },
         "ref": null,
@@ -162,7 +162,7 @@ ShallowWrapper {
             type="date"
             value="2018-05-01"
             valueFormat="YYYY-MM-DD"
-          />,
+/>,
           "value": "End Date",
         },
         "ref": null,
@@ -209,54 +209,54 @@ ShallowWrapper {
         "children": Array [
           <Label
             value="Start Date"
-          >
+>
             <Datepicker
-              className="custom-start-date"
-              data-test="custom-start-date"
-              disabled={false}
-              displayFormat="MM/DD/YYYY"
-              headerFormat="MMMM YYYY"
-              id="react-spectrum-1"
-              invalid={false}
-              max="2018-04-30"
-              min="2017-05-01"
-              onChange={[Function]}
-              placeholder="Choose a date"
-              placement="right"
-              quiet={true}
-              readOnly={false}
-              required={false}
-              startDay={0}
-              type="date"
-              value="2018-04-24"
-              valueFormat="YYYY-MM-DD"
+                        className="custom-start-date"
+                        data-test="custom-start-date"
+                        disabled={false}
+                        displayFormat="MM/DD/YYYY"
+                        headerFormat="MMMM YYYY"
+                        id="react-spectrum-1"
+                        invalid={false}
+                        max="2018-04-30"
+                        min="2017-05-01"
+                        onChange={[Function]}
+                        placeholder="Choose a date"
+                        placement="right"
+                        quiet={true}
+                        readOnly={false}
+                        required={false}
+                        startDay={0}
+                        type="date"
+                        value="2018-04-24"
+                        valueFormat="YYYY-MM-DD"
             />
-          </Label>,
+</Label>,
           <Label
             value="End Date"
-          >
+>
             <Datepicker
-              className="custom-end-date"
-              data-test="custom-end-date"
-              disabled={false}
-              displayFormat="MM/DD/YYYY"
-              headerFormat="MMMM YYYY"
-              id="react-spectrum-1"
-              invalid={false}
-              max="2018-05-01"
-              min="2018-04-25"
-              onChange={[Function]}
-              placeholder="Choose a date"
-              placement="right"
-              quiet={true}
-              readOnly={false}
-              required={false}
-              startDay={0}
-              type="date"
-              value="2018-05-01"
-              valueFormat="YYYY-MM-DD"
+                        className="custom-end-date"
+                        data-test="custom-end-date"
+                        disabled={false}
+                        displayFormat="MM/DD/YYYY"
+                        headerFormat="MMMM YYYY"
+                        id="react-spectrum-1"
+                        invalid={false}
+                        max="2018-05-01"
+                        min="2018-04-25"
+                        onChange={[Function]}
+                        placeholder="Choose a date"
+                        placement="right"
+                        quiet={true}
+                        readOnly={false}
+                        required={false}
+                        startDay={0}
+                        type="date"
+                        value="2018-05-01"
+                        valueFormat="YYYY-MM-DD"
             />
-          </Label>,
+</Label>,
         ],
       },
       "ref": null,
@@ -286,7 +286,7 @@ ShallowWrapper {
               type="date"
               value="2018-04-24"
               valueFormat="YYYY-MM-DD"
-            />,
+/>,
             "value": "Start Date",
           },
           "ref": null,
@@ -346,7 +346,7 @@ ShallowWrapper {
               type="date"
               value="2018-05-01"
               valueFormat="YYYY-MM-DD"
-            />,
+/>,
             "value": "End Date",
           },
           "ref": null,

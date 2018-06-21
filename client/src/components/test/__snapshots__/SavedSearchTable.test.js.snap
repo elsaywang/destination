@@ -11,7 +11,7 @@ ShallowWrapper {
     isLoaded={false}
     results={Object {}}
     totalKeyValuePairs={1}
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -60,7 +60,7 @@ ShallowWrapper {
     isLoaded={false}
     results={Object {}}
     totalKeyValuePairs={1}
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -108,31 +108,31 @@ ShallowWrapper {
     isAdvancedSearchEnabled={false}
     isLoaded={true}
     results={
-      Object {
-        "includedInTraits": Array [
-          1,
-          2,
-          3,
-        ],
-        "keyValuePairs": Array [
-          Object {
-            "key": "k-regional",
-            "operator": "<",
-            "value": 57091,
-          },
-        ],
-        "percentageChange": 0.154,
-        "signalStatus": "USED",
-        "source": Object {
-          "dataSourceIds": 93561,
-          "reportSuiteIds": null,
-          "sourceType": "REALTIME",
-        },
-        "totalCount": 21456,
-      }
+        Object {
+            "includedInTraits": Array [
+              1,
+              2,
+              3,
+            ],
+            "keyValuePairs": Array [
+              Object {
+                "key": "k-regional",
+                "operator": "<",
+                "value": 57091,
+              },
+            ],
+            "percentageChange": 0.154,
+            "signalStatus": "USED",
+            "source": Object {
+              "dataSourceIds": 93561,
+              "reportSuiteIds": null,
+              "sourceType": "REALTIME",
+            },
+            "totalCount": 21456,
+          }
     }
     totalKeyValuePairs={1}
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],

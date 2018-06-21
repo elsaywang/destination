@@ -14,6 +14,7 @@ RUN npm install --only=production
 ADD public /usr/src/app/client/public
 ADD src /usr/src/app/client/src
 ADD .env* /usr/src/app/client/
+ADD config-overrides.js /usr/src/app/client
 RUN npm run build
 
 EXPOSE 3000

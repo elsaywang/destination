@@ -5,43 +5,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SaveSearchExecutionContent
-    onDefaultSortingChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-        ],
-      }
-    }
-    onSaveSearchNameChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-        ],
-      }
-    }
-    onSortingOrderChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-        ],
-      }
-    }
-    onTrackResultInDashboardChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-        ],
-      }
-    }
-  />,
+    onDefaultSortingChange={[Function]}
+    onSaveSearchNameChange={[Function]}
+    onSortingOrderChange={[Function]}
+    onTrackResultInDashboardChange={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -58,94 +26,78 @@ ShallowWrapper {
         <Label
           labelFor="Save This Search"
           value="Name"
-        >
+>
           <Textfield
-            autoFocus={false}
-            className={undefined}
-            data-test="save-this-search-name-field"
-            disabled={false}
-            invalid={false}
-            onChange={
-              [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                ],
-              }
-            }
-            placeholder="Enter a name for this saved search"
-            quiet={true}
-            readOnly={false}
-            required={false}
+                    autoFocus={false}
+                    className={undefined}
+                    data-test="save-this-search-name-field"
+                    disabled={false}
+                    invalid={false}
+                    onChange={[Function]}
+                    placeholder="Enter a name for this saved search"
+                    quiet={true}
+                    readOnly={false}
+                    required={false}
           />
-        </Label>,
+</Label>,
         <div
           className={undefined}
-        >
+>
           <Checkbox
-            checked={false}
-            data-test="save-this-search-checkbox"
-            indeterminate={false}
-            label="Track this search result in dashboard"
-            onChange={[Function]}
+                    checked={false}
+                    data-test="save-this-search-checkbox"
+                    indeterminate={false}
+                    label="Track this search result in dashboard"
+                    onChange={[Function]}
           />
-        </div>,
+</div>,
         <Label
           labelFor="Default Sorting"
           value="Default Sorting"
-        >
+>
           <Select
-            defaultValue="percentageChange"
-            onChange={
-              [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                ],
-              }
-            }
-            options={
-              Array [
-                Object {
-                  "label": "Key-Value Pair",
-                  "value": "keyValuePairs",
-                },
-                Object {
-                  "label": "Total Counts",
-                  "value": "totalCount",
-                },
-                Object {
-                  "label": "Percentage Change",
-                  "value": "percentageChange",
-                },
-              ]
-            }
+                    defaultValue="percentageChange"
+                    onChange={[Function]}
+                    options={
+                              Array [
+                                        Object {
+                                          "label": "Key-Value Pair",
+                                          "value": "keyValuePairs",
+                                        },
+                                        Object {
+                                          "label": "Total Counts",
+                                          "value": "totalCount",
+                                        },
+                                        Object {
+                                          "label": "Percentage Change",
+                                          "value": "percentageChange",
+                                        },
+                                      ]
+                    }
           />
           <div
-            className={undefined}
+                    className={undefined}
           >
-            <RadioGroup
-              labelsBelow={false}
-              onChange={[Function]}
-              vertical={false}
-            >
-              <Radio
-                checked={true}
-                label="Descending"
-                onChange={[Function]}
-                value="descending"
-              />
-              <Radio
-                checked={false}
-                label="Ascending"
-                onChange={[Function]}
-                value="ascending"
-              />
-            </RadioGroup>
+                    <RadioGroup
+                              labelsBelow={false}
+                              onChange={[Function]}
+                              vertical={false}
+                    >
+                              <Radio
+                                        checked={true}
+                                        label="Descending"
+                                        onChange={[Function]}
+                                        value="descending"
+                              />
+                              <Radio
+                                        checked={false}
+                                        label="Ascending"
+                                        onChange={[Function]}
+                                        value="ascending"
+                              />
+                    </RadioGroup>
           </div>
-        </Label>,
+</Label>,
       ],
       "data-test": "save-this-search-dialog-content",
     },
@@ -162,20 +114,12 @@ ShallowWrapper {
             data-test="save-this-search-name-field"
             disabled={false}
             invalid={false}
-            onChange={
-              [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                ],
-              }
-            }
+            onChange={[Function]}
             placeholder="Enter a name for this saved search"
             quiet={true}
             readOnly={false}
             required={false}
-          />,
+/>,
           "labelFor": "Save This Search",
           "value": "Name",
         },
@@ -190,13 +134,7 @@ ShallowWrapper {
             "data-test": "save-this-search-name-field",
             "disabled": false,
             "invalid": false,
-            "onChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  false,
-                ],
-              ],
-            },
+            "onChange": [Function],
             "placeholder": "Enter a name for this saved search",
             "quiet": true,
             "readOnly": false,
@@ -219,7 +157,7 @@ ShallowWrapper {
             indeterminate={false}
             label="Track this search result in dashboard"
             onChange={[Function]}
-          />,
+/>,
           "className": undefined,
         },
         "ref": null,
@@ -248,54 +186,46 @@ ShallowWrapper {
           "children": Array [
             <Select
               defaultValue="percentageChange"
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                  ],
-                }
-              }
+              onChange={[Function]}
               options={
-                Array [
-                  Object {
-                    "label": "Key-Value Pair",
-                    "value": "keyValuePairs",
-                  },
-                  Object {
-                    "label": "Total Counts",
-                    "value": "totalCount",
-                  },
-                  Object {
-                    "label": "Percentage Change",
-                    "value": "percentageChange",
-                  },
-                ]
+                            Array [
+                                          Object {
+                                            "label": "Key-Value Pair",
+                                            "value": "keyValuePairs",
+                                          },
+                                          Object {
+                                            "label": "Total Counts",
+                                            "value": "totalCount",
+                                          },
+                                          Object {
+                                            "label": "Percentage Change",
+                                            "value": "percentageChange",
+                                          },
+                                        ]
               }
-            />,
+/>,
             <div
               className={undefined}
-            >
+>
               <RadioGroup
-                labelsBelow={false}
-                onChange={[Function]}
-                vertical={false}
+                            labelsBelow={false}
+                            onChange={[Function]}
+                            vertical={false}
               >
-                <Radio
-                  checked={true}
-                  label="Descending"
-                  onChange={[Function]}
-                  value="descending"
-                />
-                <Radio
-                  checked={false}
-                  label="Ascending"
-                  onChange={[Function]}
-                  value="ascending"
-                />
+                            <Radio
+                                          checked={true}
+                                          label="Descending"
+                                          onChange={[Function]}
+                                          value="descending"
+                            />
+                            <Radio
+                                          checked={false}
+                                          label="Ascending"
+                                          onChange={[Function]}
+                                          value="ascending"
+                            />
               </RadioGroup>
-            </div>,
+</div>,
           ],
           "labelFor": "Default Sorting",
           "value": "Default Sorting",
@@ -308,13 +238,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "defaultValue": "percentageChange",
-              "onChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                ],
-              },
+              "onChange": [Function],
               "options": Array [
                 Object {
                   "label": "Key-Value Pair",
@@ -343,20 +267,20 @@ ShallowWrapper {
                 labelsBelow={false}
                 onChange={[Function]}
                 vertical={false}
-              >
+>
                 <Radio
-                  checked={true}
-                  label="Descending"
-                  onChange={[Function]}
-                  value="descending"
+                                checked={true}
+                                label="Descending"
+                                onChange={[Function]}
+                                value="descending"
                 />
                 <Radio
-                  checked={false}
-                  label="Ascending"
-                  onChange={[Function]}
-                  value="ascending"
+                                checked={false}
+                                label="Ascending"
+                                onChange={[Function]}
+                                value="ascending"
                 />
-              </RadioGroup>,
+</RadioGroup>,
               "className": undefined,
             },
             "ref": null,
@@ -371,13 +295,13 @@ ShallowWrapper {
                     label="Descending"
                     onChange={[Function]}
                     value="descending"
-                  />,
+/>,
                   <Radio
                     checked={false}
                     label="Ascending"
                     onChange={[Function]}
                     value="ascending"
-                  />,
+/>,
                 ],
                 "labelsBelow": false,
                 "onChange": [Function],
@@ -434,94 +358,78 @@ ShallowWrapper {
           <Label
             labelFor="Save This Search"
             value="Name"
-          >
+>
             <Textfield
-              autoFocus={false}
-              className={undefined}
-              data-test="save-this-search-name-field"
-              disabled={false}
-              invalid={false}
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                  ],
-                }
-              }
-              placeholder="Enter a name for this saved search"
-              quiet={true}
-              readOnly={false}
-              required={false}
+                        autoFocus={false}
+                        className={undefined}
+                        data-test="save-this-search-name-field"
+                        disabled={false}
+                        invalid={false}
+                        onChange={[Function]}
+                        placeholder="Enter a name for this saved search"
+                        quiet={true}
+                        readOnly={false}
+                        required={false}
             />
-          </Label>,
+</Label>,
           <div
             className={undefined}
-          >
+>
             <Checkbox
-              checked={false}
-              data-test="save-this-search-checkbox"
-              indeterminate={false}
-              label="Track this search result in dashboard"
-              onChange={[Function]}
+                        checked={false}
+                        data-test="save-this-search-checkbox"
+                        indeterminate={false}
+                        label="Track this search result in dashboard"
+                        onChange={[Function]}
             />
-          </div>,
+</div>,
           <Label
             labelFor="Default Sorting"
             value="Default Sorting"
-          >
+>
             <Select
-              defaultValue="percentageChange"
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                  ],
-                }
-              }
-              options={
-                Array [
-                  Object {
-                    "label": "Key-Value Pair",
-                    "value": "keyValuePairs",
-                  },
-                  Object {
-                    "label": "Total Counts",
-                    "value": "totalCount",
-                  },
-                  Object {
-                    "label": "Percentage Change",
-                    "value": "percentageChange",
-                  },
-                ]
-              }
+                        defaultValue="percentageChange"
+                        onChange={[Function]}
+                        options={
+                                    Array [
+                                                Object {
+                                                  "label": "Key-Value Pair",
+                                                  "value": "keyValuePairs",
+                                                },
+                                                Object {
+                                                  "label": "Total Counts",
+                                                  "value": "totalCount",
+                                                },
+                                                Object {
+                                                  "label": "Percentage Change",
+                                                  "value": "percentageChange",
+                                                },
+                                              ]
+                        }
             />
             <div
-              className={undefined}
+                        className={undefined}
             >
-              <RadioGroup
-                labelsBelow={false}
-                onChange={[Function]}
-                vertical={false}
-              >
-                <Radio
-                  checked={true}
-                  label="Descending"
-                  onChange={[Function]}
-                  value="descending"
-                />
-                <Radio
-                  checked={false}
-                  label="Ascending"
-                  onChange={[Function]}
-                  value="ascending"
-                />
-              </RadioGroup>
+                        <RadioGroup
+                                    labelsBelow={false}
+                                    onChange={[Function]}
+                                    vertical={false}
+                        >
+                                    <Radio
+                                                checked={true}
+                                                label="Descending"
+                                                onChange={[Function]}
+                                                value="descending"
+                                    />
+                                    <Radio
+                                                checked={false}
+                                                label="Ascending"
+                                                onChange={[Function]}
+                                                value="ascending"
+                                    />
+                        </RadioGroup>
             </div>
-          </Label>,
+</Label>,
         ],
         "data-test": "save-this-search-dialog-content",
       },
@@ -538,20 +446,12 @@ ShallowWrapper {
               data-test="save-this-search-name-field"
               disabled={false}
               invalid={false}
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                  ],
-                }
-              }
+              onChange={[Function]}
               placeholder="Enter a name for this saved search"
               quiet={true}
               readOnly={false}
               required={false}
-            />,
+/>,
             "labelFor": "Save This Search",
             "value": "Name",
           },
@@ -566,13 +466,7 @@ ShallowWrapper {
               "data-test": "save-this-search-name-field",
               "disabled": false,
               "invalid": false,
-              "onChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                ],
-              },
+              "onChange": [Function],
               "placeholder": "Enter a name for this saved search",
               "quiet": true,
               "readOnly": false,
@@ -595,7 +489,7 @@ ShallowWrapper {
               indeterminate={false}
               label="Track this search result in dashboard"
               onChange={[Function]}
-            />,
+/>,
             "className": undefined,
           },
           "ref": null,
@@ -624,54 +518,46 @@ ShallowWrapper {
             "children": Array [
               <Select
                 defaultValue="percentageChange"
-                onChange={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        false,
-                      ],
-                    ],
-                  }
-                }
+                onChange={[Function]}
                 options={
-                  Array [
-                    Object {
-                      "label": "Key-Value Pair",
-                      "value": "keyValuePairs",
-                    },
-                    Object {
-                      "label": "Total Counts",
-                      "value": "totalCount",
-                    },
-                    Object {
-                      "label": "Percentage Change",
-                      "value": "percentageChange",
-                    },
-                  ]
+                                Array [
+                                                Object {
+                                                  "label": "Key-Value Pair",
+                                                  "value": "keyValuePairs",
+                                                },
+                                                Object {
+                                                  "label": "Total Counts",
+                                                  "value": "totalCount",
+                                                },
+                                                Object {
+                                                  "label": "Percentage Change",
+                                                  "value": "percentageChange",
+                                                },
+                                              ]
                 }
-              />,
+/>,
               <div
                 className={undefined}
-              >
+>
                 <RadioGroup
-                  labelsBelow={false}
-                  onChange={[Function]}
-                  vertical={false}
+                                labelsBelow={false}
+                                onChange={[Function]}
+                                vertical={false}
                 >
-                  <Radio
-                    checked={true}
-                    label="Descending"
-                    onChange={[Function]}
-                    value="descending"
-                  />
-                  <Radio
-                    checked={false}
-                    label="Ascending"
-                    onChange={[Function]}
-                    value="ascending"
-                  />
+                                <Radio
+                                                checked={true}
+                                                label="Descending"
+                                                onChange={[Function]}
+                                                value="descending"
+                                />
+                                <Radio
+                                                checked={false}
+                                                label="Ascending"
+                                                onChange={[Function]}
+                                                value="ascending"
+                                />
                 </RadioGroup>
-              </div>,
+</div>,
             ],
             "labelFor": "Default Sorting",
             "value": "Default Sorting",
@@ -684,13 +570,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "defaultValue": "percentageChange",
-                "onChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                  ],
-                },
+                "onChange": [Function],
                 "options": Array [
                   Object {
                     "label": "Key-Value Pair",
@@ -719,20 +599,20 @@ ShallowWrapper {
                   labelsBelow={false}
                   onChange={[Function]}
                   vertical={false}
-                >
+>
                   <Radio
-                    checked={true}
-                    label="Descending"
-                    onChange={[Function]}
-                    value="descending"
+                                    checked={true}
+                                    label="Descending"
+                                    onChange={[Function]}
+                                    value="descending"
                   />
                   <Radio
-                    checked={false}
-                    label="Ascending"
-                    onChange={[Function]}
-                    value="ascending"
+                                    checked={false}
+                                    label="Ascending"
+                                    onChange={[Function]}
+                                    value="ascending"
                   />
-                </RadioGroup>,
+</RadioGroup>,
                 "className": undefined,
               },
               "ref": null,
@@ -747,13 +627,13 @@ ShallowWrapper {
                       label="Descending"
                       onChange={[Function]}
                       value="descending"
-                    />,
+/>,
                     <Radio
                       checked={false}
                       label="Ascending"
                       onChange={[Function]}
                       value="ascending"
-                    />,
+/>,
                   ],
                   "labelsBelow": false,
                   "onChange": [Function],
@@ -816,55 +696,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SaveSearchExecutionContent
-    onDefaultSortingChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-          Array [
-            true,
-          ],
-        ],
-      }
-    }
-    onSaveSearchNameChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-          Array [
-            true,
-          ],
-        ],
-      }
-    }
-    onSortingOrderChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-          Array [
-            true,
-          ],
-        ],
-      }
-    }
-    onTrackResultInDashboardChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            false,
-          ],
-          Array [
-            true,
-          ],
-        ],
-      }
-    }
-  />,
+    onDefaultSortingChange={[Function]}
+    onSaveSearchNameChange={[Function]}
+    onSortingOrderChange={[Function]}
+    onTrackResultInDashboardChange={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -881,100 +717,78 @@ ShallowWrapper {
         <Label
           labelFor="Save This Search"
           value="Name"
-        >
+>
           <Textfield
-            autoFocus={false}
-            className={undefined}
-            data-test="save-this-search-name-field"
-            disabled={false}
-            invalid={false}
-            onChange={
-              [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                  Array [
-                    true,
-                  ],
-                ],
-              }
-            }
-            placeholder="Enter a name for this saved search"
-            quiet={true}
-            readOnly={false}
-            required={false}
+                    autoFocus={false}
+                    className={undefined}
+                    data-test="save-this-search-name-field"
+                    disabled={false}
+                    invalid={false}
+                    onChange={[Function]}
+                    placeholder="Enter a name for this saved search"
+                    quiet={true}
+                    readOnly={false}
+                    required={false}
           />
-        </Label>,
+</Label>,
         <div
           className={undefined}
-        >
+>
           <Checkbox
-            checked={false}
-            data-test="save-this-search-checkbox"
-            indeterminate={false}
-            label="Track this search result in dashboard"
-            onChange={[Function]}
+                    checked={false}
+                    data-test="save-this-search-checkbox"
+                    indeterminate={false}
+                    label="Track this search result in dashboard"
+                    onChange={[Function]}
           />
-        </div>,
+</div>,
         <Label
           labelFor="Default Sorting"
           value="Default Sorting"
-        >
+>
           <Select
-            defaultValue="percentageChange"
-            onChange={
-              [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                  Array [
-                    true,
-                  ],
-                ],
-              }
-            }
-            options={
-              Array [
-                Object {
-                  "label": "Key-Value Pair",
-                  "value": "keyValuePairs",
-                },
-                Object {
-                  "label": "Total Counts",
-                  "value": "totalCount",
-                },
-                Object {
-                  "label": "Percentage Change",
-                  "value": "percentageChange",
-                },
-              ]
-            }
+                    defaultValue="percentageChange"
+                    onChange={[Function]}
+                    options={
+                              Array [
+                                        Object {
+                                          "label": "Key-Value Pair",
+                                          "value": "keyValuePairs",
+                                        },
+                                        Object {
+                                          "label": "Total Counts",
+                                          "value": "totalCount",
+                                        },
+                                        Object {
+                                          "label": "Percentage Change",
+                                          "value": "percentageChange",
+                                        },
+                                      ]
+                    }
           />
           <div
-            className={undefined}
+                    className={undefined}
           >
-            <RadioGroup
-              labelsBelow={false}
-              onChange={[Function]}
-              vertical={false}
-            >
-              <Radio
-                checked={true}
-                label="Descending"
-                onChange={[Function]}
-                value="descending"
-              />
-              <Radio
-                checked={false}
-                label="Ascending"
-                onChange={[Function]}
-                value="ascending"
-              />
-            </RadioGroup>
+                    <RadioGroup
+                              labelsBelow={false}
+                              onChange={[Function]}
+                              vertical={false}
+                    >
+                              <Radio
+                                        checked={true}
+                                        label="Descending"
+                                        onChange={[Function]}
+                                        value="descending"
+                              />
+                              <Radio
+                                        checked={false}
+                                        label="Ascending"
+                                        onChange={[Function]}
+                                        value="ascending"
+                              />
+                    </RadioGroup>
           </div>
-        </Label>,
+</Label>,
       ],
       "data-test": "save-this-search-dialog-content",
     },
@@ -991,23 +805,12 @@ ShallowWrapper {
             data-test="save-this-search-name-field"
             disabled={false}
             invalid={false}
-            onChange={
-              [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                  Array [
-                    true,
-                  ],
-                ],
-              }
-            }
+            onChange={[Function]}
             placeholder="Enter a name for this saved search"
             quiet={true}
             readOnly={false}
             required={false}
-          />,
+/>,
           "labelFor": "Save This Search",
           "value": "Name",
         },
@@ -1022,16 +825,7 @@ ShallowWrapper {
             "data-test": "save-this-search-name-field",
             "disabled": false,
             "invalid": false,
-            "onChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  false,
-                ],
-                Array [
-                  true,
-                ],
-              ],
-            },
+            "onChange": [Function],
             "placeholder": "Enter a name for this saved search",
             "quiet": true,
             "readOnly": false,
@@ -1054,7 +848,7 @@ ShallowWrapper {
             indeterminate={false}
             label="Track this search result in dashboard"
             onChange={[Function]}
-          />,
+/>,
           "className": undefined,
         },
         "ref": null,
@@ -1083,57 +877,46 @@ ShallowWrapper {
           "children": Array [
             <Select
               defaultValue="percentageChange"
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                    Array [
-                      true,
-                    ],
-                  ],
-                }
-              }
+              onChange={[Function]}
               options={
-                Array [
-                  Object {
-                    "label": "Key-Value Pair",
-                    "value": "keyValuePairs",
-                  },
-                  Object {
-                    "label": "Total Counts",
-                    "value": "totalCount",
-                  },
-                  Object {
-                    "label": "Percentage Change",
-                    "value": "percentageChange",
-                  },
-                ]
+                            Array [
+                                          Object {
+                                            "label": "Key-Value Pair",
+                                            "value": "keyValuePairs",
+                                          },
+                                          Object {
+                                            "label": "Total Counts",
+                                            "value": "totalCount",
+                                          },
+                                          Object {
+                                            "label": "Percentage Change",
+                                            "value": "percentageChange",
+                                          },
+                                        ]
               }
-            />,
+/>,
             <div
               className={undefined}
-            >
+>
               <RadioGroup
-                labelsBelow={false}
-                onChange={[Function]}
-                vertical={false}
+                            labelsBelow={false}
+                            onChange={[Function]}
+                            vertical={false}
               >
-                <Radio
-                  checked={true}
-                  label="Descending"
-                  onChange={[Function]}
-                  value="descending"
-                />
-                <Radio
-                  checked={false}
-                  label="Ascending"
-                  onChange={[Function]}
-                  value="ascending"
-                />
+                            <Radio
+                                          checked={true}
+                                          label="Descending"
+                                          onChange={[Function]}
+                                          value="descending"
+                            />
+                            <Radio
+                                          checked={false}
+                                          label="Ascending"
+                                          onChange={[Function]}
+                                          value="ascending"
+                            />
               </RadioGroup>
-            </div>,
+</div>,
           ],
           "labelFor": "Default Sorting",
           "value": "Default Sorting",
@@ -1146,16 +929,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "defaultValue": "percentageChange",
-              "onChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                  Array [
-                    true,
-                  ],
-                ],
-              },
+              "onChange": [Function],
               "options": Array [
                 Object {
                   "label": "Key-Value Pair",
@@ -1184,20 +958,20 @@ ShallowWrapper {
                 labelsBelow={false}
                 onChange={[Function]}
                 vertical={false}
-              >
+>
                 <Radio
-                  checked={true}
-                  label="Descending"
-                  onChange={[Function]}
-                  value="descending"
+                                checked={true}
+                                label="Descending"
+                                onChange={[Function]}
+                                value="descending"
                 />
                 <Radio
-                  checked={false}
-                  label="Ascending"
-                  onChange={[Function]}
-                  value="ascending"
+                                checked={false}
+                                label="Ascending"
+                                onChange={[Function]}
+                                value="ascending"
                 />
-              </RadioGroup>,
+</RadioGroup>,
               "className": undefined,
             },
             "ref": null,
@@ -1212,13 +986,13 @@ ShallowWrapper {
                     label="Descending"
                     onChange={[Function]}
                     value="descending"
-                  />,
+/>,
                   <Radio
                     checked={false}
                     label="Ascending"
                     onChange={[Function]}
                     value="ascending"
-                  />,
+/>,
                 ],
                 "labelsBelow": false,
                 "onChange": [Function],
@@ -1275,100 +1049,78 @@ ShallowWrapper {
           <Label
             labelFor="Save This Search"
             value="Name"
-          >
+>
             <Textfield
-              autoFocus={false}
-              className={undefined}
-              data-test="save-this-search-name-field"
-              disabled={false}
-              invalid={false}
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                    Array [
-                      true,
-                    ],
-                  ],
-                }
-              }
-              placeholder="Enter a name for this saved search"
-              quiet={true}
-              readOnly={false}
-              required={false}
+                        autoFocus={false}
+                        className={undefined}
+                        data-test="save-this-search-name-field"
+                        disabled={false}
+                        invalid={false}
+                        onChange={[Function]}
+                        placeholder="Enter a name for this saved search"
+                        quiet={true}
+                        readOnly={false}
+                        required={false}
             />
-          </Label>,
+</Label>,
           <div
             className={undefined}
-          >
+>
             <Checkbox
-              checked={false}
-              data-test="save-this-search-checkbox"
-              indeterminate={false}
-              label="Track this search result in dashboard"
-              onChange={[Function]}
+                        checked={false}
+                        data-test="save-this-search-checkbox"
+                        indeterminate={false}
+                        label="Track this search result in dashboard"
+                        onChange={[Function]}
             />
-          </div>,
+</div>,
           <Label
             labelFor="Default Sorting"
             value="Default Sorting"
-          >
+>
             <Select
-              defaultValue="percentageChange"
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                    Array [
-                      true,
-                    ],
-                  ],
-                }
-              }
-              options={
-                Array [
-                  Object {
-                    "label": "Key-Value Pair",
-                    "value": "keyValuePairs",
-                  },
-                  Object {
-                    "label": "Total Counts",
-                    "value": "totalCount",
-                  },
-                  Object {
-                    "label": "Percentage Change",
-                    "value": "percentageChange",
-                  },
-                ]
-              }
+                        defaultValue="percentageChange"
+                        onChange={[Function]}
+                        options={
+                                    Array [
+                                                Object {
+                                                  "label": "Key-Value Pair",
+                                                  "value": "keyValuePairs",
+                                                },
+                                                Object {
+                                                  "label": "Total Counts",
+                                                  "value": "totalCount",
+                                                },
+                                                Object {
+                                                  "label": "Percentage Change",
+                                                  "value": "percentageChange",
+                                                },
+                                              ]
+                        }
             />
             <div
-              className={undefined}
+                        className={undefined}
             >
-              <RadioGroup
-                labelsBelow={false}
-                onChange={[Function]}
-                vertical={false}
-              >
-                <Radio
-                  checked={true}
-                  label="Descending"
-                  onChange={[Function]}
-                  value="descending"
-                />
-                <Radio
-                  checked={false}
-                  label="Ascending"
-                  onChange={[Function]}
-                  value="ascending"
-                />
-              </RadioGroup>
+                        <RadioGroup
+                                    labelsBelow={false}
+                                    onChange={[Function]}
+                                    vertical={false}
+                        >
+                                    <Radio
+                                                checked={true}
+                                                label="Descending"
+                                                onChange={[Function]}
+                                                value="descending"
+                                    />
+                                    <Radio
+                                                checked={false}
+                                                label="Ascending"
+                                                onChange={[Function]}
+                                                value="ascending"
+                                    />
+                        </RadioGroup>
             </div>
-          </Label>,
+</Label>,
         ],
         "data-test": "save-this-search-dialog-content",
       },
@@ -1385,23 +1137,12 @@ ShallowWrapper {
               data-test="save-this-search-name-field"
               disabled={false}
               invalid={false}
-              onChange={
-                [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                    Array [
-                      true,
-                    ],
-                  ],
-                }
-              }
+              onChange={[Function]}
               placeholder="Enter a name for this saved search"
               quiet={true}
               readOnly={false}
               required={false}
-            />,
+/>,
             "labelFor": "Save This Search",
             "value": "Name",
           },
@@ -1416,16 +1157,7 @@ ShallowWrapper {
               "data-test": "save-this-search-name-field",
               "disabled": false,
               "invalid": false,
-              "onChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    false,
-                  ],
-                  Array [
-                    true,
-                  ],
-                ],
-              },
+              "onChange": [Function],
               "placeholder": "Enter a name for this saved search",
               "quiet": true,
               "readOnly": false,
@@ -1448,7 +1180,7 @@ ShallowWrapper {
               indeterminate={false}
               label="Track this search result in dashboard"
               onChange={[Function]}
-            />,
+/>,
             "className": undefined,
           },
           "ref": null,
@@ -1477,57 +1209,46 @@ ShallowWrapper {
             "children": Array [
               <Select
                 defaultValue="percentageChange"
-                onChange={
-                  [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        false,
-                      ],
-                      Array [
-                        true,
-                      ],
-                    ],
-                  }
-                }
+                onChange={[Function]}
                 options={
-                  Array [
-                    Object {
-                      "label": "Key-Value Pair",
-                      "value": "keyValuePairs",
-                    },
-                    Object {
-                      "label": "Total Counts",
-                      "value": "totalCount",
-                    },
-                    Object {
-                      "label": "Percentage Change",
-                      "value": "percentageChange",
-                    },
-                  ]
+                                Array [
+                                                Object {
+                                                  "label": "Key-Value Pair",
+                                                  "value": "keyValuePairs",
+                                                },
+                                                Object {
+                                                  "label": "Total Counts",
+                                                  "value": "totalCount",
+                                                },
+                                                Object {
+                                                  "label": "Percentage Change",
+                                                  "value": "percentageChange",
+                                                },
+                                              ]
                 }
-              />,
+/>,
               <div
                 className={undefined}
-              >
+>
                 <RadioGroup
-                  labelsBelow={false}
-                  onChange={[Function]}
-                  vertical={false}
+                                labelsBelow={false}
+                                onChange={[Function]}
+                                vertical={false}
                 >
-                  <Radio
-                    checked={true}
-                    label="Descending"
-                    onChange={[Function]}
-                    value="descending"
-                  />
-                  <Radio
-                    checked={false}
-                    label="Ascending"
-                    onChange={[Function]}
-                    value="ascending"
-                  />
+                                <Radio
+                                                checked={true}
+                                                label="Descending"
+                                                onChange={[Function]}
+                                                value="descending"
+                                />
+                                <Radio
+                                                checked={false}
+                                                label="Ascending"
+                                                onChange={[Function]}
+                                                value="ascending"
+                                />
                 </RadioGroup>
-              </div>,
+</div>,
             ],
             "labelFor": "Default Sorting",
             "value": "Default Sorting",
@@ -1540,16 +1261,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "defaultValue": "percentageChange",
-                "onChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      false,
-                    ],
-                    Array [
-                      true,
-                    ],
-                  ],
-                },
+                "onChange": [Function],
                 "options": Array [
                   Object {
                     "label": "Key-Value Pair",
@@ -1578,20 +1290,20 @@ ShallowWrapper {
                   labelsBelow={false}
                   onChange={[Function]}
                   vertical={false}
-                >
+>
                   <Radio
-                    checked={true}
-                    label="Descending"
-                    onChange={[Function]}
-                    value="descending"
+                                    checked={true}
+                                    label="Descending"
+                                    onChange={[Function]}
+                                    value="descending"
                   />
                   <Radio
-                    checked={false}
-                    label="Ascending"
-                    onChange={[Function]}
-                    value="ascending"
+                                    checked={false}
+                                    label="Ascending"
+                                    onChange={[Function]}
+                                    value="ascending"
                   />
-                </RadioGroup>,
+</RadioGroup>,
                 "className": undefined,
               },
               "ref": null,
@@ -1606,13 +1318,13 @@ ShallowWrapper {
                       label="Descending"
                       onChange={[Function]}
                       value="descending"
-                    />,
+/>,
                     <Radio
                       checked={false}
                       label="Ascending"
                       onChange={[Function]}
                       value="ascending"
-                    />,
+/>,
                   ],
                   "labelsBelow": false,
                   "onChange": [Function],

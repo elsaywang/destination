@@ -98,7 +98,7 @@ describe('fetch util', () => {
         let fetchSpy;
 
         beforeEach(() => {
-            fetchSpy = jest.spyOn(global, 'fetch');
+            fetchSpy = jest.spyOn(global, 'fetch').mockImplementation(() => {});
         });
 
         afterEach(() => {
