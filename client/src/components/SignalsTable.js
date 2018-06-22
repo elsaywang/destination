@@ -96,10 +96,6 @@ class SignalsTable extends Component {
         switch (sourceType) {
             case 'ANALYTICS':
                 return reportSuiteIds && reportSuiteIds.length ? reportSuiteIds.join('') : '—';
-            case 'ALF':
-                return '—';
-            case 'REALTIME':
-                return '—';
             case 'ONBOARDED':
                 return dataSourceIds && dataSourceIds.length ? dataSourceIds.join('') : '—';
             default:

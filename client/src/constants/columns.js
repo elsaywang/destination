@@ -38,6 +38,20 @@ const signalSource = {
     width: 180,
     sortable: true,
 };
+
+const reportSuite = {
+    title: 'Report Suite',
+    key: columnKeys.signalSource,
+    width: 180,
+    sortable: true,
+};
+
+const onboardedRecord = {
+    title: 'Onboarded Record',
+    key: columnKeys.signalSource,
+    width: 180,
+    sortable: true,
+};
 /**
  * The "Total Counts", "Event Fires", and "Total Records" column will
  * all use the `totalCount` (no 's') column key. They're all used to display the
@@ -96,7 +110,7 @@ export const allSignalsColumns = [
 export const analyticsColumns = [
     keyValuePairs,
     signalType,
-    signalSource,
+    reportSuite,
     eventFires,
     percentageChange,
     includedInTraits,
@@ -123,7 +137,7 @@ export const generalOnlineDataColumns = [...actionableLogFilesColumns];
 export const onboardedRecordsColumns = [
     keyValuePairs,
     signalType,
-    signalSource,
+    onboardedRecord,
     totalRecords,
     percentageChange,
     includedInTraits,
@@ -139,6 +153,8 @@ export const columns = [
     keyName,
     signalType,
     signalSource,
+    reportSuite,
+    onboardedRecord,
     totalCounts,
     eventFires,
     totalRecords,
