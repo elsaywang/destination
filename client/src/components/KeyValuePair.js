@@ -32,9 +32,9 @@ class KeyValuePair extends Component {
 
                     return response.json();
                 }
-
                 throw new Error(response.statusText);
             })
+            .then(resp => resp.signalKeys)
             .then(json => json.map(key => key.signalKey))
             .catch(error => {
                 this.setState({
@@ -59,9 +59,12 @@ class KeyValuePair extends Component {
 
                 throw new Error(response.statusText);
             })
+            .then(resp => resp.signalKeys)
             .then(suites =>
                 suites.map(suite => ({
-                    label: `${suite.signalKey} (${suite.signalKeyName})`,
+                    label: suite.signalKeyName
+                        ? `${suite.signalKey} (${suite.signalKeyName})`
+                        : `${suite.signalKey}`,
                     id: suite.signalKey,
                 })),
             )

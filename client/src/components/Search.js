@@ -42,7 +42,9 @@ class Search extends Component {
                         key={pair.id}
                         pair={pair}
                         advanced={advanced}
-                        reportSuiteId={reportSuiteId ? reportSuiteId[0] : 0}
+                        reportSuiteId={
+                            reportSuiteId && reportSuiteId.length ? reportSuiteId[0] : ''
+                        }
                         onKeyChange={onKeyChange}
                         onOperatorChange={onOperatorChange}
                         onValueChange={onValueChange}
