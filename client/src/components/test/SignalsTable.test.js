@@ -312,7 +312,7 @@ describe('<SignalsTable /> component', () => {
 
     describe('Formatting LIST API response for the table', () => {
         describe('formatSignalsList', () => {
-            it('should return the list of signals, where each signal has additional custom data for the `signalType`, `reportSuite`, and `includedInTraits` columns', () => {
+            it('should return the list of signals, where each signal has additional custom data for the `signalType`, `signalSource`, and `includedInTraits` columns', () => {
                 const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
                 const instance = newWrapper.instance();
                 const signals = [{}];
