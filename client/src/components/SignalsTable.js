@@ -11,7 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { baseRowHeight } from '../constants/rows';
+import { defaultRowHeight } from '../constants/rows';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import { isNumeric } from '../utils/isNumeric';
 import styles from './SignalsTable.css';
@@ -171,7 +171,7 @@ class SignalsTable extends Component {
     };
 
     getRowHeight(totalKeyValuePairs) {
-        return totalKeyValuePairs * baseRowHeight;
+        return totalKeyValuePairs * defaultRowHeight;
     }
 
     render() {
