@@ -125,7 +125,7 @@ ShallowWrapper {
                                                                                 "value": "",
                                                                               }
                                                                 }
-                                                                reportSuiteId={0}
+                                                                reportSuiteId=""
                                                         />
                                                         <Button
                                                                 autoFocus={false}
@@ -329,7 +329,7 @@ ShallowWrapper {
                                                                                                             "value": "",
                                                                                                           }
                                                                                     }
-                                                                                    reportSuiteId={0}
+                                                                                    reportSuiteId=""
                                                                         />
                                                                         <Button
                                                                                     autoFocus={false}
@@ -559,7 +559,7 @@ ShallowWrapper {
                                                                                                                 "value": "",
                                                                                                               }
                                                                                     }
-                                                                                    reportSuiteId={0}
+                                                                                    reportSuiteId=""
                                                                       />
                                                                       <Button
                                                                                     autoFocus={false}
@@ -743,7 +743,7 @@ ShallowWrapper {
                                                                                                                               "value": "",
                                                                                                                             }
                                                                                           }
-                                                                                          reportSuiteId={0}
+                                                                                          reportSuiteId=""
                                                                         />
                                                                         <Button
                                                                                           autoFocus={false}
@@ -925,7 +925,7 @@ ShallowWrapper {
                                                                                                                         "value": "",
                                                                                                                       }
                                                                                 }
-                                                                                reportSuiteId={0}
+                                                                                reportSuiteId=""
                                                             />
                                                             <Button
                                                                                 autoFocus={false}
@@ -1102,7 +1102,7 @@ ShallowWrapper {
                                                                                                                                   "value": "",
                                                                                                                                 }
                                                                               }
-                                                                              reportSuiteId={0}
+                                                                              reportSuiteId=""
                                                     />
                                                     <Button
                                                                               autoFocus={false}
@@ -1276,7 +1276,7 @@ ShallowWrapper {
                                                                                                         "value": "",
                                                                                                       }
                                                     }
-                                                    reportSuiteId={0}
+                                                    reportSuiteId=""
                           />
                           <Button
                                                     autoFocus={false}
@@ -1316,7 +1316,7 @@ ShallowWrapper {
                                                                                           "value": "",
                                                                                         }
                               }
-                              reportSuiteId={0}
+                              reportSuiteId=""
 />,
                             <Button
                               autoFocus={false}
@@ -1355,7 +1355,7 @@ ShallowWrapper {
                                 "operator": "==",
                                 "value": "",
                               },
-                              "reportSuiteId": 0,
+                              "reportSuiteId": "",
                             },
                             "ref": null,
                             "rendered": null,
@@ -1975,7 +1975,7 @@ ShallowWrapper {
                                                                                                     "value": "",
                                                                                                   }
                                                                                 }
-                                                                                reportSuiteId={0}
+                                                                                reportSuiteId=""
                                                                       />
                                                                       <Button
                                                                                 autoFocus={false}
@@ -2179,7 +2179,7 @@ ShallowWrapper {
                                                                                                                               "value": "",
                                                                                                                             }
                                                                                                   }
-                                                                                                  reportSuiteId={0}
+                                                                                                  reportSuiteId=""
                                                                                     />
                                                                                     <Button
                                                                                                   autoFocus={false}
@@ -2409,7 +2409,7 @@ ShallowWrapper {
                                                                                                                                 "value": "",
                                                                                                                               }
                                                                                                 }
-                                                                                                reportSuiteId={0}
+                                                                                                reportSuiteId=""
                                                                                 />
                                                                                 <Button
                                                                                                 autoFocus={false}
@@ -2593,7 +2593,7 @@ ShallowWrapper {
                                                                                                                                             "value": "",
                                                                                                                                           }
                                                                                                     }
-                                                                                                    reportSuiteId={0}
+                                                                                                    reportSuiteId=""
                                                                                 />
                                                                                 <Button
                                                                                                     autoFocus={false}
@@ -2775,7 +2775,7 @@ ShallowWrapper {
                                                                                                                                     "value": "",
                                                                                                                                   }
                                                                                         }
-                                                                                        reportSuiteId={0}
+                                                                                        reportSuiteId=""
                                                                   />
                                                                   <Button
                                                                                         autoFocus={false}
@@ -2952,7 +2952,7 @@ ShallowWrapper {
                                                                                                                                             "value": "",
                                                                                                                                           }
                                                                                     }
-                                                                                    reportSuiteId={0}
+                                                                                    reportSuiteId=""
                                                         />
                                                         <Button
                                                                                     autoFocus={false}
@@ -3126,7 +3126,7 @@ ShallowWrapper {
                                                                                                                 "value": "",
                                                                                                               }
                                                         }
-                                                        reportSuiteId={0}
+                                                        reportSuiteId=""
                             />
                             <Button
                                                         autoFocus={false}
@@ -3166,7 +3166,7 @@ ShallowWrapper {
                                                                                                 "value": "",
                                                                                               }
                                 }
-                                reportSuiteId={0}
+                                reportSuiteId=""
 />,
                               <Button
                                 autoFocus={false}
@@ -3205,7 +3205,7 @@ ShallowWrapper {
                                   "operator": "==",
                                   "value": "",
                                 },
-                                "reportSuiteId": 0,
+                                "reportSuiteId": "",
                               },
                               "ref": null,
                               "rendered": null,

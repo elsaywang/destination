@@ -8,19 +8,17 @@ describe('Search Form Integration Tests', function() {
         cy.clock(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
 
         cy.server();
-        cy
-            .route(
-                '/portal/api/v1/users/self/annotations/aam-portal',
-                savedSearchResponse.savedSearch,
-            )
-            .as('fetchSavedSearch');
-        cy
-            .route('POST', '/portal/api/v1/signals/list', searchResultsResponse)
-            .as('fetchSearchResults');
+        cy.route(
+            '/portal/api/v1/users/self/annotations/aam-portal',
+            savedSearchResponse.savedSearch,
+        ).as('fetchSavedSearch');
+        cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+            'fetchSearchResults',
+        );
         cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
-        cy
-            .route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse)
-            .as('fetchSignalKeys');
+        cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
+            'fetchSignalKeys',
+        );
 
         cy.visit('#/search');
     });
@@ -47,8 +45,7 @@ describe('Search Form Integration Tests', function() {
         });
 
         it('should allow you to type a report suite name and press enter on list of suggestions', function() {
-            cy
-                .get('@advancedFilter')
+            cy.get('@advancedFilter')
                 .type('te{enter}')
                 .then(function($text) {
                     cy.get('@advancedFilter').should(function($filter) {
@@ -58,8 +55,7 @@ describe('Search Form Integration Tests', function() {
         });
 
         it('should allow you to select a report suite through drop down when you click on the dropdown button', function() {
-            cy
-                .get('@advancedFilter')
+            cy.get('@advancedFilter')
                 .siblings('button')
                 .click()
                 .then(function($text) {
@@ -84,8 +80,7 @@ describe('Search Form Integration Tests', function() {
 
         describe('when an option is clicked', function() {
             it('should have the same key value as clicked option', function() {
-                cy
-                    .get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
+                cy.get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
                     .click()
                     .then(function($item) {
                         cy.get('@keyInput').should(function($keyInput) {
@@ -98,8 +93,7 @@ describe('Search Form Integration Tests', function() {
 
     describe('when Operator select is changed', function() {
         it('should change the value to selected option', function() {
-            cy
-                .get('.operator')
+            cy.get('.operator')
                 .click()
                 .get('[role=option]:last')
                 .click()
@@ -168,8 +162,7 @@ describe('Search Form Integration Tests', function() {
 
     describe('when Signal Status select is changed', function() {
         it('should change the value to selected option', function() {
-            cy
-                .get('.signal-status')
+            cy.get('.signal-status')
                 .click()
                 .get('[role=option]:last')
                 .click()
@@ -183,8 +176,7 @@ describe('Search Form Integration Tests', function() {
 
     describe('when View Records For select is changed', function() {
         it('should change the value to selected option', function() {
-            cy
-                .get('.view-records')
+            cy.get('.view-records')
                 .click()
                 .get('.spectrum-SelectList-item:first')
                 .click()
@@ -200,8 +192,7 @@ describe('Search Form Integration Tests', function() {
         it('should change the value to selected option', function() {
             const value = 50000;
 
-            cy
-                .get('[data-test="min-counts"]')
+            cy.get('[data-test="min-counts"]')
                 .clear()
                 .type(value)
                 .should('have.value', String(value));
@@ -210,8 +201,7 @@ describe('Search Form Integration Tests', function() {
 
     describe('when "Custom Date Range" in the View Records For select is selected', function() {
         beforeEach(function() {
-            cy
-                .get('.view-records')
+            cy.get('.view-records')
                 .click()
                 .get('.spectrum-SelectList-item:last')
                 .click();
@@ -243,20 +233,17 @@ describe('Search Form Integration Tests', function() {
             cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="add-button"]').click();
 
-            cy
-                .get('.signal-status')
+            cy.get('.signal-status')
                 .click()
                 .get('[role=option]:last')
                 .click();
 
-            cy
-                .get('.view-records')
+            cy.get('.view-records')
                 .click()
                 .get('.spectrum-SelectList-item:first')
                 .click();
 
-            cy
-                .get('[data-test="min-counts"]')
+            cy.get('[data-test="min-counts"]')
                 .clear()
                 .type(minCounts);
 
@@ -289,8 +276,7 @@ describe('Search Form Integration Tests', function() {
                     ];
 
                     for (let i = 0; i < expectedStartDates.length; i++) {
-                        cy
-                            .get('.view-records')
+                        cy.get('.view-records')
                             .click()
                             .get(`.spectrum-SelectList-item:nth-child(${i + 1})`)
                             .click()
@@ -313,8 +299,7 @@ describe('Search Form Integration Tests', function() {
                     const expectedStartDate = 1524355200000; // April 22, UTC midnight
                     const expectedEndDate = 1524528000000; // April 24, UTC midnight
 
-                    cy
-                        .get('.view-records')
+                    cy.get('.view-records')
                         .click()
                         .get(`.spectrum-SelectList-item:last-child`)
                         .click()
