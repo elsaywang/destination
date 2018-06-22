@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions';
 import { CLEAR_SEARCH, CALL_SEARCH_REJECTED, TOGGLE_ADVANCED_SEARCH } from '../actions/searchForm';
-import { GET_SAVED_SEARCH_REJECTED } from '../actions/savedSearch';
+import { GET_SAVED_SEARCH_REJECTED, SAVE_SEARCH_REJECTED } from '../actions/savedSearch';
 import { GET_REPORT_SUITES_REJECTED } from '../actions/reportSuites';
 
 const initialState = {
@@ -16,9 +16,13 @@ const initialState = {
         hasError: false,
         errorMessage: '',
     },
+    saveSearch: {
+        hasError: false,
+        errorMessage: '',
+    },
 };
 
-const handleErrorState = (state, action) => ({
+export const handleErrorState = (state, action) => ({
     hasError: action.error,
     errorMessage: action.payload.message,
 });
@@ -33,6 +37,10 @@ export default handleActions(
         [GET_SAVED_SEARCH_REJECTED]: (state, action) => ({
             ...state,
             savedSearch: handleErrorState(state, action),
+        }),
+        [SAVE_SEARCH_REJECTED]: (state, action) => ({
+            ...state,
+            saveSearch: handleErrorState(state, action),
         }),
         [GET_REPORT_SUITES_REJECTED]: (state, action) => ({
             ...state,

@@ -3,6 +3,7 @@ const newSavedSearchResponse = require('../fixtures/newSavedSearch.json');
 const maxSavedSearchResponse = require('../fixtures/maxSavedSearch.json');
 const emptySavedSearchResponse = require('../fixtures/emptySavedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
+const errorResponse = require('../fixtures/error.json');
 
 describe('Saved Search Integration Test', function() {
     beforeEach(function() {
@@ -188,6 +189,7 @@ describe('Saved Search Integration Test', function() {
 
                 cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
                     cy.get('[data-test="save-this-search-name-field"]').type(searchName);
+                    cy.get('[data-test="save-this-search-checkbox"]').check();
                 });
 
                 cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
@@ -199,6 +201,37 @@ describe('Saved Search Integration Test', function() {
                     .should('exist')
                     .trigger('mouseover');
                 cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
+            });
+        });
+
+        describe('when user fills out fields in modal, and clicks "Save" button but failed to create', function() {
+            beforeEach(function() {
+                cy.server({
+                    status: errorResponse.status,
+                });
+
+                cy.route(
+                    'PUT',
+                    '/portal/api/v1/users/self/annotations/aam-portal',
+                    errorResponse,
+                ).as('createSavedSearchFailed');
+            });
+
+            it("should not save the user's current search", function() {
+                const searchName = 'Test1234';
+
+                cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
+                    cy.get('[data-test="save-this-search-name-field"]').type(searchName);
+                });
+
+                cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
+
+                cy.wait('@createSavedSearchFailed');
+                cy.get('[data-test="inline-error"]').as('saveSearchError');
+                cy.get('@saveSearchError')
+                    .should('exist')
+                    .should('have.text', errorResponse.statusText);
+                cy.get('[data-test="save-this-search-button"]').should('not.exist');
             });
         });
     });

@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { FormattedNumber } from 'react-intl';
 import { columnKeys } from '../../constants/columns';
-import { baseRowHeight } from '../../constants/rows';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 import PercentageChange from '../../components/common/PercentageChange';
@@ -175,7 +174,7 @@ describe('<SignalsTable /> component', () => {
         const { getRowHeight } = wrapper.instance();
         it('should should return the correct rowHeight based on the `totalKeyValuePairs` passed in', () => {
             const totalKeyValuePairs = 4;
-            const expectedRowHeight = totalKeyValuePairs * baseRowHeight;
+            const expectedRowHeight = 192;
             expect(getRowHeight(totalKeyValuePairs)).toEqual(expectedRowHeight);
         });
     });
@@ -183,15 +182,15 @@ describe('<SignalsTable /> component', () => {
     describe('Rendering cells', () => {
         const instance = wrapper.instance();
 
-        afterEach(() => {
-            jest.restoreAllMocks();
-        });
-
         describe('renderCell', () => {
             const verifyRenderMethodInColumn = (renderMethodName, columnKey, data) => {
-                jest.spyOn(instance, renderMethodName);
+                const spy = jest.spyOn(instance, renderMethodName);
+
                 instance.renderCell({ key: columnKey }, data);
+
                 expect(instance[renderMethodName]).toHaveBeenCalledWith(data);
+
+                spy.mockRestore();
             };
 
             it('should call `renderKeyValuePairs` for cells in the `keyValuePairs` column', () => {

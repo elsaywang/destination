@@ -336,12 +336,15 @@ class SearchContainer extends Component {
                                             }
                                             selectDefaultSorting={this.props.selectDefaultSorting}
                                             changeSortingOrder={this.props.changeSortingOrder}
+                                            error={this.props.errors.saveSearch}
                                         />
                                     </div>
-                                    <OverlayTooltip
-                                        className={styles.saveSearchExecutionTooltip}
-                                        message={this.saveThisSearchMessage()}
-                                    />
+                                    {!this.props.errors.saveSearch.hasError && (
+                                        <OverlayTooltip
+                                            className={styles.saveSearchExecutionTooltip}
+                                            message={this.saveThisSearchMessage()}
+                                        />
+                                    )}
                                 </Fragment>
                             )}
                         </div>

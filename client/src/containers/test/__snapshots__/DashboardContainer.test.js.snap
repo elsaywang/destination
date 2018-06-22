@@ -7,10 +7,10 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <DashboardContainer
     callSearch={[Function]}
     error={
-      Object {
-        "errorMessage": "",
-        "hasError": false,
-      }
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
     }
     fetchUserRoles={[Function]}
     getSavedSearch={[Function]}
@@ -19,63 +19,63 @@ ShallowWrapper {
     populateSearchFields={[Function]}
     resetVisibleSavedSearch={[Function]}
     trackedInDashboardSavedSearchList={
-      Array [
-        Object {
-          "advanced": false,
-          "descending": false,
-          "filterNewSignals": false,
-          "includeInDashboard": true,
-          "keyValuePairs": Array [
+        Array [
             Object {
-              "id": 0,
-              "key": "",
-              "operator": "==",
-              "value": "",
+              "advanced": false,
+              "descending": false,
+              "filterNewSignals": false,
+              "includeInDashboard": true,
+              "keyValuePairs": Array [
+                Object {
+                  "id": 0,
+                  "key": "",
+                  "operator": "==",
+                  "value": "",
+                },
+              ],
+              "minEventFires": 1000,
+              "name": "Top Unused Signals",
+              "presetId": "top-unused-signals",
+              "signalStatus": "ALL",
+              "sortBy": "percentageChange",
+              "source": Object {
+                "dataSourceIds": Array [],
+                "name": "",
+                "reportSuiteIds": Array [],
+                "sourceType": "ALL",
+              },
+              "viewRecordsFor": "7D",
             },
-          ],
-          "minEventFires": 1000,
-          "name": "Top Unused Signals",
-          "presetId": "top-unused-signals",
-          "signalStatus": "ALL",
-          "sortBy": "percentageChange",
-          "source": Object {
-            "dataSourceIds": Array [],
-            "name": "",
-            "reportSuiteIds": Array [],
-            "sourceType": "ALL",
-          },
-          "viewRecordsFor": "7D",
-        },
-        Object {
-          "advanced": false,
-          "descending": false,
-          "filterNewSignals": true,
-          "includeInDashboard": true,
-          "keyValuePairs": Array [
             Object {
-              "id": 0,
-              "key": "",
-              "operator": "==",
-              "value": "",
+              "advanced": false,
+              "descending": false,
+              "filterNewSignals": true,
+              "includeInDashboard": true,
+              "keyValuePairs": Array [
+                Object {
+                  "id": 0,
+                  "key": "",
+                  "operator": "==",
+                  "value": "",
+                },
+              ],
+              "minEventFires": 1000,
+              "name": "New Unused Signals",
+              "presetId": "new-unused-signals",
+              "signalStatus": "ALL",
+              "sortBy": "percentageChange",
+              "source": Object {
+                "dataSourceIds": Array [],
+                "name": "",
+                "reportSuiteIds": Array [],
+                "sourceType": "ALL",
+              },
+              "viewRecordsFor": "7D",
             },
-          ],
-          "minEventFires": 1000,
-          "name": "New Unused Signals",
-          "presetId": "new-unused-signals",
-          "signalStatus": "ALL",
-          "sortBy": "percentageChange",
-          "source": Object {
-            "dataSourceIds": Array [],
-            "name": "",
-            "reportSuiteIds": Array [],
-            "sourceType": "ALL",
-          },
-          "viewRecordsFor": "7D",
-        },
-      ]
+          ]
     }
     visibleSavedSearchList={Array []}
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -91,10 +91,10 @@ ShallowWrapper {
       "children": Array [
         <div>
           <InlineErrorMessage
-            errorMessage=""
-            isInvalid={false}
+                    errorMessage=""
+                    isInvalid={false}
           />
-        </div>,
+</div>,
         Array [],
       ],
     },
@@ -108,7 +108,7 @@ ShallowWrapper {
           "children": <InlineErrorMessage
             errorMessage=""
             isInvalid={false}
-          />,
+/>,
         },
         "ref": null,
         "rendered": Object {
@@ -137,10 +137,10 @@ ShallowWrapper {
         "children": Array [
           <div>
             <InlineErrorMessage
-              errorMessage=""
-              isInvalid={false}
+                        errorMessage=""
+                        isInvalid={false}
             />
-          </div>,
+</div>,
           Array [],
         ],
       },
@@ -154,7 +154,7 @@ ShallowWrapper {
             "children": <InlineErrorMessage
               errorMessage=""
               isInvalid={false}
-            />,
+/>,
           },
           "ref": null,
           "rendered": Object {
@@ -199,129 +199,129 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashboardContainer
-    callSearch={[MockFunction]}
+    callSearch={[Function]}
     error={
-      Object {
-        "errorMessage": "",
-        "hasError": true,
-      }
+        Object {
+            "errorMessage": "",
+            "hasError": true,
+          }
     }
     fetchUserRoles={[Function]}
     getSavedSearch={[Function]}
     loadMoreSavedSearch={[Function]}
     permissions={Object {}}
-    populateSearchFields={[MockFunction]}
+    populateSearchFields={[Function]}
     resetVisibleSavedSearch={[Function]}
     trackedInDashboardSavedSearchList={
-      Array [
-        Object {
-          "advanced": false,
-          "descending": false,
-          "filterNewSignals": false,
-          "includeInDashboard": true,
-          "keyValuePairs": Array [
+        Array [
             Object {
-              "id": 0,
-              "key": "",
-              "operator": "==",
-              "value": "",
+              "advanced": false,
+              "descending": false,
+              "filterNewSignals": false,
+              "includeInDashboard": true,
+              "keyValuePairs": Array [
+                Object {
+                  "id": 0,
+                  "key": "",
+                  "operator": "==",
+                  "value": "",
+                },
+              ],
+              "minEventFires": 1000,
+              "name": "Top Unused Signals",
+              "presetId": "top-unused-signals",
+              "signalStatus": "ALL",
+              "sortBy": "percentageChange",
+              "source": Object {
+                "dataSourceIds": Array [],
+                "name": "",
+                "reportSuiteIds": Array [],
+                "sourceType": "ALL",
+              },
+              "viewRecordsFor": "7D",
             },
-          ],
-          "minEventFires": 1000,
-          "name": "Top Unused Signals",
-          "presetId": "top-unused-signals",
-          "signalStatus": "ALL",
-          "sortBy": "percentageChange",
-          "source": Object {
-            "dataSourceIds": Array [],
-            "name": "",
-            "reportSuiteIds": Array [],
-            "sourceType": "ALL",
-          },
-          "viewRecordsFor": "7D",
-        },
-        Object {
-          "advanced": false,
-          "descending": false,
-          "filterNewSignals": true,
-          "includeInDashboard": true,
-          "keyValuePairs": Array [
             Object {
-              "id": 0,
-              "key": "",
-              "operator": "==",
-              "value": "",
+              "advanced": false,
+              "descending": false,
+              "filterNewSignals": true,
+              "includeInDashboard": true,
+              "keyValuePairs": Array [
+                Object {
+                  "id": 0,
+                  "key": "",
+                  "operator": "==",
+                  "value": "",
+                },
+              ],
+              "minEventFires": 1000,
+              "name": "New Unused Signals",
+              "presetId": "new-unused-signals",
+              "signalStatus": "ALL",
+              "sortBy": "percentageChange",
+              "source": Object {
+                "dataSourceIds": Array [],
+                "name": "",
+                "reportSuiteIds": Array [],
+                "sourceType": "ALL",
+              },
+              "viewRecordsFor": "7D",
             },
-          ],
-          "minEventFires": 1000,
-          "name": "New Unused Signals",
-          "presetId": "new-unused-signals",
-          "signalStatus": "ALL",
-          "sortBy": "percentageChange",
-          "source": Object {
-            "dataSourceIds": Array [],
-            "name": "",
-            "reportSuiteIds": Array [],
-            "sourceType": "ALL",
-          },
-          "viewRecordsFor": "7D",
-        },
-      ]
+          ]
     }
     visibleSavedSearchList={
-      Array [
-        Object {
-          "endDate": "2018-04-29T05:55:48.852Z",
-          "id": 0,
-          "keyValuePairs": Array [
+        Array [
             Object {
-              "key": "k-bandwidth",
-              "operator": "<",
-              "value": 80692,
-            },
-          ],
-          "minEventFires": 91445,
-          "name": "Clovis Simonis",
-          "signalStatus": "USED",
-          "sortBy": "Key Name",
-          "source": Object {
-            "categoryType": "Real-Time",
-            "dataSourceIds": 30634,
-            "reportSuiteIds": null,
-            "sourceType": "REALTIME",
-          },
-          "startDate": "2018-04-29T16:37:33.894Z",
-        },
-        Object {
-          "endDate": "2018-04-29T09:22:26.931Z",
-          "id": 1,
-          "keyValuePairs": Array [
-            Object {
-              "key": "k-Customer",
-              "operator": "<",
-              "value": 83989,
+              "endDate": "2018-04-29T05:55:48.852Z",
+              "id": 0,
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-bandwidth",
+                  "operator": "<",
+                  "value": 80692,
+                },
+              ],
+              "minEventFires": 91445,
+              "name": "Clovis Simonis",
+              "signalStatus": "USED",
+              "sortBy": "Key Name",
+              "source": Object {
+                "categoryType": "Real-Time",
+                "dataSourceIds": 30634,
+                "reportSuiteIds": null,
+                "sourceType": "REALTIME",
+              },
+              "startDate": "2018-04-29T16:37:33.894Z",
             },
             Object {
-              "key": "k-coherent",
-              "operator": "<=",
-              "value": 54800,
+              "endDate": "2018-04-29T09:22:26.931Z",
+              "id": 1,
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-Customer",
+                  "operator": "<",
+                  "value": 83989,
+                },
+                Object {
+                  "key": "k-coherent",
+                  "operator": "<=",
+                  "value": 54800,
+                },
+              ],
+              "minEventFires": 33675,
+              "name": "Stephen Sanford",
+              "signalStatus": "USED",
+              "sortBy": "Event Fires",
+              "source": Object {
+                "categoryType": "Real-Time",
+                "dataSourceIds": 81638,
+                "reportSuiteIds": null,
+                "sourceType": "REALTIME",
+              },
+              "startDate": "2018-04-28T22:35:51.313Z",
             },
-          ],
-          "minEventFires": 33675,
-          "name": "Stephen Sanford",
-          "signalStatus": "USED",
-          "sortBy": "Event Fires",
-          "source": Object {
-            "categoryType": "Real-Time",
-            "dataSourceIds": 81638,
-            "reportSuiteIds": null,
-            "sourceType": "REALTIME",
-          },
-          "startDate": "2018-04-28T22:35:51.313Z",
-        },
-      ]
+          ]
     }
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -337,182 +337,182 @@ ShallowWrapper {
       "children": Array [
         <div>
           <InlineErrorMessage
-            errorMessage=""
-            isInvalid={true}
+                    errorMessage=""
+                    isInvalid={true}
           />
-        </div>,
+</div>,
         Array [
           <Well
             className={undefined}
             data-test="saved-search-dashboard"
-          >
+>
             <GridRow
-              reverse={false}
-              valign="middle"
+                        reverse={false}
+                        valign="middle"
             >
-              <GridColumn
-                size={5}
-              >
-                <div
-                  className={undefined}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Clovis Simonis
-                  </Heading>
-                  <span
-                    className={undefined}
-                  />
-                </div>
-              </GridColumn>
-              <GridColumn
-                size={7}
-              >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
-                  >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View All"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
+                        <GridColumn
+                                    size={5}
+                        >
+                                    <div
+                                                className={undefined}
+                                    >
+                                                <Heading
+                                                            size={3}
+                                                >
+                                                            Clovis Simonis
+                                                </Heading>
+                                                <span
+                                                            className={undefined}
+                                                />
+                                    </div>
+                        </GridColumn>
+                        <GridColumn
+                                    size={7}
+                        >
+                                    <GridRow
+                                                reverse={false}
+                                    >
+                                                <GridColumn
+                                                            offsetSize={10}
+                                                            size={2}
+                                                >
+                                                            <Button
+                                                                        autoFocus={false}
+                                                                        block={false}
+                                                                        disabled={false}
+                                                                        element="a"
+                                                                        href="#/search"
+                                                                        invalid={false}
+                                                                        label="View All"
+                                                                        logic={false}
+                                                                        onClick={[Function]}
+                                                                        quiet={false}
+                                                                        selected={false}
+                                                                        variant="primary"
+                                                            />
+                                                </GridColumn>
+                                    </GridRow>
+                        </GridColumn>
             </GridRow>
             <SavedSearchTable
-              allowsSelection={false}
-              canCreateTraits={undefined}
-              getResultsBySavedSearch={[MockFunction]}
-              isAdvancedSearchEnabled={false}
-              savedSearch={
-                Object {
-                  "endDate": "2018-04-29T05:55:48.852Z",
-                  "id": 0,
-                  "keyValuePairs": Array [
-                    Object {
-                      "key": "k-bandwidth",
-                      "operator": "<",
-                      "value": 80692,
-                    },
-                  ],
-                  "minEventFires": 91445,
-                  "name": "Clovis Simonis",
-                  "signalStatus": "USED",
-                  "sortBy": "Key Name",
-                  "source": Object {
-                    "categoryType": "Real-Time",
-                    "dataSourceIds": 30634,
-                    "reportSuiteIds": null,
-                    "sourceType": "REALTIME",
-                  },
-                  "startDate": "2018-04-29T16:37:33.894Z",
-                }
-              }
+                        allowsSelection={false}
+                        canCreateTraits={undefined}
+                        getResultsBySavedSearch={[Function]}
+                        isAdvancedSearchEnabled={false}
+                        savedSearch={
+                                    Object {
+                                                "endDate": "2018-04-29T05:55:48.852Z",
+                                                "id": 0,
+                                                "keyValuePairs": Array [
+                                                  Object {
+                                                    "key": "k-bandwidth",
+                                                    "operator": "<",
+                                                    "value": 80692,
+                                                  },
+                                                ],
+                                                "minEventFires": 91445,
+                                                "name": "Clovis Simonis",
+                                                "signalStatus": "USED",
+                                                "sortBy": "Key Name",
+                                                "source": Object {
+                                                  "categoryType": "Real-Time",
+                                                  "dataSourceIds": 30634,
+                                                  "reportSuiteIds": null,
+                                                  "sourceType": "REALTIME",
+                                                },
+                                                "startDate": "2018-04-29T16:37:33.894Z",
+                                              }
+                        }
             />
-          </Well>,
+</Well>,
           <Well
             className={undefined}
             data-test="saved-search-dashboard"
-          >
+>
             <GridRow
-              reverse={false}
-              valign="middle"
+                        reverse={false}
+                        valign="middle"
             >
-              <GridColumn
-                size={5}
-              >
-                <div
-                  className={undefined}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Stephen Sanford
-                  </Heading>
-                  <span
-                    className={undefined}
-                  />
-                </div>
-              </GridColumn>
-              <GridColumn
-                size={7}
-              >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
-                  >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View All"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
+                        <GridColumn
+                                    size={5}
+                        >
+                                    <div
+                                                className={undefined}
+                                    >
+                                                <Heading
+                                                            size={3}
+                                                >
+                                                            Stephen Sanford
+                                                </Heading>
+                                                <span
+                                                            className={undefined}
+                                                />
+                                    </div>
+                        </GridColumn>
+                        <GridColumn
+                                    size={7}
+                        >
+                                    <GridRow
+                                                reverse={false}
+                                    >
+                                                <GridColumn
+                                                            offsetSize={10}
+                                                            size={2}
+                                                >
+                                                            <Button
+                                                                        autoFocus={false}
+                                                                        block={false}
+                                                                        disabled={false}
+                                                                        element="a"
+                                                                        href="#/search"
+                                                                        invalid={false}
+                                                                        label="View All"
+                                                                        logic={false}
+                                                                        onClick={[Function]}
+                                                                        quiet={false}
+                                                                        selected={false}
+                                                                        variant="primary"
+                                                            />
+                                                </GridColumn>
+                                    </GridRow>
+                        </GridColumn>
             </GridRow>
             <SavedSearchTable
-              allowsSelection={false}
-              canCreateTraits={undefined}
-              getResultsBySavedSearch={[MockFunction]}
-              isAdvancedSearchEnabled={false}
-              savedSearch={
-                Object {
-                  "endDate": "2018-04-29T09:22:26.931Z",
-                  "id": 1,
-                  "keyValuePairs": Array [
-                    Object {
-                      "key": "k-Customer",
-                      "operator": "<",
-                      "value": 83989,
-                    },
-                    Object {
-                      "key": "k-coherent",
-                      "operator": "<=",
-                      "value": 54800,
-                    },
-                  ],
-                  "minEventFires": 33675,
-                  "name": "Stephen Sanford",
-                  "signalStatus": "USED",
-                  "sortBy": "Event Fires",
-                  "source": Object {
-                    "categoryType": "Real-Time",
-                    "dataSourceIds": 81638,
-                    "reportSuiteIds": null,
-                    "sourceType": "REALTIME",
-                  },
-                  "startDate": "2018-04-28T22:35:51.313Z",
-                }
-              }
+                        allowsSelection={false}
+                        canCreateTraits={undefined}
+                        getResultsBySavedSearch={[Function]}
+                        isAdvancedSearchEnabled={false}
+                        savedSearch={
+                                    Object {
+                                                "endDate": "2018-04-29T09:22:26.931Z",
+                                                "id": 1,
+                                                "keyValuePairs": Array [
+                                                  Object {
+                                                    "key": "k-Customer",
+                                                    "operator": "<",
+                                                    "value": 83989,
+                                                  },
+                                                  Object {
+                                                    "key": "k-coherent",
+                                                    "operator": "<=",
+                                                    "value": 54800,
+                                                  },
+                                                ],
+                                                "minEventFires": 33675,
+                                                "name": "Stephen Sanford",
+                                                "signalStatus": "USED",
+                                                "sortBy": "Event Fires",
+                                                "source": Object {
+                                                  "categoryType": "Real-Time",
+                                                  "dataSourceIds": 81638,
+                                                  "reportSuiteIds": null,
+                                                  "sourceType": "REALTIME",
+                                                },
+                                                "startDate": "2018-04-28T22:35:51.313Z",
+                                              }
+                        }
             />
-          </Well>,
+</Well>,
         ],
       ],
     },
@@ -526,7 +526,7 @@ ShallowWrapper {
           "children": <InlineErrorMessage
             errorMessage=""
             isInvalid={true}
-          />,
+/>,
         },
         "ref": null,
         "rendered": Object {
@@ -552,81 +552,81 @@ ShallowWrapper {
             <GridRow
               reverse={false}
               valign="middle"
-            >
+>
               <GridColumn
-                size={5}
+                            size={5}
               >
-                <div
-                  className={undefined}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Clovis Simonis
-                  </Heading>
-                  <span
-                    className={undefined}
-                  />
-                </div>
+                            <div
+                                          className={undefined}
+                            >
+                                          <Heading
+                                                        size={3}
+                                          >
+                                                        Clovis Simonis
+                                          </Heading>
+                                          <span
+                                                        className={undefined}
+                                          />
+                            </div>
               </GridColumn>
               <GridColumn
-                size={7}
+                            size={7}
               >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
-                  >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View All"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
+                            <GridRow
+                                          reverse={false}
+                            >
+                                          <GridColumn
+                                                        offsetSize={10}
+                                                        size={2}
+                                          >
+                                                        <Button
+                                                                      autoFocus={false}
+                                                                      block={false}
+                                                                      disabled={false}
+                                                                      element="a"
+                                                                      href="#/search"
+                                                                      invalid={false}
+                                                                      label="View All"
+                                                                      logic={false}
+                                                                      onClick={[Function]}
+                                                                      quiet={false}
+                                                                      selected={false}
+                                                                      variant="primary"
+                                                        />
+                                          </GridColumn>
+                            </GridRow>
               </GridColumn>
-            </GridRow>,
+</GridRow>,
             <SavedSearchTable
               allowsSelection={false}
               canCreateTraits={undefined}
-              getResultsBySavedSearch={[MockFunction]}
+              getResultsBySavedSearch={[Function]}
               isAdvancedSearchEnabled={false}
               savedSearch={
-                Object {
-                  "endDate": "2018-04-29T05:55:48.852Z",
-                  "id": 0,
-                  "keyValuePairs": Array [
-                    Object {
-                      "key": "k-bandwidth",
-                      "operator": "<",
-                      "value": 80692,
-                    },
-                  ],
-                  "minEventFires": 91445,
-                  "name": "Clovis Simonis",
-                  "signalStatus": "USED",
-                  "sortBy": "Key Name",
-                  "source": Object {
-                    "categoryType": "Real-Time",
-                    "dataSourceIds": 30634,
-                    "reportSuiteIds": null,
-                    "sourceType": "REALTIME",
-                  },
-                  "startDate": "2018-04-29T16:37:33.894Z",
-                }
+                            Object {
+                                          "endDate": "2018-04-29T05:55:48.852Z",
+                                          "id": 0,
+                                          "keyValuePairs": Array [
+                                            Object {
+                                              "key": "k-bandwidth",
+                                              "operator": "<",
+                                              "value": 80692,
+                                            },
+                                          ],
+                                          "minEventFires": 91445,
+                                          "name": "Clovis Simonis",
+                                          "signalStatus": "USED",
+                                          "sortBy": "Key Name",
+                                          "source": Object {
+                                            "categoryType": "Real-Time",
+                                            "dataSourceIds": 30634,
+                                            "reportSuiteIds": null,
+                                            "sourceType": "REALTIME",
+                                          },
+                                          "startDate": "2018-04-29T16:37:33.894Z",
+                                        }
               }
-            />,
+/>,
           ],
           "className": undefined,
           "data-test": "saved-search-dashboard",
@@ -641,47 +641,47 @@ ShallowWrapper {
               "children": Array [
                 <GridColumn
                   size={5}
-                >
+>
                   <div
-                    className={undefined}
+                                    className={undefined}
                   >
-                    <Heading
-                      size={3}
-                    >
-                      Clovis Simonis
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
+                                    <Heading
+                                                      size={3}
+                                    >
+                                                      Clovis Simonis
+                                    </Heading>
+                                    <span
+                                                      className={undefined}
+                                    />
                   </div>
-                </GridColumn>,
+</GridColumn>,
                 <GridColumn
                   size={7}
-                >
+>
                   <GridRow
-                    reverse={false}
+                                    reverse={false}
                   >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
+                                    <GridColumn
+                                                      offsetSize={10}
+                                                      size={2}
+                                    >
+                                                      <Button
+                                                                        autoFocus={false}
+                                                                        block={false}
+                                                                        disabled={false}
+                                                                        element="a"
+                                                                        href="#/search"
+                                                                        invalid={false}
+                                                                        label="View All"
+                                                                        logic={false}
+                                                                        onClick={[Function]}
+                                                                        quiet={false}
+                                                                        selected={false}
+                                                                        variant="primary"
+                                                      />
+                                    </GridColumn>
                   </GridRow>
-                </GridColumn>,
+</GridColumn>,
               ],
               "reverse": false,
               "valign": "middle",
@@ -695,16 +695,16 @@ ShallowWrapper {
                 "props": Object {
                   "children": <div
                     className={undefined}
-                  >
+>
                     <Heading
-                      size={3}
+                                        size={3}
                     >
-                      Clovis Simonis
+                                        Clovis Simonis
                     </Heading>
                     <span
-                      className={undefined}
+                                        className={undefined}
                     />
-                  </div>,
+</div>,
                   "size": 5,
                 },
                 "ref": null,
@@ -716,12 +716,12 @@ ShallowWrapper {
                     "children": Array [
                       <Heading
                         size={3}
-                      >
+>
                         Clovis Simonis
-                      </Heading>,
+</Heading>,
                       <span
                         className={undefined}
-                      />,
+/>,
                     ],
                     "className": undefined,
                   },
@@ -763,27 +763,27 @@ ShallowWrapper {
                 "props": Object {
                   "children": <GridRow
                     reverse={false}
-                  >
+>
                     <GridColumn
-                      offsetSize={10}
-                      size={2}
+                                        offsetSize={10}
+                                        size={2}
                     >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
+                                        <Button
+                                                            autoFocus={false}
+                                                            block={false}
+                                                            disabled={false}
+                                                            element="a"
+                                                            href="#/search"
+                                                            invalid={false}
+                                                            label="View All"
+                                                            logic={false}
+                                                            onClick={[Function]}
+                                                            quiet={false}
+                                                            selected={false}
+                                                            variant="primary"
+                                        />
                     </GridColumn>
-                  </GridRow>,
+</GridRow>,
                   "size": 7,
                 },
                 "ref": null,
@@ -795,22 +795,22 @@ ShallowWrapper {
                     "children": <GridColumn
                       offsetSize={10}
                       size={2}
-                    >
+>
                       <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
+                                            autoFocus={false}
+                                            block={false}
+                                            disabled={false}
+                                            element="a"
+                                            href="#/search"
+                                            invalid={false}
+                                            label="View All"
+                                            logic={false}
+                                            onClick={[Function]}
+                                            quiet={false}
+                                            selected={false}
+                                            variant="primary"
                       />
-                    </GridColumn>,
+</GridColumn>,
                     "reverse": false,
                   },
                   "ref": null,
@@ -832,7 +832,7 @@ ShallowWrapper {
                         quiet={false}
                         selected={false}
                         variant="primary"
-                      />,
+/>,
                       "offsetSize": 10,
                       "size": 2,
                     },
@@ -875,7 +875,7 @@ ShallowWrapper {
             "props": Object {
               "allowsSelection": false,
               "canCreateTraits": undefined,
-              "getResultsBySavedSearch": [MockFunction],
+              "getResultsBySavedSearch": [Function],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
                 "endDate": "2018-04-29T05:55:48.852Z",
@@ -916,86 +916,86 @@ ShallowWrapper {
             <GridRow
               reverse={false}
               valign="middle"
-            >
+>
               <GridColumn
-                size={5}
+                            size={5}
               >
-                <div
-                  className={undefined}
-                >
-                  <Heading
-                    size={3}
-                  >
-                    Stephen Sanford
-                  </Heading>
-                  <span
-                    className={undefined}
-                  />
-                </div>
+                            <div
+                                          className={undefined}
+                            >
+                                          <Heading
+                                                        size={3}
+                                          >
+                                                        Stephen Sanford
+                                          </Heading>
+                                          <span
+                                                        className={undefined}
+                                          />
+                            </div>
               </GridColumn>
               <GridColumn
-                size={7}
+                            size={7}
               >
-                <GridRow
-                  reverse={false}
-                >
-                  <GridColumn
-                    offsetSize={10}
-                    size={2}
-                  >
-                    <Button
-                      autoFocus={false}
-                      block={false}
-                      disabled={false}
-                      element="a"
-                      href="#/search"
-                      invalid={false}
-                      label="View All"
-                      logic={false}
-                      onClick={[Function]}
-                      quiet={false}
-                      selected={false}
-                      variant="primary"
-                    />
-                  </GridColumn>
-                </GridRow>
+                            <GridRow
+                                          reverse={false}
+                            >
+                                          <GridColumn
+                                                        offsetSize={10}
+                                                        size={2}
+                                          >
+                                                        <Button
+                                                                      autoFocus={false}
+                                                                      block={false}
+                                                                      disabled={false}
+                                                                      element="a"
+                                                                      href="#/search"
+                                                                      invalid={false}
+                                                                      label="View All"
+                                                                      logic={false}
+                                                                      onClick={[Function]}
+                                                                      quiet={false}
+                                                                      selected={false}
+                                                                      variant="primary"
+                                                        />
+                                          </GridColumn>
+                            </GridRow>
               </GridColumn>
-            </GridRow>,
+</GridRow>,
             <SavedSearchTable
               allowsSelection={false}
               canCreateTraits={undefined}
-              getResultsBySavedSearch={[MockFunction]}
+              getResultsBySavedSearch={[Function]}
               isAdvancedSearchEnabled={false}
               savedSearch={
-                Object {
-                  "endDate": "2018-04-29T09:22:26.931Z",
-                  "id": 1,
-                  "keyValuePairs": Array [
-                    Object {
-                      "key": "k-Customer",
-                      "operator": "<",
-                      "value": 83989,
-                    },
-                    Object {
-                      "key": "k-coherent",
-                      "operator": "<=",
-                      "value": 54800,
-                    },
-                  ],
-                  "minEventFires": 33675,
-                  "name": "Stephen Sanford",
-                  "signalStatus": "USED",
-                  "sortBy": "Event Fires",
-                  "source": Object {
-                    "categoryType": "Real-Time",
-                    "dataSourceIds": 81638,
-                    "reportSuiteIds": null,
-                    "sourceType": "REALTIME",
-                  },
-                  "startDate": "2018-04-28T22:35:51.313Z",
-                }
+                            Object {
+                                          "endDate": "2018-04-29T09:22:26.931Z",
+                                          "id": 1,
+                                          "keyValuePairs": Array [
+                                            Object {
+                                              "key": "k-Customer",
+                                              "operator": "<",
+                                              "value": 83989,
+                                            },
+                                            Object {
+                                              "key": "k-coherent",
+                                              "operator": "<=",
+                                              "value": 54800,
+                                            },
+                                          ],
+                                          "minEventFires": 33675,
+                                          "name": "Stephen Sanford",
+                                          "signalStatus": "USED",
+                                          "sortBy": "Event Fires",
+                                          "source": Object {
+                                            "categoryType": "Real-Time",
+                                            "dataSourceIds": 81638,
+                                            "reportSuiteIds": null,
+                                            "sourceType": "REALTIME",
+                                          },
+                                          "startDate": "2018-04-28T22:35:51.313Z",
+                                        }
               }
-            />,
+/>,
           ],
           "className": undefined,
           "data-test": "saved-search-dashboard",
@@ -1010,47 +1010,47 @@ ShallowWrapper {
               "children": Array [
                 <GridColumn
                   size={5}
-                >
+>
                   <div
-                    className={undefined}
+                                    className={undefined}
                   >
-                    <Heading
-                      size={3}
-                    >
-                      Stephen Sanford
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
+                                    <Heading
+                                                      size={3}
+                                    >
+                                                      Stephen Sanford
+                                    </Heading>
+                                    <span
+                                                      className={undefined}
+                                    />
                   </div>
-                </GridColumn>,
+</GridColumn>,
                 <GridColumn
                   size={7}
-                >
+>
                   <GridRow
-                    reverse={false}
+                                    reverse={false}
                   >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
+                                    <GridColumn
+                                                      offsetSize={10}
+                                                      size={2}
+                                    >
+                                                      <Button
+                                                                        autoFocus={false}
+                                                                        block={false}
+                                                                        disabled={false}
+                                                                        element="a"
+                                                                        href="#/search"
+                                                                        invalid={false}
+                                                                        label="View All"
+                                                                        logic={false}
+                                                                        onClick={[Function]}
+                                                                        quiet={false}
+                                                                        selected={false}
+                                                                        variant="primary"
+                                                      />
+                                    </GridColumn>
                   </GridRow>
-                </GridColumn>,
+</GridColumn>,
               ],
               "reverse": false,
               "valign": "middle",
@@ -1064,16 +1064,16 @@ ShallowWrapper {
                 "props": Object {
                   "children": <div
                     className={undefined}
-                  >
+>
                     <Heading
-                      size={3}
+                                        size={3}
                     >
-                      Stephen Sanford
+                                        Stephen Sanford
                     </Heading>
                     <span
-                      className={undefined}
+                                        className={undefined}
                     />
-                  </div>,
+</div>,
                   "size": 5,
                 },
                 "ref": null,
@@ -1085,12 +1085,12 @@ ShallowWrapper {
                     "children": Array [
                       <Heading
                         size={3}
-                      >
+>
                         Stephen Sanford
-                      </Heading>,
+</Heading>,
                       <span
                         className={undefined}
-                      />,
+/>,
                     ],
                     "className": undefined,
                   },
@@ -1132,27 +1132,27 @@ ShallowWrapper {
                 "props": Object {
                   "children": <GridRow
                     reverse={false}
-                  >
+>
                     <GridColumn
-                      offsetSize={10}
-                      size={2}
+                                        offsetSize={10}
+                                        size={2}
                     >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
+                                        <Button
+                                                            autoFocus={false}
+                                                            block={false}
+                                                            disabled={false}
+                                                            element="a"
+                                                            href="#/search"
+                                                            invalid={false}
+                                                            label="View All"
+                                                            logic={false}
+                                                            onClick={[Function]}
+                                                            quiet={false}
+                                                            selected={false}
+                                                            variant="primary"
+                                        />
                     </GridColumn>
-                  </GridRow>,
+</GridRow>,
                   "size": 7,
                 },
                 "ref": null,
@@ -1164,22 +1164,22 @@ ShallowWrapper {
                     "children": <GridColumn
                       offsetSize={10}
                       size={2}
-                    >
+>
                       <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
+                                            autoFocus={false}
+                                            block={false}
+                                            disabled={false}
+                                            element="a"
+                                            href="#/search"
+                                            invalid={false}
+                                            label="View All"
+                                            logic={false}
+                                            onClick={[Function]}
+                                            quiet={false}
+                                            selected={false}
+                                            variant="primary"
                       />
-                    </GridColumn>,
+</GridColumn>,
                     "reverse": false,
                   },
                   "ref": null,
@@ -1201,7 +1201,7 @@ ShallowWrapper {
                         quiet={false}
                         selected={false}
                         variant="primary"
-                      />,
+/>,
                       "offsetSize": 10,
                       "size": 2,
                     },
@@ -1244,7 +1244,7 @@ ShallowWrapper {
             "props": Object {
               "allowsSelection": false,
               "canCreateTraits": undefined,
-              "getResultsBySavedSearch": [MockFunction],
+              "getResultsBySavedSearch": [Function],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
                 "endDate": "2018-04-29T09:22:26.931Z",
@@ -1293,182 +1293,182 @@ ShallowWrapper {
         "children": Array [
           <div>
             <InlineErrorMessage
-              errorMessage=""
-              isInvalid={true}
+                        errorMessage=""
+                        isInvalid={true}
             />
-          </div>,
+</div>,
           Array [
             <Well
               className={undefined}
               data-test="saved-search-dashboard"
-            >
+>
               <GridRow
-                reverse={false}
-                valign="middle"
+                            reverse={false}
+                            valign="middle"
               >
-                <GridColumn
-                  size={5}
-                >
-                  <div
-                    className={undefined}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Clovis Simonis
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
-                  </div>
-                </GridColumn>
-                <GridColumn
-                  size={7}
-                >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
+                            <GridColumn
+                                          size={5}
+                            >
+                                          <div
+                                                        className={undefined}
+                                          >
+                                                        <Heading
+                                                                      size={3}
+                                                        >
+                                                                      Clovis Simonis
+                                                        </Heading>
+                                                        <span
+                                                                      className={undefined}
+                                                        />
+                                          </div>
+                            </GridColumn>
+                            <GridColumn
+                                          size={7}
+                            >
+                                          <GridRow
+                                                        reverse={false}
+                                          >
+                                                        <GridColumn
+                                                                      offsetSize={10}
+                                                                      size={2}
+                                                        >
+                                                                      <Button
+                                                                                    autoFocus={false}
+                                                                                    block={false}
+                                                                                    disabled={false}
+                                                                                    element="a"
+                                                                                    href="#/search"
+                                                                                    invalid={false}
+                                                                                    label="View All"
+                                                                                    logic={false}
+                                                                                    onClick={[Function]}
+                                                                                    quiet={false}
+                                                                                    selected={false}
+                                                                                    variant="primary"
+                                                                      />
+                                                        </GridColumn>
+                                          </GridRow>
+                            </GridColumn>
               </GridRow>
               <SavedSearchTable
-                allowsSelection={false}
-                canCreateTraits={undefined}
-                getResultsBySavedSearch={[MockFunction]}
-                isAdvancedSearchEnabled={false}
-                savedSearch={
-                  Object {
-                    "endDate": "2018-04-29T05:55:48.852Z",
-                    "id": 0,
-                    "keyValuePairs": Array [
-                      Object {
-                        "key": "k-bandwidth",
-                        "operator": "<",
-                        "value": 80692,
-                      },
-                    ],
-                    "minEventFires": 91445,
-                    "name": "Clovis Simonis",
-                    "signalStatus": "USED",
-                    "sortBy": "Key Name",
-                    "source": Object {
-                      "categoryType": "Real-Time",
-                      "dataSourceIds": 30634,
-                      "reportSuiteIds": null,
-                      "sourceType": "REALTIME",
-                    },
-                    "startDate": "2018-04-29T16:37:33.894Z",
-                  }
-                }
+                            allowsSelection={false}
+                            canCreateTraits={undefined}
+                            getResultsBySavedSearch={[Function]}
+                            isAdvancedSearchEnabled={false}
+                            savedSearch={
+                                          Object {
+                                                        "endDate": "2018-04-29T05:55:48.852Z",
+                                                        "id": 0,
+                                                        "keyValuePairs": Array [
+                                                          Object {
+                                                            "key": "k-bandwidth",
+                                                            "operator": "<",
+                                                            "value": 80692,
+                                                          },
+                                                        ],
+                                                        "minEventFires": 91445,
+                                                        "name": "Clovis Simonis",
+                                                        "signalStatus": "USED",
+                                                        "sortBy": "Key Name",
+                                                        "source": Object {
+                                                          "categoryType": "Real-Time",
+                                                          "dataSourceIds": 30634,
+                                                          "reportSuiteIds": null,
+                                                          "sourceType": "REALTIME",
+                                                        },
+                                                        "startDate": "2018-04-29T16:37:33.894Z",
+                                                      }
+                            }
               />
-            </Well>,
+</Well>,
             <Well
               className={undefined}
               data-test="saved-search-dashboard"
-            >
+>
               <GridRow
-                reverse={false}
-                valign="middle"
+                            reverse={false}
+                            valign="middle"
               >
-                <GridColumn
-                  size={5}
-                >
-                  <div
-                    className={undefined}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Stephen Sanford
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
-                  </div>
-                </GridColumn>
-                <GridColumn
-                  size={7}
-                >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
-                </GridColumn>
+                            <GridColumn
+                                          size={5}
+                            >
+                                          <div
+                                                        className={undefined}
+                                          >
+                                                        <Heading
+                                                                      size={3}
+                                                        >
+                                                                      Stephen Sanford
+                                                        </Heading>
+                                                        <span
+                                                                      className={undefined}
+                                                        />
+                                          </div>
+                            </GridColumn>
+                            <GridColumn
+                                          size={7}
+                            >
+                                          <GridRow
+                                                        reverse={false}
+                                          >
+                                                        <GridColumn
+                                                                      offsetSize={10}
+                                                                      size={2}
+                                                        >
+                                                                      <Button
+                                                                                    autoFocus={false}
+                                                                                    block={false}
+                                                                                    disabled={false}
+                                                                                    element="a"
+                                                                                    href="#/search"
+                                                                                    invalid={false}
+                                                                                    label="View All"
+                                                                                    logic={false}
+                                                                                    onClick={[Function]}
+                                                                                    quiet={false}
+                                                                                    selected={false}
+                                                                                    variant="primary"
+                                                                      />
+                                                        </GridColumn>
+                                          </GridRow>
+                            </GridColumn>
               </GridRow>
               <SavedSearchTable
-                allowsSelection={false}
-                canCreateTraits={undefined}
-                getResultsBySavedSearch={[MockFunction]}
-                isAdvancedSearchEnabled={false}
-                savedSearch={
-                  Object {
-                    "endDate": "2018-04-29T09:22:26.931Z",
-                    "id": 1,
-                    "keyValuePairs": Array [
-                      Object {
-                        "key": "k-Customer",
-                        "operator": "<",
-                        "value": 83989,
-                      },
-                      Object {
-                        "key": "k-coherent",
-                        "operator": "<=",
-                        "value": 54800,
-                      },
-                    ],
-                    "minEventFires": 33675,
-                    "name": "Stephen Sanford",
-                    "signalStatus": "USED",
-                    "sortBy": "Event Fires",
-                    "source": Object {
-                      "categoryType": "Real-Time",
-                      "dataSourceIds": 81638,
-                      "reportSuiteIds": null,
-                      "sourceType": "REALTIME",
-                    },
-                    "startDate": "2018-04-28T22:35:51.313Z",
-                  }
-                }
+                            allowsSelection={false}
+                            canCreateTraits={undefined}
+                            getResultsBySavedSearch={[Function]}
+                            isAdvancedSearchEnabled={false}
+                            savedSearch={
+                                          Object {
+                                                        "endDate": "2018-04-29T09:22:26.931Z",
+                                                        "id": 1,
+                                                        "keyValuePairs": Array [
+                                                          Object {
+                                                            "key": "k-Customer",
+                                                            "operator": "<",
+                                                            "value": 83989,
+                                                          },
+                                                          Object {
+                                                            "key": "k-coherent",
+                                                            "operator": "<=",
+                                                            "value": 54800,
+                                                          },
+                                                        ],
+                                                        "minEventFires": 33675,
+                                                        "name": "Stephen Sanford",
+                                                        "signalStatus": "USED",
+                                                        "sortBy": "Event Fires",
+                                                        "source": Object {
+                                                          "categoryType": "Real-Time",
+                                                          "dataSourceIds": 81638,
+                                                          "reportSuiteIds": null,
+                                                          "sourceType": "REALTIME",
+                                                        },
+                                                        "startDate": "2018-04-28T22:35:51.313Z",
+                                                      }
+                            }
               />
-            </Well>,
+</Well>,
           ],
         ],
       },
@@ -1482,7 +1482,7 @@ ShallowWrapper {
             "children": <InlineErrorMessage
               errorMessage=""
               isInvalid={true}
-            />,
+/>,
           },
           "ref": null,
           "rendered": Object {
@@ -1508,81 +1508,81 @@ ShallowWrapper {
               <GridRow
                 reverse={false}
                 valign="middle"
-              >
+>
                 <GridColumn
-                  size={5}
+                                size={5}
                 >
-                  <div
-                    className={undefined}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Clovis Simonis
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
-                  </div>
+                                <div
+                                                className={undefined}
+                                >
+                                                <Heading
+                                                                size={3}
+                                                >
+                                                                Clovis Simonis
+                                                </Heading>
+                                                <span
+                                                                className={undefined}
+                                                />
+                                </div>
                 </GridColumn>
                 <GridColumn
-                  size={7}
+                                size={7}
                 >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
+                                <GridRow
+                                                reverse={false}
+                                >
+                                                <GridColumn
+                                                                offsetSize={10}
+                                                                size={2}
+                                                >
+                                                                <Button
+                                                                                autoFocus={false}
+                                                                                block={false}
+                                                                                disabled={false}
+                                                                                element="a"
+                                                                                href="#/search"
+                                                                                invalid={false}
+                                                                                label="View All"
+                                                                                logic={false}
+                                                                                onClick={[Function]}
+                                                                                quiet={false}
+                                                                                selected={false}
+                                                                                variant="primary"
+                                                                />
+                                                </GridColumn>
+                                </GridRow>
                 </GridColumn>
-              </GridRow>,
+</GridRow>,
               <SavedSearchTable
                 allowsSelection={false}
                 canCreateTraits={undefined}
-                getResultsBySavedSearch={[MockFunction]}
+                getResultsBySavedSearch={[Function]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
-                  Object {
-                    "endDate": "2018-04-29T05:55:48.852Z",
-                    "id": 0,
-                    "keyValuePairs": Array [
-                      Object {
-                        "key": "k-bandwidth",
-                        "operator": "<",
-                        "value": 80692,
-                      },
-                    ],
-                    "minEventFires": 91445,
-                    "name": "Clovis Simonis",
-                    "signalStatus": "USED",
-                    "sortBy": "Key Name",
-                    "source": Object {
-                      "categoryType": "Real-Time",
-                      "dataSourceIds": 30634,
-                      "reportSuiteIds": null,
-                      "sourceType": "REALTIME",
-                    },
-                    "startDate": "2018-04-29T16:37:33.894Z",
-                  }
+                                Object {
+                                                "endDate": "2018-04-29T05:55:48.852Z",
+                                                "id": 0,
+                                                "keyValuePairs": Array [
+                                                  Object {
+                                                    "key": "k-bandwidth",
+                                                    "operator": "<",
+                                                    "value": 80692,
+                                                  },
+                                                ],
+                                                "minEventFires": 91445,
+                                                "name": "Clovis Simonis",
+                                                "signalStatus": "USED",
+                                                "sortBy": "Key Name",
+                                                "source": Object {
+                                                  "categoryType": "Real-Time",
+                                                  "dataSourceIds": 30634,
+                                                  "reportSuiteIds": null,
+                                                  "sourceType": "REALTIME",
+                                                },
+                                                "startDate": "2018-04-29T16:37:33.894Z",
+                                              }
                 }
-              />,
+/>,
             ],
             "className": undefined,
             "data-test": "saved-search-dashboard",
@@ -1597,47 +1597,47 @@ ShallowWrapper {
                 "children": Array [
                   <GridColumn
                     size={5}
-                  >
+>
                     <div
-                      className={undefined}
+                                        className={undefined}
                     >
-                      <Heading
-                        size={3}
-                      >
-                        Clovis Simonis
-                      </Heading>
-                      <span
-                        className={undefined}
-                      />
+                                        <Heading
+                                                            size={3}
+                                        >
+                                                            Clovis Simonis
+                                        </Heading>
+                                        <span
+                                                            className={undefined}
+                                        />
                     </div>
-                  </GridColumn>,
+</GridColumn>,
                   <GridColumn
                     size={7}
-                  >
+>
                     <GridRow
-                      reverse={false}
+                                        reverse={false}
                     >
-                      <GridColumn
-                        offsetSize={10}
-                        size={2}
-                      >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
-                      </GridColumn>
+                                        <GridColumn
+                                                            offsetSize={10}
+                                                            size={2}
+                                        >
+                                                            <Button
+                                                                                autoFocus={false}
+                                                                                block={false}
+                                                                                disabled={false}
+                                                                                element="a"
+                                                                                href="#/search"
+                                                                                invalid={false}
+                                                                                label="View All"
+                                                                                logic={false}
+                                                                                onClick={[Function]}
+                                                                                quiet={false}
+                                                                                selected={false}
+                                                                                variant="primary"
+                                                            />
+                                        </GridColumn>
                     </GridRow>
-                  </GridColumn>,
+</GridColumn>,
                 ],
                 "reverse": false,
                 "valign": "middle",
@@ -1651,16 +1651,16 @@ ShallowWrapper {
                   "props": Object {
                     "children": <div
                       className={undefined}
-                    >
+>
                       <Heading
-                        size={3}
+                                            size={3}
                       >
-                        Clovis Simonis
+                                            Clovis Simonis
                       </Heading>
                       <span
-                        className={undefined}
+                                            className={undefined}
                       />
-                    </div>,
+</div>,
                     "size": 5,
                   },
                   "ref": null,
@@ -1672,12 +1672,12 @@ ShallowWrapper {
                       "children": Array [
                         <Heading
                           size={3}
-                        >
+>
                           Clovis Simonis
-                        </Heading>,
+</Heading>,
                         <span
                           className={undefined}
-                        />,
+/>,
                       ],
                       "className": undefined,
                     },
@@ -1719,27 +1719,27 @@ ShallowWrapper {
                   "props": Object {
                     "children": <GridRow
                       reverse={false}
-                    >
+>
                       <GridColumn
-                        offsetSize={10}
-                        size={2}
+                                            offsetSize={10}
+                                            size={2}
                       >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
+                                            <Button
+                                                                  autoFocus={false}
+                                                                  block={false}
+                                                                  disabled={false}
+                                                                  element="a"
+                                                                  href="#/search"
+                                                                  invalid={false}
+                                                                  label="View All"
+                                                                  logic={false}
+                                                                  onClick={[Function]}
+                                                                  quiet={false}
+                                                                  selected={false}
+                                                                  variant="primary"
+                                            />
                       </GridColumn>
-                    </GridRow>,
+</GridRow>,
                     "size": 7,
                   },
                   "ref": null,
@@ -1751,22 +1751,22 @@ ShallowWrapper {
                       "children": <GridColumn
                         offsetSize={10}
                         size={2}
-                      >
+>
                         <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
+                                                autoFocus={false}
+                                                block={false}
+                                                disabled={false}
+                                                element="a"
+                                                href="#/search"
+                                                invalid={false}
+                                                label="View All"
+                                                logic={false}
+                                                onClick={[Function]}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="primary"
                         />
-                      </GridColumn>,
+</GridColumn>,
                       "reverse": false,
                     },
                     "ref": null,
@@ -1788,7 +1788,7 @@ ShallowWrapper {
                           quiet={false}
                           selected={false}
                           variant="primary"
-                        />,
+/>,
                         "offsetSize": 10,
                         "size": 2,
                       },
@@ -1831,7 +1831,7 @@ ShallowWrapper {
               "props": Object {
                 "allowsSelection": false,
                 "canCreateTraits": undefined,
-                "getResultsBySavedSearch": [MockFunction],
+                "getResultsBySavedSearch": [Function],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
                   "endDate": "2018-04-29T05:55:48.852Z",
@@ -1872,86 +1872,86 @@ ShallowWrapper {
               <GridRow
                 reverse={false}
                 valign="middle"
-              >
+>
                 <GridColumn
-                  size={5}
+                                size={5}
                 >
-                  <div
-                    className={undefined}
-                  >
-                    <Heading
-                      size={3}
-                    >
-                      Stephen Sanford
-                    </Heading>
-                    <span
-                      className={undefined}
-                    />
-                  </div>
+                                <div
+                                                className={undefined}
+                                >
+                                                <Heading
+                                                                size={3}
+                                                >
+                                                                Stephen Sanford
+                                                </Heading>
+                                                <span
+                                                                className={undefined}
+                                                />
+                                </div>
                 </GridColumn>
                 <GridColumn
-                  size={7}
+                                size={7}
                 >
-                  <GridRow
-                    reverse={false}
-                  >
-                    <GridColumn
-                      offsetSize={10}
-                      size={2}
-                    >
-                      <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-                      />
-                    </GridColumn>
-                  </GridRow>
+                                <GridRow
+                                                reverse={false}
+                                >
+                                                <GridColumn
+                                                                offsetSize={10}
+                                                                size={2}
+                                                >
+                                                                <Button
+                                                                                autoFocus={false}
+                                                                                block={false}
+                                                                                disabled={false}
+                                                                                element="a"
+                                                                                href="#/search"
+                                                                                invalid={false}
+                                                                                label="View All"
+                                                                                logic={false}
+                                                                                onClick={[Function]}
+                                                                                quiet={false}
+                                                                                selected={false}
+                                                                                variant="primary"
+                                                                />
+                                                </GridColumn>
+                                </GridRow>
                 </GridColumn>
-              </GridRow>,
+</GridRow>,
               <SavedSearchTable
                 allowsSelection={false}
                 canCreateTraits={undefined}
-                getResultsBySavedSearch={[MockFunction]}
+                getResultsBySavedSearch={[Function]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
-                  Object {
-                    "endDate": "2018-04-29T09:22:26.931Z",
-                    "id": 1,
-                    "keyValuePairs": Array [
-                      Object {
-                        "key": "k-Customer",
-                        "operator": "<",
-                        "value": 83989,
-                      },
-                      Object {
-                        "key": "k-coherent",
-                        "operator": "<=",
-                        "value": 54800,
-                      },
-                    ],
-                    "minEventFires": 33675,
-                    "name": "Stephen Sanford",
-                    "signalStatus": "USED",
-                    "sortBy": "Event Fires",
-                    "source": Object {
-                      "categoryType": "Real-Time",
-                      "dataSourceIds": 81638,
-                      "reportSuiteIds": null,
-                      "sourceType": "REALTIME",
-                    },
-                    "startDate": "2018-04-28T22:35:51.313Z",
-                  }
+                                Object {
+                                                "endDate": "2018-04-29T09:22:26.931Z",
+                                                "id": 1,
+                                                "keyValuePairs": Array [
+                                                  Object {
+                                                    "key": "k-Customer",
+                                                    "operator": "<",
+                                                    "value": 83989,
+                                                  },
+                                                  Object {
+                                                    "key": "k-coherent",
+                                                    "operator": "<=",
+                                                    "value": 54800,
+                                                  },
+                                                ],
+                                                "minEventFires": 33675,
+                                                "name": "Stephen Sanford",
+                                                "signalStatus": "USED",
+                                                "sortBy": "Event Fires",
+                                                "source": Object {
+                                                  "categoryType": "Real-Time",
+                                                  "dataSourceIds": 81638,
+                                                  "reportSuiteIds": null,
+                                                  "sourceType": "REALTIME",
+                                                },
+                                                "startDate": "2018-04-28T22:35:51.313Z",
+                                              }
                 }
-              />,
+/>,
             ],
             "className": undefined,
             "data-test": "saved-search-dashboard",
@@ -1966,47 +1966,47 @@ ShallowWrapper {
                 "children": Array [
                   <GridColumn
                     size={5}
-                  >
+>
                     <div
-                      className={undefined}
+                                        className={undefined}
                     >
-                      <Heading
-                        size={3}
-                      >
-                        Stephen Sanford
-                      </Heading>
-                      <span
-                        className={undefined}
-                      />
+                                        <Heading
+                                                            size={3}
+                                        >
+                                                            Stephen Sanford
+                                        </Heading>
+                                        <span
+                                                            className={undefined}
+                                        />
                     </div>
-                  </GridColumn>,
+</GridColumn>,
                   <GridColumn
                     size={7}
-                  >
+>
                     <GridRow
-                      reverse={false}
+                                        reverse={false}
                     >
-                      <GridColumn
-                        offsetSize={10}
-                        size={2}
-                      >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
-                      </GridColumn>
+                                        <GridColumn
+                                                            offsetSize={10}
+                                                            size={2}
+                                        >
+                                                            <Button
+                                                                                autoFocus={false}
+                                                                                block={false}
+                                                                                disabled={false}
+                                                                                element="a"
+                                                                                href="#/search"
+                                                                                invalid={false}
+                                                                                label="View All"
+                                                                                logic={false}
+                                                                                onClick={[Function]}
+                                                                                quiet={false}
+                                                                                selected={false}
+                                                                                variant="primary"
+                                                            />
+                                        </GridColumn>
                     </GridRow>
-                  </GridColumn>,
+</GridColumn>,
                 ],
                 "reverse": false,
                 "valign": "middle",
@@ -2020,16 +2020,16 @@ ShallowWrapper {
                   "props": Object {
                     "children": <div
                       className={undefined}
-                    >
+>
                       <Heading
-                        size={3}
+                                            size={3}
                       >
-                        Stephen Sanford
+                                            Stephen Sanford
                       </Heading>
                       <span
-                        className={undefined}
+                                            className={undefined}
                       />
-                    </div>,
+</div>,
                     "size": 5,
                   },
                   "ref": null,
@@ -2041,12 +2041,12 @@ ShallowWrapper {
                       "children": Array [
                         <Heading
                           size={3}
-                        >
+>
                           Stephen Sanford
-                        </Heading>,
+</Heading>,
                         <span
                           className={undefined}
-                        />,
+/>,
                       ],
                       "className": undefined,
                     },
@@ -2088,27 +2088,27 @@ ShallowWrapper {
                   "props": Object {
                     "children": <GridRow
                       reverse={false}
-                    >
+>
                       <GridColumn
-                        offsetSize={10}
-                        size={2}
+                                            offsetSize={10}
+                                            size={2}
                       >
-                        <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-                        />
+                                            <Button
+                                                                  autoFocus={false}
+                                                                  block={false}
+                                                                  disabled={false}
+                                                                  element="a"
+                                                                  href="#/search"
+                                                                  invalid={false}
+                                                                  label="View All"
+                                                                  logic={false}
+                                                                  onClick={[Function]}
+                                                                  quiet={false}
+                                                                  selected={false}
+                                                                  variant="primary"
+                                            />
                       </GridColumn>
-                    </GridRow>,
+</GridRow>,
                     "size": 7,
                   },
                   "ref": null,
@@ -2120,22 +2120,22 @@ ShallowWrapper {
                       "children": <GridColumn
                         offsetSize={10}
                         size={2}
-                      >
+>
                         <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
+                                                autoFocus={false}
+                                                block={false}
+                                                disabled={false}
+                                                element="a"
+                                                href="#/search"
+                                                invalid={false}
+                                                label="View All"
+                                                logic={false}
+                                                onClick={[Function]}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="primary"
                         />
-                      </GridColumn>,
+</GridColumn>,
                       "reverse": false,
                     },
                     "ref": null,
@@ -2157,7 +2157,7 @@ ShallowWrapper {
                           quiet={false}
                           selected={false}
                           variant="primary"
-                        />,
+/>,
                         "offsetSize": 10,
                         "size": 2,
                       },
@@ -2200,7 +2200,7 @@ ShallowWrapper {
               "props": Object {
                 "allowsSelection": false,
                 "canCreateTraits": undefined,
-                "getResultsBySavedSearch": [MockFunction],
+                "getResultsBySavedSearch": [Function],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
                   "endDate": "2018-04-29T09:22:26.931Z",

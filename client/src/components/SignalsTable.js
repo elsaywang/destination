@@ -11,7 +11,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { baseRowHeight } from '../constants/rows';
+import { defaultRowHeight } from '../constants/rows';
 import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
 import { isNumeric } from '../utils/isNumeric';
 import styles from './SignalsTable.css';
@@ -96,10 +96,6 @@ class SignalsTable extends Component {
         switch (sourceType) {
             case 'ANALYTICS':
                 return reportSuiteIds && reportSuiteIds.length ? reportSuiteIds.join('') : '—';
-            case 'ALF':
-                return '—';
-            case 'REALTIME':
-                return '—';
             case 'ONBOARDED':
                 return dataSourceIds && dataSourceIds.length ? dataSourceIds.join('') : '—';
             default:
@@ -171,7 +167,7 @@ class SignalsTable extends Component {
     };
 
     getRowHeight(totalKeyValuePairs) {
-        return totalKeyValuePairs * baseRowHeight;
+        return totalKeyValuePairs * defaultRowHeight;
     }
 
     render() {

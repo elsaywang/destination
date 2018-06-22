@@ -65,39 +65,39 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalsTable
     allowsSelection={true}
-    onLoadMore={[MockFunction]}
+    onLoadMore={[Function]}
     results={
-      Object {
-        "list": Array [
-          Object {
-            "id": 0,
-            "name": "test1",
-            "percentageChange": 0.1234,
-            "source": Object {
-              "reportSuiteIds": Array [
-                123,
-              ],
-              "sourceType": "ANALYTICS",
-            },
-          },
-          Object {
-            "id": 1,
-            "name": "test2",
-            "percentageChange": -0.5678,
-            "source": Object {
-              "dataSourceIds": Array [
-                456,
-              ],
-              "sourceType": "ONBOARDED",
-            },
-          },
-        ],
-      }
+        Object {
+            "list": Array [
+              Object {
+                "id": 0,
+                "name": "test1",
+                "percentageChange": 0.1234,
+                "source": Object {
+                  "reportSuiteIds": Array [
+                    123,
+                  ],
+                  "sourceType": "ANALYTICS",
+                },
+              },
+              Object {
+                "id": 1,
+                "name": "test2",
+                "percentageChange": -0.5678,
+                "source": Object {
+                  "dataSourceIds": Array [
+                    456,
+                  ],
+                  "sourceType": "ONBOARDED",
+                },
+              },
+            ],
+          }
     }
     signalType="ALL"
-    sortSearch={[MockFunction]}
+    sortSearch={[Function]}
     totalKeyValuePairs={3}
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -188,10 +188,10 @@ ShallowWrapper {
           },
         },
       ],
-      "onLoadMore": [MockFunction],
+      "onLoadMore": [Function],
       "onSelectionChange": [Function],
       "renderCell": [Function],
-      "rowHeight": 90,
+      "rowHeight": 144,
       "sortSearch": undefined,
     },
     "ref": null,
@@ -282,10 +282,10 @@ ShallowWrapper {
             },
           },
         ],
-        "onLoadMore": [MockFunction],
+        "onLoadMore": [Function],
         "onSelectionChange": [Function],
         "renderCell": [Function],
-        "rowHeight": 90,
+        "rowHeight": 144,
         "sortSearch": undefined,
       },
       "ref": null,

@@ -5,63 +5,63 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearchPopover
-    deleteSearch={[MockFunction]}
+    deleteSearch={[Function]}
     intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": Object {
-          "components.Layout.title": "Signals",
-        },
-        "now": [Function],
-        "textComponent": "span",
-      }
+        Object {
+            "defaultFormats": Object {},
+            "defaultLocale": "en",
+            "formatDate": [Function],
+            "formatHTMLMessage": [Function],
+            "formatMessage": [Function],
+            "formatNumber": [Function],
+            "formatPlural": [Function],
+            "formatRelative": [Function],
+            "formatTime": [Function],
+            "formats": Object {},
+            "formatters": Object {
+              "getDateTimeFormat": [Function],
+              "getMessageFormat": [Function],
+              "getNumberFormat": [Function],
+              "getPluralFormat": [Function],
+              "getRelativeFormat": [Function],
+            },
+            "locale": "en",
+            "messages": Object {
+              "components.Layout.title": "Signals",
+            },
+            "now": [Function],
+            "textComponent": "span",
+          }
     }
     isCurrentSearch={false}
-    onSavedSearchClick={[MockFunction]}
+    onSavedSearchClick={[Function]}
     search={
-      Object {
-        "keyValuePairs": Array [
-          Object {
-            "key": "k-Licensed",
-            "operator": ">=",
-            "value": 67425,
-          },
-          Object {
-            "key": "k-Gorgeous Wooden Shirt",
-            "operator": "<=",
-            "value": 98397,
-          },
-        ],
-        "minEventFires": 88991,
-        "name": "Loren Waters",
-        "signalStatus": "USED",
-        "sortBy": "percentageChange",
-        "source": Object {
-          "dataSourceIds": Array [],
-          "reportSuiteIds": Array [],
-          "sourceType": null,
-        },
-        "viewRecordsFor": "7D",
-      }
+        Object {
+            "keyValuePairs": Array [
+              Object {
+                "key": "k-Licensed",
+                "operator": ">=",
+                "value": 67425,
+              },
+              Object {
+                "key": "k-Gorgeous Wooden Shirt",
+                "operator": "<=",
+                "value": 98397,
+              },
+            ],
+            "minEventFires": 88991,
+            "name": "Loren Waters",
+            "signalStatus": "USED",
+            "sortBy": "percentageChange",
+            "source": Object {
+              "dataSourceIds": Array [],
+              "reportSuiteIds": Array [],
+              "sourceType": null,
+            },
+            "viewRecordsFor": "7D",
+          }
     }
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -85,127 +85,125 @@ ShallowWrapper {
           offset={0}
           placement="left"
           trigger="hover"
-        >
+>
           <Tag
-            className={undefined}
-            data-saved-search-id={undefined}
-            data-saved-search-preset={undefined}
-            data-test="saved-search-tag"
-            id={null}
-            onClick={[Function]}
-            value="Loren Waters"
+                    className={undefined}
+                    data-saved-search-id={undefined}
+                    data-saved-search-preset={undefined}
+                    data-test="saved-search-tag"
+                    id={null}
+                    onClick={[Function]}
+                    value="Loren Waters"
           />
           <Popover
-            data-test="saved-search-popover"
-            open={true}
-            placement="bottom"
-            title="Loren Waters"
-            trapFocus={true}
-            variant="default"
+                    data-test="saved-search-popover"
+                    open={true}
+                    placement="bottom"
+                    title="Loren Waters"
+                    trapFocus={true}
+                    variant="default"
           >
-            <Heading
-              className={undefined}
-              size="5"
-            >
-              Name
-            </Heading>
-            <div
-              data-test="saved-search-popover-name"
-            >
-              Loren Waters
-            </div>
-            <Heading
-              className={undefined}
-              size="5"
-            >
-              Search Query
-            </Heading>
-            <div
-              data-test="saved-search-popover-search-query"
-            >
-              "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
-            </div>
-            <Heading
-              className={undefined}
-              size="5"
-            >
-              Filters
-            </Heading>
-            <div>
-              <FieldLabel
-                label="Signal Status"
-                position="left"
-              >
-                <span
-                  data-test="saved-search-popover-signal-status"
-                  style={
-                    Object {
-                      "verticalAlign": "bottom",
-                    }
-                  }
-                >
-                  Signals Included in Traits
-                </span>
-              </FieldLabel>
-              <FieldLabel
-                label="Signal Category"
-                position="left"
-              >
-                <span
-                  data-test="saved-search-popover-signal-category"
-                  style={
-                    Object {
-                      "verticalAlign": "bottom",
-                    }
-                  }
-                >
-                  Real-Time
-                </span>
-              </FieldLabel>
-              <FieldLabel
-                label="Signal Type"
-                position="left"
-              >
-                <span
-                  data-test="saved-search-popover-signal-type"
-                  style={
-                    Object {
-                      "verticalAlign": "bottom",
-                    }
-                  }
-                >
-                  
-                </span>
-              </FieldLabel>
-              <FieldLabel
-                label="View Records For"
-                position="left"
-              >
-                <span
-                  data-test="saved-search-popover-view-records-for"
-                  style={
-                    Object {
-                      "verticalAlign": "bottom",
-                    }
-                  }
-                >
-                  Last 7 Days
-                </span>
-              </FieldLabel>
-            </div>
-            <Heading
-              className={undefined}
-              size="5"
-            >
-              Sorting
-            </Heading>
-            <div
-              data-test="saved-search-popover-sort-by"
-            >
-              Percentage Change
-            </div>
+                    <Heading
+                              className={undefined}
+                              size="5"
+                    >
+                              Name
+                    </Heading>
+                    <div
+                              data-test="saved-search-popover-name"
+                    >
+                              Loren Waters
+                    </div>
+                    <Heading
+                              className={undefined}
+                              size="5"
+                    >
+                              Search Query
+                    </Heading>
+                    <div
+                              data-test="saved-search-popover-search-query"
+                    >
+                              "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
+                    </div>
+                    <Heading
+                              className={undefined}
+                              size="5"
+                    >
+                              Filters
+                    </Heading>
+                    <div>
+                              <FieldLabel
+                                        label="Signal Status"
+                                        position="left"
+                              >
+                                        <span
+                                                  data-test="saved-search-popover-signal-status"
+                                                  style={
+                                                            Object {
+                                                                      "verticalAlign": "bottom",
+                                                                    }
+                                                  }
+                                        >
+                                                  Signals Included in Traits
+                                        </span>
+                              </FieldLabel>
+                              <FieldLabel
+                                        label="Signal Category"
+                                        position="left"
+                              >
+                                        <span
+                                                  data-test="saved-search-popover-signal-category"
+                                                  style={
+                                                            Object {
+                                                                      "verticalAlign": "bottom",
+                                                                    }
+                                                  }
+                                        >
+                                                  Real-Time
+                                        </span>
+                              </FieldLabel>
+                              <FieldLabel
+                                        label="Signal Type"
+                                        position="left"
+                              >
+                                        <span
+                                                  data-test="saved-search-popover-signal-type"
+                                                  style={
+                                                            Object {
+                                                                      "verticalAlign": "bottom",
+                                                                    }
+                                                  }
+                                        />
+                              </FieldLabel>
+                              <FieldLabel
+                                        label="View Records For"
+                                        position="left"
+                              >
+                                        <span
+                                                  data-test="saved-search-popover-view-records-for"
+                                                  style={
+                                                            Object {
+                                                                      "verticalAlign": "bottom",
+                                                                    }
+                                                  }
+                                        >
+                                                  Last 7 Days
+                                        </span>
+                              </FieldLabel>
+                    </div>
+                    <Heading
+                              className={undefined}
+                              size="5"
+                    >
+                              Sorting
+                    </Heading>
+                    <div
+                              data-test="saved-search-popover-sort-by"
+                    >
+                              Percentage Change
+                    </div>
           </Popover>
-        </OverlayTrigger>,
+</OverlayTrigger>,
         false,
       ],
       "className": undefined,
@@ -227,7 +225,7 @@ ShallowWrapper {
               id={null}
               onClick={[Function]}
               value="Loren Waters"
-            />,
+/>,
             <Popover
               data-test="saved-search-popover"
               open={true}
@@ -235,109 +233,107 @@ ShallowWrapper {
               title="Loren Waters"
               trapFocus={true}
               variant="default"
-            >
+>
               <Heading
-                className={undefined}
-                size="5"
+                            className={undefined}
+                            size="5"
               >
-                Name
+                            Name
               </Heading>
               <div
-                data-test="saved-search-popover-name"
+                            data-test="saved-search-popover-name"
               >
-                Loren Waters
+                            Loren Waters
               </div>
               <Heading
-                className={undefined}
-                size="5"
+                            className={undefined}
+                            size="5"
               >
-                Search Query
+                            Search Query
               </Heading>
               <div
-                data-test="saved-search-popover-search-query"
+                            data-test="saved-search-popover-search-query"
               >
-                "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
+                            "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
               </div>
               <Heading
-                className={undefined}
-                size="5"
+                            className={undefined}
+                            size="5"
               >
-                Filters
+                            Filters
               </Heading>
               <div>
-                <FieldLabel
-                  label="Signal Status"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-signal-status"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    Signals Included in Traits
-                  </span>
-                </FieldLabel>
-                <FieldLabel
-                  label="Signal Category"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-signal-category"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    Real-Time
-                  </span>
-                </FieldLabel>
-                <FieldLabel
-                  label="Signal Type"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-signal-type"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    
-                  </span>
-                </FieldLabel>
-                <FieldLabel
-                  label="View Records For"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-view-records-for"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    Last 7 Days
-                  </span>
-                </FieldLabel>
+                            <FieldLabel
+                                          label="Signal Status"
+                                          position="left"
+                            >
+                                          <span
+                                                        data-test="saved-search-popover-signal-status"
+                                                        style={
+                                                                      Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                        }
+                                          >
+                                                        Signals Included in Traits
+                                          </span>
+                            </FieldLabel>
+                            <FieldLabel
+                                          label="Signal Category"
+                                          position="left"
+                            >
+                                          <span
+                                                        data-test="saved-search-popover-signal-category"
+                                                        style={
+                                                                      Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                        }
+                                          >
+                                                        Real-Time
+                                          </span>
+                            </FieldLabel>
+                            <FieldLabel
+                                          label="Signal Type"
+                                          position="left"
+                            >
+                                          <span
+                                                        data-test="saved-search-popover-signal-type"
+                                                        style={
+                                                                      Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                        }
+                                          />
+                            </FieldLabel>
+                            <FieldLabel
+                                          label="View Records For"
+                                          position="left"
+                            >
+                                          <span
+                                                        data-test="saved-search-popover-view-records-for"
+                                                        style={
+                                                                      Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                        }
+                                          >
+                                                        Last 7 Days
+                                          </span>
+                            </FieldLabel>
               </div>
               <Heading
-                className={undefined}
-                size="5"
+                            className={undefined}
+                            size="5"
               >
-                Sorting
+                            Sorting
               </Heading>
               <div
-                data-test="saved-search-popover-sort-by"
+                            data-test="saved-search-popover-sort-by"
               >
-                Percentage Change
+                            Percentage Change
               </div>
-            </Popover>,
+</Popover>,
           ],
           "crossOffset": 0,
           "data-test": "saved-search-overlay-trigger",
@@ -376,104 +372,102 @@ ShallowWrapper {
                 <Heading
                   className={undefined}
                   size="5"
-                >
+>
                   Name
-                </Heading>,
+</Heading>,
                 <div
                   data-test="saved-search-popover-name"
-                >
+>
                   Loren Waters
-                </div>,
+</div>,
                 <Heading
                   className={undefined}
                   size="5"
-                >
+>
                   Search Query
-                </Heading>,
+</Heading>,
                 <div
                   data-test="saved-search-popover-search-query"
-                >
+>
                   "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
-                </div>,
+</div>,
                 <Heading
                   className={undefined}
                   size="5"
-                >
+>
                   Filters
-                </Heading>,
+</Heading>,
                 <div>
                   <FieldLabel
-                    label="Signal Status"
-                    position="left"
+                                    label="Signal Status"
+                                    position="left"
                   >
-                    <span
-                      data-test="saved-search-popover-signal-status"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      Signals Included in Traits
-                    </span>
+                                    <span
+                                                      data-test="saved-search-popover-signal-status"
+                                                      style={
+                                                                        Object {
+                                                                                          "verticalAlign": "bottom",
+                                                                                        }
+                                                      }
+                                    >
+                                                      Signals Included in Traits
+                                    </span>
                   </FieldLabel>
                   <FieldLabel
-                    label="Signal Category"
-                    position="left"
+                                    label="Signal Category"
+                                    position="left"
                   >
-                    <span
-                      data-test="saved-search-popover-signal-category"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      Real-Time
-                    </span>
+                                    <span
+                                                      data-test="saved-search-popover-signal-category"
+                                                      style={
+                                                                        Object {
+                                                                                          "verticalAlign": "bottom",
+                                                                                        }
+                                                      }
+                                    >
+                                                      Real-Time
+                                    </span>
                   </FieldLabel>
                   <FieldLabel
-                    label="Signal Type"
-                    position="left"
+                                    label="Signal Type"
+                                    position="left"
                   >
-                    <span
-                      data-test="saved-search-popover-signal-type"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      
-                    </span>
+                                    <span
+                                                      data-test="saved-search-popover-signal-type"
+                                                      style={
+                                                                        Object {
+                                                                                          "verticalAlign": "bottom",
+                                                                                        }
+                                                      }
+                                    />
                   </FieldLabel>
                   <FieldLabel
-                    label="View Records For"
-                    position="left"
+                                    label="View Records For"
+                                    position="left"
                   >
-                    <span
-                      data-test="saved-search-popover-view-records-for"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      Last 7 Days
-                    </span>
+                                    <span
+                                                      data-test="saved-search-popover-view-records-for"
+                                                      style={
+                                                                        Object {
+                                                                                          "verticalAlign": "bottom",
+                                                                                        }
+                                                      }
+                                    >
+                                                      Last 7 Days
+                                    </span>
                   </FieldLabel>
-                </div>,
+</div>,
                 <Heading
                   className={undefined}
                   size="5"
-                >
+>
                   Sorting
-                </Heading>,
+</Heading>,
                 <div
                   data-test="saved-search-popover-sort-by"
-                >
+>
                   Percentage Change
-                </div>,
+</div>,
               ],
               "data-test": "saved-search-popover",
               "open": true,
@@ -556,65 +550,63 @@ ShallowWrapper {
                     <FieldLabel
                       label="Signal Status"
                       position="left"
-                    >
+>
                       <span
-                        data-test="saved-search-popover-signal-status"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
+                                            data-test="saved-search-popover-signal-status"
+                                            style={
+                                                                  Object {
+                                                                                        "verticalAlign": "bottom",
+                                                                                      }
+                                            }
                       >
-                        Signals Included in Traits
+                                            Signals Included in Traits
                       </span>
-                    </FieldLabel>,
+</FieldLabel>,
                     <FieldLabel
                       label="Signal Category"
                       position="left"
-                    >
+>
                       <span
-                        data-test="saved-search-popover-signal-category"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
+                                            data-test="saved-search-popover-signal-category"
+                                            style={
+                                                                  Object {
+                                                                                        "verticalAlign": "bottom",
+                                                                                      }
+                                            }
                       >
-                        Real-Time
+                                            Real-Time
                       </span>
-                    </FieldLabel>,
+</FieldLabel>,
                     <FieldLabel
                       label="Signal Type"
                       position="left"
-                    >
+>
                       <span
-                        data-test="saved-search-popover-signal-type"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        
-                      </span>
-                    </FieldLabel>,
+                                            data-test="saved-search-popover-signal-type"
+                                            style={
+                                                                  Object {
+                                                                                        "verticalAlign": "bottom",
+                                                                                      }
+                                            }
+                      />
+</FieldLabel>,
                     null,
                     undefined,
                     <FieldLabel
                       label="View Records For"
                       position="left"
-                    >
+>
                       <span
-                        data-test="saved-search-popover-view-records-for"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
+                                            data-test="saved-search-popover-view-records-for"
+                                            style={
+                                                                  Object {
+                                                                                        "verticalAlign": "bottom",
+                                                                                      }
+                                            }
                       >
-                        Last 7 Days
+                                            Last 7 Days
                       </span>
-                    </FieldLabel>,
+</FieldLabel>,
                   ],
                 },
                 "ref": null,
@@ -627,13 +619,13 @@ ShallowWrapper {
                       "children": <span
                         data-test="saved-search-popover-signal-status"
                         style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                                                Object {
+                                                                        "verticalAlign": "bottom",
+                                                                      }
                         }
-                      >
+>
                         Signals Included in Traits
-                      </span>,
+</span>,
                       "label": "Signal Status",
                       "position": "left",
                     },
@@ -663,13 +655,13 @@ ShallowWrapper {
                       "children": <span
                         data-test="saved-search-popover-signal-category"
                         style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                                                Object {
+                                                                        "verticalAlign": "bottom",
+                                                                      }
                         }
-                      >
+>
                         Real-Time
-                      </span>,
+</span>,
                       "label": "Signal Category",
                       "position": "left",
                     },
@@ -699,13 +691,11 @@ ShallowWrapper {
                       "children": <span
                         data-test="saved-search-popover-signal-type"
                         style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                                                Object {
+                                                                        "verticalAlign": "bottom",
+                                                                      }
                         }
-                      >
-                        
-                      </span>,
+/>,
                       "label": "Signal Type",
                       "position": "left",
                     },
@@ -737,13 +727,13 @@ ShallowWrapper {
                       "children": <span
                         data-test="saved-search-popover-view-records-for"
                         style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
+                                                Object {
+                                                                        "verticalAlign": "bottom",
+                                                                      }
                         }
-                      >
+>
                         Last 7 Days
-                      </span>,
+</span>,
                       "label": "View Records For",
                       "position": "left",
                     },
@@ -820,127 +810,125 @@ ShallowWrapper {
             offset={0}
             placement="left"
             trigger="hover"
-          >
+>
             <Tag
-              className={undefined}
-              data-saved-search-id={undefined}
-              data-saved-search-preset={undefined}
-              data-test="saved-search-tag"
-              id={null}
-              onClick={[Function]}
-              value="Loren Waters"
+                        className={undefined}
+                        data-saved-search-id={undefined}
+                        data-saved-search-preset={undefined}
+                        data-test="saved-search-tag"
+                        id={null}
+                        onClick={[Function]}
+                        value="Loren Waters"
             />
             <Popover
-              data-test="saved-search-popover"
-              open={true}
-              placement="bottom"
-              title="Loren Waters"
-              trapFocus={true}
-              variant="default"
+                        data-test="saved-search-popover"
+                        open={true}
+                        placement="bottom"
+                        title="Loren Waters"
+                        trapFocus={true}
+                        variant="default"
             >
-              <Heading
-                className={undefined}
-                size="5"
-              >
-                Name
-              </Heading>
-              <div
-                data-test="saved-search-popover-name"
-              >
-                Loren Waters
-              </div>
-              <Heading
-                className={undefined}
-                size="5"
-              >
-                Search Query
-              </Heading>
-              <div
-                data-test="saved-search-popover-search-query"
-              >
-                "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
-              </div>
-              <Heading
-                className={undefined}
-                size="5"
-              >
-                Filters
-              </Heading>
-              <div>
-                <FieldLabel
-                  label="Signal Status"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-signal-status"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    Signals Included in Traits
-                  </span>
-                </FieldLabel>
-                <FieldLabel
-                  label="Signal Category"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-signal-category"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    Real-Time
-                  </span>
-                </FieldLabel>
-                <FieldLabel
-                  label="Signal Type"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-signal-type"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    
-                  </span>
-                </FieldLabel>
-                <FieldLabel
-                  label="View Records For"
-                  position="left"
-                >
-                  <span
-                    data-test="saved-search-popover-view-records-for"
-                    style={
-                      Object {
-                        "verticalAlign": "bottom",
-                      }
-                    }
-                  >
-                    Last 7 Days
-                  </span>
-                </FieldLabel>
-              </div>
-              <Heading
-                className={undefined}
-                size="5"
-              >
-                Sorting
-              </Heading>
-              <div
-                data-test="saved-search-popover-sort-by"
-              >
-                Percentage Change
-              </div>
+                        <Heading
+                                    className={undefined}
+                                    size="5"
+                        >
+                                    Name
+                        </Heading>
+                        <div
+                                    data-test="saved-search-popover-name"
+                        >
+                                    Loren Waters
+                        </div>
+                        <Heading
+                                    className={undefined}
+                                    size="5"
+                        >
+                                    Search Query
+                        </Heading>
+                        <div
+                                    data-test="saved-search-popover-search-query"
+                        >
+                                    "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
+                        </div>
+                        <Heading
+                                    className={undefined}
+                                    size="5"
+                        >
+                                    Filters
+                        </Heading>
+                        <div>
+                                    <FieldLabel
+                                                label="Signal Status"
+                                                position="left"
+                                    >
+                                                <span
+                                                            data-test="saved-search-popover-signal-status"
+                                                            style={
+                                                                        Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                            }
+                                                >
+                                                            Signals Included in Traits
+                                                </span>
+                                    </FieldLabel>
+                                    <FieldLabel
+                                                label="Signal Category"
+                                                position="left"
+                                    >
+                                                <span
+                                                            data-test="saved-search-popover-signal-category"
+                                                            style={
+                                                                        Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                            }
+                                                >
+                                                            Real-Time
+                                                </span>
+                                    </FieldLabel>
+                                    <FieldLabel
+                                                label="Signal Type"
+                                                position="left"
+                                    >
+                                                <span
+                                                            data-test="saved-search-popover-signal-type"
+                                                            style={
+                                                                        Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                            }
+                                                />
+                                    </FieldLabel>
+                                    <FieldLabel
+                                                label="View Records For"
+                                                position="left"
+                                    >
+                                                <span
+                                                            data-test="saved-search-popover-view-records-for"
+                                                            style={
+                                                                        Object {
+                                                                                    "verticalAlign": "bottom",
+                                                                                  }
+                                                            }
+                                                >
+                                                            Last 7 Days
+                                                </span>
+                                    </FieldLabel>
+                        </div>
+                        <Heading
+                                    className={undefined}
+                                    size="5"
+                        >
+                                    Sorting
+                        </Heading>
+                        <div
+                                    data-test="saved-search-popover-sort-by"
+                        >
+                                    Percentage Change
+                        </div>
             </Popover>
-          </OverlayTrigger>,
+</OverlayTrigger>,
           false,
         ],
         "className": undefined,
@@ -962,7 +950,7 @@ ShallowWrapper {
                 id={null}
                 onClick={[Function]}
                 value="Loren Waters"
-              />,
+/>,
               <Popover
                 data-test="saved-search-popover"
                 open={true}
@@ -970,109 +958,107 @@ ShallowWrapper {
                 title="Loren Waters"
                 trapFocus={true}
                 variant="default"
-              >
+>
                 <Heading
-                  className={undefined}
-                  size="5"
+                                className={undefined}
+                                size="5"
                 >
-                  Name
+                                Name
                 </Heading>
                 <div
-                  data-test="saved-search-popover-name"
+                                data-test="saved-search-popover-name"
                 >
-                  Loren Waters
+                                Loren Waters
                 </div>
                 <Heading
-                  className={undefined}
-                  size="5"
+                                className={undefined}
+                                size="5"
                 >
-                  Search Query
+                                Search Query
                 </Heading>
                 <div
-                  data-test="saved-search-popover-search-query"
+                                data-test="saved-search-popover-search-query"
                 >
-                  "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
+                                "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
                 </div>
                 <Heading
-                  className={undefined}
-                  size="5"
+                                className={undefined}
+                                size="5"
                 >
-                  Filters
+                                Filters
                 </Heading>
                 <div>
-                  <FieldLabel
-                    label="Signal Status"
-                    position="left"
-                  >
-                    <span
-                      data-test="saved-search-popover-signal-status"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      Signals Included in Traits
-                    </span>
-                  </FieldLabel>
-                  <FieldLabel
-                    label="Signal Category"
-                    position="left"
-                  >
-                    <span
-                      data-test="saved-search-popover-signal-category"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      Real-Time
-                    </span>
-                  </FieldLabel>
-                  <FieldLabel
-                    label="Signal Type"
-                    position="left"
-                  >
-                    <span
-                      data-test="saved-search-popover-signal-type"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      
-                    </span>
-                  </FieldLabel>
-                  <FieldLabel
-                    label="View Records For"
-                    position="left"
-                  >
-                    <span
-                      data-test="saved-search-popover-view-records-for"
-                      style={
-                        Object {
-                          "verticalAlign": "bottom",
-                        }
-                      }
-                    >
-                      Last 7 Days
-                    </span>
-                  </FieldLabel>
+                                <FieldLabel
+                                                label="Signal Status"
+                                                position="left"
+                                >
+                                                <span
+                                                                data-test="saved-search-popover-signal-status"
+                                                                style={
+                                                                                Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                                }
+                                                >
+                                                                Signals Included in Traits
+                                                </span>
+                                </FieldLabel>
+                                <FieldLabel
+                                                label="Signal Category"
+                                                position="left"
+                                >
+                                                <span
+                                                                data-test="saved-search-popover-signal-category"
+                                                                style={
+                                                                                Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                                }
+                                                >
+                                                                Real-Time
+                                                </span>
+                                </FieldLabel>
+                                <FieldLabel
+                                                label="Signal Type"
+                                                position="left"
+                                >
+                                                <span
+                                                                data-test="saved-search-popover-signal-type"
+                                                                style={
+                                                                                Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                                }
+                                                />
+                                </FieldLabel>
+                                <FieldLabel
+                                                label="View Records For"
+                                                position="left"
+                                >
+                                                <span
+                                                                data-test="saved-search-popover-view-records-for"
+                                                                style={
+                                                                                Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                                }
+                                                >
+                                                                Last 7 Days
+                                                </span>
+                                </FieldLabel>
                 </div>
                 <Heading
-                  className={undefined}
-                  size="5"
+                                className={undefined}
+                                size="5"
                 >
-                  Sorting
+                                Sorting
                 </Heading>
                 <div
-                  data-test="saved-search-popover-sort-by"
+                                data-test="saved-search-popover-sort-by"
                 >
-                  Percentage Change
+                                Percentage Change
                 </div>
-              </Popover>,
+</Popover>,
             ],
             "crossOffset": 0,
             "data-test": "saved-search-overlay-trigger",
@@ -1111,104 +1097,102 @@ ShallowWrapper {
                   <Heading
                     className={undefined}
                     size="5"
-                  >
+>
                     Name
-                  </Heading>,
+</Heading>,
                   <div
                     data-test="saved-search-popover-name"
-                  >
+>
                     Loren Waters
-                  </div>,
+</div>,
                   <Heading
                     className={undefined}
                     size="5"
-                  >
+>
                     Search Query
-                  </Heading>,
+</Heading>,
                   <div
                     data-test="saved-search-popover-search-query"
-                  >
+>
                     "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
-                  </div>,
+</div>,
                   <Heading
                     className={undefined}
                     size="5"
-                  >
+>
                     Filters
-                  </Heading>,
+</Heading>,
                   <div>
                     <FieldLabel
-                      label="Signal Status"
-                      position="left"
+                                        label="Signal Status"
+                                        position="left"
                     >
-                      <span
-                        data-test="saved-search-popover-signal-status"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        Signals Included in Traits
-                      </span>
+                                        <span
+                                                            data-test="saved-search-popover-signal-status"
+                                                            style={
+                                                                                Object {
+                                                                                                    "verticalAlign": "bottom",
+                                                                                                  }
+                                                            }
+                                        >
+                                                            Signals Included in Traits
+                                        </span>
                     </FieldLabel>
                     <FieldLabel
-                      label="Signal Category"
-                      position="left"
+                                        label="Signal Category"
+                                        position="left"
                     >
-                      <span
-                        data-test="saved-search-popover-signal-category"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        Real-Time
-                      </span>
+                                        <span
+                                                            data-test="saved-search-popover-signal-category"
+                                                            style={
+                                                                                Object {
+                                                                                                    "verticalAlign": "bottom",
+                                                                                                  }
+                                                            }
+                                        >
+                                                            Real-Time
+                                        </span>
                     </FieldLabel>
                     <FieldLabel
-                      label="Signal Type"
-                      position="left"
+                                        label="Signal Type"
+                                        position="left"
                     >
-                      <span
-                        data-test="saved-search-popover-signal-type"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        
-                      </span>
+                                        <span
+                                                            data-test="saved-search-popover-signal-type"
+                                                            style={
+                                                                                Object {
+                                                                                                    "verticalAlign": "bottom",
+                                                                                                  }
+                                                            }
+                                        />
                     </FieldLabel>
                     <FieldLabel
-                      label="View Records For"
-                      position="left"
+                                        label="View Records For"
+                                        position="left"
                     >
-                      <span
-                        data-test="saved-search-popover-view-records-for"
-                        style={
-                          Object {
-                            "verticalAlign": "bottom",
-                          }
-                        }
-                      >
-                        Last 7 Days
-                      </span>
+                                        <span
+                                                            data-test="saved-search-popover-view-records-for"
+                                                            style={
+                                                                                Object {
+                                                                                                    "verticalAlign": "bottom",
+                                                                                                  }
+                                                            }
+                                        >
+                                                            Last 7 Days
+                                        </span>
                     </FieldLabel>
-                  </div>,
+</div>,
                   <Heading
                     className={undefined}
                     size="5"
-                  >
+>
                     Sorting
-                  </Heading>,
+</Heading>,
                   <div
                     data-test="saved-search-popover-sort-by"
-                  >
+>
                     Percentage Change
-                  </div>,
+</div>,
                 ],
                 "data-test": "saved-search-popover",
                 "open": true,
@@ -1291,65 +1275,63 @@ ShallowWrapper {
                       <FieldLabel
                         label="Signal Status"
                         position="left"
-                      >
+>
                         <span
-                          data-test="saved-search-popover-signal-status"
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
-                          }
+                                                data-test="saved-search-popover-signal-status"
+                                                style={
+                                                                        Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                }
                         >
-                          Signals Included in Traits
+                                                Signals Included in Traits
                         </span>
-                      </FieldLabel>,
+</FieldLabel>,
                       <FieldLabel
                         label="Signal Category"
                         position="left"
-                      >
+>
                         <span
-                          data-test="saved-search-popover-signal-category"
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
-                          }
+                                                data-test="saved-search-popover-signal-category"
+                                                style={
+                                                                        Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                }
                         >
-                          Real-Time
+                                                Real-Time
                         </span>
-                      </FieldLabel>,
+</FieldLabel>,
                       <FieldLabel
                         label="Signal Type"
                         position="left"
-                      >
+>
                         <span
-                          data-test="saved-search-popover-signal-type"
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
-                          }
-                        >
-                          
-                        </span>
-                      </FieldLabel>,
+                                                data-test="saved-search-popover-signal-type"
+                                                style={
+                                                                        Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                }
+                        />
+</FieldLabel>,
                       null,
                       undefined,
                       <FieldLabel
                         label="View Records For"
                         position="left"
-                      >
+>
                         <span
-                          data-test="saved-search-popover-view-records-for"
-                          style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
-                          }
+                                                data-test="saved-search-popover-view-records-for"
+                                                style={
+                                                                        Object {
+                                                                                                "verticalAlign": "bottom",
+                                                                                              }
+                                                }
                         >
-                          Last 7 Days
+                                                Last 7 Days
                         </span>
-                      </FieldLabel>,
+</FieldLabel>,
                     ],
                   },
                   "ref": null,
@@ -1362,13 +1344,13 @@ ShallowWrapper {
                         "children": <span
                           data-test="saved-search-popover-signal-status"
                           style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                                                    Object {
+                                                                              "verticalAlign": "bottom",
+                                                                            }
                           }
-                        >
+>
                           Signals Included in Traits
-                        </span>,
+</span>,
                         "label": "Signal Status",
                         "position": "left",
                       },
@@ -1398,13 +1380,13 @@ ShallowWrapper {
                         "children": <span
                           data-test="saved-search-popover-signal-category"
                           style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                                                    Object {
+                                                                              "verticalAlign": "bottom",
+                                                                            }
                           }
-                        >
+>
                           Real-Time
-                        </span>,
+</span>,
                         "label": "Signal Category",
                         "position": "left",
                       },
@@ -1434,13 +1416,11 @@ ShallowWrapper {
                         "children": <span
                           data-test="saved-search-popover-signal-type"
                           style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                                                    Object {
+                                                                              "verticalAlign": "bottom",
+                                                                            }
                           }
-                        >
-                          
-                        </span>,
+/>,
                         "label": "Signal Type",
                         "position": "left",
                       },
@@ -1472,13 +1452,13 @@ ShallowWrapper {
                         "children": <span
                           data-test="saved-search-popover-view-records-for"
                           style={
-                            Object {
-                              "verticalAlign": "bottom",
-                            }
+                                                    Object {
+                                                                              "verticalAlign": "bottom",
+                                                                            }
                           }
-                        >
+>
                           Last 7 Days
-                        </span>,
+</span>,
                         "label": "View Records For",
                         "position": "left",
                       },

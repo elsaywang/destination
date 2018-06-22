@@ -7,7 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <PercentageChange
     maxPercentageMagnitude={0.5678}
     percentageChange={0.12345}
-  />,
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -25,24 +25,24 @@ ShallowWrapper {
           minimumFractionDigits={2}
           style="percent"
           value={0.12345}
-        >
+>
           [Function]
-        </FormattedNumber>,
+</FormattedNumber>,
         <span
           className={undefined}
-        >
+>
           <span
-            className={undefined}
+                    className={undefined}
           />
           <span
-            className={undefined}
-            style={
-              Object {
-                "width": "0.58rem",
-              }
-            }
+                    className={undefined}
+                    style={
+                              Object {
+                                        "width": "0.58rem",
+                                      }
+                    }
           />
-        </span>,
+</span>,
       ],
       "className": "",
     },
@@ -70,15 +70,15 @@ ShallowWrapper {
           "children": Array [
             <span
               className={undefined}
-            />,
+/>,
             <span
               className={undefined}
               style={
-                Object {
-                  "width": "0.58rem",
-                }
+                            Object {
+                                          "width": "0.58rem",
+                                        }
               }
-            />,
+/>,
           ],
           "className": undefined,
         },
@@ -126,24 +126,24 @@ ShallowWrapper {
             minimumFractionDigits={2}
             style="percent"
             value={0.12345}
-          >
+>
             [Function]
-          </FormattedNumber>,
+</FormattedNumber>,
           <span
             className={undefined}
-          >
+>
             <span
-              className={undefined}
+                        className={undefined}
             />
             <span
-              className={undefined}
-              style={
-                Object {
-                  "width": "0.58rem",
-                }
-              }
+                        className={undefined}
+                        style={
+                                    Object {
+                                                "width": "0.58rem",
+                                              }
+                        }
             />
-          </span>,
+</span>,
         ],
         "className": "",
       },
@@ -171,15 +171,15 @@ ShallowWrapper {
             "children": Array [
               <span
                 className={undefined}
-              />,
+/>,
               <span
                 className={undefined}
                 style={
-                  Object {
-                    "width": "0.58rem",
-                  }
+                                Object {
+                                                "width": "0.58rem",
+                                              }
                 }
-              />,
+/>,
             ],
             "className": undefined,
           },
