@@ -9,8 +9,6 @@ export const columnKeys = {
     totalCount: 'totalCount',
     percentageChange: 'percentageChange',
     includedInTraits: 'includedInTraits',
-    reportSuite: 'reportSuite',
-    onboardedRecordSource: 'onboardedRecordSource',
 };
 
 /**
@@ -43,14 +41,14 @@ const signalSource = {
 
 const reportSuite = {
     title: 'Report Suite',
-    key: columnKeys.reportSuite,
+    key: columnKeys.signalSource,
     width: 180,
     sortable: true,
 };
 
-const onboardedRecordSource = {
-    title: 'Onboarded Record Source',
-    key: columnKeys.onboardedRecordSource,
+const onboardedRecord = {
+    title: 'Onboarded Record',
+    key: columnKeys.signalSource,
     width: 180,
     sortable: true,
 };
@@ -139,7 +137,7 @@ export const generalOnlineDataColumns = [...actionableLogFilesColumns];
 export const onboardedRecordsColumns = [
     keyValuePairs,
     signalType,
-    onboardedRecordSource,
+    onboardedRecord,
     totalRecords,
     percentageChange,
     includedInTraits,
@@ -156,7 +154,7 @@ export const columns = [
     signalType,
     signalSource,
     reportSuite,
-    onboardedRecordSource,
+    onboardedRecord,
     totalCounts,
     eventFires,
     totalRecords,
