@@ -10,11 +10,13 @@ const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
 const normalizeSourceType = ({ source }) =>
     source.sourceType === 'ALL' ? null : source.sourceType;
 
-const normalizeDataSourceIds = ({ advanced, source }) =>
-    advanced && source.dataSourceIds ? source.dataSourceIds : null;
+const normalizeDataSourceIds = ({ source }) =>
+    source.dataSourceIds && source.dataSourceIds.length ? source.dataSourceIds : null;
 
 const normalizeReportSuiteIds = ({ advanced, source }) =>
-    advanced && source.reportSuiteIds ? source.reportSuiteIds : null;
+    advanced && source.reportSuiteIds && source.reportSuiteIds.length
+        ? source.reportSuiteIds
+        : null;
 
 const normalizeSignalStatus = ({ signalStatus }) => (signalStatus === 'ALL' ? null : signalStatus);
 

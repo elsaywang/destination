@@ -19,9 +19,9 @@ describe('normalizeSearch util', () => {
         signalStatus: 'ALL',
         filterNewSignals: false,
         source: {
-            dataSourceIds: null,
+            dataSourceIds: [],
             name: '',
-            reportSuiteIds: null,
+            reportSuiteIds: [],
             sourceType: 'ALL',
         },
         viewRecordsFor: '7D',
@@ -135,10 +135,9 @@ describe('normalizeSearch util', () => {
     });
 
     describe('normalizing datasource IDs', () => {
-        it('should return the `dataSourceIds` array if it exists and if `advanced` is true', () => {
+        it('should return the `dataSourceIds` array if it exists and is nonempty', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
-                advanced: true,
                 source: {
                     ...baseSearch.source,
                     dataSourceIds: [1, 2, 3],
@@ -150,10 +149,23 @@ describe('normalizeSearch util', () => {
             expect(actual).toEqual(expected);
         });
 
+        it('should return `null` if the `dataSourceIds` exists but is empty', () => {
+            const { source } = normalizeSearch({
+                ...baseSearch,
+                source: {
+                    ...baseSearch.source,
+                    dataSourceIds: [],
+                },
+            });
+            const { dataSourceIds: actual } = source;
+            const expected = null;
+
+            expect(actual).toEqual(expected);
+        });
+
         it('should return `null` if the `dataSourceIds` array does not exist', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
-                advanced: true,
                 source: {
                     ...baseSearch.source,
                     dataSourceIds: null,
@@ -164,25 +176,10 @@ describe('normalizeSearch util', () => {
 
             expect(actual).toEqual(expected);
         });
-
-        it('should return `null` if `advanced` is false', () => {
-            const { source } = normalizeSearch({
-                ...baseSearch,
-                advanced: false,
-                source: {
-                    ...baseSearch.source,
-                    dataSourceIds: [1, 2, 3],
-                },
-            });
-            const { dataSourceIds: actual } = source;
-            const expected = null;
-
-            expect(actual).toEqual(expected);
-        });
     });
 
     describe('normalizing report suite IDs', () => {
-        it('should return the `reportSuiteIds` array if it exists and if `advanced` is true', () => {
+        it('should return the `reportSuiteIds` array if it exists and is nonempty, and if `advanced` is true', () => {
             const { source } = normalizeSearch({
                 ...baseSearch,
                 advanced: true,
@@ -193,6 +190,21 @@ describe('normalizeSearch util', () => {
             });
             const { reportSuiteIds: actual } = source;
             const expected = [1, 2, 3];
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should return `null` if the `reportSuiteIds` array exists but is empty', () => {
+            const { source } = normalizeSearch({
+                ...baseSearch,
+                advanced: true,
+                source: {
+                    ...baseSearch.source,
+                    reportSuiteIds: [],
+                },
+            });
+            const { reportSuiteIds: actual } = source;
+            const expected = null;
 
             expect(actual).toEqual(expected);
         });
