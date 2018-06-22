@@ -373,7 +373,9 @@ describe('Saved Search Integration Test', function() {
 
             cy.get('[data-test="overlay-tooltip"')
                 .should('be.visible')
-                .trigger('mouseover');
+                .within(() => {
+                    cy.get('svg').trigger('mouseover');
+                });
 
             cy.get('[data-test="saved-search-limit-message"]').should(
                 'have.text',
