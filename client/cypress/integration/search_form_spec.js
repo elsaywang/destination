@@ -267,7 +267,7 @@ describe('Search Form Integration Tests', function() {
     describe('Normalizing search form inputs into API request parameters', function() {
         describe('View Records For dropdown', function() {
             describe('When a date range preset is selected (ex: "Last X Days")', function() {
-                it('`startDate` should be X days ago at UTC midnight in ms and endDate should be null', function() {
+                it('`startDate` should be X days ago at UTC midnight in ms and endDate should be excluded', function() {
                     const expectedStartDates = [
                         1525046400000, // 1 day ago (April 30), UTC midnight
                         1524528000000, // 7 days ago (April 24), UTC midnight
@@ -287,7 +287,7 @@ describe('Search Form Integration Tests', function() {
                                     .getRequestParams('@fetchSearchResults')
                                     .then(({ startDate, endDate }) => {
                                         expect(startDate).to.equal(expectedStartDates[i]);
-                                        expect(endDate).to.equal(null);
+                                        expect(endDate).to.be.undefined;
                                     }),
                             );
                     }

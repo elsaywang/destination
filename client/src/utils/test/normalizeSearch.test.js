@@ -29,15 +29,8 @@ describe('normalizeSearch util', () => {
 
     const baseNormalizedSearch = {
         descending: true,
-        endDate: null,
         minEventFires: 1000,
         search: '"key"=="value"',
-        signalStatus: null,
-        source: {
-            sourceType: null,
-            dataSourceIds: null,
-            reportSuiteIds: null,
-        },
         startDate: 1524528000000, // Tuesday, April 24, 2018 12:00:00 AM
     };
 
@@ -68,14 +61,13 @@ describe('normalizeSearch util', () => {
                 expect(actual).toEqual(expected);
             });
 
-            it('should set `endDate` to null', () => {
+            it('should exclude `endDate`', () => {
                 const { endDate: actual } = normalizeSearch({
                     ...baseSearch,
                     viewRecordsFor: '30D',
                 });
-                const expected = null;
 
-                expect(actual).toEqual(expected);
+                expect(actual).toBeUndefined();
             });
         });
 
@@ -104,83 +96,47 @@ describe('normalizeSearch util', () => {
         });
     });
 
-    describe('normalizing source type', () => {
-        it('should set `sourceType` to `null` if it is "ALL"', () => {
-            const { source } = normalizeSearch({
+    describe('normalizing source', () => {
+        it('should exclude source object entirely if `sourceType` is "ALL" and `dataSourceIds` and `reportSuiteIds` are empty arrays', () => {
+            const { source: actual } = normalizeSearch(baseSearch);
+
+            expect(actual).toBeUndefined();
+        });
+
+        it('should keep source object and only include `sourceType` if it is not "ALL" and `dataSourceIds` and `reportSuiteIds` are empty', () => {
+            const { source: sourceWithSourceType } = normalizeSearch({
                 ...baseSearch,
                 source: {
                     ...baseSearch.source,
-                    sourceType: 'ALL',
+                    sourceType: 'ANALYTICS',
                 },
             });
-            const { sourceType: actual } = source;
-            const expected = null;
 
-            expect(actual).toEqual(expected);
+            const { sourceType, dataSourceIds, reportSuiteIds } = sourceWithSourceType;
+
+            expect(sourceType).toBeDefined();
+            expect(dataSourceIds).toBeUndefined();
+            expect(reportSuiteIds).toBeUndefined();
         });
 
-        it('should keep `sourceType` the same if it is anything other than "ALL"', () => {
-            const { source } = normalizeSearch({
-                ...baseSearch,
-                source: {
-                    ...baseSearch.source,
-                    sourceType: 'ONBOARDED',
-                },
-            });
-            const { sourceType: actual } = source;
-            const expected = 'ONBOARDED';
-
-            expect(actual).toEqual(expected);
-        });
-    });
-
-    describe('normalizing datasource IDs', () => {
-        it('should return the `dataSourceIds` array if it exists and is nonempty', () => {
-            const { source } = normalizeSearch({
+        it('should keep source object and only include `dataSourceIds` if it is not empty and `sourceType` is "ALL" and `reportSuiteIds` is empty', () => {
+            const { source: sourceWithDataSourceIds } = normalizeSearch({
                 ...baseSearch,
                 source: {
                     ...baseSearch.source,
                     dataSourceIds: [1, 2, 3],
                 },
             });
-            const { dataSourceIds: actual } = source;
-            const expected = [1, 2, 3];
 
-            expect(actual).toEqual(expected);
+            const { sourceType, dataSourceIds, reportSuiteIds } = sourceWithDataSourceIds;
+
+            expect(sourceType).toBeUndefined();
+            expect(dataSourceIds).toBeDefined();
+            expect(reportSuiteIds).toBeUndefined();
         });
 
-        it('should return `null` if the `dataSourceIds` exists but is empty', () => {
-            const { source } = normalizeSearch({
-                ...baseSearch,
-                source: {
-                    ...baseSearch.source,
-                    dataSourceIds: [],
-                },
-            });
-            const { dataSourceIds: actual } = source;
-            const expected = null;
-
-            expect(actual).toEqual(expected);
-        });
-
-        it('should return `null` if the `dataSourceIds` array does not exist', () => {
-            const { source } = normalizeSearch({
-                ...baseSearch,
-                source: {
-                    ...baseSearch.source,
-                    dataSourceIds: null,
-                },
-            });
-            const { dataSourceIds: actual } = source;
-            const expected = null;
-
-            expect(actual).toEqual(expected);
-        });
-    });
-
-    describe('normalizing report suite IDs', () => {
-        it('should return the `reportSuiteIds` array if it exists and is nonempty, and if `advanced` is true', () => {
-            const { source } = normalizeSearch({
+        it('should keep source object and only include `reportSuiteIds` if it is not empty and `advanced` is `true` and `sourceType` is "ALL" and `dataSourceIds` is empty', () => {
+            const { source: sourceWithReportSuiteIds } = normalizeSearch({
                 ...baseSearch,
                 advanced: true,
                 source: {
@@ -188,67 +144,38 @@ describe('normalizeSearch util', () => {
                     reportSuiteIds: [1, 2, 3],
                 },
             });
-            const { reportSuiteIds: actual } = source;
-            const expected = [1, 2, 3];
 
-            expect(actual).toEqual(expected);
+            const { sourceType, dataSourceIds, reportSuiteIds } = sourceWithReportSuiteIds;
+
+            expect(sourceType).toBeUndefined();
+            expect(dataSourceIds).toBeUndefined();
+            expect(reportSuiteIds).toBeDefined();
         });
 
-        it('should return `null` if the `reportSuiteIds` array exists but is empty', () => {
-            const { source } = normalizeSearch({
+        it('should keep source object but exclude `reportSuiteIds` if it is empty and `advanced` is `true` and `sourceType` is "ANALYTICS"', () => {
+            const { source: sourceWithReportSuiteIds } = normalizeSearch({
                 ...baseSearch,
                 advanced: true,
                 source: {
                     ...baseSearch.source,
+                    sourceType: 'ANALYTICS',
                     reportSuiteIds: [],
                 },
             });
-            const { reportSuiteIds: actual } = source;
-            const expected = null;
 
-            expect(actual).toEqual(expected);
-        });
+            const { sourceType, dataSourceIds, reportSuiteIds } = sourceWithReportSuiteIds;
 
-        it('should return `null` if the `reportSuiteIds` array does not exist', () => {
-            const { source } = normalizeSearch({
-                ...baseSearch,
-                advanced: true,
-                source: {
-                    ...baseSearch.source,
-                    reportSuiteIds: null,
-                },
-            });
-            const { reportSuiteIds: actual } = source;
-            const expected = null;
-
-            expect(actual).toEqual(expected);
-        });
-
-        it('should return `null` if `advanced` is false', () => {
-            const { source } = normalizeSearch({
-                ...baseSearch,
-                advanced: false,
-                source: {
-                    ...baseSearch.source,
-                    reportSuiteIds: [1, 2, 3],
-                },
-            });
-            const { reportSuiteIds: actual } = source;
-            const expected = null;
-
-            expect(actual).toEqual(expected);
+            expect(sourceType).toEqual('ANALYTICS');
+            expect(dataSourceIds).toBeUndefined();
+            expect(reportSuiteIds).toBeUndefined();
         });
     });
 
     describe('normalizing signal status', () => {
-        it('should set `signalStatus` to `null` if it is "ALL"', () => {
-            const { signalStatus: actual } = normalizeSearch({
-                ...baseSearch,
-                signalStatus: 'ALL',
-            });
-            const expected = null;
+        it('should exclude `signalStatus` if it is "ALL"', () => {
+            const { signalStatus: actual } = normalizeSearch(baseSearch);
 
-            expect(actual).toEqual(expected);
+            expect(actual).toBeUndefined();
         });
 
         it('should keep `signalStatus` the same if it is anything other than "ALL"', () => {
