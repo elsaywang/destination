@@ -32,25 +32,29 @@ class KeyValuePair extends Component {
         return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
             .then(response => {
                 if (response.ok) {
-                    this.setAutocompleteErrorMessage();
+                    this.setAutocompleteErrorMessage({});
 
                     return response.json();
                 }
                 throw new Error(response.statusText);
             })
             .then(resp => {
-                this.setAutocompleteErrorMessage(
-                    resp.analyticsServiceAvailable && resp.solrServiceAvailable,
-                );
+                this.setAutocompleteErrorMessage({
+                    externalServiceAvailable:
+                        resp.analyticsServiceAvailable && resp.solrServiceAvailable,
+                });
                 return resp.signalKeys;
             })
             .then(json => json.map(key => key.signalKey))
-            .catch(error => {
-                this.setAutocompleteErrorMessage(true, {
-                    autocompleteError: true,
-                    autocompleteErrorMessage: error.message,
-                });
-            });
+            .catch(error =>
+                this.setAutocompleteErrorMessage({
+                    externalServiceAvailable: true,
+                    error: {
+                        autocompleteError: true,
+                        autocompleteErrorMessage: error.message,
+                    },
+                }),
+            );
     };
 
     getKeysByReportSuiteId = key => {
@@ -61,7 +65,7 @@ class KeyValuePair extends Component {
         )
             .then(response => {
                 if (response.ok) {
-                    this.setAutocompleteErrorMessage();
+                    this.setAutocompleteErrorMessage({});
 
                     return response.json();
                 }
@@ -69,9 +73,10 @@ class KeyValuePair extends Component {
                 throw new Error(response.statusText);
             })
             .then(resp => {
-                this.setAutocompleteErrorMessage(
-                    resp.analyticsServiceAvailable && resp.solrServiceAvailable,
-                );
+                this.setAutocompleteErrorMessage({
+                    externalServiceAvailable:
+                        resp.analyticsServiceAvailable && resp.solrServiceAvailable,
+                });
                 return resp.signalKeys;
             })
             .then(suites =>
@@ -82,25 +87,30 @@ class KeyValuePair extends Component {
                     id: suite.signalKey,
                 })),
             )
-            .catch(error => {
-                this.setAutocompleteErrorMessage(true, {
-                    autocompleteError: true,
-                    autocompleteErrorMessage: error.message,
-                });
-            });
+            .catch(error =>
+                this.setAutocompleteErrorMessage({
+                    externalServiceAvailable: true,
+                    error: {
+                        autocompleteError: true,
+                        autocompleteErrorMessage: error.message,
+                    },
+                }),
+            );
     };
 
-    setAutocompleteErrorMessage = (
+    setAutocompleteErrorMessage = ({
         externalServiceAvailable = true,
         error = this.getInitialAutocompleteError(),
-    ) => {
+    }) => {
         if (isKeyEmptyWithValue(this.props.pair)) {
             this.setState({
+                ...error,
                 autocompleteError: true,
                 autocompleteErrorMessage: 'Key cannot be empty when value is specified.',
             });
         } else if (!externalServiceAvailable) {
             this.setState({
+                ...error,
                 autocompleteError: true,
                 autocompleteErrorMessage: 'Key friendly names are not available.',
             });
@@ -113,7 +123,7 @@ class KeyValuePair extends Component {
 
     onValueChange = value => {
         this.props.onValueChange(this.props.pair.id, value);
-        this.setAutocompleteErrorMessage();
+        this.setAutocompleteErrorMessage({});
     };
 
     render() {
