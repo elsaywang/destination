@@ -5,6 +5,10 @@ import SignalsTable from '../SignalsTable';
 import SavedSearchTable from '../SavedSearchTable';
 import Wait from '@react/react-spectrum/Wait';
 import withLoadingSpinner from '../withLoadingSpinner';
+import fetch from '../../utils/fetch';
+
+jest.mock('../../utils/fetch');
+fetch.mockImplementation(() => ({ json: () => new Promise(res => ({})) }));
 
 describe('<SavedSearchTable/> component', () => {
     const mockFn = jest.fn();
