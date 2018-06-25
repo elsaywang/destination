@@ -35,6 +35,7 @@ ShallowWrapper {
           variant="compact"
 >
           <Tab
+                    data-test="all-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -43,6 +44,7 @@ ShallowWrapper {
                     All
           </Tab>
           <Tab
+                    data-test="analytics-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -51,6 +53,7 @@ ShallowWrapper {
                     Adobe Analytics
           </Tab>
           <Tab
+                    data-test="alf-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -59,6 +62,7 @@ ShallowWrapper {
                     Actionable Log Files
           </Tab>
           <Tab
+                    data-test="realtime-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -67,6 +71,7 @@ ShallowWrapper {
                     General Online Data
           </Tab>
           <Tab
+                    data-test="onboarded-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -99,6 +104,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Tab
+              data-test="all-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -107,6 +113,7 @@ ShallowWrapper {
               All
 </Tab>,
             <Tab
+              data-test="analytics-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -115,6 +122,7 @@ ShallowWrapper {
               Adobe Analytics
 </Tab>,
             <Tab
+              data-test="alf-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -123,6 +131,7 @@ ShallowWrapper {
               Actionable Log Files
 </Tab>,
             <Tab
+              data-test="realtime-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -131,6 +140,7 @@ ShallowWrapper {
               General Online Data
 </Tab>,
             <Tab
+              data-test="onboarded-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -153,6 +163,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "All",
+              "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -168,6 +179,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Adobe Analytics",
+              "data-test": "analytics-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -183,6 +195,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Actionable Log Files",
+              "data-test": "alf-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -198,6 +211,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "General Online Data",
+              "data-test": "realtime-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -213,6 +227,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Onboarded Records",
+              "data-test": "onboarded-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -249,6 +264,7 @@ ShallowWrapper {
             variant="compact"
 >
             <Tab
+                        data-test="all-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -257,6 +273,7 @@ ShallowWrapper {
                         All
             </Tab>
             <Tab
+                        data-test="analytics-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -265,6 +282,7 @@ ShallowWrapper {
                         Adobe Analytics
             </Tab>
             <Tab
+                        data-test="alf-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -273,6 +291,7 @@ ShallowWrapper {
                         Actionable Log Files
             </Tab>
             <Tab
+                        data-test="realtime-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -281,6 +300,7 @@ ShallowWrapper {
                         General Online Data
             </Tab>
             <Tab
+                        data-test="onboarded-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -313,6 +333,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Tab
+                data-test="all-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -321,6 +342,7 @@ ShallowWrapper {
                 All
 </Tab>,
               <Tab
+                data-test="analytics-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -329,6 +351,7 @@ ShallowWrapper {
                 Adobe Analytics
 </Tab>,
               <Tab
+                data-test="alf-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -337,6 +360,7 @@ ShallowWrapper {
                 Actionable Log Files
 </Tab>,
               <Tab
+                data-test="realtime-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -345,6 +369,7 @@ ShallowWrapper {
                 General Online Data
 </Tab>,
               <Tab
+                data-test="onboarded-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -367,6 +392,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "All",
+                "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -382,6 +408,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Adobe Analytics",
+                "data-test": "analytics-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -397,6 +424,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Actionable Log Files",
+                "data-test": "alf-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -412,6 +440,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "General Online Data",
+                "data-test": "realtime-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -427,6 +456,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Onboarded Records",
+                "data-test": "onboarded-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -488,6 +518,7 @@ ShallowWrapper {
           variant="compact"
 >
           <Tab
+                    data-test="all-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -496,6 +527,7 @@ ShallowWrapper {
                     All
           </Tab>
           <Tab
+                    data-test="analytics-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -504,6 +536,7 @@ ShallowWrapper {
                     Adobe Analytics
           </Tab>
           <Tab
+                    data-test="alf-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -512,6 +545,7 @@ ShallowWrapper {
                     Actionable Log Files
           </Tab>
           <Tab
+                    data-test="realtime-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -520,6 +554,7 @@ ShallowWrapper {
                     General Online Data
           </Tab>
           <Tab
+                    data-test="onboarded-signal-type-filter"
                     disabled={false}
                     invalid={false}
                     renderChildren={true}
@@ -552,6 +587,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Tab
+              data-test="all-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -560,6 +596,7 @@ ShallowWrapper {
               All
 </Tab>,
             <Tab
+              data-test="analytics-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -568,6 +605,7 @@ ShallowWrapper {
               Adobe Analytics
 </Tab>,
             <Tab
+              data-test="alf-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -576,6 +614,7 @@ ShallowWrapper {
               Actionable Log Files
 </Tab>,
             <Tab
+              data-test="realtime-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -584,6 +623,7 @@ ShallowWrapper {
               General Online Data
 </Tab>,
             <Tab
+              data-test="onboarded-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
@@ -606,6 +646,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "All",
+              "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -621,6 +662,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Adobe Analytics",
+              "data-test": "analytics-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -636,6 +678,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Actionable Log Files",
+              "data-test": "alf-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -651,6 +694,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "General Online Data",
+              "data-test": "realtime-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -666,6 +710,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "Onboarded Records",
+              "data-test": "onboarded-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
@@ -702,6 +747,7 @@ ShallowWrapper {
             variant="compact"
 >
             <Tab
+                        data-test="all-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -710,6 +756,7 @@ ShallowWrapper {
                         All
             </Tab>
             <Tab
+                        data-test="analytics-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -718,6 +765,7 @@ ShallowWrapper {
                         Adobe Analytics
             </Tab>
             <Tab
+                        data-test="alf-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -726,6 +774,7 @@ ShallowWrapper {
                         Actionable Log Files
             </Tab>
             <Tab
+                        data-test="realtime-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -734,6 +783,7 @@ ShallowWrapper {
                         General Online Data
             </Tab>
             <Tab
+                        data-test="onboarded-signal-type-filter"
                         disabled={false}
                         invalid={false}
                         renderChildren={true}
@@ -766,6 +816,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Tab
+                data-test="all-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -774,6 +825,7 @@ ShallowWrapper {
                 All
 </Tab>,
               <Tab
+                data-test="analytics-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -782,6 +834,7 @@ ShallowWrapper {
                 Adobe Analytics
 </Tab>,
               <Tab
+                data-test="alf-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -790,6 +843,7 @@ ShallowWrapper {
                 Actionable Log Files
 </Tab>,
               <Tab
+                data-test="realtime-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -798,6 +852,7 @@ ShallowWrapper {
                 General Online Data
 </Tab>,
               <Tab
+                data-test="onboarded-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
@@ -820,6 +875,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "All",
+                "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -835,6 +891,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Adobe Analytics",
+                "data-test": "analytics-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -850,6 +907,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Actionable Log Files",
+                "data-test": "alf-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -865,6 +923,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "General Online Data",
+                "data-test": "realtime-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
@@ -880,6 +939,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "Onboarded Records",
+                "data-test": "onboarded-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
