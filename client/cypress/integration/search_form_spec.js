@@ -2,6 +2,7 @@ const searchResultsResponse = require('../fixtures/emptySearchResults.json');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 const signalKeysResponse = require('../fixtures/signalKeys.json');
+const signalKeysExternalServiceUnavailableResponse = require('../fixtures/signalKeysWithExternalServiceUnavailable.json');
 
 describe('Search Form Integration Tests', function() {
     beforeEach(function() {
@@ -16,9 +17,6 @@ describe('Search Form Integration Tests', function() {
             'fetchSearchResults',
         );
         cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
-        cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
-            'fetchSignalKeys',
-        );
 
         cy.visit('#/search');
     });
@@ -66,11 +64,14 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when typing in text in Key input', function() {
+    describe('when typing in text in Key input with external services available', function() {
         beforeEach(function() {
+            cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
+                'fetchSignalKeys',
+            );
+
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
-            cy.wait('@fetchSignalKeys');
         });
 
         it('should show autocomplete with suggestions', function() {
@@ -88,6 +89,29 @@ describe('Search Form Integration Tests', function() {
                         });
                     });
             });
+        });
+    });
+
+    describe('when typing in text in Key input with external services unavailable', function() {
+        beforeEach(function() {
+            cy.route(
+                /\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/,
+                signalKeysExternalServiceUnavailableResponse,
+            ).as('signalKeysExternalServiceUnavailableResponse');
+            cy.get('[data-test="key-search-field"]').as('keyInput');
+            cy.get('@keyInput').type('a');
+            cy.wait('@signalKeysExternalServiceUnavailableResponse');
+        });
+
+        it('should not show any autocomplete with suggestions', function() {
+            cy.get('.spectrum-Popover.is-open').should('not.exist');
+            cy.get('.spectrum-SelectList-item').should('not.exist');
+        });
+
+        it('should show the in-line error message caused by the unavailable external services', function() {
+            const InlineErrorMessage = 'Key friendly names are not available.';
+            cy.get('[data-test="inline-error"]').should('be.visible');
+            cy.get('[data-test="inline-error"]').should('have.text', InlineErrorMessage);
         });
     });
 

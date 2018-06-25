@@ -24,5 +24,7 @@
         {
             "signalKey": "a7"
         }
-    ]
+    ],
+    "analyticsServiceAvailable": true,
+    "solrServiceAvailable": true
 }
