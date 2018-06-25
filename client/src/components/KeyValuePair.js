@@ -48,7 +48,6 @@ class KeyValuePair extends Component {
             .then(json => json.map(key => key.signalKey))
             .catch(error =>
                 this.setAutocompleteErrorMessage({
-                    externalServiceAvailable: true,
                     error: {
                         autocompleteError: true,
                         autocompleteErrorMessage: error.message,
@@ -89,7 +88,6 @@ class KeyValuePair extends Component {
             )
             .catch(error =>
                 this.setAutocompleteErrorMessage({
-                    externalServiceAvailable: true,
                     error: {
                         autocompleteError: true,
                         autocompleteErrorMessage: error.message,
