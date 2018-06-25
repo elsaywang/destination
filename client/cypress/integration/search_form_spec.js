@@ -110,9 +110,9 @@ describe('Search Form Integration Tests', function() {
         });
 
         it('should show the in-line error message caused by the unavailable external services', function() {
-            const InlineErrorMessage = 'Key friendly names are not available.';
+            const inlineErrorMessage = 'Key friendly names are not available.';
             cy.get('[data-test="inline-error"]').should('be.visible');
-            cy.get('[data-test="inline-error"]').should('have.text', InlineErrorMessage);
+            cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
         });
     });
 
