@@ -26,7 +26,7 @@ describe('formatKeyValuePair', () => {
 
         expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`"eVar1"==""`);
     });
-    it('should stringify empty key and value in quotation marks', () => {
+    it('should stringify empty key and empty value in quotation marks', () => {
         const keyValuePair = {
             key: '',
             value: '',
@@ -125,6 +125,21 @@ describe('stringifySignals', () => {
     });
     it('should stringify empty key-value pairs as an empty string', () => {
         expect(stringifySignals([])).toEqual('');
+    });
+    it('should stringify empty key and empty value as an empty string', () => {
+        expect(
+            stringifySignals([
+                {
+                    keyValuePairs: [
+                        {
+                            key: '',
+                            value: '',
+                            operator: '==',
+                        },
+                    ],
+                },
+            ]),
+        ).toEqual('');
     });
     describe('value formatting', () => {
         describe('when operator is textual', () => {

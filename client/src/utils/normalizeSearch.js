@@ -1,5 +1,12 @@
+import { isKeyValuePairEmpty } from './searchValidation';
 import { stringifySignal } from './stringifySignals';
 import { getDaysAgoUTCMidnight } from './dateRange';
+
+const normalizeSearchQuery = searchQuery => {
+    const search = stringifySignal(searchQuery);
+
+    return search && { search };
+};
 
 const normalizeStartDate = ({ viewRecordsFor, customStartDate }) => ({
     startDate: getDaysAgoUTCMidnight(
@@ -40,7 +47,7 @@ const normalizeFilterNewSignals = ({ filterNewSignals }) =>
     filterNewSignals && { filterNewSignals };
 
 export const normalizeSearch = search => ({
-    search: stringifySignal(search),
+    ...normalizeSearchQuery(search),
     ...normalizeStartDate(search),
     ...normalizeEndDate(search),
     ...normalizeSource(search),
