@@ -7,10 +7,10 @@ import {
     SELECT_DEFAULT_SORTING,
     CHANGE_SORTING_ORDER,
     CANCEL_SAVE_SEARCH,
-    GET_SAVED_SEARCH_LIMIT_FULFILLED,
     LOAD_MORE_SAVED_SEARCH,
     RESET_VISIBLE_SAVED_SEARCH,
 } from '../actions/savedSearch';
+import { FETCH_LIMITS_FULFILLED } from '../actions/limits';
 import { savedSearchPresets } from '../constants/savedSearchPresets';
 import {
     defaultSavedSearchLimit,
@@ -77,7 +77,7 @@ const saveSearch = handleActions(
 
 const limit = handleActions(
     {
-        [GET_SAVED_SEARCH_LIMIT_FULFILLED]: (state, action) => ({
+        [FETCH_LIMITS_FULFILLED]: (state, action) => ({
             ...state,
             limit: action.payload.maxSignalSavedSearches,
         }),
@@ -122,7 +122,7 @@ const handleLoadMoreSavedSearch = (state, action) => ({
 export default handleActions(
     {
         [GET_SAVED_SEARCH_FULFILLED]: handleSavedSearchList,
-        [GET_SAVED_SEARCH_LIMIT_FULFILLED]: handleSavedSearchListLimit,
+        [FETCH_LIMITS_FULFILLED]: handleSavedSearchListLimit,
         [LOAD_MORE_SAVED_SEARCH]: handleLoadMoreSavedSearch,
         [RESET_VISIBLE_SAVED_SEARCH]: handleLoadMoreSavedSearch,
         [SAVE_SEARCH_FULFILLED]: (state, action) => ({

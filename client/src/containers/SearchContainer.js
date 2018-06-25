@@ -4,6 +4,7 @@ import { selectSignals } from '../actions/selectSignals';
 import { populateSearchFields, clearSearchFields } from '../actions/savedSearchFields';
 import { getReportSuites } from '../actions/reportSuites';
 import { fetchUserRoles } from '../actions/permissions';
+import { fetchLimits } from '../actions/limits';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
@@ -69,7 +70,7 @@ class SearchContainer extends Component {
         if (!Object.keys(this.props.permissions).length) {
             this.props.fetchUserRoles();
         }
-        this.props.getSavedSearchLimit();
+        this.props.fetchLimits();
     }
 
     handleSignalTypeChange = sourceType => {
@@ -444,6 +445,7 @@ const actionCreators = {
     clearSearchFields,
     getReportSuites,
     fetchUserRoles,
+    fetchLimits,
 };
 
 export default connect(
