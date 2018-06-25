@@ -1,4 +1,5 @@
-const searchResultsResponse = require('../fixtures/emptySearchResults.json');
+const searchResultsResponse = require('../fixtures/searchResults.json');
+const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 const signalKeysResponse = require('../fixtures/signalKeys.json');
@@ -12,7 +13,7 @@ describe('Search Form Integration Tests', function() {
             '/portal/api/v1/users/self/annotations/aam-portal',
             savedSearchResponse.savedSearch,
         ).as('fetchSavedSearch');
-        cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+        cy.route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse).as(
             'fetchSearchResults',
         );
         cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
@@ -265,9 +266,85 @@ describe('Search Form Integration Tests', function() {
     });
 
     describe('Normalizing search form inputs into API request parameters', function() {
+        describe('Key-value pair inputs', () => {
+            describe('When one key-value pair with empty key and empty value is searched', () => {
+                it('`search` should be excluded', () => {
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.getRequestParams('@fetchSearchResults').then(
+                        ({ search }) => expect(search).to.be.undefined,
+                    );
+                });
+            });
+
+            describe('When multiple key-value pairs all with empty key and empty value are searched', () => {
+                it('`search` should be excluded', () => {
+                    cy.get('[data-test="add-button"]').click();
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.getRequestParams('@fetchSearchResults').then(
+                        ({ search }) => expect(search).to.be.undefined,
+                    );
+                });
+            });
+
+            describe('When multiple key-value pairs are searched and some have empty key and empty value', () => {
+                it('`search` should only include the non-empty key-value pairs', () => {
+                    cy.get('[data-test="key-search-field"]').type('a');
+                    cy.get('[data-test="value-search"]').type('b');
+
+                    cy.get('[data-test="add-button"]').click();
+                    cy.get('[data-test="add-button"]').click();
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.getRequestParams('@fetchSearchResults').then(({ search }) =>
+                        expect(search).to.equal('"a"=="b"'),
+                    );
+                });
+            });
+        });
+
+        describe('Signal Status dropdown', () => {
+            describe('When the default "All" option is selected', () => {
+                it('`signalStatus` should be excluded', () => {
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.getRequestParams('@fetchSearchResults').then(
+                        ({ signalStatus }) => expect(signalStatus).to.be.undefined,
+                    );
+                });
+            });
+
+            describe('When "Unused Signals" or "Signals Included In Traits" are selected', () => {
+                it('`signalStatus` should be the dropdown option value', () => {
+                    cy.get('.signal-status')
+                        .click()
+                        .get('[role=option]:nth-of-type(2)')
+                        .click();
+
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.getRequestParams('@fetchSearchResults').then(({ signalStatus }) =>
+                        expect(signalStatus).to.equal('UNUSED'),
+                    );
+
+                    cy.get('.signal-status')
+                        .click()
+                        .get('[role=option]:last')
+                        .click();
+
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.getRequestParams('@fetchSearchResults').then(({ signalStatus }) =>
+                        expect(signalStatus).to.equal('USED'),
+                    );
+                });
+            });
+        });
+
         describe('View Records For dropdown', function() {
             describe('When a date range preset is selected (ex: "Last X Days")', function() {
-                it('`startDate` should be X days ago at UTC midnight in ms and endDate should be null', function() {
+                it('`startDate` should be X days ago at UTC midnight in ms and endDate should be excluded', function() {
                     const expectedStartDates = [
                         1525046400000, // 1 day ago (April 30), UTC midnight
                         1524528000000, // 7 days ago (April 24), UTC midnight
@@ -287,7 +364,7 @@ describe('Search Form Integration Tests', function() {
                                     .getRequestParams('@fetchSearchResults')
                                     .then(({ startDate, endDate }) => {
                                         expect(startDate).to.equal(expectedStartDates[i]);
-                                        expect(endDate).to.equal(null);
+                                        expect(endDate).to.be.undefined;
                                     }),
                             );
                     }
@@ -319,6 +396,95 @@ describe('Search Form Integration Tests', function() {
                                     expect(endDate).to.equal(expectedEndDate);
                                 }),
                         );
+                });
+            });
+        });
+
+        describe('Source filters', () => {
+            beforeEach(() => {
+                cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                    'fetchSearchResults',
+                );
+            });
+
+            describe('When no source filters are selected', () => {
+                it('`source` should be excluded', () => {
+                    cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
+
+                    cy.getRequestParams('@fetchSearchResults').then(
+                        ({ source }) => expect(source).to.be.undefined,
+                    );
+                });
+            });
+
+            describe('When only a non-default signal type filter is selected', () => {
+                it('`source` should be included and only contain `sourceType`', () => {
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                        'fetchFilteredSearchResults',
+                    );
+
+                    cy.get('[data-test="alf-signal-type-filter"]').click();
+                    cy.wait('@fetchFilteredSearchResults');
+
+                    cy.getRequestParams('@fetchFilteredSearchResults').then(
+                        ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
+                            expect(sourceType).to.equal('ALF');
+                            expect(reportSuiteIds).to.be.undefined;
+                            expect(dataSourceIds).to.be.undefined;
+                        },
+                    );
+                });
+            });
+
+            describe('When a Report Suite is selected in "advanced search"', () => {
+                it('`source` should be included and contain `sourceType` and `reportSuiteIds`', () => {
+                    cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                        'fetchAdvancedSearchResults',
+                    );
+
+                    cy.get('[data-test="advanced-search-toggle"]').click();
+                    cy.wait('@fetchReportSuites');
+                    cy.get('[data-test="advanced-search-filter"]').type('te{enter}');
+                    cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchAdvancedSearchResults');
+
+                    cy.getRequestParams('@fetchAdvancedSearchResults').then(
+                        ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
+                            expect(sourceType).to.equal('ANALYTICS');
+                            expect(reportSuiteIds[0]).to.equal(
+                                'test-report-suite-edited1505153440289',
+                            );
+                            expect(dataSourceIds).to.be.undefined;
+                        },
+                    );
+                });
+            });
+
+            // TODO: Unskip this test once "Onboarded Record" filter is implemented
+            describe.skip('When an Onboarded Record is selected', () => {
+                it('`source` should be included and contain `sourceType` and `dataSourceIds`', () => {
+                    cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
+
+                    cy.get('[data-test="onboarded-signal-type-filter"]').click();
+
+                    cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                        'fetchOnboardedSearchResults',
+                    );
+
+                    cy.get('[data-test="onboarded-record-filter"]').type('t{enter}');
+                    cy.wait('@fetchOnboardedSearchResults');
+
+                    cy.getRequestParams('@fetchOnboardedSearchResults').then(
+                        ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
+                            expect(sourceType).to.equal('ONBOARDED');
+                            expect(reportSuiteIds).to.be.undefined;
+                            expect(dataSourceIds[0]).to.equal('test onboarded record');
+                        },
+                    );
                 });
             });
         });

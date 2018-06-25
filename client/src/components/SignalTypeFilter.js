@@ -25,7 +25,10 @@ class SignalTypeFilter extends Component {
     };
 
     renderTab = option => (
-        <Tab key={option.value} selected={this.props.signalType === option.value}>
+        <Tab
+            key={option.value}
+            selected={this.props.signalType === option.value}
+            data-test={`${option.value.toLowerCase()}-signal-type-filter`}>
             {option.label}
         </Tab>
     );

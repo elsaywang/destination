@@ -1,36 +1,57 @@
+import { isKeyValuePairEmpty } from './searchValidation';
 import { stringifySignal } from './stringifySignals';
 import { getDaysAgoUTCMidnight } from './dateRange';
 
-const normalizeStartDate = ({ viewRecordsFor, customStartDate }) =>
-    getDaysAgoUTCMidnight(viewRecordsFor === 'custom' ? customStartDate : viewRecordsFor);
+const normalizeSearchQuery = searchQuery => {
+    const search = stringifySignal(searchQuery);
+
+    return search && { search };
+};
+
+const normalizeStartDate = ({ viewRecordsFor, customStartDate }) => ({
+    startDate: getDaysAgoUTCMidnight(
+        viewRecordsFor === 'custom' ? customStartDate : viewRecordsFor,
+    ),
+});
 
 const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
-    viewRecordsFor === 'custom' ? getDaysAgoUTCMidnight(customEndDate) : null;
+    viewRecordsFor === 'custom' && { endDate: getDaysAgoUTCMidnight(customEndDate) };
 
-const normalizeSourceType = ({ source }) =>
-    source.sourceType === 'ALL' ? null : source.sourceType;
+const normalizeSourceType = ({ source: { sourceType } }) => sourceType !== 'ALL' && { sourceType };
 
-const normalizeDataSourceIds = ({ advanced, source }) =>
-    advanced && source.dataSourceIds ? source.dataSourceIds : null;
+const normalizeDataSourceIds = ({ source: { dataSourceIds } }) =>
+    dataSourceIds && dataSourceIds.length && { dataSourceIds };
 
-const normalizeReportSuiteIds = ({ advanced, source }) =>
-    advanced && source.reportSuiteIds ? source.reportSuiteIds : null;
+const normalizeReportSuiteIds = ({ advanced, source: { reportSuiteIds } }) =>
+    advanced && reportSuiteIds && reportSuiteIds.length && { reportSuiteIds };
 
-const normalizeSignalStatus = ({ signalStatus }) => (signalStatus === 'ALL' ? null : signalStatus);
+const normalizeSource = search => {
+    const sourceType = normalizeSourceType(search);
+    const dataSourceIds = normalizeDataSourceIds(search);
+    const reportSuiteIds = normalizeReportSuiteIds(search);
+
+    return (
+        (sourceType || dataSourceIds || reportSuiteIds) && {
+            source: {
+                ...sourceType,
+                ...dataSourceIds,
+                ...reportSuiteIds,
+            },
+        }
+    );
+};
+
+const normalizeSignalStatus = ({ signalStatus }) => signalStatus !== 'ALL' && { signalStatus };
 
 const normalizeFilterNewSignals = ({ filterNewSignals }) =>
     filterNewSignals && { filterNewSignals };
 
 export const normalizeSearch = search => ({
-    search: stringifySignal(search),
-    startDate: normalizeStartDate(search),
-    endDate: normalizeEndDate(search),
-    source: {
-        sourceType: normalizeSourceType(search),
-        dataSourceIds: normalizeDataSourceIds(search),
-        reportSuiteIds: normalizeReportSuiteIds(search),
-    },
-    signalStatus: normalizeSignalStatus(search),
+    ...normalizeSearchQuery(search),
+    ...normalizeStartDate(search),
+    ...normalizeEndDate(search),
+    ...normalizeSource(search),
+    ...normalizeSignalStatus(search),
     minEventFires: search.minEventFires,
     ...normalizeFilterNewSignals(search),
     descending: true,

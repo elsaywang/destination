@@ -1,5 +1,5 @@
 /* eslint no-useless-escape:0 */
-import { isComparisonOperator } from './searchValidation';
+import { isComparisonOperator, isKeyValuePairEmpty } from './searchValidation';
 import { isEmpty } from './index';
 
 const orDelimiter = ' OR ';
@@ -9,6 +9,10 @@ const formatString = value => (isEmpty(value) ? String.raw`""` : value);
 const formatOperator = operator => (operator === 'contains' ? ` ${operator} ` : operator);
 
 export const stringifyKeyValuePair = ({ key = '', operator = '==', value = '' }) => {
+    if (isKeyValuePairEmpty({ key, value })) {
+        return '';
+    }
+
     const normalizedKey = `\"${key}\"`;
     const formattedKey = formatString(normalizedKey);
     const normalizedValue = isComparisonOperator(operator) ? value : `\"${value}\"`;
@@ -27,7 +31,10 @@ export const formatKeyValuePair = ({ key = '', operator = '==', value = '' }) =>
 };
 
 export const stringifySignal = signal =>
-    signal.keyValuePairs.map(stringifyKeyValuePair).join(andDelimiter);
+    signal.keyValuePairs
+        .filter(kvp => !isKeyValuePairEmpty(kvp))
+        .map(stringifyKeyValuePair)
+        .join(andDelimiter);
 
 export const stringifySignals = signals => signals.map(stringifySignal).join(orDelimiter);
 
