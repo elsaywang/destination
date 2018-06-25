@@ -31,7 +31,10 @@ export const formatKeyValuePair = ({ key = '', operator = '==', value = '' }) =>
 };
 
 export const stringifySignal = signal =>
-    signal.keyValuePairs.map(stringifyKeyValuePair).join(andDelimiter);
+    signal.keyValuePairs
+        .filter(kvp => !isKeyValuePairEmpty(kvp))
+        .map(stringifyKeyValuePair)
+        .join(andDelimiter);
 
 export const stringifySignals = signals => signals.map(stringifySignal).join(orDelimiter);
 

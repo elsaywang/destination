@@ -141,6 +141,26 @@ describe('stringifySignals', () => {
             ]),
         ).toEqual('');
     });
+    it('should stringify multiple key-value pairs with empty key and empty value as an empty string', () => {
+        expect(
+            stringifySignals([
+                {
+                    keyValuePairs: [
+                        {
+                            key: '',
+                            value: '',
+                            operator: '==',
+                        },
+                        {
+                            key: '',
+                            value: '',
+                            operator: '==',
+                        },
+                    ],
+                },
+            ]),
+        ).toEqual('');
+    });
     describe('value formatting', () => {
         describe('when operator is textual', () => {
             it('should wrap the value with double quotes if it is a string', () => {
