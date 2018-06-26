@@ -32,7 +32,7 @@ class KeyValuePair extends Component {
         return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
             .then(response => {
                 if (response.ok) {
-                    this.setAutocompleteErrorMessage({});
+                    this.setAutocompleteErrorMessage();
 
                     return response.json();
                 }
@@ -64,7 +64,7 @@ class KeyValuePair extends Component {
         )
             .then(response => {
                 if (response.ok) {
-                    this.setAutocompleteErrorMessage({});
+                    this.setAutocompleteErrorMessage();
 
                     return response.json();
                 }
@@ -99,7 +99,7 @@ class KeyValuePair extends Component {
     setAutocompleteErrorMessage = ({
         externalServiceAvailable = true,
         error = this.getInitialAutocompleteError(),
-    }) => {
+    } = {}) => {
         if (isKeyEmptyWithValue(this.props.pair)) {
             this.setState({
                 ...error,
@@ -121,7 +121,7 @@ class KeyValuePair extends Component {
 
     onValueChange = value => {
         this.props.onValueChange(this.props.pair.id, value);
-        this.setAutocompleteErrorMessage({});
+        this.setAutocompleteErrorMessage();
     };
 
     render() {
