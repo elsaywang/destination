@@ -7,7 +7,7 @@ export const topUnusedSignals = {
     minEventFires: 1000,
     filterNewSignals: false,
     name: 'Top Unused Signals',
-    signalStatus: 'ALL',
+    signalStatus: 'UNUSED',
     sortBy: 'percentageChange',
     source: {
         dataSourceIds: [],
