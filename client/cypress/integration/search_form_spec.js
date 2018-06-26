@@ -73,6 +73,7 @@ describe('Search Form Integration Tests', function() {
 
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
+            cy.wait('@fetchSignalKeys');
         });
 
         it('should show autocomplete with suggestions', function() {
@@ -131,14 +132,36 @@ describe('Search Form Integration Tests', function() {
     });
 
     describe('when typing in text in Value input', function() {
-        it('should allow you to type a value in the field', function() {
-            const value = '1';
+        beforeEach(function() {
+            cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
+                'fetchSignalKeys',
+            );
+            cy.get('[data-test="key-search-field"]').as('keyInput');
+            cy.get('@keyInput').type('a');
+            cy.wait('@fetchSignalKeys');
+        });
 
+        it('should allow you to type a value in the field after Key field has value', function() {
+            const value = '1';
             cy.get('[data-test="value-search"]').type(value);
 
             cy.get('[data-test="value-search"]').should(function($text) {
                 expect($text.val()).to.contains(value);
             });
+        });
+
+        it('should not show any in-line error message', function() {
+            cy.get('[data-test="inline-error"]').should('not.exist');
+        });
+
+        it('should show in-line error message `Key cannot be empty when value is specified.` if Key input field is clear and type value in Value field', function() {
+            const value = '1';
+            const inlineErrorMessage = 'Key cannot be empty when value is specified.';
+            cy.get('@keyInput').clear();
+            cy.get('[data-test="value-search"]').type(value);
+
+            cy.get('[data-test="inline-error"]').should('be.visible');
+            cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
         });
     });
 
