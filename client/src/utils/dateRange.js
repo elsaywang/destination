@@ -5,6 +5,7 @@ import {
     validDateRangeDays,
     defaultDateRangeDays,
 } from '../constants/dateRangeConstants';
+import { defaultMaxSignalRetentionDays } from '../constants/limitConstants';
 
 /**
  * Most utils in this file are adapted from trait_builder/create.js  and adobe_am_utils.js in the portal.
@@ -49,4 +50,29 @@ export const boundDate = ({ date, min, max }) => {
     const upperBoundedDate = moment.min(lowerBoundedDate, moment.utc(max));
 
     return upperBoundedDate;
+};
+
+export const getDateRangesWithinRetentionPolicy = (
+    maxSignalRetentionDays = defaultMaxSignalRetentionDays,
+) => validDateRangeDays.filter(dateRangeDays => maxSignalRetentionDays >= dateRangeDays);
+
+export const getDateRangeOptions = (dateRangeDays = validDateRangeDays) => [
+    ...dateRangeDays.map(days => ({
+        label: `Last ${days} Day${days === 1 ? '' : 's'}`,
+        value: dateRangeDaysToPreset(days),
+    })),
+    {
+        label: 'Custom Date Range',
+        value: 'custom',
+    },
+];
+
+export const getDateRangeOptionsWithinRetentionPolicy = (
+    maxSignalRetentionDays = defaultMaxSignalRetentionDays,
+) => getDateRangeOptions(getDateRangesWithinRetentionPolicy(maxSignalRetentionDays));
+
+export const getDateRangeLabel = dateRangePreset => {
+    const dateRangeOption = getDateRangeOptions().find(option => option.value === dateRangePreset);
+
+    return dateRangeOption ? dateRangeOption.label : '';
 };

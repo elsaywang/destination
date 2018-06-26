@@ -19,6 +19,7 @@ import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
+import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
@@ -308,6 +309,7 @@ class SearchContainer extends Component {
                             errors={this.props.errors}
                             eventFiresMinimum={defaultEventFiresMinimum}
                             eventFiresStep={defaultEventFiresStep}
+                            maxSignalRetentionDays={this.props.maxSignalRetentionDays}
                         />
                     </GridColumn>
                 </GridRow>
@@ -424,6 +426,7 @@ const mapStateToProps = ({
     reportSuites,
     errors,
     permissions,
+    traitBackfill,
 }) => ({
     results,
     savedSearchFields,
@@ -433,6 +436,7 @@ const mapStateToProps = ({
     isSavedSearchLimitReached: isSavedSearchLimitReached(savedSearch),
     isSavedSearchLoaded: savedSearch.isLoaded,
     finalizedSavedSearchList: getNormalizedSavedSearchList(savedSearch),
+    maxSignalRetentionDays: getMaxSignalRetentionDays(traitBackfill),
     reportSuites,
     errors,
     permissions,

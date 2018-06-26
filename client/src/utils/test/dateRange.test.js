@@ -40,20 +40,12 @@ describe('date range utils', () => {
             expect(isDateRangePreset('30D')).toBeTruthy();
         });
 
-        it('should return false for 60D', () => {
-            expect(isDateRangePreset('60D')).toBeFalsy();
+        it('should return true for 180D', () => {
+            expect(isDateRangePreset('180D')).toBeTruthy();
         });
 
-        it('should return false for 90D', () => {
-            expect(isDateRangePreset('90D')).toBeFalsy();
-        });
-
-        it('should return false for 180D', () => {
-            expect(isDateRangePreset('180D')).toBeFalsy();
-        });
-
-        it('should return false for 365D', () => {
-            expect(isDateRangePreset('365D')).toBeFalsy();
+        it('should return true for 365D', () => {
+            expect(isDateRangePreset('365D')).toBeTruthy();
         });
     });
 
@@ -70,7 +62,7 @@ describe('date range utils', () => {
         });
 
         it('should return the default date range preset on invalid or unaccepted date range days', () => {
-            expect(dateRangeDaysToPreset(180)).toEqual('7D'); // This should fail when working on AAM-37267 and AAM-37270
+            expect(dateRangeDaysToPreset(12345)).toEqual('7D');
         });
     });
 
@@ -87,7 +79,7 @@ describe('date range utils', () => {
         });
 
         it('should return the default date range days on invalid or unaccepted date range presets', () => {
-            expect(dateRangePresetToDays('180D')).toEqual(7); // This should fail when working on AAM-37267 and AAM-37270
+            expect(dateRangePresetToDays('12345D')).toEqual(7);
         });
     });
 

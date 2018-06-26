@@ -94,6 +94,7 @@ ShallowWrapper {
     isSavedSearchLoaded={false}
     loadMore={[Function]}
     loadMoreSavedSearch={[Function]}
+    maxSignalRetentionDays={30}
     permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
@@ -186,6 +187,7 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              maxSignalRetentionDays={30}
                               minEventFires={1000}
                               name=""
                               onAddClick={[Function]}
@@ -362,6 +364,7 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        maxSignalRetentionDays={30}
                         minEventFires={1000}
                         name=""
                         onAddClick={[Function]}
@@ -439,6 +442,7 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              maxSignalRetentionDays={30}
               minEventFires={1000}
               name=""
               onAddClick={[Function]}
@@ -510,6 +514,7 @@ ShallowWrapper {
                   "value": "",
                 },
               ],
+              "maxSignalRetentionDays": 30,
               "minEventFires": 1000,
               "name": "",
               "onAddClick": [Function],
@@ -973,6 +978,7 @@ ShallowWrapper {
                                                             },
                                                           ]
                                     }
+                                    maxSignalRetentionDays={30}
                                     minEventFires={1000}
                                     name=""
                                     onAddClick={[Function]}
@@ -1149,6 +1155,7 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            maxSignalRetentionDays={30}
                             minEventFires={1000}
                             name=""
                             onAddClick={[Function]}
@@ -1226,6 +1233,7 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                maxSignalRetentionDays={30}
                 minEventFires={1000}
                 name=""
                 onAddClick={[Function]}
@@ -1297,6 +1305,7 @@ ShallowWrapper {
                     "value": "",
                   },
                 ],
+                "maxSignalRetentionDays": 30,
                 "minEventFires": 1000,
                 "name": "",
                 "onAddClick": [Function],
@@ -1823,6 +1832,7 @@ ShallowWrapper {
     isSavedSearchLoaded={false}
     loadMore={[Function]}
     loadMoreSavedSearch={[Function]}
+    maxSignalRetentionDays={30}
     permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
@@ -1912,6 +1922,7 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              maxSignalRetentionDays={30}
                               minEventFires={1000}
                               name=""
                               onAddClick={[Function]}
@@ -2088,6 +2099,7 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        maxSignalRetentionDays={30}
                         minEventFires={1000}
                         name=""
                         onAddClick={[Function]}
@@ -2165,6 +2177,7 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              maxSignalRetentionDays={30}
               minEventFires={1000}
               name=""
               onAddClick={[Function]}
@@ -2236,6 +2249,7 @@ ShallowWrapper {
                   "value": "",
                 },
               ],
+              "maxSignalRetentionDays": 30,
               "minEventFires": 1000,
               "name": "",
               "onAddClick": [Function],
@@ -2699,6 +2713,7 @@ ShallowWrapper {
                                                             },
                                                           ]
                                     }
+                                    maxSignalRetentionDays={30}
                                     minEventFires={1000}
                                     name=""
                                     onAddClick={[Function]}
@@ -2875,6 +2890,7 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            maxSignalRetentionDays={30}
                             minEventFires={1000}
                             name=""
                             onAddClick={[Function]}
@@ -2952,6 +2968,7 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                maxSignalRetentionDays={30}
                 minEventFires={1000}
                 name=""
                 onAddClick={[Function]}
@@ -3023,6 +3040,7 @@ ShallowWrapper {
                     "value": "",
                   },
                 ],
+                "maxSignalRetentionDays": 30,
                 "minEventFires": 1000,
                 "name": "",
                 "onAddClick": [Function],
@@ -3549,6 +3567,7 @@ ShallowWrapper {
     isSavedSearchLoaded={false}
     loadMore={[Function]}
     loadMoreSavedSearch={[Function]}
+    maxSignalRetentionDays={30}
     permissions={Object {}}
     populateSearchFields={[Function]}
     reportSuites={Array []}
@@ -3638,6 +3657,7 @@ ShallowWrapper {
                                                   },
                                                 ]
                               }
+                              maxSignalRetentionDays={30}
                               minEventFires={1000}
                               name=""
                               onAddClick={[Function]}
@@ -3814,6 +3834,7 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        maxSignalRetentionDays={30}
                         minEventFires={1000}
                         name=""
                         onAddClick={[Function]}
@@ -3891,6 +3912,7 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              maxSignalRetentionDays={30}
               minEventFires={1000}
               name=""
               onAddClick={[Function]}
@@ -3962,6 +3984,7 @@ ShallowWrapper {
                   "value": "",
                 },
               ],
+              "maxSignalRetentionDays": 30,
               "minEventFires": 1000,
               "name": "",
               "onAddClick": [Function],
@@ -4425,6 +4448,7 @@ ShallowWrapper {
                                                             },
                                                           ]
                                     }
+                                    maxSignalRetentionDays={30}
                                     minEventFires={1000}
                                     name=""
                                     onAddClick={[Function]}
@@ -4601,6 +4625,7 @@ ShallowWrapper {
                                                         },
                                                       ]
                             }
+                            maxSignalRetentionDays={30}
                             minEventFires={1000}
                             name=""
                             onAddClick={[Function]}
@@ -4678,6 +4703,7 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                maxSignalRetentionDays={30}
                 minEventFires={1000}
                 name=""
                 onAddClick={[Function]}
@@ -4749,6 +4775,7 @@ ShallowWrapper {
                     "value": "",
                   },
                 ],
+                "maxSignalRetentionDays": 30,
                 "minEventFires": 1000,
                 "name": "",
                 "onAddClick": [Function],

@@ -8,7 +8,7 @@ import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
 import Switch from '@react/react-spectrum/Switch';
 import signalStatuses from '../../constants/signalStatusOptions';
-import { dateRangeOptions } from '../../constants/dateRangeOptions';
+import { getDateRangeOptionsWithinRetentionPolicy } from '../../utils/dateRange';
 import { isFormValid } from '../../utils/searchValidation';
 import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
@@ -126,7 +126,7 @@ describe('<Search /> component', () => {
             const viewRecordsOptions = viewRecordsSelect.props().options;
 
             expect(viewRecordsSelect.exists()).toBe(true);
-            expect(viewRecordsOptions).toMatchObject(dateRangeOptions);
+            expect(viewRecordsOptions).toMatchObject(getDateRangeOptionsWithinRetentionPolicy());
         });
 
         it('renders Minimum Counts input', () => {

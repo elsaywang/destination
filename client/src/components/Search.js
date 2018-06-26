@@ -13,12 +13,14 @@ import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
 import InlineErrorMessage from './common/InlineErrorMessage';
 import styles from './Search.css';
-
-import { dateRangeOptions as viewRecordsOptions } from '../constants/dateRangeOptions';
 import statusOptions from '../constants/signalStatusOptions';
 import { isFormValid } from '../utils/searchValidation';
+import { getDateRangeOptionsWithinRetentionPolicy } from '../utils/dateRangeOptions';
 
 class Search extends Component {
+    getViewRecordsOptions = () =>
+        getDateRangeOptionsWithinRetentionPolicy(this.props.maxSignalRetentionDays);
+
     renderKVPFields = pair => {
         const {
             keyValuePairs,
@@ -164,7 +166,7 @@ class Search extends Component {
                                                     data-test="view-records"
                                                     value={this.props.viewRecordsFor}
                                                     onChange={this.props.onViewRecordsChange}
-                                                    options={viewRecordsOptions}
+                                                    options={this.getViewRecordsOptions()}
                                                     quiet
                                                 />
                                             </Label>
