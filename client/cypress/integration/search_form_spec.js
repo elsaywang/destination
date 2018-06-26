@@ -270,6 +270,7 @@ describe('Search Form Integration Tests', function() {
             describe('When one key-value pair with empty key and empty value is searched', () => {
                 it('`search` should be excluded', () => {
                     cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
 
                     cy.getRequestParams('@fetchSearchResults').then(
                         ({ search }) => expect(search).to.be.undefined,
@@ -281,6 +282,7 @@ describe('Search Form Integration Tests', function() {
                 it('`search` should be excluded', () => {
                     cy.get('[data-test="add-button"]').click();
                     cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
 
                     cy.getRequestParams('@fetchSearchResults').then(
                         ({ search }) => expect(search).to.be.undefined,
@@ -296,6 +298,7 @@ describe('Search Form Integration Tests', function() {
                     cy.get('[data-test="add-button"]').click();
                     cy.get('[data-test="add-button"]').click();
                     cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
 
                     cy.getRequestParams('@fetchSearchResults').then(({ search }) =>
                         expect(search).to.equal('"a"=="b"'),
@@ -308,6 +311,7 @@ describe('Search Form Integration Tests', function() {
             describe('When the default "All" option is selected', () => {
                 it('`signalStatus` should be excluded', () => {
                     cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
 
                     cy.getRequestParams('@fetchSearchResults').then(
                         ({ signalStatus }) => expect(signalStatus).to.be.undefined,
@@ -323,6 +327,7 @@ describe('Search Form Integration Tests', function() {
                         .click();
 
                     cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
 
                     cy.getRequestParams('@fetchSearchResults').then(({ signalStatus }) =>
                         expect(signalStatus).to.equal('UNUSED'),
@@ -334,6 +339,7 @@ describe('Search Form Integration Tests', function() {
                         .click();
 
                     cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchSearchResults');
 
                     cy.getRequestParams('@fetchSearchResults').then(({ signalStatus }) =>
                         expect(signalStatus).to.equal('USED'),
