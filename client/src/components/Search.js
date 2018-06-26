@@ -88,6 +88,7 @@ class Search extends Component {
                 customEndDate={this.props.customEndDate}
                 onCustomStartDateChange={this.props.onCustomStartDateChange}
                 onCustomEndDateChange={this.props.onCustomEndDateChange}
+                minCustomStartDateDaysAgo={this.props.maxSignalRetentionDays}
             />
         );
     };

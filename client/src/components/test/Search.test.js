@@ -73,6 +73,7 @@ describe('<Search /> component', () => {
             isCustomDateRangeEnabled={false}
             eventFiresMinimum={0}
             eventFiresStep={1000}
+            maxSignalRetentionDays={30}
         />,
     );
 
@@ -205,7 +206,9 @@ describe('<Search /> component', () => {
         });
 
         it('renders <CustomDateRange /> when the `isCustomDateRangeEnabled` prop is true', () => {
-            const newWrapper = shallow(<Search {...state} isCustomDateRangeEnabled={true} />);
+            const newWrapper = shallow(
+                <Search {...state} isCustomDateRangeEnabled={true} maxSignalRetentionDays={30} />,
+            );
 
             expect(newWrapper.find(CustomDateRange).exists()).toBeTruthy();
         });

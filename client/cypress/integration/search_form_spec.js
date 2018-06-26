@@ -3,6 +3,7 @@ const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json'
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 const signalKeysResponse = require('../fixtures/signalKeys.json');
+const limitsResponse = require('../fixtures/limits.json');
 const signalKeysExternalServiceUnavailableResponse = require('../fixtures/signalKeysWithExternalServiceUnavailable.json');
 
 describe('Search Form Integration Tests', function() {
@@ -18,6 +19,7 @@ describe('Search Form Integration Tests', function() {
             'fetchSearchResults',
         );
         cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
+        cy.route('/portal/api/v1/signals/limits', limitsResponse).as('fetchLimits');
 
         cy.visit('#/search');
     });
@@ -309,6 +311,103 @@ describe('Search Form Integration Tests', function() {
             cy.get('.view-records').should('contain', '7 Days');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
             cy.get('[data-test="signals-table"]').should('have.length', 0);
+        });
+    });
+
+    describe('Enhancements to date range search based on max signal retention days', () => {
+        describe('"View Records For" dropdown options', () => {
+            it('should include default options, but should not include "Last 180 Days" or "Last 365 Days" by default', () => {
+                cy.get('.view-records').click();
+
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 1 Day')
+                    .should('exist');
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 7 Days')
+                    .should('exist');
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 14 Days')
+                    .should('exist');
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 30 Days')
+                    .should('exist');
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Custom Date Range')
+                    .should('exist');
+
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 180 Days')
+                    .should('not.exist');
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 365 Days')
+                    .should('not.exist');
+            });
+
+            it('should include "Last 180 Days" when `maxSignalRetentionDays` is 180', () => {
+                cy.route('/portal/api/v1/signals/limits', {
+                    maxSignalRetentionDays: 180,
+                }).as('fetchLimits');
+                cy.reload();
+                cy.get('.view-records').click();
+
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 180 Days')
+                    .should('exist');
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 365 Days')
+                    .should('not.exist');
+            });
+
+            it('should include "Last 365 Days" when `maxSignalRetentionDays` is 365', () => {
+                cy.route('/portal/api/v1/signals/limits', {
+                    maxSignalRetentionDays: 365,
+                }).as('fetchLimits');
+                cy.reload();
+                cy.get('.view-records').click();
+
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 180 Days')
+                    .should('exist');
+                cy.get('.spectrum-SelectList-item')
+                    .contains('Last 365 Days')
+                    .should('exist');
+            });
+        });
+
+        describe('Custom Date Range', () => {
+            const openCustomStartDateCalendar = () => {
+                cy.get('.view-records')
+                    .click()
+                    .get('.spectrum-SelectList-item:last')
+                    .click();
+                cy.get('.custom-start-date .spectrum-FieldButton').click();
+                cy.get('.spectrum-Calendar').as('customStartDateCalendar');
+            };
+
+            it('should have a min start date of 30 days ago by default', () => {
+                openCustomStartDateCalendar();
+                cy.get('@customStartDateCalendar').should('have.attr', 'min', '2018-04-01');
+            });
+
+            it('should have a min start date of 180 days ago when `maxSignalRetentionDays` is 180', () => {
+                cy.route('/portal/api/v1/signals/limits', {
+                    maxSignalRetentionDays: 180,
+                }).as('fetchLimits');
+                cy.reload();
+                openCustomStartDateCalendar();
+
+                cy.get('@customStartDateCalendar').should('have.attr', 'min', '2017-11-02');
+            });
+
+            it('should have a min start date of 365 days ago when `maxSignalRetentionDays` is 365', () => {
+                cy.route('/portal/api/v1/signals/limits', {
+                    maxSignalRetentionDays: 365,
+                }).as('fetchLimits');
+                cy.reload();
+                openCustomStartDateCalendar();
+
+                cy.get('@customStartDateCalendar').should('have.attr', 'min', '2017-05-01');
+            });
         });
     });
 

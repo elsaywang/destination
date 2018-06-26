@@ -1,0 +1,4 @@
+{
+    "maxSignalRetentionDays": 30,
+    "maxSignalSavedSearches": 10
+}
