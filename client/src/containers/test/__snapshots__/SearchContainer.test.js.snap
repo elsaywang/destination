@@ -49,7 +49,7 @@ ShallowWrapper {
               "minEventFires": 1000,
               "name": "Top Unused Signals",
               "presetId": "top-unused-signals",
-              "signalStatus": "ALL",
+              "signalStatus": "UNUSED",
               "sortBy": "percentageChange",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -75,7 +75,7 @@ ShallowWrapper {
               "minEventFires": 1000,
               "name": "New Unused Signals",
               "presetId": "new-unused-signals",
-              "signalStatus": "ALL",
+              "signalStatus": "UNUSED",
               "sortBy": "percentageChange",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -257,7 +257,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -283,7 +283,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -586,7 +586,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -612,7 +612,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -669,7 +669,7 @@ ShallowWrapper {
                                                           "minEventFires": 1000,
                                                           "name": "Top Unused Signals",
                                                           "presetId": "top-unused-signals",
-                                                          "signalStatus": "ALL",
+                                                          "signalStatus": "UNUSED",
                                                           "sortBy": "percentageChange",
                                                           "source": Object {
                                                             "dataSourceIds": Array [],
@@ -695,7 +695,7 @@ ShallowWrapper {
                                                           "minEventFires": 1000,
                                                           "name": "New Unused Signals",
                                                           "presetId": "new-unused-signals",
-                                                          "signalStatus": "ALL",
+                                                          "signalStatus": "UNUSED",
                                                           "sortBy": "percentageChange",
                                                           "source": Object {
                                                             "dataSourceIds": Array [],
@@ -748,7 +748,7 @@ ShallowWrapper {
                                                         "minEventFires": 1000,
                                                         "name": "Top Unused Signals",
                                                         "presetId": "top-unused-signals",
-                                                        "signalStatus": "ALL",
+                                                        "signalStatus": "UNUSED",
                                                         "sortBy": "percentageChange",
                                                         "source": Object {
                                                           "dataSourceIds": Array [],
@@ -774,7 +774,7 @@ ShallowWrapper {
                                                         "minEventFires": 1000,
                                                         "name": "New Unused Signals",
                                                         "presetId": "new-unused-signals",
-                                                        "signalStatus": "ALL",
+                                                        "signalStatus": "UNUSED",
                                                         "sortBy": "percentageChange",
                                                         "source": Object {
                                                           "dataSourceIds": Array [],
@@ -824,7 +824,7 @@ ShallowWrapper {
                       "minEventFires": 1000,
                       "name": "Top Unused Signals",
                       "presetId": "top-unused-signals",
-                      "signalStatus": "ALL",
+                      "signalStatus": "UNUSED",
                       "sortBy": "percentageChange",
                       "source": Object {
                         "dataSourceIds": Array [],
@@ -850,7 +850,7 @@ ShallowWrapper {
                       "minEventFires": 1000,
                       "name": "New Unused Signals",
                       "presetId": "new-unused-signals",
-                      "signalStatus": "ALL",
+                      "signalStatus": "UNUSED",
                       "sortBy": "percentageChange",
                       "source": Object {
                         "dataSourceIds": Array [],
@@ -1044,7 +1044,7 @@ ShallowWrapper {
                                                                           "minEventFires": 1000,
                                                                           "name": "Top Unused Signals",
                                                                           "presetId": "top-unused-signals",
-                                                                          "signalStatus": "ALL",
+                                                                          "signalStatus": "UNUSED",
                                                                           "sortBy": "percentageChange",
                                                                           "source": Object {
                                                                             "dataSourceIds": Array [],
@@ -1070,7 +1070,7 @@ ShallowWrapper {
                                                                           "minEventFires": 1000,
                                                                           "name": "New Unused Signals",
                                                                           "presetId": "new-unused-signals",
-                                                                          "signalStatus": "ALL",
+                                                                          "signalStatus": "UNUSED",
                                                                           "sortBy": "percentageChange",
                                                                           "source": Object {
                                                                             "dataSourceIds": Array [],
@@ -1373,7 +1373,7 @@ ShallowWrapper {
                                                                         "minEventFires": 1000,
                                                                         "name": "Top Unused Signals",
                                                                         "presetId": "top-unused-signals",
-                                                                        "signalStatus": "ALL",
+                                                                        "signalStatus": "UNUSED",
                                                                         "sortBy": "percentageChange",
                                                                         "source": Object {
                                                                           "dataSourceIds": Array [],
@@ -1399,7 +1399,7 @@ ShallowWrapper {
                                                                         "minEventFires": 1000,
                                                                         "name": "New Unused Signals",
                                                                         "presetId": "new-unused-signals",
-                                                                        "signalStatus": "ALL",
+                                                                        "signalStatus": "UNUSED",
                                                                         "sortBy": "percentageChange",
                                                                         "source": Object {
                                                                           "dataSourceIds": Array [],
@@ -1456,7 +1456,7 @@ ShallowWrapper {
                                                                   "minEventFires": 1000,
                                                                   "name": "Top Unused Signals",
                                                                   "presetId": "top-unused-signals",
-                                                                  "signalStatus": "ALL",
+                                                                  "signalStatus": "UNUSED",
                                                                   "sortBy": "percentageChange",
                                                                   "source": Object {
                                                                     "dataSourceIds": Array [],
@@ -1482,7 +1482,7 @@ ShallowWrapper {
                                                                   "minEventFires": 1000,
                                                                   "name": "New Unused Signals",
                                                                   "presetId": "new-unused-signals",
-                                                                  "signalStatus": "ALL",
+                                                                  "signalStatus": "UNUSED",
                                                                   "sortBy": "percentageChange",
                                                                   "source": Object {
                                                                     "dataSourceIds": Array [],
@@ -1535,7 +1535,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -1561,7 +1561,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -1611,7 +1611,7 @@ ShallowWrapper {
                         "minEventFires": 1000,
                         "name": "Top Unused Signals",
                         "presetId": "top-unused-signals",
-                        "signalStatus": "ALL",
+                        "signalStatus": "UNUSED",
                         "sortBy": "percentageChange",
                         "source": Object {
                           "dataSourceIds": Array [],
@@ -1637,7 +1637,7 @@ ShallowWrapper {
                         "minEventFires": 1000,
                         "name": "New Unused Signals",
                         "presetId": "new-unused-signals",
-                        "signalStatus": "ALL",
+                        "signalStatus": "UNUSED",
                         "sortBy": "percentageChange",
                         "source": Object {
                           "dataSourceIds": Array [],
@@ -1778,7 +1778,7 @@ ShallowWrapper {
               "minEventFires": 1000,
               "name": "Top Unused Signals",
               "presetId": "top-unused-signals",
-              "signalStatus": "ALL",
+              "signalStatus": "UNUSED",
               "sortBy": "percentageChange",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -1804,7 +1804,7 @@ ShallowWrapper {
               "minEventFires": 1000,
               "name": "New Unused Signals",
               "presetId": "new-unused-signals",
-              "signalStatus": "ALL",
+              "signalStatus": "UNUSED",
               "sortBy": "percentageChange",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -1983,7 +1983,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -2009,7 +2009,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -2312,7 +2312,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -2338,7 +2338,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -2395,7 +2395,7 @@ ShallowWrapper {
                                                           "minEventFires": 1000,
                                                           "name": "Top Unused Signals",
                                                           "presetId": "top-unused-signals",
-                                                          "signalStatus": "ALL",
+                                                          "signalStatus": "UNUSED",
                                                           "sortBy": "percentageChange",
                                                           "source": Object {
                                                             "dataSourceIds": Array [],
@@ -2421,7 +2421,7 @@ ShallowWrapper {
                                                           "minEventFires": 1000,
                                                           "name": "New Unused Signals",
                                                           "presetId": "new-unused-signals",
-                                                          "signalStatus": "ALL",
+                                                          "signalStatus": "UNUSED",
                                                           "sortBy": "percentageChange",
                                                           "source": Object {
                                                             "dataSourceIds": Array [],
@@ -2474,7 +2474,7 @@ ShallowWrapper {
                                                         "minEventFires": 1000,
                                                         "name": "Top Unused Signals",
                                                         "presetId": "top-unused-signals",
-                                                        "signalStatus": "ALL",
+                                                        "signalStatus": "UNUSED",
                                                         "sortBy": "percentageChange",
                                                         "source": Object {
                                                           "dataSourceIds": Array [],
@@ -2500,7 +2500,7 @@ ShallowWrapper {
                                                         "minEventFires": 1000,
                                                         "name": "New Unused Signals",
                                                         "presetId": "new-unused-signals",
-                                                        "signalStatus": "ALL",
+                                                        "signalStatus": "UNUSED",
                                                         "sortBy": "percentageChange",
                                                         "source": Object {
                                                           "dataSourceIds": Array [],
@@ -2550,7 +2550,7 @@ ShallowWrapper {
                       "minEventFires": 1000,
                       "name": "Top Unused Signals",
                       "presetId": "top-unused-signals",
-                      "signalStatus": "ALL",
+                      "signalStatus": "UNUSED",
                       "sortBy": "percentageChange",
                       "source": Object {
                         "dataSourceIds": Array [],
@@ -2576,7 +2576,7 @@ ShallowWrapper {
                       "minEventFires": 1000,
                       "name": "New Unused Signals",
                       "presetId": "new-unused-signals",
-                      "signalStatus": "ALL",
+                      "signalStatus": "UNUSED",
                       "sortBy": "percentageChange",
                       "source": Object {
                         "dataSourceIds": Array [],
@@ -2770,7 +2770,7 @@ ShallowWrapper {
                                                                           "minEventFires": 1000,
                                                                           "name": "Top Unused Signals",
                                                                           "presetId": "top-unused-signals",
-                                                                          "signalStatus": "ALL",
+                                                                          "signalStatus": "UNUSED",
                                                                           "sortBy": "percentageChange",
                                                                           "source": Object {
                                                                             "dataSourceIds": Array [],
@@ -2796,7 +2796,7 @@ ShallowWrapper {
                                                                           "minEventFires": 1000,
                                                                           "name": "New Unused Signals",
                                                                           "presetId": "new-unused-signals",
-                                                                          "signalStatus": "ALL",
+                                                                          "signalStatus": "UNUSED",
                                                                           "sortBy": "percentageChange",
                                                                           "source": Object {
                                                                             "dataSourceIds": Array [],
@@ -3099,7 +3099,7 @@ ShallowWrapper {
                                                                         "minEventFires": 1000,
                                                                         "name": "Top Unused Signals",
                                                                         "presetId": "top-unused-signals",
-                                                                        "signalStatus": "ALL",
+                                                                        "signalStatus": "UNUSED",
                                                                         "sortBy": "percentageChange",
                                                                         "source": Object {
                                                                           "dataSourceIds": Array [],
@@ -3125,7 +3125,7 @@ ShallowWrapper {
                                                                         "minEventFires": 1000,
                                                                         "name": "New Unused Signals",
                                                                         "presetId": "new-unused-signals",
-                                                                        "signalStatus": "ALL",
+                                                                        "signalStatus": "UNUSED",
                                                                         "sortBy": "percentageChange",
                                                                         "source": Object {
                                                                           "dataSourceIds": Array [],
@@ -3182,7 +3182,7 @@ ShallowWrapper {
                                                                   "minEventFires": 1000,
                                                                   "name": "Top Unused Signals",
                                                                   "presetId": "top-unused-signals",
-                                                                  "signalStatus": "ALL",
+                                                                  "signalStatus": "UNUSED",
                                                                   "sortBy": "percentageChange",
                                                                   "source": Object {
                                                                     "dataSourceIds": Array [],
@@ -3208,7 +3208,7 @@ ShallowWrapper {
                                                                   "minEventFires": 1000,
                                                                   "name": "New Unused Signals",
                                                                   "presetId": "new-unused-signals",
-                                                                  "signalStatus": "ALL",
+                                                                  "signalStatus": "UNUSED",
                                                                   "sortBy": "percentageChange",
                                                                   "source": Object {
                                                                     "dataSourceIds": Array [],
@@ -3261,7 +3261,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -3287,7 +3287,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -3337,7 +3337,7 @@ ShallowWrapper {
                         "minEventFires": 1000,
                         "name": "Top Unused Signals",
                         "presetId": "top-unused-signals",
-                        "signalStatus": "ALL",
+                        "signalStatus": "UNUSED",
                         "sortBy": "percentageChange",
                         "source": Object {
                           "dataSourceIds": Array [],
@@ -3363,7 +3363,7 @@ ShallowWrapper {
                         "minEventFires": 1000,
                         "name": "New Unused Signals",
                         "presetId": "new-unused-signals",
-                        "signalStatus": "ALL",
+                        "signalStatus": "UNUSED",
                         "sortBy": "percentageChange",
                         "source": Object {
                           "dataSourceIds": Array [],
@@ -3504,7 +3504,7 @@ ShallowWrapper {
               "minEventFires": 1000,
               "name": "Top Unused Signals",
               "presetId": "top-unused-signals",
-              "signalStatus": "ALL",
+              "signalStatus": "UNUSED",
               "sortBy": "percentageChange",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -3530,7 +3530,7 @@ ShallowWrapper {
               "minEventFires": 1000,
               "name": "New Unused Signals",
               "presetId": "new-unused-signals",
-              "signalStatus": "ALL",
+              "signalStatus": "UNUSED",
               "sortBy": "percentageChange",
               "source": Object {
                 "dataSourceIds": Array [],
@@ -3709,7 +3709,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -3735,7 +3735,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -4038,7 +4038,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -4064,7 +4064,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -4121,7 +4121,7 @@ ShallowWrapper {
                                                           "minEventFires": 1000,
                                                           "name": "Top Unused Signals",
                                                           "presetId": "top-unused-signals",
-                                                          "signalStatus": "ALL",
+                                                          "signalStatus": "UNUSED",
                                                           "sortBy": "percentageChange",
                                                           "source": Object {
                                                             "dataSourceIds": Array [],
@@ -4147,7 +4147,7 @@ ShallowWrapper {
                                                           "minEventFires": 1000,
                                                           "name": "New Unused Signals",
                                                           "presetId": "new-unused-signals",
-                                                          "signalStatus": "ALL",
+                                                          "signalStatus": "UNUSED",
                                                           "sortBy": "percentageChange",
                                                           "source": Object {
                                                             "dataSourceIds": Array [],
@@ -4200,7 +4200,7 @@ ShallowWrapper {
                                                         "minEventFires": 1000,
                                                         "name": "Top Unused Signals",
                                                         "presetId": "top-unused-signals",
-                                                        "signalStatus": "ALL",
+                                                        "signalStatus": "UNUSED",
                                                         "sortBy": "percentageChange",
                                                         "source": Object {
                                                           "dataSourceIds": Array [],
@@ -4226,7 +4226,7 @@ ShallowWrapper {
                                                         "minEventFires": 1000,
                                                         "name": "New Unused Signals",
                                                         "presetId": "new-unused-signals",
-                                                        "signalStatus": "ALL",
+                                                        "signalStatus": "UNUSED",
                                                         "sortBy": "percentageChange",
                                                         "source": Object {
                                                           "dataSourceIds": Array [],
@@ -4276,7 +4276,7 @@ ShallowWrapper {
                       "minEventFires": 1000,
                       "name": "Top Unused Signals",
                       "presetId": "top-unused-signals",
-                      "signalStatus": "ALL",
+                      "signalStatus": "UNUSED",
                       "sortBy": "percentageChange",
                       "source": Object {
                         "dataSourceIds": Array [],
@@ -4302,7 +4302,7 @@ ShallowWrapper {
                       "minEventFires": 1000,
                       "name": "New Unused Signals",
                       "presetId": "new-unused-signals",
-                      "signalStatus": "ALL",
+                      "signalStatus": "UNUSED",
                       "sortBy": "percentageChange",
                       "source": Object {
                         "dataSourceIds": Array [],
@@ -4496,7 +4496,7 @@ ShallowWrapper {
                                                                           "minEventFires": 1000,
                                                                           "name": "Top Unused Signals",
                                                                           "presetId": "top-unused-signals",
-                                                                          "signalStatus": "ALL",
+                                                                          "signalStatus": "UNUSED",
                                                                           "sortBy": "percentageChange",
                                                                           "source": Object {
                                                                             "dataSourceIds": Array [],
@@ -4522,7 +4522,7 @@ ShallowWrapper {
                                                                           "minEventFires": 1000,
                                                                           "name": "New Unused Signals",
                                                                           "presetId": "new-unused-signals",
-                                                                          "signalStatus": "ALL",
+                                                                          "signalStatus": "UNUSED",
                                                                           "sortBy": "percentageChange",
                                                                           "source": Object {
                                                                             "dataSourceIds": Array [],
@@ -4825,7 +4825,7 @@ ShallowWrapper {
                                                                         "minEventFires": 1000,
                                                                         "name": "Top Unused Signals",
                                                                         "presetId": "top-unused-signals",
-                                                                        "signalStatus": "ALL",
+                                                                        "signalStatus": "UNUSED",
                                                                         "sortBy": "percentageChange",
                                                                         "source": Object {
                                                                           "dataSourceIds": Array [],
@@ -4851,7 +4851,7 @@ ShallowWrapper {
                                                                         "minEventFires": 1000,
                                                                         "name": "New Unused Signals",
                                                                         "presetId": "new-unused-signals",
-                                                                        "signalStatus": "ALL",
+                                                                        "signalStatus": "UNUSED",
                                                                         "sortBy": "percentageChange",
                                                                         "source": Object {
                                                                           "dataSourceIds": Array [],
@@ -4908,7 +4908,7 @@ ShallowWrapper {
                                                                   "minEventFires": 1000,
                                                                   "name": "Top Unused Signals",
                                                                   "presetId": "top-unused-signals",
-                                                                  "signalStatus": "ALL",
+                                                                  "signalStatus": "UNUSED",
                                                                   "sortBy": "percentageChange",
                                                                   "source": Object {
                                                                     "dataSourceIds": Array [],
@@ -4934,7 +4934,7 @@ ShallowWrapper {
                                                                   "minEventFires": 1000,
                                                                   "name": "New Unused Signals",
                                                                   "presetId": "new-unused-signals",
-                                                                  "signalStatus": "ALL",
+                                                                  "signalStatus": "UNUSED",
                                                                   "sortBy": "percentageChange",
                                                                   "source": Object {
                                                                     "dataSourceIds": Array [],
@@ -4987,7 +4987,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "Top Unused Signals",
                                                               "presetId": "top-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -5013,7 +5013,7 @@ ShallowWrapper {
                                                               "minEventFires": 1000,
                                                               "name": "New Unused Signals",
                                                               "presetId": "new-unused-signals",
-                                                              "signalStatus": "ALL",
+                                                              "signalStatus": "UNUSED",
                                                               "sortBy": "percentageChange",
                                                               "source": Object {
                                                                 "dataSourceIds": Array [],
@@ -5063,7 +5063,7 @@ ShallowWrapper {
                         "minEventFires": 1000,
                         "name": "Top Unused Signals",
                         "presetId": "top-unused-signals",
-                        "signalStatus": "ALL",
+                        "signalStatus": "UNUSED",
                         "sortBy": "percentageChange",
                         "source": Object {
                           "dataSourceIds": Array [],
@@ -5089,7 +5089,7 @@ ShallowWrapper {
                         "minEventFires": 1000,
                         "name": "New Unused Signals",
                         "presetId": "new-unused-signals",
-                        "signalStatus": "ALL",
+                        "signalStatus": "UNUSED",
                         "sortBy": "percentageChange",
                         "source": Object {
                           "dataSourceIds": Array [],
