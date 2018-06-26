@@ -19,10 +19,14 @@ class KeyValuePair extends Component {
         this.onValueChange = this.onValueChange.bind(this);
     }
 
-    state = {
-        autocompleteError: false,
-        autocompleteErrorMessage: '',
-    };
+    state = this.getInitialAutocompleteError();
+
+    getInitialAutocompleteError() {
+        return {
+            autocompleteError: false,
+            autocompleteErrorMessage: '',
+        };
+    }
 
     getCompletions = key => {
         return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
@@ -34,14 +38,22 @@ class KeyValuePair extends Component {
                 }
                 throw new Error(response.statusText);
             })
-            .then(resp => resp.signalKeys)
-            .then(json => json.map(key => key.signalKey))
-            .catch(error => {
-                this.setState({
-                    autocompleteError: true,
-                    autocompleteErrorMessage: error.message,
+            .then(resp => {
+                this.setAutocompleteErrorMessage({
+                    externalServiceAvailable:
+                        resp.analyticsServiceAvailable && resp.solrServiceAvailable,
                 });
-            });
+                return resp.signalKeys;
+            })
+            .then(json => json.map(key => key.signalKey))
+            .catch(error =>
+                this.setAutocompleteErrorMessage({
+                    error: {
+                        autocompleteError: true,
+                        autocompleteErrorMessage: error.message,
+                    },
+                }),
+            );
     };
 
     getKeysByReportSuiteId = key => {
@@ -59,7 +71,13 @@ class KeyValuePair extends Component {
 
                 throw new Error(response.statusText);
             })
-            .then(resp => resp.signalKeys)
+            .then(resp => {
+                this.setAutocompleteErrorMessage({
+                    externalServiceAvailable:
+                        resp.analyticsServiceAvailable && resp.solrServiceAvailable,
+                });
+                return resp.signalKeys;
+            })
             .then(suites =>
                 suites.map(suite => ({
                     label: suite.signalKeyName
@@ -68,24 +86,35 @@ class KeyValuePair extends Component {
                     id: suite.signalKey,
                 })),
             )
-            .catch(error => {
-                this.setState({
-                    autocompleteError: true,
-                    autocompleteErrorMessage: error.message,
-                });
-            });
+            .catch(error =>
+                this.setAutocompleteErrorMessage({
+                    error: {
+                        autocompleteError: true,
+                        autocompleteErrorMessage: error.message,
+                    },
+                }),
+            );
     };
 
-    setAutocompleteErrorMessage = () => {
+    setAutocompleteErrorMessage = ({
+        externalServiceAvailable = true,
+        error = this.getInitialAutocompleteError(),
+    } = {}) => {
         if (isKeyEmptyWithValue(this.props.pair)) {
             this.setState({
+                ...error,
                 autocompleteError: true,
                 autocompleteErrorMessage: 'Key cannot be empty when value is specified.',
             });
+        } else if (!externalServiceAvailable) {
+            this.setState({
+                ...error,
+                autocompleteError: true,
+                autocompleteErrorMessage: 'Key friendly names are not available.',
+            });
         } else {
             this.setState({
-                autocompleteError: false,
-                autocompleteErrorMessage: '',
+                ...error,
             });
         }
     };

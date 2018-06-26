@@ -3,6 +3,7 @@ const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json'
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 const signalKeysResponse = require('../fixtures/signalKeys.json');
+const signalKeysExternalServiceUnavailableResponse = require('../fixtures/signalKeysWithExternalServiceUnavailable.json');
 
 describe('Search Form Integration Tests', function() {
     beforeEach(function() {
@@ -17,9 +18,6 @@ describe('Search Form Integration Tests', function() {
             'fetchSearchResults',
         );
         cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
-        cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
-            'fetchSignalKeys',
-        );
 
         cy.visit('#/search');
     });
@@ -67,8 +65,12 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when typing in text in Key input', function() {
+    describe('when typing in text in Key input with external services available', function() {
         beforeEach(function() {
+            cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
+                'fetchSignalKeys',
+            );
+
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
             cy.wait('@fetchSignalKeys');
@@ -92,6 +94,29 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
+    describe('when typing in text in Key input with external services unavailable', function() {
+        beforeEach(function() {
+            cy.route(
+                /\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/,
+                signalKeysExternalServiceUnavailableResponse,
+            ).as('signalKeysExternalServiceUnavailableResponse');
+            cy.get('[data-test="key-search-field"]').as('keyInput');
+            cy.get('@keyInput').type('a');
+            cy.wait('@signalKeysExternalServiceUnavailableResponse');
+        });
+
+        it('should not show any autocomplete with suggestions', function() {
+            cy.get('.spectrum-Popover.is-open').should('not.exist');
+            cy.get('.spectrum-SelectList-item').should('not.exist');
+        });
+
+        it('should show the in-line error message caused by the unavailable external services', function() {
+            const inlineErrorMessage = 'Key friendly names are not available.';
+            cy.get('[data-test="inline-error"]').should('be.visible');
+            cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
+        });
+    });
+
     describe('when Operator select is changed', function() {
         it('should change the value to selected option', function() {
             cy.get('.operator')
@@ -107,14 +132,36 @@ describe('Search Form Integration Tests', function() {
     });
 
     describe('when typing in text in Value input', function() {
-        it('should allow you to type a value in the field', function() {
-            const value = '1';
+        beforeEach(function() {
+            cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
+                'fetchSignalKeys',
+            );
+            cy.get('[data-test="key-search-field"]').as('keyInput');
+            cy.get('@keyInput').type('a');
+            cy.wait('@fetchSignalKeys');
+        });
 
+        it('should allow you to type a value in the field after Key field has value', function() {
+            const value = '1';
             cy.get('[data-test="value-search"]').type(value);
 
             cy.get('[data-test="value-search"]').should(function($text) {
                 expect($text.val()).to.contains(value);
             });
+        });
+
+        it('should not show any in-line error message', function() {
+            cy.get('[data-test="inline-error"]').should('not.exist');
+        });
+
+        it('should show in-line error message `Key cannot be empty when value is specified.` if Key input field is clear and type value in Value field', function() {
+            const value = '1';
+            const inlineErrorMessage = 'Key cannot be empty when value is specified.';
+            cy.get('@keyInput').clear();
+            cy.get('[data-test="value-search"]').type(value);
+
+            cy.get('[data-test="inline-error"]').should('be.visible');
+            cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
         });
     });
 
