@@ -16,7 +16,7 @@ const messages = defineMessages({
 function Layout(props) {
     return (
         <ReactSpectrumProvider scale="medium">
-            <Grid style={{ overflow: 'auto' }}>
+            <Grid style={{ overflow: 'scroll' }}>
                 <FormattedMessage {...messages.title}>
                     {text => <Heading>{text}</Heading>}
                 </FormattedMessage>
