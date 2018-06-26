@@ -339,7 +339,7 @@ describe('Saved Search Integration Test', function() {
             cy.get('[data-test="operator"]').should('have.value', '==');
             cy.get('[data-test="value-search"]').should('have.value', '');
             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
-            cy.get('[data-test="signal-status"]').should('have.value', 'ALL');
+            cy.get('[data-test="signal-status"]').should('have.value', 'UNUSED');
             cy.get('[data-test="view-records"]').should('have.value', '7D');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
 
@@ -354,7 +354,7 @@ describe('Saved Search Integration Test', function() {
             cy.get('[data-test="operator"]').should('have.value', '==');
             cy.get('[data-test="value-search"]').should('have.value', '');
             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
-            cy.get('[data-test="signal-status"]').should('have.value', 'ALL');
+            cy.get('[data-test="signal-status"]').should('have.value', 'UNUSED');
             cy.get('[data-test="view-records"]').should('have.value', '7D');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
 
