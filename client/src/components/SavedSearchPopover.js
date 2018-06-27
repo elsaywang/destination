@@ -8,7 +8,7 @@ import Dialog from '@react/react-spectrum/Dialog';
 import Popover from '@react/react-spectrum/Popover';
 import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { formatSignal } from '../utils/stringifySignals';
-import { getDateRangeLabel } from '../constants/dateRangeOptions';
+import { getDateRangeLabel } from '../utils/dateRangeOptions';
 import { getSignalStatusLabel } from '../constants/signalStatusOptions';
 import { getSignalTypeLabel } from '../constants/signalTypeOptions';
 import { getSignalCategory } from '../constants/signalCategoryOptions';

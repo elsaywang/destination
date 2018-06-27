@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <CustomDateRange
     customEndDate="2018-05-01"
     customStartDate="2018-04-24"
+    minCustomStartDateDaysAgo={30}
     onCustomEndDateChange={[Function]}
     onCustomStartDateChange={[Function]}
 />,
@@ -35,7 +36,7 @@ ShallowWrapper {
                     id="react-spectrum-1"
                     invalid={false}
                     max="2018-04-30"
-                    min="2017-05-01"
+                    min="2018-04-01"
                     onChange={[Function]}
                     placeholder="Choose a date"
                     placement="right"
@@ -91,7 +92,7 @@ ShallowWrapper {
             id="react-spectrum-1"
             invalid={false}
             max="2018-04-30"
-            min="2017-05-01"
+            min="2018-04-01"
             onChange={[Function]}
             placeholder="Choose a date"
             placement="right"
@@ -119,7 +120,7 @@ ShallowWrapper {
             "id": "react-spectrum-1",
             "invalid": false,
             "max": "2018-04-30",
-            "min": "2017-05-01",
+            "min": "2018-04-01",
             "onChange": [Function],
             "placeholder": "Choose a date",
             "placement": "right",
@@ -219,7 +220,7 @@ ShallowWrapper {
                         id="react-spectrum-1"
                         invalid={false}
                         max="2018-04-30"
-                        min="2017-05-01"
+                        min="2018-04-01"
                         onChange={[Function]}
                         placeholder="Choose a date"
                         placement="right"
@@ -275,7 +276,7 @@ ShallowWrapper {
               id="react-spectrum-1"
               invalid={false}
               max="2018-04-30"
-              min="2017-05-01"
+              min="2018-04-01"
               onChange={[Function]}
               placeholder="Choose a date"
               placement="right"
@@ -303,7 +304,7 @@ ShallowWrapper {
               "id": "react-spectrum-1",
               "invalid": false,
               "max": "2018-04-30",
-              "min": "2017-05-01",
+              "min": "2018-04-01",
               "onChange": [Function],
               "placeholder": "Choose a date",
               "placement": "right",
