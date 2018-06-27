@@ -1,4 +1,4 @@
-export const handleLazyLoad = (
+export const handleLazyLoadSavedSearches = (
     isBottomPassed,
     visibleSavedSearchList,
     trackedInDashboardSavedSearchList,

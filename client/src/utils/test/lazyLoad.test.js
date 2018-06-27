@@ -1,4 +1,4 @@
-import { handleLazyLoad } from '../lazyLoad';
+import { handleLazyLoadSavedSearches } from '../lazyLoad';
 
 describe('test on `handleLoadMore`', () => {
     const visibleSavedSearchList = [{ name: 't1' }, { name: 't2' }, { name: 't3' }];
@@ -12,7 +12,7 @@ describe('test on `handleLoadMore`', () => {
     describe('when bottom of the screen is passed and total visibleSavedSearchList records is less than trackedInDashboardSavedSearchList total records', () => {
         const isBottomPassed = true;
         const loadMoreFn = jest.fn();
-        handleLazyLoad(
+        handleLazyLoadSavedSearches(
             isBottomPassed,
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,
@@ -25,7 +25,7 @@ describe('test on `handleLoadMore`', () => {
     describe('when bottom of the screen is not passed', () => {
         const isBottomPassed = false;
         const loadMoreFn = jest.fn();
-        handleLazyLoad(
+        handleLazyLoadSavedSearches(
             isBottomPassed,
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,
@@ -41,7 +41,7 @@ describe('test on `handleLoadMore`', () => {
         const loadMoreFn = jest.fn();
         const visibleSavedSearchList = [{ name: 't1' }, { name: 't2' }, { name: 't3' }];
         const trackedInDashboardSavedSearchList = [{ name: 't1' }, { name: 't2' }, { name: 't3' }];
-        handleLazyLoad(
+        handleLazyLoadSavedSearches(
             isBottomPassed,
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,
@@ -57,7 +57,7 @@ describe('test on `handleLoadMore`', () => {
         const loadMoreFn = jest.fn();
         const visibleSavedSearchList = [{ name: 't1' }, { name: 't2' }, { name: 't3' }];
         const trackedInDashboardSavedSearchList = [{ name: 't1' }, { name: 't2' }, { name: 't3' }];
-        handleLazyLoad(
+        handleLazyLoadSavedSearches(
             isBottomPassed,
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,

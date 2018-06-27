@@ -10,7 +10,7 @@ import {
     getTrackedInDashboardSavedSearchList,
     getVisibleSavedSearchList,
 } from '../reducers/savedSearch';
-import { handleLazyLoad } from '../utils/lazyLoad';
+import { handleLazyLoadSavedSearches } from '../utils/lazyLoad';
 import { populateSearchFields } from '../actions/savedSearchFields';
 import { fetchUserRoles } from '../actions/permissions';
 import Heading from '@react/react-spectrum/Heading';
@@ -42,7 +42,7 @@ class DashboardContainer extends Component {
             trackedInDashboardSavedSearchList,
             loadMoreSavedSearch,
         } = nextProps;
-        handleLazyLoad(
+        handleLazyLoadSavedSearches(
             this.isBottomPassed(),
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,
@@ -68,7 +68,7 @@ class DashboardContainer extends Component {
             trackedInDashboardSavedSearchList,
             loadMoreSavedSearch,
         } = this.props;
-        handleLazyLoad(
+        handleLazyLoadSavedSearches(
             this.isBottomPassed(),
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,
