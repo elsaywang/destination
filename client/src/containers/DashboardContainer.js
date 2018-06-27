@@ -10,6 +10,7 @@ import {
     getTrackedInDashboardSavedSearchList,
     getVisibleSavedSearchList,
 } from '../reducers/savedSearch';
+import { handleLazyLoad } from '../utils/lazyLoad';
 import { populateSearchFields } from '../actions/savedSearchFields';
 import { fetchUserRoles } from '../actions/permissions';
 import Heading from '@react/react-spectrum/Heading';
@@ -35,6 +36,20 @@ class DashboardContainer extends Component {
         window.removeEventListener('scroll', this.onScroll);
     }
 
+    componentWillReceiveProps(nextProps) {
+        const {
+            visibleSavedSearchList,
+            trackedInDashboardSavedSearchList,
+            loadMoreSavedSearch,
+        } = nextProps;
+        handleLazyLoad(
+            this.isBottomPassed(),
+            visibleSavedSearchList,
+            trackedInDashboardSavedSearchList,
+            loadMoreSavedSearch,
+        );
+    }
+
     handleViewAllForSavedSearch = search => {
         const { populateSearchFields, callSearch } = this.props;
 
@@ -42,12 +57,23 @@ class DashboardContainer extends Component {
         callSearch(search);
     };
 
+    isBottomPassed = () =>
+        Boolean(
+            window.innerHeight + Math.ceil(window.pageYOffset + 1) >= document.body.offsetHeight,
+        );
+
     onScroll = e => {
-        const { visibleSavedSearchList, trackedInDashboardSavedSearchList } = this.props;
-        const isBottom = Boolean(window.innerHeight + window.scrollY >= document.body.offsetHeight);
-        if (isBottom && visibleSavedSearchList.length < trackedInDashboardSavedSearchList.length) {
-            this.props.loadMoreSavedSearch();
-        }
+        const {
+            visibleSavedSearchList,
+            trackedInDashboardSavedSearchList,
+            loadMoreSavedSearch,
+        } = this.props;
+        handleLazyLoad(
+            this.isBottomPassed(),
+            visibleSavedSearchList,
+            trackedInDashboardSavedSearchList,
+            loadMoreSavedSearch,
+        );
     };
 
     render() {
