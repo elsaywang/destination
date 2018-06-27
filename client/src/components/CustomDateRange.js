@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import Datepicker from '@react/react-spectrum/Datepicker';
 import Label from './common/Label';
-import { customDateFormat, maxLookbackDays } from '../constants/dateRangeConstants';
+import { customDateFormat } from '../constants/dateRangeConstants';
 import { getNow, parseDate, boundDate } from '../utils/dateRange';
 
 // The custom start and end dates must be at least 1 day apart.
@@ -33,7 +33,7 @@ class CustomDateRange extends Component {
     getMinCustomStartDate() {
         return getNow()
             .startOf('day')
-            .subtract(maxLookbackDays, 'days')
+            .subtract(this.props.minCustomStartDateDaysAgo, 'days')
             .format(customDateFormat);
     }
 
@@ -103,6 +103,7 @@ CustomDateRange.propTypes = {
     customEndDate: PropTypes.string,
     onCustomStartDateChange: PropTypes.func,
     onCustomEndDateChange: PropTypes.func,
+    minCustomStartDateDaysAgo: PropTypes.number.isRequired,
 };
 
 export default CustomDateRange;

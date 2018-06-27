@@ -37,6 +37,7 @@ ShallowWrapper {
             },
           ]
     }
+    maxSignalRetentionDays={30}
     minEventFires={1000}
     name=""
     onAddClick={[Function]}

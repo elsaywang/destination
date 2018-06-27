@@ -6,8 +6,8 @@ import {
     CHANGE_SORTING_ORDER,
     SAVE_SEARCH_FULFILLED,
     CANCEL_SAVE_SEARCH,
-    GET_SAVED_SEARCH_LIMIT_FULFILLED,
 } from '../../actions/savedSearch';
+import { FETCH_LIMITS_FULFILLED } from '../../actions/limits';
 import saveSearchReducer, {
     getLimit,
     getSavedSearchList,
@@ -223,7 +223,7 @@ describe('saveSearch reducer', () => {
         expect(saveSearchReducer(currentState, action)).toEqual(initialState);
     });
 
-    it('should handle GET_SAVED_SEARCH_LIMIT_FULFILLED', () => {
+    it('should handle FETCH_LIMITS_FULFILLED', () => {
         const currentState = {
             ...initialState,
             limit: 5,
@@ -234,7 +234,7 @@ describe('saveSearch reducer', () => {
             limit: 10,
         };
         const action = {
-            type: GET_SAVED_SEARCH_LIMIT_FULFILLED,
+            type: FETCH_LIMITS_FULFILLED,
             payload,
         };
         expect(saveSearchReducer(currentState, action)).toEqual(nextState);
