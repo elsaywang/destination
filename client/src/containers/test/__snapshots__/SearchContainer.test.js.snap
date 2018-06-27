@@ -101,6 +101,7 @@ ShallowWrapper {
     resetVisibleSavedSearch={[Function]}
     results={
         Object {
+            "isThrottled": false,
             "list": Array [],
             "page": 0,
             "pageSize": 20,
@@ -126,6 +127,7 @@ ShallowWrapper {
             "sortBy": "percentageChange",
           }
     }
+    throttleLoadMore={[Function]}
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
@@ -1861,6 +1863,7 @@ ShallowWrapper {
             "sortBy": "percentageChange",
           }
     }
+    throttleLoadMore={[Function]}
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
@@ -3596,6 +3599,7 @@ ShallowWrapper {
             "sortBy": "percentageChange",
           }
     }
+    throttleLoadMore={[Function]}
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}

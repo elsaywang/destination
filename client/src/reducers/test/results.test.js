@@ -1,5 +1,5 @@
-import { getList, handleList } from '../results';
-import { CALL_SEARCH } from '../../actions/searchForm';
+import results, { getList, handleList } from '../results';
+import { CALL_SEARCH, THROTTLE_LOAD_MORE } from '../../actions/searchForm';
 
 describe('results reducer', () => {
     describe('handleList', () => {
@@ -56,6 +56,16 @@ describe('results reducer', () => {
         };
 
         expect(handleList([], action)[0].categoryType).toEqual('ONBOARDED');
+    });
+
+    it('should handle THROTTLE_LOAD_MORE', () => {
+        const state = { isThrottled: false };
+        const action = {
+            type: THROTTLE_LOAD_MORE,
+            payload: true,
+        };
+
+        expect(results(state, action)).toEqual({ isThrottled: true });
     });
 
     describe('selectors', () => {

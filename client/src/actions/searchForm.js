@@ -19,6 +19,9 @@ export const loadMore = createAsyncAction(LOAD_MORE, (search, pagination) =>
     fetchSignals({ search, pagination }),
 );
 
+export const THROTTLE_LOAD_MORE = 'THROTTLE_LOAD_MORE';
+export const throttleLoadMore = createAction(THROTTLE_LOAD_MORE);
+
 export const SORT_SEARCH = 'SORT_SEARCH';
 export const SORT_SEARCH_FULFILLED = 'SORT_SEARCH_FULFILLED';
 export const SORT_SEARCH_REJECTED = 'SORT_SEARCH_REJECTED';
