@@ -134,7 +134,7 @@ ShallowWrapper {
           "key": "totalCount",
           "sortable": true,
           "title": "Total Counts",
-          "width": 100,
+          "width": 85,
         },
         Object {
           "key": "percentageChange",
@@ -228,7 +228,7 @@ ShallowWrapper {
             "key": "totalCount",
             "sortable": true,
             "title": "Total Counts",
-            "width": 100,
+            "width": 85,
           },
           Object {
             "key": "percentageChange",
