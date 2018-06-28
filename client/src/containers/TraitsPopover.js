@@ -30,9 +30,8 @@ class TraitsPopover extends Component {
     async onPopoverClick() {
         try {
             const responses = await Promise.all(this.props.sids.map(sid => fetchTrait(sid)));
-            const traits = await Promise.all(
-                responses.map(response => response.json().catch(e => e)),
-            );
+            const successfulResponses = responses.filter(({ ok }) => ok === true);
+            const traits = await Promise.all(successfulResponses.map(response => response.json()));
 
             await this.setStateAsync({
                 loading: false,
@@ -47,10 +46,8 @@ class TraitsPopover extends Component {
     }
 
     renderContent = () => {
-        return this.props.sids.map(sid => {
-            const matchingTrait = this.state.traits.find(trait => trait.sid === sid);
-            const label =
-                matchingTrait && matchingTrait.name ? `${matchingTrait.name} - ${sid}` : sid;
+        return this.state.traits.map(({ sid, name }) => {
+            const label = `${name} - ${sid}`;
             const traitUrl = `/portal/Traits/Traits.ddx#view/${sid}`;
 
             return (
