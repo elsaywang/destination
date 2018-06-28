@@ -49,7 +49,7 @@ class TraitsPopover extends Component {
             const matchingTrait = this.state.traits.find(trait => trait.id === sid);
             const label =
                 matchingTrait && matchingTrait.name ? `${matchingTrait.name} - ${sid}` : sid;
-            const traitUrl = `/Traits/Traits.ddx#view/${sid}`;
+            const traitUrl = `/portal/Traits/Traits.ddx#view/${sid}`;
 
             return (
                 <Link key={sid} href={traitUrl}>
