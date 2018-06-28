@@ -1,3 +1,4 @@
+import debounce from 'debounce';
 import * as searchFormActionCreators from '../actions/searchForm';
 import * as savedSearchActionCreators from '../actions/savedSearch';
 import { selectSignals } from '../actions/selectSignals';
@@ -18,11 +19,13 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
+import { getIsEndOfResults } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
-import { getTooltipMessage } from '../constants/tooltipMessageOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
+import { getTooltipMessage } from '../constants/tooltipMessageOptions';
+import { defaultThrottleMs } from '../constants/lazyLoadConstants';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
@@ -231,13 +234,27 @@ class SearchContainer extends Component {
             },
         );
     };
+    handleLoadMore = (throttleMs = defaultThrottleMs) => {
+        if (this.props.isEndOfResults) {
+            return;
+        }
 
-    handleLoadMore = () => {
-        const { page } = this.props.results;
+        const { page, isThrottled: wasThrottled } = this.props.results;
+
+        // Triggers another render.
+        this.props.throttleLoadMore(true);
+
+        if (wasThrottled) {
+            return;
+        }
 
         this.props.loadMore(this.state, {
             page: page + 1,
         });
+
+        debounce(() => {
+            this.props.throttleLoadMore(false);
+        }, throttleMs)();
     };
 
     handleSortSearch = (sortColumn, sortDir) => {
@@ -429,6 +446,7 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
+    isEndOfResults: getIsEndOfResults(results),
     savedSearchFields,
     savedSearch: savedSearch.list,
     savedSearchLimit: savedSearch.limit,

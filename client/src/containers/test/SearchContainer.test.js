@@ -10,6 +10,9 @@ import SavedSearch from '../../containers/SavedSearch';
 import EmptySearch from '../../components/EmptySearch';
 import SaveSearchExecution from '../../components/SaveSearchExecution';
 import configureStore from '../../configureStore';
+import { fetchSignals } from '../../utils/fetchSignals';
+
+jest.mock('../../utils/fetchSignals');
 
 describe('<SearchContainer /> component', () => {
     mockdate.set(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
@@ -304,6 +307,59 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').sourceType).toBe(initialState.source.sourceType);
             wrapper.instance().handleSignalTypeChange(newSignalType);
             expect(wrapper.state('source').sourceType).toBe(newSignalType);
+        });
+    });
+
+    describe('handling search events', () => {
+        afterEach(() => {
+            fetchSignals.mockClear();
+            wrapper.setProps({ isEndOfResults: false });
+        });
+
+        describe('.handleLoadMore()', () => {
+            it('should not throttle requests if the end of results are reached', () => {
+                expect(store.getState().results.isThrottled).toBe(false);
+                wrapper.setProps({ isEndOfResults: true });
+                wrapper.instance().handleLoadMore();
+
+                expect(store.getState().results.isThrottled).toBe(false);
+            });
+
+            it('should not call `loadMore` if the end of results are reached', () => {
+                expect(store.getState().results.isThrottled).toBe(false);
+                wrapper.setProps({ isEndOfResults: true });
+                wrapper.instance().handleLoadMore();
+
+                expect(fetchSignals).not.toHaveBeenCalled();
+            });
+
+            it('should initially throttle future requests to load more results', () => {
+                expect(store.getState().results.isThrottled).toBe(false);
+                wrapper.instance().handleLoadMore();
+                expect(store.getState().results.isThrottled).toBe(true);
+            });
+
+            it('should disable throttling requests to load more results after `throttleMs` milliseconds', () => {
+                return expect(
+                    new Promise(resolve => {
+                        wrapper.instance().handleLoadMore(1);
+                        setTimeout(() => resolve(store.getState().results.isThrottled), 2);
+                    }),
+                ).resolves.toBe(false);
+            });
+
+            it('should call `loadMore` and increment the searched page if not throttled', () => {
+                wrapper.instance().handleLoadMore(0);
+
+                expect(fetchSignals).toHaveBeenCalledTimes(1);
+            });
+
+            it('should not call `loadMore` if throttled', () => {
+                wrapper.setProps({ results: { list: [], isThrottled: true } });
+                wrapper.instance().handleLoadMore(0);
+
+                expect(fetchSignals).not.toHaveBeenCalled();
+            });
         });
     });
 
