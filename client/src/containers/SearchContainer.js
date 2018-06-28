@@ -19,6 +19,7 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
+import { getIsEndOfResults } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
@@ -234,6 +235,10 @@ class SearchContainer extends Component {
         );
     };
     handleLoadMore = (throttleMs = defaultThrottleMs) => {
+        if (this.props.isEndOfResults) {
+            return;
+        }
+
         const { page, isThrottled: wasThrottled } = this.props.results;
 
         // Triggers another render.
@@ -441,6 +446,7 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
+    isEndOfResults: getIsEndOfResults(results),
     savedSearchFields,
     savedSearch: savedSearch.list,
     savedSearchLimit: savedSearch.limit,

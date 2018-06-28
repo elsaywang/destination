@@ -313,9 +313,26 @@ describe('<SearchContainer /> component', () => {
     describe('handling search events', () => {
         afterEach(() => {
             fetchSignals.mockClear();
+            wrapper.setProps({ isEndOfResults: false });
         });
 
         describe('.handleLoadMore()', () => {
+            it('should not throttle requests if the end of results are reached', () => {
+                expect(store.getState().results.isThrottled).toBe(false);
+                wrapper.setProps({ isEndOfResults: true });
+                wrapper.instance().handleLoadMore();
+
+                expect(store.getState().results.isThrottled).toBe(false);
+            });
+
+            it('should not call `loadMore` if the end of results are reached', () => {
+                expect(store.getState().results.isThrottled).toBe(false);
+                wrapper.setProps({ isEndOfResults: true });
+                wrapper.instance().handleLoadMore();
+
+                expect(fetchSignals).not.toHaveBeenCalled();
+            });
+
             it('should initially throttle future requests to load more results', () => {
                 expect(store.getState().results.isThrottled).toBe(false);
                 wrapper.instance().handleLoadMore();
@@ -334,7 +351,6 @@ describe('<SearchContainer /> component', () => {
             it('should call `loadMore` and increment the searched page if not throttled', () => {
                 wrapper.instance().handleLoadMore(0);
 
-                // Using fetchSignals as a proxy for testing if loadMore was called.
                 expect(fetchSignals).toHaveBeenCalledTimes(1);
             });
 
@@ -342,7 +358,6 @@ describe('<SearchContainer /> component', () => {
                 wrapper.setProps({ results: { list: [], isThrottled: true } });
                 wrapper.instance().handleLoadMore(0);
 
-                // Using fetchSignals as a proxy for testing if loadMore was called.
                 expect(fetchSignals).not.toHaveBeenCalled();
             });
         });

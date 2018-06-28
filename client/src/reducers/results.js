@@ -13,6 +13,7 @@ const initialState = {
     pageSize: 20,
     total: 0,
     isThrottled: false,
+    isEndOfResults: false,
 };
 
 export const handleList = (state, action) =>
@@ -21,12 +22,16 @@ export const handleList = (state, action) =>
         categoryType: signal.source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
     }));
 
+export const handleIsEndOfResults = (state, { payload: { list, pageSize } }) =>
+    list.length < pageSize;
+
 const results = handleActions(
     {
         [CALL_SEARCH_FULFILLED]: (state, action) => ({
             ...state,
             ...action.payload,
             list: handleList(getList(state), action),
+            isEndOfResults: handleIsEndOfResults(state, action),
         }),
         [THROTTLE_LOAD_MORE]: (state, action) => ({
             ...state,
@@ -36,15 +41,18 @@ const results = handleActions(
             ...state,
             ...action.payload,
             list: [...getList(state), ...handleList(getList(state), action)],
+            isEndOfResults: handleIsEndOfResults(state, action),
         }),
         [CLEAR_SEARCH]: state => ({
             ...state,
             list: [],
+            isEndOfResults: false,
         }),
         [SORT_SEARCH_FULFILLED]: (state, action) => {
             return {
                 ...state,
                 list: action.payload.list.reverse(),
+                isEndOfResults: handleIsEndOfResults(state, action),
             };
         },
     },
@@ -52,5 +60,6 @@ const results = handleActions(
 );
 
 export const getList = state => state.list;
+export const getIsEndOfResults = state => state.isEndOfResults;
 
 export default results;
