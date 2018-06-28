@@ -6,7 +6,7 @@ import Link from '@react/react-spectrum/Link';
 import Button from '@react/react-spectrum/Button';
 import ChevronDown from '@react/react-spectrum/Icon/ChevronDown';
 import Wait from '@react/react-spectrum/Wait';
-import { fetchTraits } from '../utils';
+import { fetchTrait } from '../utils/fetchTrait';
 
 class TraitsPopover extends Component {
     constructor() {
@@ -29,8 +29,10 @@ class TraitsPopover extends Component {
 
     async onPopoverClick() {
         try {
-            const response = await fetchTraits(this.props.sids);
-            const traits = await response.json();
+            const responses = await Promise.all(this.props.sids.map(sid => fetchTrait(sid)));
+            const traits = await Promise.all(
+                responses.map(response => response.json().catch(e => e)),
+            );
 
             await this.setStateAsync({
                 loading: false,
@@ -46,7 +48,7 @@ class TraitsPopover extends Component {
 
     renderContent = () => {
         return this.props.sids.map(sid => {
-            const matchingTrait = this.state.traits.find(trait => trait.id === sid);
+            const matchingTrait = this.state.traits.find(trait => trait.sid === sid);
             const label =
                 matchingTrait && matchingTrait.name ? `${matchingTrait.name} - ${sid}` : sid;
             const traitUrl = `/portal/Traits/Traits.ddx#view/${sid}`;
