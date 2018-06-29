@@ -73,8 +73,8 @@ describe('<TraitsPopover /> component', () => {
             const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
 
             wrapper.setState({
-                loading: false,
                 traits: [{ sid: 1, name: 'i am a trait' }],
+                loading: false,
             });
 
             const content = wrapper
@@ -97,8 +97,8 @@ describe('<TraitsPopover /> component', () => {
             const wrapper = shallow(<TraitsPopover sids={[1, 2]} maxVisibleTraits={1} />);
 
             wrapper.setState({
-                loading: false,
                 traits: [{ sid: 1, name: 'Trait 1' }],
+                loading: false,
             });
 
             expect(
@@ -114,6 +114,30 @@ describe('<TraitsPopover /> component', () => {
                 .html();
 
             expect(content).toContain('And 1 more.');
+        });
+
+        it('renders an error message if all traits are unavailable', () => {
+            const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
+
+            wrapper.setState({
+                traits: [],
+                loading: false,
+                hasError: true,
+            });
+
+            expect(
+                wrapper
+                    .find(Popover)
+                    .filter('[data-test="overlay-trigger-popover"]')
+                    .find(Link).length,
+            ).toBe(0);
+
+            const content = wrapper
+                .find(Popover)
+                .filter('[data-test="overlay-trigger-popover"]')
+                .html();
+
+            expect(content).toMatchSnapshot();
         });
     });
 });

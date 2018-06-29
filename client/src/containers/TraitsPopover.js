@@ -15,10 +15,9 @@ class TraitsPopover extends Component {
         super();
 
         this.state = {
-            open: false,
             loading: true,
             traits: [],
-            error: '',
+            hasError: false,
         };
         this.onPopoverClick = this.onPopoverClick.bind(this);
     }
@@ -34,23 +33,17 @@ class TraitsPopover extends Component {
     }
 
     async onPopoverClick() {
-        try {
-            const responses = await Promise.all(
-                this.props.sids.slice(0, this.props.maxVisibleTraits).map(sid => fetchTrait(sid)),
-            );
-            const successfulResponses = responses.filter(({ ok }) => ok === true);
-            const traits = await Promise.all(successfulResponses.map(response => response.json()));
+        const responses = await Promise.all(
+            this.props.sids.slice(0, this.props.maxVisibleTraits).map(sid => fetchTrait(sid)),
+        );
+        const successfulResponses = responses.filter(({ ok }) => ok === true);
+        const traits = await Promise.all(successfulResponses.map(response => response.json()));
 
-            await this.setStateAsync({
-                loading: false,
-                traits,
-            });
-        } catch (error) {
-            await this.setStateAsync({
-                loading: false,
-                error,
-            });
-        }
+        await this.setStateAsync({
+            traits,
+            loading: false,
+            hasError: traits.length === 0,
+        });
     }
 
     renderAndMore = () => {
@@ -77,12 +70,18 @@ class TraitsPopover extends Component {
         });
     };
 
-    renderContent = () => (
-        <Fragment>
-            {this.renderTraitLinks()}
-            {this.renderAndMore()}
-        </Fragment>
-    );
+    renderContent = () =>
+        this.state.hasError ? (
+            <Fragment>
+                <div>Sorry, these traits are unavailable.</div>
+                <div>You may not have permissions to view them.</div>
+            </Fragment>
+        ) : (
+            <Fragment>
+                {this.renderTraitLinks()}
+                {this.renderAndMore()}
+            </Fragment>
+        );
 
     render() {
         const { sids } = this.props;
@@ -109,11 +108,7 @@ class TraitsPopover extends Component {
                         title={'Included in ' + label}
                         className={styles.traitPopover}
                         data-test="overlay-trigger-popover">
-                        {this.state.loading || !this.state.traits.length ? (
-                            <Wait />
-                        ) : (
-                            this.renderContent()
-                        )}
+                        {this.state.loading ? <Wait /> : this.renderContent()}
                     </Popover>
                 </OverlayTrigger>
             </Fragment>
