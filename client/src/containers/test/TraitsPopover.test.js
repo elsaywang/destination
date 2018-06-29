@@ -72,8 +72,13 @@ describe('<TraitsPopover /> component', () => {
         it('renders content in Popover when not loading', () => {
             wrapper.setState({
                 loading: false,
-                traits: [{ id: 1, name: 'i am a trait' }],
+                traits: [{ sid: 1, name: 'i am a trait' }],
             });
+
+            const content = wrapper
+                .find(Popover)
+                .filter('[data-test="overlay-trigger-popover"]')
+                .html();
 
             expect(wrapper.find(Wait).exists()).toBe(false);
             expect(
@@ -82,12 +87,8 @@ describe('<TraitsPopover /> component', () => {
                     .filter('[data-test="overlay-trigger-popover"]')
                     .find(Link).length,
             ).toBe(1);
-            expect(
-                wrapper
-                    .find(Popover)
-                    .filter('[data-test="overlay-trigger-popover"]')
-                    .html(),
-            ).toContain('i am a trait');
+            expect(content).toContain('i am a trait');
+            expect(content).toContain('(1)');
         });
     });
 });

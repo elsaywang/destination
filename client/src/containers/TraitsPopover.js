@@ -7,6 +7,7 @@ import Button from '@react/react-spectrum/Button';
 import ChevronDown from '@react/react-spectrum/Icon/ChevronDown';
 import Wait from '@react/react-spectrum/Wait';
 import { fetchTrait } from '../utils/fetchTrait';
+import styles from './TraitsPopover.css';
 
 class TraitsPopover extends Component {
     constructor() {
@@ -51,8 +52,9 @@ class TraitsPopover extends Component {
             const traitUrl = `/portal/Traits/Traits.ddx#view/${sid}`;
 
             return (
-                <Link key={sid} href={traitUrl}>
-                    <div>{label}</div>
+                <Link key={sid} href={traitUrl} className={styles.traitLink}>
+                    <span className={styles.traitName}>{name}</span>
+                    <span className={styles.traitSid}>({sid})</span>
                 </Link>
             );
         });
@@ -79,7 +81,10 @@ class TraitsPopover extends Component {
                         data-test="overlay-trigger-button">
                         {label}
                     </Button>
-                    <Popover title={'Included in ' + label} data-test="overlay-trigger-popover">
+                    <Popover
+                        title={'Included in ' + label}
+                        className={styles.traitPopover}
+                        data-test="overlay-trigger-popover">
                         {this.state.loading || !this.state.traits.length ? (
                             <Wait />
                         ) : (

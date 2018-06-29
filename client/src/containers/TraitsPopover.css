@@ -1,0 +1,19 @@
+:local(.traitPopover) {
+    width: 20rem;
+}
+
+:local(.traitLink) {
+    display: flex;
+}
+
+:local(.traitName) {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+}
+
+:local(.traitSid) {
+    margin-left: 0.5rem;
+}
