@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsPopover
+    maxVisibleTraits={8}
     sids={
         Array [
             1,
@@ -54,6 +55,7 @@ ShallowWrapper {
                 3 Traits
         </Button>
         <Popover
+                className={undefined}
                 data-test="overlay-trigger-popover"
                 open={true}
                 placement="bottom"
@@ -90,6 +92,7 @@ ShallowWrapper {
             3 Traits
 </Button>,
           <Popover
+            className={undefined}
             data-test="overlay-trigger-popover"
             open={true}
             placement="bottom"
@@ -141,6 +144,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <Wait />,
+            "className": undefined,
             "data-test": "overlay-trigger-popover",
             "open": true,
             "placement": "bottom",
@@ -200,6 +204,7 @@ ShallowWrapper {
                     3 Traits
           </Button>
           <Popover
+                    className={undefined}
                     data-test="overlay-trigger-popover"
                     open={true}
                     placement="bottom"
@@ -236,6 +241,7 @@ ShallowWrapper {
               3 Traits
 </Button>,
             <Popover
+              className={undefined}
               data-test="overlay-trigger-popover"
               open={true}
               placement="bottom"
@@ -287,6 +293,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <Wait />,
+              "className": undefined,
               "data-test": "overlay-trigger-popover",
               "open": true,
               "placement": "bottom",
@@ -321,3 +328,5 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`<TraitsPopover /> component rendering renders an error message if all traits are unavailable 1`] = `"<div class=\\"spectrum-Popover spectrum-Popover--bottom spectrum-Popover--withTip spectrum-Popover--dialog spectrum-Dialog--default is-open\\" tabindex=\\"1\\" data-test=\\"overlay-trigger-popover\\"><div class=\\"spectrum-Dialog-header spectrum-Dialog-header--default\\"><h2 class=\\"spectrum-Heading spectrum-Heading--subtitle1 spectrum-Dialog-title\\">Included in 3 Traits</h2></div><div class=\\"spectrum-Dialog-content\\"><div>Sorry, these traits are unavailable.</div><div>You may not have permissions to view them.</div></div><div class=\\"spectrum-Popover-tip\\"></div></div>"`;

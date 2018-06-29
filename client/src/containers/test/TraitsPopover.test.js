@@ -8,14 +8,16 @@ import Button from '@react/react-spectrum/Button';
 import Wait from '@react/react-spectrum/Wait';
 
 describe('<TraitsPopover /> component', () => {
-    const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
-
     describe('rendering', () => {
         it('matches snapshot', () => {
+            const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
+
             expect(wrapper).toMatchSnapshot();
         });
 
         it('renders <OverlayTrigger /> with <Button /> and <Popover /> children', () => {
+            const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
+
             const overlayTrigger = wrapper.find(OverlayTrigger);
 
             expect(overlayTrigger.filter('[data-test="overlay-trigger"]').exists()).toBe(true);
@@ -24,9 +26,7 @@ describe('<TraitsPopover /> component', () => {
         });
 
         it('renders <Button /> trigger with correct Trait(s) labeling', () => {
-            wrapper.setProps({
-                sids: [1, 2],
-            });
+            const wrapper = shallow(<TraitsPopover sids={[1, 2]} />);
 
             expect(
                 wrapper
@@ -48,9 +48,7 @@ describe('<TraitsPopover /> component', () => {
         });
 
         it('renders <Popover /> title with correct "Included in x Trait(s)" labeling', () => {
-            wrapper.setProps({
-                sids: [1, 2],
-            });
+            const wrapper = shallow(<TraitsPopover sids={[1, 2]} />);
 
             expect(wrapper.find(Popover).props().title).toContain('Included in 2 Traits');
 
@@ -62,6 +60,8 @@ describe('<TraitsPopover /> component', () => {
         });
 
         it('renders <Wait /> when loading', () => {
+            const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
+
             wrapper.setState({
                 loading: true,
             });
@@ -70,10 +70,17 @@ describe('<TraitsPopover /> component', () => {
         });
 
         it('renders content in Popover when not loading', () => {
+            const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
+
             wrapper.setState({
+                traits: [{ sid: 1, name: 'i am a trait' }],
                 loading: false,
-                traits: [{ id: 1, name: 'i am a trait' }],
             });
+
+            const content = wrapper
+                .find(Popover)
+                .filter('[data-test="overlay-trigger-popover"]')
+                .html();
 
             expect(wrapper.find(Wait).exists()).toBe(false);
             expect(
@@ -82,12 +89,55 @@ describe('<TraitsPopover /> component', () => {
                     .filter('[data-test="overlay-trigger-popover"]')
                     .find(Link).length,
             ).toBe(1);
+            expect(content).toContain('i am a trait');
+            expect(content).toContain('(1)');
+        });
+
+        it('renders `maxVisibleTraits` traits and an "and more" message when many sids are provided', () => {
+            const wrapper = shallow(<TraitsPopover sids={[1, 2]} maxVisibleTraits={1} />);
+
+            wrapper.setState({
+                traits: [{ sid: 1, name: 'Trait 1' }],
+                loading: false,
+            });
+
             expect(
                 wrapper
                     .find(Popover)
                     .filter('[data-test="overlay-trigger-popover"]')
-                    .html(),
-            ).toContain('i am a trait');
+                    .find(Link).length,
+            ).toBe(1);
+
+            const content = wrapper
+                .find(Popover)
+                .filter('[data-test="overlay-trigger-popover"]')
+                .html();
+
+            expect(content).toContain('And 1 more.');
+        });
+
+        it('renders an error message if all traits are unavailable', () => {
+            const wrapper = shallow(<TraitsPopover sids={[1, 2, 3]} />);
+
+            wrapper.setState({
+                traits: [],
+                loading: false,
+                hasError: true,
+            });
+
+            expect(
+                wrapper
+                    .find(Popover)
+                    .filter('[data-test="overlay-trigger-popover"]')
+                    .find(Link).length,
+            ).toBe(0);
+
+            const content = wrapper
+                .find(Popover)
+                .filter('[data-test="overlay-trigger-popover"]')
+                .html();
+
+            expect(content).toMatchSnapshot();
         });
     });
 });
