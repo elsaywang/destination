@@ -17,3 +17,7 @@
 :local(.traitSid) {
     margin-left: 0.5rem;
 }
+
+:local(.andMore) {
+    margin-top: 1rem;
+}

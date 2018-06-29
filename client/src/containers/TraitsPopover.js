@@ -7,6 +7,7 @@ import Button from '@react/react-spectrum/Button';
 import ChevronDown from '@react/react-spectrum/Icon/ChevronDown';
 import Wait from '@react/react-spectrum/Wait';
 import { fetchTrait } from '../utils/fetchTrait';
+import { maxVisibleTraits } from '../constants/includedInTraitsConstants';
 import styles from './TraitsPopover.css';
 
 class TraitsPopover extends Component {
@@ -22,6 +23,10 @@ class TraitsPopover extends Component {
         this.onPopoverClick = this.onPopoverClick.bind(this);
     }
 
+    static defaultProps = {
+        maxVisibleTraits,
+    };
+
     setStateAsync(state) {
         return new Promise(resolve => {
             this.setState(state, resolve);
@@ -30,7 +35,9 @@ class TraitsPopover extends Component {
 
     async onPopoverClick() {
         try {
-            const responses = await Promise.all(this.props.sids.map(sid => fetchTrait(sid)));
+            const responses = await Promise.all(
+                this.props.sids.slice(0, this.props.maxVisibleTraits).map(sid => fetchTrait(sid)),
+            );
             const successfulResponses = responses.filter(({ ok }) => ok === true);
             const traits = await Promise.all(successfulResponses.map(response => response.json()));
 
@@ -46,7 +53,17 @@ class TraitsPopover extends Component {
         }
     }
 
-    renderContent = () => {
+    renderAndMore = () => {
+        const extraTraits = this.props.sids.length - this.state.traits.length;
+
+        return extraTraits ? (
+            <div className={styles.andMore}>
+                And {this.props.sids.length - this.state.traits.length} more.
+            </div>
+        ) : null;
+    };
+
+    renderTraitLinks = () => {
         return this.state.traits.map(({ sid, name }) => {
             const label = `${name} - ${sid}`;
             const traitUrl = `/portal/Traits/Traits.ddx#view/${sid}`;
@@ -59,6 +76,13 @@ class TraitsPopover extends Component {
             );
         });
     };
+
+    renderContent = () => (
+        <Fragment>
+            {this.renderTraitLinks()}
+            {this.renderAndMore()}
+        </Fragment>
+    );
 
     render() {
         const { sids } = this.props;
@@ -99,6 +123,7 @@ class TraitsPopover extends Component {
 
 TraitsPopover.propTypes = {
     sids: PropTypes.array.isRequired,
+    maxVisibleTraits: PropTypes.number,
 };
 
 export default TraitsPopover;
