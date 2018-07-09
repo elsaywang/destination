@@ -8,7 +8,7 @@ import './Layout.css';
 const messages = defineMessages({
     title: {
         id: 'components.Layout.title',
-        description: 'Title for the Signals app',
+        description: 'Title for the Adobe Audience Manager | Signals',
         defaultMessage: 'Signals',
     },
 });
