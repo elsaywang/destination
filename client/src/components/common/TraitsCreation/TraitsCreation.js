@@ -58,6 +58,7 @@ TraitsCreation.propTypes = {
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,
         records: PropTypes.array,
+        selectedRowIndexes: PropTypes.array,
     }),
     canCreateTraits: PropTypes.bool,
 };

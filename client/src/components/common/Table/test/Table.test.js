@@ -27,6 +27,7 @@ describe('<Table /> component', () => {
     ];
     const renderCell = (column, data) => <span>{data}</span>;
     const sortSearch = jest.fn();
+    const selectedRowIndexes = [0];
     const onSelectionChange = jest.fn();
     const onLoadMore = jest.fn();
     const wrapper = shallow(
@@ -37,6 +38,7 @@ describe('<Table /> component', () => {
             sortSearch={sortSearch}
             onLoadMore={onLoadMore}
             onSelectionChange={onSelectionChange}
+            selectedRowIndexes={selectedRowIndexes}
         />,
     );
 
@@ -52,6 +54,19 @@ describe('<Table /> component', () => {
         });
         it('passes the `onSelectionChange` prop to the <TableView />', () => {
             expect(wrapper.find(TableView).prop('onSelectionChange')).toEqual(onSelectionChange);
+        });
+    });
+    describe('shouldComponentUpdate', () => {
+        it('should return false if `nextProps` has different `selectedRowIndexes` than `this.props`', () => {
+            const actual = wrapper.instance().shouldComponentUpdate({ selectedRowIndexes: [0, 1] });
+
+            expect(actual).toBeFalsy();
+        });
+
+        it('should return true if `nextProps` has the same `selectedRowIndexes` as `this.props`', () => {
+            const actual = wrapper.instance().shouldComponentUpdate({ selectedRowIndexes: [0] });
+
+            expect(actual).toBeTruthy();
         });
     });
     describe('created data source for the table', () => {

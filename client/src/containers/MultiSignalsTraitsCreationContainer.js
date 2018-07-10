@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TraitsCreation from '../components/common/TraitsCreation/';
 import { connect } from 'react-redux';
+import TraitsCreation from '../components/common/TraitsCreation/';
+import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 
 export class MultiSignalsTraitsCreationContainer extends Component {
     render() {
-        const { selectedSignals } = this.props;
-        const { records } = selectedSignals;
-
-        return records.length ? <TraitsCreation multiCreation {...this.props} /> : null;
+        return this.props.selectedSignals.selectedRowIndexes.length ? (
+            <TraitsCreation multiCreation {...this.props} />
+        ) : null;
     }
 }
 
@@ -17,6 +17,7 @@ MultiSignalsTraitsCreationContainer.propTypes = {
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,
         records: PropTypes.array,
+        selectedRowIndexes: PropTypes.array,
     }),
     canCreateTraits: PropTypes.bool,
 };

@@ -21,6 +21,7 @@ import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { getIsEndOfResults } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
+import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
@@ -410,6 +411,7 @@ class SearchContainer extends Component {
                             </GridRow>
                             <SignalsTable
                                 results={this.props.results}
+                                selectedRowIndexes={this.props.selectedRowIndexes}
                                 signalType={this.state.source.sourceType}
                                 totalKeyValuePairs={this.state.keyValuePairs.length}
                                 isAdvancedSearchEnabled={this.state.advanced}
@@ -440,6 +442,7 @@ const mapStateToProps = ({
     results,
     savedSearch,
     savedSearchFields,
+    selectedSignals,
     reportSuites,
     errors,
     permissions,
@@ -455,6 +458,7 @@ const mapStateToProps = ({
     isSavedSearchLoaded: savedSearch.isLoaded,
     finalizedSavedSearchList: getNormalizedSavedSearchList(savedSearch),
     maxSignalRetentionDays: getMaxSignalRetentionDays(traitBackfill),
+    selectedRowIndexes: getSelectedRowIndexes(selectedSignals),
     reportSuites,
     errors,
     permissions,

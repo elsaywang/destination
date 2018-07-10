@@ -17,6 +17,9 @@ ShallowWrapper {
                 },
               },
             ],
+            "selectedRowIndexes": Array [
+              0,
+            ],
             "selectionMessage": "1 Real-time signal selected ",
           }
     }
@@ -45,6 +48,9 @@ ShallowWrapper {
             },
           },
         ],
+        "selectedRowIndexes": Array [
+          0,
+        ],
         "selectionMessage": "1 Real-time signal selected ",
       },
     },
@@ -69,6 +75,9 @@ ShallowWrapper {
                 "sourceType": "ANALYTICS",
               },
             },
+          ],
+          "selectedRowIndexes": Array [
+            0,
           ],
           "selectionMessage": "1 Real-time signal selected ",
         },
@@ -97,6 +106,7 @@ ShallowWrapper {
         Object {
             "hasWarning": false,
             "records": Array [],
+            "selectedRowIndexes": Array [],
             "selectionMessage": "",
           }
     }
