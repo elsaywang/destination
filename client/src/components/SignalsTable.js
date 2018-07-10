@@ -45,7 +45,6 @@ class SignalsTable extends Component {
         const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
         const selectionMessage = renderSelectedSignalsMessage(records);
         onSignalRecordsSelection({
-            records,
             selectionMessage,
             hasWarning: hasWarning(records),
             selectedRowIndexes: selectedRowIndexSet,

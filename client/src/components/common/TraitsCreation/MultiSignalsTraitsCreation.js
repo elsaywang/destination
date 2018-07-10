@@ -26,7 +26,6 @@ MultiSignalsTraitsCreation.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,
-        records: PropTypes.array,
         selectedRowIndexes: PropTypes.array,
     }),
     storeSessionAndNavigateToTraits: PropTypes.func.isRequired,

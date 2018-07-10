@@ -3,10 +3,9 @@ import { CLEAR_SEARCH } from '../actions/searchForm';
 import { SELECT_SIGNALS } from '../actions/selectSignals';
 
 const initialState = {
-    records: [],
+    selectedRowIndexes: [],
     selectionMessage: '',
     hasWarning: false,
-    selectedRowIndexes: [],
 };
 
 export default handleActions(
@@ -20,14 +19,4 @@ export default handleActions(
     initialState,
 );
 
-export const getRecords = state => state.records;
 export const getSelectedRowIndexes = state => state.selectedRowIndexes;
-export const getSelectedSignalsDataType = state => {
-    if (!getRecords(state).length) {
-        return null;
-    }
-
-    return state.records.every(signal => signal.categoryType === 'ONBOARDED')
-        ? 'ONBOARDED'
-        : 'REALTIME';
-};

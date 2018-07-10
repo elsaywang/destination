@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TraitsCreation from '../components/common/TraitsCreation/';
-import { getSelectedRowIndexes } from '../reducers/selectedSignals';
+import { getSelectedResults } from '../reducers';
 
 export class MultiSignalsTraitsCreationContainer extends Component {
     render() {
@@ -16,14 +16,15 @@ MultiSignalsTraitsCreationContainer.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,
-        records: PropTypes.array,
         selectedRowIndexes: PropTypes.array,
     }),
+    selectedResults: PropTypes.array,
     canCreateTraits: PropTypes.bool,
 };
 
-const mapStateToProps = ({ selectedSignals }) => ({
+const mapStateToProps = ({ selectedSignals, results }) => ({
     selectedSignals,
+    selectedResults: getSelectedResults({ selectedSignals, results }),
 });
 
 export default connect(mapStateToProps)(MultiSignalsTraitsCreationContainer);
