@@ -1,21 +1,37 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SignalsTable from './SignalsTable';
+import EmptySearch from './EmptySearch';
 import withLoadingSpinner from './withLoadingSpinner';
 import { fetchSignals } from '../utils/fetchSignals';
+import styles from './SavedSearchTable.css';
 
 class SavedSearchTable extends Component {
     state = {
         tableResults: {},
-        error: '',
+        error: false,
     };
 
     async componentDidMount() {
-        const { savedSearch, getResultsBySavedSearch } = this.props;
-        const results = await fetchSignals({ search: savedSearch });
-        const list = await results.json();
+        const { savedSearch } = this.props;
 
-        this.setState({ tableResults: list });
+        try {
+            const response = await fetchSignals({ search: savedSearch });
+
+            if (response.ok) {
+                const list = await response.json();
+
+                this.setState({
+                    tableResults: list,
+                    error: false,
+                });
+            }
+        } catch (error) {
+            this.setState({
+                tableResults: {},
+                error: true,
+            });
+        }
     }
 
     render() {
@@ -30,7 +46,7 @@ class SavedSearchTable extends Component {
         const WrappedSignalsTable = withLoadingSpinner(SignalsTable);
         const totalKeyValuePairs = savedSearch.keyValuePairs.length;
 
-        return (
+        return hasSearchResults && !this.state.error ? (
             <WrappedSignalsTable
                 isLoaded={hasSearchResults}
                 results={tableResults}
@@ -38,6 +54,11 @@ class SavedSearchTable extends Component {
                 canCreateTraits={canCreateTraits}
                 isAdvancedSearchEnabled={isAdvancedSearchEnabled}
                 allowsSelection={allowsSelection}
+            />
+        ) : (
+            <EmptySearch
+                className={styles.noResults}
+                variant={this.state.error ? 'errorFetching' : 'noResult'}
             />
         );
     }
