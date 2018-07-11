@@ -4,14 +4,7 @@ exports[`<SavedSearchTable/> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <load
-    allowsSelection={false}
-    canCreateTraits={undefined}
-    isAdvancedSearchEnabled={false}
-    isLoaded={false}
-    results={Object {}}
-    totalKeyValuePairs={1}
-/>,
+  Symbol(enzyme.__unrendered__): <Wait />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -22,21 +15,371 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
-    "props": Object {},
+    "nodeType": "host",
+    "props": Object {
+      "aria-valuemax": 100,
+      "aria-valuemin": 0,
+      "aria-valuenow": undefined,
+      "children": Array [
+        <div
+          className="spectrum-Loader-track"
+/>,
+        <div
+          className="spectrum-Loader-fills"
+>
+          <div
+                    className="spectrum-Loader-fill-mask-1"
+          >
+                    <div
+                              className="spectrum-Loader-fill-submask-1"
+                              style={Object {}}
+                    >
+                              <div
+                                        className="spectrum-Loader-fill"
+                              />
+                    </div>
+          </div>
+          <div
+                    className="spectrum-Loader-fill-mask-2"
+          >
+                    <div
+                              className="spectrum-Loader-fill-submask-2"
+                              style={Object {}}
+                    >
+                              <div
+                                        className="spectrum-Loader-fill"
+                              />
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "spectrum-Loader spectrum-Loader--indeterminate",
+      "role": "progressbar",
+    },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "spectrum-Loader-track",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="spectrum-Loader-fill-mask-1"
+>
+              <div
+                            className="spectrum-Loader-fill-submask-1"
+                            style={Object {}}
+              >
+                            <div
+                                          className="spectrum-Loader-fill"
+                            />
+              </div>
+</div>,
+            <div
+              className="spectrum-Loader-fill-mask-2"
+>
+              <div
+                            className="spectrum-Loader-fill-submask-2"
+                            style={Object {}}
+              >
+                            <div
+                                          className="spectrum-Loader-fill"
+                            />
+              </div>
+</div>,
+          ],
+          "className": "spectrum-Loader-fills",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="spectrum-Loader-fill-submask-1"
+                style={Object {}}
+>
+                <div
+                                className="spectrum-Loader-fill"
+                />
+</div>,
+              "className": "spectrum-Loader-fill-mask-1",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="spectrum-Loader-fill"
+/>,
+                "className": "spectrum-Loader-fill-submask-1",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "spectrum-Loader-fill",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="spectrum-Loader-fill-submask-2"
+                style={Object {}}
+>
+                <div
+                                className="spectrum-Loader-fill"
+                />
+</div>,
+              "className": "spectrum-Loader-fill-mask-2",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="spectrum-Loader-fill"
+/>,
+                "className": "spectrum-Loader-fill-submask-2",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "spectrum-Loader-fill",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
-      "props": Object {},
+      "nodeType": "host",
+      "props": Object {
+        "aria-valuemax": 100,
+        "aria-valuemin": 0,
+        "aria-valuenow": undefined,
+        "children": Array [
+          <div
+            className="spectrum-Loader-track"
+/>,
+          <div
+            className="spectrum-Loader-fills"
+>
+            <div
+                        className="spectrum-Loader-fill-mask-1"
+            >
+                        <div
+                                    className="spectrum-Loader-fill-submask-1"
+                                    style={Object {}}
+                        >
+                                    <div
+                                                className="spectrum-Loader-fill"
+                                    />
+                        </div>
+            </div>
+            <div
+                        className="spectrum-Loader-fill-mask-2"
+            >
+                        <div
+                                    className="spectrum-Loader-fill-submask-2"
+                                    style={Object {}}
+                        >
+                                    <div
+                                                className="spectrum-Loader-fill"
+                                    />
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "spectrum-Loader spectrum-Loader--indeterminate",
+        "role": "progressbar",
+      },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "spectrum-Loader-track",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="spectrum-Loader-fill-mask-1"
+>
+                <div
+                                className="spectrum-Loader-fill-submask-1"
+                                style={Object {}}
+                >
+                                <div
+                                                className="spectrum-Loader-fill"
+                                />
+                </div>
+</div>,
+              <div
+                className="spectrum-Loader-fill-mask-2"
+>
+                <div
+                                className="spectrum-Loader-fill-submask-2"
+                                style={Object {}}
+                >
+                                <div
+                                                className="spectrum-Loader-fill"
+                                />
+                </div>
+</div>,
+            ],
+            "className": "spectrum-Loader-fills",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="spectrum-Loader-fill-submask-1"
+                  style={Object {}}
+>
+                  <div
+                                    className="spectrum-Loader-fill"
+                  />
+</div>,
+                "className": "spectrum-Loader-fill-mask-1",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="spectrum-Loader-fill"
+/>,
+                  "className": "spectrum-Loader-fill-submask-1",
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "spectrum-Loader-fill",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="spectrum-Loader-fill-submask-2"
+                  style={Object {}}
+>
+                  <div
+                                    className="spectrum-Loader-fill"
+                  />
+</div>,
+                "className": "spectrum-Loader-fill-mask-2",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="spectrum-Loader-fill"
+/>,
+                  "className": "spectrum-Loader-fill-submask-2",
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "spectrum-Loader-fill",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -53,13 +396,9 @@ exports[`<SavedSearchTable/> component state changes based on lifecyle events wi
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <load
-    allowsSelection={false}
-    canCreateTraits={undefined}
-    isAdvancedSearchEnabled={false}
-    isLoaded={false}
-    results={Object {}}
-    totalKeyValuePairs={1}
+  Symbol(enzyme.__unrendered__): <EmptySearch
+    className={undefined}
+    variant="errorFetching"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -72,9 +411,33 @@ ShallowWrapper {
     "instance": null,
     "key": undefined,
     "nodeType": "function",
-    "props": Object {},
+    "props": Object {
+      "children": <img
+        alt="Error fetching data. Please try again later."
+        className={undefined}
+        data-test="error-fetching-data"
+        src="undefinednoResult.svg"
+/>,
+      "className": undefined,
+      "message": "Please try again later.",
+      "messageStyle": undefined,
+      "title": "Error fetching data.",
+    },
     "ref": null,
-    "rendered": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "alt": "Error fetching data. Please try again later.",
+        "className": undefined,
+        "data-test": "error-fetching-data",
+        "src": "undefinednoResult.svg",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "img",
+    },
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -82,9 +445,33 @@ ShallowWrapper {
       "instance": null,
       "key": undefined,
       "nodeType": "function",
-      "props": Object {},
+      "props": Object {
+        "children": <img
+          alt="Error fetching data. Please try again later."
+          className={undefined}
+          data-test="error-fetching-data"
+          src="undefinednoResult.svg"
+/>,
+        "className": undefined,
+        "message": "Please try again later.",
+        "messageStyle": undefined,
+        "title": "Error fetching data.",
+      },
       "ref": null,
-      "rendered": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Error fetching data. Please try again later.",
+          "className": undefined,
+          "data-test": "error-fetching-data",
+          "src": "undefinednoResult.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
       "type": [Function],
     },
   ],
@@ -102,33 +489,39 @@ exports[`<SavedSearchTable/> component state changes based on lifecyle events wi
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <load
+  Symbol(enzyme.__unrendered__): <SignalsTable
     allowsSelection={false}
     canCreateTraits={undefined}
     isAdvancedSearchEnabled={false}
     isLoaded={true}
     results={
         Object {
-            "includedInTraits": Array [
-              1,
-              2,
-              3,
-            ],
-            "keyValuePairs": Array [
+            "analyticsServiceAvailable": true,
+            "endDate": 1531332629645,
+            "list": Array [
               Object {
-                "key": "k-regional",
-                "operator": "<",
-                "value": 57091,
+                "includedInTraits": null,
+                "keyValuePairs": Array [
+                  Object {
+                    "key": "evar18",
+                    "value": "CMS18",
+                  },
+                ],
+                "percentageChange": 0.27783491545226535,
+                "signalStatus": "UNUSED",
+                "source": Object {
+                  "dataSourceIds": null,
+                  "reportSuiteIds": null,
+                  "sourceType": null,
+                },
+                "totalCount": 93859,
               },
             ],
-            "percentageChange": 0.154,
-            "signalStatus": "USED",
-            "source": Object {
-              "dataSourceIds": 93561,
-              "reportSuiteIds": null,
-              "sourceType": "REALTIME",
-            },
-            "totalCount": 21456,
+            "page": 0,
+            "pageSize": 20,
+            "pid": 1194,
+            "startDate": 1530662400000,
+            "total": 20,
           }
     }
     totalKeyValuePairs={1}
@@ -146,31 +539,80 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "allowsSelection": false,
-      "canCreateTraits": undefined,
-      "isAdvancedSearchEnabled": false,
-      "results": Object {
-        "includedInTraits": Array [
-          1,
-          2,
-          3,
-        ],
-        "keyValuePairs": Array [
-          Object {
-            "key": "k-regional",
-            "operator": "<",
-            "value": 57091,
-          },
-        ],
-        "percentageChange": 0.154,
-        "signalStatus": "USED",
-        "source": Object {
-          "dataSourceIds": 93561,
-          "reportSuiteIds": null,
-          "sourceType": "REALTIME",
+      "columns": Array [
+        Object {
+          "key": "keyValuePairs",
+          "minWidth": 150,
+          "sortable": true,
+          "title": "Key-Value Pair",
         },
-        "totalCount": 21456,
-      },
-      "totalKeyValuePairs": 1,
+        Object {
+          "key": "signalType",
+          "sortable": true,
+          "title": "Signal Type",
+          "width": 140,
+        },
+        Object {
+          "key": "signalSource",
+          "sortable": true,
+          "title": "Signal Source",
+          "width": 180,
+        },
+        Object {
+          "key": "totalCount",
+          "sortable": true,
+          "title": "Total Counts",
+          "width": 85,
+        },
+        Object {
+          "key": "percentageChange",
+          "sortable": true,
+          "title": "Percentage Change",
+          "width": 165,
+        },
+        Object {
+          "key": "includedInTraits",
+          "sortable": true,
+          "title": "Included In Traits",
+          "width": 150,
+        },
+      ],
+      "dataTest": "signals-table",
+      "items": Array [
+        Object {
+          "includedInTraits": Object {
+            "categoryType": undefined,
+            "keyValuePairs": Array [
+              Object {
+                "key": "evar18",
+                "value": "CMS18",
+              },
+            ],
+            "sids": Array [],
+          },
+          "keyValuePairs": Array [
+            Object {
+              "key": "evar18",
+              "value": "CMS18",
+            },
+          ],
+          "percentageChange": 0.27783491545226535,
+          "signalSource": "—",
+          "signalStatus": "UNUSED",
+          "signalType": "—",
+          "source": Object {
+            "dataSourceIds": null,
+            "reportSuiteIds": null,
+            "sourceType": null,
+          },
+          "totalCount": 93859,
+        },
+      ],
+      "onLoadMore": undefined,
+      "onSelectionChange": [Function],
+      "renderCell": [Function],
+      "rowHeight": 48,
+      "sortSearch": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -183,31 +625,80 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "allowsSelection": false,
-        "canCreateTraits": undefined,
-        "isAdvancedSearchEnabled": false,
-        "results": Object {
-          "includedInTraits": Array [
-            1,
-            2,
-            3,
-          ],
-          "keyValuePairs": Array [
-            Object {
-              "key": "k-regional",
-              "operator": "<",
-              "value": 57091,
-            },
-          ],
-          "percentageChange": 0.154,
-          "signalStatus": "USED",
-          "source": Object {
-            "dataSourceIds": 93561,
-            "reportSuiteIds": null,
-            "sourceType": "REALTIME",
+        "columns": Array [
+          Object {
+            "key": "keyValuePairs",
+            "minWidth": 150,
+            "sortable": true,
+            "title": "Key-Value Pair",
           },
-          "totalCount": 21456,
-        },
-        "totalKeyValuePairs": 1,
+          Object {
+            "key": "signalType",
+            "sortable": true,
+            "title": "Signal Type",
+            "width": 140,
+          },
+          Object {
+            "key": "signalSource",
+            "sortable": true,
+            "title": "Signal Source",
+            "width": 180,
+          },
+          Object {
+            "key": "totalCount",
+            "sortable": true,
+            "title": "Total Counts",
+            "width": 85,
+          },
+          Object {
+            "key": "percentageChange",
+            "sortable": true,
+            "title": "Percentage Change",
+            "width": 165,
+          },
+          Object {
+            "key": "includedInTraits",
+            "sortable": true,
+            "title": "Included In Traits",
+            "width": 150,
+          },
+        ],
+        "dataTest": "signals-table",
+        "items": Array [
+          Object {
+            "includedInTraits": Object {
+              "categoryType": undefined,
+              "keyValuePairs": Array [
+                Object {
+                  "key": "evar18",
+                  "value": "CMS18",
+                },
+              ],
+              "sids": Array [],
+            },
+            "keyValuePairs": Array [
+              Object {
+                "key": "evar18",
+                "value": "CMS18",
+              },
+            ],
+            "percentageChange": 0.27783491545226535,
+            "signalSource": "—",
+            "signalStatus": "UNUSED",
+            "signalType": "—",
+            "source": Object {
+              "dataSourceIds": null,
+              "reportSuiteIds": null,
+              "sourceType": null,
+            },
+            "totalCount": 93859,
+          },
+        ],
+        "onLoadMore": undefined,
+        "onSelectionChange": [Function],
+        "renderCell": [Function],
+        "rowHeight": 48,
+        "sortSearch": undefined,
       },
       "ref": null,
       "rendered": null,
