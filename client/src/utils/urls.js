@@ -1,4 +1,4 @@
-import { portalUrl } from '../lib/portalUrl';
+import { portalUrl } from '../constants/portalUrl';
 
 export const serialize = (options = {}) => {
     const entries = Object.entries(options);
