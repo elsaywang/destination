@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Wait from '@react/react-spectrum/Wait';
 import SignalsTable from './SignalsTable';
 import EmptySearch from './EmptySearch';
-import withLoadingSpinner from './withLoadingSpinner';
 import { fetchSignals } from '../utils/fetchSignals';
 import styles from './SavedSearchTable.css';
 
@@ -10,6 +10,7 @@ class SavedSearchTable extends Component {
     state = {
         tableResults: {},
         error: false,
+        hasSearched: false,
     };
 
     async componentDidMount() {
@@ -24,17 +25,19 @@ class SavedSearchTable extends Component {
                 this.setState({
                     tableResults: list,
                     error: false,
+                    hasSearched: true,
                 });
             }
         } catch (error) {
             this.setState({
                 tableResults: {},
                 error: true,
+                hasSearched: true,
             });
         }
     }
 
-    render() {
+    renderTable() {
         const { tableResults } = this.state;
         const {
             isAdvancedSearchEnabled,
@@ -43,24 +46,32 @@ class SavedSearchTable extends Component {
             savedSearch,
         } = this.props;
         const hasSearchResults = Boolean(Object.keys(tableResults).length);
-        const WrappedSignalsTable = withLoadingSpinner(SignalsTable);
         const totalKeyValuePairs = savedSearch.keyValuePairs.length;
+        const withResults = hasSearchResults && !this.state.error;
 
-        return hasSearchResults && !this.state.error ? (
-            <WrappedSignalsTable
-                isLoaded={hasSearchResults}
-                results={tableResults}
-                totalKeyValuePairs={totalKeyValuePairs}
-                canCreateTraits={canCreateTraits}
-                isAdvancedSearchEnabled={isAdvancedSearchEnabled}
-                allowsSelection={allowsSelection}
-            />
-        ) : (
+        if (withResults) {
+            return (
+                <SignalsTable
+                    isLoaded={hasSearchResults}
+                    results={tableResults}
+                    totalKeyValuePairs={totalKeyValuePairs}
+                    canCreateTraits={canCreateTraits}
+                    isAdvancedSearchEnabled={isAdvancedSearchEnabled}
+                    allowsSelection={allowsSelection}
+                />
+            );
+        }
+
+        return (
             <EmptySearch
                 className={styles.noResults}
                 variant={this.state.error ? 'errorFetching' : 'noResult'}
             />
         );
+    }
+
+    render() {
+        return this.state.hasSearched ? this.renderTable() : <Wait />;
     }
 }
 
