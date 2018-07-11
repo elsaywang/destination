@@ -14,6 +14,8 @@ function EmptySearch({ variant, className }) {
                 return styles.exploreMessage;
             case 'noResult':
                 return styles.noResultMessage;
+            case 'errorFetching':
+                return styles.noResultMessage;
             default:
                 return '';
         }
@@ -23,6 +25,8 @@ function EmptySearch({ variant, className }) {
             case 'explore':
                 return styles.exploreImage;
             case 'noResult':
+                return styles.noResultImage;
+            case 'errorFetching':
                 return styles.noResultImage;
             default:
                 return '';
@@ -34,10 +38,13 @@ function EmptySearch({ variant, className }) {
                 return `${getStaticUrl()}${Explore}`;
             case 'noResult':
                 return `${getStaticUrl()}${NoResult}`;
+            case 'errorFetching':
+                return `${getStaticUrl()}${NoResult}`;
             default:
                 return '';
         }
     };
+
     return (
         <EmptyPlaceholder
             className={className}
@@ -56,7 +63,6 @@ function EmptySearch({ variant, className }) {
 
 EmptySearch.propTypes = {
     variant: PropTypes.oneOf(['explore', 'noResult']).isRequired,
-    className: PropTypes.string,
 };
 
 export default EmptySearch;
