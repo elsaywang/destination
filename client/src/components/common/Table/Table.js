@@ -23,6 +23,13 @@ class Table extends Component {
         return `${headHeight + bodyHeight}px`;
     }
 
+    shouldComponentUpdate(nextProps) {
+        const getSelectedRowIndexes = ({ selectedRowIndexes }) =>
+            JSON.stringify(selectedRowIndexes.sort());
+
+        return getSelectedRowIndexes(nextProps) === getSelectedRowIndexes(this.props);
+    }
+
     render() {
         const {
             items,
@@ -62,6 +69,7 @@ Table.propTypes = {
     columns: PropTypes.array.isRequired,
     renderCell: PropTypes.func.isRequired,
     rowHeight: PropTypes.number,
+    selectedRowIndexes: PropTypes.array,
     onSelectionChange: PropTypes.func,
     sortSearch: PropTypes.func,
     dataTest: PropTypes.string,

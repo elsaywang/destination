@@ -11,6 +11,7 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
                 selectionMessage: '',
                 records: [],
                 hasWarning: false,
+                selectedRowIndexes: [],
             },
         };
         const wrapper = shallow(<MultiSignalsTraitsCreationContainer {...initialprops} />);
@@ -36,6 +37,7 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
                     },
                 ],
                 hasWarning: false,
+                selectedRowIndexes: [0],
             },
         };
         const wrapper = shallow(<MultiSignalsTraitsCreationContainer {...props} />);

@@ -21,8 +21,8 @@ class TraitsCreation extends Component {
     storeSessionAndNavigateToTraits = e => {
         e.preventDefault();
 
-        const { keyValuePairs, multiCreation, selectedSignals } = this.props;
-        const signals = multiCreation ? selectedSignals.records : [{ keyValuePairs }];
+        const { keyValuePairs, multiCreation, selectedResults } = this.props;
+        const signals = multiCreation ? selectedResults : [{ keyValuePairs }];
         const signalsParams = {
             signals: stringifySignals(signals),
         };
@@ -57,7 +57,7 @@ TraitsCreation.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasWarning: PropTypes.bool,
-        records: PropTypes.array,
+        selectedRowIndexes: PropTypes.array,
     }),
     canCreateTraits: PropTypes.bool,
 };

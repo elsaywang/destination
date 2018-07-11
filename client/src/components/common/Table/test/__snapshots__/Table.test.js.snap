@@ -32,6 +32,11 @@ ShallowWrapper {
     onLoadMore={[Function]}
     onSelectionChange={[Function]}
     renderCell={[Function]}
+    selectedRowIndexes={
+        Array [
+            0,
+          ]
+    }
     sortSearch={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {

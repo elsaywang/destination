@@ -44,7 +44,11 @@ class SignalsTable extends Component {
         }
         const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
         const selectionMessage = renderSelectedSignalsMessage(records);
-        onSignalRecordsSelection({ records, selectionMessage, hasWarning: hasWarning(records) });
+        onSignalRecordsSelection({
+            selectionMessage,
+            hasWarning: hasWarning(records),
+            selectedRowIndexes: selectedRowIndexSet,
+        });
     };
 
     getColumns(signalType, isAdvancedSearchEnabled = false) {
@@ -179,6 +183,7 @@ class SignalsTable extends Component {
             onSortSearch,
             onLoadMore,
             allowsSelection,
+            selectedRowIndexes,
         } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
         const items = this.formatSignalsList(results.list);
@@ -195,6 +200,7 @@ class SignalsTable extends Component {
                 onLoadMore={onLoadMore}
                 onSelectionChange={this.handleSelectionChange}
                 allowsSelection={allowsSelection}
+                selectedRowIndexes={selectedRowIndexes}
             />
         );
     }
@@ -210,6 +216,7 @@ SignalsTable.propTypes = {
     onLoadMore: PropTypes.func,
     allowsSelection: PropTypes.bool,
     canCreateTraits: PropTypes.bool,
+    selectedRowIndexes: PropTypes.array,
 };
 
 export default SignalsTable;
