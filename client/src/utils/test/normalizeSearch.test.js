@@ -25,8 +25,6 @@ describe('normalizeSearch util', () => {
             sourceType: 'ALL',
         },
         viewRecordsFor: '7D',
-        sortBy: 'percentageChange',
-        descending: true,
     };
 
     const baseNormalizedSearch = {

@@ -52,8 +52,6 @@ export const normalizeSearch = search => ({
     ...normalizeEndDate(search),
     ...normalizeSource(search),
     ...normalizeSignalStatus(search),
-    sortBy: search.sortBy,
-    minEventFires: search.minEventFires,
     ...normalizeFilterNewSignals(search),
-    descending: search.descending,
+    minEventFires: search.minEventFires,
 });

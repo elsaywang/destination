@@ -25,21 +25,9 @@ export const throttleLoadMore = createAction(THROTTLE_LOAD_MORE);
 export const SORT_SEARCH = 'SORT_SEARCH';
 export const SORT_SEARCH_FULFILLED = 'SORT_SEARCH_FULFILLED';
 export const SORT_SEARCH_REJECTED = 'SORT_SEARCH_REJECTED';
-export const sortSearch = createAsyncAction(SORT_SEARCH, (search, sortBy, sortDir) => {
-    const descending = sortDir === -1;
-    const normalizedSearch = normalizeSearch(search);
-    const options = {
-        body: JSON.stringify({
-            ...normalizedSearch,
-            sortBy,
-            descending,
-        }),
-        cache: 'no-cache',
-        method: 'POST',
-    };
-
-    return fetch('/portal/api/v1/signals/list', options);
-});
+export const sortSearch = createAsyncAction(SORT_SEARCH, (search, sortOptions) =>
+    fetchSignals({ search, sortOptions }),
+);
 
 export const CLEAR_SEARCH = 'CLEAR_SEARCH';
 export const clearSearch = createAction(CLEAR_SEARCH);

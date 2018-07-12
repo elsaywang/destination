@@ -259,8 +259,8 @@ class SearchContainer extends Component {
         }, throttleMs)();
     };
 
-    handleSortSearch = (sortColumn, sortDir) => {
-        this.props.sortSearch(this.state, sortColumn, sortDir);
+    handleSortSearch = (sortBy, sortDir) => {
+        this.props.sortSearch(this.state, { sortBy, sortDir });
     };
 
     handleSaveThisSearchConfirm = search => {
