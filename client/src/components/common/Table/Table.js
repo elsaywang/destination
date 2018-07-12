@@ -8,10 +8,24 @@ import { defaultRowHeight, defaultMaxRows, defaultHeadHeight } from '../../../co
 /**
  * Table component that wraps the react-spectrum table components
  * (`TableView` and `TableViewDataSource`). More easily accepts props
- * for items, columns, and a renderCell method.
- * TODO: nice empty state
+ * for items, columns, table config, and event handlers.
  */
 class Table extends Component {
+    constructor({ items, columns, sortSearch, onLoadMore, allowsSelection }) {
+        super();
+
+        const DataSourceWithColumns = withColumns(DataSource, columns);
+
+        this.state = {
+            dataSource: new DataSourceWithColumns({
+                items,
+                sortSearch,
+                onLoadMore,
+                allowsSelection,
+            }),
+        };
+    }
+
     /**
      * Dynamically set the height of the table's container to show up to a
      * certain number of rows.
@@ -30,30 +44,30 @@ class Table extends Component {
         return getSelectedRowIndexes(nextProps) === getSelectedRowIndexes(this.props);
     }
 
+    componentDidUpdate() {
+        const { items, columns } = this.props;
+
+        this.state.dataSource.items = items;
+        this.state.dataSource.columns = columns;
+        this.state.dataSource.reloadData();
+    }
+
     render() {
         const {
             items,
-            columns,
             rowHeight,
             renderCell,
-            sortSearch,
-            onLoadMore,
             onSelectionChange,
             dataTest,
             allowsSelection,
         } = this.props;
-        const DataSourceWithColumns = withColumns(DataSource, columns);
-        const dataSource = new DataSourceWithColumns({
-            items,
-            sortSearch,
-            onLoadMore,
-        });
+
         const height = this.getTableHeight(items, rowHeight);
 
         return (
             <div data-test={dataTest} className="table-wrapper" style={{ height }}>
                 <TableView
-                    dataSource={dataSource}
+                    dataSource={this.state.dataSource}
                     renderCell={renderCell}
                     rowHeight={rowHeight}
                     onSelectionChange={onSelectionChange}

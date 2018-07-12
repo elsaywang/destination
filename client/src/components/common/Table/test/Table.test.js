@@ -86,7 +86,7 @@ describe('<Table /> component', () => {
         });
 
         describe('getTableHeight', () => {
-            const { getTableHeight } = new Table();
+            const { getTableHeight } = wrapper.instance();
 
             it('should return a string ending in px', () => {
                 expect(getTableHeight(items).substr(-2)).toEqual('px');
@@ -107,9 +107,6 @@ describe('<Table /> component', () => {
             it('should return the amount of pixels that fits the amount of rows and based on the custom `rowHeight` passed in', () => {
                 expect(getTableHeight(items, 50)).toEqual('140px');
             });
-
-            // TODO
-            // it('should return the amount of pixels that exactly fits the empty-state table when no items are passed in', () => {});
         });
     });
 });
