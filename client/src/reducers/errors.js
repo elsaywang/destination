@@ -36,10 +36,17 @@ export default handleActions(
             ...state,
             searchForm: handleErrorState(state, action),
         }),
-        [GET_SAVED_SEARCH_REJECTED]: (state, action) => ({
-            ...state,
-            savedSearch: handleErrorState(state, action),
-        }),
+        [GET_SAVED_SEARCH_REJECTED]: (state, action) =>
+            // Users who haven't saved any searches yet will get a 404 from the
+            // annotations API.
+            action.payload.status === 404
+                ? {
+                      ...state,
+                  }
+                : {
+                      ...state,
+                      savedSearch: handleErrorState(state, action),
+                  },
         [SAVE_SEARCH_REJECTED]: (state, action) => ({
             ...state,
             saveSearch: handleErrorState(state, action),

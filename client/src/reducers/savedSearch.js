@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions';
 import {
     GET_SAVED_SEARCH_FULFILLED,
+    GET_SAVED_SEARCH_REJECTED,
     UPDATE_SAVE_SEARCH_NAME,
     SAVE_SEARCH_FULFILLED,
     TRACK_SEARCH_RESULT_IN_DASHBOARD,
@@ -42,6 +43,7 @@ const list = handleActions(
                 ...savedSearch,
                 keyValuePairs: savedSearch.keyValuePairs.map(addId),
             })),
+        [GET_SAVED_SEARCH_REJECTED]: (state, action) => initialState.list,
         [SAVE_SEARCH_FULFILLED]: (state, action) => action.payload,
     },
     initialState.list,
@@ -122,6 +124,7 @@ const handleLoadMoreSavedSearch = (state, action) => ({
 export default handleActions(
     {
         [GET_SAVED_SEARCH_FULFILLED]: handleSavedSearchList,
+        [GET_SAVED_SEARCH_REJECTED]: handleSavedSearchList,
         [FETCH_LIMITS_FULFILLED]: handleSavedSearchListLimit,
         [LOAD_MORE_SAVED_SEARCH]: handleLoadMoreSavedSearch,
         [RESET_VISIBLE_SAVED_SEARCH]: handleLoadMoreSavedSearch,
