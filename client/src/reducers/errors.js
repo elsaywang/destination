@@ -22,10 +22,12 @@ const initialState = {
     },
 };
 
-export const handleErrorState = (state, action) => ({
-    hasError: action.error,
-    errorMessage: action.payload.message,
-});
+export const handleErrorState = (state, action) => {
+    return {
+        hasError: action.error,
+        errorMessage: action.payload.statusText,
+    };
+};
 
 export default handleActions(
     {
