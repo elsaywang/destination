@@ -6,11 +6,12 @@ import {
     CLEAR_SEARCH,
     SORT_SEARCH_FULFILLED,
 } from '../actions/searchForm';
+import { pageSize } from '../constants/paginationOptions';
 
 const initialState = {
     list: [],
     page: 0,
-    pageSize: 20,
+    pageSize,
     total: 0,
     isThrottled: false,
     isEndOfResults: false,
