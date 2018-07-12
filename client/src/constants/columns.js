@@ -24,33 +24,28 @@ const keyName = {
     title: 'Key Name',
     key: columnKeys.keyName,
     width: 200,
-    sortable: true,
 };
 const signalType = {
     title: 'Signal Type',
     key: columnKeys.signalType,
     width: 140,
-    sortable: true,
 };
 const signalSource = {
     title: 'Signal Source',
     key: columnKeys.signalSource,
     width: 180,
-    sortable: true,
 };
 
 const reportSuite = {
     title: 'Report Suite',
     key: columnKeys.signalSource,
     width: 180,
-    sortable: true,
 };
 
 const onboardedRecord = {
     title: 'Onboarded Record',
     key: columnKeys.signalSource,
     width: 180,
-    sortable: true,
 };
 /**
  * The "Total Counts", "Event Fires", and "Total Records" column will
@@ -92,7 +87,6 @@ const includedInTraits = {
     title: 'Included In Traits',
     key: columnKeys.includedInTraits,
     width: 155,
-    sortable: true,
 };
 
 /**

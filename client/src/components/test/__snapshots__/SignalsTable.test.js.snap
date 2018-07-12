@@ -120,13 +120,11 @@ ShallowWrapper {
         },
         Object {
           "key": "signalType",
-          "sortable": true,
           "title": "Signal Type",
           "width": 140,
         },
         Object {
           "key": "signalSource",
-          "sortable": true,
           "title": "Signal Source",
           "width": 180,
         },
@@ -144,7 +142,6 @@ ShallowWrapper {
         },
         Object {
           "key": "includedInTraits",
-          "sortable": true,
           "title": "Included In Traits",
           "width": 155,
         },
@@ -215,13 +212,11 @@ ShallowWrapper {
           },
           Object {
             "key": "signalType",
-            "sortable": true,
             "title": "Signal Type",
             "width": 140,
           },
           Object {
             "key": "signalSource",
-            "sortable": true,
             "title": "Signal Source",
             "width": 180,
           },
@@ -239,7 +234,6 @@ ShallowWrapper {
           },
           Object {
             "key": "includedInTraits",
-            "sortable": true,
             "title": "Included In Traits",
             "width": 155,
           },
