@@ -1,7 +1,11 @@
 import fetch from '../utils/fetch';
 import { normalizeSearch } from '../utils/normalizeSearch';
+import { pageSize as defaultPageSize } from '../constants/paginationOptions';
 
-export const fetchSignals = ({ search, pagination: { page = 0, pageSize = 20 } = {} }) => {
+export const fetchSignals = ({
+    search,
+    pagination: { page = 0, pageSize = defaultPageSize } = {},
+}) => {
     const normalizedSearch = normalizeSearch(search);
     const body = JSON.stringify({
         ...normalizedSearch,

@@ -106,7 +106,7 @@ ShallowWrapper {
             "isThrottled": false,
             "list": Array [],
             "page": 0,
-            "pageSize": 20,
+            "pageSize": 50,
             "total": 0,
           }
     }
