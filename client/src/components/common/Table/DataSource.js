@@ -39,7 +39,7 @@ class DataSource extends TableViewDataSource {
 
     // Override
     async loadMore() {
-        this.onLoadMore();
+        await this.onLoadMore();
     }
 
     // Override
