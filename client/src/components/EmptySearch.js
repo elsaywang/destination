@@ -63,6 +63,7 @@ function EmptySearch({ variant, className }) {
 
 EmptySearch.propTypes = {
     variant: PropTypes.oneOf(['explore', 'noResult', 'errorFetching']).isRequired,
+    className: PropTypes.string,
 };
 
 export default EmptySearch;

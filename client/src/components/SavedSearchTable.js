@@ -15,20 +15,17 @@ class SavedSearchTable extends Component {
 
     async componentDidMount() {
         const { savedSearch } = this.props;
+        const response = await fetchSignals({ search: savedSearch });
 
-        try {
-            const response = await fetchSignals({ search: savedSearch });
+        if (response.ok) {
+            const list = await response.json();
 
-            if (response.ok) {
-                const list = await response.json();
-
-                this.setState({
-                    tableResults: list,
-                    error: false,
-                    hasSearched: true,
-                });
-            }
-        } catch (error) {
+            this.setState({
+                tableResults: list,
+                error: false,
+                hasSearched: true,
+            });
+        } else {
             this.setState({
                 tableResults: {},
                 error: true,
