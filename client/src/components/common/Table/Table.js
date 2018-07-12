@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { TableView } from '@react/react-spectrum/TableView';
 import DataSource from './DataSource';
-import withColumns from './withColumns';
 import { defaultRowHeight, defaultMaxRows, defaultHeadHeight } from '../../../constants/rows';
 
 /**
@@ -14,11 +13,10 @@ class Table extends Component {
     constructor({ items, columns, sortSearch, onLoadMore, allowsSelection }) {
         super();
 
-        const DataSourceWithColumns = withColumns(DataSource, columns);
-
         this.state = {
-            dataSource: new DataSourceWithColumns({
+            dataSource: new DataSource({
                 items,
+                columns,
                 sortSearch,
                 onLoadMore,
                 allowsSelection,

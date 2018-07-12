@@ -5,20 +5,28 @@ import { TableViewDataSource } from '@react/react-spectrum/TableView';
  * that refer to the table items, which are stored as `this.items`.
  */
 class DataSource extends TableViewDataSource {
-    constructor({ items, sortSearch, onLoadMore = () => {} }) {
+    constructor({ items, columns, sortSearch, onLoadMore = () => {} }) {
         super();
 
         this.items = items;
+        this.columns = columns;
         this.sortSearch = sortSearch;
         this.onLoadMore = onLoadMore;
     }
+
     // Override
     getNumberOfRows() {
         return this.items.length;
     }
+
     // Override
     getCell(column, row) {
         return this.items[row][column.key];
+    }
+
+    // Override
+    getColumns() {
+        return this.columns;
     }
 
     sortItems(key, direction) {
@@ -28,6 +36,7 @@ class DataSource extends TableViewDataSource {
             this.items.sort((a, b) => (a[key] < b[key] ? -direction : direction));
         }
     }
+
     // Override
     async loadMore() {
         this.onLoadMore();
