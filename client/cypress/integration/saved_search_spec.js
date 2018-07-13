@@ -217,7 +217,7 @@ describe('Saved Search Integration Test', function() {
                 ).as('createSavedSearch');
             });
 
-            it("should save the user's current search with formatted signal as default searchName if name textField is not filled", function() {
+            it("should save the user's current search with formattedSignal as default searchName if name text field is not filled", function() {
                 const defaultName = '""=""';
 
                 cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
