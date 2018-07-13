@@ -25,6 +25,7 @@ import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
+import { formatSignal } from '../utils/stringifySignals';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
 import { defaultThrottleMs } from '../constants/lazyLoadConstants';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
@@ -264,17 +265,19 @@ class SearchContainer extends Component {
 
     handleSaveThisSearchConfirm = search => {
         const { thisSearch, savedSearch, saveSearch } = this.props;
+        const currentSearchName = { name: thisSearch.name || formatSignal(this.state) };
         const maxId = savedSearch.length ? savedSearch[savedSearch.length - 1].id : -1;
         const thisSearchWithKeyValuePairs = {
             ...this.state,
             filterNewSignals: false,
             ...thisSearch,
+            ...currentSearchName,
             presetId: null,
             id: maxId + 1,
         };
         const newSavedSearch = [...savedSearch, thisSearchWithKeyValuePairs];
 
-        saveSearch(newSavedSearch);
+        this.setState(currentSearchName, () => saveSearch(newSavedSearch));
     };
 
     deleteSearch = search => {

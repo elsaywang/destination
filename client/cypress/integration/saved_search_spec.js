@@ -1,5 +1,6 @@
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const newSavedSearchResponse = require('../fixtures/newSavedSearch.json');
+const newSavedSearchResponseWithDefaultName = require('../fixtures/newSavedSearchWithDefaultName.json');
 const maxSavedSearchResponse = require('../fixtures/maxSavedSearch.json');
 const emptySavedSearchResponse = require('../fixtures/emptySavedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
@@ -171,7 +172,7 @@ describe('Saved Search Integration Test', function() {
         });
 
         // TODO: add more fields to add values, pending AAM-36729
-        describe('when user fills out fields in modal, and clicks "Save" button', function() {
+        describe('when user fills out all fields in modal, and clicks "Save" button', function() {
             beforeEach(function() {
                 const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
                     newSavedSearchResponse,
@@ -184,7 +185,7 @@ describe('Saved Search Integration Test', function() {
                 ).as('createSavedSearch');
             });
 
-            it("should save the user's current search", function() {
+            it("should save the user's current search with typed searchName", function() {
                 const searchName = 'Test1234';
 
                 cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
@@ -201,6 +202,33 @@ describe('Saved Search Integration Test', function() {
                     .should('exist')
                     .trigger('mouseover');
                 cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
+            });
+        });
+
+        describe('when user fills out only some of fields in modal, and clicks "Save" button', function() {
+            beforeEach(function() {
+                const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
+                    newSavedSearchResponseWithDefaultName,
+                );
+                cy.route(
+                    'PUT',
+                    '/portal/api/v1/users/self/annotations/aam-portal',
+                    mockResponseAfterCreate,
+                ).as('createSavedSearch');
+            });
+
+            it("should save the user's current search with formattedSignal as default searchName if name text field is not filled", function() {
+                const defaultName = '""=""';
+
+                cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
+
+                cy.wait('@createSavedSearch');
+
+                cy.get('[data-saved-search-id]')
+                    .contains(defaultName)
+                    .should('exist')
+                    .trigger('mouseover');
+                cy.get('[data-test="saved-search-overlay-trigger"]').contains(defaultName);
             });
         });
 

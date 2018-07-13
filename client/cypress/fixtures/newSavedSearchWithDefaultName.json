@@ -1,0 +1,26 @@
+{
+    "name": "\"\"=\"\"",
+    "id": 0,
+    "presetId": null,
+    "keyValuePairs": [
+        {
+            "key": "k-bandwidth",
+            "operator": "<",
+            "value": 80692
+        }
+    ],
+    "source": {
+        "name": "reportSuite-114",
+        "dataSourceIds": [30634],
+        "reportSuiteIds": [],
+        "sourceType": "REALTIME"
+    },
+    "minEventFires": 91445,
+    "signalStatus": "UNUSED",
+    "viewRecordsFor": "7D",
+    "customStartDate": "2018-04-24",
+    "customEndDate": "2018-05-01",
+    "sortBy": "Key Name",
+    "categoryType": "Real-Time",
+    "advanced": true
+}
