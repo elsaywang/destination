@@ -390,18 +390,9 @@ class SearchContainer extends Component {
                                     </Heading>
                                 </GridColumn>
                                 <GridColumn size={8}>
-                                    <GridRow>
-                                        <GridColumn size={10}>
-                                            <MultiSignalsTraitsCreationContainer
-                                                canCreateTraits={
-                                                    this.props.permissions.canCreateTraits
-                                                }
-                                            />
-                                        </GridColumn>
-                                        <GridColumn size={2}>
-                                            <Button label="Export.csv" variant="primary" />
-                                        </GridColumn>
-                                    </GridRow>
+                                    <MultiSignalsTraitsCreationContainer
+                                        canCreateTraits={this.props.permissions.canCreateTraits}
+                                    />
                                 </GridColumn>
                             </GridRow>
                             <GridRow>
