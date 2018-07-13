@@ -14,8 +14,10 @@ function createAsyncAction(type, fn) {
                 dispatch({
                     type: `${type}_REJECTED`,
                     error: true,
-                    message: response.statusText,
-                    payload: response,
+                    payload: {
+                        ...response,
+                        message: response.statusText,
+                    },
                 });
             }
         } catch (error) {
