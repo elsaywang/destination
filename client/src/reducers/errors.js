@@ -36,7 +36,12 @@ export default handleActions(
         }),
         [GET_SAVED_SEARCH_REJECTED]: (state, action) => ({
             ...state,
-            savedSearch: handleErrorState(state, action),
+            // Users who haven't saved any searches yet will get a 404 from the
+            // annotations API. Treat this like a 200 that returns an empty list
+            // by doing nothing to the `error` reducer state.
+            ...(action.payload.status !== 404 && {
+                savedSearch: handleErrorState(state, action),
+            }),
         }),
         [SAVE_SEARCH_REJECTED]: (state, action) => ({
             ...state,

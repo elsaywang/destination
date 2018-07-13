@@ -11,7 +11,14 @@ function createAsyncAction(type, fn) {
                     payload: response.json(),
                 });
             } else {
-                throw new Error(response.statusText);
+                dispatch({
+                    type: `${type}_REJECTED`,
+                    error: true,
+                    payload: {
+                        ...response,
+                        message: response.statusText,
+                    },
+                });
             }
         } catch (error) {
             dispatch({
