@@ -11,12 +11,15 @@ function createAsyncAction(type, fn) {
                     payload: response.json(),
                 });
             } else {
+                const { ok, status, statusText } = response;
+
                 dispatch({
                     type: `${type}_REJECTED`,
                     error: true,
                     payload: {
-                        ...response,
-                        message: response.statusText,
+                        ok,
+                        status,
+                        message: statusText,
                     },
                 });
             }
