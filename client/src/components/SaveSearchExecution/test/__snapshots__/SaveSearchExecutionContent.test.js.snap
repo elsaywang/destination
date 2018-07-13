@@ -25,7 +25,7 @@ ShallowWrapper {
       "children": Array [
         <Label
           labelFor="Save This Search"
-          value="Name"
+          value="Name (Required)"
 >
           <Textfield
                     autoFocus={false}
@@ -37,7 +37,7 @@ ShallowWrapper {
                     placeholder="Enter a name for this saved search"
                     quiet={true}
                     readOnly={false}
-                    required={false}
+                    required={true}
           />
 </Label>,
         <div
@@ -118,10 +118,10 @@ ShallowWrapper {
             placeholder="Enter a name for this saved search"
             quiet={true}
             readOnly={false}
-            required={false}
+            required={true}
 />,
           "labelFor": "Save This Search",
-          "value": "Name",
+          "value": "Name (Required)",
         },
         "ref": null,
         "rendered": Object {
@@ -138,7 +138,7 @@ ShallowWrapper {
             "placeholder": "Enter a name for this saved search",
             "quiet": true,
             "readOnly": false,
-            "required": false,
+            "required": true,
           },
           "ref": null,
           "rendered": null,
@@ -357,7 +357,7 @@ ShallowWrapper {
         "children": Array [
           <Label
             labelFor="Save This Search"
-            value="Name"
+            value="Name (Required)"
 >
             <Textfield
                         autoFocus={false}
@@ -369,7 +369,7 @@ ShallowWrapper {
                         placeholder="Enter a name for this saved search"
                         quiet={true}
                         readOnly={false}
-                        required={false}
+                        required={true}
             />
 </Label>,
           <div
@@ -450,10 +450,10 @@ ShallowWrapper {
               placeholder="Enter a name for this saved search"
               quiet={true}
               readOnly={false}
-              required={false}
+              required={true}
 />,
             "labelFor": "Save This Search",
-            "value": "Name",
+            "value": "Name (Required)",
           },
           "ref": null,
           "rendered": Object {
@@ -470,7 +470,7 @@ ShallowWrapper {
               "placeholder": "Enter a name for this saved search",
               "quiet": true,
               "readOnly": false,
-              "required": false,
+              "required": true,
             },
             "ref": null,
             "rendered": null,
@@ -716,7 +716,7 @@ ShallowWrapper {
       "children": Array [
         <Label
           labelFor="Save This Search"
-          value="Name"
+          value="Name (Required)"
 >
           <Textfield
                     autoFocus={false}
@@ -728,7 +728,7 @@ ShallowWrapper {
                     placeholder="Enter a name for this saved search"
                     quiet={true}
                     readOnly={false}
-                    required={false}
+                    required={true}
           />
 </Label>,
         <div
@@ -809,10 +809,10 @@ ShallowWrapper {
             placeholder="Enter a name for this saved search"
             quiet={true}
             readOnly={false}
-            required={false}
+            required={true}
 />,
           "labelFor": "Save This Search",
-          "value": "Name",
+          "value": "Name (Required)",
         },
         "ref": null,
         "rendered": Object {
@@ -829,7 +829,7 @@ ShallowWrapper {
             "placeholder": "Enter a name for this saved search",
             "quiet": true,
             "readOnly": false,
-            "required": false,
+            "required": true,
           },
           "ref": null,
           "rendered": null,
@@ -1048,7 +1048,7 @@ ShallowWrapper {
         "children": Array [
           <Label
             labelFor="Save This Search"
-            value="Name"
+            value="Name (Required)"
 >
             <Textfield
                         autoFocus={false}
@@ -1060,7 +1060,7 @@ ShallowWrapper {
                         placeholder="Enter a name for this saved search"
                         quiet={true}
                         readOnly={false}
-                        required={false}
+                        required={true}
             />
 </Label>,
           <div
@@ -1141,10 +1141,10 @@ ShallowWrapper {
               placeholder="Enter a name for this saved search"
               quiet={true}
               readOnly={false}
-              required={false}
+              required={true}
 />,
             "labelFor": "Save This Search",
-            "value": "Name",
+            "value": "Name (Required)",
           },
           "ref": null,
           "rendered": Object {
@@ -1161,7 +1161,7 @@ ShallowWrapper {
               "placeholder": "Enter a name for this saved search",
               "quiet": true,
               "readOnly": false,
-              "required": false,
+              "required": true,
             },
             "ref": null,
             "rendered": null,
