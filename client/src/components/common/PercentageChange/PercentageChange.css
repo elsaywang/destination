@@ -6,6 +6,7 @@
 :local(.percentage) {
     flex: auto;
     text-align: right;
+    white-space: nowrap;
 }
 
 :local(.barContainer) {
