@@ -44,6 +44,7 @@ class SaveSearchExecutionContent extends Component {
                         className={styles.contentTextField}
                         placeholder={textFieldPlaceHolder}
                         onChange={this.props.onSaveSearchNameChange}
+                        required
                         quiet
                     />
                 </Label>
