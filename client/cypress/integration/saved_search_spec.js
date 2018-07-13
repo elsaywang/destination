@@ -210,7 +210,6 @@ describe('Saved Search Integration Test', function() {
                 const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
                     newSavedSearchResponseWithDefaultName,
                 );
-                console.log(mockResponseAfterCreate);
                 cy.route(
                     'PUT',
                     '/portal/api/v1/users/self/annotations/aam-portal',
