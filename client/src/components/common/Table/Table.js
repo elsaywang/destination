@@ -36,6 +36,9 @@ class Table extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+        if (!this.props.selectedRowIndexes || !nextProps.selectedRowIndexes) {
+            return true;
+        }
         const getSelectedRowIndexes = ({ selectedRowIndexes }) =>
             JSON.stringify(selectedRowIndexes.sort());
 

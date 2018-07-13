@@ -68,6 +68,15 @@ describe('<Table /> component', () => {
 
             expect(actual).toBeTruthy();
         });
+
+        it('should return true if `selectedRowIndexes` props is undefined ', () => {
+            wrapper.setProps({ selectedRowIndexes: undefined });
+            const actual = wrapper
+                .instance()
+                .shouldComponentUpdate({ selectedRowIndexes: undefined });
+
+            expect(actual).toBeTruthy();
+        });
     });
     describe('created data source for the table', () => {
         const dataSource = wrapper.find(TableView).prop('dataSource');
