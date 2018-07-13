@@ -14,6 +14,13 @@ export const getEmptyOptions = variant => {
                 imageAlt: `No results found. Refine the search query and try searching again.`,
                 dataTest: `no-result-found`,
             };
+        case 'errorFetching':
+            return {
+                title: `Error fetching data.`,
+                message: `Please try again later.`,
+                imageAlt: `Error fetching data. Please try again later.`,
+                dataTest: `error-fetching-data`,
+            };
         default:
             return {
                 title: '',
