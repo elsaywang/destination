@@ -12,12 +12,12 @@ describe('test on `handleErrorState`', () => {
     it('should return error state object with `hasError` is true and `errorMessage`', () => {
         const action = {
             error: true,
-            payload: { statusText: 'there is error in your action' },
+            payload: { message: 'there is error in your action' },
         };
         const state = {};
         const expectedErrorObject = {
             hasError: true,
-            errorMessage: action.payload.statusText,
+            errorMessage: action.payload.message,
         };
         expect(handleErrorState(state, action)).toEqual(expectedErrorObject);
     });
@@ -57,7 +57,7 @@ describe('test on errors reducer', () => {
     it('should handle CALL_SEARCH_REJECTED', () => {
         const action = {
             type: CALL_SEARCH_REJECTED,
-            payload: { statusText: 'there is error in call search' },
+            payload: { message: 'there is error in call search' },
             error: true,
         };
         const expectedCallSeachError = {
@@ -73,7 +73,7 @@ describe('test on errors reducer', () => {
     it('should handle GET_SAVED_SEARCH_REJECTED', () => {
         const action = {
             type: GET_SAVED_SEARCH_REJECTED,
-            payload: { statusText: 'there is error in get saved search' },
+            payload: { message: 'there is error in get saved search' },
             error: true,
         };
         const expectedGetSavedSeachError = {
@@ -89,7 +89,7 @@ describe('test on errors reducer', () => {
     it('should handle SAVE_SEARCH_REJECTED', () => {
         const action = {
             type: SAVE_SEARCH_REJECTED,
-            payload: { statusText: 'there is error in save search' },
+            payload: { message: 'there is error in save search' },
             error: true,
         };
         const expectedSaveSeachError = {
@@ -105,7 +105,7 @@ describe('test on errors reducer', () => {
     it('should handle GET_REPORT_SUITES_REJECTED', () => {
         const action = {
             type: GET_REPORT_SUITES_REJECTED,
-            payload: { statusText: 'there is error in get report Suite' },
+            payload: { message: 'there is error in get report Suite' },
             error: true,
         };
         const expectedGetReportSuiteError = {
