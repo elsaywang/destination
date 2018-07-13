@@ -70,20 +70,38 @@ describe('test on errors reducer', () => {
         expect(errorsReducer(initialState, action)).toEqual(expectedCallSeachError);
     });
 
-    it('should handle GET_SAVED_SEARCH_REJECTED', () => {
-        const action = {
-            type: GET_SAVED_SEARCH_REJECTED,
-            payload: { message: 'there is error in get saved search' },
-            error: true,
-        };
-        const expectedGetSavedSeachError = {
-            ...initialState,
-            savedSearch: {
-                hasError: true,
-                errorMessage: 'there is error in get saved search',
-            },
-        };
-        expect(errorsReducer(initialState, action)).toEqual(expectedGetSavedSeachError);
+    describe('handling GET_SAVED_SEARCH_REJECTED', () => {
+        it('should update the saved search error state when the request failure is not a 404', () => {
+            const action = {
+                type: GET_SAVED_SEARCH_REJECTED,
+                payload: {
+                    status: 400,
+                    message: 'there is error in get saved search',
+                },
+                error: true,
+            };
+            const expectedGetSavedSeachError = {
+                ...initialState,
+                savedSearch: {
+                    hasError: true,
+                    errorMessage: 'there is error in get saved search',
+                },
+            };
+            expect(errorsReducer(initialState, action)).toEqual(expectedGetSavedSeachError);
+        });
+
+        it('should not update the saved search error state when the request failure is a 404', () => {
+            const action = {
+                type: GET_SAVED_SEARCH_REJECTED,
+                payload: {
+                    status: 404,
+                    message: 'there is error in get saved search',
+                },
+                error: true,
+            };
+
+            expect(errorsReducer(initialState, action)).toEqual(initialState);
+        });
     });
 
     it('should handle SAVE_SEARCH_REJECTED', () => {
