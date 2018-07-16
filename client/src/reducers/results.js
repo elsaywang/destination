@@ -15,6 +15,7 @@ const initialState = {
     total: 0,
     isThrottled: false,
     isEndOfResults: false,
+    isLoaded: false,
 };
 
 export const handleList = (state, action) =>
@@ -33,6 +34,7 @@ const results = handleActions(
             ...action.payload,
             list: handleList(getList(state), action),
             isEndOfResults: handleIsEndOfResults(state, action),
+            isLoaded: true,
         }),
         [THROTTLE_LOAD_MORE]: (state, action) => ({
             ...state,
@@ -48,6 +50,7 @@ const results = handleActions(
             ...state,
             list: [],
             isEndOfResults: false,
+            isLoaded: false,
         }),
         [SORT_SEARCH_FULFILLED]: (state, action) => {
             return {

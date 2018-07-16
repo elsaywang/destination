@@ -10,6 +10,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
+import Wait from '@react/react-spectrum/Wait';
 import OverlayTooltip from '../components/common/OverlayTooltip';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import MultiSignalsTraitsCreationContainer from './MultiSignalsTraitsCreationContainer';
@@ -303,6 +304,16 @@ class SearchContainer extends Component {
     getSearchResultsMessage = () =>
         getSearchResultsMessageBySignalTypeLabel(this.state.name, this.state.source.sourceType);
 
+    renderEmptyResult = () => {
+        if (this.props.isResultsLoaded && this.state.searched) {
+            return <EmptySearch className={styles.empty} variant={'noResult'} />;
+        } else if (!this.state.searched) {
+            return <EmptySearch className={styles.empty} variant={'explore'} />;
+        } else {
+            return <Wait size="L" centered />;
+        }
+    };
+
     render() {
         return (
             <Fragment>
@@ -419,12 +430,7 @@ class SearchContainer extends Component {
                     </div>
                 ) : (
                     <GridRow>
-                        <GridColumn size={12}>
-                            <EmptySearch
-                                className={styles.empty}
-                                variant={this.state.searched ? 'noResult' : 'explore'}
-                            />
-                        </GridColumn>
+                        <GridColumn size={12}>{this.renderEmptyResult()}</GridColumn>
                     </GridRow>
                 )}
             </Fragment>
@@ -443,6 +449,7 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
+    isResultsLoaded: results.isLoaded,
     isEndOfResults: getIsEndOfResults(results),
     savedSearchFields,
     savedSearch: savedSearch.list,

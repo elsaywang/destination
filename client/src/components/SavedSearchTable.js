@@ -49,7 +49,6 @@ class SavedSearchTable extends Component {
         if (withResults) {
             return (
                 <SignalsTable
-                    isLoaded={hasSearchResults}
                     results={tableResults}
                     totalKeyValuePairs={totalKeyValuePairs}
                     canCreateTraits={canCreateTraits}

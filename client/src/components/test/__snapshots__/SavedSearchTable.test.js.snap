@@ -493,7 +493,6 @@ ShallowWrapper {
     allowsSelection={false}
     canCreateTraits={undefined}
     isAdvancedSearchEnabled={false}
-    isLoaded={true}
     results={
         Object {
             "analyticsServiceAvailable": true,

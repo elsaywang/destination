@@ -91,6 +91,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isResultsLoaded={false}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
     loadMore={[Function]}
@@ -102,12 +103,7 @@ ShallowWrapper {
     resetVisibleSavedSearch={[Function]}
     results={
         Object {
-            "isEndOfResults": false,
-            "isThrottled": false,
             "list": Array [],
-            "page": 0,
-            "pageSize": 50,
-            "total": 0,
           }
     }
     saveSearch={[Function]}
@@ -1834,6 +1830,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isResultsLoaded={true}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
     loadMore={[Function]}
@@ -3572,6 +3569,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isResultsLoaded={true}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
     loadMore={[Function]}
