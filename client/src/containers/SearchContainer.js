@@ -20,7 +20,7 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
-import { getIsEndOfResults } from '../reducers/results';
+import { getIsEndOfResults, getIsResultsLoaded } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
@@ -449,7 +449,7 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
-    isResultsLoaded: results.isLoaded,
+    isResultsLoaded: getIsResultsLoaded(results),
     isEndOfResults: getIsEndOfResults(results),
     savedSearchFields,
     savedSearch: savedSearch.list,

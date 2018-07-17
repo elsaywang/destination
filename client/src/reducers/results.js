@@ -45,6 +45,7 @@ const results = handleActions(
             ...action.payload,
             list: [...getList(state), ...handleList(getList(state), action)],
             isEndOfResults: handleIsEndOfResults(state, action),
+            isLoaded: true,
         }),
         [CLEAR_SEARCH]: state => ({
             ...state,
@@ -57,6 +58,7 @@ const results = handleActions(
                 ...state,
                 list: action.payload.list.reverse(),
                 isEndOfResults: handleIsEndOfResults(state, action),
+                isLoaded: true,
             };
         },
     },
@@ -65,5 +67,6 @@ const results = handleActions(
 
 export const getList = state => state.list;
 export const getIsEndOfResults = state => state.isEndOfResults;
+export const getIsResultsLoaded = state => state.isLoaded;
 
 export default results;

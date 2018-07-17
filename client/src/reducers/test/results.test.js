@@ -1,4 +1,10 @@
-import results, { getList, getIsEndOfResults, handleList, handleIsEndOfResults } from '../results';
+import results, {
+    getList,
+    getIsEndOfResults,
+    handleList,
+    handleIsEndOfResults,
+    getIsResultsLoaded,
+} from '../results';
 import { CALL_SEARCH, THROTTLE_LOAD_MORE } from '../../actions/searchForm';
 
 describe('results reducer', () => {
@@ -129,6 +135,14 @@ describe('results reducer', () => {
                 const state = { isEndOfResults: false };
 
                 expect(getIsEndOfResults(state)).toEqual(false);
+            });
+        });
+
+        describe('getIsResultsLoaded', () => {
+            it('should return the `isLoaded` property', () => {
+                const state = { isLoaded: false };
+
+                expect(getIsResultsLoaded(state)).toEqual(false);
             });
         });
     });
