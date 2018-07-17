@@ -19,6 +19,7 @@ class SavedSearch extends Component {
                 <Heading size={6}>Saved Search</Heading>
                 {!hasError && (
                     <WrappedSavedSearchTagList
+                        data-test="wrapped-saved-search-tag-list"
                         isLoaded={this.props.isLoaded}
                         list={this.props.list}
                         onSavedSearchClick={this.props.onSavedSearchClick}
