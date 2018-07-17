@@ -1,9 +1,9 @@
 import results, {
     getList,
-    getIsEndOfResults,
+    isEndOfResults,
     handleList,
     handleIsEndOfResults,
-    getIsResultsLoaded,
+    isResultsLoaded,
 } from '../results';
 import { CALL_SEARCH, THROTTLE_LOAD_MORE } from '../../actions/searchForm';
 
@@ -130,18 +130,18 @@ describe('results reducer', () => {
             });
         });
 
-        describe('getIsEndOfResults', () => {
+        describe('isEndOfResults', () => {
             it('should return the `isEndOfResults` property', () => {
                 const state = { isEndOfResults: false };
 
-                expect(getIsEndOfResults(state)).toEqual(false);
+                expect(isEndOfResults(state)).toEqual(false);
             });
         });
 
-        describe('getIsResultsLoaded', () => {
+        describe('isResultsLoaded', () => {
             it('should return the `isLoaded` property', () => {
                 const state = { isLoaded: false };
-                expect(getIsResultsLoaded(state)).toEqual(false);
+                expect(isResultsLoaded(state)).toEqual(false);
             });
         });
     });

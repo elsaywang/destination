@@ -24,6 +24,7 @@ class SavedSearch extends Component {
                         onSavedSearchClick={this.props.onSavedSearchClick}
                         currentSearch={this.props.currentSearch}
                         deleteSearch={this.props.deleteSearch}
+                        disabled={this.props.disabled}
                     />
                 )}
                 <InlineErrorMessage isInvalid={hasError} errorMessage={errorMessage} />
@@ -40,6 +41,7 @@ SavedSearch.propTypes = {
     currentSearch: PropTypes.string.isRequired,
     deleteSearch: PropTypes.func.isRequired,
     error: PropTypes.object.isRequired,
+    disabled: PropTypes.bool.isRequired,
 };
 
 export default SavedSearch;

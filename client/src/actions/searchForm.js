@@ -10,6 +10,7 @@ export const toggleAdvancedSearch = createAction(TOGGLE_ADVANCED_SEARCH);
 export const CALL_SEARCH = 'CALL_SEARCH';
 export const CALL_SEARCH_FULFILLED = 'CALL_SEARCH_FULFILLED';
 export const CALL_SEARCH_REJECTED = 'CALL_SEARCH_REJECTED';
+export const CALL_SEARCH_PENDING = 'CALL_SEARCH_PENDING';
 export const callSearch = createAsyncAction(CALL_SEARCH, search => fetchSignals({ search }));
 
 export const LOAD_MORE = 'LOAD_MORE';

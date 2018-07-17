@@ -85,9 +85,8 @@ class SavedSearchPopover extends Component {
     }
 
     render() {
-        const { search, deleteSearch, isCurrentSearch } = this.props;
+        const { search, deleteSearch, isCurrentSearch, disabled } = this.props;
         const boundDeleteClick = deleteSearch.bind(this, search);
-
         return (
             <span className={styles.tagBlock}>
                 <OverlayTrigger trigger="hover" data-test="saved-search-overlay-trigger">
@@ -99,6 +98,7 @@ class SavedSearchPopover extends Component {
                         className={styles.tag}
                         key={search.name}
                         value={search.name}
+                        disabled={disabled}
                         onClick={() => this.onSavedSearchClick(search)}
                     />
                     <Popover title={search.name} data-test="saved-search-popover">

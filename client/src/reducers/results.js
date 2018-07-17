@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions';
 import {
     CALL_SEARCH_FULFILLED,
+    CALL_SEARCH_PENDING,
     LOAD_MORE_FULFILLED,
     THROTTLE_LOAD_MORE,
     CLEAR_SEARCH,
@@ -29,6 +30,10 @@ export const handleIsEndOfResults = (state, { payload: { list, pageSize } }) =>
 
 const results = handleActions(
     {
+        [CALL_SEARCH_PENDING]: (state, action) => ({
+            ...state,
+            isLoaded: false,
+        }),
         [CALL_SEARCH_FULFILLED]: (state, action) => ({
             ...state,
             ...action.payload,
@@ -66,7 +71,7 @@ const results = handleActions(
 );
 
 export const getList = state => state.list;
-export const getIsEndOfResults = state => state.isEndOfResults;
-export const getIsResultsLoaded = state => state.isLoaded;
+export const isEndOfResults = state => state.isEndOfResults;
+export const isResultsLoaded = state => state.isLoaded;
 
 export default results;

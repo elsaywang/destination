@@ -20,7 +20,7 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
-import { getIsEndOfResults, getIsResultsLoaded } from '../reducers/results';
+import { isEndOfResults, isResultsLoaded } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
@@ -342,6 +342,7 @@ class SearchContainer extends Component {
                             eventFiresMinimum={defaultEventFiresMinimum}
                             eventFiresStep={defaultEventFiresStep}
                             maxSignalRetentionDays={this.props.maxSignalRetentionDays}
+                            disabled={!this.props.isResultsLoaded && this.state.searched}
                         />
                     </GridColumn>
                 </GridRow>
@@ -357,6 +358,7 @@ class SearchContainer extends Component {
                                 onSavedSearchClick={this.onSavedSearchClick}
                                 currentSearch={this.state.name}
                                 error={this.props.errors.savedSearch}
+                                disabled={!this.props.isResultsLoaded && this.state.searched}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
                                 <Fragment>
@@ -449,8 +451,8 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
-    isResultsLoaded: getIsResultsLoaded(results),
-    isEndOfResults: getIsEndOfResults(results),
+    isResultsLoaded: isResultsLoaded(results),
+    isEndOfResults: isEndOfResults(results),
     savedSearchFields,
     savedSearch: savedSearch.list,
     savedSearchLimit: savedSearch.limit,
