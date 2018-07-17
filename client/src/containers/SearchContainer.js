@@ -19,7 +19,7 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
-import { getIsEndOfResults } from '../reducers/results';
+import { getSortOptions, getIsEndOfResults } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
@@ -242,6 +242,7 @@ class SearchContainer extends Component {
         }
 
         const { page, isThrottled: wasThrottled } = this.props.results;
+        const { sortOptions } = this.props;
 
         // Triggers another render.
         this.props.throttleLoadMore(true);
@@ -250,9 +251,13 @@ class SearchContainer extends Component {
             return;
         }
 
-        this.props.loadMore(this.state, {
-            page: page + 1,
-        });
+        this.props.loadMore(
+            this.state,
+            {
+                page: page + 1,
+            },
+            sortOptions,
+        );
 
         debounce(() => {
             this.props.throttleLoadMore(false);
@@ -260,6 +265,7 @@ class SearchContainer extends Component {
     };
 
     handleSortSearch = (sortBy, sortDir) => {
+        this.props.updateSortOptions({ sortBy, sortDir });
         this.props.sortSearch(this.state, { sortBy, sortDir });
     };
 
@@ -443,6 +449,7 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
+    sortOptions: getSortOptions(results),
     isEndOfResults: getIsEndOfResults(results),
     savedSearchFields,
     savedSearch: savedSearch.list,

@@ -15,12 +15,15 @@ export const callSearch = createAsyncAction(CALL_SEARCH, search => fetchSignals(
 export const LOAD_MORE = 'LOAD_MORE';
 export const LOAD_MORE_FULFILLED = 'LOAD_MORE_FULFILLED';
 export const LOAD_MORE_REJECTED = 'LOAD_MORE_REJECTED';
-export const loadMore = createAsyncAction(LOAD_MORE, (search, pagination) =>
-    fetchSignals({ search, pagination }),
+export const loadMore = createAsyncAction(LOAD_MORE, (search, pagination, sortOptions) =>
+    fetchSignals({ search, pagination, sortOptions }),
 );
 
 export const THROTTLE_LOAD_MORE = 'THROTTLE_LOAD_MORE';
 export const throttleLoadMore = createAction(THROTTLE_LOAD_MORE);
+
+export const UPDATE_SORT_OPTIONS = 'UPDATE_SORT_OPTIONS';
+export const updateSortOptions = createAction(UPDATE_SORT_OPTIONS);
 
 export const SORT_SEARCH = 'SORT_SEARCH';
 export const SORT_SEARCH_FULFILLED = 'SORT_SEARCH_FULFILLED';

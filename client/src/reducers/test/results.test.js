@@ -1,4 +1,10 @@
-import results, { getList, getIsEndOfResults, handleList, handleIsEndOfResults } from '../results';
+import results, {
+    getList,
+    getIsEndOfResults,
+    getSortOptions,
+    handleList,
+    handleIsEndOfResults,
+} from '../results';
 import { CALL_SEARCH, THROTTLE_LOAD_MORE } from '../../actions/searchForm';
 
 describe('results reducer', () => {
@@ -115,6 +121,20 @@ describe('results reducer', () => {
         expect(results(state, action)).toEqual({ isThrottled: true });
     });
 
+    it('should handle UPDATE_SORT_OPTIONS', () => {
+        const state = { sortBy: 'percentageChange' };
+        const sortOptions = {
+            sortBy: 'totalCount',
+            sortDir: -1,
+        };
+        const action = {
+            type: 'UPDATE_SORT_OPTIONS',
+            payload: sortOptions,
+        };
+
+        expect(results({}, action)).toEqual(sortOptions);
+    });
+
     describe('selectors', () => {
         describe('getList', () => {
             it('should return the `list` property', () => {
@@ -129,6 +149,23 @@ describe('results reducer', () => {
                 const state = { isEndOfResults: false };
 
                 expect(getIsEndOfResults(state)).toEqual(false);
+            });
+        });
+
+        describe('getSortOptions', () => {
+            it('should return an object containing `sortBy` and `sortDir`', () => {
+                const state = {
+                    list: [],
+                    sortBy: 'totalCount',
+                    sortDir: -1,
+                };
+                const actual = getSortOptions(state);
+                const expected = {
+                    sortBy: 'totalCount',
+                    sortDir: -1,
+                };
+
+                expect(actual).toEqual(expected);
             });
         });
     });

@@ -4,6 +4,7 @@ import {
     LOAD_MORE_FULFILLED,
     THROTTLE_LOAD_MORE,
     CLEAR_SEARCH,
+    UPDATE_SORT_OPTIONS,
     SORT_SEARCH_FULFILLED,
 } from '../actions/searchForm';
 import { pageSize } from '../constants/paginationOptions';
@@ -13,6 +14,8 @@ const initialState = {
     page: 0,
     pageSize,
     total: 0,
+    sortBy: undefined,
+    descending: true,
     isThrottled: false,
     isEndOfResults: false,
 };
@@ -49,6 +52,10 @@ const results = handleActions(
             list: [],
             isEndOfResults: false,
         }),
+        [UPDATE_SORT_OPTIONS]: (state, action) => ({
+            ...state,
+            ...action.payload,
+        }),
         [SORT_SEARCH_FULFILLED]: (state, action) => {
             return {
                 ...state,
@@ -62,5 +69,6 @@ const results = handleActions(
 
 export const getList = state => state.list;
 export const getIsEndOfResults = state => state.isEndOfResults;
+export const getSortOptions = ({ sortBy, sortDir }) => ({ sortBy, sortDir });
 
 export default results;

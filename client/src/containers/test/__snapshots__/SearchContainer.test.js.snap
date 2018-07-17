@@ -102,11 +102,13 @@ ShallowWrapper {
     resetVisibleSavedSearch={[Function]}
     results={
         Object {
+            "descending": true,
             "isEndOfResults": false,
             "isThrottled": false,
             "list": Array [],
             "page": 0,
             "pageSize": 50,
+            "sortBy": undefined,
             "total": 0,
           }
     }
@@ -121,6 +123,12 @@ ShallowWrapper {
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     selectedRowIndexes={Array []}
+    sortOptions={
+        Object {
+            "sortBy": undefined,
+            "sortDir": undefined,
+          }
+    }
     sortSearch={[Function]}
     thisSearch={
         Object {
@@ -134,6 +142,7 @@ ShallowWrapper {
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
+    updateSortOptions={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1859,6 +1868,12 @@ ShallowWrapper {
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     selectedRowIndexes={Array []}
+    sortOptions={
+        Object {
+            "sortBy": undefined,
+            "sortDir": undefined,
+          }
+    }
     sortSearch={[Function]}
     thisSearch={
         Object {
@@ -1872,6 +1887,7 @@ ShallowWrapper {
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
+    updateSortOptions={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -3597,6 +3613,12 @@ ShallowWrapper {
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     selectedRowIndexes={Array []}
+    sortOptions={
+        Object {
+            "sortBy": undefined,
+            "sortDir": undefined,
+          }
+    }
     sortSearch={[Function]}
     thisSearch={
         Object {
@@ -3610,6 +3632,7 @@ ShallowWrapper {
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
+    updateSortOptions={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
