@@ -314,6 +314,8 @@ class SearchContainer extends Component {
         }
     };
 
+    isSearchDisabled = () => !this.props.isResultsLoaded && this.state.searched;
+
     render() {
         return (
             <Fragment>
@@ -342,7 +344,7 @@ class SearchContainer extends Component {
                             eventFiresMinimum={defaultEventFiresMinimum}
                             eventFiresStep={defaultEventFiresStep}
                             maxSignalRetentionDays={this.props.maxSignalRetentionDays}
-                            disabled={!this.props.isResultsLoaded && this.state.searched}
+                            disabled={this.isSearchDisabled()}
                         />
                     </GridColumn>
                 </GridRow>
@@ -358,7 +360,7 @@ class SearchContainer extends Component {
                                 onSavedSearchClick={this.onSavedSearchClick}
                                 currentSearch={this.state.name}
                                 error={this.props.errors.savedSearch}
-                                disabled={!this.props.isResultsLoaded && this.state.searched}
+                                disabled={this.isSearchDisabled()}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
                                 <Fragment>

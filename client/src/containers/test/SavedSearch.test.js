@@ -69,15 +69,5 @@ describe('<SavedSearch /> component', () => {
 
             expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
-
-        it('renders disabled <TagList/> when when disabled props set to true', () => {
-            wrapper.setProps({
-                disabled: true,
-                error,
-                isLoaded: true,
-            });
-            console.log(wrapper.instance());
-            //expect(wrapper.find(savedSearchTagList).exists()).toBe(true);
-        });
     });
 });
