@@ -77,7 +77,7 @@ describe('<SavedSearch /> component', () => {
             });
             expect(wrapper.find('[data-test="wrapped-saved-search-tag-list"]').exists()).toBe(true);
             expect(
-                wrapper.find('[data-test="wrapped-saved-search-tag-list"]').props().disabled,
+                wrapper.find('[data-test="wrapped-saved-search-tag-list"]').is('[disabled]'),
             ).toBe(true);
         });
     });
