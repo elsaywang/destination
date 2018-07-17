@@ -181,6 +181,7 @@ ShallowWrapper {
                               eventFiresMinimum={0}
                               eventFiresStep={1000}
                               filterNewSignals={false}
+                              includeSourceName={true}
                               isCustomDateRangeEnabled={false}
                               keyValuePairs={
                                         Array [
@@ -358,6 +359,7 @@ ShallowWrapper {
                         eventFiresMinimum={0}
                         eventFiresStep={1000}
                         filterNewSignals={false}
+                        includeSourceName={true}
                         isCustomDateRangeEnabled={false}
                         keyValuePairs={
                                     Array [
@@ -436,6 +438,7 @@ ShallowWrapper {
               eventFiresMinimum={0}
               eventFiresStep={1000}
               filterNewSignals={false}
+              includeSourceName={true}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                             Array [
@@ -510,6 +513,7 @@ ShallowWrapper {
               "eventFiresMinimum": 0,
               "eventFiresStep": 1000,
               "filterNewSignals": false,
+              "includeSourceName": true,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -972,6 +976,7 @@ ShallowWrapper {
                                     eventFiresMinimum={0}
                                     eventFiresStep={1000}
                                     filterNewSignals={false}
+                                    includeSourceName={true}
                                     isCustomDateRangeEnabled={false}
                                     keyValuePairs={
                                                 Array [
@@ -1149,6 +1154,7 @@ ShallowWrapper {
                             eventFiresMinimum={0}
                             eventFiresStep={1000}
                             filterNewSignals={false}
+                            includeSourceName={true}
                             isCustomDateRangeEnabled={false}
                             keyValuePairs={
                                           Array [
@@ -1227,6 +1233,7 @@ ShallowWrapper {
                 eventFiresMinimum={0}
                 eventFiresStep={1000}
                 filterNewSignals={false}
+                includeSourceName={true}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                                 Array [
@@ -1301,6 +1308,7 @@ ShallowWrapper {
                 "eventFiresMinimum": 0,
                 "eventFiresStep": 1000,
                 "filterNewSignals": false,
+                "includeSourceName": true,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -1919,6 +1927,7 @@ ShallowWrapper {
                               eventFiresMinimum={0}
                               eventFiresStep={1000}
                               filterNewSignals={false}
+                              includeSourceName={true}
                               isCustomDateRangeEnabled={false}
                               keyValuePairs={
                                         Array [
@@ -2096,6 +2105,7 @@ ShallowWrapper {
                         eventFiresMinimum={0}
                         eventFiresStep={1000}
                         filterNewSignals={false}
+                        includeSourceName={true}
                         isCustomDateRangeEnabled={false}
                         keyValuePairs={
                                     Array [
@@ -2174,6 +2184,7 @@ ShallowWrapper {
               eventFiresMinimum={0}
               eventFiresStep={1000}
               filterNewSignals={false}
+              includeSourceName={true}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                             Array [
@@ -2248,6 +2259,7 @@ ShallowWrapper {
               "eventFiresMinimum": 0,
               "eventFiresStep": 1000,
               "filterNewSignals": false,
+              "includeSourceName": true,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -2710,6 +2722,7 @@ ShallowWrapper {
                                     eventFiresMinimum={0}
                                     eventFiresStep={1000}
                                     filterNewSignals={false}
+                                    includeSourceName={true}
                                     isCustomDateRangeEnabled={false}
                                     keyValuePairs={
                                                 Array [
@@ -2887,6 +2900,7 @@ ShallowWrapper {
                             eventFiresMinimum={0}
                             eventFiresStep={1000}
                             filterNewSignals={false}
+                            includeSourceName={true}
                             isCustomDateRangeEnabled={false}
                             keyValuePairs={
                                           Array [
@@ -2965,6 +2979,7 @@ ShallowWrapper {
                 eventFiresMinimum={0}
                 eventFiresStep={1000}
                 filterNewSignals={false}
+                includeSourceName={true}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                                 Array [
@@ -3039,6 +3054,7 @@ ShallowWrapper {
                 "eventFiresMinimum": 0,
                 "eventFiresStep": 1000,
                 "filterNewSignals": false,
+                "includeSourceName": true,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -3657,6 +3673,7 @@ ShallowWrapper {
                               eventFiresMinimum={0}
                               eventFiresStep={1000}
                               filterNewSignals={false}
+                              includeSourceName={true}
                               isCustomDateRangeEnabled={false}
                               keyValuePairs={
                                         Array [
@@ -3834,6 +3851,7 @@ ShallowWrapper {
                         eventFiresMinimum={0}
                         eventFiresStep={1000}
                         filterNewSignals={false}
+                        includeSourceName={true}
                         isCustomDateRangeEnabled={false}
                         keyValuePairs={
                                     Array [
@@ -3912,6 +3930,7 @@ ShallowWrapper {
               eventFiresMinimum={0}
               eventFiresStep={1000}
               filterNewSignals={false}
+              includeSourceName={true}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                             Array [
@@ -3986,6 +4005,7 @@ ShallowWrapper {
               "eventFiresMinimum": 0,
               "eventFiresStep": 1000,
               "filterNewSignals": false,
+              "includeSourceName": true,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -4448,6 +4468,7 @@ ShallowWrapper {
                                     eventFiresMinimum={0}
                                     eventFiresStep={1000}
                                     filterNewSignals={false}
+                                    includeSourceName={true}
                                     isCustomDateRangeEnabled={false}
                                     keyValuePairs={
                                                 Array [
@@ -4625,6 +4646,7 @@ ShallowWrapper {
                             eventFiresMinimum={0}
                             eventFiresStep={1000}
                             filterNewSignals={false}
+                            includeSourceName={true}
                             isCustomDateRangeEnabled={false}
                             keyValuePairs={
                                           Array [
@@ -4703,6 +4725,7 @@ ShallowWrapper {
                 eventFiresMinimum={0}
                 eventFiresStep={1000}
                 filterNewSignals={false}
+                includeSourceName={true}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                                 Array [
@@ -4777,6 +4800,7 @@ ShallowWrapper {
                 "eventFiresMinimum": 0,
                 "eventFiresStep": 1000,
                 "filterNewSignals": false,
+                "includeSourceName": true,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
