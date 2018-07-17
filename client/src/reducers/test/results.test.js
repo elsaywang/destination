@@ -141,7 +141,6 @@ describe('results reducer', () => {
         describe('getIsResultsLoaded', () => {
             it('should return the `isLoaded` property', () => {
                 const state = { isLoaded: false };
-
                 expect(getIsResultsLoaded(state)).toEqual(false);
             });
         });
