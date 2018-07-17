@@ -398,12 +398,12 @@ class SearchContainer extends Component {
                         )}
                         <div className={styles.tableContainer}>
                             <GridRow valign="middle">
-                                <GridColumn size={4}>
+                                <GridColumn size={7}>
                                     <Heading size={3}>
                                         Search Results {this.getSearchResultsMessage()}
                                     </Heading>
                                 </GridColumn>
-                                <GridColumn size={8}>
+                                <GridColumn size={5}>
                                     <MultiSignalsTraitsCreationContainer
                                         canCreateTraits={this.props.permissions.canCreateTraits}
                                     />
