@@ -67,32 +67,30 @@ ShallowWrapper {
     allowsSelection={true}
     onLoadMore={[Function]}
     results={
-        Object {
-            "list": Array [
-              Object {
-                "id": 0,
-                "name": "test1",
-                "percentageChange": 0.1234,
-                "source": Object {
-                  "reportSuiteIds": Array [
-                    123,
-                  ],
-                  "sourceType": "ANALYTICS",
-                },
+        Array [
+            Object {
+              "id": 0,
+              "name": "test1",
+              "percentageChange": 0.1234,
+              "source": Object {
+                "reportSuiteIds": Array [
+                  123,
+                ],
+                "sourceType": "ANALYTICS",
               },
-              Object {
-                "id": 1,
-                "name": "test2",
-                "percentageChange": -0.5678,
-                "source": Object {
-                  "dataSourceIds": Array [
-                    456,
-                  ],
-                  "sourceType": "ONBOARDED",
-                },
+            },
+            Object {
+              "id": 1,
+              "name": "test2",
+              "percentageChange": -0.5678,
+              "source": Object {
+                "dataSourceIds": Array [
+                  456,
+                ],
+                "sourceType": "ONBOARDED",
               },
-            ],
-          }
+            },
+          ]
     }
     signalType="ALL"
     sortSearch={[Function]}
