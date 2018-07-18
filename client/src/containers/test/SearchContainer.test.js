@@ -10,6 +10,7 @@ import SavedSearch from '../../containers/SavedSearch';
 import EmptySearch from '../../components/EmptySearch';
 import SaveSearchExecution from '../../components/SaveSearchExecution';
 import configureStore from '../../configureStore';
+import Wait from '@react/react-spectrum/Wait';
 import { fetchSignals } from '../../utils/fetchSignals';
 
 jest.mock('../../utils/fetchSignals');
@@ -27,6 +28,15 @@ describe('<SearchContainer /> component', () => {
         .dive();
 
     describe('rendering', () => {
+        beforeAll(() => {
+            wrapper.setProps({
+                results: {
+                    list: [],
+                },
+                isResultsLoaded: false,
+            });
+            wrapper.setState({ searched: false });
+        });
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
         });
@@ -39,39 +49,28 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(SavedSearch).exists()).toBe(true);
         });
 
-        it('renders <EmptySearch/> component with `explore` variant pass in props', () => {
+        it('renders <EmptySearch/> component with `explore` variant pass in props when searched state is set to false', () => {
             expect(wrapper.find(EmptySearch).exists()).toBe(true);
             expect(wrapper.find(EmptySearch).props().variant).toEqual('explore');
         });
 
-        it('does not render <SignalSourceFilter /> component when there are no props.results passed in', () => {
-            wrapper.setProps({
-                results: {
-                    list: [],
-                },
-            });
+        it('does not render <SignalSourceFilter /> component when there are no props.results passed in ', () => {
             expect(wrapper.find(SignalTypeFilter).exists()).toBe(false);
         });
 
         it('does not render <SignalsTable /> component when there are no props.results passed in', () => {
-            wrapper.setProps({
-                results: {
-                    list: [],
-                },
-            });
             expect(wrapper.find(SignalsTable).exists()).toBe(false);
         });
 
         it('does not render <SaveSearchExecution /> component when there are no props.results passed in', () => {
-            wrapper.setProps({
-                results: {
-                    list: [],
-                },
-            });
             expect(wrapper.find(SaveSearchExecution).exists()).toBe(false);
         });
 
-        describe('when table results are passed in as a prop', () => {
+        it('does not render <Wait /> component when there are no props.results passed in and searched state is falsy', () => {
+            expect(wrapper.find(<Wait />).exists()).toBe(false);
+        });
+
+        describe('when table results are passed in as a prop with records and searched state is set to truthy', () => {
             beforeAll(() => {
                 wrapper.setProps({
                     results: {
@@ -81,8 +80,10 @@ describe('<SearchContainer /> component', () => {
                                 name: 'test',
                             },
                         ],
+                        isResultsLoaded: true,
                     },
                 });
+                wrapper.setState({ searched: true });
             });
 
             it('renders <SignalSourceFilter /> component', () => {
@@ -104,14 +105,19 @@ describe('<SearchContainer /> component', () => {
             it('does not render <EmptySearch/> component', () => {
                 expect(wrapper.find(EmptySearch).exists()).toBe(false);
             });
+
+            it('does not render <Wait/> component', () => {
+                expect(wrapper.find(Wait).exists()).toBe(false);
+            });
         });
 
-        describe('when table results are passed in as a prop without any search result returned ', () => {
+        describe('when table results are passed in as a prop with no records but isResultsLoaded props is toggled to true and seached state is truthy', () => {
             beforeAll(() => {
                 wrapper.setProps({
                     results: {
                         list: [],
                     },
+                    isResultsLoaded: true,
                 });
                 wrapper.setState({ searched: true });
             });

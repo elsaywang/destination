@@ -1,6 +1,7 @@
 import { handleActions } from 'redux-actions';
 import {
     CALL_SEARCH_FULFILLED,
+    CALL_SEARCH_PENDING,
     LOAD_MORE_FULFILLED,
     THROTTLE_LOAD_MORE,
     CLEAR_SEARCH,
@@ -17,6 +18,7 @@ const initialState = {
     descending: true,
     isThrottled: false,
     isEndOfResults: false,
+    isLoaded: false,
 };
 
 export const handleList = (state, action) =>
@@ -30,11 +32,16 @@ export const handleIsEndOfResults = (state, { payload: { list, pageSize } }) =>
 
 const results = handleActions(
     {
+        [CALL_SEARCH_PENDING]: (state, action) => ({
+            ...state,
+            isLoaded: false,
+        }),
         [CALL_SEARCH_FULFILLED]: (state, action) => ({
             ...state,
             ...action.payload,
             list: handleList(getList(state), action),
             isEndOfResults: handleIsEndOfResults(state, action),
+            isLoaded: true,
         }),
         [THROTTLE_LOAD_MORE]: (state, action) => ({
             ...state,
@@ -45,11 +52,13 @@ const results = handleActions(
             ...action.payload,
             list: [...getList(state), ...handleList(getList(state), action)],
             isEndOfResults: handleIsEndOfResults(state, action),
+            isLoaded: true,
         }),
         [CLEAR_SEARCH]: state => ({
             ...state,
             list: [],
             isEndOfResults: false,
+            isLoaded: false,
         }),
         [UPDATE_SORT_OPTIONS]: (state, action) => ({
             ...state,
@@ -60,7 +69,8 @@ const results = handleActions(
 );
 
 export const getList = state => state.list;
-export const getIsEndOfResults = state => state.isEndOfResults;
+export const isEndOfResults = state => state.isEndOfResults;
+export const isResultsLoaded = state => state.isLoaded;
 export const getSortOptions = ({ sortBy, sortDir }) => ({ sortBy, sortDir });
 
 export default results;

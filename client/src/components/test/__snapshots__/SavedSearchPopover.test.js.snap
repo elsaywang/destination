@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SavedSearchPopover
     deleteSearch={[Function]}
+    disabled={false}
     intl={
         Object {
             "defaultFormats": Object {},
@@ -91,6 +92,7 @@ ShallowWrapper {
                     data-saved-search-id={undefined}
                     data-saved-search-preset={undefined}
                     data-test="saved-search-tag"
+                    disabled={false}
                     id={null}
                     onClick={[Function]}
                     value="Loren Waters"
@@ -222,6 +224,7 @@ ShallowWrapper {
               data-saved-search-id={undefined}
               data-saved-search-preset={undefined}
               data-test="saved-search-tag"
+              disabled={false}
               id={null}
               onClick={[Function]}
               value="Loren Waters"
@@ -355,6 +358,7 @@ ShallowWrapper {
               "data-saved-search-id": undefined,
               "data-saved-search-preset": undefined,
               "data-test": "saved-search-tag",
+              "disabled": false,
               "id": null,
               "onClick": [Function],
               "value": "Loren Waters",
@@ -816,6 +820,7 @@ ShallowWrapper {
                         data-saved-search-id={undefined}
                         data-saved-search-preset={undefined}
                         data-test="saved-search-tag"
+                        disabled={false}
                         id={null}
                         onClick={[Function]}
                         value="Loren Waters"
@@ -947,6 +952,7 @@ ShallowWrapper {
                 data-saved-search-id={undefined}
                 data-saved-search-preset={undefined}
                 data-test="saved-search-tag"
+                disabled={false}
                 id={null}
                 onClick={[Function]}
                 value="Loren Waters"
@@ -1080,6 +1086,7 @@ ShallowWrapper {
                 "data-saved-search-id": undefined,
                 "data-saved-search-preset": undefined,
                 "data-test": "saved-search-tag",
+                "disabled": false,
                 "id": null,
                 "onClick": [Function],
                 "value": "Loren Waters",

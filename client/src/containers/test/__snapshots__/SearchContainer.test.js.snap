@@ -91,6 +91,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isResultsLoaded={false}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
     loadMore={[Function]}
@@ -102,14 +103,7 @@ ShallowWrapper {
     resetVisibleSavedSearch={[Function]}
     results={
         Object {
-            "descending": true,
-            "isEndOfResults": false,
-            "isThrottled": false,
             "list": Array [],
-            "page": 0,
-            "pageSize": 50,
-            "sortBy": undefined,
-            "total": 0,
           }
     }
     saveSearch={[Function]}
@@ -166,6 +160,7 @@ ShallowWrapper {
                               advanced={false}
                               customEndDate="2018-05-01"
                               customStartDate="2018-04-24"
+                              disabled={false}
                               errors={
                                         Object {
                                                   "reportSuites": Object {
@@ -246,6 +241,7 @@ ShallowWrapper {
                               <SavedSearch
                                         currentSearch=""
                                         deleteSearch={[Function]}
+                                        disabled={false}
                                         error={
                                                   Object {
                                                             "errorMessage": "",
@@ -343,6 +339,7 @@ ShallowWrapper {
                         advanced={false}
                         customEndDate="2018-05-01"
                         customStartDate="2018-04-24"
+                        disabled={false}
                         errors={
                                     Object {
                                                 "reportSuites": Object {
@@ -421,6 +418,7 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              disabled={false}
               errors={
                             Object {
                                           "reportSuites": Object {
@@ -497,6 +495,7 @@ ShallowWrapper {
               "advanced": false,
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",
+              "disabled": false,
               "errors": Object {
                 "reportSuites": Object {
                   "errorMessage": "",
@@ -578,6 +577,7 @@ ShallowWrapper {
                         <SavedSearch
                                     currentSearch=""
                                     deleteSearch={[Function]}
+                                    disabled={false}
                                     error={
                                                 Object {
                                                             "errorMessage": "",
@@ -661,6 +661,7 @@ ShallowWrapper {
               <SavedSearch
                             currentSearch=""
                             deleteSearch={[Function]}
+                            disabled={false}
                             error={
                                           Object {
                                                         "errorMessage": "",
@@ -740,6 +741,7 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  disabled={false}
                   error={
                                     Object {
                                                       "errorMessage": "",
@@ -819,6 +821,7 @@ ShallowWrapper {
                 "props": Object {
                   "currentSearch": "",
                   "deleteSearch": [Function],
+                  "disabled": false,
                   "error": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -957,6 +960,7 @@ ShallowWrapper {
                                     advanced={false}
                                     customEndDate="2018-05-01"
                                     customStartDate="2018-04-24"
+                                    disabled={false}
                                     errors={
                                                 Object {
                                                             "reportSuites": Object {
@@ -1037,6 +1041,7 @@ ShallowWrapper {
                                     <SavedSearch
                                                 currentSearch=""
                                                 deleteSearch={[Function]}
+                                                disabled={false}
                                                 error={
                                                             Object {
                                                                         "errorMessage": "",
@@ -1134,6 +1139,7 @@ ShallowWrapper {
                             advanced={false}
                             customEndDate="2018-05-01"
                             customStartDate="2018-04-24"
+                            disabled={false}
                             errors={
                                           Object {
                                                         "reportSuites": Object {
@@ -1212,6 +1218,7 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                disabled={false}
                 errors={
                                 Object {
                                                 "reportSuites": Object {
@@ -1288,6 +1295,7 @@ ShallowWrapper {
                 "advanced": false,
                 "customEndDate": "2018-05-01",
                 "customStartDate": "2018-04-24",
+                "disabled": false,
                 "errors": Object {
                   "reportSuites": Object {
                     "errorMessage": "",
@@ -1369,6 +1377,7 @@ ShallowWrapper {
                             <SavedSearch
                                           currentSearch=""
                                           deleteSearch={[Function]}
+                                          disabled={false}
                                           error={
                                                         Object {
                                                                       "errorMessage": "",
@@ -1452,6 +1461,7 @@ ShallowWrapper {
                 <SavedSearch
                                 currentSearch=""
                                 deleteSearch={[Function]}
+                                disabled={false}
                                 error={
                                                 Object {
                                                                 "errorMessage": "",
@@ -1531,6 +1541,7 @@ ShallowWrapper {
                   <SavedSearch
                     currentSearch=""
                     deleteSearch={[Function]}
+                    disabled={false}
                     error={
                                         Object {
                                                             "errorMessage": "",
@@ -1610,6 +1621,7 @@ ShallowWrapper {
                   "props": Object {
                     "currentSearch": "",
                     "deleteSearch": [Function],
+                    "disabled": false,
                     "error": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -1842,6 +1854,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isResultsLoaded={true}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
     loadMore={[Function]}
@@ -1910,6 +1923,7 @@ ShallowWrapper {
                               advanced={false}
                               customEndDate="2018-05-01"
                               customStartDate="2018-04-24"
+                              disabled={false}
                               errors={
                                         Object {
                                                   "reportSuites": Object {
@@ -1990,6 +2004,7 @@ ShallowWrapper {
                               <SavedSearch
                                         currentSearch=""
                                         deleteSearch={[Function]}
+                                        disabled={false}
                                         error={
                                                   Object {
                                                             "errorMessage": "",
@@ -2087,6 +2102,7 @@ ShallowWrapper {
                         advanced={false}
                         customEndDate="2018-05-01"
                         customStartDate="2018-04-24"
+                        disabled={false}
                         errors={
                                     Object {
                                                 "reportSuites": Object {
@@ -2165,6 +2181,7 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              disabled={false}
               errors={
                             Object {
                                           "reportSuites": Object {
@@ -2241,6 +2258,7 @@ ShallowWrapper {
               "advanced": false,
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",
+              "disabled": false,
               "errors": Object {
                 "reportSuites": Object {
                   "errorMessage": "",
@@ -2322,6 +2340,7 @@ ShallowWrapper {
                         <SavedSearch
                                     currentSearch=""
                                     deleteSearch={[Function]}
+                                    disabled={false}
                                     error={
                                                 Object {
                                                             "errorMessage": "",
@@ -2405,6 +2424,7 @@ ShallowWrapper {
               <SavedSearch
                             currentSearch=""
                             deleteSearch={[Function]}
+                            disabled={false}
                             error={
                                           Object {
                                                         "errorMessage": "",
@@ -2484,6 +2504,7 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  disabled={false}
                   error={
                                     Object {
                                                       "errorMessage": "",
@@ -2563,6 +2584,7 @@ ShallowWrapper {
                 "props": Object {
                   "currentSearch": "",
                   "deleteSearch": [Function],
+                  "disabled": false,
                   "error": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -2701,6 +2723,7 @@ ShallowWrapper {
                                     advanced={false}
                                     customEndDate="2018-05-01"
                                     customStartDate="2018-04-24"
+                                    disabled={false}
                                     errors={
                                                 Object {
                                                             "reportSuites": Object {
@@ -2781,6 +2804,7 @@ ShallowWrapper {
                                     <SavedSearch
                                                 currentSearch=""
                                                 deleteSearch={[Function]}
+                                                disabled={false}
                                                 error={
                                                             Object {
                                                                         "errorMessage": "",
@@ -2878,6 +2902,7 @@ ShallowWrapper {
                             advanced={false}
                             customEndDate="2018-05-01"
                             customStartDate="2018-04-24"
+                            disabled={false}
                             errors={
                                           Object {
                                                         "reportSuites": Object {
@@ -2956,6 +2981,7 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                disabled={false}
                 errors={
                                 Object {
                                                 "reportSuites": Object {
@@ -3032,6 +3058,7 @@ ShallowWrapper {
                 "advanced": false,
                 "customEndDate": "2018-05-01",
                 "customStartDate": "2018-04-24",
+                "disabled": false,
                 "errors": Object {
                   "reportSuites": Object {
                     "errorMessage": "",
@@ -3113,6 +3140,7 @@ ShallowWrapper {
                             <SavedSearch
                                           currentSearch=""
                                           deleteSearch={[Function]}
+                                          disabled={false}
                                           error={
                                                         Object {
                                                                       "errorMessage": "",
@@ -3196,6 +3224,7 @@ ShallowWrapper {
                 <SavedSearch
                                 currentSearch=""
                                 deleteSearch={[Function]}
+                                disabled={false}
                                 error={
                                                 Object {
                                                                 "errorMessage": "",
@@ -3275,6 +3304,7 @@ ShallowWrapper {
                   <SavedSearch
                     currentSearch=""
                     deleteSearch={[Function]}
+                    disabled={false}
                     error={
                                         Object {
                                                             "errorMessage": "",
@@ -3354,6 +3384,7 @@ ShallowWrapper {
                   "props": Object {
                     "currentSearch": "",
                     "deleteSearch": [Function],
+                    "disabled": false,
                     "error": Object {
                       "errorMessage": "",
                       "hasError": false,
@@ -3586,6 +3617,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isResultsLoaded={true}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
     loadMore={[Function]}
@@ -3654,6 +3686,7 @@ ShallowWrapper {
                               advanced={false}
                               customEndDate="2018-05-01"
                               customStartDate="2018-04-24"
+                              disabled={false}
                               errors={
                                         Object {
                                                   "reportSuites": Object {
@@ -3734,6 +3767,7 @@ ShallowWrapper {
                               <SavedSearch
                                         currentSearch=""
                                         deleteSearch={[Function]}
+                                        disabled={false}
                                         error={
                                                   Object {
                                                             "errorMessage": "",
@@ -3831,6 +3865,7 @@ ShallowWrapper {
                         advanced={false}
                         customEndDate="2018-05-01"
                         customStartDate="2018-04-24"
+                        disabled={false}
                         errors={
                                     Object {
                                                 "reportSuites": Object {
@@ -3909,6 +3944,7 @@ ShallowWrapper {
               advanced={false}
               customEndDate="2018-05-01"
               customStartDate="2018-04-24"
+              disabled={false}
               errors={
                             Object {
                                           "reportSuites": Object {
@@ -3985,6 +4021,7 @@ ShallowWrapper {
               "advanced": false,
               "customEndDate": "2018-05-01",
               "customStartDate": "2018-04-24",
+              "disabled": false,
               "errors": Object {
                 "reportSuites": Object {
                   "errorMessage": "",
@@ -4066,6 +4103,7 @@ ShallowWrapper {
                         <SavedSearch
                                     currentSearch=""
                                     deleteSearch={[Function]}
+                                    disabled={false}
                                     error={
                                                 Object {
                                                             "errorMessage": "",
@@ -4149,6 +4187,7 @@ ShallowWrapper {
               <SavedSearch
                             currentSearch=""
                             deleteSearch={[Function]}
+                            disabled={false}
                             error={
                                           Object {
                                                         "errorMessage": "",
@@ -4228,6 +4267,7 @@ ShallowWrapper {
                 <SavedSearch
                   currentSearch=""
                   deleteSearch={[Function]}
+                  disabled={false}
                   error={
                                     Object {
                                                       "errorMessage": "",
@@ -4307,6 +4347,7 @@ ShallowWrapper {
                 "props": Object {
                   "currentSearch": "",
                   "deleteSearch": [Function],
+                  "disabled": false,
                   "error": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -4445,6 +4486,7 @@ ShallowWrapper {
                                     advanced={false}
                                     customEndDate="2018-05-01"
                                     customStartDate="2018-04-24"
+                                    disabled={false}
                                     errors={
                                                 Object {
                                                             "reportSuites": Object {
@@ -4525,6 +4567,7 @@ ShallowWrapper {
                                     <SavedSearch
                                                 currentSearch=""
                                                 deleteSearch={[Function]}
+                                                disabled={false}
                                                 error={
                                                             Object {
                                                                         "errorMessage": "",
@@ -4622,6 +4665,7 @@ ShallowWrapper {
                             advanced={false}
                             customEndDate="2018-05-01"
                             customStartDate="2018-04-24"
+                            disabled={false}
                             errors={
                                           Object {
                                                         "reportSuites": Object {
@@ -4700,6 +4744,7 @@ ShallowWrapper {
                 advanced={false}
                 customEndDate="2018-05-01"
                 customStartDate="2018-04-24"
+                disabled={false}
                 errors={
                                 Object {
                                                 "reportSuites": Object {
@@ -4776,6 +4821,7 @@ ShallowWrapper {
                 "advanced": false,
                 "customEndDate": "2018-05-01",
                 "customStartDate": "2018-04-24",
+                "disabled": false,
                 "errors": Object {
                   "reportSuites": Object {
                     "errorMessage": "",
@@ -4857,6 +4903,7 @@ ShallowWrapper {
                             <SavedSearch
                                           currentSearch=""
                                           deleteSearch={[Function]}
+                                          disabled={false}
                                           error={
                                                         Object {
                                                                       "errorMessage": "",
@@ -4940,6 +4987,7 @@ ShallowWrapper {
                 <SavedSearch
                                 currentSearch=""
                                 deleteSearch={[Function]}
+                                disabled={false}
                                 error={
                                                 Object {
                                                                 "errorMessage": "",
@@ -5019,6 +5067,7 @@ ShallowWrapper {
                   <SavedSearch
                     currentSearch=""
                     deleteSearch={[Function]}
+                    disabled={false}
                     error={
                                         Object {
                                                             "errorMessage": "",
@@ -5098,6 +5147,7 @@ ShallowWrapper {
                   "props": Object {
                     "currentSearch": "",
                     "deleteSearch": [Function],
+                    "disabled": false,
                     "error": Object {
                       "errorMessage": "",
                       "hasError": false,

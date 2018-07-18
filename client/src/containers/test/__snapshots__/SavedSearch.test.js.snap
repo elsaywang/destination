@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SavedSearch
     currentSearch="Watson Cartwright"
     deleteSearch={[Function]}
+    disabled={false}
     error={
         Object {
             "errorMessage": "",
@@ -61,7 +62,9 @@ ShallowWrapper {
 </Heading>,
         <load
           currentSearch="Watson Cartwright"
+          data-test="wrapped-saved-search-tag-list"
           deleteSearch={[Function]}
+          disabled={false}
           isLoaded={undefined}
           list={
                     Array [
@@ -117,7 +120,9 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "currentSearch": "Watson Cartwright",
+          "data-test": "wrapped-saved-search-tag-list",
           "deleteSearch": [Function],
+          "disabled": false,
           "isLoaded": undefined,
           "list": Array [
             Object {
@@ -177,7 +182,9 @@ ShallowWrapper {
 </Heading>,
           <load
             currentSearch="Watson Cartwright"
+            data-test="wrapped-saved-search-tag-list"
             deleteSearch={[Function]}
+            disabled={false}
             isLoaded={undefined}
             list={
                         Array [
@@ -233,7 +240,9 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "currentSearch": "Watson Cartwright",
+            "data-test": "wrapped-saved-search-tag-list",
             "deleteSearch": [Function],
+            "disabled": false,
             "isLoaded": undefined,
             "list": Array [
               Object {

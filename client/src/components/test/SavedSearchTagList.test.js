@@ -38,6 +38,7 @@ describe('<SavedSearchTagList /> component', () => {
             onSavedSearchClick={mockFn}
             deleteSearch={mockFn}
             currentSearch={currentSearch.name}
+            disabled={false}
         />,
     );
 

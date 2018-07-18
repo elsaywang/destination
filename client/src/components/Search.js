@@ -107,7 +107,7 @@ class Search extends Component {
                 data-test="search-button"
                 onClick={this.props.onSearch}
                 variant="cta"
-                disabled={!isFormValid(this.props)}
+                disabled={!isFormValid(this.props) || this.props.disabled}
             />
         </GridColumn>
     );

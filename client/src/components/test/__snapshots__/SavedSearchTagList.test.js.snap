@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SavedSearchTagList
     currentSearch="Watson Cartwright"
     deleteSearch={[Function]}
+    disabled={false}
     list={
         Array [
             Object {
@@ -52,6 +53,7 @@ ShallowWrapper {
       "children": Array [
         <InjectIntl(SavedSearchPopover)
           deleteSearch={[Function]}
+          disabled={false}
           isCurrentSearch={false}
           onSavedSearchClick={[Function]}
           search={
@@ -99,6 +101,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "deleteSearch": [Function],
+          "disabled": false,
           "isCurrentSearch": false,
           "onSavedSearchClick": [Function],
           "search": Object {
@@ -142,6 +145,7 @@ ShallowWrapper {
         "children": Array [
           <InjectIntl(SavedSearchPopover)
             deleteSearch={[Function]}
+            disabled={false}
             isCurrentSearch={false}
             onSavedSearchClick={[Function]}
             search={
@@ -189,6 +193,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "deleteSearch": [Function],
+            "disabled": false,
             "isCurrentSearch": false,
             "onSavedSearchClick": [Function],
             "search": Object {
