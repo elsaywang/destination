@@ -91,7 +91,7 @@ class SearchContainer extends Component {
                 filterNewSignals: false,
                 presetId: null,
             },
-            () => this.props.callSearch(this.state),
+            () => this.props.callSearch({ search: this.state }),
         );
     };
 
@@ -220,7 +220,7 @@ class SearchContainer extends Component {
             ...savedSearch,
             searched: true,
         });
-        this.props.callSearch(savedSearch);
+        this.props.callSearch({ search: savedSearch });
         this.props.populateSearchFields(savedSearch);
     };
 
@@ -231,9 +231,7 @@ class SearchContainer extends Component {
                 filterNewSignals: false,
                 presetId: null,
             },
-            () => {
-                this.props.callSearch(this.state);
-            },
+            () => this.props.callSearch({ search: this.state }),
         );
     };
     handleLoadMore = (throttleMs = defaultThrottleMs) => {
@@ -264,9 +262,12 @@ class SearchContainer extends Component {
         }, throttleMs)();
     };
 
-    handleSortSearch = (sortBy, sortDir) => {
-        this.props.updateSortOptions({ sortBy, sortDir });
-        this.props.sortSearch(this.state, { sortBy, sortDir });
+    handleSortSearch = sortOptions => {
+        this.props.updateSortOptions(sortOptions);
+        this.props.callSearch({
+            search: this.state,
+            sortOptions,
+        });
     };
 
     handleSaveThisSearchConfirm = search => {

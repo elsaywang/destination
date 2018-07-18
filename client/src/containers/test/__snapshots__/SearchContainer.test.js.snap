@@ -129,7 +129,6 @@ ShallowWrapper {
             "sortDir": undefined,
           }
     }
-    sortSearch={[Function]}
     thisSearch={
         Object {
             "descending": false,
@@ -1874,7 +1873,6 @@ ShallowWrapper {
             "sortDir": undefined,
           }
     }
-    sortSearch={[Function]}
     thisSearch={
         Object {
             "descending": false,
@@ -3619,7 +3617,6 @@ ShallowWrapper {
             "sortDir": undefined,
           }
     }
-    sortSearch={[Function]}
     thisSearch={
         Object {
             "descending": false,

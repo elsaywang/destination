@@ -5,7 +5,6 @@ import {
     THROTTLE_LOAD_MORE,
     CLEAR_SEARCH,
     UPDATE_SORT_OPTIONS,
-    SORT_SEARCH_FULFILLED,
 } from '../actions/searchForm';
 import { pageSize } from '../constants/paginationOptions';
 
@@ -56,13 +55,6 @@ const results = handleActions(
             ...state,
             ...action.payload,
         }),
-        [SORT_SEARCH_FULFILLED]: (state, action) => {
-            return {
-                ...state,
-                list: action.payload.list.reverse(),
-                isEndOfResults: handleIsEndOfResults(state, action),
-            };
-        },
     },
     initialState,
 );
