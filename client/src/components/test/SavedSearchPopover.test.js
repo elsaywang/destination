@@ -43,6 +43,7 @@ describe('<SavedSearchPopover /> component', () => {
                 search={search}
                 isCurrentSearch={false}
                 deleteSearch={jest.fn()}
+                disabled={false}
             />,
         ).dive();
 
@@ -85,6 +86,13 @@ describe('<SavedSearchPopover /> component', () => {
             expect(overlayTrigger.find(Tag).props().id).toEqual('isCurrentSearch');
         });
 
+        it('renders disabled <Tag />  when disabled props is true', () => {
+            wrapper.setProps({ disabled: true });
+
+            const overlayTrigger = wrapper.find(OverlayTrigger);
+
+            expect(overlayTrigger.find(Tag).props().disabled).toBe(true);
+        });
         describe('renders <Popover />', () => {
             it("contains user's saved search name", () => {
                 expect(wrapper.find(Popover).contains(search.name)).toBe(true);

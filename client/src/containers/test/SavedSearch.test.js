@@ -42,6 +42,7 @@ describe('<SavedSearch /> component', () => {
             currentSearch={currentSearch.name}
             deleteSearch={mockFn}
             error={error}
+            disabled={false}
         />,
     );
 
@@ -67,6 +68,17 @@ describe('<SavedSearch /> component', () => {
             });
 
             expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
+        });
+        it('renders disabled wrapped saved search tag list when when disabled props set to true', () => {
+            wrapper.setProps({
+                disabled: true,
+                error,
+                isLoaded: true,
+            });
+            expect(wrapper.find('[data-test="wrapped-saved-search-tag-list"]').exists()).toBe(true);
+            expect(
+                wrapper.find('[data-test="wrapped-saved-search-tag-list"]').is('[disabled]'),
+            ).toBe(true);
         });
     });
 });

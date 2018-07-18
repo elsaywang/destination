@@ -10,6 +10,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
+import Wait from '@react/react-spectrum/Wait';
 import OverlayTooltip from '../components/common/OverlayTooltip';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import MultiSignalsTraitsCreationContainer from './MultiSignalsTraitsCreationContainer';
@@ -19,7 +20,7 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
-import { getIsEndOfResults } from '../reducers/results';
+import { isEndOfResults, isResultsLoaded, getSortOptions } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
@@ -91,7 +92,7 @@ class SearchContainer extends Component {
                 filterNewSignals: false,
                 presetId: null,
             },
-            () => this.props.callSearch(this.state),
+            () => this.props.callSearch({ search: this.state }),
         );
     };
 
@@ -220,7 +221,7 @@ class SearchContainer extends Component {
             ...savedSearch,
             searched: true,
         });
-        this.props.callSearch(savedSearch);
+        this.props.callSearch({ search: savedSearch });
         this.props.populateSearchFields(savedSearch);
     };
 
@@ -231,9 +232,7 @@ class SearchContainer extends Component {
                 filterNewSignals: false,
                 presetId: null,
             },
-            () => {
-                this.props.callSearch(this.state);
-            },
+            () => this.props.callSearch({ search: this.state }),
         );
     };
     handleLoadMore = (throttleMs = defaultThrottleMs) => {
@@ -242,6 +241,7 @@ class SearchContainer extends Component {
         }
 
         const { page, isThrottled: wasThrottled } = this.props.results;
+        const { sortOptions } = this.props;
 
         // Triggers another render.
         this.props.throttleLoadMore(true);
@@ -250,8 +250,12 @@ class SearchContainer extends Component {
             return;
         }
 
-        this.props.loadMore(this.state, {
-            page: page + 1,
+        this.props.loadMore({
+            search: this.state,
+            pagination: {
+                page: page + 1,
+            },
+            sortOptions,
         });
 
         debounce(() => {
@@ -259,8 +263,12 @@ class SearchContainer extends Component {
         }, throttleMs)();
     };
 
-    handleSortSearch = (sortColumn, sortDir) => {
-        this.props.sortSearch(this.state, sortColumn, sortDir);
+    handleSortSearch = sortOptions => {
+        this.props.updateSortOptions(sortOptions);
+        this.props.callSearch({
+            search: this.state,
+            sortOptions,
+        });
     };
 
     handleSaveThisSearchConfirm = search => {
@@ -303,6 +311,18 @@ class SearchContainer extends Component {
     getSearchResultsMessage = () =>
         getSearchResultsMessageBySignalTypeLabel(this.state.name, this.state.source.sourceType);
 
+    renderEmptyResult = () => {
+        if (this.props.isResultsLoaded && this.state.searched) {
+            return <EmptySearch className={styles.empty} variant={'noResult'} />;
+        } else if (!this.state.searched) {
+            return <EmptySearch className={styles.empty} variant={'explore'} />;
+        } else {
+            return <Wait size="L" centered />;
+        }
+    };
+
+    isSearchDisabled = () => !this.props.isResultsLoaded && this.state.searched;
+
     render() {
         return (
             <Fragment>
@@ -331,6 +351,7 @@ class SearchContainer extends Component {
                             eventFiresMinimum={defaultEventFiresMinimum}
                             eventFiresStep={defaultEventFiresStep}
                             maxSignalRetentionDays={this.props.maxSignalRetentionDays}
+                            disabled={this.isSearchDisabled()}
                         />
                     </GridColumn>
                 </GridRow>
@@ -346,6 +367,7 @@ class SearchContainer extends Component {
                                 onSavedSearchClick={this.onSavedSearchClick}
                                 currentSearch={this.state.name}
                                 error={this.props.errors.savedSearch}
+                                disabled={this.isSearchDisabled()}
                             />
                             {Object.keys(this.props.results.list).length > 0 && (
                                 <Fragment>
@@ -387,12 +409,12 @@ class SearchContainer extends Component {
                         )}
                         <div className={styles.tableContainer}>
                             <GridRow valign="middle">
-                                <GridColumn size={4}>
+                                <GridColumn size={7}>
                                     <Heading size={3}>
                                         Search Results {this.getSearchResultsMessage()}
                                     </Heading>
                                 </GridColumn>
-                                <GridColumn size={8}>
+                                <GridColumn size={5}>
                                     <MultiSignalsTraitsCreationContainer
                                         canCreateTraits={this.props.permissions.canCreateTraits}
                                     />
@@ -419,12 +441,7 @@ class SearchContainer extends Component {
                     </div>
                 ) : (
                     <GridRow>
-                        <GridColumn size={12}>
-                            <EmptySearch
-                                className={styles.empty}
-                                variant={this.state.searched ? 'noResult' : 'explore'}
-                            />
-                        </GridColumn>
+                        <GridColumn size={12}>{this.renderEmptyResult()}</GridColumn>
                     </GridRow>
                 )}
             </Fragment>
@@ -443,7 +460,9 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
-    isEndOfResults: getIsEndOfResults(results),
+    sortOptions: getSortOptions(results),
+    isResultsLoaded: isResultsLoaded(results),
+    isEndOfResults: isEndOfResults(results),
     savedSearchFields,
     savedSearch: savedSearch.list,
     savedSearchLimit: savedSearch.limit,

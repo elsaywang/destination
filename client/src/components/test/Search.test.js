@@ -74,6 +74,7 @@ describe('<Search /> component', () => {
             eventFiresMinimum={0}
             eventFiresStep={1000}
             maxSignalRetentionDays={30}
+            disabled={false}
         />,
     );
 
@@ -236,7 +237,11 @@ describe('<Search /> component', () => {
 
             expect(newWrapper.find('[data-test="search-button"]').is('[disabled]')).toBe(true);
         });
+        it('renders <Button /> with label "Search" as disabled when disabled props is true', () => {
+            wrapper.setProps({ disabled: true });
 
+            expect(wrapper.find('[data-test="search-button"]').is('[disabled]')).toBe(true);
+        });
         it('renders <Button /> with label "Clear All"', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Clear All'),

@@ -54,7 +54,7 @@ class DashboardContainer extends Component {
         const { populateSearchFields, callSearch } = this.props;
 
         populateSearchFields(search);
-        callSearch(search);
+        callSearch({ search });
     };
 
     isBottomPassed = () =>

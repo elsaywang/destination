@@ -31,7 +31,10 @@ class DataSource extends TableViewDataSource {
 
     sortItems(key, direction) {
         if (typeof this.sortSearch === 'function') {
-            this.sortSearch(key, direction);
+            this.sortSearch({
+                sortBy: key,
+                sortDir: direction,
+            });
         } else {
             this.items.sort((a, b) => (a[key] < b[key] ? -direction : direction));
         }
