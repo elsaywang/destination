@@ -38,7 +38,7 @@ class SignalsTable extends Component {
 
     handleSelectionChange = selectedItems => {
         const { onSignalRecordsSelection, results } = this.props;
-        const items = this.formatSignalsList(results.list);
+        const items = this.formatSignalsList(results);
         const selectedRowIndexSet = [];
         //selectedItems is iterable
         for (let indexPath of selectedItems) {
@@ -152,7 +152,7 @@ class SignalsTable extends Component {
             return '—';
         }
         const maxPercentageMagnitude = Math.max(
-            ...this.props.results.list.map(item => Math.abs(item.percentageChange)),
+            ...this.props.results.map(item => Math.abs(item.percentageChange)),
         );
 
         return (
@@ -200,7 +200,7 @@ class SignalsTable extends Component {
             selectedRowIndexes,
         } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
-        const items = this.formatSignalsList(results.list);
+        const items = this.formatSignalsList(results);
         const rowHeight = this.getRowHeight(totalKeyValuePairs);
 
         return (
@@ -221,7 +221,7 @@ class SignalsTable extends Component {
 }
 
 SignalsTable.propTypes = {
-    results: PropTypes.object,
+    results: PropTypes.array,
     totalKeyValuePairs: PropTypes.number,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,

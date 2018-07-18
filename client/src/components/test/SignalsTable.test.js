@@ -13,22 +13,20 @@ describe('<SignalsTable /> component', () => {
     const mockFn = jest.fn();
     const wrapper = shallow(
         <SignalsTable
-            results={{
-                list: [
-                    {
-                        id: 0,
-                        name: 'test1',
-                        source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
-                        percentageChange: 0.1234,
-                    },
-                    {
-                        id: 1,
-                        name: 'test2',
-                        source: { sourceType: 'ONBOARDED', dataSourceIds: [456] },
-                        percentageChange: -0.5678,
-                    },
-                ],
-            }}
+            results={[
+                {
+                    id: 0,
+                    name: 'test1',
+                    source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
+                    percentageChange: 0.1234,
+                },
+                {
+                    id: 1,
+                    name: 'test2',
+                    source: { sourceType: 'ONBOARDED', dataSourceIds: [456] },
+                    percentageChange: -0.5678,
+                },
+            ]}
             signalType="ALL"
             sortSearch={mockFn}
             onLoadMore={mockFn}
@@ -313,7 +311,7 @@ describe('<SignalsTable /> component', () => {
     describe('Formatting LIST API response for the table', () => {
         describe('formatSignalsList', () => {
             it('should return the list of signals, where each signal has additional custom data for the `signalType`, `signalSource`, and `includedInTraits` columns', () => {
-                const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+                const newWrapper = shallow(<SignalsTable results={[]} />);
                 const instance = newWrapper.instance();
                 const signals = [{}];
 
@@ -332,7 +330,7 @@ describe('<SignalsTable /> component', () => {
         });
 
         describe('formatSignalType', () => {
-            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const newWrapper = shallow(<SignalsTable results={[]} />);
             const { formatSignalType } = newWrapper.instance();
 
             it('should return "Adobe Analytics" when the signal`s `sourceType` is "ANALYTICS"', () => {
@@ -367,7 +365,7 @@ describe('<SignalsTable /> component', () => {
         });
 
         describe('formatSignalSource', () => {
-            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const newWrapper = shallow(<SignalsTable results={[]} />);
             const { formatSignalSource } = newWrapper.instance();
 
             // TODO: it should actually return the names of the report suite
@@ -440,7 +438,7 @@ describe('<SignalsTable /> component', () => {
         });
 
         describe('formatIncludedInTraits', () => {
-            const newWrapper = shallow(<SignalsTable results={{ list: [] }} />);
+            const newWrapper = shallow(<SignalsTable results={[]} />);
             const { formatIncludedInTraits } = newWrapper.instance();
 
             it('should return an object containing the signal`s `keyValuePairs`, `includedInTraits` (renamed as `sids`), and `categoryType`', () => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignalsTable from '../SignalsTable';
 import SavedSearchTable from '../SavedSearchTable';
 import EmptySearch from '../EmptySearch';
 import fetch from '../../utils/fetch';
