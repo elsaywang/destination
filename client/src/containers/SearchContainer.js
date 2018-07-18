@@ -249,13 +249,13 @@ class SearchContainer extends Component {
             return;
         }
 
-        this.props.loadMore(
-            this.state,
-            {
+        this.props.loadMore({
+            search: this.state,
+            pagination: {
                 page: page + 1,
             },
             sortOptions,
-        );
+        });
 
         debounce(() => {
             this.props.throttleLoadMore(false);
