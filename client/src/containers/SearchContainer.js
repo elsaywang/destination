@@ -58,7 +58,6 @@ class SearchContainer extends Component {
             customStartDate: getDefaultCustomStartDate(),
             customEndDate: getDefaultCustomEndDate(),
             minEventFires: 1000,
-            includeSourceName: true,
             searched: false,
         };
     }

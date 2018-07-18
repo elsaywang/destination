@@ -39,7 +39,6 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": false,
               "includeInDashboard": true,
-              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -66,7 +65,6 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": true,
               "includeInDashboard": true,
-              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -183,7 +181,6 @@ ShallowWrapper {
                               eventFiresMinimum={0}
                               eventFiresStep={1000}
                               filterNewSignals={false}
-                              includeSourceName={true}
                               isCustomDateRangeEnabled={false}
                               keyValuePairs={
                                         Array [
@@ -256,7 +253,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -283,7 +279,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -363,7 +358,6 @@ ShallowWrapper {
                         eventFiresMinimum={0}
                         eventFiresStep={1000}
                         filterNewSignals={false}
-                        includeSourceName={true}
                         isCustomDateRangeEnabled={false}
                         keyValuePairs={
                                     Array [
@@ -442,7 +436,6 @@ ShallowWrapper {
               eventFiresMinimum={0}
               eventFiresStep={1000}
               filterNewSignals={false}
-              includeSourceName={true}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                             Array [
@@ -517,7 +510,6 @@ ShallowWrapper {
               "eventFiresMinimum": 0,
               "eventFiresStep": 1000,
               "filterNewSignals": false,
-              "includeSourceName": true,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -593,7 +585,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -620,7 +611,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -678,7 +668,6 @@ ShallowWrapper {
                                                           "descending": false,
                                                           "filterNewSignals": false,
                                                           "includeInDashboard": true,
-                                                          "includeSourceName": true,
                                                           "keyValuePairs": Array [
                                                             Object {
                                                               "id": 0,
@@ -705,7 +694,6 @@ ShallowWrapper {
                                                           "descending": false,
                                                           "filterNewSignals": true,
                                                           "includeInDashboard": true,
-                                                          "includeSourceName": true,
                                                           "keyValuePairs": Array [
                                                             Object {
                                                               "id": 0,
@@ -759,7 +747,6 @@ ShallowWrapper {
                                                         "descending": false,
                                                         "filterNewSignals": false,
                                                         "includeInDashboard": true,
-                                                        "includeSourceName": true,
                                                         "keyValuePairs": Array [
                                                           Object {
                                                             "id": 0,
@@ -786,7 +773,6 @@ ShallowWrapper {
                                                         "descending": false,
                                                         "filterNewSignals": true,
                                                         "includeInDashboard": true,
-                                                        "includeSourceName": true,
                                                         "keyValuePairs": Array [
                                                           Object {
                                                             "id": 0,
@@ -837,7 +823,6 @@ ShallowWrapper {
                       "descending": false,
                       "filterNewSignals": false,
                       "includeInDashboard": true,
-                      "includeSourceName": true,
                       "keyValuePairs": Array [
                         Object {
                           "id": 0,
@@ -864,7 +849,6 @@ ShallowWrapper {
                       "descending": false,
                       "filterNewSignals": true,
                       "includeInDashboard": true,
-                      "includeSourceName": true,
                       "keyValuePairs": Array [
                         Object {
                           "id": 0,
@@ -988,7 +972,6 @@ ShallowWrapper {
                                     eventFiresMinimum={0}
                                     eventFiresStep={1000}
                                     filterNewSignals={false}
-                                    includeSourceName={true}
                                     isCustomDateRangeEnabled={false}
                                     keyValuePairs={
                                                 Array [
@@ -1061,7 +1044,6 @@ ShallowWrapper {
                                                                           "descending": false,
                                                                           "filterNewSignals": false,
                                                                           "includeInDashboard": true,
-                                                                          "includeSourceName": true,
                                                                           "keyValuePairs": Array [
                                                                             Object {
                                                                               "id": 0,
@@ -1088,7 +1070,6 @@ ShallowWrapper {
                                                                           "descending": false,
                                                                           "filterNewSignals": true,
                                                                           "includeInDashboard": true,
-                                                                          "includeSourceName": true,
                                                                           "keyValuePairs": Array [
                                                                             Object {
                                                                               "id": 0,
@@ -1168,7 +1149,6 @@ ShallowWrapper {
                             eventFiresMinimum={0}
                             eventFiresStep={1000}
                             filterNewSignals={false}
-                            includeSourceName={true}
                             isCustomDateRangeEnabled={false}
                             keyValuePairs={
                                           Array [
@@ -1247,7 +1227,6 @@ ShallowWrapper {
                 eventFiresMinimum={0}
                 eventFiresStep={1000}
                 filterNewSignals={false}
-                includeSourceName={true}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                                 Array [
@@ -1322,7 +1301,6 @@ ShallowWrapper {
                 "eventFiresMinimum": 0,
                 "eventFiresStep": 1000,
                 "filterNewSignals": false,
-                "includeSourceName": true,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -1398,7 +1376,6 @@ ShallowWrapper {
                                                                         "descending": false,
                                                                         "filterNewSignals": false,
                                                                         "includeInDashboard": true,
-                                                                        "includeSourceName": true,
                                                                         "keyValuePairs": Array [
                                                                           Object {
                                                                             "id": 0,
@@ -1425,7 +1402,6 @@ ShallowWrapper {
                                                                         "descending": false,
                                                                         "filterNewSignals": true,
                                                                         "includeInDashboard": true,
-                                                                        "includeSourceName": true,
                                                                         "keyValuePairs": Array [
                                                                           Object {
                                                                             "id": 0,
@@ -1483,7 +1459,6 @@ ShallowWrapper {
                                                                   "descending": false,
                                                                   "filterNewSignals": false,
                                                                   "includeInDashboard": true,
-                                                                  "includeSourceName": true,
                                                                   "keyValuePairs": Array [
                                                                     Object {
                                                                       "id": 0,
@@ -1510,7 +1485,6 @@ ShallowWrapper {
                                                                   "descending": false,
                                                                   "filterNewSignals": true,
                                                                   "includeInDashboard": true,
-                                                                  "includeSourceName": true,
                                                                   "keyValuePairs": Array [
                                                                     Object {
                                                                       "id": 0,
@@ -1564,7 +1538,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -1591,7 +1564,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -1642,7 +1614,6 @@ ShallowWrapper {
                         "descending": false,
                         "filterNewSignals": false,
                         "includeInDashboard": true,
-                        "includeSourceName": true,
                         "keyValuePairs": Array [
                           Object {
                             "id": 0,
@@ -1669,7 +1640,6 @@ ShallowWrapper {
                         "descending": false,
                         "filterNewSignals": true,
                         "includeInDashboard": true,
-                        "includeSourceName": true,
                         "keyValuePairs": Array [
                           Object {
                             "id": 0,
@@ -1812,7 +1782,6 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": false,
               "includeInDashboard": true,
-              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -1839,7 +1808,6 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": true,
               "includeInDashboard": true,
-              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -1951,7 +1919,6 @@ ShallowWrapper {
                               eventFiresMinimum={0}
                               eventFiresStep={1000}
                               filterNewSignals={false}
-                              includeSourceName={true}
                               isCustomDateRangeEnabled={false}
                               keyValuePairs={
                                         Array [
@@ -2024,7 +1991,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -2051,7 +2017,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -2131,7 +2096,6 @@ ShallowWrapper {
                         eventFiresMinimum={0}
                         eventFiresStep={1000}
                         filterNewSignals={false}
-                        includeSourceName={true}
                         isCustomDateRangeEnabled={false}
                         keyValuePairs={
                                     Array [
@@ -2210,7 +2174,6 @@ ShallowWrapper {
               eventFiresMinimum={0}
               eventFiresStep={1000}
               filterNewSignals={false}
-              includeSourceName={true}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                             Array [
@@ -2285,7 +2248,6 @@ ShallowWrapper {
               "eventFiresMinimum": 0,
               "eventFiresStep": 1000,
               "filterNewSignals": false,
-              "includeSourceName": true,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -2361,7 +2323,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -2388,7 +2349,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -2446,7 +2406,6 @@ ShallowWrapper {
                                                           "descending": false,
                                                           "filterNewSignals": false,
                                                           "includeInDashboard": true,
-                                                          "includeSourceName": true,
                                                           "keyValuePairs": Array [
                                                             Object {
                                                               "id": 0,
@@ -2473,7 +2432,6 @@ ShallowWrapper {
                                                           "descending": false,
                                                           "filterNewSignals": true,
                                                           "includeInDashboard": true,
-                                                          "includeSourceName": true,
                                                           "keyValuePairs": Array [
                                                             Object {
                                                               "id": 0,
@@ -2527,7 +2485,6 @@ ShallowWrapper {
                                                         "descending": false,
                                                         "filterNewSignals": false,
                                                         "includeInDashboard": true,
-                                                        "includeSourceName": true,
                                                         "keyValuePairs": Array [
                                                           Object {
                                                             "id": 0,
@@ -2554,7 +2511,6 @@ ShallowWrapper {
                                                         "descending": false,
                                                         "filterNewSignals": true,
                                                         "includeInDashboard": true,
-                                                        "includeSourceName": true,
                                                         "keyValuePairs": Array [
                                                           Object {
                                                             "id": 0,
@@ -2605,7 +2561,6 @@ ShallowWrapper {
                       "descending": false,
                       "filterNewSignals": false,
                       "includeInDashboard": true,
-                      "includeSourceName": true,
                       "keyValuePairs": Array [
                         Object {
                           "id": 0,
@@ -2632,7 +2587,6 @@ ShallowWrapper {
                       "descending": false,
                       "filterNewSignals": true,
                       "includeInDashboard": true,
-                      "includeSourceName": true,
                       "keyValuePairs": Array [
                         Object {
                           "id": 0,
@@ -2756,7 +2710,6 @@ ShallowWrapper {
                                     eventFiresMinimum={0}
                                     eventFiresStep={1000}
                                     filterNewSignals={false}
-                                    includeSourceName={true}
                                     isCustomDateRangeEnabled={false}
                                     keyValuePairs={
                                                 Array [
@@ -2829,7 +2782,6 @@ ShallowWrapper {
                                                                           "descending": false,
                                                                           "filterNewSignals": false,
                                                                           "includeInDashboard": true,
-                                                                          "includeSourceName": true,
                                                                           "keyValuePairs": Array [
                                                                             Object {
                                                                               "id": 0,
@@ -2856,7 +2808,6 @@ ShallowWrapper {
                                                                           "descending": false,
                                                                           "filterNewSignals": true,
                                                                           "includeInDashboard": true,
-                                                                          "includeSourceName": true,
                                                                           "keyValuePairs": Array [
                                                                             Object {
                                                                               "id": 0,
@@ -2936,7 +2887,6 @@ ShallowWrapper {
                             eventFiresMinimum={0}
                             eventFiresStep={1000}
                             filterNewSignals={false}
-                            includeSourceName={true}
                             isCustomDateRangeEnabled={false}
                             keyValuePairs={
                                           Array [
@@ -3015,7 +2965,6 @@ ShallowWrapper {
                 eventFiresMinimum={0}
                 eventFiresStep={1000}
                 filterNewSignals={false}
-                includeSourceName={true}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                                 Array [
@@ -3090,7 +3039,6 @@ ShallowWrapper {
                 "eventFiresMinimum": 0,
                 "eventFiresStep": 1000,
                 "filterNewSignals": false,
-                "includeSourceName": true,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -3166,7 +3114,6 @@ ShallowWrapper {
                                                                         "descending": false,
                                                                         "filterNewSignals": false,
                                                                         "includeInDashboard": true,
-                                                                        "includeSourceName": true,
                                                                         "keyValuePairs": Array [
                                                                           Object {
                                                                             "id": 0,
@@ -3193,7 +3140,6 @@ ShallowWrapper {
                                                                         "descending": false,
                                                                         "filterNewSignals": true,
                                                                         "includeInDashboard": true,
-                                                                        "includeSourceName": true,
                                                                         "keyValuePairs": Array [
                                                                           Object {
                                                                             "id": 0,
@@ -3251,7 +3197,6 @@ ShallowWrapper {
                                                                   "descending": false,
                                                                   "filterNewSignals": false,
                                                                   "includeInDashboard": true,
-                                                                  "includeSourceName": true,
                                                                   "keyValuePairs": Array [
                                                                     Object {
                                                                       "id": 0,
@@ -3278,7 +3223,6 @@ ShallowWrapper {
                                                                   "descending": false,
                                                                   "filterNewSignals": true,
                                                                   "includeInDashboard": true,
-                                                                  "includeSourceName": true,
                                                                   "keyValuePairs": Array [
                                                                     Object {
                                                                       "id": 0,
@@ -3332,7 +3276,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -3359,7 +3302,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -3410,7 +3352,6 @@ ShallowWrapper {
                         "descending": false,
                         "filterNewSignals": false,
                         "includeInDashboard": true,
-                        "includeSourceName": true,
                         "keyValuePairs": Array [
                           Object {
                             "id": 0,
@@ -3437,7 +3378,6 @@ ShallowWrapper {
                         "descending": false,
                         "filterNewSignals": true,
                         "includeInDashboard": true,
-                        "includeSourceName": true,
                         "keyValuePairs": Array [
                           Object {
                             "id": 0,
@@ -3580,7 +3520,6 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": false,
               "includeInDashboard": true,
-              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -3607,7 +3546,6 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": true,
               "includeInDashboard": true,
-              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -3719,7 +3657,6 @@ ShallowWrapper {
                               eventFiresMinimum={0}
                               eventFiresStep={1000}
                               filterNewSignals={false}
-                              includeSourceName={true}
                               isCustomDateRangeEnabled={false}
                               keyValuePairs={
                                         Array [
@@ -3792,7 +3729,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -3819,7 +3755,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -3899,7 +3834,6 @@ ShallowWrapper {
                         eventFiresMinimum={0}
                         eventFiresStep={1000}
                         filterNewSignals={false}
-                        includeSourceName={true}
                         isCustomDateRangeEnabled={false}
                         keyValuePairs={
                                     Array [
@@ -3978,7 +3912,6 @@ ShallowWrapper {
               eventFiresMinimum={0}
               eventFiresStep={1000}
               filterNewSignals={false}
-              includeSourceName={true}
               isCustomDateRangeEnabled={false}
               keyValuePairs={
                             Array [
@@ -4053,7 +3986,6 @@ ShallowWrapper {
               "eventFiresMinimum": 0,
               "eventFiresStep": 1000,
               "filterNewSignals": false,
-              "includeSourceName": true,
               "isCustomDateRangeEnabled": false,
               "keyValuePairs": Array [
                 Object {
@@ -4129,7 +4061,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -4156,7 +4087,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -4214,7 +4144,6 @@ ShallowWrapper {
                                                           "descending": false,
                                                           "filterNewSignals": false,
                                                           "includeInDashboard": true,
-                                                          "includeSourceName": true,
                                                           "keyValuePairs": Array [
                                                             Object {
                                                               "id": 0,
@@ -4241,7 +4170,6 @@ ShallowWrapper {
                                                           "descending": false,
                                                           "filterNewSignals": true,
                                                           "includeInDashboard": true,
-                                                          "includeSourceName": true,
                                                           "keyValuePairs": Array [
                                                             Object {
                                                               "id": 0,
@@ -4295,7 +4223,6 @@ ShallowWrapper {
                                                         "descending": false,
                                                         "filterNewSignals": false,
                                                         "includeInDashboard": true,
-                                                        "includeSourceName": true,
                                                         "keyValuePairs": Array [
                                                           Object {
                                                             "id": 0,
@@ -4322,7 +4249,6 @@ ShallowWrapper {
                                                         "descending": false,
                                                         "filterNewSignals": true,
                                                         "includeInDashboard": true,
-                                                        "includeSourceName": true,
                                                         "keyValuePairs": Array [
                                                           Object {
                                                             "id": 0,
@@ -4373,7 +4299,6 @@ ShallowWrapper {
                       "descending": false,
                       "filterNewSignals": false,
                       "includeInDashboard": true,
-                      "includeSourceName": true,
                       "keyValuePairs": Array [
                         Object {
                           "id": 0,
@@ -4400,7 +4325,6 @@ ShallowWrapper {
                       "descending": false,
                       "filterNewSignals": true,
                       "includeInDashboard": true,
-                      "includeSourceName": true,
                       "keyValuePairs": Array [
                         Object {
                           "id": 0,
@@ -4524,7 +4448,6 @@ ShallowWrapper {
                                     eventFiresMinimum={0}
                                     eventFiresStep={1000}
                                     filterNewSignals={false}
-                                    includeSourceName={true}
                                     isCustomDateRangeEnabled={false}
                                     keyValuePairs={
                                                 Array [
@@ -4597,7 +4520,6 @@ ShallowWrapper {
                                                                           "descending": false,
                                                                           "filterNewSignals": false,
                                                                           "includeInDashboard": true,
-                                                                          "includeSourceName": true,
                                                                           "keyValuePairs": Array [
                                                                             Object {
                                                                               "id": 0,
@@ -4624,7 +4546,6 @@ ShallowWrapper {
                                                                           "descending": false,
                                                                           "filterNewSignals": true,
                                                                           "includeInDashboard": true,
-                                                                          "includeSourceName": true,
                                                                           "keyValuePairs": Array [
                                                                             Object {
                                                                               "id": 0,
@@ -4704,7 +4625,6 @@ ShallowWrapper {
                             eventFiresMinimum={0}
                             eventFiresStep={1000}
                             filterNewSignals={false}
-                            includeSourceName={true}
                             isCustomDateRangeEnabled={false}
                             keyValuePairs={
                                           Array [
@@ -4783,7 +4703,6 @@ ShallowWrapper {
                 eventFiresMinimum={0}
                 eventFiresStep={1000}
                 filterNewSignals={false}
-                includeSourceName={true}
                 isCustomDateRangeEnabled={false}
                 keyValuePairs={
                                 Array [
@@ -4858,7 +4777,6 @@ ShallowWrapper {
                 "eventFiresMinimum": 0,
                 "eventFiresStep": 1000,
                 "filterNewSignals": false,
-                "includeSourceName": true,
                 "isCustomDateRangeEnabled": false,
                 "keyValuePairs": Array [
                   Object {
@@ -4934,7 +4852,6 @@ ShallowWrapper {
                                                                         "descending": false,
                                                                         "filterNewSignals": false,
                                                                         "includeInDashboard": true,
-                                                                        "includeSourceName": true,
                                                                         "keyValuePairs": Array [
                                                                           Object {
                                                                             "id": 0,
@@ -4961,7 +4878,6 @@ ShallowWrapper {
                                                                         "descending": false,
                                                                         "filterNewSignals": true,
                                                                         "includeInDashboard": true,
-                                                                        "includeSourceName": true,
                                                                         "keyValuePairs": Array [
                                                                           Object {
                                                                             "id": 0,
@@ -5019,7 +4935,6 @@ ShallowWrapper {
                                                                   "descending": false,
                                                                   "filterNewSignals": false,
                                                                   "includeInDashboard": true,
-                                                                  "includeSourceName": true,
                                                                   "keyValuePairs": Array [
                                                                     Object {
                                                                       "id": 0,
@@ -5046,7 +4961,6 @@ ShallowWrapper {
                                                                   "descending": false,
                                                                   "filterNewSignals": true,
                                                                   "includeInDashboard": true,
-                                                                  "includeSourceName": true,
                                                                   "keyValuePairs": Array [
                                                                     Object {
                                                                       "id": 0,
@@ -5100,7 +5014,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": false,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -5127,7 +5040,6 @@ ShallowWrapper {
                                                               "descending": false,
                                                               "filterNewSignals": true,
                                                               "includeInDashboard": true,
-                                                              "includeSourceName": true,
                                                               "keyValuePairs": Array [
                                                                 Object {
                                                                   "id": 0,
@@ -5178,7 +5090,6 @@ ShallowWrapper {
                         "descending": false,
                         "filterNewSignals": false,
                         "includeInDashboard": true,
-                        "includeSourceName": true,
                         "keyValuePairs": Array [
                           Object {
                             "id": 0,
@@ -5205,7 +5116,6 @@ ShallowWrapper {
                         "descending": false,
                         "filterNewSignals": true,
                         "includeInDashboard": true,
-                        "includeSourceName": true,
                         "keyValuePairs": Array [
                           Object {
                             "id": 0,
