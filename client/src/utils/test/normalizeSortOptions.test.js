@@ -19,6 +19,16 @@ describe('normalizeSortOptions util', () => {
     });
 
     describe('normalizing `sortBy` column key', () => {
+        it('should keep `sortBy` if it is `keyValuePairs`', () => {
+            const { sortBy: actual } = normalizeSortOptions({
+                ...baseSortOptions,
+                sortBy: 'keyValuePairs',
+            });
+            const expected = 'keyValuePairs';
+
+            expect(actual).toEqual(expected);
+        });
+
         it('should keep `sortBy` if it is `totalCount`', () => {
             const { sortBy: actual } = normalizeSortOptions(baseSortOptions);
             const expected = 'totalCount';
@@ -36,18 +46,6 @@ describe('normalizeSortOptions util', () => {
             expect(actual).toEqual(expected);
         });
 
-        it('should keep `sortBy` if it is `keyValuePairs`', () => {
-            // it('should exclude `sortBy` if it is `keyValuePairs`', () => {
-            const { sortBy: actual } = normalizeSortOptions({
-                ...baseSortOptions,
-                sortBy: 'keyValuePairs',
-            });
-            const expected = 'keyValuePairs';
-
-            expect(actual).toEqual(expected);
-            // expect(actual).toBeUndefined();
-        });
-
         it('should exclude `sortBy` if it is an unsupported sort column key', () => {
             const { sortBy: actual } = normalizeSortOptions({
                 ...baseSortOptions,
@@ -59,14 +57,14 @@ describe('normalizeSortOptions util', () => {
     });
 
     describe('normalizing `descending`', () => {
-        describe('explicitly setting `descending` param for non-default behavior', () => {
-            it('should set `descending` to true when `sortBy` is "keyValuePairs" and `sortDir` is -1', () => {
+        describe('explicitly setting `descending` param to `false` when sorting ascending', () => {
+            it('should set `descending` to false when `sortBy` is "keyValuePairs" and `sortDir` is 1', () => {
                 const { descending: actual } = normalizeSortOptions({
                     ...baseSortOptions,
                     sortBy: 'keyValuePairs',
-                    sortDir: -1,
+                    sortDir: 1,
                 });
-                const expected = true;
+                const expected = false;
 
                 expect(actual).toEqual(expected);
             });
@@ -94,12 +92,12 @@ describe('normalizeSortOptions util', () => {
             });
         });
 
-        describe('excluding `descending` param for user-selected sort that matches default behavior', () => {
-            it('should exclude `descending` when `sortBy` is "keyValuePairs" and `sortDir` is 1', () => {
+        describe('excluding `descending` param for user explicitly sorts descending, which is the API`s default behavior', () => {
+            it('should exclude `descending` when `sortBy` is "keyValuePairs" and `sortDir` is -1', () => {
                 const { descending: actual } = normalizeSortOptions({
                     ...baseSortOptions,
                     sortBy: 'keyValuePairs',
-                    sortDir: 1,
+                    sortDir: -1,
                 });
 
                 expect(actual).toBeUndefined();
@@ -126,7 +124,7 @@ describe('normalizeSortOptions util', () => {
             });
         });
 
-        describe('excluding `descending` param for default behavior, when no `sortDir` is given', () => {
+        describe('excluding `descending` param for default searches, when no `sortDir` is given', () => {
             it('should exclude `descending` when `sortBy` is "keyValuePairs" and `sortDir` is not provided', () => {
                 const { descending: actual } = normalizeSortOptions({
                     sortBy: 'keyValuePairs',

@@ -3,18 +3,10 @@ import { sortColumns } from '../constants/columns';
 export const normalizeSortBy = ({ sortBy }) =>
     sortColumns.map(col => col.key).includes(sortBy) && { sortBy };
 
-export const normalizeDescending = ({ sortBy, sortDir }) => {
-    // By default, the "Key-Value Pairs" column sorts ascending, and the "Total
-    // Counts" and "Percentage Change" columns sort descending.
-    // Only return a `descending` param for non-default sorts.
-    if (sortBy === 'keyValuePairs' && sortDir === -1) {
-        return { descending: true };
-    } else if (sortBy !== 'keyValuePairs' && sortDir === 1) {
-        return { descending: false };
-    }
-
-    return {};
-};
+// If no `descending` param is passed, then the `/signal/list` API returns
+// results sorted in descending order, regardless of the `sortBy` param.
+// Explicitly set `descending` to `false` if and only if `sortDir` is 1.
+export const normalizeDescending = ({ sortDir }) => sortDir === 1 && { descending: false };
 
 export const normalizeSortOptions = sortOptions => ({
     ...normalizeSortBy(sortOptions),
