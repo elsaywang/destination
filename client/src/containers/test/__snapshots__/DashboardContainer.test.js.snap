@@ -25,6 +25,7 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": false,
               "includeInDashboard": true,
+              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -51,6 +52,7 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": true,
               "includeInDashboard": true,
+              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -219,6 +221,7 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": false,
               "includeInDashboard": true,
+              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
@@ -245,6 +248,7 @@ ShallowWrapper {
               "descending": false,
               "filterNewSignals": true,
               "includeInDashboard": true,
+              "includeSourceName": true,
               "keyValuePairs": Array [
                 Object {
                   "id": 0,

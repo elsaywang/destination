@@ -96,6 +96,11 @@ class SignalsTable extends Component {
 
     formatSignalSource(signal) {
         const { sourceType, dataSourceIds, reportSuiteIds } = signal.source;
+        const { sourceName } = signal;
+
+        if (sourceName) {
+            return sourceName;
+        }
 
         switch (sourceType) {
             case 'ANALYTICS':

@@ -16,6 +16,7 @@ export const topUnusedSignals = {
         sourceType: 'ALL',
     },
     viewRecordsFor: '7D',
+    includeSourceName: true,
 };
 
 export const newUnusedSignals = {

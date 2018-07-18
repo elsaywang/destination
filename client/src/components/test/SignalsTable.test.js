@@ -424,6 +424,14 @@ describe('<SignalsTable /> component', () => {
 
                 expect(formatSignalSource(signal)).toEqual('—');
             });
+
+            it('should return the sourceName value when signal includes sourceName property ', () => {
+                const signal = {
+                    source: { sourceType: 'ONBOARDED', dataSourceIds: [] },
+                    sourceName: 'test1',
+                };
+                expect(formatSignalSource(signal)).toEqual(signal.sourceName);
+            });
         });
 
         describe('formatIncludedInTraits', () => {
