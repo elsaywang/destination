@@ -20,7 +20,7 @@ import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
-import { isEndOfResults, isResultsLoaded } from '../reducers/results';
+import { isEndOfResults, isResultsLoaded, getSortOptions } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getSelectedRowIndexes } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
@@ -92,7 +92,7 @@ class SearchContainer extends Component {
                 filterNewSignals: false,
                 presetId: null,
             },
-            () => this.props.callSearch(this.state),
+            () => this.props.callSearch({ search: this.state }),
         );
     };
 
@@ -221,7 +221,7 @@ class SearchContainer extends Component {
             ...savedSearch,
             searched: true,
         });
-        this.props.callSearch(savedSearch);
+        this.props.callSearch({ search: savedSearch });
         this.props.populateSearchFields(savedSearch);
     };
 
@@ -232,9 +232,7 @@ class SearchContainer extends Component {
                 filterNewSignals: false,
                 presetId: null,
             },
-            () => {
-                this.props.callSearch(this.state);
-            },
+            () => this.props.callSearch({ search: this.state }),
         );
     };
     handleLoadMore = (throttleMs = defaultThrottleMs) => {
@@ -243,6 +241,7 @@ class SearchContainer extends Component {
         }
 
         const { page, isThrottled: wasThrottled } = this.props.results;
+        const { sortOptions } = this.props;
 
         // Triggers another render.
         this.props.throttleLoadMore(true);
@@ -251,8 +250,12 @@ class SearchContainer extends Component {
             return;
         }
 
-        this.props.loadMore(this.state, {
-            page: page + 1,
+        this.props.loadMore({
+            search: this.state,
+            pagination: {
+                page: page + 1,
+            },
+            sortOptions,
         });
 
         debounce(() => {
@@ -260,8 +263,12 @@ class SearchContainer extends Component {
         }, throttleMs)();
     };
 
-    handleSortSearch = (sortColumn, sortDir) => {
-        this.props.sortSearch(this.state, sortColumn, sortDir);
+    handleSortSearch = sortOptions => {
+        this.props.updateSortOptions(sortOptions);
+        this.props.callSearch({
+            search: this.state,
+            sortOptions,
+        });
     };
 
     handleSaveThisSearchConfirm = search => {
@@ -453,6 +460,7 @@ const mapStateToProps = ({
     traitBackfill,
 }) => ({
     results,
+    sortOptions: getSortOptions(results),
     isResultsLoaded: isResultsLoaded(results),
     isEndOfResults: isEndOfResults(results),
     savedSearchFields,

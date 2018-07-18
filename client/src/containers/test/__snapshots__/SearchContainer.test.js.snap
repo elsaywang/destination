@@ -117,7 +117,12 @@ ShallowWrapper {
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     selectedRowIndexes={Array []}
-    sortSearch={[Function]}
+    sortOptions={
+        Object {
+            "sortBy": undefined,
+            "sortDir": undefined,
+          }
+    }
     thisSearch={
         Object {
             "descending": false,
@@ -130,6 +135,7 @@ ShallowWrapper {
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
+    updateSortOptions={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1874,7 +1880,12 @@ ShallowWrapper {
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     selectedRowIndexes={Array []}
-    sortSearch={[Function]}
+    sortOptions={
+        Object {
+            "sortBy": undefined,
+            "sortDir": undefined,
+          }
+    }
     thisSearch={
         Object {
             "descending": false,
@@ -1887,6 +1898,7 @@ ShallowWrapper {
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
+    updateSortOptions={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -3631,7 +3643,12 @@ ShallowWrapper {
     selectDefaultSorting={[Function]}
     selectSignals={[Function]}
     selectedRowIndexes={Array []}
-    sortSearch={[Function]}
+    sortOptions={
+        Object {
+            "sortBy": undefined,
+            "sortDir": undefined,
+          }
+    }
     thisSearch={
         Object {
             "descending": false,
@@ -3644,6 +3661,7 @@ ShallowWrapper {
     toggleAdvancedSearch={[Function]}
     trackSearchResultInDashboard={[Function]}
     updateSaveSearchName={[Function]}
+    updateSortOptions={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
