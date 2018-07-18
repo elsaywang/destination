@@ -14,3 +14,5 @@ export const serialize = (options = {}) => {
 export const traitsUrl = options => `${portalUrl}/Traits/Traits.ddx${serialize(options)}`;
 export const createRuleBasedTraitUrl = options => `${traitsUrl(options)}#new/rule`;
 export const createOnboardedTraitUrl = options => `${traitsUrl(options)}#new/onboarded`;
+export const dataSourceEditUrl = dataSourceId =>
+    `${portalUrl}/Segments/DatasourceManagement.ddx#datasources/edit/${dataSourceId}`;
