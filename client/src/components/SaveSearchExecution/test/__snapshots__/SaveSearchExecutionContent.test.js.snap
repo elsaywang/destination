@@ -56,14 +56,10 @@ ShallowWrapper {
           value="Default Sorting"
 >
           <Select
-                    defaultValue="percentageChange"
+                    defaultValue="totalCount"
                     onChange={[Function]}
                     options={
                               Array [
-                                        Object {
-                                          "label": "Key-Value Pair",
-                                          "value": "keyValuePairs",
-                                        },
                                         Object {
                                           "label": "Total Counts",
                                           "value": "totalCount",
@@ -71,6 +67,10 @@ ShallowWrapper {
                                         Object {
                                           "label": "Percentage Change",
                                           "value": "percentageChange",
+                                        },
+                                        Object {
+                                          "label": "Key Name",
+                                          "value": "keyValuePairs",
                                         },
                                       ]
                     }
@@ -185,14 +185,10 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Select
-              defaultValue="percentageChange"
+              defaultValue="totalCount"
               onChange={[Function]}
               options={
                             Array [
-                                          Object {
-                                            "label": "Key-Value Pair",
-                                            "value": "keyValuePairs",
-                                          },
                                           Object {
                                             "label": "Total Counts",
                                             "value": "totalCount",
@@ -200,6 +196,10 @@ ShallowWrapper {
                                           Object {
                                             "label": "Percentage Change",
                                             "value": "percentageChange",
+                                          },
+                                          Object {
+                                            "label": "Key Name",
+                                            "value": "keyValuePairs",
                                           },
                                         ]
               }
@@ -237,13 +237,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "defaultValue": "percentageChange",
+              "defaultValue": "totalCount",
               "onChange": [Function],
               "options": Array [
-                Object {
-                  "label": "Key-Value Pair",
-                  "value": "keyValuePairs",
-                },
                 Object {
                   "label": "Total Counts",
                   "value": "totalCount",
@@ -251,6 +247,10 @@ ShallowWrapper {
                 Object {
                   "label": "Percentage Change",
                   "value": "percentageChange",
+                },
+                Object {
+                  "label": "Key Name",
+                  "value": "keyValuePairs",
                 },
               ],
             },
@@ -388,14 +388,10 @@ ShallowWrapper {
             value="Default Sorting"
 >
             <Select
-                        defaultValue="percentageChange"
+                        defaultValue="totalCount"
                         onChange={[Function]}
                         options={
                                     Array [
-                                                Object {
-                                                  "label": "Key-Value Pair",
-                                                  "value": "keyValuePairs",
-                                                },
                                                 Object {
                                                   "label": "Total Counts",
                                                   "value": "totalCount",
@@ -403,6 +399,10 @@ ShallowWrapper {
                                                 Object {
                                                   "label": "Percentage Change",
                                                   "value": "percentageChange",
+                                                },
+                                                Object {
+                                                  "label": "Key Name",
+                                                  "value": "keyValuePairs",
                                                 },
                                               ]
                         }
@@ -517,14 +517,10 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Select
-                defaultValue="percentageChange"
+                defaultValue="totalCount"
                 onChange={[Function]}
                 options={
                                 Array [
-                                                Object {
-                                                  "label": "Key-Value Pair",
-                                                  "value": "keyValuePairs",
-                                                },
                                                 Object {
                                                   "label": "Total Counts",
                                                   "value": "totalCount",
@@ -532,6 +528,10 @@ ShallowWrapper {
                                                 Object {
                                                   "label": "Percentage Change",
                                                   "value": "percentageChange",
+                                                },
+                                                Object {
+                                                  "label": "Key Name",
+                                                  "value": "keyValuePairs",
                                                 },
                                               ]
                 }
@@ -569,13 +569,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "defaultValue": "percentageChange",
+                "defaultValue": "totalCount",
                 "onChange": [Function],
                 "options": Array [
-                  Object {
-                    "label": "Key-Value Pair",
-                    "value": "keyValuePairs",
-                  },
                   Object {
                     "label": "Total Counts",
                     "value": "totalCount",
@@ -583,6 +579,10 @@ ShallowWrapper {
                   Object {
                     "label": "Percentage Change",
                     "value": "percentageChange",
+                  },
+                  Object {
+                    "label": "Key Name",
+                    "value": "keyValuePairs",
                   },
                 ],
               },
@@ -747,14 +747,10 @@ ShallowWrapper {
           value="Default Sorting"
 >
           <Select
-                    defaultValue="percentageChange"
+                    defaultValue="totalCount"
                     onChange={[Function]}
                     options={
                               Array [
-                                        Object {
-                                          "label": "Key-Value Pair",
-                                          "value": "keyValuePairs",
-                                        },
                                         Object {
                                           "label": "Total Counts",
                                           "value": "totalCount",
@@ -762,6 +758,10 @@ ShallowWrapper {
                                         Object {
                                           "label": "Percentage Change",
                                           "value": "percentageChange",
+                                        },
+                                        Object {
+                                          "label": "Key Name",
+                                          "value": "keyValuePairs",
                                         },
                                       ]
                     }
@@ -876,14 +876,10 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Select
-              defaultValue="percentageChange"
+              defaultValue="totalCount"
               onChange={[Function]}
               options={
                             Array [
-                                          Object {
-                                            "label": "Key-Value Pair",
-                                            "value": "keyValuePairs",
-                                          },
                                           Object {
                                             "label": "Total Counts",
                                             "value": "totalCount",
@@ -891,6 +887,10 @@ ShallowWrapper {
                                           Object {
                                             "label": "Percentage Change",
                                             "value": "percentageChange",
+                                          },
+                                          Object {
+                                            "label": "Key Name",
+                                            "value": "keyValuePairs",
                                           },
                                         ]
               }
@@ -928,13 +928,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "defaultValue": "percentageChange",
+              "defaultValue": "totalCount",
               "onChange": [Function],
               "options": Array [
-                Object {
-                  "label": "Key-Value Pair",
-                  "value": "keyValuePairs",
-                },
                 Object {
                   "label": "Total Counts",
                   "value": "totalCount",
@@ -942,6 +938,10 @@ ShallowWrapper {
                 Object {
                   "label": "Percentage Change",
                   "value": "percentageChange",
+                },
+                Object {
+                  "label": "Key Name",
+                  "value": "keyValuePairs",
                 },
               ],
             },
@@ -1079,14 +1079,10 @@ ShallowWrapper {
             value="Default Sorting"
 >
             <Select
-                        defaultValue="percentageChange"
+                        defaultValue="totalCount"
                         onChange={[Function]}
                         options={
                                     Array [
-                                                Object {
-                                                  "label": "Key-Value Pair",
-                                                  "value": "keyValuePairs",
-                                                },
                                                 Object {
                                                   "label": "Total Counts",
                                                   "value": "totalCount",
@@ -1094,6 +1090,10 @@ ShallowWrapper {
                                                 Object {
                                                   "label": "Percentage Change",
                                                   "value": "percentageChange",
+                                                },
+                                                Object {
+                                                  "label": "Key Name",
+                                                  "value": "keyValuePairs",
                                                 },
                                               ]
                         }
@@ -1208,14 +1208,10 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Select
-                defaultValue="percentageChange"
+                defaultValue="totalCount"
                 onChange={[Function]}
                 options={
                                 Array [
-                                                Object {
-                                                  "label": "Key-Value Pair",
-                                                  "value": "keyValuePairs",
-                                                },
                                                 Object {
                                                   "label": "Total Counts",
                                                   "value": "totalCount",
@@ -1223,6 +1219,10 @@ ShallowWrapper {
                                                 Object {
                                                   "label": "Percentage Change",
                                                   "value": "percentageChange",
+                                                },
+                                                Object {
+                                                  "label": "Key Name",
+                                                  "value": "keyValuePairs",
                                                 },
                                               ]
                 }
@@ -1260,13 +1260,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "defaultValue": "percentageChange",
+                "defaultValue": "totalCount",
                 "onChange": [Function],
                 "options": Array [
-                  Object {
-                    "label": "Key-Value Pair",
-                    "value": "keyValuePairs",
-                  },
                   Object {
                     "label": "Total Counts",
                     "value": "totalCount",
@@ -1274,6 +1270,10 @@ ShallowWrapper {
                   Object {
                     "label": "Percentage Change",
                     "value": "percentageChange",
+                  },
+                  Object {
+                    "label": "Key Name",
+                    "value": "keyValuePairs",
                   },
                 ],
               },
