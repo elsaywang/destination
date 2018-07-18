@@ -18,10 +18,10 @@ class SavedSearchTable extends Component {
         const response = await fetchSignals({ search: savedSearch });
 
         if (response.ok) {
-            const list = await response.json();
+            const results = await response.json();
 
             this.setState({
-                tableResults: list,
+                tableResults: results,
                 error: false,
                 hasSearched: true,
             });
@@ -42,14 +42,15 @@ class SavedSearchTable extends Component {
             canCreateTraits,
             savedSearch,
         } = this.props;
-        const hasSearchResults = Boolean(Object.keys(tableResults).length);
+        const hasSearchResults = !this.state.error && tableResults.list && tableResults.list.length;
         const totalKeyValuePairs = savedSearch.keyValuePairs.length;
         const withResults = hasSearchResults && !this.state.error;
 
         if (withResults) {
             return (
                 <SignalsTable
-                    results={tableResults}
+                    isLoaded={hasSearchResults}
+                    results={tableResults.list}
                     totalKeyValuePairs={totalKeyValuePairs}
                     canCreateTraits={canCreateTraits}
                     isAdvancedSearchEnabled={isAdvancedSearchEnabled}

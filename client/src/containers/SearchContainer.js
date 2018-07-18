@@ -419,7 +419,7 @@ class SearchContainer extends Component {
                                 </GridColumn>
                             </GridRow>
                             <SignalsTable
-                                results={this.props.results}
+                                results={this.props.results.list}
                                 selectedRowIndexes={this.props.selectedRowIndexes}
                                 signalType={this.state.source.sourceType}
                                 totalKeyValuePairs={this.state.keyValuePairs.length}

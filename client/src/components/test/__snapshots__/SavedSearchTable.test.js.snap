@@ -493,35 +493,27 @@ ShallowWrapper {
     allowsSelection={false}
     canCreateTraits={undefined}
     isAdvancedSearchEnabled={false}
+    isLoaded={1}
     results={
-        Object {
-            "analyticsServiceAvailable": true,
-            "endDate": 1531332629645,
-            "list": Array [
-              Object {
-                "includedInTraits": null,
-                "keyValuePairs": Array [
-                  Object {
-                    "key": "evar18",
-                    "value": "CMS18",
-                  },
-                ],
-                "percentageChange": 0.27783491545226535,
-                "signalStatus": "UNUSED",
-                "source": Object {
-                  "dataSourceIds": null,
-                  "reportSuiteIds": null,
-                  "sourceType": null,
+        Array [
+            Object {
+              "includedInTraits": null,
+              "keyValuePairs": Array [
+                Object {
+                  "key": "evar18",
+                  "value": "CMS18",
                 },
-                "totalCount": 93859,
+              ],
+              "percentageChange": 0.27783491545226535,
+              "signalStatus": "UNUSED",
+              "source": Object {
+                "dataSourceIds": null,
+                "reportSuiteIds": null,
+                "sourceType": null,
               },
-            ],
-            "page": 0,
-            "pageSize": 20,
-            "pid": 1194,
-            "startDate": 1530662400000,
-            "total": 20,
-          }
+              "totalCount": 93859,
+            },
+          ]
     }
     totalKeyValuePairs={1}
 />,
