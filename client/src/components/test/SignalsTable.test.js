@@ -7,6 +7,7 @@ import Table from '../../components/common/Table';
 import PercentageChange from '../../components/common/PercentageChange';
 import TraitsPopover from '../../containers/TraitsPopover';
 import TraitsCreation from '../../components/common/TraitsCreation';
+import Link from '@react/react-spectrum/Link';
 
 describe('<SignalsTable /> component', () => {
     const mockFn = jest.fn();
@@ -421,6 +422,18 @@ describe('<SignalsTable /> component', () => {
                 const signal = { source: { sourceType: 'INVALID', dataSourceIds: [] } };
 
                 expect(formatSignalSource(signal)).toEqual('—');
+            });
+
+            it('should return the sourceName value with Hyper Link when signal includes sourceName property ', () => {
+                const signal = {
+                    source: { sourceType: 'ONBOARDED', dataSourceIds: [123] },
+                    sourceName: 'test1',
+                };
+                const linkWrapper = shallow(<div>{formatSignalSource(signal)}</div>);
+                expect(linkWrapper.find(Link).exists()).toBeTruthy();
+                expect(linkWrapper.find("[data-test='source-name']").text()).toEqual(
+                    signal.sourceName,
+                );
             });
         });
 

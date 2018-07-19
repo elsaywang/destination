@@ -54,4 +54,5 @@ export const normalizeSearch = search => ({
     ...normalizeSignalStatus(search),
     ...normalizeFilterNewSignals(search),
     minEventFires: search.minEventFires,
+    includeSourceName: true,
 });

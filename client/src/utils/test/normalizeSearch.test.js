@@ -25,12 +25,14 @@ describe('normalizeSearch util', () => {
             sourceType: 'ALL',
         },
         viewRecordsFor: '7D',
+        includeSourceName: true,
     };
 
     const baseNormalizedSearch = {
         minEventFires: 1000,
         search: '"key"=="value"',
         startDate: 1524528000000, // Tuesday, April 24, 2018 12:00:00 AM
+        includeSourceName: true,
     };
 
     beforeEach(() => {

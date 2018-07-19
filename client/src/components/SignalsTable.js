@@ -17,6 +17,8 @@ import { isNumeric } from '../utils/isNumeric';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
+import { dataSourceEditUrl } from '../utils/urls';
+import Link from '@react/react-spectrum/Link';
 
 class SignalsTable extends Component {
     renderCell = (column, data) => {
@@ -96,6 +98,18 @@ class SignalsTable extends Component {
 
     formatSignalSource(signal) {
         const { sourceType, dataSourceIds, reportSuiteIds } = signal.source;
+        const { sourceName } = signal;
+
+        if (sourceName && dataSourceIds && dataSourceIds.length) {
+            const dataSourceId = dataSourceIds[0];
+            return (
+                <Link href={dataSourceEditUrl(dataSourceId)}>
+                    <div data-test="source-name" className={styles.sourceName}>
+                        {sourceName}
+                    </div>
+                </Link>
+            );
+        }
 
         switch (sourceType) {
             case 'ANALYTICS':
