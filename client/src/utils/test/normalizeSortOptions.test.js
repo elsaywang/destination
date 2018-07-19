@@ -19,12 +19,12 @@ describe('normalizeSortOptions util', () => {
     });
 
     describe('normalizing `sortBy` column key', () => {
-        it('should keep `sortBy` if it is `keyValuePairs`', () => {
+        it('should change `sortBy` to `key` if it is `keyValuePairs`', () => {
             const { sortBy: actual } = normalizeSortOptions({
                 ...baseSortOptions,
                 sortBy: 'keyValuePairs',
             });
-            const expected = 'keyValuePairs';
+            const expected = 'key';
 
             expect(actual).toEqual(expected);
         });

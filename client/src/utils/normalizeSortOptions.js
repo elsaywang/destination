@@ -2,7 +2,7 @@ import { sortColumns } from '../constants/columns';
 
 export const normalizeSortBy = ({ sortBy }) =>
     sortColumns.map(col => col.key).includes(sortBy) &&
-    (sortBy === 'keyValuePairs' || sortBy === 'keyName' ? { sortBy: 'key' } : { sortBy });
+    (sortBy === 'keyValuePairs' ? { sortBy: 'key' } : { sortBy });
 
 // If no `descending` param is passed, then the `/signal/list` API returns
 // results sorted in descending order, regardless of the `sortBy` param.
