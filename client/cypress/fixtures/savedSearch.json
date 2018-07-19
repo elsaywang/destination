@@ -1,0 +1,154 @@
+{
+    "savedSearch": [
+        {
+            "name": "Clovis Simonis",
+            "id": 0,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-bandwidth",
+                    "operator": "<",
+                    "value": 80692
+                }
+            ],
+            "source": {
+                "name": "",
+                "dataSourceIds": [],
+                "reportSuiteIds": [],
+                "sourceType": "REALTIME"
+            },
+            "minEventFires": 91445,
+            "signalStatus": "UNUSED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Key Name",
+            "categoryType": "Real-Time",
+            "advanced": true
+        },
+        {
+            "name": "Stephen Sanford",
+            "id": 1,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-Customer",
+                    "operator": "<",
+                    "value": 83989
+                },
+                {
+                    "key": "k-coherent",
+                    "operator": "<=",
+                    "value": 54800
+                }
+            ],
+            "source": {
+                "name": "dataSource-213",
+                "dataSourceIds": [81638],
+                "reportSuiteIds": [],
+                "sourceType": "ONBOARDED"
+            },
+            "minEventFires": 33675,
+            "signalStatus": "USED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Event Fires",
+            "categoryType": "Onboarded",
+            "advanced": true
+        },
+        {
+            "name": "Angus Koss V",
+            "id": 2,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-optimizing",
+                    "operator": "<",
+                    "value": 14505
+                },
+                {
+                    "key": "k-New Zealand",
+                    "operator": ">=",
+                    "value": 28275
+                }
+            ],
+            "source": {
+                "name": "",
+                "dataSourceIds": [],
+                "reportSuiteIds": [],
+                "sourceType": "ALL"
+            },
+            "minEventFires": 66009,
+            "signalStatus": "USED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Included In Traits",
+            "categoryType": "",
+            "advanced": false
+        },
+        {
+            "name": "Stella Kling",
+            "id": 3,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-hack",
+                    "operator": ">=",
+                    "value": 24478
+                },
+                {
+                    "key": "k-users",
+                    "operator": "<",
+                    "value": 32006
+                }
+            ],
+            "source": {
+                "name": "reportSuite-3242",
+                "dataSourceIds": [],
+                "reportSuiteIds": [],
+                "sourceType": "ANALYTICS"
+            },
+            "minEventFires": 2542,
+            "signalStatus": "UNUSED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Included In Traits",
+            "categoryType": "Real-Time",
+            "advanced": true
+        },
+        {
+            "name": "Demarco Stiedemann",
+            "id": 4,
+            "presetId": null,
+            "keyValuePairs": [
+                {
+                    "key": "k-Supervisor",
+                    "operator": "<=",
+                    "value": 36516
+                },
+                {
+                    "key": "k-application",
+                    "operator": "==",
+                    "value": "v-Drive"
+                }
+            ],
+            "source": {
+                "name": "",
+                "dataSourceIds": [],
+                "reportSuiteIds": [],
+                "sourceType": "ALF"
+            },
+            "minEventFires": 65935,
+            "signalStatus": "USED",
+            "viewRecordsFor": "7D",
+            "customStartDate": "2018-04-24",
+            "customEndDate": "2018-05-01",
+            "sortBy": "Value Name",
+            "categoryType": "Real-Time",
+            "advanced": false
+        }
+    ]
+}

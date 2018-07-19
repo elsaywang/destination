@@ -6,31 +6,39 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Table
     columns={
-      Array [
-        Object {
-          "key": "name",
-          "title": "Name",
-        },
-        Object {
-          "key": "description",
-          "title": "Description",
-        },
-      ]
+        Array [
+            Object {
+              "key": "name",
+              "title": "Name",
+            },
+            Object {
+              "key": "description",
+              "title": "Description",
+            },
+          ]
     }
     items={
-      Array [
-        Object {
-          "description": "Good dog",
-          "name": "Coffee",
-        },
-        Object {
-          "description": "Bad dog",
-          "name": "Mongo",
-        },
-      ]
+        Array [
+            Object {
+              "description": "Good dog",
+              "name": "Coffee",
+            },
+            Object {
+              "description": "Bad dog",
+              "name": "Mongo",
+            },
+          ]
     }
+    onLoadMore={[Function]}
+    onSelectionChange={[Function]}
     renderCell={[Function]}
-  />,
+    selectedRowIndexes={
+        Array [
+            0,
+          ]
+    }
+    sortSearch={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -46,37 +54,42 @@ ShallowWrapper {
       "children": <TableView
         allowsSelection={true}
         dataSource={
-          DataSource {
-            "_events": Object {},
-            "_eventsCount": 0,
-            "_maxListeners": undefined,
-            "columns": Array [
-              Object {
-                "key": "name",
-                "title": "Name",
-              },
-              Object {
-                "key": "description",
-                "title": "Description",
-              },
-            ],
-            "items": Array [
-              Object {
-                "description": "Good dog",
-                "name": "Coffee",
-              },
-              Object {
-                "description": "Bad dog",
-                "name": "Mongo",
-              },
-            ],
-            "sortColumn": null,
-            "sortDir": -1,
-          }
+                DataSource {
+                        "_events": Object {},
+                        "_eventsCount": 0,
+                        "_maxListeners": undefined,
+                        "columns": Array [
+                          Object {
+                            "key": "name",
+                            "title": "Name",
+                          },
+                          Object {
+                            "key": "description",
+                            "title": "Description",
+                          },
+                        ],
+                        "items": Array [
+                          Object {
+                            "description": "Good dog",
+                            "name": "Coffee",
+                          },
+                          Object {
+                            "description": "Bad dog",
+                            "name": "Mongo",
+                          },
+                        ],
+                        "onLoadMore": [Function],
+                        "sortColumn": null,
+                        "sortDir": -1,
+                        "sortSearch": [Function],
+                      }
         }
+        onSelectionChange={[Function]}
         renderCell={[Function]}
-      />,
+        rowHeight={undefined}
+/>,
       "className": "table-wrapper",
+      "data-test": undefined,
       "style": Object {
         "height": "136px",
       },
@@ -112,10 +125,14 @@ ShallowWrapper {
               "name": "Mongo",
             },
           ],
+          "onLoadMore": [Function],
           "sortColumn": null,
           "sortDir": -1,
+          "sortSearch": [Function],
         },
+        "onSelectionChange": [Function],
         "renderCell": [Function],
+        "rowHeight": undefined,
       },
       "ref": null,
       "rendered": null,
@@ -132,37 +149,42 @@ ShallowWrapper {
         "children": <TableView
           allowsSelection={true}
           dataSource={
-            DataSource {
-              "_events": Object {},
-              "_eventsCount": 0,
-              "_maxListeners": undefined,
-              "columns": Array [
-                Object {
-                  "key": "name",
-                  "title": "Name",
-                },
-                Object {
-                  "key": "description",
-                  "title": "Description",
-                },
-              ],
-              "items": Array [
-                Object {
-                  "description": "Good dog",
-                  "name": "Coffee",
-                },
-                Object {
-                  "description": "Bad dog",
-                  "name": "Mongo",
-                },
-              ],
-              "sortColumn": null,
-              "sortDir": -1,
-            }
+                    DataSource {
+                              "_events": Object {},
+                              "_eventsCount": 0,
+                              "_maxListeners": undefined,
+                              "columns": Array [
+                                Object {
+                                  "key": "name",
+                                  "title": "Name",
+                                },
+                                Object {
+                                  "key": "description",
+                                  "title": "Description",
+                                },
+                              ],
+                              "items": Array [
+                                Object {
+                                  "description": "Good dog",
+                                  "name": "Coffee",
+                                },
+                                Object {
+                                  "description": "Bad dog",
+                                  "name": "Mongo",
+                                },
+                              ],
+                              "onLoadMore": [Function],
+                              "sortColumn": null,
+                              "sortDir": -1,
+                              "sortSearch": [Function],
+                            }
           }
+          onSelectionChange={[Function]}
           renderCell={[Function]}
-        />,
+          rowHeight={undefined}
+/>,
         "className": "table-wrapper",
+        "data-test": undefined,
         "style": Object {
           "height": "136px",
         },
@@ -198,10 +220,14 @@ ShallowWrapper {
                 "name": "Mongo",
               },
             ],
+            "onLoadMore": [Function],
             "sortColumn": null,
             "sortDir": -1,
+            "sortSearch": [Function],
           },
+          "onSelectionChange": [Function],
           "renderCell": [Function],
+          "rowHeight": undefined,
         },
         "ref": null,
         "rendered": null,

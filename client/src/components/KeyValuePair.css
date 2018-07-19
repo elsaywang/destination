@@ -1,3 +1,15 @@
 :local(.operator) {
-    min-width: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+:local(.textField) {
+    min-width: 300px;
+    margin-bottom: 10px;
+}
+
+:local(.error) {
+    position: absolute;
+    left: 0;
+    top: 68px;
 }

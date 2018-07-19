@@ -4,11 +4,44 @@
 }
 
 :local(.filterListContainer) {
-    composes: borderRight from global;
+    border-right: 1px solid var(--spectrum-alias-border-color-dark);
     padding-left: 0;
 }
 
 :local(.tableContainer) {
     flex: 1;
     padding-right: 0;
+}
+
+:local(.saveSearch) {
+    display: inline-flex;
+}
+
+:local(.saveSearchExecution) {
+    margin-top: 2.8rem;
+    display: flex;
+}
+
+:local(.saveSearchExecutionTooltip) {
+    display: inline-block;
+    padding-top: 3.15rem;
+}
+
+:local(.empty) {
+    margin: 80px 0;
+    text-align: center;
+}
+:local(.noResultMessage) {
+    margin-top: -0.75em;
+}
+:local(.exploreMessage) {
+    margin: -0.75em 0 0 -1.9em;
+}
+:local(.noResultImage) {
+    width: 13em;
+    margin-left: 0.5em;
+}
+:local(.exploreImage) {
+    width: 20em;
+    margin-left: -0.25em;
 }

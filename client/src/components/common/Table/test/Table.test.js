@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { TableView } from '@react/react-spectrum/TableView';
 import Table from '../Table';
+import { defaultRowHeight } from '../../../../constants/rows';
 
 describe('<Table /> component', () => {
     const items = [
@@ -25,8 +26,21 @@ describe('<Table /> component', () => {
         },
     ];
     const renderCell = (column, data) => <span>{data}</span>;
-
-    const wrapper = shallow(<Table items={items} columns={columns} renderCell={renderCell} />);
+    const sortSearch = jest.fn();
+    const selectedRowIndexes = [0];
+    const onSelectionChange = jest.fn();
+    const onLoadMore = jest.fn();
+    const wrapper = shallow(
+        <Table
+            items={items}
+            columns={columns}
+            renderCell={renderCell}
+            sortSearch={sortSearch}
+            onLoadMore={onLoadMore}
+            onSelectionChange={onSelectionChange}
+            selectedRowIndexes={selectedRowIndexes}
+        />,
+    );
 
     describe('rendering', () => {
         it('matches snapshot', () => {
@@ -37,6 +51,31 @@ describe('<Table /> component', () => {
         });
         it('passes the `renderCell` prop to the <TableView />', () => {
             expect(wrapper.find(TableView).prop('renderCell')).toEqual(renderCell);
+        });
+        it('passes the `onSelectionChange` prop to the <TableView />', () => {
+            expect(wrapper.find(TableView).prop('onSelectionChange')).toEqual(onSelectionChange);
+        });
+    });
+    describe('shouldComponentUpdate', () => {
+        it('should return false if `nextProps` has different `selectedRowIndexes` than `this.props`', () => {
+            const actual = wrapper.instance().shouldComponentUpdate({ selectedRowIndexes: [0, 1] });
+
+            expect(actual).toBeFalsy();
+        });
+
+        it('should return true if `nextProps` has the same `selectedRowIndexes` as `this.props`', () => {
+            const actual = wrapper.instance().shouldComponentUpdate({ selectedRowIndexes: [0] });
+
+            expect(actual).toBeTruthy();
+        });
+
+        it('should return true if `selectedRowIndexes` props is undefined ', () => {
+            wrapper.setProps({ selectedRowIndexes: undefined });
+            const actual = wrapper
+                .instance()
+                .shouldComponentUpdate({ selectedRowIndexes: undefined });
+
+            expect(actual).toBeTruthy();
         });
     });
     describe('created data source for the table', () => {
@@ -56,7 +95,7 @@ describe('<Table /> component', () => {
         });
 
         describe('getTableHeight', () => {
-            const { getTableHeight } = new Table();
+            const { getTableHeight } = wrapper.instance();
 
             it('should return a string ending in px', () => {
                 expect(getTableHeight(items).substr(-2)).toEqual('px');
@@ -71,11 +110,12 @@ describe('<Table /> component', () => {
             });
 
             it('should return a maximum height if more rows than a custom `maxRows` are passed in', () => {
-                expect(getTableHeight(items, 1)).toEqual('88px');
+                expect(getTableHeight(items, defaultRowHeight, 1)).toEqual('88px');
             });
 
-            // TODO
-            // it('should return the amount of pixels that exactly fits the empty-state table when no items are passed in', () => {});
+            it('should return the amount of pixels that fits the amount of rows and based on the custom `rowHeight` passed in', () => {
+                expect(getTableHeight(items, 50)).toEqual('140px');
+            });
         });
     });
 });

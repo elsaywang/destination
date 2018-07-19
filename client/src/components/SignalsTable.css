@@ -1,0 +1,9 @@
+:local(.traitsPopover) {
+    margin-left: -1.25em;
+}
+:local(.sourceName) {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

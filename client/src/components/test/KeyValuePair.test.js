@@ -4,23 +4,26 @@ import operators from '../../constants/operatorOptions';
 import KeyValuePair from '../KeyValuePair';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
-import Search from '@react/react-spectrum/Search';
 import Textfield from '@react/react-spectrum/Textfield';
+import InlineErrorMessage from '../common/InlineErrorMessage';
 
 describe('<KeyValuePair /> component', () => {
     const mockFn = jest.fn();
     const pair = {
         id: 0,
         key: '',
-        operator: '=',
+        operator: '==',
         value: '',
     };
+    const advanced = false;
     const wrapper = shallow(
         <KeyValuePair
+            enabled={advanced}
             pair={pair}
-            onKeySelect={mockFn}
+            onKeyChange={mockFn}
             onOperatorChange={mockFn}
             onValueChange={mockFn}
+            reportSuiteId="test"
         />,
     );
 
@@ -44,13 +47,33 @@ describe('<KeyValuePair /> component', () => {
             expect(operatorOptions).toMatchObject(operators);
         });
 
-        it('renders <Search /> for value search', () => {
+        it('renders <Textfield /> for value search', () => {
             expect(
                 wrapper
-                    .find(Search)
-                    .filter('.value-search')
+                    .find(Textfield)
+                    .filter('[data-test="value-search"]')
                     .exists(),
             ).toBe(true);
+        });
+
+        it('renders <Textfield /> as invalid if value is invalid and show error message', () => {
+            const newPair = {
+                key: '',
+                operator: '>',
+                value: 'a',
+            };
+
+            wrapper.setProps({
+                pair: newPair,
+            });
+
+            expect(
+                wrapper
+                    .find(Textfield)
+                    .filter('[data-test="value-search"]')
+                    .props().invalid,
+            ).toBe(true);
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
     });
 });

@@ -1,5 +1,6 @@
 import { NavLink, withRouter } from 'react-router-dom';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
+import styles from './Nav.css';
 import React from 'react';
 
 function Nav(props) {
@@ -9,20 +10,21 @@ function Nav(props) {
 
     return (
         <TabList
-            style={{ marginBottom: 20, width: '100%' }}
+            className={styles.tabList}
             selectedIndex={getSelectedIndex()}
-            variant="anchored"
+            quiet
+            variant="compact"
             onChange={noOp}>
-            <NavLink to="/">
-                <Tab className="nav--dashboard" selected={props.location.pathname === '/'}>
+            <Tab selected={props.location.pathname === '/'}>
+                <NavLink to="/" className={styles.link}>
                     Dashboard
-                </Tab>
-            </NavLink>
-            <NavLink to="/search">
-                <Tab className="nav--search" selected={props.location.pathname === '/search'}>
+                </NavLink>
+            </Tab>
+            <Tab selected={props.location.pathname === '/search'}>
+                <NavLink to="/search" className={styles.link}>
                     Search
-                </Tab>
-            </NavLink>
+                </NavLink>
+            </Tab>
         </TabList>
     );
 }

@@ -1,3 +1,8 @@
 {
-    "/api/*": "/$1"
+    "/portal/api/traits": "/traits",
+    "/portal/api/signals/list": "/list",
+    "/portal/api/signals/keys": "/keys",
+    "/portal/api/v1/users/self/annotations/aam-portal": "/savedSearch",
+    "/portal/api/v1/report-suites": "/reportSuites",
+    "/portal/api/v1/report-suites/*/keys": "/reportSuitesKeys"
 }

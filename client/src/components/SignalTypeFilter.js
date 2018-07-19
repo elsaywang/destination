@@ -3,40 +3,50 @@ import PropTypes from 'prop-types';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
 import Heading from '@react/react-spectrum/Heading';
 import styles from './SignalTypeFilter.css';
-import getSignalTypeOptions from '../constants/getSignalTypeOptions';
+import { signalTypeOptions } from '../constants/signalTypeOptions';
 
 class SignalTypeFilter extends Component {
+    // Phase 2 feature is commented out
+    state = {
+        counts: {
+            ALL: 72093,
+            ANALYTICS: 34300,
+            ALF: 359,
+            REALTIME: 27,
+            ONBOARDED: 37407,
+        },
+    };
+
     handleSignalTypeChange = tabIndex => {
-        const { counts, onSignalTypeChange } = this.props;
-        const signalTypeOptions = getSignalTypeOptions(counts);
+        // const signalTypeOptions = getSignalTypeOptions(this.state.counts);
         const { value } = signalTypeOptions[tabIndex];
 
-        onSignalTypeChange(value);
+        this.props.onSignalTypeChange(value);
     };
 
-    renderTabs = () => {
-        const { counts, signalType } = this.props;
-        const signalTypeOptions = getSignalTypeOptions(counts);
-
-        return signalTypeOptions.map(option => (
-            <Tab key={option.value} selected={signalType === option.value}>
-                {option.label}
-            </Tab>
-        ));
-    };
+    renderTab = option => (
+        <Tab
+            key={option.value}
+            selected={this.props.signalType === option.value}
+            data-test={`${option.value.toLowerCase()}-signal-type-filter`}>
+            {option.label}
+        </Tab>
+    );
 
     render() {
+        // const signalTypeOptions = getSignalTypeOptions(this.state.counts);
+
         return (
             <Fragment>
                 <Heading size={3} className={styles.heading}>
-                    Filter By Signal Type:
+                    Filter by Signal Type
                 </Heading>
                 <TabList
                     className={styles.signalType}
                     orientation="vertical"
-                    onChange={this.handleSignalTypeChange}
-                    value={this.props.signalType}>
-                    {this.renderTabs()}
+                    variant="compact"
+                    onChange={this.handleSignalTypeChange}>
+                    {signalTypeOptions.map(this.renderTab)}
                 </TabList>
             </Fragment>
         );

@@ -33,7 +33,7 @@ node ("docker") {
         }
 
         stage ('Generate Release ZIP File') {
-            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/build/", glob: '**/*.*', zipFile: "${env.BRANCH_NAME}-bundle.zip"
+            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/build/", glob: '**/*.*', zipFile: "${env.BRANCH_NAME}-build-${env.BUILD_NUMBER}-bundle.zip"
         }
 
     } catch (e) {
@@ -61,7 +61,7 @@ node ("docker") {
 
         // publish screenshots in a zip file if they are generated.
         if (fileExists("${workspace}/artifacts/ui-build/cypress/screenshots")) {
-            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/cypress/screenshots", glob: '*.png', zipFile: 'cypress_errors_ss.zip'
+            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/cypress/screenshots", glob: '*.png', zipFile: "cypress_errors_ss.${env.BUILD_ID}.zip"
         }
 
         // publish video if there is videos to publish

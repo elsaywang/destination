@@ -2,20 +2,33 @@ import React from 'react';
 import DataSource from '../DataSource';
 
 describe('<DataSource /> component', () => {
-    it('should not define `getColumns`, so that the `withColumns` HOC can', () => {
-        expect(() => new DataSource()).toThrow();
-    });
+    const items = [{ key: 'item' }];
+    const sortItems = () => {};
+    const onLoadMore = () => {};
+    const column = { key: 'key' };
+    const columns = [column];
 
     it('should override the 3 methods of the react-spectrum `TableViewDataSource` that refer to the table items, so that class can be used in a standardized way', () => {
-        const items = [{ key: 'item' }];
-        const reloadData = () => {};
-        const mockDataSource = { items, reloadData };
-        const column = { key: 'key' };
+        expect(() => new DataSource({ items }).getNumberOfRows()).not.toThrow();
+        expect(() => new DataSource({ items, columns }).getCell(column, 0)).not.toThrow();
+        expect(() => new DataSource({ items, columns, sortItems }).sort(column, 1)).not.toThrow();
+    });
 
-        // Call methods from prototype--creating a `new` DataSource will throw
-        // since `getColumns` is not defined.
-        expect(() => DataSource.prototype.getNumberOfRows.call(mockDataSource)).not.toThrow();
-        expect(() => DataSource.prototype.getCell.call(mockDataSource, column, 0)).not.toThrow();
-        expect(() => DataSource.prototype.sort.call(mockDataSource, column, 1)).not.toThrow();
+    it('should override `getColumns`', () => {
+        const mockDataSource = { columns };
+
+        expect(() => new DataSource({ columns }).getColumns()).not.toThrow();
+    });
+
+    it('should override react-spectrum `TableViewDataSource` loadMore method if implemented, and it would be called', () => {
+        const ds = new DataSource({
+            items,
+            columns,
+            sortItems,
+            onLoadMore,
+        });
+        const spyOnLoadMore = jest.spyOn(ds, 'onLoadMore');
+        ds.loadMore();
+        expect(spyOnLoadMore).toHaveBeenCalled();
     });
 });

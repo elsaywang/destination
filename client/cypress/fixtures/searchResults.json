@@ -1,0 +1,84 @@
+{
+    "list": [
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Lead",
+                    "operator": "<=",
+                    "value": 78610
+                }
+            ],
+            "source": {
+                "dataSourceIds": [7401],
+                "reportSuiteIds": [],
+                "sourceType": "REALTIME"
+            },
+            "totalCount": 71071,
+            "percentageChange": 0.154,
+            "includedInTraits": [1, 2, 3],
+            "signalStatus": "USED"
+        },
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Computer",
+                    "operator": ">=",
+                    "value": 11467
+                }
+            ],
+            "source": {
+                "dataSourceIds": [15841],
+                "reportSuiteIds": [],
+                "sourceType": "REALTIME"
+            },
+            "totalCount": 69967,
+            "percentageChange": -0.3711,
+            "includedInTraits": [],
+            "signalStatus": "UNUSED"
+        },
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Mews",
+                    "operator": "==",
+                    "value": "v-Berkshire"
+                }
+            ],
+            "source": {
+                "dataSourceIds": [1234],
+                "reportSuiteIds": [],
+                "sourceType": "ONBOARDED"
+            },
+            "totalCount": 14793,
+            "percentageChange": -0.9711,
+            "includedInTraits": [131, 838],
+            "signalStatus": "USED"
+        },
+        {
+            "keyValuePairs": [
+                {
+                    "key": "k-Home",
+                    "operator": "==",
+                    "value": "v-back-end"
+                },
+                {
+                    "key": "k-West Virginia",
+                    "operator": "==",
+                    "value": "v-Gibraltar Pound"
+                }
+            ],
+            "source": {
+                "dataSourceIds": [4019],
+                "reportSuiteIds": [5678],
+                "sourceType": "ANALYTICS"
+            },
+            "totalCount": 21124,
+            "percentageChange": 0.8711,
+            "includedInTraits": [],
+            "signalStatus": "UNUSED"
+        }
+    ],
+    "page": 0,
+    "pageSize": 20,
+    "total": 4
+}

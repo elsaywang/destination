@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiSignalsTraitsCreation/> component matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreation
+    selectedSignals={
+        Object {
+            "hasWarning": false,
+            "selectionMessage": "",
+          }
+    }
+    storeSessionAndNavigateToTraits={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className={undefined}
+/>,
+        <Button
+          autoFocus={false}
+          block={false}
+          data-test="multi-signals-trait-creation"
+          disabled={false}
+          element="button"
+          icon={<Add />}
+          invalid={false}
+          label="Create Trait From Multiple Signals"
+          logic={false}
+          onClick={[Function]}
+          quiet={false}
+          selected={false}
+          variant="action"
+/>,
+      ],
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoFocus": false,
+          "block": false,
+          "data-test": "multi-signals-trait-creation",
+          "disabled": false,
+          "element": "button",
+          "icon": <Add />,
+          "invalid": false,
+          "label": "Create Trait From Multiple Signals",
+          "logic": false,
+          "onClick": [Function],
+          "quiet": false,
+          "selected": false,
+          "variant": "action",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className={undefined}
+/>,
+          <Button
+            autoFocus={false}
+            block={false}
+            data-test="multi-signals-trait-creation"
+            disabled={false}
+            element="button"
+            icon={<Add />}
+            invalid={false}
+            label="Create Trait From Multiple Signals"
+            logic={false}
+            onClick={[Function]}
+            quiet={false}
+            selected={false}
+            variant="action"
+/>,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoFocus": false,
+            "block": false,
+            "data-test": "multi-signals-trait-creation",
+            "disabled": false,
+            "element": "button",
+            "icon": <Add />,
+            "invalid": false,
+            "label": "Create Trait From Multiple Signals",
+            "logic": false,
+            "onClick": [Function],
+            "quiet": false,
+            "selected": false,
+            "variant": "action",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SavedSearch /> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SavedSearch
+    currentSearch="Watson Cartwright"
+    deleteSearch={[Function]}
+    disabled={false}
+    error={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
+    getSavedSearch={[Function]}
+    list={
+        Array [
+            Object {
+              "id": 17966,
+              "includedTraits": Array [
+                0,
+                1,
+                2,
+              ],
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-monitor",
+                  "operator": ">",
+                  "value": "v-programming",
+                },
+              ],
+              "name": "Germaine Wiza",
+              "percentageChange": 45886,
+              "signalStatus": "USED",
+              "source": "Buckinghamshire",
+              "totalCount": 59925,
+              "type": "Lek",
+            },
+          ]
+    }
+    onSavedSearchClick={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Heading
+          size={6}
+>
+          Saved Search
+</Heading>,
+        <load
+          currentSearch="Watson Cartwright"
+          data-test="wrapped-saved-search-tag-list"
+          deleteSearch={[Function]}
+          disabled={false}
+          isLoaded={undefined}
+          list={
+                    Array [
+                              Object {
+                                "id": 17966,
+                                "includedTraits": Array [
+                                  0,
+                                  1,
+                                  2,
+                                ],
+                                "keyValuePairs": Array [
+                                  Object {
+                                    "key": "k-monitor",
+                                    "operator": ">",
+                                    "value": "v-programming",
+                                  },
+                                ],
+                                "name": "Germaine Wiza",
+                                "percentageChange": 45886,
+                                "signalStatus": "USED",
+                                "source": "Buckinghamshire",
+                                "totalCount": 59925,
+                                "type": "Lek",
+                              },
+                            ]
+          }
+          onSavedSearchClick={[Function]}
+/>,
+        <InlineErrorMessage
+          errorMessage=""
+          isInvalid={false}
+/>,
+      ],
+      "data-test": "saved-search",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Saved Search",
+          "size": 6,
+        },
+        "ref": null,
+        "rendered": "Saved Search",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "currentSearch": "Watson Cartwright",
+          "data-test": "wrapped-saved-search-tag-list",
+          "deleteSearch": [Function],
+          "disabled": false,
+          "isLoaded": undefined,
+          "list": Array [
+            Object {
+              "id": 17966,
+              "includedTraits": Array [
+                0,
+                1,
+                2,
+              ],
+              "keyValuePairs": Array [
+                Object {
+                  "key": "k-monitor",
+                  "operator": ">",
+                  "value": "v-programming",
+                },
+              ],
+              "name": "Germaine Wiza",
+              "percentageChange": 45886,
+              "signalStatus": "USED",
+              "source": "Buckinghamshire",
+              "totalCount": 59925,
+              "type": "Lek",
+            },
+          ],
+          "onSavedSearchClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "errorMessage": "",
+          "isInvalid": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Heading
+            size={6}
+>
+            Saved Search
+</Heading>,
+          <load
+            currentSearch="Watson Cartwright"
+            data-test="wrapped-saved-search-tag-list"
+            deleteSearch={[Function]}
+            disabled={false}
+            isLoaded={undefined}
+            list={
+                        Array [
+                                    Object {
+                                      "id": 17966,
+                                      "includedTraits": Array [
+                                        0,
+                                        1,
+                                        2,
+                                      ],
+                                      "keyValuePairs": Array [
+                                        Object {
+                                          "key": "k-monitor",
+                                          "operator": ">",
+                                          "value": "v-programming",
+                                        },
+                                      ],
+                                      "name": "Germaine Wiza",
+                                      "percentageChange": 45886,
+                                      "signalStatus": "USED",
+                                      "source": "Buckinghamshire",
+                                      "totalCount": 59925,
+                                      "type": "Lek",
+                                    },
+                                  ]
+            }
+            onSavedSearchClick={[Function]}
+/>,
+          <InlineErrorMessage
+            errorMessage=""
+            isInvalid={false}
+/>,
+        ],
+        "data-test": "saved-search",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Saved Search",
+            "size": 6,
+          },
+          "ref": null,
+          "rendered": "Saved Search",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "currentSearch": "Watson Cartwright",
+            "data-test": "wrapped-saved-search-tag-list",
+            "deleteSearch": [Function],
+            "disabled": false,
+            "isLoaded": undefined,
+            "list": Array [
+              Object {
+                "id": 17966,
+                "includedTraits": Array [
+                  0,
+                  1,
+                  2,
+                ],
+                "keyValuePairs": Array [
+                  Object {
+                    "key": "k-monitor",
+                    "operator": ">",
+                    "value": "v-programming",
+                  },
+                ],
+                "name": "Germaine Wiza",
+                "percentageChange": 45886,
+                "signalStatus": "USED",
+                "source": "Buckinghamshire",
+                "totalCount": 59925,
+                "type": "Lek",
+              },
+            ],
+            "onSavedSearchClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "errorMessage": "",
+            "isInvalid": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

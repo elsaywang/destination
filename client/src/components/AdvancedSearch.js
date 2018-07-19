@@ -1,30 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ComboBox from '@react/react-spectrum/ComboBox';
-import Switch from '@react/react-spectrum/Switch';
+import styles from './AdvancedSearch.css';
 
-function AdvancedSearch({ enabled, filter, onAdvancedSearchChange, onFilterChange }) {
-    const filterOptions = ['test', 'test2', 'test3'];
+const AdvancedSearch = ({
+    enabled,
+    sourceName,
+    onReportSuiteChange,
+    onReportSuiteSelect,
+    reportSuites,
+}) => {
+    const options = reportSuites.map(rs => rs.name);
 
     return (
-        <div data-test="advanced-search">
-            <Switch
-                onChange={onAdvancedSearchChange}
-                checked={enabled}
-                data-test="advanced-search-toggle"
-                aria-label="Advanced Search"
-                label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
-            />
+        <div className={styles.reportSuitesFilter} data-test="advanced-search">
+            <span>Search and see results in friendly names: &nbsp;</span>
             <ComboBox
-                value={filter}
+                value={enabled ? sourceName : ''}
                 data-test="advanced-search-filter"
                 placeholder="Filter by report suite"
-                onChange={onFilterChange}
-                options={filterOptions}
+                onChange={onReportSuiteChange}
+                onSelect={value => onReportSuiteSelect(value)}
+                options={options}
                 disabled={!enabled}
                 quiet
             />
         </div>
     );
-}
+};
+
+AdvancedSearch.propTypes = {
+    enabled: PropTypes.bool.isRequired,
+    sourceName: PropTypes.string,
+    onReportSuiteChange: PropTypes.func.isRequired,
+    onReportSuiteSelect: PropTypes.func.isRequired,
+    reportSuites: PropTypes.array.isRequired,
+};
 
 export default AdvancedSearch;

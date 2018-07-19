@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 1`] = `
+<TraitsCreation
+  canCreateTraits={undefined}
+  categoryType={undefined}
+  keyValuePairs={undefined}
+/>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 2`] = `
+<TraitsCreation
+  canCreateTraits={undefined}
+  categoryType={undefined}
+  keyValuePairs={undefined}
+/>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 3`] = `
+<TraitsCreation
+  canCreateTraits={undefined}
+  categoryType={undefined}
+  keyValuePairs={undefined}
+/>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 4`] = `
+<TraitsCreation
+  canCreateTraits={undefined}
+  categoryType={undefined}
+  keyValuePairs={undefined}
+/>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 5`] = `
+<TraitsCreation
+  canCreateTraits={undefined}
+  categoryType={undefined}
+  keyValuePairs={undefined}
+/>
+`;
+
 exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render one key-value pair as \`\${key}=\${value}\` inside a div 1`] = `
 <div>
   <div>
@@ -24,21 +64,38 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalsTable
+    allowsSelection={true}
+    onLoadMore={[Function]}
     results={
-      Object {
-        "list": Array [
-          Object {
-            "id": 0,
-            "name": "test",
-            "source": Object {
-              "sourceType": "ANALYTICS",
+        Array [
+            Object {
+              "id": 0,
+              "name": "test1",
+              "percentageChange": 0.1234,
+              "source": Object {
+                "reportSuiteIds": Array [
+                  123,
+                ],
+                "sourceType": "ANALYTICS",
+              },
             },
-          },
-        ],
-      }
+            Object {
+              "id": 1,
+              "name": "test2",
+              "percentageChange": -0.5678,
+              "source": Object {
+                "dataSourceIds": Array [
+                  456,
+                ],
+                "sourceType": "ONBOARDED",
+              },
+            },
+          ]
     }
-    signalType="all"
-  />,
+    signalType="ALL"
+    sortSearch={[Function]}
+    totalKeyValuePairs={3}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -51,10 +108,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "allowsSelection": true,
       "columns": Array [
         Object {
           "key": "keyValuePairs",
           "minWidth": 150,
+          "sortable": true,
           "title": "Key-Value Pair",
         },
         Object {
@@ -68,33 +127,68 @@ ShallowWrapper {
           "width": 180,
         },
         Object {
-          "key": "totalCounts",
+          "key": "totalCount",
+          "sortable": true,
           "title": "Total Counts",
-          "width": 100,
+          "width": 88,
         },
         Object {
           "key": "percentageChange",
+          "sortable": true,
           "title": "Percentage Change",
-          "width": 120,
+          "width": 165,
         },
         Object {
           "key": "includedInTraits",
           "title": "Included In Traits",
-          "width": 120,
+          "width": 155,
         },
       ],
+      "dataTest": "signals-table",
       "items": Array [
         Object {
           "id": 0,
-          "name": "test",
-          "signalSource": undefined,
+          "includedInTraits": Object {
+            "categoryType": undefined,
+            "keyValuePairs": undefined,
+            "sids": undefined,
+          },
+          "name": "test1",
+          "percentageChange": 0.1234,
+          "signalSource": "123",
           "signalType": "Adobe Analytics",
           "source": Object {
+            "reportSuiteIds": Array [
+              123,
+            ],
             "sourceType": "ANALYTICS",
           },
         },
+        Object {
+          "id": 1,
+          "includedInTraits": Object {
+            "categoryType": undefined,
+            "keyValuePairs": undefined,
+            "sids": undefined,
+          },
+          "name": "test2",
+          "percentageChange": -0.5678,
+          "signalSource": "456",
+          "signalType": "Onboarded Records",
+          "source": Object {
+            "dataSourceIds": Array [
+              456,
+            ],
+            "sourceType": "ONBOARDED",
+          },
+        },
       ],
+      "onLoadMore": [Function],
+      "onSelectionChange": [Function],
       "renderCell": [Function],
+      "rowHeight": 144,
+      "selectedRowIndexes": undefined,
+      "sortSearch": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -106,10 +200,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "allowsSelection": true,
         "columns": Array [
           Object {
             "key": "keyValuePairs",
             "minWidth": 150,
+            "sortable": true,
             "title": "Key-Value Pair",
           },
           Object {
@@ -123,33 +219,68 @@ ShallowWrapper {
             "width": 180,
           },
           Object {
-            "key": "totalCounts",
+            "key": "totalCount",
+            "sortable": true,
             "title": "Total Counts",
-            "width": 100,
+            "width": 88,
           },
           Object {
             "key": "percentageChange",
+            "sortable": true,
             "title": "Percentage Change",
-            "width": 120,
+            "width": 165,
           },
           Object {
             "key": "includedInTraits",
             "title": "Included In Traits",
-            "width": 120,
+            "width": 155,
           },
         ],
+        "dataTest": "signals-table",
         "items": Array [
           Object {
             "id": 0,
-            "name": "test",
-            "signalSource": undefined,
+            "includedInTraits": Object {
+              "categoryType": undefined,
+              "keyValuePairs": undefined,
+              "sids": undefined,
+            },
+            "name": "test1",
+            "percentageChange": 0.1234,
+            "signalSource": "123",
             "signalType": "Adobe Analytics",
             "source": Object {
+              "reportSuiteIds": Array [
+                123,
+              ],
               "sourceType": "ANALYTICS",
             },
           },
+          Object {
+            "id": 1,
+            "includedInTraits": Object {
+              "categoryType": undefined,
+              "keyValuePairs": undefined,
+              "sids": undefined,
+            },
+            "name": "test2",
+            "percentageChange": -0.5678,
+            "signalSource": "456",
+            "signalType": "Onboarded Records",
+            "source": Object {
+              "dataSourceIds": Array [
+                456,
+              ],
+              "sourceType": "ONBOARDED",
+            },
+          },
         ],
+        "onLoadMore": [Function],
+        "onSelectionChange": [Function],
         "renderCell": [Function],
+        "rowHeight": 144,
+        "selectedRowIndexes": undefined,
+        "sortSearch": undefined,
       },
       "ref": null,
       "rendered": null,

@@ -1,0 +1,7 @@
+:local(.title) {
+    padding-left: 0.5em;
+}
+:local(.message) {
+    font-style: italic;
+    color: var(--spectrum-global-color-grey500);
+}

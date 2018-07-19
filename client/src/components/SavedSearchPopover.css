@@ -1,0 +1,24 @@
+:local(.heading) {
+    margin-bottom: 0;
+}
+
+:local(.button) {
+    padding: 0 4px;
+    margin: 4px 0;
+    height: 24px;
+}
+
+:local(.block) {
+    margin: 0 0 10px;
+}
+
+#isCurrentSearch {
+    background: var(--spectrum-global-color-blue500);
+    color: var(--spectrum-global-color-grey50);
+    border-color: var(--spectrum-global-color-blue500);
+}
+
+:local(.tagBlock) {
+    display: inline-flex;
+    margin-right: 10px;
+}

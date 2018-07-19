@@ -1,16 +1,13 @@
 :local(.inline-block) {
     display: inline-block;
-    margin: 0 10px;
+    margin-right: 10px;
     vertical-align: bottom;
-}
-
-:local(.inline-block + .inline-block) {
-    margin-left: 0;
 }
 
 :local(.label) {
     display: block;
-    margin: 10px 0;
-    font-size: 0.875em;
+    margin: 6px 0;
+    font-size: 0.75rem;
     transition: color 150ms ease-in-out;
+    color: #707070;
 }

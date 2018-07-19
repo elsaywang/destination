@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { FormattedNumber } from 'react-intl';
+import PercentageChange from './common/PercentageChange';
 import Table from './common/Table';
 import {
     allSignalsColumns,
@@ -9,12 +11,24 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
+import { defaultRowHeight } from '../constants/rows';
+import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
+import { isNumeric } from '../utils/isNumeric';
+import styles from './SignalsTable.css';
+import TraitsCreation from './common/TraitsCreation';
+import TraitsPopover from '../containers/TraitsPopover';
+import { dataSourceEditUrl } from '../utils/urls';
+import Link from '@react/react-spectrum/Link';
 
 class SignalsTable extends Component {
     renderCell = (column, data) => {
         switch (column.key) {
             case 'keyValuePairs':
                 return this.renderKeyValuePairs(data);
+            case 'totalCount':
+                return this.renderTotalCounts(data);
+            case 'percentageChange':
+                return this.renderPercentageChange(data);
             case 'includedInTraits':
                 return this.renderIncludedInTraits(data);
             default:
@@ -22,38 +36,47 @@ class SignalsTable extends Component {
         }
     };
 
+    handleSelectionChange = selectedItems => {
+        const { onSignalRecordsSelection, results } = this.props;
+        const items = this.formatSignalsList(results);
+        const selectedRowIndexSet = [];
+        //selectedItems is iterable
+        for (let indexPath of selectedItems) {
+            selectedRowIndexSet.push(indexPath.index);
+        }
+        const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
+        const selectionMessage = renderSelectedSignalsMessage(records);
+        onSignalRecordsSelection({
+            selectionMessage,
+            hasWarning: hasWarning(records),
+            selectedRowIndexes: selectedRowIndexSet,
+        });
+    };
+
     getColumns(signalType, isAdvancedSearchEnabled = false) {
         switch (signalType) {
-            case 'all':
+            case 'ALL':
                 return allSignalsColumns;
-            case 'adobeAnalytics':
+            case 'ANALYTICS':
                 return isAdvancedSearchEnabled ? advancedAnalyticsColumns : analyticsColumns;
-            case 'actionableLogFiles':
+            case 'ALF':
                 return actionableLogFilesColumns;
-            case 'generalOnlineData':
+            case 'REALTIME':
                 return generalOnlineDataColumns;
-            case 'onboardedRecords':
+            case 'ONBOARDED':
                 return onboardedRecordsColumns;
             default:
                 return allSignalsColumns;
         }
     }
 
-    // These new methods will live somewhere else
     formatSignalsList(signals) {
         return signals.map(signal => ({
             ...signal,
             signalType: this.formatSignalType(signal),
             signalSource: this.formatSignalSource(signal),
+            includedInTraits: this.formatIncludedInTraits(signal),
         }));
-    }
-
-    // TEMP: ALF signals will soon have their own signal type
-    isALF(signal) {
-        const { dataSourceId } = signal.source;
-        const isNumeric = val => Number(parseFloat(val)) === val;
-
-        return isNumeric(dataSourceId);
     }
 
     formatSignalType(signal) {
@@ -62,61 +85,152 @@ class SignalsTable extends Component {
         switch (sourceType) {
             case 'ANALYTICS':
                 return 'Adobe Analytics';
+            case 'ALF':
+                return 'Actionable Log Files';
             case 'REALTIME':
-                return this.isALF(signal) ? 'Actionable Log Files' : 'General Online Data';
+                return 'General Online Data';
             case 'ONBOARDED':
                 return 'Onboarded Records';
             default:
-                return '';
+                return '—';
         }
     }
 
     formatSignalSource(signal) {
-        const { sourceType, dataSourceId, reportSuiteId } = signal.source;
+        const { sourceType, dataSourceIds, reportSuiteIds } = signal.source;
+        const { sourceName } = signal;
+
+        if (sourceName && dataSourceIds && dataSourceIds.length) {
+            const dataSourceId = dataSourceIds[0];
+            return (
+                <Link href={dataSourceEditUrl(dataSourceId)}>
+                    <div data-test="source-name" className={styles.sourceName}>
+                        {sourceName}
+                    </div>
+                </Link>
+            );
+        }
 
         switch (sourceType) {
             case 'ANALYTICS':
-                return reportSuiteId;
-            case 'REALTIME':
-                return '—';
+                return reportSuiteIds && reportSuiteIds.length ? reportSuiteIds.join('') : '—';
             case 'ONBOARDED':
-                return dataSourceId;
+                return dataSourceIds && dataSourceIds.length ? dataSourceIds.join('') : '—';
             default:
                 return '—';
         }
+    }
+
+    formatIncludedInTraits(signal) {
+        const { keyValuePairs, includedInTraits, categoryType } = signal;
+
+        const sids = includedInTraits === null ? [] : includedInTraits;
+
+        return { keyValuePairs, sids, categoryType };
     }
 
     renderKeyValuePairs(keyValuePairs) {
         return (
             <div>
-                {keyValuePairs.map(({ signalKey, signalValue }) => {
-                    return (
-                        <div key={`${signalKey}-${signalValue}`}>
-                            {`${signalKey}=${signalValue}`}
-                        </div>
-                    );
+                {keyValuePairs.map(({ key, value }) => {
+                    return <div key={`${key}-${value}`}>{`${key}=${value}`}</div>;
                 })}
             </div>
         );
     }
 
-    renderIncludedInTraits(sids) {
-        return <span>{`${sids.length} Traits`}</span>;
+    renderTotalCounts(totalCounts) {
+        return (
+            <FormattedNumber value={totalCounts}>
+                {counts => <div style={{ width: '100%', textAlign: 'right' }}>{counts}</div>}
+            </FormattedNumber>
+        );
+    }
+
+    renderPercentageChange = percentageChange => {
+        if (percentageChange === null || !isNumeric(percentageChange)) {
+            return '—';
+        }
+        const maxPercentageMagnitude = Math.max(
+            ...this.props.results.map(item => Math.abs(item.percentageChange)),
+        );
+
+        return (
+            <PercentageChange
+                percentageChange={percentageChange}
+                maxPercentageMagnitude={maxPercentageMagnitude}
+            />
+        );
+    };
+
+    renderIncludedInTraits = data => {
+        const { keyValuePairs, sids, categoryType } = data;
+        const number = sids.length;
+
+        if (number === 0) {
+            return (
+                <TraitsCreation
+                    canCreateTraits={this.props.canCreateTraits}
+                    keyValuePairs={keyValuePairs}
+                    categoryType={categoryType}
+                />
+            );
+        }
+
+        return (
+            <div className={styles.traitsPopover}>
+                <TraitsPopover sids={sids} />
+            </div>
+        );
+    };
+
+    getRowHeight(totalKeyValuePairs) {
+        return totalKeyValuePairs * defaultRowHeight;
     }
 
     render() {
-        const { results, signalType, isAdvancedSearchEnabled } = this.props;
+        const {
+            results,
+            totalKeyValuePairs,
+            signalType,
+            isAdvancedSearchEnabled,
+            onSortSearch,
+            onLoadMore,
+            allowsSelection,
+            selectedRowIndexes,
+        } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
-        const items = this.formatSignalsList(results.list);
+        const items = this.formatSignalsList(results);
+        const rowHeight = this.getRowHeight(totalKeyValuePairs);
 
-        return <Table items={items} columns={columns} renderCell={this.renderCell} />;
+        return (
+            <Table
+                dataTest="signals-table"
+                items={items}
+                columns={columns}
+                rowHeight={rowHeight}
+                renderCell={this.renderCell}
+                sortSearch={onSortSearch}
+                onLoadMore={onLoadMore}
+                onSelectionChange={this.handleSelectionChange}
+                allowsSelection={allowsSelection}
+                selectedRowIndexes={selectedRowIndexes}
+            />
+        );
     }
 }
 
 SignalsTable.propTypes = {
-    results: PropTypes.object,
+    results: PropTypes.array,
+    totalKeyValuePairs: PropTypes.number,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
+    onSignalRecordsSelection: PropTypes.func,
+    onSortSearch: PropTypes.func,
+    onLoadMore: PropTypes.func,
+    allowsSelection: PropTypes.bool,
+    canCreateTraits: PropTypes.bool,
+    selectedRowIndexes: PropTypes.array,
 };
 
 export default SignalsTable;

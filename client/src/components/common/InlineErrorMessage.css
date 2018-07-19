@@ -1,0 +1,10 @@
+:local(.error) {
+    color: var(--spectrum-semantic-negative-color-default);
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+
+:local(.errorMessage) {
+    margin-left: 0.5rem;
+}

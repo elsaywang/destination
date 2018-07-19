@@ -6,11 +6,12 @@ import { Provider } from 'react-redux';
 import './polyfills';
 import { getLocaleData } from './lib/i18n';
 import configureStore from './configureStore';
-import registerServiceWorker from './registerServiceWorker';
-import Dashboard from './components/Dashboard';
 import Layout from './components/Layout';
 import Nav from './components/Nav';
+import DashboardContainer from './containers/DashboardContainer';
 import SearchContainer from './containers/SearchContainer';
+import './lib/tour-guide';
+import './lib/tour-guide-initializer';
 
 const { locale, messages } = getLocaleData();
 const store = configureStore();
@@ -22,7 +23,7 @@ ReactDOM.render(
                 <Layout>
                     <Nav />
                     <Switch>
-                        <Route exact path="/" component={Dashboard} />
+                        <Route exact path="/" component={DashboardContainer} />
                         <Route exact path="/search" component={SearchContainer} />
                     </Switch>
                 </Layout>
@@ -31,5 +32,3 @@ ReactDOM.render(
     </IntlProvider>,
     document.getElementById('root'),
 );
-
-registerServiceWorker();

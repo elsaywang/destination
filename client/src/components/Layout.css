@@ -1,6 +1,7 @@
-@value colors: '../constants/colors.css';
-@value borderGrey from colors;
+@import '~@spectrum/spectrum-variables/css/spectrum-light.css';
 
-:global(.borderRight) {
-    border-right: 1px solid borderGrey;
+:local(.flexAlignBottom) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
 }

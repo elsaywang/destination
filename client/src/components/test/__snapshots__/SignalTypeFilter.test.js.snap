@@ -5,18 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
-    counts={
-      Object {
-        "actionableLogFiles": 359,
-        "adobeAnalytics": 34300,
-        "all": 72093,
-        "generalOnlineData": 27,
-        "onboardedRecords": 37407,
-      }
-    }
-    onSignalTypeChange={[MockFunction]}
-    signalType="all"
-  />,
+    onSignalTypeChange={[Function]}
+    signalType="ALL"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -33,56 +24,62 @@ ShallowWrapper {
         <Heading
           className={undefined}
           size={3}
-        >
-          Filter By Signal Type:
-        </Heading>,
+>
+          Filter by Signal Type
+</Heading>,
         <TabList
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
-          value="all"
-        >
+          quiet={false}
+          variant="compact"
+>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={true}
+                    data-test="all-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={true}
           >
-            All (72093)
+                    All
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="analytics-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Adobe Analytics (34300)
+                    Adobe Analytics
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="alf-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Actionable Log Files (359)
+                    Actionable Log Files
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="realtime-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            General Online Data (27)
+                    General Online Data
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="onboarded-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Onboarded Records (37407)
+                    Onboarded Records
           </Tab>
-        </TabList>,
+</TabList>,
       ],
     },
     "ref": null,
@@ -92,12 +89,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Type:",
+          "children": "Filter by Signal Type",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Type:",
+        "rendered": "Filter by Signal Type",
         "type": [Function],
       },
       Object {
@@ -107,126 +104,137 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Tab
+              data-test="all-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={true}
-            >
-              All (72093)
-            </Tab>,
+>
+              All
+</Tab>,
             <Tab
+              data-test="analytics-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              Adobe Analytics (34300)
-            </Tab>,
+>
+              Adobe Analytics
+</Tab>,
             <Tab
+              data-test="alf-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              Actionable Log Files (359)
-            </Tab>,
+>
+              Actionable Log Files
+</Tab>,
             <Tab
+              data-test="realtime-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              General Online Data (27)
-            </Tab>,
+>
+              General Online Data
+</Tab>,
             <Tab
+              data-test="onboarded-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              Onboarded Records (37407)
-            </Tab>,
+>
+              Onboarded Records
+</Tab>,
           ],
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
-          "value": "all",
+          "quiet": false,
+          "variant": "compact",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "all",
+            "key": "ALL",
             "nodeType": "class",
             "props": Object {
-              "children": "All (72093)",
+              "children": "All",
+              "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": true,
             },
             "ref": null,
-            "rendered": "All (72093)",
+            "rendered": "All",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "adobeAnalytics",
+            "key": "ANALYTICS",
             "nodeType": "class",
             "props": Object {
-              "children": "Adobe Analytics (34300)",
+              "children": "Adobe Analytics",
+              "data-test": "analytics-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "Adobe Analytics (34300)",
+            "rendered": "Adobe Analytics",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "actionableLogFiles",
+            "key": "ALF",
             "nodeType": "class",
             "props": Object {
-              "children": "Actionable Log Files (359)",
+              "children": "Actionable Log Files",
+              "data-test": "alf-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "Actionable Log Files (359)",
+            "rendered": "Actionable Log Files",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "generalOnlineData",
+            "key": "REALTIME",
             "nodeType": "class",
             "props": Object {
-              "children": "General Online Data (27)",
+              "children": "General Online Data",
+              "data-test": "realtime-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "General Online Data (27)",
+            "rendered": "General Online Data",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "onboardedRecords",
+            "key": "ONBOARDED",
             "nodeType": "class",
             "props": Object {
-              "children": "Onboarded Records (37407)",
+              "children": "Onboarded Records",
+              "data-test": "onboarded-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "Onboarded Records (37407)",
+            "rendered": "Onboarded Records",
             "type": [Function],
           },
         ],
@@ -245,56 +253,62 @@ ShallowWrapper {
           <Heading
             className={undefined}
             size={3}
-          >
-            Filter By Signal Type:
-          </Heading>,
+>
+            Filter by Signal Type
+</Heading>,
           <TabList
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
-            value="all"
-          >
+            quiet={false}
+            variant="compact"
+>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={true}
+                        data-test="all-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={true}
             >
-              All (72093)
+                        All
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="analytics-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Adobe Analytics (34300)
+                        Adobe Analytics
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="alf-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Actionable Log Files (359)
+                        Actionable Log Files
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="realtime-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              General Online Data (27)
+                        General Online Data
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="onboarded-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Onboarded Records (37407)
+                        Onboarded Records
             </Tab>
-          </TabList>,
+</TabList>,
         ],
       },
       "ref": null,
@@ -304,12 +318,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Type:",
+            "children": "Filter by Signal Type",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Type:",
+          "rendered": "Filter by Signal Type",
           "type": [Function],
         },
         Object {
@@ -319,584 +333,137 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Tab
+                data-test="all-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={true}
-              >
-                All (72093)
-              </Tab>,
+>
+                All
+</Tab>,
               <Tab
+                data-test="analytics-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                Adobe Analytics (34300)
-              </Tab>,
+>
+                Adobe Analytics
+</Tab>,
               <Tab
+                data-test="alf-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                Actionable Log Files (359)
-              </Tab>,
+>
+                Actionable Log Files
+</Tab>,
               <Tab
+                data-test="realtime-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                General Online Data (27)
-              </Tab>,
+>
+                General Online Data
+</Tab>,
               <Tab
+                data-test="onboarded-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                Onboarded Records (37407)
-              </Tab>,
+>
+                Onboarded Records
+</Tab>,
             ],
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
-            "value": "all",
+            "quiet": false,
+            "variant": "compact",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "all",
+              "key": "ALL",
               "nodeType": "class",
               "props": Object {
-                "children": "All (72093)",
+                "children": "All",
+                "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": true,
               },
               "ref": null,
-              "rendered": "All (72093)",
+              "rendered": "All",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "adobeAnalytics",
+              "key": "ANALYTICS",
               "nodeType": "class",
               "props": Object {
-                "children": "Adobe Analytics (34300)",
+                "children": "Adobe Analytics",
+                "data-test": "analytics-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "Adobe Analytics (34300)",
+              "rendered": "Adobe Analytics",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "actionableLogFiles",
+              "key": "ALF",
               "nodeType": "class",
               "props": Object {
-                "children": "Actionable Log Files (359)",
+                "children": "Actionable Log Files",
+                "data-test": "alf-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "Actionable Log Files (359)",
+              "rendered": "Actionable Log Files",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "generalOnlineData",
+              "key": "REALTIME",
               "nodeType": "class",
               "props": Object {
-                "children": "General Online Data (27)",
+                "children": "General Online Data",
+                "data-test": "realtime-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "General Online Data (27)",
+              "rendered": "General Online Data",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "onboardedRecords",
+              "key": "ONBOARDED",
               "nodeType": "class",
               "props": Object {
-                "children": "Onboarded Records (37407)",
+                "children": "Onboarded Records",
+                "data-test": "onboarded-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "Onboarded Records (37407)",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-      ],
-      "type": Symbol(react.fragment),
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
-exports[`<SignalTypeFilter /> component rendering renders <Tab /> component with correct label when props.count change 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignalTypeFilter
-    counts={
-      Object {
-        "actionableLogFiles": 100,
-        "adobeAnalytics": 1000,
-        "all": 1100,
-        "generalOnlineData": 0,
-        "onboardedRecords": 0,
-      }
-    }
-    onSignalTypeChange={[MockFunction]}
-    signalType="adobeAnalytics"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": Array [
-        <Heading
-          className={undefined}
-          size={3}
-        >
-          Filter By Signal Type:
-        </Heading>,
-        <TabList
-          className={undefined}
-          onChange={[Function]}
-          orientation="vertical"
-          value="adobeAnalytics"
-        >
-          <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
-          >
-            All (1100)
-          </Tab>
-          <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={true}
-          >
-            Adobe Analytics (1000)
-          </Tab>
-          <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
-          >
-            Actionable Log Files (100)
-          </Tab>
-          <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
-          >
-            General Online Data (0)
-          </Tab>
-          <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
-          >
-            Onboarded Records (0)
-          </Tab>
-        </TabList>,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": "Filter By Signal Type:",
-          "className": undefined,
-          "size": 3,
-        },
-        "ref": null,
-        "rendered": "Filter By Signal Type:",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              All (1100)
-            </Tab>,
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={true}
-            >
-              Adobe Analytics (1000)
-            </Tab>,
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              Actionable Log Files (100)
-            </Tab>,
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              General Online Data (0)
-            </Tab>,
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              Onboarded Records (0)
-            </Tab>,
-          ],
-          "className": undefined,
-          "onChange": [Function],
-          "orientation": "vertical",
-          "value": "adobeAnalytics",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "all",
-            "nodeType": "class",
-            "props": Object {
-              "children": "All (1100)",
-              "disabled": false,
-              "invalid": false,
-              "renderChildren": true,
-              "selected": false,
-            },
-            "ref": null,
-            "rendered": "All (1100)",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "adobeAnalytics",
-            "nodeType": "class",
-            "props": Object {
-              "children": "Adobe Analytics (1000)",
-              "disabled": false,
-              "invalid": false,
-              "renderChildren": true,
-              "selected": true,
-            },
-            "ref": null,
-            "rendered": "Adobe Analytics (1000)",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "actionableLogFiles",
-            "nodeType": "class",
-            "props": Object {
-              "children": "Actionable Log Files (100)",
-              "disabled": false,
-              "invalid": false,
-              "renderChildren": true,
-              "selected": false,
-            },
-            "ref": null,
-            "rendered": "Actionable Log Files (100)",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "generalOnlineData",
-            "nodeType": "class",
-            "props": Object {
-              "children": "General Online Data (0)",
-              "disabled": false,
-              "invalid": false,
-              "renderChildren": true,
-              "selected": false,
-            },
-            "ref": null,
-            "rendered": "General Online Data (0)",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "onboardedRecords",
-            "nodeType": "class",
-            "props": Object {
-              "children": "Onboarded Records (0)",
-              "disabled": false,
-              "invalid": false,
-              "renderChildren": true,
-              "selected": false,
-            },
-            "ref": null,
-            "rendered": "Onboarded Records (0)",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-    ],
-    "type": Symbol(react.fragment),
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Heading
-            className={undefined}
-            size={3}
-          >
-            Filter By Signal Type:
-          </Heading>,
-          <TabList
-            className={undefined}
-            onChange={[Function]}
-            orientation="vertical"
-            value="adobeAnalytics"
-          >
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              All (1100)
-            </Tab>
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={true}
-            >
-              Adobe Analytics (1000)
-            </Tab>
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              Actionable Log Files (100)
-            </Tab>
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              General Online Data (0)
-            </Tab>
-            <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
-            >
-              Onboarded Records (0)
-            </Tab>
-          </TabList>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": "Filter By Signal Type:",
-            "className": undefined,
-            "size": 3,
-          },
-          "ref": null,
-          "rendered": "Filter By Signal Type:",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": Array [
-              <Tab
-                disabled={false}
-                invalid={false}
-                renderChildren={true}
-                selected={false}
-              >
-                All (1100)
-              </Tab>,
-              <Tab
-                disabled={false}
-                invalid={false}
-                renderChildren={true}
-                selected={true}
-              >
-                Adobe Analytics (1000)
-              </Tab>,
-              <Tab
-                disabled={false}
-                invalid={false}
-                renderChildren={true}
-                selected={false}
-              >
-                Actionable Log Files (100)
-              </Tab>,
-              <Tab
-                disabled={false}
-                invalid={false}
-                renderChildren={true}
-                selected={false}
-              >
-                General Online Data (0)
-              </Tab>,
-              <Tab
-                disabled={false}
-                invalid={false}
-                renderChildren={true}
-                selected={false}
-              >
-                Onboarded Records (0)
-              </Tab>,
-            ],
-            "className": undefined,
-            "onChange": [Function],
-            "orientation": "vertical",
-            "value": "adobeAnalytics",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "all",
-              "nodeType": "class",
-              "props": Object {
-                "children": "All (1100)",
-                "disabled": false,
-                "invalid": false,
-                "renderChildren": true,
-                "selected": false,
-              },
-              "ref": null,
-              "rendered": "All (1100)",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "adobeAnalytics",
-              "nodeType": "class",
-              "props": Object {
-                "children": "Adobe Analytics (1000)",
-                "disabled": false,
-                "invalid": false,
-                "renderChildren": true,
-                "selected": true,
-              },
-              "ref": null,
-              "rendered": "Adobe Analytics (1000)",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "actionableLogFiles",
-              "nodeType": "class",
-              "props": Object {
-                "children": "Actionable Log Files (100)",
-                "disabled": false,
-                "invalid": false,
-                "renderChildren": true,
-                "selected": false,
-              },
-              "ref": null,
-              "rendered": "Actionable Log Files (100)",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "generalOnlineData",
-              "nodeType": "class",
-              "props": Object {
-                "children": "General Online Data (0)",
-                "disabled": false,
-                "invalid": false,
-                "renderChildren": true,
-                "selected": false,
-              },
-              "ref": null,
-              "rendered": "General Online Data (0)",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "onboardedRecords",
-              "nodeType": "class",
-              "props": Object {
-                "children": "Onboarded Records (0)",
-                "disabled": false,
-                "invalid": false,
-                "renderChildren": true,
-                "selected": false,
-              },
-              "ref": null,
-              "rendered": "Onboarded Records (0)",
+              "rendered": "Onboarded Records",
               "type": [Function],
             },
           ],
@@ -921,18 +488,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
-    counts={
-      Object {
-        "actionableLogFiles": 359,
-        "adobeAnalytics": 34300,
-        "all": 72093,
-        "generalOnlineData": 27,
-        "onboardedRecords": 37407,
-      }
-    }
-    onSignalTypeChange={[MockFunction]}
-    signalType="adobeAnalytics"
-  />,
+    onSignalTypeChange={[Function]}
+    signalType="ANALYTICS"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -949,56 +507,62 @@ ShallowWrapper {
         <Heading
           className={undefined}
           size={3}
-        >
-          Filter By Signal Type:
-        </Heading>,
+>
+          Filter by Signal Type
+</Heading>,
         <TabList
           className={undefined}
           onChange={[Function]}
           orientation="vertical"
-          value="adobeAnalytics"
-        >
+          quiet={false}
+          variant="compact"
+>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="all-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            All (72093)
+                    All
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={true}
+                    data-test="analytics-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={true}
           >
-            Adobe Analytics (34300)
+                    Adobe Analytics
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="alf-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Actionable Log Files (359)
+                    Actionable Log Files
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="realtime-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            General Online Data (27)
+                    General Online Data
           </Tab>
           <Tab
-            disabled={false}
-            invalid={false}
-            renderChildren={true}
-            selected={false}
+                    data-test="onboarded-signal-type-filter"
+                    disabled={false}
+                    invalid={false}
+                    renderChildren={true}
+                    selected={false}
           >
-            Onboarded Records (37407)
+                    Onboarded Records
           </Tab>
-        </TabList>,
+</TabList>,
       ],
     },
     "ref": null,
@@ -1008,12 +572,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": "Filter By Signal Type:",
+          "children": "Filter by Signal Type",
           "className": undefined,
           "size": 3,
         },
         "ref": null,
-        "rendered": "Filter By Signal Type:",
+        "rendered": "Filter by Signal Type",
         "type": [Function],
       },
       Object {
@@ -1023,126 +587,137 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Tab
+              data-test="all-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              All (72093)
-            </Tab>,
+>
+              All
+</Tab>,
             <Tab
+              data-test="analytics-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={true}
-            >
-              Adobe Analytics (34300)
-            </Tab>,
+>
+              Adobe Analytics
+</Tab>,
             <Tab
+              data-test="alf-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              Actionable Log Files (359)
-            </Tab>,
+>
+              Actionable Log Files
+</Tab>,
             <Tab
+              data-test="realtime-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              General Online Data (27)
-            </Tab>,
+>
+              General Online Data
+</Tab>,
             <Tab
+              data-test="onboarded-signal-type-filter"
               disabled={false}
               invalid={false}
               renderChildren={true}
               selected={false}
-            >
-              Onboarded Records (37407)
-            </Tab>,
+>
+              Onboarded Records
+</Tab>,
           ],
           "className": undefined,
           "onChange": [Function],
           "orientation": "vertical",
-          "value": "adobeAnalytics",
+          "quiet": false,
+          "variant": "compact",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "all",
+            "key": "ALL",
             "nodeType": "class",
             "props": Object {
-              "children": "All (72093)",
+              "children": "All",
+              "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "All (72093)",
+            "rendered": "All",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "adobeAnalytics",
+            "key": "ANALYTICS",
             "nodeType": "class",
             "props": Object {
-              "children": "Adobe Analytics (34300)",
+              "children": "Adobe Analytics",
+              "data-test": "analytics-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": true,
             },
             "ref": null,
-            "rendered": "Adobe Analytics (34300)",
+            "rendered": "Adobe Analytics",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "actionableLogFiles",
+            "key": "ALF",
             "nodeType": "class",
             "props": Object {
-              "children": "Actionable Log Files (359)",
+              "children": "Actionable Log Files",
+              "data-test": "alf-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "Actionable Log Files (359)",
+            "rendered": "Actionable Log Files",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "generalOnlineData",
+            "key": "REALTIME",
             "nodeType": "class",
             "props": Object {
-              "children": "General Online Data (27)",
+              "children": "General Online Data",
+              "data-test": "realtime-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "General Online Data (27)",
+            "rendered": "General Online Data",
             "type": [Function],
           },
           Object {
             "instance": null,
-            "key": "onboardedRecords",
+            "key": "ONBOARDED",
             "nodeType": "class",
             "props": Object {
-              "children": "Onboarded Records (37407)",
+              "children": "Onboarded Records",
+              "data-test": "onboarded-signal-type-filter",
               "disabled": false,
               "invalid": false,
               "renderChildren": true,
               "selected": false,
             },
             "ref": null,
-            "rendered": "Onboarded Records (37407)",
+            "rendered": "Onboarded Records",
             "type": [Function],
           },
         ],
@@ -1161,56 +736,62 @@ ShallowWrapper {
           <Heading
             className={undefined}
             size={3}
-          >
-            Filter By Signal Type:
-          </Heading>,
+>
+            Filter by Signal Type
+</Heading>,
           <TabList
             className={undefined}
             onChange={[Function]}
             orientation="vertical"
-            value="adobeAnalytics"
-          >
+            quiet={false}
+            variant="compact"
+>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="all-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              All (72093)
+                        All
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={true}
+                        data-test="analytics-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={true}
             >
-              Adobe Analytics (34300)
+                        Adobe Analytics
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="alf-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Actionable Log Files (359)
+                        Actionable Log Files
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="realtime-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              General Online Data (27)
+                        General Online Data
             </Tab>
             <Tab
-              disabled={false}
-              invalid={false}
-              renderChildren={true}
-              selected={false}
+                        data-test="onboarded-signal-type-filter"
+                        disabled={false}
+                        invalid={false}
+                        renderChildren={true}
+                        selected={false}
             >
-              Onboarded Records (37407)
+                        Onboarded Records
             </Tab>
-          </TabList>,
+</TabList>,
         ],
       },
       "ref": null,
@@ -1220,12 +801,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Filter By Signal Type:",
+            "children": "Filter by Signal Type",
             "className": undefined,
             "size": 3,
           },
           "ref": null,
-          "rendered": "Filter By Signal Type:",
+          "rendered": "Filter by Signal Type",
           "type": [Function],
         },
         Object {
@@ -1235,126 +816,137 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Tab
+                data-test="all-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                All (72093)
-              </Tab>,
+>
+                All
+</Tab>,
               <Tab
+                data-test="analytics-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={true}
-              >
-                Adobe Analytics (34300)
-              </Tab>,
+>
+                Adobe Analytics
+</Tab>,
               <Tab
+                data-test="alf-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                Actionable Log Files (359)
-              </Tab>,
+>
+                Actionable Log Files
+</Tab>,
               <Tab
+                data-test="realtime-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                General Online Data (27)
-              </Tab>,
+>
+                General Online Data
+</Tab>,
               <Tab
+                data-test="onboarded-signal-type-filter"
                 disabled={false}
                 invalid={false}
                 renderChildren={true}
                 selected={false}
-              >
-                Onboarded Records (37407)
-              </Tab>,
+>
+                Onboarded Records
+</Tab>,
             ],
             "className": undefined,
             "onChange": [Function],
             "orientation": "vertical",
-            "value": "adobeAnalytics",
+            "quiet": false,
+            "variant": "compact",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "all",
+              "key": "ALL",
               "nodeType": "class",
               "props": Object {
-                "children": "All (72093)",
+                "children": "All",
+                "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "All (72093)",
+              "rendered": "All",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "adobeAnalytics",
+              "key": "ANALYTICS",
               "nodeType": "class",
               "props": Object {
-                "children": "Adobe Analytics (34300)",
+                "children": "Adobe Analytics",
+                "data-test": "analytics-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": true,
               },
               "ref": null,
-              "rendered": "Adobe Analytics (34300)",
+              "rendered": "Adobe Analytics",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "actionableLogFiles",
+              "key": "ALF",
               "nodeType": "class",
               "props": Object {
-                "children": "Actionable Log Files (359)",
+                "children": "Actionable Log Files",
+                "data-test": "alf-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "Actionable Log Files (359)",
+              "rendered": "Actionable Log Files",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "generalOnlineData",
+              "key": "REALTIME",
               "nodeType": "class",
               "props": Object {
-                "children": "General Online Data (27)",
+                "children": "General Online Data",
+                "data-test": "realtime-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "General Online Data (27)",
+              "rendered": "General Online Data",
               "type": [Function],
             },
             Object {
               "instance": null,
-              "key": "onboardedRecords",
+              "key": "ONBOARDED",
               "nodeType": "class",
               "props": Object {
-                "children": "Onboarded Records (37407)",
+                "children": "Onboarded Records",
+                "data-test": "onboarded-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
               },
               "ref": null,
-              "rendered": "Onboarded Records (37407)",
+              "rendered": "Onboarded Records",
               "type": [Function],
             },
           ],

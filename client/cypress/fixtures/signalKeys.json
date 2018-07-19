@@ -1,0 +1,30 @@
+{
+    "signalKeys": [
+        {
+            "signalKey": "a0"
+        },
+        {
+            "signalKey": "a1"
+        },
+        {
+            "signalKey": "a2"
+        },
+        {
+            "signalKey": "a3"
+        },
+        {
+            "signalKey": "a4"
+        },
+        {
+            "signalKey": "a5"
+        },
+        {
+            "signalKey": "a6"
+        },
+        {
+            "signalKey": "a7"
+        }
+    ],
+    "analyticsServiceAvailable": true,
+    "solrServiceAvailable": true
+}

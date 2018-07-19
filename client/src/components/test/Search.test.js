@@ -2,26 +2,54 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Search from '../Search';
 import AdvancedSearch from '../AdvancedSearch';
+import CustomDateRange from '../CustomDateRange';
 import KeyValuePair from '../KeyValuePair';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
+import Switch from '@react/react-spectrum/Switch';
 import signalStatuses from '../../constants/signalStatusOptions';
-import dateRangeOptions from '../../constants/dateRangeOptions';
+import { getDateRangeOptionsWithinRetentionPolicy } from '../../utils/dateRange';
+import { isFormValid } from '../../utils/searchValidation';
+import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
 describe('<Search /> component', () => {
     const state = {
+        name: '',
         keyValuePairs: [
             {
                 id: 0,
                 key: '',
-                operator: '=',
+                operator: '==',
                 value: '',
             },
         ],
-        status: 'all',
+        signalStatus: 'ALL',
         advanced: false,
-        viewRecordsFor: 7,
-        minCount: 1000,
+        source: {
+            name: '',
+            dataSourceIds: 0,
+            reportSuiteIds: 0,
+            sourceType: 'ALL',
+        },
+        viewRecordsFor: '7D',
+        customStartDate: '04-24-2018',
+        customEndDate: '05-01-2018',
+        minEventFires: 1000,
+        reportSuites: [],
+        errors: {
+            searchForm: {
+                hasError: false,
+                errorMessage: '',
+            },
+            savedSearch: {
+                hasError: false,
+                errorMessage: '',
+            },
+            reportSuites: {
+                hasError: false,
+                errorMessage: '',
+            },
+        },
     };
     const mockFn = jest.fn();
     const wrapper = shallow(
@@ -33,11 +61,20 @@ describe('<Search /> component', () => {
             onOperatorChange={mockFn}
             onAddClick={mockFn}
             onRemoveClick={mockFn}
-            onStatusChange={mockFn}
+            onSignalStatusChange={mockFn}
             onViewRecordsChange={mockFn}
-            onMinCountChange={mockFn}
+            onCustomStartDateChange={mockFn}
+            onCustomEndDateChange={mockFn}
+            onMinEventFiresChange={mockFn}
+            onReportSuiteChange={mockFn}
+            onReportSuiteSelect={mockFn}
             onSearch={mockFn}
             onClearAll={mockFn}
+            isCustomDateRangeEnabled={false}
+            eventFiresMinimum={0}
+            eventFiresStep={1000}
+            maxSignalRetentionDays={30}
+            disabled={false}
         />,
     );
 
@@ -46,8 +83,32 @@ describe('<Search /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <AdvancedSearch />', () => {
+        it('renders <Switch />', () => {
+            expect(wrapper.find(Switch).exists()).toBe(true);
+        });
+
+        it('does not render <AdvancedSearch /> when advanced is toggled off', () => {
+            wrapper.setProps({ advanced: false });
+            expect(wrapper.find(AdvancedSearch).exists()).toBe(false);
+        });
+
+        it('renders <AdvancedSearch /> when advanced is toggled on', () => {
+            wrapper.setProps({ advanced: true });
             expect(wrapper.find(AdvancedSearch).exists()).toBe(true);
+        });
+
+        it('renders <InlineErrorMessage /> when there is an error retrieving report suites', () => {
+            wrapper.setProps({
+                errors: {
+                    ...state.errors,
+                    reportSuites: {
+                        hasError: true,
+                        errorMessage: 'Error!',
+                    },
+                },
+            });
+
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
 
         it('renders <KeyValuePair /> according to number of keyValuePairs in the state', () => {
@@ -67,7 +128,7 @@ describe('<Search /> component', () => {
             const viewRecordsOptions = viewRecordsSelect.props().options;
 
             expect(viewRecordsSelect.exists()).toBe(true);
-            expect(viewRecordsOptions).toMatchObject(dateRangeOptions);
+            expect(viewRecordsOptions).toMatchObject(getDateRangeOptionsWithinRetentionPolicy());
         });
 
         it('renders Minimum Counts input', () => {
@@ -91,40 +152,25 @@ describe('<Search /> component', () => {
                     {
                         id: 0,
                         key: '',
-                        operator: '=',
+                        operator: '==',
                         value: '',
                     },
                     {
                         id: 1,
                         key: '',
-                        operator: '=',
+                        operator: '==',
                         value: '',
                     },
                     {
                         id: 2,
                         key: '',
-                        operator: '=',
+                        operator: '==',
                         value: '',
                     },
                 ],
             };
 
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    onAdvancedSearchChange={mockFn}
-                    onKeySelect={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinCountChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(
                 newWrapper.find(Button).someWhere(button => button.props().label === 'Add'),
@@ -149,26 +195,23 @@ describe('<Search /> component', () => {
                 ],
             };
 
-            const newWrapper = shallow(
-                <Search
-                    {...newState}
-                    onAdvancedSearchChange={mockFn}
-                    onKeySelect={mockFn}
-                    onValueChange={mockFn}
-                    onOperatorChange={mockFn}
-                    onAddClick={mockFn}
-                    onRemoveClick={mockFn}
-                    onStatusChange={mockFn}
-                    onViewRecordsChange={mockFn}
-                    onMinCountChange={mockFn}
-                    onSearch={mockFn}
-                    onClearAll={mockFn}
-                />,
-            );
+            const newWrapper = shallow(<Search {...newState} />);
 
             expect(
                 newWrapper.find(Button).someWhere(button => button.props().label === 'Remove'),
             ).toBe(true);
+        });
+
+        it('does not render <CustomDateRange /> by default, when the `isCustomDateRangeEnabled` prop is false', () => {
+            expect(wrapper.find(CustomDateRange).exists()).toBeFalsy();
+        });
+
+        it('renders <CustomDateRange /> when the `isCustomDateRangeEnabled` prop is true', () => {
+            const newWrapper = shallow(
+                <Search {...state} isCustomDateRangeEnabled={true} maxSignalRetentionDays={30} />,
+            );
+
+            expect(newWrapper.find(CustomDateRange).exists()).toBeTruthy();
         });
 
         it('renders <Button /> with label "Search"', () => {
@@ -177,10 +220,46 @@ describe('<Search /> component', () => {
             ).toBe(true);
         });
 
+        it('renders <Button /> with label "Search" as disabled when form is invalid', () => {
+            const newState = {
+                ...state,
+                keyValuePairs: [
+                    {
+                        id: 0,
+                        key: 'new',
+                        operator: '==',
+                        value: 'abc',
+                    },
+                ],
+            };
+
+            const newWrapper = shallow(<Search {...newState} />);
+
+            expect(newWrapper.find('[data-test="search-button"]').is('[disabled]')).toBe(true);
+        });
+        it('renders <Button /> with label "Search" as disabled when disabled props is true', () => {
+            wrapper.setProps({ disabled: true });
+
+            expect(wrapper.find('[data-test="search-button"]').is('[disabled]')).toBe(true);
+        });
         it('renders <Button /> with label "Clear All"', () => {
             expect(
                 wrapper.find(Button).someWhere(button => button.props().label === 'Clear All'),
             ).toBe(true);
+        });
+
+        it('should render <InlineErrorMessage /> when there is an error', () => {
+            wrapper.setProps({
+                errors: {
+                    ...state.errors,
+                    searchForm: {
+                        hasError: true,
+                        errorMessage: 'Error!',
+                    },
+                },
+            });
+
+            expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
     });
 });

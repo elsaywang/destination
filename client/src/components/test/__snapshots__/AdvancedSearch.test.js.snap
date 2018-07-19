@@ -6,10 +6,29 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AdvancedSearch
     enabled={false}
-    filter="test"
-    onAdvancedSearchChange={[MockFunction]}
-    onFilterChange={[MockFunction]}
-  />,
+    onAdvancedSearchChange={[Function]}
+    onReportSuiteChange={[Function]}
+    onReportSuiteSelect={[Function]}
+    reportSuites={
+        Array [
+            Object {
+              "dataSourceId": 168815,
+              "datacenter": "sin",
+              "name": "Test Report Suite Edited1505153440289",
+              "pid": 1194,
+              "suite": "test-report-suite-edited1505153440289",
+            },
+            Object {
+              "dataSourceId": 169626,
+              "datacenter": "sin",
+              "name": "Test Report Suite Edited1505154745046",
+              "pid": 1194,
+              "suite": "test-report-suite-edited1505154745046",
+            },
+          ]
+    }
+    sourceName="test"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -23,31 +42,28 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Switch
-          aria-label="Advanced Search"
-          checked={false}
-          data-test="advanced-search-toggle"
-          label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
-          onChange={[MockFunction]}
-        />,
+        <span>
+          Search and see results in friendly names:  
+</span>,
         <ComboBox
           data-test="advanced-search-filter"
           disabled={true}
           invalid={false}
-          onChange={[MockFunction]}
+          onChange={[Function]}
+          onSelect={[Function]}
           options={
-            Array [
-              "test",
-              "test2",
-              "test3",
-            ]
+                    Array [
+                              "Test Report Suite Edited1505153440289",
+                              "Test Report Suite Edited1505154745046",
+                            ]
           }
           placeholder="Filter by report suite"
           quiet={true}
           required={false}
-          value="test"
-        />,
+          value=""
+/>,
       ],
+      "className": undefined,
       "data-test": "advanced-search",
     },
     "ref": null,
@@ -55,17 +71,13 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "aria-label": "Advanced Search",
-          "checked": false,
-          "data-test": "advanced-search-toggle",
-          "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
-          "onChange": [MockFunction],
+          "children": "Search and see results in friendly names:  ",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "Search and see results in friendly names:  ",
+        "type": "span",
       },
       Object {
         "instance": null,
@@ -75,16 +87,16 @@ ShallowWrapper {
           "data-test": "advanced-search-filter",
           "disabled": true,
           "invalid": false,
-          "onChange": [MockFunction],
+          "onChange": [Function],
+          "onSelect": [Function],
           "options": Array [
-            "test",
-            "test2",
-            "test3",
+            "Test Report Suite Edited1505153440289",
+            "Test Report Suite Edited1505154745046",
           ],
           "placeholder": "Filter by report suite",
           "quiet": true,
           "required": false,
-          "value": "test",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
@@ -100,31 +112,28 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Switch
-            aria-label="Advanced Search"
-            checked={false}
-            data-test="advanced-search-toggle"
-            label="Advanced search for Adobe Analytics. Search by key/value names and results in:"
-            onChange={[MockFunction]}
-          />,
+          <span>
+            Search and see results in friendly names:  
+</span>,
           <ComboBox
             data-test="advanced-search-filter"
             disabled={true}
             invalid={false}
-            onChange={[MockFunction]}
+            onChange={[Function]}
+            onSelect={[Function]}
             options={
-              Array [
-                "test",
-                "test2",
-                "test3",
-              ]
+                        Array [
+                                    "Test Report Suite Edited1505153440289",
+                                    "Test Report Suite Edited1505154745046",
+                                  ]
             }
             placeholder="Filter by report suite"
             quiet={true}
             required={false}
-            value="test"
-          />,
+            value=""
+/>,
         ],
+        "className": undefined,
         "data-test": "advanced-search",
       },
       "ref": null,
@@ -132,17 +141,13 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "aria-label": "Advanced Search",
-            "checked": false,
-            "data-test": "advanced-search-toggle",
-            "label": "Advanced search for Adobe Analytics. Search by key/value names and results in:",
-            "onChange": [MockFunction],
+            "children": "Search and see results in friendly names:  ",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "Search and see results in friendly names:  ",
+          "type": "span",
         },
         Object {
           "instance": null,
@@ -152,16 +157,16 @@ ShallowWrapper {
             "data-test": "advanced-search-filter",
             "disabled": true,
             "invalid": false,
-            "onChange": [MockFunction],
+            "onChange": [Function],
+            "onSelect": [Function],
             "options": Array [
-              "test",
-              "test2",
-              "test3",
+              "Test Report Suite Edited1505153440289",
+              "Test Report Suite Edited1505154745046",
             ],
             "placeholder": "Filter by report suite",
             "quiet": true,
             "required": false,
-            "value": "test",
+            "value": "",
           },
           "ref": null,
           "rendered": null,

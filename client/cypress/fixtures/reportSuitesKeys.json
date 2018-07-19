@@ -1,0 +1,37 @@
+{
+    "reportSuiteId": 169626,
+    "keys": [
+        {
+            "id": "eVar1",
+            "name": "Product Page"
+        },
+        {
+            "id": "eVar2",
+            "name": "Product Page"
+        },
+        {
+            "id": "eVar3",
+            "name": "Shopping Cart"
+        },
+        {
+            "id": "eVar4",
+            "name": "Membership"
+        },
+        {
+            "id": "eVar5",
+            "name": "Shopping Cart"
+        },
+        {
+            "id": "eVar6",
+            "name": "Membership"
+        },
+        {
+            "id": "eVar7",
+            "name": "test-7"
+        },
+        {
+            "id": "eVar8",
+            "name": "test-8"
+        }
+    ]
+}

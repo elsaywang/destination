@@ -3,61 +3,71 @@ import { GridColumn, GridRow } from '@react/react-spectrum/Grid';
 import Well from '@react/react-spectrum/Well';
 import Button from '@react/react-spectrum/Button';
 import Select from '@react/react-spectrum/Select';
+import Switch from '@react/react-spectrum/Switch';
 import NumberInput from '@react/react-spectrum/NumberInput';
-import Add from '@react/react-spectrum/Icon/Add';
-import Remove from '@react/react-spectrum/Icon/Remove';
+import AddCircle from '@react/react-spectrum/Icon/AddCircle';
+import RemoveCircle from '@react/react-spectrum/Icon/RemoveCircle';
 import AdvancedSearch from './AdvancedSearch';
+import CustomDateRange from './CustomDateRange';
 import KeyValuePair from './KeyValuePair';
 import Label from './common/Label';
-
-import viewRecordsOptions from '../constants/dateRangeOptions';
+import InlineErrorMessage from './common/InlineErrorMessage';
+import styles from './Search.css';
 import statusOptions from '../constants/signalStatusOptions';
+import { isFormValid } from '../utils/searchValidation';
+import { getDateRangeOptionsWithinRetentionPolicy } from '../utils/dateRangeOptions';
 
 class Search extends Component {
+    getViewRecordsOptions = () =>
+        getDateRangeOptionsWithinRetentionPolicy(this.props.maxSignalRetentionDays);
+
     renderKVPFields = pair => {
         const {
             keyValuePairs,
+            advanced,
+            source,
             onRemoveClick,
             onAddClick,
-            onKeySelect,
+            onKeyChange,
             onOperatorChange,
             onValueChange,
         } = this.props;
         const validKeyValuePairsLimit = keyValuePairs.length < 3;
         const isLastPair = id => keyValuePairs[keyValuePairs.length - 1].id === id;
-        const onRemove = () => {
-            onRemoveClick(pair.id);
-        };
+        const onRemove = () => onRemoveClick(pair.id);
+        const reportSuiteId = source.reportSuiteIds;
 
         return (
-            <GridRow key={pair.id} valign="bottom">
-                <GridColumn size={4}>
+            <GridRow key={pair.id}>
+                <GridColumn size={12} className={styles.keyValuePairs}>
                     <KeyValuePair
                         key={pair.id}
                         pair={pair}
-                        onKeySelect={onKeySelect}
+                        advanced={advanced}
+                        reportSuiteId={
+                            reportSuiteId && reportSuiteId.length ? reportSuiteId[0] : ''
+                        }
+                        onKeyChange={onKeyChange}
                         onOperatorChange={onOperatorChange}
                         onValueChange={onValueChange}
                     />
-                </GridColumn>
-                <GridColumn size={2}>
                     {isLastPair(pair.id) &&
                         validKeyValuePairsLimit && (
                             <Button
                                 label="Add"
                                 data-test="add-button"
                                 onClick={onAddClick}
-                                icon={<Add />}
+                                icon={<AddCircle />}
                                 variant="action"
                                 quiet
                             />
                         )}
                     {pair.id !== 0 && (
                         <Button
-                            data-test="remove-button"
                             label="Remove"
+                            data-test="remove-button"
                             onClick={onRemove}
-                            icon={<Remove />}
+                            icon={<RemoveCircle />}
                             variant="action"
                             quiet
                         />
@@ -67,19 +77,37 @@ class Search extends Component {
         );
     };
 
+    renderCustomDatepickers = () => {
+        if (!this.props.isCustomDateRangeEnabled) {
+            return null;
+        }
+
+        return (
+            <CustomDateRange
+                customStartDate={this.props.customStartDate}
+                customEndDate={this.props.customEndDate}
+                onCustomStartDateChange={this.props.onCustomStartDateChange}
+                onCustomEndDateChange={this.props.onCustomEndDateChange}
+                minCustomStartDateDaysAgo={this.props.maxSignalRetentionDays}
+            />
+        );
+    };
+
     renderCTAs = () => (
-        <GridColumn size={3}>
+        <GridColumn className={styles.ctas}>
+            <Button
+                label="Clear All"
+                data-test="clear-all-button"
+                onClick={this.props.onClearAll}
+                quiet
+                variant="secondary"
+            />
             <Button
                 label="Search"
                 data-test="search-button"
                 onClick={this.props.onSearch}
                 variant="cta"
-            />
-            <Button
-                label="Clear All"
-                data-test="clear-all-button"
-                onClick={this.props.onClearAll}
-                variant="secondary"
+                disabled={!isFormValid(this.props) || this.props.disabled}
             />
         </GridColumn>
     );
@@ -88,27 +116,46 @@ class Search extends Component {
         return (
             <GridRow>
                 <GridColumn size={12}>
+                    <Switch
+                        className="advanced-search-toggle"
+                        onChange={this.props.onAdvancedSearchChange}
+                        checked={this.props.advanced}
+                        data-test="advanced-search-toggle"
+                        aria-label="Advanced Search"
+                        label="Advanced search for Adobe Analytics"
+                    />
+                    <div>
+                        <InlineErrorMessage
+                            isInvalid={this.props.errors.reportSuites.hasError}
+                            errorMessage={this.props.errors.reportSuites.errorMessage}
+                        />
+                    </div>
                     <Well>
                         <div data-test="search-form">
-                            <AdvancedSearch
-                                enabled={this.props.advanced}
-                                onAdvancedSearchChange={this.props.onAdvancedSearchChange}
-                                onFilterChange={this.props.onFilterChange}
-                                filter={this.props.filter}
-                            />
+                            {this.props.advanced && (
+                                <AdvancedSearch
+                                    enabled={this.props.advanced}
+                                    onReportSuiteChange={this.props.onReportSuiteChange}
+                                    onReportSuiteSelect={value =>
+                                        this.props.onReportSuiteSelect(value)
+                                    }
+                                    sourceName={this.props.source.name}
+                                    reportSuites={this.props.reportSuites}
+                                />
+                            )}
 
                             <GridRow>
                                 <GridColumn size={12}>
                                     {this.props.keyValuePairs.map(this.renderKVPFields)}
 
-                                    <GridRow valign="bottom">
-                                        <GridColumn size={7}>
+                                    <GridRow>
+                                        <GridColumn size={10}>
                                             <Label value="Signal Status">
                                                 <Select
                                                     className="signal-status"
                                                     data-test="signal-status"
-                                                    value={this.props.status}
-                                                    onChange={this.props.onStatusChange}
+                                                    value={this.props.signalStatus}
+                                                    onChange={this.props.onSignalStatusChange}
                                                     options={statusOptions}
                                                     quiet
                                                 />
@@ -120,17 +167,21 @@ class Search extends Component {
                                                     data-test="view-records"
                                                     value={this.props.viewRecordsFor}
                                                     onChange={this.props.onViewRecordsChange}
-                                                    options={viewRecordsOptions}
+                                                    options={this.getViewRecordsOptions()}
                                                     quiet
                                                 />
                                             </Label>
+
+                                            {this.renderCustomDatepickers()}
 
                                             <Label value="Minimum Counts">
                                                 <NumberInput
                                                     className="min-counts"
                                                     data-test="min-counts"
-                                                    onChange={this.props.onMinCountChange}
-                                                    value={this.props.minCount}
+                                                    onChange={this.props.onMinEventFiresChange}
+                                                    value={this.props.minEventFires}
+                                                    min={this.props.eventFiresMinimum}
+                                                    step={this.props.eventFiresStep}
                                                     quiet
                                                 />
                                             </Label>
@@ -138,6 +189,11 @@ class Search extends Component {
 
                                         {this.renderCTAs()}
                                     </GridRow>
+                                    <InlineErrorMessage
+                                        className={styles.error}
+                                        isInvalid={this.props.errors.searchForm.hasError}
+                                        errorMessage={this.props.errors.searchForm.errorMessage}
+                                    />
                                 </GridColumn>
                             </GridRow>
                         </div>
