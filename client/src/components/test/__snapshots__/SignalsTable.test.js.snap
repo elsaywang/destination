@@ -145,6 +145,7 @@ ShallowWrapper {
         },
       ],
       "dataTest": "signals-table",
+      "isMaxSelectedRowsReached": undefined,
       "items": Array [
         Object {
           "id": 0,
@@ -237,6 +238,7 @@ ShallowWrapper {
           },
         ],
         "dataTest": "signals-table",
+        "isMaxSelectedRowsReached": undefined,
         "items": Array [
           Object {
             "id": 0,

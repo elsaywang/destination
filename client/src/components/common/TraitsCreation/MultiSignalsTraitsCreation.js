@@ -5,7 +5,7 @@ import Button from '@react/react-spectrum/Button';
 import Add from '@react/react-spectrum/Icon/Add';
 
 const MultiSignalsTraitsCreation = ({ selectedSignals, storeSessionAndNavigateToTraits }) => {
-    const { selectionMessage, hasWarning } = selectedSignals;
+    const { selectionMessage, hasTraitsCreationDisabledWarning } = selectedSignals;
 
     return (
         <div className={styles.multiCreation}>
@@ -15,7 +15,7 @@ const MultiSignalsTraitsCreation = ({ selectedSignals, storeSessionAndNavigateTo
                 label="Create Trait From Multiple Signals"
                 icon={<Add />}
                 variant="action"
-                disabled={hasWarning}
+                disabled={hasTraitsCreationDisabledWarning}
                 data-test="multi-signals-trait-creation"
             />
         </div>
@@ -25,7 +25,7 @@ const MultiSignalsTraitsCreation = ({ selectedSignals, storeSessionAndNavigateTo
 MultiSignalsTraitsCreation.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        hasWarning: PropTypes.bool,
+        hasTraitsCreationDisabledWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
     storeSessionAndNavigateToTraits: PropTypes.func.isRequired,

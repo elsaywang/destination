@@ -56,7 +56,7 @@ TraitsCreation.propTypes = {
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        hasWarning: PropTypes.bool,
+        hasTraitsCreationDisabledWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
     canCreateTraits: PropTypes.bool,

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Warning from '../Warning';
 import WarningMessage from '../WarningMessage';
-import { SignalsSelectionWarningMessage } from '../WarningTemplates';
+import { SignalsSelectionWarningMessage, SignalsSelectionLimitMessage } from '../WarningTemplates';
 import Alert from '@react/react-spectrum/Icon/Alert';
 
 describe('<Warning/> component', () => {
@@ -52,6 +52,22 @@ describe('<Warning/> component', () => {
 
         it('renders <SignalsSelectionWarningMessage/> component ', () => {
             expect(wrapper.find(SignalsSelectionWarningMessage).exists()).toBeTruthy();
+        });
+    });
+
+    describe('rendering when it includes <SignalsSelectionLimitMessage/> as children component', () => {
+        const wrapper = shallow(
+            <Warning>
+                <SignalsSelectionLimitMessage maxSignalSelections={5} />
+            </Warning>,
+        );
+
+        it('matches snapshot', () => {
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it('renders <SignalsSelectionWarningMessage/> component ', () => {
+            expect(wrapper.find(SignalsSelectionLimitMessage).exists()).toBeTruthy();
         });
     });
 });
