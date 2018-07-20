@@ -31,13 +31,22 @@ describe('selected signals reducer', () => {
                 expect(isMaxSignalSelectionsReached(state)).toBeFalsy();
             });
 
-            it('returns true if total selectedRowIndexes length is no less than the limit ', () => {
+            it('returns true if total selectedRowIndexes length is greater than the limit ', () => {
                 const state = {
                     selectedRowIndexes: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10],
                     maxSignalSelections: 5,
                 };
 
                 expect(isMaxSignalSelectionsReached(state)).toBeTruthy();
+            });
+
+            it('returns false if total selectedRowIndexes length is equal to limit ', () => {
+                const state = {
+                    selectedRowIndexes: [0, 1, 3, 4],
+                    maxSignalSelections: 5,
+                };
+
+                expect(isMaxSignalSelectionsReached(state)).toBeFalsy();
             });
         });
 

@@ -24,7 +24,7 @@ export default handleActions(
 export const getSelectedRowIndexes = state => state.selectedRowIndexes;
 export const getMaxSignalSelections = state => state.maxSignalSelections;
 export const isMaxSignalSelectionsReached = state =>
-    Boolean(getSelectedRowIndexes(state).length >= getMaxSignalSelections(state));
+    Boolean(getSelectedRowIndexes(state).length > getMaxSignalSelections(state));
 export const finalizedSelectedRowIndexes = state =>
     isMaxSignalSelectionsReached(state)
         ? [...getSelectedRowIndexes(state)].slice(0, getMaxSignalSelections(state))
