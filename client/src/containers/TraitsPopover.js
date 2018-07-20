@@ -9,6 +9,7 @@ import Wait from '@react/react-spectrum/Wait';
 import { fetchTrait } from '../utils/fetchTrait';
 import { maxVisibleTraits } from '../constants/includedInTraitsConstants';
 import styles from './TraitsPopover.css';
+import he from 'he';
 
 class TraitsPopover extends Component {
     constructor() {
@@ -63,7 +64,7 @@ class TraitsPopover extends Component {
 
             return (
                 <Link key={sid} href={traitUrl} className={styles.traitLink}>
-                    <span className={styles.traitName}>{name}</span>
+                    <span className={styles.traitName}>{he.decode(name)}</span>
                     <span className={styles.traitSid}>({sid})</span>
                 </Link>
             );
