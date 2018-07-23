@@ -150,6 +150,7 @@ ShallowWrapper {
                                                 reverse={false}
                                         >
                                                 <GridColumn
+                                                        className={undefined}
                                                         size={10}
                                                 >
                                                         <Label
@@ -354,6 +355,7 @@ ShallowWrapper {
                                                             reverse={false}
                                                 >
                                                             <GridColumn
+                                                                        className={undefined}
                                                                         size={10}
                                                             >
                                                                         <Label
@@ -584,6 +586,7 @@ ShallowWrapper {
                                                         reverse={false}
                                           >
                                                         <GridColumn
+                                                                      className={undefined}
                                                                       size={10}
                                                         >
                                                                       <Label
@@ -768,6 +771,7 @@ ShallowWrapper {
                                                       reverse={false}
                                     >
                                                       <GridColumn
+                                                                        className={undefined}
                                                                         size={10}
                                                       >
                                                                         <Label
@@ -950,6 +954,7 @@ ShallowWrapper {
                                         reverse={false}
                     >
                                         <GridColumn
+                                                            className={undefined}
                                                             size={10}
                                         >
                                                             <Label
@@ -1128,6 +1133,7 @@ ShallowWrapper {
                         reverse={false}
 >
                         <GridColumn
+                                                className={undefined}
                                                 size={10}
                         >
                                                 <Label
@@ -1399,6 +1405,7 @@ ShallowWrapper {
                       "props": Object {
                         "children": Array [
                           <GridColumn
+                            className={undefined}
                             size={10}
 >
                             <Label
@@ -1610,6 +1617,7 @@ ShallowWrapper {
                                 />
 </Label>,
                             ],
+                            "className": undefined,
                             "size": 10,
                           },
                           "ref": null,
@@ -2000,6 +2008,7 @@ ShallowWrapper {
                                                             reverse={false}
                                                   >
                                                             <GridColumn
+                                                                      className={undefined}
                                                                       size={10}
                                                             >
                                                                       <Label
@@ -2204,6 +2213,7 @@ ShallowWrapper {
                                                                       reverse={false}
                                                         >
                                                                       <GridColumn
+                                                                                    className={undefined}
                                                                                     size={10}
                                                                       >
                                                                                     <Label
@@ -2434,6 +2444,7 @@ ShallowWrapper {
                                                                 reverse={false}
                                                 >
                                                                 <GridColumn
+                                                                                className={undefined}
                                                                                 size={10}
                                                                 >
                                                                                 <Label
@@ -2618,6 +2629,7 @@ ShallowWrapper {
                                                             reverse={false}
                                         >
                                                             <GridColumn
+                                                                                className={undefined}
                                                                                 size={10}
                                                             >
                                                                                 <Label
@@ -2800,6 +2812,7 @@ ShallowWrapper {
                                             reverse={false}
                       >
                                             <GridColumn
+                                                                  className={undefined}
                                                                   size={10}
                                             >
                                                                   <Label
@@ -2978,6 +2991,7 @@ ShallowWrapper {
                           reverse={false}
 >
                           <GridColumn
+                                                    className={undefined}
                                                     size={10}
                           >
                                                     <Label
@@ -3249,6 +3263,7 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <GridColumn
+                              className={undefined}
                               size={10}
 >
                               <Label
@@ -3460,6 +3475,7 @@ ShallowWrapper {
                                   />
 </Label>,
                               ],
+                              "className": undefined,
                               "size": 10,
                             },
                             "ref": null,
