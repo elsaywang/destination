@@ -49,6 +49,8 @@ export const getDaysAgoUTCEndOfDay = date =>
         .endOf('day')
         .valueOf();
 
+export const isToday = date => moment.utc(date, customDateFormat, true).isSame(getNow(), 'day');
+
 export const parseDate = dateInput => moment.utc(dateInput, dateInputFormats);
 
 export const boundDate = ({ date, min, max }) => {
