@@ -6,9 +6,6 @@ import Label from './common/Label';
 import { customDateFormat } from '../constants/dateRangeConstants';
 import { getNow, parseDate, boundDate } from '../utils/dateRange';
 
-// The custom start and end dates must be at least 1 day apart.
-const minCustomDateRangeLength = 1;
-
 class CustomDateRange extends Component {
     handleCustomStartDateChange = valueText => {
         const customStartDate = boundDate({
@@ -40,19 +37,13 @@ class CustomDateRange extends Component {
     getMaxCustomStartDate() {
         const { customEndDate } = this.props;
 
-        return moment
-            .utc(customEndDate)
-            .subtract(minCustomDateRangeLength, 'days')
-            .format(customDateFormat);
+        return moment.utc(customEndDate).format(customDateFormat);
     }
 
     getMinCustomEndDate() {
         const { customStartDate } = this.props;
 
-        return moment
-            .utc(customStartDate)
-            .add(minCustomDateRangeLength, 'days')
-            .format(customDateFormat);
+        return moment.utc(customStartDate).format(customDateFormat);
     }
 
     getMaxCustomEndDate() {

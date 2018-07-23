@@ -98,7 +98,7 @@ describe('<CustomDateRange /> component', () => {
     });
 
     describe('getMaxCustomStartDate', () => {
-        it('should default to 1 day ago in UTC', () => {
+        it('should default to today`s date in UTC', () => {
             const wrapper = shallow(
                 <CustomDateRange
                     customStartDate="2018-04-24"
@@ -107,12 +107,12 @@ describe('<CustomDateRange /> component', () => {
                 />,
             );
             const actual = wrapper.instance().getMaxCustomStartDate();
-            const expected = '2018-04-30';
+            const expected = '2018-05-01';
 
             expect(actual).toEqual(expected);
         });
 
-        it('should be 1 day behind the custom end date', () => {
+        it('should be the date of the custom end date', () => {
             const wrapper = shallow(
                 <CustomDateRange
                     customStartDate="2018-04-01"
@@ -121,14 +121,14 @@ describe('<CustomDateRange /> component', () => {
                 />,
             );
             const actual = wrapper.instance().getMaxCustomStartDate();
-            const expected = '2018-04-14';
+            const expected = '2018-04-15';
 
             expect(actual).toEqual(expected);
         });
     });
 
     describe('getMinCustomEndDate', () => {
-        it('should default to 6 days ago in UTC, since the default custom start date is 7 days ago', () => {
+        it('should default to 7 days ago in UTC, since the default custom start date is 7 days ago', () => {
             const wrapper = shallow(
                 <CustomDateRange
                     customStartDate="2018-04-24"
@@ -137,12 +137,12 @@ describe('<CustomDateRange /> component', () => {
                 />,
             );
             const actual = wrapper.instance().getMinCustomEndDate();
-            const expected = '2018-04-25';
+            const expected = '2018-04-24';
 
             expect(actual).toEqual(expected);
         });
 
-        it('should be 1 day ahead of the custom start date', () => {
+        it('should be the date of the custom start date', () => {
             const wrapper = shallow(
                 <CustomDateRange
                     customStartDate="2018-04-01"
@@ -151,7 +151,7 @@ describe('<CustomDateRange /> component', () => {
                 />,
             );
             const actual = wrapper.instance().getMinCustomEndDate();
-            const expected = '2018-04-02';
+            const expected = '2018-04-01';
 
             expect(actual).toEqual(expected);
         });

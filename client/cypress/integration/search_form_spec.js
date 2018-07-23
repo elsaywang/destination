@@ -524,9 +524,9 @@ describe('Search Form Integration Tests', function() {
             });
 
             describe('When a custom date range is selected', function() {
-                it('`startDate` and `endDate` should be the selected dates at UTC midnight in ms', function() {
+                it('`startDate` should be the selected start date at UTC midnight in ms, and `endDate` should be the selected end date at UTC end of day in ms', function() {
                     const expectedStartDate = 1524355200000; // April 22, UTC midnight
-                    const expectedEndDate = 1524528000000; // April 24, UTC midnight
+                    const expectedEndDate = 1524614399999; // April 24, UTC end of day
 
                     cy.get('.view-records')
                         .click()
