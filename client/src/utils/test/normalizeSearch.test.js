@@ -73,7 +73,7 @@ describe('normalizeSearch util', () => {
         });
 
         describe('`viewRecordsFor` is "custom"', () => {
-            it('should set `startDate` to a timestamp of the date of `customStartDate` at the current time of day', () => {
+            it('should set `startDate` to a timestamp of the date of `customStartDate` at UTC midnight', () => {
                 const { startDate: actual } = normalizeSearch({
                     ...baseSearch,
                     viewRecordsFor: 'custom',
@@ -84,13 +84,13 @@ describe('normalizeSearch util', () => {
                 expect(actual).toEqual(expected);
             });
 
-            it('should set `endDate` to a timestamp of the date of `customEndDate` at the current time of day', () => {
+            it('should set `endDate` to a timestamp of the date of `customEndDate` at the end of the day, UTC', () => {
                 const { endDate: actual } = normalizeSearch({
                     ...baseSearch,
                     viewRecordsFor: 'custom',
                     customEndDate: '2018-04-25',
                 });
-                const expected = 1524614400000; // Wednesday, April 25, 2018 12:00:00 AM GMT
+                const expected = 1524700799999; // Wednesday, April 25, 2018 12:00:00 AM GMT
 
                 expect(actual).toEqual(expected);
             });

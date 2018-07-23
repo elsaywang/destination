@@ -37,10 +37,16 @@ export const dateToDaysAgo = (date, format = customDateFormat) =>
 export const getDaysAgo = start =>
     isDateRangePreset(start) ? dateRangePresetToDays(start) : dateToDaysAgo(start);
 
-export const getDaysAgoUTCMidnight = start =>
+export const getDaysAgoUTCMidnight = date =>
     getNow()
-        .subtract(getDaysAgo(start), 'days')
+        .subtract(getDaysAgo(date), 'days')
         .startOf('day')
+        .valueOf();
+
+export const getDaysAgoUTCEndOfDay = date =>
+    getNow()
+        .subtract(getDaysAgo(date), 'days')
+        .endOf('day')
         .valueOf();
 
 export const parseDate = dateInput => moment.utc(dateInput, dateInputFormats);

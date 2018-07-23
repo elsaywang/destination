@@ -1,6 +1,6 @@
 import { isKeyValuePairEmpty } from './searchValidation';
 import { stringifySignal } from './stringifySignals';
-import { getDaysAgoUTCMidnight } from './dateRange';
+import { getDaysAgoUTCMidnight, getDaysAgoUTCEndOfDay } from './dateRange';
 
 const normalizeSearchQuery = searchQuery => {
     const search = stringifySignal(searchQuery);
@@ -15,7 +15,7 @@ const normalizeStartDate = ({ viewRecordsFor, customStartDate }) => ({
 });
 
 const normalizeEndDate = ({ viewRecordsFor, customEndDate }) =>
-    viewRecordsFor === 'custom' && { endDate: getDaysAgoUTCMidnight(customEndDate) };
+    viewRecordsFor === 'custom' && { endDate: getDaysAgoUTCEndOfDay(customEndDate) };
 
 const normalizeSourceType = ({ source: { sourceType } }) => sourceType !== 'ALL' && { sourceType };
 
