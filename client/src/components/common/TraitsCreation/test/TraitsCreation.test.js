@@ -50,7 +50,11 @@ describe('<TraitsCreation /> component', () => {
     describe('rendering when it is used in Multi-Signals Traits Creation', () => {
         const props = {
             multiCreation: true,
-            selectedSignals: { selectionMessage: '', hasWarning: false, records: [] },
+            selectedSignals: {
+                selectionMessage: '',
+                hasTraitsCreationDisabledWarning: false,
+                records: [],
+            },
         };
 
         const wrapper = shallow(<TraitsCreation {...props} />);

@@ -9,8 +9,7 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
         const initialprops = {
             selectedSignals: {
                 selectionMessage: '',
-                records: [],
-                hasWarning: false,
+                hasTraitsCreationDisabledWarning: false,
                 selectedRowIndexes: [],
             },
         };
@@ -29,14 +28,7 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
         const props = {
             selectedSignals: {
                 selectionMessage: '1 Real-time signal selected ',
-                records: [
-                    {
-                        rowIndex: 0,
-                        signalType: 'Adobe Analytics',
-                        source: { sourceType: 'ANALYTICS' },
-                    },
-                ],
-                hasWarning: false,
+                hasTraitsCreationDisabledWarning: false,
                 selectedRowIndexes: [0],
             },
         };

@@ -2,19 +2,20 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { TraitsCreationWarning } from '../TraitsCreationWarning';
 import Warning from '../../components/common/Warning';
-import { SignalsSelectionWarningMessage } from '../../components/common/Warning/WarningTemplates';
+import {
+    SignalsSelectionWarningMessage,
+    SignalsSelectionLimitMessage,
+} from '../../components/common/Warning/WarningTemplates';
 
 describe('<TraitsCreationWarning/> component', () => {
-    describe('rendering when there is no signal selected', () => {
+    describe('rendering when `hasTraitsCreationDisabledWarning` and `isMaxSignalSelectionsReached` props both are false', () => {
         const initialprops = {
-            selectedSignals: {
-                selectionMessage: '',
-                records: [],
-                hasWarning: false,
-            },
+            hasTraitsCreationDisabledWarning: false,
+            isMaxSignalSelectionsReached: false,
+            maxSignalSelections: 5,
         };
-        const { hasWarning } = initialprops.selectedSignals;
-        const wrapper = shallow(<TraitsCreationWarning hasWarning={hasWarning} />);
+
+        const wrapper = shallow(<TraitsCreationWarning {...initialprops} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
@@ -25,47 +26,87 @@ describe('<TraitsCreationWarning/> component', () => {
         });
     });
 
-    describe('rendering when there are signals selected but without warning', () => {
+    describe('rendering when `hasTraitsCreationDisabledWarning` prop is true', () => {
         const props = {
-            selectedSignals: {
-                selectionMessage: '1 Real-time signal selected ',
-                records: [{ rowIndex: 0, signalType: 'Adobe Analytics' }],
-                hasWarning: false,
-            },
+            hasTraitsCreationDisabledWarning: true,
+            isMaxSignalSelectionsReached: false,
+            maxSignalSelections: 5,
         };
-        const { hasWarning } = props.selectedSignals;
-        const wrapper = shallow(<TraitsCreationWarning hasWarning={hasWarning} />);
+
+        const wrapper = shallow(<TraitsCreationWarning {...props} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders null element', () => {
-            expect(wrapper.getElement()).toBe(null);
-        });
-    });
-
-    describe('rendering when there are signals selected with warning', () => {
-        const props = {
-            selectedSignals: {
-                selectionMessage: '1 Onboarded , 1 Real-time are selected',
-                records: [
-                    { rowIndex: 0, signalType: 'Adobe Analytics' },
-                    { rowIndex: 4, signalType: 'Onboarded Records' },
-                ],
-                hasWarning: true,
-            },
-        };
-        const { hasWarning } = props.selectedSignals;
-        const wrapper = shallow(<TraitsCreationWarning hasWarning={hasWarning} />);
-
-        it('matches snapshot', () => {
-            expect(wrapper).toMatchSnapshot();
-        });
-
-        it('renders <Warning/> component with <SignalsSelectionWarningMessage/> template', () => {
+        it('renders <SignalsSelectionWarningMessage/> as children component within <Warning/>', () => {
             expect(wrapper.find(Warning).exists()).toBe(true);
-            expect(wrapper.find(SignalsSelectionWarningMessage).exists()).toBe(true);
+            expect(
+                wrapper
+                    .find(Warning)
+                    .children()
+                    .find(SignalsSelectionWarningMessage)
+                    .exists(),
+            ).toBe(true);
+        });
+
+        it('should not render <SignalsSelectionLimitMessage/> as children component within <Warning/>', () => {
+            expect(wrapper.find(Warning).exists()).toBe(true);
+            expect(
+                wrapper
+                    .find(Warning)
+                    .children()
+                    .find(SignalsSelectionLimitMessage)
+                    .exists(),
+            ).toBe(false);
+        });
+
+        it('should not render <SignalsSelectionLimitMessage/> when `isMaxSignalSelectionsReached` and `hasTraitsCreationDisabledWarning` props are true', () => {
+            wrapper.setProps({ isMaxSignalSelectionsReached: true });
+            expect(wrapper.find(Warning).exists()).toBe(true);
+            expect(
+                wrapper
+                    .find(Warning)
+                    .children()
+                    .find(SignalsSelectionLimitMessage)
+                    .exists(),
+            ).toBe(false);
+        });
+    });
+
+    describe('rendering when `isMaxSignalSelectionsReached` props is true', () => {
+        const props = {
+            hasTraitsCreationDisabledWarning: false,
+            isMaxSignalSelectionsReached: true,
+            maxSignalSelections: 5,
+        };
+
+        const wrapper = shallow(<TraitsCreationWarning {...props} />);
+
+        it('matches snapshot', () => {
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it('renders <SignalsSelectionLimitMessage/> as children component within <Warning/>', () => {
+            expect(wrapper.find(Warning).exists()).toBe(true);
+            expect(
+                wrapper
+                    .find(Warning)
+                    .children()
+                    .find(SignalsSelectionLimitMessage)
+                    .exists(),
+            ).toBe(true);
+        });
+
+        it('should not render <SignalsSelectionWarningMessage/> as children component within <Warning/> as `hasTraitsCreationDisabledWarning` props is false', () => {
+            expect(wrapper.find(Warning).exists()).toBe(true);
+            expect(
+                wrapper
+                    .find(Warning)
+                    .children()
+                    .find(SignalsSelectionWarningMessage)
+                    .exists(),
+            ).toBe(false);
         });
     });
 });

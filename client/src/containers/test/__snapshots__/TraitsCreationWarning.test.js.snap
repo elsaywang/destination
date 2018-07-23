@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TraitsCreationWarning/> component rendering when there are signals selected but without warning matches snapshot 1`] = `
+exports[`<TraitsCreationWarning/> component rendering when \`hasTraitsCreationDisabledWarning\` and \`isMaxSignalSelectionsReached\` props both are false matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
-    hasWarning={false}
+    hasTraitsCreationDisabledWarning={false}
+    isMaxSignalSelectionsReached={false}
+    maxSignalSelections={5}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -28,12 +30,14 @@ ShallowWrapper {
 }
 `;
 
-exports[`<TraitsCreationWarning/> component rendering when there are signals selected with warning matches snapshot 1`] = `
+exports[`<TraitsCreationWarning/> component rendering when \`hasTraitsCreationDisabledWarning\` prop is true matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
-    hasWarning={true}
+    hasTraitsCreationDisabledWarning={true}
+    isMaxSignalSelectionsReached={false}
+    maxSignalSelections={5}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -92,12 +96,14 @@ ShallowWrapper {
 }
 `;
 
-exports[`<TraitsCreationWarning/> component rendering when there is no signal selected matches snapshot 1`] = `
+exports[`<TraitsCreationWarning/> component rendering when \`isMaxSignalSelectionsReached\` props is true matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
-    hasWarning={false}
+    hasTraitsCreationDisabledWarning={false}
+    isMaxSignalSelectionsReached={true}
+    maxSignalSelections={5}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -106,9 +112,53 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): null,
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Unknown
+        maxSignalSelections={5}
+/>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "maxSignalSelections": 5,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
   Symbol(enzyme.__nodes__): Array [
-    null,
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Unknown
+          maxSignalSelections={5}
+/>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "maxSignalSelections": 5,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

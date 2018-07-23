@@ -91,6 +91,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isMaxSignalSelectionsReached={false}
     isResultsLoaded={false}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
@@ -1854,6 +1855,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isMaxSignalSelectionsReached={false}
     isResultsLoaded={true}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}
@@ -3617,6 +3619,7 @@ ShallowWrapper {
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
+    isMaxSignalSelectionsReached={false}
     isResultsLoaded={true}
     isSavedSearchLimitReached={false}
     isSavedSearchLoaded={false}

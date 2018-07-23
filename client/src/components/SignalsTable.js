@@ -12,7 +12,10 @@ import {
     onboardedRecordsColumns,
 } from '../constants/columns';
 import { defaultRowHeight } from '../constants/rows';
-import { renderSelectedSignalsMessage, hasWarning } from '../utils/signalSelection';
+import {
+    renderSelectedSignalsMessage,
+    hasTraitsCreationDisabledWarning,
+} from '../utils/signalSelection';
 import { isNumeric } from '../utils/isNumeric';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
@@ -48,7 +51,7 @@ class SignalsTable extends Component {
         const selectionMessage = renderSelectedSignalsMessage(records);
         onSignalRecordsSelection({
             selectionMessage,
-            hasWarning: hasWarning(records),
+            hasTraitsCreationDisabledWarning: hasTraitsCreationDisabledWarning(records),
             selectedRowIndexes: selectedRowIndexSet,
         });
     };
@@ -198,6 +201,7 @@ class SignalsTable extends Component {
             onLoadMore,
             allowsSelection,
             selectedRowIndexes,
+            isMaxSignalSelectionsReached,
         } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
         const items = this.formatSignalsList(results);
@@ -215,6 +219,7 @@ class SignalsTable extends Component {
                 onSelectionChange={this.handleSelectionChange}
                 allowsSelection={allowsSelection}
                 selectedRowIndexes={selectedRowIndexes}
+                isMaxSelectedRowsReached={isMaxSignalSelectionsReached}
             />
         );
     }
@@ -225,6 +230,7 @@ SignalsTable.propTypes = {
     totalKeyValuePairs: PropTypes.number,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
+    isMaxSignalSelectionsReached: PropTypes.bool,
     onSignalRecordsSelection: PropTypes.func,
     onSortSearch: PropTypes.func,
     onLoadMore: PropTypes.func,

@@ -39,6 +39,9 @@ class Table extends Component {
         if (!this.props.selectedRowIndexes || !nextProps.selectedRowIndexes) {
             return true;
         }
+        if (this.props.isMaxSelectedRowsReached || nextProps.isMaxSelectedRowsReached) {
+            return false;
+        }
         const getSelectedRowIndexes = ({ selectedRowIndexes }) =>
             JSON.stringify(selectedRowIndexes.sort());
 
@@ -85,6 +88,7 @@ Table.propTypes = {
     renderCell: PropTypes.func.isRequired,
     rowHeight: PropTypes.number,
     selectedRowIndexes: PropTypes.array,
+    isMaxSelectedRowsReached: PropTypes.bool,
     onSelectionChange: PropTypes.func,
     sortSearch: PropTypes.func,
     dataTest: PropTypes.string,

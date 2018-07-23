@@ -5,7 +5,7 @@ import {
     getTotalOnboardedRecords,
     getTotalRealTimeRecords,
     renderSelectedSignalsMessage,
-    hasWarning,
+    hasTraitsCreationDisabledWarning,
 } from '../signalSelection.js';
 
 describe('signalSelection Utils', () => {
@@ -203,13 +203,13 @@ describe('signalSelection Utils', () => {
         });
     });
 
-    describe('test on hasWarning function to validate selected records signal types', () => {
+    describe('test on hasTraitsCreationDisabledWarning function to validate selected records signal types', () => {
         it('should return true when 1 Onboarded and 1 Real-Time are selected', () => {
             const rowRecords = [
                 { signalType: 'Onboarded Records', rowIndex: 4 },
                 { signalType: 'Adobe Analytics', rowIndex: 2 },
             ];
-            expect(hasWarning(rowRecords)).toBe(true);
+            expect(hasTraitsCreationDisabledWarning(rowRecords)).toBe(true);
         });
 
         it('should return true when multiple Onboarded and 1 Real-Time are selected', () => {
@@ -219,7 +219,7 @@ describe('signalSelection Utils', () => {
                 { signalType: 'Onboarded Records', rowIndex: 9 },
                 { signalType: 'Actionable Log Files', rowIndex: 2 },
             ];
-            expect(hasWarning(rowRecords)).toBe(true);
+            expect(hasTraitsCreationDisabledWarning(rowRecords)).toBe(true);
         });
 
         it('should return true when 1 Onboarded and multiple Real-Time are selected', () => {
@@ -229,12 +229,12 @@ describe('signalSelection Utils', () => {
                 { signalType: 'General Online Data', rowIndex: 14 },
                 { signalType: 'Actionable Log Files', rowIndex: 0 },
             ];
-            expect(hasWarning(rowRecords)).toBe(true);
+            expect(hasTraitsCreationDisabledWarning(rowRecords)).toBe(true);
         });
 
         it('should return false when no record is selected', () => {
             const rowRecords = [];
-            expect(hasWarning(rowRecords)).toBe(false);
+            expect(hasTraitsCreationDisabledWarning(rowRecords)).toBe(false);
         });
 
         it('should return false when only Onboarded records are selected', () => {
@@ -242,7 +242,7 @@ describe('signalSelection Utils', () => {
                 { signalType: 'Onboarded Records', rowIndex: 4 },
                 { signalType: 'Onboarded Records', rowIndex: 1 },
             ];
-            expect(hasWarning(rowRecords)).toBe(false);
+            expect(hasTraitsCreationDisabledWarning(rowRecords)).toBe(false);
         });
 
         it('should return false when only Real-Time records are selected', () => {
@@ -252,7 +252,7 @@ describe('signalSelection Utils', () => {
                 { signalType: 'Actionable Log Files', rowIndex: 0 },
                 { signalType: 'Adobe Analytics', rowIndex: 1 },
             ];
-            expect(hasWarning(rowRecords)).toBe(false);
+            expect(hasTraitsCreationDisabledWarning(rowRecords)).toBe(false);
         });
     });
 });

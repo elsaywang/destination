@@ -7,16 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreationContainer
     selectedSignals={
         Object {
-            "hasWarning": false,
-            "records": Array [
-              Object {
-                "rowIndex": 0,
-                "signalType": "Adobe Analytics",
-                "source": Object {
-                  "sourceType": "ANALYTICS",
-                },
-              },
-            ],
+            "hasTraitsCreationDisabledWarning": false,
             "selectedRowIndexes": Array [
               0,
             ],
@@ -38,16 +29,7 @@ ShallowWrapper {
     "props": Object {
       "multiCreation": true,
       "selectedSignals": Object {
-        "hasWarning": false,
-        "records": Array [
-          Object {
-            "rowIndex": 0,
-            "signalType": "Adobe Analytics",
-            "source": Object {
-              "sourceType": "ANALYTICS",
-            },
-          },
-        ],
+        "hasTraitsCreationDisabledWarning": false,
         "selectedRowIndexes": Array [
           0,
         ],
@@ -66,16 +48,7 @@ ShallowWrapper {
       "props": Object {
         "multiCreation": true,
         "selectedSignals": Object {
-          "hasWarning": false,
-          "records": Array [
-            Object {
-              "rowIndex": 0,
-              "signalType": "Adobe Analytics",
-              "source": Object {
-                "sourceType": "ANALYTICS",
-              },
-            },
-          ],
+          "hasTraitsCreationDisabledWarning": false,
           "selectedRowIndexes": Array [
             0,
           ],
@@ -104,8 +77,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreationContainer
     selectedSignals={
         Object {
-            "hasWarning": false,
-            "records": Array [],
+            "hasTraitsCreationDisabledWarning": false,
             "selectedRowIndexes": Array [],
             "selectionMessage": "",
           }

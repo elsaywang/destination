@@ -8,7 +8,7 @@ ShallowWrapper {
     multiCreation={true}
     selectedSignals={
         Object {
-            "hasWarning": false,
+            "hasTraitsCreationDisabledWarning": false,
             "records": Array [],
             "selectionMessage": "",
           }
@@ -27,7 +27,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "selectedSignals": Object {
-        "hasWarning": false,
+        "hasTraitsCreationDisabledWarning": false,
         "records": Array [],
         "selectionMessage": "",
       },
@@ -44,7 +44,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "selectedSignals": Object {
-          "hasWarning": false,
+          "hasTraitsCreationDisabledWarning": false,
           "records": Array [],
           "selectionMessage": "",
         },
