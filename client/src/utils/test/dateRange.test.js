@@ -10,6 +10,8 @@ import {
     dateToDaysAgo,
     getDaysAgo,
     getDaysAgoUTCMidnight,
+    getDaysAgoUTCEndOfDay,
+    isToday,
     parseDate,
     boundDate,
 } from '../dateRange';
@@ -152,16 +154,62 @@ describe('date range utils', () => {
     });
 
     describe('getDaysAgoUTCMidnight', () => {
-        it('should return the timestamp for the number of days ago from "now" that corresponds to the input if it is a date range preset', () => {
+        it('should return the timestamp for the number of days ago from "now" at UTC midnight that corresponds to the input if it is a date range preset', () => {
             const actual = getDaysAgoUTCMidnight('7D');
             const expected = 1524528000000; // Tue Apr 24 2018 00:00:00 GMT+0000 (GMT)
 
             expect(actual).toEqual(expected);
         });
 
-        it('should return the timestamp for the number of days ago from "now" that corresponds to the input if it is a date in the format YYYY-MM-DD', () => {
+        it('should return the timestamp for the number of days ago from "now" at UTC midnight that corresponds to the input if it is a date in the format YYYY-MM-DD', () => {
             const actual = getDaysAgoUTCMidnight('2018-04-17');
             const expected = 1523923200000; // Tue Apr 17 2018 00:00:00 GMT+0000 (GMT)
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('getDaysAgoUTCEndOfDay', () => {
+        it('should return the timestamp for the number of days ago from "now" at UTC end of day that corresponds to the input if it is a date range preset', () => {
+            const actual = getDaysAgoUTCEndOfDay('7D');
+            const expected = 1524614399999; // Tue Apr 24 2018 23:59:59 GMT+0000 (GMT)
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should return the timestamp for the number of days ago from "now" at UTC end of day that corresponds to the input if it is a date in the format YYYY-MM-DD', () => {
+            const actual = getDaysAgoUTCEndOfDay('2018-04-17');
+            const expected = 1524009599999; // Tue Apr 17 2018 23:59:59 GMT+0000 (GMT)
+
+            expect(actual).toEqual(expected);
+        });
+    });
+
+    describe('isToday', () => {
+        it('should return true if the given date is today`s date in UTC', () => {
+            const actual = isToday('2018-05-01');
+            const expected = true;
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should return false if the given date is not today`s date in UTC', () => {
+            const actual = isToday('2018-05-02');
+            const expected = false;
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should return false for date range presets', () => {
+            const actual = isToday('1D');
+            const expected = false;
+
+            expect(actual).toEqual(expected);
+        });
+
+        it('should expect dates in the format YYYY-MM-DD', () => {
+            const actual = isToday('5/1/2018');
+            const expected = false;
 
             expect(actual).toEqual(expected);
         });
