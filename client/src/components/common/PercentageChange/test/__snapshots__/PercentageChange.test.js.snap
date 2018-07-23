@@ -29,13 +29,13 @@ ShallowWrapper {
           [Function]
 </FormattedNumber>,
         <span
-          className={undefined}
+          className="barContainer"
 >
           <span
-                    className={undefined}
+                    className="middleDivider"
           />
           <span
-                    className={undefined}
+                    className="bar"
                     style={
                               Object {
                                         "width": "0.58rem",
@@ -44,7 +44,7 @@ ShallowWrapper {
           />
 </span>,
       ],
-      "className": "",
+      "className": "percentageChange percentageChange--positive",
     },
     "ref": null,
     "rendered": Array [
@@ -69,10 +69,10 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <span
-              className={undefined}
+              className="middleDivider"
 />,
             <span
-              className={undefined}
+              className="bar"
               style={
                             Object {
                                           "width": "0.58rem",
@@ -80,7 +80,7 @@ ShallowWrapper {
               }
 />,
           ],
-          "className": undefined,
+          "className": "barContainer",
         },
         "ref": null,
         "rendered": Array [
@@ -89,7 +89,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": undefined,
+              "className": "middleDivider",
             },
             "ref": null,
             "rendered": null,
@@ -100,7 +100,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": undefined,
+              "className": "bar",
               "style": Object {
                 "width": "0.58rem",
               },
@@ -130,13 +130,13 @@ ShallowWrapper {
             [Function]
 </FormattedNumber>,
           <span
-            className={undefined}
+            className="barContainer"
 >
             <span
-                        className={undefined}
+                        className="middleDivider"
             />
             <span
-                        className={undefined}
+                        className="bar"
                         style={
                                     Object {
                                                 "width": "0.58rem",
@@ -145,7 +145,7 @@ ShallowWrapper {
             />
 </span>,
         ],
-        "className": "",
+        "className": "percentageChange percentageChange--positive",
       },
       "ref": null,
       "rendered": Array [
@@ -170,10 +170,10 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <span
-                className={undefined}
+                className="middleDivider"
 />,
               <span
-                className={undefined}
+                className="bar"
                 style={
                                 Object {
                                                 "width": "0.58rem",
@@ -181,7 +181,7 @@ ShallowWrapper {
                 }
 />,
             ],
-            "className": undefined,
+            "className": "barContainer",
           },
           "ref": null,
           "rendered": Array [
@@ -190,7 +190,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": undefined,
+                "className": "middleDivider",
               },
               "ref": null,
               "rendered": null,
@@ -201,7 +201,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": undefined,
+                "className": "bar",
                 "style": Object {
                   "width": "0.58rem",
                 },

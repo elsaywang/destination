@@ -41,7 +41,7 @@ ShallowWrapper {
                 You may save up to 10 searches
         </Tooltip>
 </OverlayTrigger>,
-      "className": "",
+      "className": "tooltip",
       "data-test": "overlay-tooltip",
     },
     "ref": null,
@@ -133,7 +133,7 @@ ShallowWrapper {
                     You may save up to 10 searches
           </Tooltip>
 </OverlayTrigger>,
-        "className": "",
+        "className": "tooltip",
         "data-test": "overlay-tooltip",
       },
       "ref": null,

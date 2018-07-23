@@ -22,13 +22,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Heading
-          className={undefined}
+          className="heading"
           size={3}
 >
           Filter by Signal Type
 </Heading>,
         <TabList
-          className={undefined}
+          className="signalType"
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
@@ -90,7 +90,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Filter by Signal Type",
-          "className": undefined,
+          "className": "heading",
           "size": 3,
         },
         "ref": null,
@@ -149,7 +149,7 @@ ShallowWrapper {
               Onboarded Records
 </Tab>,
           ],
-          "className": undefined,
+          "className": "signalType",
           "onChange": [Function],
           "orientation": "vertical",
           "quiet": false,
@@ -251,13 +251,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Heading
-            className={undefined}
+            className="heading"
             size={3}
 >
             Filter by Signal Type
 </Heading>,
           <TabList
-            className={undefined}
+            className="signalType"
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
@@ -319,7 +319,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Filter by Signal Type",
-            "className": undefined,
+            "className": "heading",
             "size": 3,
           },
           "ref": null,
@@ -378,7 +378,7 @@ ShallowWrapper {
                 Onboarded Records
 </Tab>,
             ],
-            "className": undefined,
+            "className": "signalType",
             "onChange": [Function],
             "orientation": "vertical",
             "quiet": false,
@@ -505,13 +505,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Heading
-          className={undefined}
+          className="heading"
           size={3}
 >
           Filter by Signal Type
 </Heading>,
         <TabList
-          className={undefined}
+          className="signalType"
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
@@ -573,7 +573,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Filter by Signal Type",
-          "className": undefined,
+          "className": "heading",
           "size": 3,
         },
         "ref": null,
@@ -632,7 +632,7 @@ ShallowWrapper {
               Onboarded Records
 </Tab>,
           ],
-          "className": undefined,
+          "className": "signalType",
           "onChange": [Function],
           "orientation": "vertical",
           "quiet": false,
@@ -734,13 +734,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Heading
-            className={undefined}
+            className="heading"
             size={3}
 >
             Filter by Signal Type
 </Heading>,
           <TabList
-            className={undefined}
+            className="signalType"
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
@@ -802,7 +802,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Filter by Signal Type",
-            "className": undefined,
+            "className": "heading",
             "size": 3,
           },
           "ref": null,
@@ -861,7 +861,7 @@ ShallowWrapper {
                 Onboarded Records
 </Tab>,
             ],
-            "className": undefined,
+            "className": "signalType",
             "onChange": [Function],
             "orientation": "vertical",
             "quiet": false,
