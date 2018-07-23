@@ -32,7 +32,8 @@ export class TraitsCreationWarning extends Component {
                     <SignalsSelectionLimitMessage maxSignalSelections={maxSignalSelections} />
                 </Warning>
             );
-        } else return null;
+        }
+        return null;
     }
 }
 
