@@ -237,7 +237,7 @@ ShallowWrapper {
                     size={12}
           >
                     <div
-                              className={undefined}
+                              className="saveSearch"
                     >
                               <SavedSearch
                                         currentSearch=""
@@ -319,7 +319,7 @@ ShallowWrapper {
                     size={12}
           >
                     <EmptySearch
-                              className={undefined}
+                              className="empty"
                               variant="explore"
                     />
           </GridColumn>
@@ -573,7 +573,7 @@ ShallowWrapper {
             size={12}
 >
             <div
-                        className={undefined}
+                        className="saveSearch"
             >
                         <SavedSearch
                                     currentSearch=""
@@ -657,7 +657,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <div
-              className={undefined}
+              className="saveSearch"
 >
               <SavedSearch
                             currentSearch=""
@@ -811,7 +811,7 @@ ShallowWrapper {
 />,
                 false,
               ],
-              "className": undefined,
+              "className": "saveSearch",
             },
             "ref": null,
             "rendered": Array [
@@ -906,7 +906,7 @@ ShallowWrapper {
             size={12}
 >
             <EmptySearch
-                        className={undefined}
+                        className="empty"
                         variant="explore"
             />
 </GridColumn>,
@@ -919,7 +919,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <EmptySearch
-              className={undefined}
+              className="empty"
               variant="explore"
 />,
             "size": 12,
@@ -930,7 +930,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "className": undefined,
+              "className": "empty",
               "variant": "explore",
             },
             "ref": null,
@@ -1037,7 +1037,7 @@ ShallowWrapper {
                         size={12}
             >
                         <div
-                                    className={undefined}
+                                    className="saveSearch"
                         >
                                     <SavedSearch
                                                 currentSearch=""
@@ -1119,7 +1119,7 @@ ShallowWrapper {
                         size={12}
             >
                         <EmptySearch
-                                    className={undefined}
+                                    className="empty"
                                     variant="explore"
                         />
             </GridColumn>
@@ -1373,7 +1373,7 @@ ShallowWrapper {
               size={12}
 >
               <div
-                            className={undefined}
+                            className="saveSearch"
               >
                             <SavedSearch
                                           currentSearch=""
@@ -1457,7 +1457,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <div
-                className={undefined}
+                className="saveSearch"
 >
                 <SavedSearch
                                 currentSearch=""
@@ -1611,7 +1611,7 @@ ShallowWrapper {
 />,
                   false,
                 ],
-                "className": undefined,
+                "className": "saveSearch",
               },
               "ref": null,
               "rendered": Array [
@@ -1706,7 +1706,7 @@ ShallowWrapper {
               size={12}
 >
               <EmptySearch
-                            className={undefined}
+                            className="empty"
                             variant="explore"
               />
 </GridColumn>,
@@ -1719,7 +1719,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <EmptySearch
-                className={undefined}
+                className="empty"
                 variant="explore"
 />,
               "size": 12,
@@ -1730,7 +1730,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": undefined,
+                "className": "empty",
                 "variant": "explore",
               },
               "ref": null,
@@ -2001,7 +2001,7 @@ ShallowWrapper {
                     size={12}
           >
                     <div
-                              className={undefined}
+                              className="saveSearch"
                     >
                               <SavedSearch
                                         currentSearch=""
@@ -2083,7 +2083,7 @@ ShallowWrapper {
                     size={12}
           >
                     <EmptySearch
-                              className={undefined}
+                              className="empty"
                               variant="noResult"
                     />
           </GridColumn>
@@ -2337,7 +2337,7 @@ ShallowWrapper {
             size={12}
 >
             <div
-                        className={undefined}
+                        className="saveSearch"
             >
                         <SavedSearch
                                     currentSearch=""
@@ -2421,7 +2421,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <div
-              className={undefined}
+              className="saveSearch"
 >
               <SavedSearch
                             currentSearch=""
@@ -2575,7 +2575,7 @@ ShallowWrapper {
 />,
                 false,
               ],
-              "className": undefined,
+              "className": "saveSearch",
             },
             "ref": null,
             "rendered": Array [
@@ -2670,7 +2670,7 @@ ShallowWrapper {
             size={12}
 >
             <EmptySearch
-                        className={undefined}
+                        className="empty"
                         variant="noResult"
             />
 </GridColumn>,
@@ -2683,7 +2683,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <EmptySearch
-              className={undefined}
+              className="empty"
               variant="noResult"
 />,
             "size": 12,
@@ -2694,7 +2694,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "className": undefined,
+              "className": "empty",
               "variant": "noResult",
             },
             "ref": null,
@@ -2801,7 +2801,7 @@ ShallowWrapper {
                         size={12}
             >
                         <div
-                                    className={undefined}
+                                    className="saveSearch"
                         >
                                     <SavedSearch
                                                 currentSearch=""
@@ -2883,7 +2883,7 @@ ShallowWrapper {
                         size={12}
             >
                         <EmptySearch
-                                    className={undefined}
+                                    className="empty"
                                     variant="noResult"
                         />
             </GridColumn>
@@ -3137,7 +3137,7 @@ ShallowWrapper {
               size={12}
 >
               <div
-                            className={undefined}
+                            className="saveSearch"
               >
                             <SavedSearch
                                           currentSearch=""
@@ -3221,7 +3221,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <div
-                className={undefined}
+                className="saveSearch"
 >
                 <SavedSearch
                                 currentSearch=""
@@ -3375,7 +3375,7 @@ ShallowWrapper {
 />,
                   false,
                 ],
-                "className": undefined,
+                "className": "saveSearch",
               },
               "ref": null,
               "rendered": Array [
@@ -3470,7 +3470,7 @@ ShallowWrapper {
               size={12}
 >
               <EmptySearch
-                            className={undefined}
+                            className="empty"
                             variant="noResult"
               />
 </GridColumn>,
@@ -3483,7 +3483,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <EmptySearch
-                className={undefined}
+                className="empty"
                 variant="noResult"
 />,
               "size": 12,
@@ -3494,7 +3494,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": undefined,
+                "className": "empty",
                 "variant": "noResult",
               },
               "ref": null,
@@ -3765,7 +3765,7 @@ ShallowWrapper {
                     size={12}
           >
                     <div
-                              className={undefined}
+                              className="saveSearch"
                     >
                               <SavedSearch
                                         currentSearch=""
@@ -3847,7 +3847,7 @@ ShallowWrapper {
                     size={12}
           >
                     <EmptySearch
-                              className={undefined}
+                              className="empty"
                               variant="noResult"
                     />
           </GridColumn>
@@ -4101,7 +4101,7 @@ ShallowWrapper {
             size={12}
 >
             <div
-                        className={undefined}
+                        className="saveSearch"
             >
                         <SavedSearch
                                     currentSearch=""
@@ -4185,7 +4185,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <div
-              className={undefined}
+              className="saveSearch"
 >
               <SavedSearch
                             currentSearch=""
@@ -4339,7 +4339,7 @@ ShallowWrapper {
 />,
                 false,
               ],
-              "className": undefined,
+              "className": "saveSearch",
             },
             "ref": null,
             "rendered": Array [
@@ -4434,7 +4434,7 @@ ShallowWrapper {
             size={12}
 >
             <EmptySearch
-                        className={undefined}
+                        className="empty"
                         variant="noResult"
             />
 </GridColumn>,
@@ -4447,7 +4447,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <EmptySearch
-              className={undefined}
+              className="empty"
               variant="noResult"
 />,
             "size": 12,
@@ -4458,7 +4458,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "className": undefined,
+              "className": "empty",
               "variant": "noResult",
             },
             "ref": null,
@@ -4565,7 +4565,7 @@ ShallowWrapper {
                         size={12}
             >
                         <div
-                                    className={undefined}
+                                    className="saveSearch"
                         >
                                     <SavedSearch
                                                 currentSearch=""
@@ -4647,7 +4647,7 @@ ShallowWrapper {
                         size={12}
             >
                         <EmptySearch
-                                    className={undefined}
+                                    className="empty"
                                     variant="noResult"
                         />
             </GridColumn>
@@ -4901,7 +4901,7 @@ ShallowWrapper {
               size={12}
 >
               <div
-                            className={undefined}
+                            className="saveSearch"
               >
                             <SavedSearch
                                           currentSearch=""
@@ -4985,7 +4985,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <div
-                className={undefined}
+                className="saveSearch"
 >
                 <SavedSearch
                                 currentSearch=""
@@ -5139,7 +5139,7 @@ ShallowWrapper {
 />,
                   false,
                 ],
-                "className": undefined,
+                "className": "saveSearch",
               },
               "ref": null,
               "rendered": Array [
@@ -5234,7 +5234,7 @@ ShallowWrapper {
               size={12}
 >
               <EmptySearch
-                            className={undefined}
+                            className="empty"
                             variant="noResult"
               />
 </GridColumn>,
@@ -5247,7 +5247,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <EmptySearch
-                className={undefined}
+                className="empty"
                 variant="noResult"
 />,
               "size": 12,
@@ -5258,7 +5258,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": undefined,
+                "className": "empty",
                 "variant": "noResult",
               },
               "ref": null,

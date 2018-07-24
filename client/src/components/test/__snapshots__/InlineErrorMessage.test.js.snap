@@ -54,12 +54,12 @@ ShallowWrapper {
           size="S"
 />,
         <span
-          className={undefined}
+          className="errorMessage"
 >
           This is an error message.
 </span>,
       ],
-      "className": "",
+      "className": "error",
       "data-test": "inline-error",
     },
     "ref": null,
@@ -81,7 +81,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "This is an error message.",
-          "className": undefined,
+          "className": "errorMessage",
         },
         "ref": null,
         "rendered": "This is an error message.",
@@ -101,12 +101,12 @@ ShallowWrapper {
             size="S"
 />,
           <span
-            className={undefined}
+            className="errorMessage"
 >
             This is an error message.
 </span>,
         ],
-        "className": "",
+        "className": "error",
         "data-test": "inline-error",
       },
       "ref": null,
@@ -128,7 +128,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "This is an error message.",
-            "className": undefined,
+            "className": "errorMessage",
           },
           "ref": null,
           "rendered": "This is an error message.",

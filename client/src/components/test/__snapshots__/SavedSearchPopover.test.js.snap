@@ -88,7 +88,7 @@ ShallowWrapper {
           trigger="hover"
 >
           <Tag
-                    className={undefined}
+                    className="tag"
                     data-saved-search-id={undefined}
                     data-saved-search-preset={undefined}
                     data-test="saved-search-tag"
@@ -106,7 +106,7 @@ ShallowWrapper {
                     variant="default"
           >
                     <Heading
-                              className={undefined}
+                              className="heading"
                               size="5"
                     >
                               Name
@@ -117,7 +117,7 @@ ShallowWrapper {
                               Loren Waters
                     </div>
                     <Heading
-                              className={undefined}
+                              className="heading"
                               size="5"
                     >
                               Search Query
@@ -128,7 +128,7 @@ ShallowWrapper {
                               "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
                     </div>
                     <Heading
-                              className={undefined}
+                              className="heading"
                               size="5"
                     >
                               Filters
@@ -194,7 +194,7 @@ ShallowWrapper {
                               </FieldLabel>
                     </div>
                     <Heading
-                              className={undefined}
+                              className="heading"
                               size="5"
                     >
                               Sorting
@@ -208,7 +208,7 @@ ShallowWrapper {
 </OverlayTrigger>,
         false,
       ],
-      "className": undefined,
+      "className": "tagBlock",
     },
     "ref": null,
     "rendered": Array [
@@ -220,7 +220,7 @@ ShallowWrapper {
           "boundariesElement": [Function],
           "children": Array [
             <Tag
-              className={undefined}
+              className="tag"
               data-saved-search-id={undefined}
               data-saved-search-preset={undefined}
               data-test="saved-search-tag"
@@ -238,7 +238,7 @@ ShallowWrapper {
               variant="default"
 >
               <Heading
-                            className={undefined}
+                            className="heading"
                             size="5"
               >
                             Name
@@ -249,7 +249,7 @@ ShallowWrapper {
                             Loren Waters
               </div>
               <Heading
-                            className={undefined}
+                            className="heading"
                             size="5"
               >
                             Search Query
@@ -260,7 +260,7 @@ ShallowWrapper {
                             "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
               </div>
               <Heading
-                            className={undefined}
+                            className="heading"
                             size="5"
               >
                             Filters
@@ -326,7 +326,7 @@ ShallowWrapper {
                             </FieldLabel>
               </div>
               <Heading
-                            className={undefined}
+                            className="heading"
                             size="5"
               >
                             Sorting
@@ -354,7 +354,7 @@ ShallowWrapper {
             "key": "Loren Waters",
             "nodeType": "function",
             "props": Object {
-              "className": undefined,
+              "className": "tag",
               "data-saved-search-id": undefined,
               "data-saved-search-preset": undefined,
               "data-test": "saved-search-tag",
@@ -374,7 +374,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Heading
-                  className={undefined}
+                  className="heading"
                   size="5"
 >
                   Name
@@ -385,7 +385,7 @@ ShallowWrapper {
                   Loren Waters
 </div>,
                 <Heading
-                  className={undefined}
+                  className="heading"
                   size="5"
 >
                   Search Query
@@ -396,7 +396,7 @@ ShallowWrapper {
                   "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
 </div>,
                 <Heading
-                  className={undefined}
+                  className="heading"
                   size="5"
 >
                   Filters
@@ -462,7 +462,7 @@ ShallowWrapper {
                   </FieldLabel>
 </div>,
                 <Heading
-                  className={undefined}
+                  className="heading"
                   size="5"
 >
                   Sorting
@@ -488,7 +488,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "Name",
-                  "className": undefined,
+                  "className": "heading",
                   "size": "5",
                 },
                 "ref": null,
@@ -513,7 +513,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "Search Query",
-                  "className": undefined,
+                  "className": "heading",
                   "size": "5",
                 },
                 "ref": null,
@@ -538,7 +538,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "Filters",
-                  "className": undefined,
+                  "className": "heading",
                   "size": "5",
                 },
                 "ref": null,
@@ -768,7 +768,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "Sorting",
-                  "className": undefined,
+                  "className": "heading",
                   "size": "5",
                 },
                 "ref": null,
@@ -816,7 +816,7 @@ ShallowWrapper {
             trigger="hover"
 >
             <Tag
-                        className={undefined}
+                        className="tag"
                         data-saved-search-id={undefined}
                         data-saved-search-preset={undefined}
                         data-test="saved-search-tag"
@@ -834,7 +834,7 @@ ShallowWrapper {
                         variant="default"
             >
                         <Heading
-                                    className={undefined}
+                                    className="heading"
                                     size="5"
                         >
                                     Name
@@ -845,7 +845,7 @@ ShallowWrapper {
                                     Loren Waters
                         </div>
                         <Heading
-                                    className={undefined}
+                                    className="heading"
                                     size="5"
                         >
                                     Search Query
@@ -856,7 +856,7 @@ ShallowWrapper {
                                     "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
                         </div>
                         <Heading
-                                    className={undefined}
+                                    className="heading"
                                     size="5"
                         >
                                     Filters
@@ -922,7 +922,7 @@ ShallowWrapper {
                                     </FieldLabel>
                         </div>
                         <Heading
-                                    className={undefined}
+                                    className="heading"
                                     size="5"
                         >
                                     Sorting
@@ -936,7 +936,7 @@ ShallowWrapper {
 </OverlayTrigger>,
           false,
         ],
-        "className": undefined,
+        "className": "tagBlock",
       },
       "ref": null,
       "rendered": Array [
@@ -948,7 +948,7 @@ ShallowWrapper {
             "boundariesElement": [Function],
             "children": Array [
               <Tag
-                className={undefined}
+                className="tag"
                 data-saved-search-id={undefined}
                 data-saved-search-preset={undefined}
                 data-test="saved-search-tag"
@@ -966,7 +966,7 @@ ShallowWrapper {
                 variant="default"
 >
                 <Heading
-                                className={undefined}
+                                className="heading"
                                 size="5"
                 >
                                 Name
@@ -977,7 +977,7 @@ ShallowWrapper {
                                 Loren Waters
                 </div>
                 <Heading
-                                className={undefined}
+                                className="heading"
                                 size="5"
                 >
                                 Search Query
@@ -988,7 +988,7 @@ ShallowWrapper {
                                 "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
                 </div>
                 <Heading
-                                className={undefined}
+                                className="heading"
                                 size="5"
                 >
                                 Filters
@@ -1054,7 +1054,7 @@ ShallowWrapper {
                                 </FieldLabel>
                 </div>
                 <Heading
-                                className={undefined}
+                                className="heading"
                                 size="5"
                 >
                                 Sorting
@@ -1082,7 +1082,7 @@ ShallowWrapper {
               "key": "Loren Waters",
               "nodeType": "function",
               "props": Object {
-                "className": undefined,
+                "className": "tag",
                 "data-saved-search-id": undefined,
                 "data-saved-search-preset": undefined,
                 "data-test": "saved-search-tag",
@@ -1102,7 +1102,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Heading
-                    className={undefined}
+                    className="heading"
                     size="5"
 >
                     Name
@@ -1113,7 +1113,7 @@ ShallowWrapper {
                     Loren Waters
 </div>,
                   <Heading
-                    className={undefined}
+                    className="heading"
                     size="5"
 >
                     Search Query
@@ -1124,7 +1124,7 @@ ShallowWrapper {
                     "k-Licensed"&gt;="67425" AND "k-Gorgeous Wooden Shirt"&lt;="98397"
 </div>,
                   <Heading
-                    className={undefined}
+                    className="heading"
                     size="5"
 >
                     Filters
@@ -1190,7 +1190,7 @@ ShallowWrapper {
                     </FieldLabel>
 </div>,
                   <Heading
-                    className={undefined}
+                    className="heading"
                     size="5"
 >
                     Sorting
@@ -1216,7 +1216,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": "Name",
-                    "className": undefined,
+                    "className": "heading",
                     "size": "5",
                   },
                   "ref": null,
@@ -1241,7 +1241,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": "Search Query",
-                    "className": undefined,
+                    "className": "heading",
                     "size": "5",
                   },
                   "ref": null,
@@ -1266,7 +1266,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": "Filters",
-                    "className": undefined,
+                    "className": "heading",
                     "size": "5",
                   },
                   "ref": null,
@@ -1496,7 +1496,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": "Sorting",
-                    "className": undefined,
+                    "className": "heading",
                     "size": "5",
                   },
                   "ref": null,

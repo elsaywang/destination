@@ -397,7 +397,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EmptySearch
-    className={undefined}
+    className="noResults"
     variant="errorFetching"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -414,13 +414,13 @@ ShallowWrapper {
     "props": Object {
       "children": <img
         alt="Error fetching data. Please try again later."
-        className={undefined}
+        className="noResultImage"
         data-test="error-fetching-data"
         src="undefinednoResult.svg"
 />,
-      "className": undefined,
+      "className": "noResults",
       "message": "Please try again later.",
-      "messageStyle": undefined,
+      "messageStyle": "noResultMessage",
       "title": "Error fetching data.",
     },
     "ref": null,
@@ -430,7 +430,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "alt": "Error fetching data. Please try again later.",
-        "className": undefined,
+        "className": "noResultImage",
         "data-test": "error-fetching-data",
         "src": "undefinednoResult.svg",
       },
@@ -448,13 +448,13 @@ ShallowWrapper {
       "props": Object {
         "children": <img
           alt="Error fetching data. Please try again later."
-          className={undefined}
+          className="noResultImage"
           data-test="error-fetching-data"
           src="undefinednoResult.svg"
 />,
-        "className": undefined,
+        "className": "noResults",
         "message": "Please try again later.",
-        "messageStyle": undefined,
+        "messageStyle": "noResultMessage",
         "title": "Error fetching data.",
       },
       "ref": null,
@@ -464,7 +464,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "Error fetching data. Please try again later.",
-          "className": undefined,
+          "className": "noResultImage",
           "data-test": "error-fetching-data",
           "src": "undefinednoResult.svg",
         },
