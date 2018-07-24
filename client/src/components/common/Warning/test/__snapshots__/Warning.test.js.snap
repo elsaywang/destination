@@ -23,10 +23,10 @@ ShallowWrapper {
           variant="warning"
 />,
         <div
-          className={undefined}
+          className="warningMessage"
 />,
       ],
-      "className": undefined,
+      "className": "warning",
     },
     "ref": null,
     "rendered": Array [
@@ -48,7 +48,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": undefined,
-          "className": undefined,
+          "className": "warningMessage",
         },
         "ref": null,
         "rendered": null,
@@ -69,10 +69,10 @@ ShallowWrapper {
             variant="warning"
 />,
           <div
-            className={undefined}
+            className="warningMessage"
 />,
         ],
-        "className": undefined,
+        "className": "warning",
       },
       "ref": null,
       "rendered": Array [
@@ -94,7 +94,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": undefined,
-            "className": undefined,
+            "className": "warningMessage",
           },
           "ref": null,
           "rendered": null,
@@ -141,14 +141,14 @@ ShallowWrapper {
           variant="warning"
 />,
         <div
-          className={undefined}
+          className="warningMessage"
 >
           <Unknown
                     maxSignalSelections={5}
           />
 </div>,
       ],
-      "className": undefined,
+      "className": "warning",
     },
     "ref": null,
     "rendered": Array [
@@ -172,7 +172,7 @@ ShallowWrapper {
           "children": <Unknown
             maxSignalSelections={5}
 />,
-          "className": undefined,
+          "className": "warningMessage",
         },
         "ref": null,
         "rendered": Object {
@@ -203,14 +203,14 @@ ShallowWrapper {
             variant="warning"
 />,
           <div
-            className={undefined}
+            className="warningMessage"
 >
             <Unknown
                         maxSignalSelections={5}
             />
 </div>,
         ],
-        "className": undefined,
+        "className": "warning",
       },
       "ref": null,
       "rendered": Array [
@@ -234,7 +234,7 @@ ShallowWrapper {
             "children": <Unknown
               maxSignalSelections={5}
 />,
-            "className": undefined,
+            "className": "warningMessage",
           },
           "ref": null,
           "rendered": Object {
@@ -289,12 +289,12 @@ ShallowWrapper {
           variant="warning"
 />,
         <div
-          className={undefined}
+          className="warningMessage"
 >
           <Unknown />
 </div>,
       ],
-      "className": undefined,
+      "className": "warning",
     },
     "ref": null,
     "rendered": Array [
@@ -316,7 +316,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <Unknown />,
-          "className": undefined,
+          "className": "warningMessage",
         },
         "ref": null,
         "rendered": Object {
@@ -345,12 +345,12 @@ ShallowWrapper {
             variant="warning"
 />,
           <div
-            className={undefined}
+            className="warningMessage"
 >
             <Unknown />
 </div>,
         ],
-        "className": undefined,
+        "className": "warning",
       },
       "ref": null,
       "rendered": Array [
@@ -372,7 +372,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <Unknown />,
-            "className": undefined,
+            "className": "warningMessage",
           },
           "ref": null,
           "rendered": Object {
@@ -425,12 +425,12 @@ ShallowWrapper {
           variant="warning"
 />,
         <div
-          className={undefined}
+          className="warningMessage"
 >
           <WarningMessage />
 </div>,
       ],
-      "className": undefined,
+      "className": "warning",
     },
     "ref": null,
     "rendered": Array [
@@ -452,7 +452,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <WarningMessage />,
-          "className": undefined,
+          "className": "warningMessage",
         },
         "ref": null,
         "rendered": Object {
@@ -481,12 +481,12 @@ ShallowWrapper {
             variant="warning"
 />,
           <div
-            className={undefined}
+            className="warningMessage"
 >
             <WarningMessage />
 </div>,
         ],
-        "className": undefined,
+        "className": "warning",
       },
       "ref": null,
       "rendered": Array [
@@ -508,7 +508,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <WarningMessage />,
-            "className": undefined,
+            "className": "warningMessage",
           },
           "ref": null,
           "rendered": Object {

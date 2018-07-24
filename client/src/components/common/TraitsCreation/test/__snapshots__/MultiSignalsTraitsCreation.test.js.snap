@@ -27,7 +27,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <span
-          className={undefined}
+          className="message"
 />,
         <Button
           autoFocus={false}
@@ -45,7 +45,7 @@ ShallowWrapper {
           variant="action"
 />,
       ],
-      "className": undefined,
+      "className": "multiCreation",
     },
     "ref": null,
     "rendered": Array [
@@ -55,7 +55,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "",
-          "className": undefined,
+          "className": "message",
         },
         "ref": null,
         "rendered": "",
@@ -95,7 +95,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <span
-            className={undefined}
+            className="message"
 />,
           <Button
             autoFocus={false}
@@ -113,7 +113,7 @@ ShallowWrapper {
             variant="action"
 />,
         ],
-        "className": undefined,
+        "className": "multiCreation",
       },
       "ref": null,
       "rendered": Array [
@@ -123,7 +123,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "",
-            "className": undefined,
+            "className": "message",
           },
           "ref": null,
           "rendered": "",
