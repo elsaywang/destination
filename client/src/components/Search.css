@@ -1,4 +1,4 @@
-:local(.keyValuePairs) {
+:local(.row) {
     composes: flexAlignBottom from './Layout.css';
 }
 

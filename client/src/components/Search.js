@@ -39,7 +39,7 @@ class Search extends Component {
 
         return (
             <GridRow key={pair.id}>
-                <GridColumn size={12} className={styles.keyValuePairs}>
+                <GridColumn size={12} className={styles.row}>
                     <KeyValuePair
                         key={pair.id}
                         pair={pair}
@@ -149,7 +149,7 @@ class Search extends Component {
                                     {this.props.keyValuePairs.map(this.renderKVPFields)}
 
                                     <GridRow>
-                                        <GridColumn size={10}>
+                                        <GridColumn size={10} className={styles.row}>
                                             <Label value="Signal Status">
                                                 <Select
                                                     className="signal-status"
