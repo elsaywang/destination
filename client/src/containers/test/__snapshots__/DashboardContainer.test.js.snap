@@ -343,7 +343,7 @@ ShallowWrapper {
 </div>,
         Array [
           <Well
-            className={undefined}
+            className="dashboardTable"
             data-test="saved-search-dashboard"
 >
             <GridRow
@@ -354,7 +354,7 @@ ShallowWrapper {
                                     size={5}
                         >
                                     <div
-                                                className={undefined}
+                                                className="tableHeader"
                                     >
                                                 <Heading
                                                             size={3}
@@ -362,7 +362,7 @@ ShallowWrapper {
                                                             Clovis Simonis
                                                 </Heading>
                                                 <span
-                                                            className={undefined}
+                                                            className="signalTypeNameHeader"
                                                 />
                                     </div>
                         </GridColumn>
@@ -426,7 +426,7 @@ ShallowWrapper {
             />
 </Well>,
           <Well
-            className={undefined}
+            className="dashboardTable"
             data-test="saved-search-dashboard"
 >
             <GridRow
@@ -437,7 +437,7 @@ ShallowWrapper {
                                     size={5}
                         >
                                     <div
-                                                className={undefined}
+                                                className="tableHeader"
                                     >
                                                 <Heading
                                                             size={3}
@@ -445,7 +445,7 @@ ShallowWrapper {
                                                             Stephen Sanford
                                                 </Heading>
                                                 <span
-                                                            className={undefined}
+                                                            className="signalTypeNameHeader"
                                                 />
                                     </div>
                         </GridColumn>
@@ -557,7 +557,7 @@ ShallowWrapper {
                             size={5}
               >
                             <div
-                                          className={undefined}
+                                          className="tableHeader"
                             >
                                           <Heading
                                                         size={3}
@@ -565,7 +565,7 @@ ShallowWrapper {
                                                         Clovis Simonis
                                           </Heading>
                                           <span
-                                                        className={undefined}
+                                                        className="signalTypeNameHeader"
                                           />
                             </div>
               </GridColumn>
@@ -628,7 +628,7 @@ ShallowWrapper {
               }
 />,
           ],
-          "className": undefined,
+          "className": "dashboardTable",
           "data-test": "saved-search-dashboard",
         },
         "ref": null,
@@ -643,7 +643,7 @@ ShallowWrapper {
                   size={5}
 >
                   <div
-                                    className={undefined}
+                                    className="tableHeader"
                   >
                                     <Heading
                                                       size={3}
@@ -651,7 +651,7 @@ ShallowWrapper {
                                                       Clovis Simonis
                                     </Heading>
                                     <span
-                                                      className={undefined}
+                                                      className="signalTypeNameHeader"
                                     />
                   </div>
 </GridColumn>,
@@ -694,7 +694,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": <div
-                    className={undefined}
+                    className="tableHeader"
 >
                     <Heading
                                         size={3}
@@ -702,7 +702,7 @@ ShallowWrapper {
                                         Clovis Simonis
                     </Heading>
                     <span
-                                        className={undefined}
+                                        className="signalTypeNameHeader"
                     />
 </div>,
                   "size": 5,
@@ -720,10 +720,10 @@ ShallowWrapper {
                         Clovis Simonis
 </Heading>,
                       <span
-                        className={undefined}
+                        className="signalTypeNameHeader"
 />,
                     ],
-                    "className": undefined,
+                    "className": "tableHeader",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -745,7 +745,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": undefined,
-                        "className": undefined,
+                        "className": "signalTypeNameHeader",
                       },
                       "ref": null,
                       "rendered": null,
@@ -921,7 +921,7 @@ ShallowWrapper {
                             size={5}
               >
                             <div
-                                          className={undefined}
+                                          className="tableHeader"
                             >
                                           <Heading
                                                         size={3}
@@ -929,7 +929,7 @@ ShallowWrapper {
                                                         Stephen Sanford
                                           </Heading>
                                           <span
-                                                        className={undefined}
+                                                        className="signalTypeNameHeader"
                                           />
                             </div>
               </GridColumn>
@@ -997,7 +997,7 @@ ShallowWrapper {
               }
 />,
           ],
-          "className": undefined,
+          "className": "dashboardTable",
           "data-test": "saved-search-dashboard",
         },
         "ref": null,
@@ -1012,7 +1012,7 @@ ShallowWrapper {
                   size={5}
 >
                   <div
-                                    className={undefined}
+                                    className="tableHeader"
                   >
                                     <Heading
                                                       size={3}
@@ -1020,7 +1020,7 @@ ShallowWrapper {
                                                       Stephen Sanford
                                     </Heading>
                                     <span
-                                                      className={undefined}
+                                                      className="signalTypeNameHeader"
                                     />
                   </div>
 </GridColumn>,
@@ -1063,7 +1063,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": <div
-                    className={undefined}
+                    className="tableHeader"
 >
                     <Heading
                                         size={3}
@@ -1071,7 +1071,7 @@ ShallowWrapper {
                                         Stephen Sanford
                     </Heading>
                     <span
-                                        className={undefined}
+                                        className="signalTypeNameHeader"
                     />
 </div>,
                   "size": 5,
@@ -1089,10 +1089,10 @@ ShallowWrapper {
                         Stephen Sanford
 </Heading>,
                       <span
-                        className={undefined}
+                        className="signalTypeNameHeader"
 />,
                     ],
-                    "className": undefined,
+                    "className": "tableHeader",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -1114,7 +1114,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": undefined,
-                        "className": undefined,
+                        "className": "signalTypeNameHeader",
                       },
                       "ref": null,
                       "rendered": null,
@@ -1299,7 +1299,7 @@ ShallowWrapper {
 </div>,
           Array [
             <Well
-              className={undefined}
+              className="dashboardTable"
               data-test="saved-search-dashboard"
 >
               <GridRow
@@ -1310,7 +1310,7 @@ ShallowWrapper {
                                           size={5}
                             >
                                           <div
-                                                        className={undefined}
+                                                        className="tableHeader"
                                           >
                                                         <Heading
                                                                       size={3}
@@ -1318,7 +1318,7 @@ ShallowWrapper {
                                                                       Clovis Simonis
                                                         </Heading>
                                                         <span
-                                                                      className={undefined}
+                                                                      className="signalTypeNameHeader"
                                                         />
                                           </div>
                             </GridColumn>
@@ -1382,7 +1382,7 @@ ShallowWrapper {
               />
 </Well>,
             <Well
-              className={undefined}
+              className="dashboardTable"
               data-test="saved-search-dashboard"
 >
               <GridRow
@@ -1393,7 +1393,7 @@ ShallowWrapper {
                                           size={5}
                             >
                                           <div
-                                                        className={undefined}
+                                                        className="tableHeader"
                                           >
                                                         <Heading
                                                                       size={3}
@@ -1401,7 +1401,7 @@ ShallowWrapper {
                                                                       Stephen Sanford
                                                         </Heading>
                                                         <span
-                                                                      className={undefined}
+                                                                      className="signalTypeNameHeader"
                                                         />
                                           </div>
                             </GridColumn>
@@ -1513,7 +1513,7 @@ ShallowWrapper {
                                 size={5}
                 >
                                 <div
-                                                className={undefined}
+                                                className="tableHeader"
                                 >
                                                 <Heading
                                                                 size={3}
@@ -1521,7 +1521,7 @@ ShallowWrapper {
                                                                 Clovis Simonis
                                                 </Heading>
                                                 <span
-                                                                className={undefined}
+                                                                className="signalTypeNameHeader"
                                                 />
                                 </div>
                 </GridColumn>
@@ -1584,7 +1584,7 @@ ShallowWrapper {
                 }
 />,
             ],
-            "className": undefined,
+            "className": "dashboardTable",
             "data-test": "saved-search-dashboard",
           },
           "ref": null,
@@ -1599,7 +1599,7 @@ ShallowWrapper {
                     size={5}
 >
                     <div
-                                        className={undefined}
+                                        className="tableHeader"
                     >
                                         <Heading
                                                             size={3}
@@ -1607,7 +1607,7 @@ ShallowWrapper {
                                                             Clovis Simonis
                                         </Heading>
                                         <span
-                                                            className={undefined}
+                                                            className="signalTypeNameHeader"
                                         />
                     </div>
 </GridColumn>,
@@ -1650,7 +1650,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": <div
-                      className={undefined}
+                      className="tableHeader"
 >
                       <Heading
                                             size={3}
@@ -1658,7 +1658,7 @@ ShallowWrapper {
                                             Clovis Simonis
                       </Heading>
                       <span
-                                            className={undefined}
+                                            className="signalTypeNameHeader"
                       />
 </div>,
                     "size": 5,
@@ -1676,10 +1676,10 @@ ShallowWrapper {
                           Clovis Simonis
 </Heading>,
                         <span
-                          className={undefined}
+                          className="signalTypeNameHeader"
 />,
                       ],
-                      "className": undefined,
+                      "className": "tableHeader",
                     },
                     "ref": null,
                     "rendered": Array [
@@ -1701,7 +1701,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": undefined,
-                          "className": undefined,
+                          "className": "signalTypeNameHeader",
                         },
                         "ref": null,
                         "rendered": null,
@@ -1877,7 +1877,7 @@ ShallowWrapper {
                                 size={5}
                 >
                                 <div
-                                                className={undefined}
+                                                className="tableHeader"
                                 >
                                                 <Heading
                                                                 size={3}
@@ -1885,7 +1885,7 @@ ShallowWrapper {
                                                                 Stephen Sanford
                                                 </Heading>
                                                 <span
-                                                                className={undefined}
+                                                                className="signalTypeNameHeader"
                                                 />
                                 </div>
                 </GridColumn>
@@ -1953,7 +1953,7 @@ ShallowWrapper {
                 }
 />,
             ],
-            "className": undefined,
+            "className": "dashboardTable",
             "data-test": "saved-search-dashboard",
           },
           "ref": null,
@@ -1968,7 +1968,7 @@ ShallowWrapper {
                     size={5}
 >
                     <div
-                                        className={undefined}
+                                        className="tableHeader"
                     >
                                         <Heading
                                                             size={3}
@@ -1976,7 +1976,7 @@ ShallowWrapper {
                                                             Stephen Sanford
                                         </Heading>
                                         <span
-                                                            className={undefined}
+                                                            className="signalTypeNameHeader"
                                         />
                     </div>
 </GridColumn>,
@@ -2019,7 +2019,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": <div
-                      className={undefined}
+                      className="tableHeader"
 >
                       <Heading
                                             size={3}
@@ -2027,7 +2027,7 @@ ShallowWrapper {
                                             Stephen Sanford
                       </Heading>
                       <span
-                                            className={undefined}
+                                            className="signalTypeNameHeader"
                       />
 </div>,
                     "size": 5,
@@ -2045,10 +2045,10 @@ ShallowWrapper {
                           Stephen Sanford
 </Heading>,
                         <span
-                          className={undefined}
+                          className="signalTypeNameHeader"
 />,
                       ],
-                      "className": undefined,
+                      "className": "tableHeader",
                     },
                     "ref": null,
                     "rendered": Array [
@@ -2070,7 +2070,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": undefined,
-                          "className": undefined,
+                          "className": "signalTypeNameHeader",
                         },
                         "ref": null,
                         "rendered": null,

@@ -29,13 +29,13 @@ ShallowWrapper {
           <NoResult />,
         ],
         <Heading
-          className={undefined}
+          className="title"
           size={2}
 >
           No results found.
 </Heading>,
         <div
-          className=""
+          className="message"
 >
           Refine the search query and try searching again.
 </div>,
@@ -69,7 +69,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "No results found.",
-          "className": undefined,
+          "className": "title",
           "size": 2,
         },
         "ref": null,
@@ -82,7 +82,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Refine the search query and try searching again.",
-          "className": "",
+          "className": "message",
         },
         "ref": null,
         "rendered": "Refine the search query and try searching again.",
@@ -103,13 +103,13 @@ ShallowWrapper {
             <NoResult />,
           ],
           <Heading
-            className={undefined}
+            className="title"
             size={2}
 >
             No results found.
 </Heading>,
           <div
-            className=""
+            className="message"
 >
             Refine the search query and try searching again.
 </div>,
@@ -143,7 +143,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "No results found.",
-            "className": undefined,
+            "className": "title",
             "size": 2,
           },
           "ref": null,
@@ -156,7 +156,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Refine the search query and try searching again.",
-            "className": "",
+            "className": "message",
           },
           "ref": null,
           "rendered": "Refine the search query and try searching again.",
@@ -199,13 +199,13 @@ ShallowWrapper {
       "children": Array [
         undefined,
         <Heading
-          className={undefined}
+          className="title"
           size={2}
 >
           No results found.
 </Heading>,
         <div
-          className=""
+          className="message"
 >
           Refine the search query and try searching again.
 </div>,
@@ -222,7 +222,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "No results found.",
-          "className": undefined,
+          "className": "title",
           "size": 2,
         },
         "ref": null,
@@ -235,7 +235,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Refine the search query and try searching again.",
-          "className": "",
+          "className": "message",
         },
         "ref": null,
         "rendered": "Refine the search query and try searching again.",
@@ -253,13 +253,13 @@ ShallowWrapper {
         "children": Array [
           undefined,
           <Heading
-            className={undefined}
+            className="title"
             size={2}
 >
             No results found.
 </Heading>,
           <div
-            className=""
+            className="message"
 >
             Refine the search query and try searching again.
 </div>,
@@ -276,7 +276,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "No results found.",
-            "className": undefined,
+            "className": "title",
             "size": 2,
           },
           "ref": null,
@@ -289,7 +289,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Refine the search query and try searching again.",
-            "className": "",
+            "className": "message",
           },
           "ref": null,
           "rendered": "Refine the search query and try searching again.",

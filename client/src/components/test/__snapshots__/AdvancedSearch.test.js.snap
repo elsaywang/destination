@@ -63,7 +63,7 @@ ShallowWrapper {
           value=""
 />,
       ],
-      "className": undefined,
+      "className": "reportSuitesFilter",
       "data-test": "advanced-search",
     },
     "ref": null,
@@ -133,7 +133,7 @@ ShallowWrapper {
             value=""
 />,
         ],
-        "className": undefined,
+        "className": "reportSuitesFilter",
         "data-test": "advanced-search",
       },
       "ref": null,

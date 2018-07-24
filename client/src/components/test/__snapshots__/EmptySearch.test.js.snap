@@ -21,13 +21,13 @@ ShallowWrapper {
     "props": Object {
       "children": <img
         alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-        className={undefined}
+        className="exploreImage"
         data-test="start-exploring"
         src="localhost:3000/explore.svg"
 />,
       "className": undefined,
       "message": "Search by key-value pairs or use only filters to get insights on signals.",
-      "messageStyle": undefined,
+      "messageStyle": "exploreMessage",
       "title": "Start exploring.",
     },
     "ref": null,
@@ -37,7 +37,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "alt": "Start exploring. Search by key-value pairs or use only filters to get insights on signals.",
-        "className": undefined,
+        "className": "exploreImage",
         "data-test": "start-exploring",
         "src": "localhost:3000/explore.svg",
       },
@@ -55,13 +55,13 @@ ShallowWrapper {
       "props": Object {
         "children": <img
           alt="Start exploring. Search by key-value pairs or use only filters to get insights on signals."
-          className={undefined}
+          className="exploreImage"
           data-test="start-exploring"
           src="localhost:3000/explore.svg"
 />,
         "className": undefined,
         "message": "Search by key-value pairs or use only filters to get insights on signals.",
-        "messageStyle": undefined,
+        "messageStyle": "exploreMessage",
         "title": "Start exploring.",
       },
       "ref": null,
@@ -71,7 +71,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "Start exploring. Search by key-value pairs or use only filters to get insights on signals.",
-          "className": undefined,
+          "className": "exploreImage",
           "data-test": "start-exploring",
           "src": "localhost:3000/explore.svg",
         },
@@ -113,13 +113,13 @@ ShallowWrapper {
     "props": Object {
       "children": <img
         alt="No results found. Refine the search query and try searching again."
-        className={undefined}
+        className="noResultImage"
         data-test="no-result-found"
         src="localhost:3000/noResult.svg"
 />,
       "className": undefined,
       "message": "Refine the search query and try searching again.",
-      "messageStyle": undefined,
+      "messageStyle": "noResultMessage",
       "title": "No results found.",
     },
     "ref": null,
@@ -129,7 +129,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "alt": "No results found. Refine the search query and try searching again.",
-        "className": undefined,
+        "className": "noResultImage",
         "data-test": "no-result-found",
         "src": "localhost:3000/noResult.svg",
       },
@@ -147,13 +147,13 @@ ShallowWrapper {
       "props": Object {
         "children": <img
           alt="No results found. Refine the search query and try searching again."
-          className={undefined}
+          className="noResultImage"
           data-test="no-result-found"
           src="localhost:3000/noResult.svg"
 />,
         "className": undefined,
         "message": "Refine the search query and try searching again.",
-        "messageStyle": undefined,
+        "messageStyle": "noResultMessage",
         "title": "No results found.",
       },
       "ref": null,
@@ -163,7 +163,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "No results found. Refine the search query and try searching again.",
-          "className": undefined,
+          "className": "noResultImage",
           "data-test": "no-result-found",
           "src": "localhost:3000/noResult.svg",
         },

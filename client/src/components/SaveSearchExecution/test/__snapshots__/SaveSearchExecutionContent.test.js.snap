@@ -29,7 +29,7 @@ ShallowWrapper {
 >
           <Textfield
                     autoFocus={false}
-                    className={undefined}
+                    className="contentTextField"
                     data-test="save-this-search-name-field"
                     disabled={false}
                     invalid={false}
@@ -41,7 +41,7 @@ ShallowWrapper {
           />
 </Label>,
         <div
-          className={undefined}
+          className="contentCheckBox"
 >
           <Checkbox
                     checked={false}
@@ -76,7 +76,7 @@ ShallowWrapper {
                     }
           />
           <div
-                    className={undefined}
+                    className="contentRadioGroup"
           >
                     <RadioGroup
                               labelsBelow={false}
@@ -110,7 +110,7 @@ ShallowWrapper {
         "props": Object {
           "children": <Textfield
             autoFocus={false}
-            className={undefined}
+            className="contentTextField"
             data-test="save-this-search-name-field"
             disabled={false}
             invalid={false}
@@ -130,7 +130,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "autoFocus": false,
-            "className": undefined,
+            "className": "contentTextField",
             "data-test": "save-this-search-name-field",
             "disabled": false,
             "invalid": false,
@@ -158,7 +158,7 @@ ShallowWrapper {
             label="Track this search result in dashboard"
             onChange={[Function]}
 />,
-          "className": undefined,
+          "className": "contentCheckBox",
         },
         "ref": null,
         "rendered": Object {
@@ -205,7 +205,7 @@ ShallowWrapper {
               }
 />,
             <div
-              className={undefined}
+              className="contentRadioGroup"
 >
               <RadioGroup
                             labelsBelow={false}
@@ -281,7 +281,7 @@ ShallowWrapper {
                                 value="ascending"
                 />
 </RadioGroup>,
-              "className": undefined,
+              "className": "contentRadioGroup",
             },
             "ref": null,
             "rendered": Object {
@@ -361,7 +361,7 @@ ShallowWrapper {
 >
             <Textfield
                         autoFocus={false}
-                        className={undefined}
+                        className="contentTextField"
                         data-test="save-this-search-name-field"
                         disabled={false}
                         invalid={false}
@@ -373,7 +373,7 @@ ShallowWrapper {
             />
 </Label>,
           <div
-            className={undefined}
+            className="contentCheckBox"
 >
             <Checkbox
                         checked={false}
@@ -408,7 +408,7 @@ ShallowWrapper {
                         }
             />
             <div
-                        className={undefined}
+                        className="contentRadioGroup"
             >
                         <RadioGroup
                                     labelsBelow={false}
@@ -442,7 +442,7 @@ ShallowWrapper {
           "props": Object {
             "children": <Textfield
               autoFocus={false}
-              className={undefined}
+              className="contentTextField"
               data-test="save-this-search-name-field"
               disabled={false}
               invalid={false}
@@ -462,7 +462,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "autoFocus": false,
-              "className": undefined,
+              "className": "contentTextField",
               "data-test": "save-this-search-name-field",
               "disabled": false,
               "invalid": false,
@@ -490,7 +490,7 @@ ShallowWrapper {
               label="Track this search result in dashboard"
               onChange={[Function]}
 />,
-            "className": undefined,
+            "className": "contentCheckBox",
           },
           "ref": null,
           "rendered": Object {
@@ -537,7 +537,7 @@ ShallowWrapper {
                 }
 />,
               <div
-                className={undefined}
+                className="contentRadioGroup"
 >
                 <RadioGroup
                                 labelsBelow={false}
@@ -613,7 +613,7 @@ ShallowWrapper {
                                     value="ascending"
                   />
 </RadioGroup>,
-                "className": undefined,
+                "className": "contentRadioGroup",
               },
               "ref": null,
               "rendered": Object {
@@ -720,7 +720,7 @@ ShallowWrapper {
 >
           <Textfield
                     autoFocus={false}
-                    className={undefined}
+                    className="contentTextField"
                     data-test="save-this-search-name-field"
                     disabled={false}
                     invalid={false}
@@ -732,7 +732,7 @@ ShallowWrapper {
           />
 </Label>,
         <div
-          className={undefined}
+          className="contentCheckBox"
 >
           <Checkbox
                     checked={false}
@@ -767,7 +767,7 @@ ShallowWrapper {
                     }
           />
           <div
-                    className={undefined}
+                    className="contentRadioGroup"
           >
                     <RadioGroup
                               labelsBelow={false}
@@ -801,7 +801,7 @@ ShallowWrapper {
         "props": Object {
           "children": <Textfield
             autoFocus={false}
-            className={undefined}
+            className="contentTextField"
             data-test="save-this-search-name-field"
             disabled={false}
             invalid={false}
@@ -821,7 +821,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "autoFocus": false,
-            "className": undefined,
+            "className": "contentTextField",
             "data-test": "save-this-search-name-field",
             "disabled": false,
             "invalid": false,
@@ -849,7 +849,7 @@ ShallowWrapper {
             label="Track this search result in dashboard"
             onChange={[Function]}
 />,
-          "className": undefined,
+          "className": "contentCheckBox",
         },
         "ref": null,
         "rendered": Object {
@@ -896,7 +896,7 @@ ShallowWrapper {
               }
 />,
             <div
-              className={undefined}
+              className="contentRadioGroup"
 >
               <RadioGroup
                             labelsBelow={false}
@@ -972,7 +972,7 @@ ShallowWrapper {
                                 value="ascending"
                 />
 </RadioGroup>,
-              "className": undefined,
+              "className": "contentRadioGroup",
             },
             "ref": null,
             "rendered": Object {
@@ -1052,7 +1052,7 @@ ShallowWrapper {
 >
             <Textfield
                         autoFocus={false}
-                        className={undefined}
+                        className="contentTextField"
                         data-test="save-this-search-name-field"
                         disabled={false}
                         invalid={false}
@@ -1064,7 +1064,7 @@ ShallowWrapper {
             />
 </Label>,
           <div
-            className={undefined}
+            className="contentCheckBox"
 >
             <Checkbox
                         checked={false}
@@ -1099,7 +1099,7 @@ ShallowWrapper {
                         }
             />
             <div
-                        className={undefined}
+                        className="contentRadioGroup"
             >
                         <RadioGroup
                                     labelsBelow={false}
@@ -1133,7 +1133,7 @@ ShallowWrapper {
           "props": Object {
             "children": <Textfield
               autoFocus={false}
-              className={undefined}
+              className="contentTextField"
               data-test="save-this-search-name-field"
               disabled={false}
               invalid={false}
@@ -1153,7 +1153,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "autoFocus": false,
-              "className": undefined,
+              "className": "contentTextField",
               "data-test": "save-this-search-name-field",
               "disabled": false,
               "invalid": false,
@@ -1181,7 +1181,7 @@ ShallowWrapper {
               label="Track this search result in dashboard"
               onChange={[Function]}
 />,
-            "className": undefined,
+            "className": "contentCheckBox",
           },
           "ref": null,
           "rendered": Object {
@@ -1228,7 +1228,7 @@ ShallowWrapper {
                 }
 />,
               <div
-                className={undefined}
+                className="contentRadioGroup"
 >
                 <RadioGroup
                                 labelsBelow={false}
@@ -1304,7 +1304,7 @@ ShallowWrapper {
                                     value="ascending"
                   />
 </RadioGroup>,
-                "className": undefined,
+                "className": "contentRadioGroup",
               },
               "ref": null,
               "rendered": Object {

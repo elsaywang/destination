@@ -56,12 +56,12 @@ ShallowWrapper {
           size="S"
 />,
         <div
-          className={undefined}
+          className="singleCreationlinkText"
 >
           Create Rule-Based Trait
 </div>,
       ],
-      "className": "spectrum-Link",
+      "className": "spectrum-Link singleCreation",
       "data-test": "single-signal-trait-creation",
       "onClick": [Function],
     },
@@ -84,7 +84,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Create Rule-Based Trait",
-          "className": undefined,
+          "className": "singleCreationlinkText",
         },
         "ref": null,
         "rendered": "Create Rule-Based Trait",
@@ -104,12 +104,12 @@ ShallowWrapper {
             size="S"
 />,
           <div
-            className={undefined}
+            className="singleCreationlinkText"
 >
             Create Rule-Based Trait
 </div>,
         ],
-        "className": "spectrum-Link",
+        "className": "spectrum-Link singleCreation",
         "data-test": "single-signal-trait-creation",
         "onClick": [Function],
       },
@@ -132,7 +132,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Create Rule-Based Trait",
-            "className": undefined,
+            "className": "singleCreationlinkText",
           },
           "ref": null,
           "rendered": "Create Rule-Based Trait",

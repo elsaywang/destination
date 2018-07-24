@@ -50,7 +50,7 @@ ShallowWrapper {
           >
                     <Textfield
                               autoFocus={false}
-                              className={undefined}
+                              className="textField"
                               data-test="key-search-field"
                               disabled={false}
                               id="key0"
@@ -61,14 +61,14 @@ ShallowWrapper {
                     />
           </Autocomplete>
           <InlineErrorMessage
-                    className={undefined}
+                    className="error"
                     errorMessage=""
                     isInvalid={false}
                     showIcon={false}
           />
 </Label>,
         <Select
-          className="operator"
+          className="operator operator"
           data-test="operator"
           onChange={[Function]}
           options={
@@ -112,7 +112,7 @@ ShallowWrapper {
 >
           <Textfield
                     autoFocus={false}
-                    className="value-search"
+                    className="textField value-search"
                     data-test="value-search"
                     disabled={false}
                     id="value0"
@@ -124,7 +124,7 @@ ShallowWrapper {
                     value=""
           />
           <InlineErrorMessage
-                    className={undefined}
+                    className="error"
                     errorMessage="It can only be numerical values when it's > or <."
                     isInvalid={false}
                     showIcon={false}
@@ -150,7 +150,7 @@ ShallowWrapper {
 >
               <Textfield
                             autoFocus={false}
-                            className={undefined}
+                            className="textField"
                             data-test="key-search-field"
                             disabled={false}
                             id="key0"
@@ -161,7 +161,7 @@ ShallowWrapper {
               />
 </Autocomplete>,
             <InlineErrorMessage
-              className={undefined}
+              className="error"
               errorMessage=""
               isInvalid={false}
               showIcon={false}
@@ -183,7 +183,7 @@ ShallowWrapper {
               "allowCreate": false,
               "children": <Textfield
                 autoFocus={false}
-                className={undefined}
+                className="textField"
                 data-test="key-search-field"
                 disabled={false}
                 id="key0"
@@ -204,7 +204,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "autoFocus": false,
-                "className": undefined,
+                "className": "textField",
                 "data-test": "key-search-field",
                 "disabled": false,
                 "id": "key0",
@@ -224,7 +224,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "className": undefined,
+              "className": "error",
               "errorMessage": "",
               "isInvalid": false,
               "showIcon": false,
@@ -241,7 +241,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "className": "operator",
+          "className": "operator operator",
           "data-test": "operator",
           "onChange": [Function],
           "options": Array [
@@ -284,7 +284,7 @@ ShallowWrapper {
           "children": Array [
             <Textfield
               autoFocus={false}
-              className="value-search"
+              className="textField value-search"
               data-test="value-search"
               disabled={false}
               id="value0"
@@ -296,7 +296,7 @@ ShallowWrapper {
               value=""
 />,
             <InlineErrorMessage
-              className={undefined}
+              className="error"
               errorMessage="It can only be numerical values when it's > or <."
               isInvalid={false}
               showIcon={false}
@@ -316,7 +316,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "autoFocus": false,
-              "className": "value-search",
+              "className": "textField value-search",
               "data-test": "value-search",
               "disabled": false,
               "id": "value0",
@@ -336,7 +336,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "className": undefined,
+              "className": "error",
               "errorMessage": "It can only be numerical values when it's > or <.",
               "isInvalid": false,
               "showIcon": false,
@@ -376,7 +376,7 @@ ShallowWrapper {
             >
                         <Textfield
                                     autoFocus={false}
-                                    className={undefined}
+                                    className="textField"
                                     data-test="key-search-field"
                                     disabled={false}
                                     id="key0"
@@ -387,14 +387,14 @@ ShallowWrapper {
                         />
             </Autocomplete>
             <InlineErrorMessage
-                        className={undefined}
+                        className="error"
                         errorMessage=""
                         isInvalid={false}
                         showIcon={false}
             />
 </Label>,
           <Select
-            className="operator"
+            className="operator operator"
             data-test="operator"
             onChange={[Function]}
             options={
@@ -438,7 +438,7 @@ ShallowWrapper {
 >
             <Textfield
                         autoFocus={false}
-                        className="value-search"
+                        className="textField value-search"
                         data-test="value-search"
                         disabled={false}
                         id="value0"
@@ -450,7 +450,7 @@ ShallowWrapper {
                         value=""
             />
             <InlineErrorMessage
-                        className={undefined}
+                        className="error"
                         errorMessage="It can only be numerical values when it's > or <."
                         isInvalid={false}
                         showIcon={false}
@@ -476,7 +476,7 @@ ShallowWrapper {
 >
                 <Textfield
                                 autoFocus={false}
-                                className={undefined}
+                                className="textField"
                                 data-test="key-search-field"
                                 disabled={false}
                                 id="key0"
@@ -487,7 +487,7 @@ ShallowWrapper {
                 />
 </Autocomplete>,
               <InlineErrorMessage
-                className={undefined}
+                className="error"
                 errorMessage=""
                 isInvalid={false}
                 showIcon={false}
@@ -509,7 +509,7 @@ ShallowWrapper {
                 "allowCreate": false,
                 "children": <Textfield
                   autoFocus={false}
-                  className={undefined}
+                  className="textField"
                   data-test="key-search-field"
                   disabled={false}
                   id="key0"
@@ -530,7 +530,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "autoFocus": false,
-                  "className": undefined,
+                  "className": "textField",
                   "data-test": "key-search-field",
                   "disabled": false,
                   "id": "key0",
@@ -550,7 +550,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": undefined,
+                "className": "error",
                 "errorMessage": "",
                 "isInvalid": false,
                 "showIcon": false,
@@ -567,7 +567,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "className": "operator",
+            "className": "operator operator",
             "data-test": "operator",
             "onChange": [Function],
             "options": Array [
@@ -610,7 +610,7 @@ ShallowWrapper {
             "children": Array [
               <Textfield
                 autoFocus={false}
-                className="value-search"
+                className="textField value-search"
                 data-test="value-search"
                 disabled={false}
                 id="value0"
@@ -622,7 +622,7 @@ ShallowWrapper {
                 value=""
 />,
               <InlineErrorMessage
-                className={undefined}
+                className="error"
                 errorMessage="It can only be numerical values when it's > or <."
                 isInvalid={false}
                 showIcon={false}
@@ -642,7 +642,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "autoFocus": false,
-                "className": "value-search",
+                "className": "textField value-search",
                 "data-test": "value-search",
                 "disabled": false,
                 "id": "value0",
@@ -662,7 +662,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": undefined,
+                "className": "error",
                 "errorMessage": "It can only be numerical values when it's > or <.",
                 "isInvalid": false,
                 "showIcon": false,
