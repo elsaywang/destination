@@ -5,37 +5,34 @@ const emptySavedSearchResponse = require('../fixtures/emptySavedSearch.json');
 const newSavedSearchResponse = require('../fixtures/newSavedSearch.json');
 
 describe('Dashboard Integration Tests', function() {
-    beforeEach(function() {
-        cy.server();
-        cy.route(
-            '/portal/api/v1/users/self/annotations/aam-portal',
-            savedSearchResponse.savedSearch,
-        ).as('fetchSavedSearch');
-        cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
-            'fetchSearchResults',
-        );
-        cy.visit('/');
-    });
-
-    it("requests user's saved searches", function() {
-        cy.wait('@fetchSavedSearch')
-            .its('status')
-            .should('eq', 200);
-    });
-
-    it("requests user's saved searches result list", function() {
-        cy.wait('@fetchSearchResults')
-            .its('status')
-            .should('eq', 200);
-    });
-
-    it('should navigate user to dashboard after clicking Signals on top nav', function() {
-        cy.title().should('contain', 'Signals');
-    });
-
     describe('Preset saved searches', () => {
         beforeEach(function() {
+            cy.server();
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            ).as('fetchSavedSearch');
+            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                'fetchSearchResults',
+            );
+            cy.visit('/');
             cy.scrollTo('bottom');
+        });
+
+        it("requests user's saved searches", function() {
+            cy.wait('@fetchSavedSearch')
+                .its('status')
+                .should('eq', 200);
+        });
+
+        it("requests user's saved searches result list", function() {
+            cy.wait('@fetchSearchResults')
+                .its('status')
+                .should('eq', 200);
+        });
+
+        it('should navigate user to dashboard after clicking Signals on top nav', function() {
+            cy.title().should('contain', 'Signals');
         });
 
         it('should render first when user-defined saved searches exist with `includeInDashboard` is set to true', () => {
@@ -147,13 +144,15 @@ describe('Dashboard Integration Tests', function() {
             const buttonLabel = 'View All';
             const currentClickedTagLabel = 'Top Unused Signals';
 
-            cy.get('[data-test=saved-search-dashboard]:first').within(() => {
-                cy.get('.spectrum-Button.spectrum-Button--primary').as('firstViewAllButton');
-                cy.get('@firstViewAllButton')
-                    .should('exist')
-                    .should('have.text', buttonLabel);
-                cy.get('@firstViewAllButton').click();
-            });
+            cy.get('[data-test=saved-search-dashboard]')
+                .eq(0)
+                .within(() => {
+                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
+                    cy.get('@viewAllButton')
+                        .should('exist')
+                        .should('have.text', buttonLabel);
+                    cy.get('@viewAllButton').click();
+                });
 
             cy.url().should('match', /\#\/search/);
             cy.get('@fetchSearchResults')
@@ -213,6 +212,157 @@ describe('Dashboard Integration Tests', function() {
             cy.getRequestParams('@fetchSearchResults').then(({ filterNewSignals }) => {
                 expect(filterNewSignals).to.equal(true);
             });
+        });
+    });
+    describe('No saved search result', () => {
+        beforeEach(function() {
+            cy.server();
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                emptySavedSearchResponse.savedSearch,
+            ).as('fetchEmptySavedSearch');
+            cy.route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse).as(
+                'fetchEmptySearchResults',
+            );
+            cy.visit('/');
+            cy.scrollTo('bottom');
+        });
+        it("requests user's saved searches", function() {
+            cy.wait('@fetchEmptySavedSearch')
+                .its('status')
+                .should('eq', 200);
+        });
+
+        it("requests user's saved searches result list", function() {
+            cy.wait('@fetchEmptySearchResults')
+                .its('status')
+                .should('eq', 200);
+        });
+
+        it('should render 2 empty saved search tables when no user-defined saved searches exist ', () => {
+            cy.get('[data-test="saved-search-dashboard"]')
+                .should('exist')
+                .should('have.length', 2);
+            const firstPresetHeading = 'Top Unused Signals';
+            const secondPresetHeading = 'New Unused Signals';
+            const buttonLabel = 'View All';
+
+            cy.get('[data-test=saved-search-dashboard]')
+                .eq(0)
+                .within(() => {
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                        .should('exist')
+                        .should('have.text', firstPresetHeading);
+
+                    cy.get('[data-test="signals-table"]').should('not.exist');
+                    cy.get('[data-test="empty"]')
+                        .should('exist')
+                        .should('have.length', 1);
+                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
+                    cy.get('@viewAllButton')
+                        .should('exist')
+                        .should('have.text', buttonLabel);
+                });
+            cy.get('[data-test=saved-search-dashboard]')
+                .eq(1)
+                .within(() => {
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                        .should('exist')
+                        .should('have.text', secondPresetHeading);
+
+                    cy.get('[data-test="signals-table"]').should('not.exist');
+                    cy.get('[data-test="empty"]')
+                        .should('exist')
+                        .should('have.length', 1);
+                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
+                    cy.get('@viewAllButton')
+                        .should('exist')
+                        .should('have.text', buttonLabel);
+                });
+        });
+
+        it('should render 2 preset empty tables plus total of user-defined saved searches exist with `includeInDashboard` is set to true with empty results', () => {
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            ).as('fetchSavedSearch');
+            cy.reload();
+            cy.wait('@fetchSavedSearch');
+
+            cy.get('[data-test="saved-search-dashboard"]')
+                .should('exist')
+                .should('have.length', 4);
+            const userDefinedVisibleSavedSearchOne = 'Angus Koss V';
+            const userDefinedVisibleSavedSearchTwo = 'Demarco Stiedemann';
+            const firstPresetHeading = 'Top Unused Signals';
+            const secondPresetHeading = 'New Unused Signals';
+            const buttonLabel = 'View All';
+
+            cy.get('[data-test=saved-search-dashboard]')
+                .eq(0)
+                .within(() => {
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                        .should('exist')
+                        .should('have.text', firstPresetHeading);
+                    cy.get('[data-test="signals-table"]').should('not.exist');
+                    cy.get('[data-test="empty"]')
+                        .should('exist')
+                        .should('have.length', 1);
+                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
+                    cy.get('@viewAllButton')
+                        .should('exist')
+                        .should('have.text', buttonLabel);
+                });
+
+            cy.get('[data-test=saved-search-dashboard]')
+                .eq(1)
+                .within(() => {
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                        .should('exist')
+                        .should('have.text', secondPresetHeading);
+                    cy.get('[data-test="signals-table"]').should('not.exist');
+                    cy.get('[data-test="empty"]')
+                        .should('exist')
+                        .should('have.length', 1);
+                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
+                    cy.get('@viewAllButton')
+                        .should('exist')
+                        .should('have.text', buttonLabel);
+                });
+
+            cy.get('[data-test=saved-search-dashboard]')
+                .eq(2)
+                .within(() => {
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                        .should('exist')
+                        .should('have.text', userDefinedVisibleSavedSearchOne);
+
+                    cy.get('[data-test="signals-table"]').should('not.exist');
+                    cy.get('[data-test="empty"]')
+                        .should('exist')
+                        .should('have.length', 1);
+                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
+                    cy.get('@viewAllButton')
+                        .should('exist')
+                        .should('have.text', buttonLabel);
+                });
+
+            cy.get('[data-test=saved-search-dashboard]')
+                .eq(3)
+                .within(() => {
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                        .should('exist')
+                        .should('have.text', userDefinedVisibleSavedSearchTwo);
+
+                    cy.get('[data-test="signals-table"]').should('not.exist');
+                    cy.get('[data-test="empty"]')
+                        .should('exist')
+                        .should('have.length', 1);
+                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
+                    cy.get('@viewAllButton')
+                        .should('exist')
+                        .should('have.text', buttonLabel);
+                });
         });
     });
 });
