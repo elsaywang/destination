@@ -86,7 +86,8 @@
             "customEndDate": "2018-05-01",
             "sortBy": "Included In Traits",
             "categoryType": "",
-            "advanced": false
+            "advanced": false,
+            "includeInDashboard": true
         },
         {
             "name": "Stella Kling",
@@ -117,7 +118,8 @@
             "customEndDate": "2018-05-01",
             "sortBy": "Included In Traits",
             "categoryType": "Real-Time",
-            "advanced": true
+            "advanced": true,
+            "includeInDashboard": true
         },
         {
             "name": "Demarco Stiedemann",
@@ -148,7 +150,8 @@
             "customEndDate": "2018-05-01",
             "sortBy": "Value Name",
             "categoryType": "Real-Time",
-            "advanced": false
+            "advanced": false,
+            "includeInDashboard": true
         },
         {
             "name": "Bing Thursday",
@@ -179,7 +182,8 @@
             "customEndDate": "2018-05-01",
             "sortBy": "Included In Traits",
             "categoryType": "Real-Time",
-            "advanced": false
+            "advanced": false,
+            "includeInDashboard": true
         },
         {
             "name": "Largo Quaker",
@@ -210,7 +214,8 @@
             "customEndDate": "2018-05-01",
             "sortBy": "Included In Traits",
             "categoryType": "Real-Time",
-            "advanced": true
+            "advanced": true,
+            "includeInDashboard": true
         },
         {
             "name": "Mariah Bergdorff",
@@ -241,7 +246,8 @@
             "customEndDate": "2018-05-01",
             "sortBy": "Value Name",
             "categoryType": "Onboarded",
-            "advanced": false
+            "advanced": false,
+            "includeInDashboard": true
         }
     ]
 }

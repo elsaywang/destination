@@ -2,6 +2,7 @@ const savedSearchResponse = require('../fixtures/savedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
 const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json');
 const emptySavedSearchResponse = require('../fixtures/emptySavedSearch.json');
+const maxSavedSearchResponse = require('../fixtures/maxSavedSearch.json');
 
 describe('Dashboard Integration Tests', function() {
     describe('Preset saved searches', () => {
@@ -357,6 +358,62 @@ describe('Dashboard Integration Tests', function() {
                     cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
+                });
+        });
+    });
+
+    describe('Max saved searches by lazy loading', () => {
+        beforeEach(function() {
+            cy.server();
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                maxSavedSearchResponse.savedSearch,
+            ).as('fetchMaxSavedSearch');
+            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                'fetchSearchResults',
+            );
+            cy.visit('/');
+        });
+
+        it("requests user's saved searches", function() {
+            cy.wait('@fetchMaxSavedSearch')
+                .its('status')
+                .should('eq', 200);
+        });
+
+        it("requests user's saved searches result list", function() {
+            cy.wait('@fetchSearchResults')
+                .its('status')
+                .should('eq', 200);
+        });
+
+        it('when scrolling to bottom, it should call load more tables till it hits the max allowance', () => {
+            const maxTotalSavedSearches = maxSavedSearchResponse.savedSearch.length;
+
+            cy.scrollTo('bottom')
+                .then(() => {
+                    cy.wait(1000);
+                    cy.get('[data-test="saved-search-dashboard"]')
+                        .should('exist')
+                        .should('have.length', 4);
+                })
+                .then(() => {
+                    cy.scrollTo('bottom');
+                    cy.wait(1000);
+                })
+                .then(() => {
+                    cy.get('[data-test="saved-search-dashboard"]')
+                        .should('exist')
+                        .should('have.length', 6);
+                })
+                .then(() => {
+                    cy.scrollTo('bottom');
+                    cy.wait(1000);
+                })
+                .then(() => {
+                    cy.get('[data-test="saved-search-dashboard"]')
+                        .should('exist')
+                        .should('have.length', maxTotalSavedSearches);
                 });
         });
     });
