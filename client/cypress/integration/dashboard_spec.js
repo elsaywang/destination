@@ -30,10 +30,6 @@ describe('Dashboard Integration Tests', function() {
                 .should('eq', 200);
         });
 
-        it('should navigate user to dashboard after clicking Signals on top nav', function() {
-            cy.title().should('contain', 'Signals');
-        });
-
         it('should render first when user-defined saved searches exist with `includeInDashboard` is set to true', () => {
             cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
