@@ -2,7 +2,6 @@ const savedSearchResponse = require('../fixtures/savedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
 const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json');
 const emptySavedSearchResponse = require('../fixtures/emptySavedSearch.json');
-const newSavedSearchResponse = require('../fixtures/newSavedSearch.json');
 
 describe('Dashboard Integration Tests', function() {
     describe('Preset saved searches', () => {
