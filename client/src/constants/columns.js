@@ -62,19 +62,19 @@ const onboardedRecord = {
 const totalCounts = {
     title: 'Total Counts',
     key: columnKeys.totalCount,
-    width: 88,
+    width: 96,
     sortable: true,
 };
 const eventFires = {
     title: 'Event Fires',
     key: columnKeys.totalCount,
-    width: 88,
+    width: 96,
     sortable: true,
 };
 const totalRecords = {
     title: 'Total Records',
     key: columnKeys.totalCount,
-    width: 88,
+    width: 96,
     sortable: true,
 };
 const percentageChange = {
