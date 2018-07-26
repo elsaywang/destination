@@ -10,7 +10,7 @@ const AdvancedSearch = ({
     onReportSuiteSelect,
     reportSuites,
 }) => {
-    const options = reportSuites.map(rs => rs.name);
+    const options = reportSuites.map(rs => rs.suite);
 
     return (
         <div className={styles.reportSuitesFilter} data-test="advanced-search">

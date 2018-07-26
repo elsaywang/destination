@@ -205,16 +205,15 @@ describe('<SearchContainer /> component', () => {
             wrapper.setProps({
                 reportSuites: [
                     {
-                        name: 'test report suite',
                         suite: 'test-report-suite-123',
                     },
                 ],
             });
 
-            wrapper.instance().onReportSuiteSelect('test report suite');
+            wrapper.instance().onReportSuiteSelect('test-report-suite-123');
 
             expect(wrapper.state('source')).toEqual({
-                name: 'test report suite',
+                name: 'test-report-suite-123',
                 dataSourceIds: [],
                 reportSuiteIds: ['test-report-suite-123'],
                 sourceType: 'ANALYTICS',
