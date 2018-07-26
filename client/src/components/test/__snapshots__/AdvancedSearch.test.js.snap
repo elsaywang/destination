@@ -53,8 +53,8 @@ ShallowWrapper {
           onSelect={[Function]}
           options={
                     Array [
-                              "Test Report Suite Edited1505153440289",
-                              "Test Report Suite Edited1505154745046",
+                              "test-report-suite-edited1505153440289",
+                              "test-report-suite-edited1505154745046",
                             ]
           }
           placeholder="Filter by report suite"
@@ -90,8 +90,8 @@ ShallowWrapper {
           "onChange": [Function],
           "onSelect": [Function],
           "options": Array [
-            "Test Report Suite Edited1505153440289",
-            "Test Report Suite Edited1505154745046",
+            "test-report-suite-edited1505153440289",
+            "test-report-suite-edited1505154745046",
           ],
           "placeholder": "Filter by report suite",
           "quiet": true,
@@ -123,8 +123,8 @@ ShallowWrapper {
             onSelect={[Function]}
             options={
                         Array [
-                                    "Test Report Suite Edited1505153440289",
-                                    "Test Report Suite Edited1505154745046",
+                                    "test-report-suite-edited1505153440289",
+                                    "test-report-suite-edited1505154745046",
                                   ]
             }
             placeholder="Filter by report suite"
@@ -160,8 +160,8 @@ ShallowWrapper {
             "onChange": [Function],
             "onSelect": [Function],
             "options": Array [
-              "Test Report Suite Edited1505153440289",
-              "Test Report Suite Edited1505154745046",
+              "test-report-suite-edited1505153440289",
+              "test-report-suite-edited1505154745046",
             ],
             "placeholder": "Filter by report suite",
             "quiet": true,

@@ -1,6 +1,5 @@
 export const topUnusedSignals = {
     advanced: false,
-    descending: false,
     presetId: 'top-unused-signals',
     includeInDashboard: true,
     keyValuePairs: [{ id: 0, key: '', operator: '==', value: '' }],
@@ -8,7 +7,6 @@ export const topUnusedSignals = {
     filterNewSignals: false,
     name: 'Top Unused Signals',
     signalStatus: 'UNUSED',
-    sortBy: 'percentageChange',
     source: {
         dataSourceIds: [],
         name: '',
@@ -16,6 +14,7 @@ export const topUnusedSignals = {
         sourceType: 'ALL',
     },
     viewRecordsFor: '7D',
+    sortBy: 'totalCount',
 };
 
 export const newUnusedSignals = {

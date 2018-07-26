@@ -71,6 +71,6 @@ const results = handleActions(
 export const getList = state => state.list;
 export const isEndOfResults = state => state.isEndOfResults;
 export const isResultsLoaded = state => state.isLoaded;
-export const getSortOptions = ({ sortBy, sortDir }) => ({ sortBy, sortDir });
+export const getSortOptions = ({ sortBy, descending }) => ({ sortBy, descending });
 
 export default results;

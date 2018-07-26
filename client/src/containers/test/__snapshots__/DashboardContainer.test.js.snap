@@ -22,7 +22,6 @@ ShallowWrapper {
         Array [
             Object {
               "advanced": false,
-              "descending": false,
               "filterNewSignals": false,
               "includeInDashboard": true,
               "keyValuePairs": Array [
@@ -37,7 +36,7 @@ ShallowWrapper {
               "name": "Top Unused Signals",
               "presetId": "top-unused-signals",
               "signalStatus": "UNUSED",
-              "sortBy": "percentageChange",
+              "sortBy": "totalCount",
               "source": Object {
                 "dataSourceIds": Array [],
                 "name": "",
@@ -48,7 +47,6 @@ ShallowWrapper {
             },
             Object {
               "advanced": false,
-              "descending": false,
               "filterNewSignals": true,
               "includeInDashboard": true,
               "keyValuePairs": Array [
@@ -63,7 +61,7 @@ ShallowWrapper {
               "name": "New Unused Signals",
               "presetId": "new-unused-signals",
               "signalStatus": "UNUSED",
-              "sortBy": "percentageChange",
+              "sortBy": "totalCount",
               "source": Object {
                 "dataSourceIds": Array [],
                 "name": "",
@@ -216,7 +214,6 @@ ShallowWrapper {
         Array [
             Object {
               "advanced": false,
-              "descending": false,
               "filterNewSignals": false,
               "includeInDashboard": true,
               "keyValuePairs": Array [
@@ -231,7 +228,7 @@ ShallowWrapper {
               "name": "Top Unused Signals",
               "presetId": "top-unused-signals",
               "signalStatus": "UNUSED",
-              "sortBy": "percentageChange",
+              "sortBy": "totalCount",
               "source": Object {
                 "dataSourceIds": Array [],
                 "name": "",
@@ -242,7 +239,6 @@ ShallowWrapper {
             },
             Object {
               "advanced": false,
-              "descending": false,
               "filterNewSignals": true,
               "includeInDashboard": true,
               "keyValuePairs": Array [
@@ -257,7 +253,7 @@ ShallowWrapper {
               "name": "New Unused Signals",
               "presetId": "new-unused-signals",
               "signalStatus": "UNUSED",
-              "sortBy": "percentageChange",
+              "sortBy": "totalCount",
               "source": Object {
                 "dataSourceIds": Array [],
                 "name": "",

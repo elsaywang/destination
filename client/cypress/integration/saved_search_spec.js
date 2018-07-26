@@ -333,7 +333,7 @@ describe('Saved Search Integration Test', function() {
             );
             cy.get('[data-test="saved-search-popover-sort-by"]').should(
                 'have.text',
-                'Percentage Change',
+                'Total Counts',
             );
         });
 
@@ -357,7 +357,7 @@ describe('Saved Search Integration Test', function() {
             );
             cy.get('[data-test="saved-search-popover-sort-by"]').should(
                 'have.text',
-                'Percentage Change',
+                'Total Counts',
             );
         });
 
@@ -395,11 +395,13 @@ describe('Saved Search Integration Test', function() {
         });
 
         it('should not be deletable', () => {
-            cy.get('@topUnusedSignalsTag').click();
+            cy.get('@topUnusedSignalsTag').trigger('mouseover');
             cy.get('[data-test="saved-search-delete-button"]').should('not.exist');
+            cy.get('@topUnusedSignalsTag').trigger('mouseout');
 
-            cy.get('@newUnusedSignalsTag').click();
+            cy.get('@newUnusedSignalsTag').trigger('mouseover');
             cy.get('[data-test="saved-search-delete-button"]').should('not.exist');
+            cy.get('@newUnusedSignalsTag').trigger('mouseout');
         });
 
         it('should not be included in the PUT call executed after saving a new search', () => {

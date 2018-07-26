@@ -165,12 +165,12 @@ describe('results reducer', () => {
                 const state = {
                     list: [],
                     sortBy: 'totalCount',
-                    sortDir: -1,
+                    descending: false,
                 };
                 const actual = getSortOptions(state);
                 const expected = {
                     sortBy: 'totalCount',
-                    sortDir: -1,
+                    descending: false,
                 };
 
                 expect(actual).toEqual(expected);
