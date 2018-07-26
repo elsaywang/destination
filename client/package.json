@@ -31,7 +31,7 @@
     "react-scripts-cssmodules": "^1.0.171",
     "react-test-renderer": "^16.2.0",
     "redux": "^3.7.2",
-    "redux-actions": "2.2.1",
+    "redux-actions": "^2.5.1",
     "redux-devtools-extension": "^2.13.2",
     "redux-promise-middleware": "^5.0.0",
     "redux-thunk": "^2.2.0",
