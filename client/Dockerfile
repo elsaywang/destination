@@ -5,6 +5,9 @@ LABEL maintainer="Portal-ui-team"
 # set working directory
 WORKDIR /usr/src/app/client
 
+ARG BUILD_NUMBER
+ARG BRANCH_NAME
+
 # install and cache app dependencies
 ADD package.json /usr/src/app/client/package.json
 ADD .npmrc /usr/src/app/client/.npmrc
