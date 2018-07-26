@@ -12,13 +12,21 @@ describe('Search Form Results Integration Tests', function() {
         cy.visit('#/search');
     });
 
-    describe('when Search button is clicked', function() {
-        // it('should show loading spinner', function() {
-        //     cy.reload(true);
-        //     cy.get('[data-test="search-button"]').click();
+    describe('before Search button is clicked', function() {
+        it('should show empty state with start exploring image', function() {
+            cy.get('[data-test="empty"]').should('exist');
+            cy.get('[data-test="start-exploring"]').should('exist');
+            cy.get('[data-test="signals-table"]').should('not.exist');
+        });
+    });
 
-        //     cy.get('.spectrum-Loader').should('exist');
-        // });
+    describe('when Search button is clicked', function() {
+        it('should show loading spinner', function() {
+            cy.get('[data-test="clear-all-button"]').click();
+            cy.get('[data-test="search-button"]').click();
+
+            cy.get('.spectrum-Loader').should('exist');
+        });
 
         describe('when search results exist', function() {
             it('should render results table', function() {
@@ -26,10 +34,11 @@ describe('Search Form Results Integration Tests', function() {
 
                 cy.get('[data-test="signals-table"]').should('exist');
                 cy.get('[data-test="empty"]').should('not.exist');
+                cy.get('.spectrum-Loader').should('not.exist');
             });
         });
 
-        describe('when no search results exist', function() {
+        describe('when there are no search results', function() {
             beforeEach(function() {
                 cy.route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse).as(
                     'fetchEmptySearchResults',
@@ -42,6 +51,7 @@ describe('Search Form Results Integration Tests', function() {
                 cy.get('[data-test="empty"]').should('exist');
                 cy.get('[data-test="no-result-found"]').should('exist');
                 cy.get('[data-test="signals-table"]').should('not.exist');
+                cy.get('.spectrum-Loader').should('not.exist');
             });
         });
 
@@ -63,16 +73,10 @@ describe('Search Form Results Integration Tests', function() {
                 cy.get('@badRequestError')
                     .should('exist')
                     .should('have.text', errorResponse.statusText);
+                cy.get('[data-test="error-fetching-data"]').should('exist');
                 cy.get('[data-test="signals-table"]').should('not.exist');
+                cy.get('.spectrum-Loader').should('not.exist');
             });
-        });
-    });
-
-    describe('before Search button is clicked', function() {
-        it('should show empty state with start exploring image', function() {
-            cy.get('[data-test="empty"]').should('exist');
-            cy.get('[data-test="start-exploring"]').should('exist');
-            cy.get('[data-test="signals-table"]').should('not.exist');
         });
     });
 });
