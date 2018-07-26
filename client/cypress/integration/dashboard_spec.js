@@ -7,36 +7,31 @@ describe('Dashboard Integration Tests', function() {
     describe('Preset saved searches', () => {
         beforeEach(function() {
             cy.server();
-            cy
-                .route(
-                    '/portal/api/v1/users/self/annotations/aam-portal',
-                    savedSearchResponse.savedSearch,
-                )
-                .as('fetchSavedSearch');
-            cy
-                .route('POST', '/portal/api/v1/signals/list', searchResultsResponse)
-                .as('fetchSearchResults');
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            ).as('fetchSavedSearch');
+            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                'fetchSearchResults',
+            );
             cy.visit('/');
             cy.scrollTo('bottom');
         });
 
         it("requests user's saved searches", function() {
-            cy
-                .wait('@fetchSavedSearch')
+            cy.wait('@fetchSavedSearch')
                 .its('status')
                 .should('eq', 200);
         });
 
         it("requests user's saved searches result list", function() {
-            cy
-                .wait('@fetchSearchResults')
+            cy.wait('@fetchSearchResults')
                 .its('status')
                 .should('eq', 200);
         });
 
         it('should render first when user-defined saved searches exist with `includeInDashboard` is set to true', () => {
-            cy
-                .get('[data-test="saved-search-dashboard"]')
+            cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
                 .should('have.length', 4);
             const userDefinedVisibleSavedSearchOne = 'Angus Koss V';
@@ -44,68 +39,56 @@ describe('Dashboard Integration Tests', function() {
             const firstPresetHeading = 'Top Unused Signals';
             const secondPresetHeading = 'New Unused Signals';
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(0)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', firstPresetHeading);
 
                     cy.get('[data-test="signals-table"]').as('firstPresetSavedSearchTable');
-                    cy
-                        .get('@firstPresetSavedSearchTable')
+                    cy.get('@firstPresetSavedSearchTable')
                         .should('exist')
                         .should('have.length', 1);
                 });
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(1)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', secondPresetHeading);
                     cy.get('[data-test="signals-table"]').as('secondPresetSavedSearchTable');
-                    cy
-                        .get('@secondPresetSavedSearchTable')
+                    cy.get('@secondPresetSavedSearchTable')
                         .should('exist')
                         .should('have.length', 1);
                 });
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(2)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', userDefinedVisibleSavedSearchOne);
 
-                    cy
-                        .get('[data-test="signals-table"]')
-                        .as('firstUserDefinedVisibleSavedSearchTable');
-                    cy
-                        .get('@firstUserDefinedVisibleSavedSearchTable')
+                    cy.get('[data-test="signals-table"]').as(
+                        'firstUserDefinedVisibleSavedSearchTable',
+                    );
+                    cy.get('@firstUserDefinedVisibleSavedSearchTable')
                         .should('exist')
                         .should('have.length', 1);
                 });
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(3)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', userDefinedVisibleSavedSearchTwo);
 
-                    cy
-                        .get('[data-test="signals-table"]')
-                        .as('secondUserDefinedVisibleSavedSearchTable');
-                    cy
-                        .get('@secondUserDefinedVisibleSavedSearchTable')
+                    cy.get('[data-test="signals-table"]').as(
+                        'secondUserDefinedVisibleSavedSearchTable',
+                    );
+                    cy.get('@secondUserDefinedVisibleSavedSearchTable')
                         .should('exist')
                         .should('have.length', 1);
                 });
@@ -114,48 +97,39 @@ describe('Dashboard Integration Tests', function() {
         it('should render when no user-defined saved searches exist', () => {
             const firstPresetHeading = 'Top Unused Signals';
             const secondPresetHeading = 'New Unused Signals';
-            cy
-                .route(
-                    '/portal/api/v1/users/self/annotations/aam-portal',
-                    emptySavedSearchResponse.savedSearch,
-                )
-                .as('fetchEmptySavedSearch');
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                emptySavedSearchResponse.savedSearch,
+            ).as('fetchEmptySavedSearch');
             cy.reload();
 
             cy.wait('@fetchEmptySavedSearch');
 
-            cy
-                .get('[data-test="saved-search-dashboard"]')
+            cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
                 .should('have.length', 2);
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(0)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', firstPresetHeading);
 
                     cy.get('[data-test="signals-table"]').as('firstPresetSavedSearchTable');
-                    cy
-                        .get('@firstPresetSavedSearchTable')
+                    cy.get('@firstPresetSavedSearchTable')
                         .should('exist')
                         .should('have.length', 1);
                 });
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(1)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', secondPresetHeading);
                     cy.get('[data-test="signals-table"]').as('secondPresetSavedSearchTable');
-                    cy
-                        .get('@secondPresetSavedSearchTable')
+                    cy.get('@secondPresetSavedSearchTable')
                         .should('exist')
                         .should('have.length', 1);
                 });
@@ -165,32 +139,27 @@ describe('Dashboard Integration Tests', function() {
             const buttonLabel = 'View All';
             const currentClickedTagLabel = 'Top Unused Signals';
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(0)
                 .within(() => {
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy
-                        .get('@viewAllButton')
+                    cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                     cy.get('@viewAllButton').click();
                 });
 
             cy.url().should('match', /\#\/search/);
-            cy
-                .get('@fetchSearchResults')
+            cy.get('@fetchSearchResults')
                 .its('status')
                 .should('eq', 200);
 
             cy.get('[data-saved-search-preset="top-unused-signals"]').as('topUnusedSignalsTag');
             cy.get('@topUnusedSignalsTag').should('be.visible');
-            cy
-                .get('#isCurrentSearch')
+            cy.get('#isCurrentSearch')
                 .should('exist')
                 .should('have.text', currentClickedTagLabel);
-            cy
-                .get('[data-test="key-search-field"]')
+            cy.get('[data-test="key-search-field"]')
                 .should('be.visible')
                 .should('have.value', '');
             cy.get('[data-test="operator"]').should('have.value', '==');
@@ -205,32 +174,27 @@ describe('Dashboard Integration Tests', function() {
             const buttonLabel = 'View All';
             const currentClickedTagLabel = 'New Unused Signals';
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(1)
                 .within(() => {
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('secondViewAllButton');
-                    cy
-                        .get('@secondViewAllButton')
+                    cy.get('@secondViewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                     cy.get('@secondViewAllButton').click();
                 });
 
             cy.url().should('match', /\/#\/search/);
-            cy
-                .get('@fetchSearchResults')
+            cy.get('@fetchSearchResults')
                 .its('status')
                 .should('eq', 200);
 
             cy.get('[data-saved-search-preset="new-unused-signals"]').as('newUnusedSignalsTag');
             cy.get('@newUnusedSignalsTag').should('be.visible');
-            cy
-                .get('#isCurrentSearch')
+            cy.get('#isCurrentSearch')
                 .should('exist')
                 .should('have.text', currentClickedTagLabel);
-            cy
-                .get('[data-test="key-search-field"]')
+            cy.get('[data-test="key-search-field"]')
                 .should('be.visible')
                 .should('have.value', '');
             cy.get('[data-test="operator"]').should('have.value', '==');
@@ -248,95 +212,79 @@ describe('Dashboard Integration Tests', function() {
     describe('No saved search result', () => {
         beforeEach(function() {
             cy.server();
-            cy
-                .route(
-                    '/portal/api/v1/users/self/annotations/aam-portal',
-                    emptySavedSearchResponse.savedSearch,
-                )
-                .as('fetchEmptySavedSearch');
-            cy
-                .route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse)
-                .as('fetchEmptySearchResults');
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                emptySavedSearchResponse.savedSearch,
+            ).as('fetchEmptySavedSearch');
+            cy.route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse).as(
+                'fetchEmptySearchResults',
+            );
             cy.visit('/');
             cy.scrollTo('bottom');
         });
         it("requests user's saved searches", function() {
-            cy
-                .wait('@fetchEmptySavedSearch')
+            cy.wait('@fetchEmptySavedSearch')
                 .its('status')
                 .should('eq', 200);
         });
 
         it("requests user's saved searches result list", function() {
-            cy
-                .wait('@fetchEmptySearchResults')
+            cy.wait('@fetchEmptySearchResults')
                 .its('status')
                 .should('eq', 200);
         });
 
         it('should render 2 empty saved search tables when no user-defined saved searches exist ', () => {
-            cy
-                .get('[data-test="saved-search-dashboard"]')
+            cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
                 .should('have.length', 2);
             const firstPresetHeading = 'Top Unused Signals';
             const secondPresetHeading = 'New Unused Signals';
             const buttonLabel = 'View All';
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(0)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', firstPresetHeading);
 
                     cy.get('[data-test="signals-table"]').should('not.exist');
-                    cy
-                        .get('[data-test="empty"]')
+                    cy.get('[data-test="empty"]')
                         .should('exist')
                         .should('have.length', 1);
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy
-                        .get('@viewAllButton')
+                    cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                 });
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(1)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', secondPresetHeading);
 
                     cy.get('[data-test="signals-table"]').should('not.exist');
-                    cy
-                        .get('[data-test="empty"]')
+                    cy.get('[data-test="empty"]')
                         .should('exist')
                         .should('have.length', 1);
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy
-                        .get('@viewAllButton')
+                    cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                 });
         });
 
         it('should render 2 preset empty tables plus total of user-defined saved searches exist with `includeInDashboard` is set to true with empty results', () => {
-            cy
-                .route(
-                    '/portal/api/v1/users/self/annotations/aam-portal',
-                    savedSearchResponse.savedSearch,
-                )
-                .as('fetchSavedSearch');
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            ).as('fetchSavedSearch');
             cy.reload();
             cy.wait('@fetchSavedSearch');
 
-            cy
-                .get('[data-test="saved-search-dashboard"]')
+            cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
                 .should('have.length', 4);
             const userDefinedVisibleSavedSearchOne = 'Angus Koss V';
@@ -345,84 +293,68 @@ describe('Dashboard Integration Tests', function() {
             const secondPresetHeading = 'New Unused Signals';
             const buttonLabel = 'View All';
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(0)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', firstPresetHeading);
                     cy.get('[data-test="signals-table"]').should('not.exist');
-                    cy
-                        .get('[data-test="empty"]')
+                    cy.get('[data-test="empty"]')
                         .should('exist')
                         .should('have.length', 1);
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy
-                        .get('@viewAllButton')
+                    cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                 });
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(1)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', secondPresetHeading);
                     cy.get('[data-test="signals-table"]').should('not.exist');
-                    cy
-                        .get('[data-test="empty"]')
+                    cy.get('[data-test="empty"]')
                         .should('exist')
                         .should('have.length', 1);
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy
-                        .get('@viewAllButton')
+                    cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                 });
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(2)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', userDefinedVisibleSavedSearchOne);
 
                     cy.get('[data-test="signals-table"]').should('not.exist');
-                    cy
-                        .get('[data-test="empty"]')
+                    cy.get('[data-test="empty"]')
                         .should('exist')
                         .should('have.length', 1);
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy
-                        .get('@viewAllButton')
+                    cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                 });
 
-            cy
-                .get('[data-test=saved-search-dashboard]')
+            cy.get('[data-test=saved-search-dashboard]')
                 .eq(3)
                 .within(() => {
-                    cy
-                        .get('.spectrum-Heading.spectrum-Heading--subtitle1')
+                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', userDefinedVisibleSavedSearchTwo);
 
                     cy.get('[data-test="signals-table"]').should('not.exist');
-                    cy
-                        .get('[data-test="empty"]')
+                    cy.get('[data-test="empty"]')
                         .should('exist')
                         .should('have.length', 1);
                     cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy
-                        .get('@viewAllButton')
+                    cy.get('@viewAllButton')
                         .should('exist')
                         .should('have.text', buttonLabel);
                 });
