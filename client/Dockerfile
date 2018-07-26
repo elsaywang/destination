@@ -1,4 +1,4 @@
-FROM node:10.7.0-alpine AS build
+FROM node:9.6.1-alpine AS build
 
 LABEL maintainer="Portal-ui-team"
 

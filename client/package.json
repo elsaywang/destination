@@ -35,14 +35,15 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-promise-middleware": "^5.0.0",
     "redux-thunk": "^2.2.0",
+    "replace-in-file": "^3.4.0",
     "start-server-and-test": "^1.0.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "start:ci": "./node_modules/.bin/http-server build -p 3000",
     "build": "react-app-rewired build",
-    "build:replace:version": "sed -i '.bak' \"s/signalsVersion/$BUILD_NUMBER/g\" build/index.html",
-    "build:replace:branch": "sed -i '.bak' 's/signalsBranch/$BRANCH_NAME/g' index.html",
+    "build:replace:version": "npx replace-in-file signalsVersion $BUILD_NUMBER build/index.html",
+    "build:replace:branch": "npx replace-in-file signalsBranch $BRANCH_NAME build/index.html",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --staged",
