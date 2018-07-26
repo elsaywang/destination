@@ -325,14 +325,20 @@ class SearchContainer extends Component {
     getSearchResultsMessage = () =>
         getSearchResultsMessageBySignalTypeLabel(this.state.name, this.state.source.sourceType);
 
-    renderEmptyResult = () => {
+    renderEmptyState = () => {
+        if (!this.state.searched) {
+            return <EmptySearch className={styles.empty} variant={'explore'} />;
+        }
+
+        if (this.props.errors.searchForm.hasError) {
+            return <EmptySearch className={styles.empty} variant={'errorFetching'} />;
+        }
+
         if (this.props.isResultsLoaded && this.state.searched) {
             return <EmptySearch className={styles.empty} variant={'noResult'} />;
-        } else if (!this.state.searched) {
-            return <EmptySearch className={styles.empty} variant={'explore'} />;
-        } else {
-            return <Wait size="L" centered />;
         }
+
+        return <Wait size="L" centered />;
     };
 
     isSearchDisabled = () => !this.props.isResultsLoaded && this.state.searched;
@@ -458,7 +464,7 @@ class SearchContainer extends Component {
                     </div>
                 ) : (
                     <GridRow>
-                        <GridColumn size={12}>{this.renderEmptyResult()}</GridColumn>
+                        <GridColumn size={12}>{this.renderEmptyState()}</GridColumn>
                     </GridRow>
                 )}
             </Fragment>
