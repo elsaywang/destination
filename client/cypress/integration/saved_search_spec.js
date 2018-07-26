@@ -195,13 +195,13 @@ describe('Saved Search Integration Test', function() {
 
                 cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
 
-                cy.wait('@createSavedSearch').then(() => {
-                    cy.get('[data-saved-search-id]')
-                        .contains(searchName)
-                        .should('exist')
-                        .trigger('mouseover');
-                    cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
-                });
+                cy.wait('@createSavedSearch');
+
+                cy.get('[data-saved-search-id]')
+                    .contains(searchName)
+                    .should('exist')
+                    .trigger('mouseover');
+                cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
             });
         });
 
@@ -222,13 +222,13 @@ describe('Saved Search Integration Test', function() {
 
                 cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
 
-                cy.wait('@createSavedSearch').then(() => {
-                    cy.get('[data-saved-search-id]')
-                        .contains(defaultName)
-                        .should('exist')
-                        .trigger('mouseover');
-                    cy.get('[data-test="saved-search-overlay-trigger"]').contains(defaultName);
-                });
+                cy.wait('@createSavedSearch');
+
+                cy.get('[data-saved-search-id]')
+                    .contains(defaultName)
+                    .should('exist')
+                    .trigger('mouseover');
+                cy.get('[data-test="saved-search-overlay-trigger"]').contains(defaultName);
             });
         });
 

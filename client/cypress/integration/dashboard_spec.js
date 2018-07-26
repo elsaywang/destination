@@ -392,14 +392,14 @@ describe('Dashboard Integration Tests', function() {
 
             cy.scrollTo('bottom')
                 .then(() => {
-                    cy.wait(1000);
+                    cy.wait(500);
                     cy.get('[data-test="saved-search-dashboard"]')
                         .should('exist')
                         .should('have.length', 4);
                 })
                 .then(() => {
                     cy.scrollTo('bottom');
-                    cy.wait(1000);
+                    cy.wait(500);
                 })
                 .then(() => {
                     cy.get('[data-test="saved-search-dashboard"]')
@@ -408,7 +408,7 @@ describe('Dashboard Integration Tests', function() {
                 })
                 .then(() => {
                     cy.scrollTo('bottom');
-                    cy.wait(1000);
+                    cy.wait(500);
                 })
                 .then(() => {
                     cy.get('[data-test="saved-search-dashboard"]')
