@@ -11,7 +11,7 @@ export const fetchSignals = ({
     const normalizedSearch = normalizeSearch(search);
     const body = JSON.stringify({
         ...normalizeSearch(search),
-        ...normalizeSortOptions(sortOptions),
+        ...sortOptions,
         page,
         pageSize,
     });

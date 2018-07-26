@@ -28,6 +28,7 @@ import {
 } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
+import { normalizeSortOptions } from '../utils/normalizeSortOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
@@ -217,14 +218,22 @@ class SearchContainer extends Component {
         });
     };
 
-    onSavedSearchClick = savedSearch => {
+    handleSavedSearchClick = savedSearch => {
         this.setState({
             ...this.state,
             presetId: null,
             ...savedSearch,
             searched: true,
         });
-        this.props.callSearch({ search: savedSearch });
+
+        const { sortBy, descending } = savedSearch;
+        const sortOptions = { sortBy, descending };
+
+        this.props.updateSortOptions(sortOptions);
+        this.props.callSearch({
+            search: savedSearch,
+            sortOptions,
+        });
         this.props.populateSearchFields(savedSearch);
     };
 
@@ -266,7 +275,9 @@ class SearchContainer extends Component {
         }, throttleMs)();
     };
 
-    handleSortSearch = sortOptions => {
+    handleSortSearch = ({ sortBy, sortDir }) => {
+        const sortOptions = normalizeSortOptions({ sortBy, sortDir });
+
         this.props.updateSortOptions(sortOptions);
         this.props.callSearch({
             search: this.state,
@@ -367,7 +378,7 @@ class SearchContainer extends Component {
                                 getSavedSearch={this.props.getSavedSearch}
                                 deleteSearch={this.deleteSearch}
                                 list={this.props.finalizedSavedSearchList}
-                                onSavedSearchClick={this.onSavedSearchClick}
+                                onSavedSearchClick={this.handleSavedSearchClick}
                                 currentSearch={this.state.name}
                                 error={this.props.errors.savedSearch}
                                 disabled={this.isSearchDisabled()}
