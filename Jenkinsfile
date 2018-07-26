@@ -11,7 +11,7 @@ node ("docker") {
         }
 
         stage ('Building Image') {
-            sh "docker build -t ${uiImageName} --build-arg BUILD_NUMBER=${BUILD_NUMBER} BRANCH_NAME=${BRANCH_NAME} ./client "
+            sh "docker build -t ${uiImageName} --build-arg BUILD_NUMBER=${BUILD_NUMBER} --build-arg BRANCH_NAME=${BRANCH_NAME} ./client"
             uiImage = docker.image(uiImageName)
         }
 
