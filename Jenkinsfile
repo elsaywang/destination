@@ -4,6 +4,17 @@ def cypressBaseImage = "cypress/base:8"
 def workspace
 
 node ("docker") {
+    properties([
+        disableConcurrentBuilds(),
+        [$class: 'BuildDiscarderProperty', strategy: [
+            $class: 'LogRotator',
+            artifactDaysToKeepStr: '',
+            artifactNumToKeepStr: '',
+            daysToKeepStr: '',
+            numToKeepStr: '20'
+        ]]
+    ])
+
     try {
         workspace = pwd()
         stage ('Checkout latest repo changes') {
