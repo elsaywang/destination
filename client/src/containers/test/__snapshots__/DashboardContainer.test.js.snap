@@ -72,6 +72,7 @@ ShallowWrapper {
             },
           ]
     }
+    updateSortOptions={[Function]}
     visibleSavedSearchList={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -264,6 +265,7 @@ ShallowWrapper {
             },
           ]
     }
+    updateSortOptions={[Function]}
     visibleSavedSearchList={
         Array [
             Object {

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { callSearch } from '../actions/searchForm';
+import { callSearch, updateSortOptions } from '../actions/searchForm';
 import {
     getSavedSearch,
     loadMoreSavedSearch,
@@ -51,10 +51,16 @@ class DashboardContainer extends Component {
     }
 
     handleViewAllForSavedSearch = search => {
-        const { populateSearchFields, callSearch } = this.props;
+        const { populateSearchFields, callSearch, updateSortOptions } = this.props;
+        const { sortBy, descending } = search;
+        const sortOptions = { sortBy, descending };
 
+        updateSortOptions(sortOptions);
+        callSearch({
+            search,
+            sortOptions,
+        });
         populateSearchFields(search);
-        callSearch({ search });
     };
 
     isBottomPassed = () =>
@@ -140,6 +146,7 @@ const mapStateToProps = ({ savedSearch, errors, permissions }) => ({
 });
 const actionCreators = {
     callSearch,
+    updateSortOptions,
     getSavedSearch,
     loadMoreSavedSearch,
     resetVisibleSavedSearch,
