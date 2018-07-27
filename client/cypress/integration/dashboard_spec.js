@@ -389,7 +389,7 @@ describe('Dashboard Integration Tests', function() {
 
         it('when scrolling to bottom, it should call load more tables till it hits the max allowance', () => {
             const maxTotalSavedSearches = maxSavedSearchResponse.savedSearch.length;
-
+            // TODO: cy.wait(num) should be fixed as it's not best practice
             cy.scrollTo('bottom')
                 .then(() => {
                     cy.wait(500);
