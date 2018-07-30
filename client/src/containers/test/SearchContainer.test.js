@@ -121,9 +121,30 @@ describe('<SearchContainer /> component', () => {
                 });
                 wrapper.setState({ searched: true });
             });
-            it('renders <EmptySearch/> component with `NoResult` variant pass in props', () => {
+
+            it('renders <EmptySearch/> component with `noResult` variant', () => {
                 expect(wrapper.find(EmptySearch).exists()).toBe(true);
                 expect(wrapper.find(EmptySearch).props().variant).toEqual('noResult');
+            });
+        });
+
+        describe('when search results in an error', () => {
+            beforeAll(() => {
+                wrapper.setProps({
+                    errors: {
+                        searchForm: {
+                            hasError: true,
+                            message: 'Forbidden',
+                        },
+                    },
+                });
+
+                wrapper.setState({ searched: true });
+            });
+
+            it('renders <EmptySearch/> component with `errorFetching` variant', () => {
+                expect(wrapper.find(EmptySearch).exists()).toBe(true);
+                expect(wrapper.find(EmptySearch).props().variant).toEqual('errorFetching');
             });
         });
     });
@@ -277,11 +298,6 @@ describe('<SearchContainer /> component', () => {
 
             wrapper.instance().onMinEventFiresChange(10000);
             expect(wrapper.state('minEventFires')).toBe(10000);
-        });
-
-        xit('.onSearch() is called', () => {
-            wrapper.instance().onSearch(initialState);
-            expect(wrapper.instance().onSearch()).toHaveBeenCalled();
         });
 
         it('.onClearAll() to reset state back to initial state', () => {
