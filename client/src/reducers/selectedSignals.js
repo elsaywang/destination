@@ -6,7 +6,7 @@ import { defaultMaxSignalSelections } from '../constants/limitConstants';
 const initialState = {
     selectedRowIndexes: [],
     selectionMessage: '',
-    hasTraitsCreationDisabledWarning: false,
+    hasSignalSelectionsTypeWarning: false,
     maxSignalSelections: defaultMaxSignalSelections,
 };
 
@@ -33,4 +33,4 @@ export const finalizedSelectedSignals = state => ({
     ...state,
     selectedRowIndexes: finalizedSelectedRowIndexes(state),
 });
-export const hasTraitsCreationDisabledWarning = state => state.hasTraitsCreationDisabledWarning;
+export const hasSignalSelectionsTypeWarning = state => state.hasSignalSelectionsTypeWarning;

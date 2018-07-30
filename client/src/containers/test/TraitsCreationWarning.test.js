@@ -8,9 +8,9 @@ import {
 } from '../../components/common/Warning/WarningTemplates';
 
 describe('<TraitsCreationWarning/> component', () => {
-    describe('rendering when `hasTraitsCreationDisabledWarning` and `isMaxSignalSelectionsReached` props both are false', () => {
+    describe('rendering when `hasSignalSelectionsTypeWarning` and `isMaxSignalSelectionsReached` props both are false', () => {
         const initialprops = {
-            hasTraitsCreationDisabledWarning: false,
+            hasSignalSelectionsTypeWarning: false,
             isMaxSignalSelectionsReached: false,
             maxSignalSelections: 5,
         };
@@ -26,9 +26,9 @@ describe('<TraitsCreationWarning/> component', () => {
         });
     });
 
-    describe('rendering when `hasTraitsCreationDisabledWarning` prop is true', () => {
+    describe('rendering when `hasSignalSelectionsTypeWarning` prop is true', () => {
         const props = {
-            hasTraitsCreationDisabledWarning: true,
+            hasSignalSelectionsTypeWarning: true,
             isMaxSignalSelectionsReached: false,
             maxSignalSelections: 5,
         };
@@ -61,7 +61,7 @@ describe('<TraitsCreationWarning/> component', () => {
             ).toBe(false);
         });
 
-        it('should not render <SignalsSelectionLimitMessage/> when `isMaxSignalSelectionsReached` and `hasTraitsCreationDisabledWarning` props are true', () => {
+        it('should render both <SignalsSelectionLimitMessage/> and <SignalsSelectionWarningMessage/> when `isMaxSignalSelectionsReached` and `hasSignalSelectionsTypeWarning` props are true', () => {
             wrapper.setProps({ isMaxSignalSelectionsReached: true });
             expect(wrapper.find(Warning).exists()).toBe(true);
             expect(
@@ -70,13 +70,20 @@ describe('<TraitsCreationWarning/> component', () => {
                     .children()
                     .find(SignalsSelectionLimitMessage)
                     .exists(),
-            ).toBe(false);
+            ).toBe(true);
+            expect(
+                wrapper
+                    .find(Warning)
+                    .children()
+                    .find(SignalsSelectionWarningMessage)
+                    .exists(),
+            ).toBe(true);
         });
     });
 
     describe('rendering when `isMaxSignalSelectionsReached` props is true', () => {
         const props = {
-            hasTraitsCreationDisabledWarning: false,
+            hasSignalSelectionsTypeWarning: false,
             isMaxSignalSelectionsReached: true,
             maxSignalSelections: 5,
         };
@@ -98,7 +105,7 @@ describe('<TraitsCreationWarning/> component', () => {
             ).toBe(true);
         });
 
-        it('should not render <SignalsSelectionWarningMessage/> as children component within <Warning/> as `hasTraitsCreationDisabledWarning` props is false', () => {
+        it('should not render <SignalsSelectionWarningMessage/> as children component within <Warning/> as `hasSignalSelectionsTypeWarning` props is false', () => {
             expect(wrapper.find(Warning).exists()).toBe(true);
             expect(
                 wrapper

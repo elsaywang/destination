@@ -9,7 +9,7 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
         const initialprops = {
             selectedSignals: {
                 selectionMessage: '',
-                hasTraitsCreationDisabledWarning: false,
+                hasSignalSelectionsTypeWarning: false,
                 selectedRowIndexes: [],
             },
         };
@@ -28,7 +28,7 @@ describe('<MultiSignalsTraitsCreationContainer/> component', () => {
         const props = {
             selectedSignals: {
                 selectionMessage: '1 Real-time signal selected ',
-                hasTraitsCreationDisabledWarning: false,
+                hasSignalSelectionsTypeWarning: false,
                 selectedRowIndexes: [0],
             },
         };

@@ -7,7 +7,7 @@ import Add from '@react/react-spectrum/Icon/Add';
 describe('<MultiSignalsTraitsCreation/> component', () => {
     const mockFn = jest.fn();
     const props = {
-        selectedSignals: { selectionMessage: '', hasTraitsCreationDisabledWarning: false },
+        selectedSignals: { selectionMessage: '', hasSignalSelectionsTypeWarning: false },
         storeSessionAndNavigateToTraits: mockFn,
     };
     const wrapper = shallow(<MultiSignalsTraitsCreation {...props} />);
@@ -50,7 +50,7 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
                         { rowIndex: 0, signalType: 'Adobe Analytics' },
                         { rowIndex: 1, signalType: 'Onboarded Records' },
                     ],
-                    hasTraitsCreationDisabledWarning: true,
+                    hasSignalSelectionsTypeWarning: true,
                 },
             };
 

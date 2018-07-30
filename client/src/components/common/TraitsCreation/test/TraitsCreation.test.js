@@ -52,7 +52,7 @@ describe('<TraitsCreation /> component', () => {
             multiCreation: true,
             selectedSignals: {
                 selectionMessage: '',
-                hasTraitsCreationDisabledWarning: false,
+                hasSignalSelectionsTypeWarning: false,
                 records: [],
             },
         };

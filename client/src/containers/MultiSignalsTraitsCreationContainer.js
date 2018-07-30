@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TraitsCreation from '../components/common/TraitsCreation/';
 import { getSelectedResults } from '../reducers';
-import { finalizedSelectedRowIndexes, finalizedSelectedSignals } from '../reducers/selectedSignals';
+import { isMaxSignalSelectionsReached } from '../reducers/selectedSignals';
 
 export class MultiSignalsTraitsCreationContainer extends Component {
     render() {
@@ -16,19 +16,21 @@ export class MultiSignalsTraitsCreationContainer extends Component {
 MultiSignalsTraitsCreationContainer.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        hasTraitsCreationDisabledWarning: PropTypes.bool,
+        hasSignalSelectionsTypeWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
     selectedResults: PropTypes.array,
     canCreateTraits: PropTypes.bool,
+    isMaxSignalSelectionsReached: PropTypes.bool,
 };
 
 const mapStateToProps = ({ selectedSignals, results }) => ({
-    selectedSignals: finalizedSelectedSignals(selectedSignals),
+    selectedSignals,
     selectedResults: getSelectedResults({
-        selectedSignals: finalizedSelectedSignals(selectedSignals),
+        selectedSignals,
         results,
     }),
+    isMaxSignalSelectionsReached: isMaxSignalSelectionsReached(selectedSignals),
 });
 
 export default connect(mapStateToProps)(MultiSignalsTraitsCreationContainer);

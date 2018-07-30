@@ -14,7 +14,7 @@ import {
 import { defaultRowHeight } from '../constants/rows';
 import {
     renderSelectedSignalsMessage,
-    hasTraitsCreationDisabledWarning,
+    hasSignalSelectionsTypeWarning,
 } from '../utils/signalSelection';
 import { isNumeric } from '../utils/isNumeric';
 import styles from './SignalsTable.css';
@@ -51,7 +51,7 @@ class SignalsTable extends Component {
         const selectionMessage = renderSelectedSignalsMessage(records);
         onSignalRecordsSelection({
             selectionMessage,
-            hasTraitsCreationDisabledWarning: hasTraitsCreationDisabledWarning(records),
+            hasSignalSelectionsTypeWarning: hasSignalSelectionsTypeWarning(records),
             selectedRowIndexes: selectedRowIndexSet,
         });
     };
@@ -206,7 +206,6 @@ class SignalsTable extends Component {
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
         const items = this.formatSignalsList(results);
         const rowHeight = this.getRowHeight(totalKeyValuePairs);
-
         return (
             <Table
                 dataTest="signals-table"

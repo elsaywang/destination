@@ -10,8 +10,8 @@ export const SignalsSelectionWarningMessage = () => (
 
 export const SignalsSelectionLimitMessage = ({ maxSignalSelections }) => (
     <span>
-        You may select up to <strong>{maxSignalSelections}</strong> Signals. Only the first{' '}
-        <strong>{maxSignalSelections}</strong> selected signals will be used to create a trait.
+        You may only allow to select up to <strong>{maxSignalSelections}</strong> signals to create
+        traits.
     </span>
 );
 
