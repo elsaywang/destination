@@ -9,6 +9,7 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
     const props = {
         selectedSignals: { selectionMessage: '', hasSignalSelectionsTypeWarning: false },
         storeSessionAndNavigateToTraits: mockFn,
+        isMaxSignalSelectionsReached: false,
     };
     const wrapper = shallow(<MultiSignalsTraitsCreation {...props} />);
 
@@ -37,7 +38,7 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
             expect(button.props().label).toEqual('Create Trait From Multiple Signals');
         });
 
-        it('has "action" variant when no warning message is passed from props', () => {
+        it('has "action" variant when no warning message and falsy isMaxSignalSelectionsReached  is passed from props', () => {
             expect(button.props().variant).toEqual('action');
             expect('disabled' in wrapper.props()).toBeFalsy();
         });
@@ -52,9 +53,28 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
                     ],
                     hasSignalSelectionsTypeWarning: true,
                 },
+                isMaxSignalSelectionsReached: false,
             };
 
             wrapper.setProps({ ...propsWithWarning });
+            expect(wrapper.find(Button).props().variant).toEqual('action');
+            expect(wrapper.find(Button).props().disabled).toBeTruthy();
+        });
+
+        it('is disabled <Button /> with "action" variant when truthy `isMaxSignalSelectionsReached` is passed from props', () => {
+            const props = {
+                selectedSignals: {
+                    selectionMessage: '1 Real-time signal, 1 Onboarded signal selected',
+                    records: [
+                        { rowIndex: 0, signalType: 'Adobe Analytics' },
+                        { rowIndex: 1, signalType: 'Onboarded Records' },
+                    ],
+                    hasSignalSelectionsTypeWarning: false,
+                },
+                isMaxSignalSelectionsReached: true,
+            };
+
+            wrapper.setProps({ ...props });
             expect(wrapper.find(Button).props().variant).toEqual('action');
             expect(wrapper.find(Button).props().disabled).toBeTruthy();
         });
