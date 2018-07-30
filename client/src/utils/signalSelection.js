@@ -60,7 +60,7 @@ export const renderSelectedSignalsMessage = rowRecords => {
     return formatSelectedSignalsSelectionMessage(totalOnboardedRecords, totalRealTimeRecords);
 };
 
-export const hasTraitsCreationDisabledWarning = rowRecords => {
+export const hasSignalSelectionsTypeWarning = rowRecords => {
     const totalOnboardedRecords = getTotalOnboardedRecords(rowRecords);
     const totalRealTimeRecords = getTotalRealTimeRecords(rowRecords);
 

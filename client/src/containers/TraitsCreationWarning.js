@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Warning from '../components/common/Warning';
 import {
@@ -7,7 +7,7 @@ import {
 } from '../components/common/Warning/WarningTemplates';
 import {
     isMaxSignalSelectionsReached,
-    hasTraitsCreationDisabledWarning,
+    hasSignalSelectionsTypeWarning,
     getMaxSignalSelections,
 } from '../reducers/selectedSignals';
 import { connect } from 'react-redux';
@@ -15,21 +15,21 @@ import { connect } from 'react-redux';
 export class TraitsCreationWarning extends Component {
     render() {
         const {
-            hasTraitsCreationDisabledWarning,
+            hasSignalSelectionsTypeWarning,
             isMaxSignalSelectionsReached,
             maxSignalSelections,
         } = this.props;
 
-        if (hasTraitsCreationDisabledWarning) {
-            return (
-                <Warning>
-                    <SignalsSelectionWarningMessage />
-                </Warning>
-            );
-        } else if (isMaxSignalSelectionsReached) {
+        if (isMaxSignalSelectionsReached) {
             return (
                 <Warning>
                     <SignalsSelectionLimitMessage maxSignalSelections={maxSignalSelections} />
+                </Warning>
+            );
+        } else if (hasSignalSelectionsTypeWarning) {
+            return (
+                <Warning>
+                    <SignalsSelectionWarningMessage />
                 </Warning>
             );
         }
@@ -38,14 +38,14 @@ export class TraitsCreationWarning extends Component {
 }
 
 TraitsCreationWarning.propTypes = {
-    hasTraitsCreationDisabledWarning: PropTypes.bool,
+    hasSignalSelectionsTypeWarning: PropTypes.bool,
     isMaxSignalSelectionsReached: PropTypes.bool,
     maxSignalSelections: PropTypes.number,
 };
 
 const mapStateToProps = ({ selectedSignals }) => ({
     isMaxSignalSelectionsReached: isMaxSignalSelectionsReached(selectedSignals),
-    hasTraitsCreationDisabledWarning: hasTraitsCreationDisabledWarning(selectedSignals),
+    hasSignalSelectionsTypeWarning: hasSignalSelectionsTypeWarning(selectedSignals),
     maxSignalSelections: getMaxSignalSelections(selectedSignals),
 });
 

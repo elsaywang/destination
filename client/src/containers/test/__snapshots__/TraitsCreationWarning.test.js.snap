@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TraitsCreationWarning/> component rendering when \`hasTraitsCreationDisabledWarning\` and \`isMaxSignalSelectionsReached\` props both are false matches snapshot 1`] = `
+exports[`<TraitsCreationWarning/> component rendering when \`hasSignalSelectionsTypeWarning\` and \`isMaxSignalSelectionsReached\` props both are false matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
-    hasTraitsCreationDisabledWarning={false}
+    hasSignalSelectionsTypeWarning={false}
     isMaxSignalSelectionsReached={false}
     maxSignalSelections={5}
 />,
@@ -30,12 +30,12 @@ ShallowWrapper {
 }
 `;
 
-exports[`<TraitsCreationWarning/> component rendering when \`hasTraitsCreationDisabledWarning\` prop is true matches snapshot 1`] = `
+exports[`<TraitsCreationWarning/> component rendering when \`hasSignalSelectionsTypeWarning\` prop is true matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
-    hasTraitsCreationDisabledWarning={true}
+    hasSignalSelectionsTypeWarning={true}
     isMaxSignalSelectionsReached={false}
     maxSignalSelections={5}
 />,
@@ -101,7 +101,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
-    hasTraitsCreationDisabledWarning={false}
+    hasSignalSelectionsTypeWarning={false}
     isMaxSignalSelectionsReached={true}
     maxSignalSelections={5}
 />,

@@ -33,12 +33,18 @@ class TraitsCreation extends Component {
     };
 
     render() {
-        const { multiCreation, selectedSignals, canCreateTraits } = this.props;
+        const {
+            multiCreation,
+            selectedSignals,
+            canCreateTraits,
+            isMaxSignalSelectionsReached,
+        } = this.props;
 
         return multiCreation ? (
             <MultiSignalsTraitsCreation
                 selectedSignals={selectedSignals}
                 storeSessionAndNavigateToTraits={this.storeSessionAndNavigateToTraits}
+                isMaxSignalSelectionsReached={isMaxSignalSelectionsReached}
             />
         ) : (
             <SingleSignalTraitsCreation
@@ -56,10 +62,11 @@ TraitsCreation.propTypes = {
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        hasTraitsCreationDisabledWarning: PropTypes.bool,
+        hasSignalSelectionsTypeWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
     canCreateTraits: PropTypes.bool,
+    isMaxSignalSelectionsReached: PropTypes.bool,
 };
 
 export default TraitsCreation;

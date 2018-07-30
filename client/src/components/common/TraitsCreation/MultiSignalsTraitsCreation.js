@@ -4,8 +4,12 @@ import styles from './TraitsCreation.css';
 import Button from '@react/react-spectrum/Button';
 import Add from '@react/react-spectrum/Icon/Add';
 
-const MultiSignalsTraitsCreation = ({ selectedSignals, storeSessionAndNavigateToTraits }) => {
-    const { selectionMessage, hasTraitsCreationDisabledWarning } = selectedSignals;
+const MultiSignalsTraitsCreation = ({
+    selectedSignals,
+    storeSessionAndNavigateToTraits,
+    isMaxSignalSelectionsReached,
+}) => {
+    const { selectionMessage, hasSignalSelectionsTypeWarning } = selectedSignals;
 
     return (
         <div className={styles.multiCreation}>
@@ -15,7 +19,7 @@ const MultiSignalsTraitsCreation = ({ selectedSignals, storeSessionAndNavigateTo
                 label="Create Trait From Multiple Signals"
                 icon={<Add />}
                 variant="action"
-                disabled={hasTraitsCreationDisabledWarning}
+                disabled={hasSignalSelectionsTypeWarning || isMaxSignalSelectionsReached}
                 data-test="multi-signals-trait-creation"
             />
         </div>
@@ -25,10 +29,11 @@ const MultiSignalsTraitsCreation = ({ selectedSignals, storeSessionAndNavigateTo
 MultiSignalsTraitsCreation.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
-        hasTraitsCreationDisabledWarning: PropTypes.bool,
+        hasSignalSelectionsTypeWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
     storeSessionAndNavigateToTraits: PropTypes.func.isRequired,
+    isMaxSignalSelectionsReached: PropTypes.bool,
 };
 
 export default MultiSignalsTraitsCreation;

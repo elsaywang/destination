@@ -22,10 +22,7 @@ import SavedSearch from './SavedSearch';
 import SaveSearchExecution from '../components/SaveSearchExecution';
 import { isEndOfResults, isResultsLoaded, getSortOptions } from '../reducers/results';
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
-import {
-    finalizedSelectedRowIndexes,
-    isMaxSignalSelectionsReached,
-} from '../reducers/selectedSignals';
+import { getSelectedRowIndexes, isMaxSignalSelectionsReached } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { normalizeSortOptions } from '../utils/normalizeSortOptions';
@@ -494,7 +491,7 @@ const mapStateToProps = ({
     isSavedSearchLoaded: savedSearch.isLoaded,
     finalizedSavedSearchList: getNormalizedSavedSearchList(savedSearch),
     maxSignalRetentionDays: getMaxSignalRetentionDays(traitBackfill),
-    selectedRowIndexes: finalizedSelectedRowIndexes(selectedSignals),
+    selectedRowIndexes: getSelectedRowIndexes(selectedSignals),
     isMaxSignalSelectionsReached: isMaxSignalSelectionsReached(selectedSignals),
     reportSuites,
     errors,

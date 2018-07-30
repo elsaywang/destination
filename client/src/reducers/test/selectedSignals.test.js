@@ -4,7 +4,7 @@ import {
     isMaxSignalSelectionsReached,
     finalizedSelectedRowIndexes,
     finalizedSelectedSignals,
-    hasTraitsCreationDisabledWarning,
+    hasSignalSelectionsTypeWarning,
 } from '../selectedSignals';
 
 describe('selected signals reducer', () => {
@@ -67,22 +67,22 @@ describe('selected signals reducer', () => {
             });
         });
 
-        describe('hasTraitsCreationDisabledWarning', () => {
-            it('return `true` if hasTraitsCreationDisabledWarning property is true', () => {
-                const state = { hasTraitsCreationDisabledWarning: true };
-                expect(hasTraitsCreationDisabledWarning(state)).toBeTruthy();
+        describe('hasSignalSelectionsTypeWarning', () => {
+            it('return `true` if hasSignalSelectionsTypeWarning property is true', () => {
+                const state = { hasSignalSelectionsTypeWarning: true };
+                expect(hasSignalSelectionsTypeWarning(state)).toBeTruthy();
             });
 
-            it('return `false` if hasTraitsCreationDisabledWarning property is false', () => {
-                const state = { hasTraitsCreationDisabledWarning: false };
-                expect(hasTraitsCreationDisabledWarning(state)).toBeFalsy();
+            it('return `false` if hasSignalSelectionsTypeWarning property is false', () => {
+                const state = { hasSignalSelectionsTypeWarning: false };
+                expect(hasSignalSelectionsTypeWarning(state)).toBeFalsy();
             });
         });
 
         describe('finalizedSelectedSignals', () => {
             it('return the expected signals object', () => {
                 const state = {
-                    hasTraitsCreationDisabledWarning: false,
+                    hasSignalSelectionsTypeWarning: false,
                     selectionMessage: '10 signals have been selected',
                     selectedRowIndexes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
                     maxSignalSelections: 5,

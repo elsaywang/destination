@@ -5,9 +5,10 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreation
+    isMaxSignalSelectionsReached={false}
     selectedSignals={
         Object {
-            "hasTraitsCreationDisabledWarning": false,
+            "hasSignalSelectionsTypeWarning": false,
             "selectionMessage": "",
           }
     }
