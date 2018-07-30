@@ -20,27 +20,16 @@ export class TraitsCreationWarning extends Component {
             maxSignalSelections,
         } = this.props;
 
-        if (hasSignalSelectionsTypeWarning && isMaxSignalSelectionsReached) {
+        if (isMaxSignalSelectionsReached) {
             return (
-                <Fragment>
-                    <Warning>
-                        <SignalsSelectionLimitMessage maxSignalSelections={maxSignalSelections} />
-                    </Warning>
-                    <Warning>
-                        <SignalsSelectionWarningMessage />
-                    </Warning>
-                </Fragment>
+                <Warning>
+                    <SignalsSelectionLimitMessage maxSignalSelections={maxSignalSelections} />
+                </Warning>
             );
         } else if (hasSignalSelectionsTypeWarning) {
             return (
                 <Warning>
                     <SignalsSelectionWarningMessage />
-                </Warning>
-            );
-        } else if (isMaxSignalSelectionsReached) {
-            return (
-                <Warning>
-                    <SignalsSelectionLimitMessage maxSignalSelections={maxSignalSelections} />
                 </Warning>
             );
         }
