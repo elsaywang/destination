@@ -1754,21 +1754,9 @@ ShallowWrapper {
     clearSearchFields={[Function]}
     errors={
         Object {
-            "reportSuites": Object {
-              "errorMessage": "",
-              "hasError": false,
-            },
-            "saveSearch": Object {
-              "errorMessage": "",
-              "hasError": false,
-            },
-            "savedSearch": Object {
-              "errorMessage": "",
-              "hasError": false,
-            },
             "searchForm": Object {
-              "errorMessage": "",
-              "hasError": false,
+              "hasError": true,
+              "message": "Forbidden",
             },
           }
     }
@@ -1904,21 +1892,9 @@ ShallowWrapper {
                               disabled={false}
                               errors={
                                         Object {
-                                                  "reportSuites": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
-                                                  },
-                                                  "saveSearch": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
-                                                  },
-                                                  "savedSearch": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
-                                                  },
                                                   "searchForm": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
+                                                    "hasError": true,
+                                                    "message": "Forbidden",
                                                   },
                                                 }
                               }
@@ -1983,12 +1959,7 @@ ShallowWrapper {
                                         currentSearch=""
                                         deleteSearch={[Function]}
                                         disabled={false}
-                                        error={
-                                                  Object {
-                                                            "errorMessage": "",
-                                                            "hasError": false,
-                                                          }
-                                        }
+                                        error={undefined}
                                         getSavedSearch={[Function]}
                                         isLoaded={false}
                                         list={
@@ -2058,7 +2029,7 @@ ShallowWrapper {
           >
                     <EmptySearch
                               className="empty"
-                              variant="noResult"
+                              variant="errorFetching"
                     />
           </GridColumn>
 </GridRow>,
@@ -2081,21 +2052,9 @@ ShallowWrapper {
                         disabled={false}
                         errors={
                                     Object {
-                                                "reportSuites": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "saveSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "savedSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
                                                 "searchForm": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
+                                                  "hasError": true,
+                                                  "message": "Forbidden",
                                                 },
                                               }
                         }
@@ -2160,21 +2119,9 @@ ShallowWrapper {
               disabled={false}
               errors={
                             Object {
-                                          "reportSuites": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
-                                          },
-                                          "saveSearch": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
-                                          },
-                                          "savedSearch": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
-                                          },
                                           "searchForm": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
+                                            "hasError": true,
+                                            "message": "Forbidden",
                                           },
                                         }
               }
@@ -2236,21 +2183,9 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "disabled": false,
               "errors": Object {
-                "reportSuites": Object {
-                  "errorMessage": "",
-                  "hasError": false,
-                },
-                "saveSearch": Object {
-                  "errorMessage": "",
-                  "hasError": false,
-                },
-                "savedSearch": Object {
-                  "errorMessage": "",
-                  "hasError": false,
-                },
                 "searchForm": Object {
-                  "errorMessage": "",
-                  "hasError": false,
+                  "hasError": true,
+                  "message": "Forbidden",
                 },
               },
               "eventFiresMinimum": 0,
@@ -2317,12 +2252,7 @@ ShallowWrapper {
                                     currentSearch=""
                                     deleteSearch={[Function]}
                                     disabled={false}
-                                    error={
-                                                Object {
-                                                            "errorMessage": "",
-                                                            "hasError": false,
-                                                          }
-                                    }
+                                    error={undefined}
                                     getSavedSearch={[Function]}
                                     isLoaded={false}
                                     list={
@@ -2399,12 +2329,7 @@ ShallowWrapper {
                             currentSearch=""
                             deleteSearch={[Function]}
                             disabled={false}
-                            error={
-                                          Object {
-                                                        "errorMessage": "",
-                                                        "hasError": false,
-                                                      }
-                            }
+                            error={undefined}
                             getSavedSearch={[Function]}
                             isLoaded={false}
                             list={
@@ -2477,12 +2402,7 @@ ShallowWrapper {
                   currentSearch=""
                   deleteSearch={[Function]}
                   disabled={false}
-                  error={
-                                    Object {
-                                                      "errorMessage": "",
-                                                      "hasError": false,
-                                                    }
-                  }
+                  error={undefined}
                   getSavedSearch={[Function]}
                   isLoaded={false}
                   list={
@@ -2555,10 +2475,7 @@ ShallowWrapper {
                   "currentSearch": "",
                   "deleteSearch": [Function],
                   "disabled": false,
-                  "error": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
+                  "error": undefined,
                   "getSavedSearch": [Function],
                   "isLoaded": false,
                   "list": Array [
@@ -2637,7 +2554,7 @@ ShallowWrapper {
 >
             <EmptySearch
                         className="empty"
-                        variant="noResult"
+                        variant="errorFetching"
             />
 </GridColumn>,
           "reverse": false,
@@ -2650,7 +2567,7 @@ ShallowWrapper {
           "props": Object {
             "children": <EmptySearch
               className="empty"
-              variant="noResult"
+              variant="errorFetching"
 />,
             "size": 12,
           },
@@ -2661,7 +2578,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "className": "empty",
-              "variant": "noResult",
+              "variant": "errorFetching",
             },
             "ref": null,
             "rendered": null,
@@ -2694,21 +2611,9 @@ ShallowWrapper {
                                     disabled={false}
                                     errors={
                                                 Object {
-                                                            "reportSuites": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
-                                                            },
-                                                            "saveSearch": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
-                                                            },
-                                                            "savedSearch": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
-                                                            },
                                                             "searchForm": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
+                                                              "hasError": true,
+                                                              "message": "Forbidden",
                                                             },
                                                           }
                                     }
@@ -2773,12 +2678,7 @@ ShallowWrapper {
                                                 currentSearch=""
                                                 deleteSearch={[Function]}
                                                 disabled={false}
-                                                error={
-                                                            Object {
-                                                                        "errorMessage": "",
-                                                                        "hasError": false,
-                                                                      }
-                                                }
+                                                error={undefined}
                                                 getSavedSearch={[Function]}
                                                 isLoaded={false}
                                                 list={
@@ -2848,7 +2748,7 @@ ShallowWrapper {
             >
                         <EmptySearch
                                     className="empty"
-                                    variant="noResult"
+                                    variant="errorFetching"
                         />
             </GridColumn>
 </GridRow>,
@@ -2871,21 +2771,9 @@ ShallowWrapper {
                             disabled={false}
                             errors={
                                           Object {
-                                                        "reportSuites": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
-                                                        },
-                                                        "saveSearch": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
-                                                        },
-                                                        "savedSearch": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
-                                                        },
                                                         "searchForm": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
+                                                          "hasError": true,
+                                                          "message": "Forbidden",
                                                         },
                                                       }
                             }
@@ -2950,21 +2838,9 @@ ShallowWrapper {
                 disabled={false}
                 errors={
                                 Object {
-                                                "reportSuites": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "saveSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "savedSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
                                                 "searchForm": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
+                                                  "hasError": true,
+                                                  "message": "Forbidden",
                                                 },
                                               }
                 }
@@ -3026,21 +2902,9 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "disabled": false,
                 "errors": Object {
-                  "reportSuites": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
-                  "saveSearch": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
-                  "savedSearch": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
                   "searchForm": Object {
-                    "errorMessage": "",
-                    "hasError": false,
+                    "hasError": true,
+                    "message": "Forbidden",
                   },
                 },
                 "eventFiresMinimum": 0,
@@ -3107,12 +2971,7 @@ ShallowWrapper {
                                           currentSearch=""
                                           deleteSearch={[Function]}
                                           disabled={false}
-                                          error={
-                                                        Object {
-                                                                      "errorMessage": "",
-                                                                      "hasError": false,
-                                                                    }
-                                          }
+                                          error={undefined}
                                           getSavedSearch={[Function]}
                                           isLoaded={false}
                                           list={
@@ -3189,12 +3048,7 @@ ShallowWrapper {
                                 currentSearch=""
                                 deleteSearch={[Function]}
                                 disabled={false}
-                                error={
-                                                Object {
-                                                                "errorMessage": "",
-                                                                "hasError": false,
-                                                              }
-                                }
+                                error={undefined}
                                 getSavedSearch={[Function]}
                                 isLoaded={false}
                                 list={
@@ -3267,12 +3121,7 @@ ShallowWrapper {
                     currentSearch=""
                     deleteSearch={[Function]}
                     disabled={false}
-                    error={
-                                        Object {
-                                                            "errorMessage": "",
-                                                            "hasError": false,
-                                                          }
-                    }
+                    error={undefined}
                     getSavedSearch={[Function]}
                     isLoaded={false}
                     list={
@@ -3345,10 +3194,7 @@ ShallowWrapper {
                     "currentSearch": "",
                     "deleteSearch": [Function],
                     "disabled": false,
-                    "error": Object {
-                      "errorMessage": "",
-                      "hasError": false,
-                    },
+                    "error": undefined,
                     "getSavedSearch": [Function],
                     "isLoaded": false,
                     "list": Array [
@@ -3427,7 +3273,7 @@ ShallowWrapper {
 >
               <EmptySearch
                             className="empty"
-                            variant="noResult"
+                            variant="errorFetching"
               />
 </GridColumn>,
             "reverse": false,
@@ -3440,7 +3286,7 @@ ShallowWrapper {
             "props": Object {
               "children": <EmptySearch
                 className="empty"
-                variant="noResult"
+                variant="errorFetching"
 />,
               "size": 12,
             },
@@ -3451,7 +3297,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "className": "empty",
-                "variant": "noResult",
+                "variant": "errorFetching",
               },
               "ref": null,
               "rendered": null,
@@ -3496,21 +3342,9 @@ ShallowWrapper {
     clearSearchFields={[Function]}
     errors={
         Object {
-            "reportSuites": Object {
-              "errorMessage": "",
-              "hasError": false,
-            },
-            "saveSearch": Object {
-              "errorMessage": "",
-              "hasError": false,
-            },
-            "savedSearch": Object {
-              "errorMessage": "",
-              "hasError": false,
-            },
             "searchForm": Object {
-              "errorMessage": "",
-              "hasError": false,
+              "hasError": true,
+              "message": "Forbidden",
             },
           }
     }
@@ -3646,21 +3480,9 @@ ShallowWrapper {
                               disabled={false}
                               errors={
                                         Object {
-                                                  "reportSuites": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
-                                                  },
-                                                  "saveSearch": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
-                                                  },
-                                                  "savedSearch": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
-                                                  },
                                                   "searchForm": Object {
-                                                    "errorMessage": "",
-                                                    "hasError": false,
+                                                    "hasError": true,
+                                                    "message": "Forbidden",
                                                   },
                                                 }
                               }
@@ -3725,12 +3547,7 @@ ShallowWrapper {
                                         currentSearch=""
                                         deleteSearch={[Function]}
                                         disabled={false}
-                                        error={
-                                                  Object {
-                                                            "errorMessage": "",
-                                                            "hasError": false,
-                                                          }
-                                        }
+                                        error={undefined}
                                         getSavedSearch={[Function]}
                                         isLoaded={false}
                                         list={
@@ -3800,7 +3617,7 @@ ShallowWrapper {
           >
                     <EmptySearch
                               className="empty"
-                              variant="noResult"
+                              variant="errorFetching"
                     />
           </GridColumn>
 </GridRow>,
@@ -3823,21 +3640,9 @@ ShallowWrapper {
                         disabled={false}
                         errors={
                                     Object {
-                                                "reportSuites": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "saveSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "savedSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
                                                 "searchForm": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
+                                                  "hasError": true,
+                                                  "message": "Forbidden",
                                                 },
                                               }
                         }
@@ -3902,21 +3707,9 @@ ShallowWrapper {
               disabled={false}
               errors={
                             Object {
-                                          "reportSuites": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
-                                          },
-                                          "saveSearch": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
-                                          },
-                                          "savedSearch": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
-                                          },
                                           "searchForm": Object {
-                                            "errorMessage": "",
-                                            "hasError": false,
+                                            "hasError": true,
+                                            "message": "Forbidden",
                                           },
                                         }
               }
@@ -3978,21 +3771,9 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "disabled": false,
               "errors": Object {
-                "reportSuites": Object {
-                  "errorMessage": "",
-                  "hasError": false,
-                },
-                "saveSearch": Object {
-                  "errorMessage": "",
-                  "hasError": false,
-                },
-                "savedSearch": Object {
-                  "errorMessage": "",
-                  "hasError": false,
-                },
                 "searchForm": Object {
-                  "errorMessage": "",
-                  "hasError": false,
+                  "hasError": true,
+                  "message": "Forbidden",
                 },
               },
               "eventFiresMinimum": 0,
@@ -4059,12 +3840,7 @@ ShallowWrapper {
                                     currentSearch=""
                                     deleteSearch={[Function]}
                                     disabled={false}
-                                    error={
-                                                Object {
-                                                            "errorMessage": "",
-                                                            "hasError": false,
-                                                          }
-                                    }
+                                    error={undefined}
                                     getSavedSearch={[Function]}
                                     isLoaded={false}
                                     list={
@@ -4141,12 +3917,7 @@ ShallowWrapper {
                             currentSearch=""
                             deleteSearch={[Function]}
                             disabled={false}
-                            error={
-                                          Object {
-                                                        "errorMessage": "",
-                                                        "hasError": false,
-                                                      }
-                            }
+                            error={undefined}
                             getSavedSearch={[Function]}
                             isLoaded={false}
                             list={
@@ -4219,12 +3990,7 @@ ShallowWrapper {
                   currentSearch=""
                   deleteSearch={[Function]}
                   disabled={false}
-                  error={
-                                    Object {
-                                                      "errorMessage": "",
-                                                      "hasError": false,
-                                                    }
-                  }
+                  error={undefined}
                   getSavedSearch={[Function]}
                   isLoaded={false}
                   list={
@@ -4297,10 +4063,7 @@ ShallowWrapper {
                   "currentSearch": "",
                   "deleteSearch": [Function],
                   "disabled": false,
-                  "error": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
+                  "error": undefined,
                   "getSavedSearch": [Function],
                   "isLoaded": false,
                   "list": Array [
@@ -4379,7 +4142,7 @@ ShallowWrapper {
 >
             <EmptySearch
                         className="empty"
-                        variant="noResult"
+                        variant="errorFetching"
             />
 </GridColumn>,
           "reverse": false,
@@ -4392,7 +4155,7 @@ ShallowWrapper {
           "props": Object {
             "children": <EmptySearch
               className="empty"
-              variant="noResult"
+              variant="errorFetching"
 />,
             "size": 12,
           },
@@ -4403,7 +4166,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "className": "empty",
-              "variant": "noResult",
+              "variant": "errorFetching",
             },
             "ref": null,
             "rendered": null,
@@ -4436,21 +4199,9 @@ ShallowWrapper {
                                     disabled={false}
                                     errors={
                                                 Object {
-                                                            "reportSuites": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
-                                                            },
-                                                            "saveSearch": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
-                                                            },
-                                                            "savedSearch": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
-                                                            },
                                                             "searchForm": Object {
-                                                              "errorMessage": "",
-                                                              "hasError": false,
+                                                              "hasError": true,
+                                                              "message": "Forbidden",
                                                             },
                                                           }
                                     }
@@ -4515,12 +4266,7 @@ ShallowWrapper {
                                                 currentSearch=""
                                                 deleteSearch={[Function]}
                                                 disabled={false}
-                                                error={
-                                                            Object {
-                                                                        "errorMessage": "",
-                                                                        "hasError": false,
-                                                                      }
-                                                }
+                                                error={undefined}
                                                 getSavedSearch={[Function]}
                                                 isLoaded={false}
                                                 list={
@@ -4590,7 +4336,7 @@ ShallowWrapper {
             >
                         <EmptySearch
                                     className="empty"
-                                    variant="noResult"
+                                    variant="errorFetching"
                         />
             </GridColumn>
 </GridRow>,
@@ -4613,21 +4359,9 @@ ShallowWrapper {
                             disabled={false}
                             errors={
                                           Object {
-                                                        "reportSuites": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
-                                                        },
-                                                        "saveSearch": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
-                                                        },
-                                                        "savedSearch": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
-                                                        },
                                                         "searchForm": Object {
-                                                          "errorMessage": "",
-                                                          "hasError": false,
+                                                          "hasError": true,
+                                                          "message": "Forbidden",
                                                         },
                                                       }
                             }
@@ -4692,21 +4426,9 @@ ShallowWrapper {
                 disabled={false}
                 errors={
                                 Object {
-                                                "reportSuites": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "saveSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
-                                                "savedSearch": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
-                                                },
                                                 "searchForm": Object {
-                                                  "errorMessage": "",
-                                                  "hasError": false,
+                                                  "hasError": true,
+                                                  "message": "Forbidden",
                                                 },
                                               }
                 }
@@ -4768,21 +4490,9 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "disabled": false,
                 "errors": Object {
-                  "reportSuites": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
-                  "saveSearch": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
-                  "savedSearch": Object {
-                    "errorMessage": "",
-                    "hasError": false,
-                  },
                   "searchForm": Object {
-                    "errorMessage": "",
-                    "hasError": false,
+                    "hasError": true,
+                    "message": "Forbidden",
                   },
                 },
                 "eventFiresMinimum": 0,
@@ -4849,12 +4559,7 @@ ShallowWrapper {
                                           currentSearch=""
                                           deleteSearch={[Function]}
                                           disabled={false}
-                                          error={
-                                                        Object {
-                                                                      "errorMessage": "",
-                                                                      "hasError": false,
-                                                                    }
-                                          }
+                                          error={undefined}
                                           getSavedSearch={[Function]}
                                           isLoaded={false}
                                           list={
@@ -4931,12 +4636,7 @@ ShallowWrapper {
                                 currentSearch=""
                                 deleteSearch={[Function]}
                                 disabled={false}
-                                error={
-                                                Object {
-                                                                "errorMessage": "",
-                                                                "hasError": false,
-                                                              }
-                                }
+                                error={undefined}
                                 getSavedSearch={[Function]}
                                 isLoaded={false}
                                 list={
@@ -5009,12 +4709,7 @@ ShallowWrapper {
                     currentSearch=""
                     deleteSearch={[Function]}
                     disabled={false}
-                    error={
-                                        Object {
-                                                            "errorMessage": "",
-                                                            "hasError": false,
-                                                          }
-                    }
+                    error={undefined}
                     getSavedSearch={[Function]}
                     isLoaded={false}
                     list={
@@ -5087,10 +4782,7 @@ ShallowWrapper {
                     "currentSearch": "",
                     "deleteSearch": [Function],
                     "disabled": false,
-                    "error": Object {
-                      "errorMessage": "",
-                      "hasError": false,
-                    },
+                    "error": undefined,
                     "getSavedSearch": [Function],
                     "isLoaded": false,
                     "list": Array [
@@ -5169,7 +4861,7 @@ ShallowWrapper {
 >
               <EmptySearch
                             className="empty"
-                            variant="noResult"
+                            variant="errorFetching"
               />
 </GridColumn>,
             "reverse": false,
@@ -5182,7 +4874,7 @@ ShallowWrapper {
             "props": Object {
               "children": <EmptySearch
                 className="empty"
-                variant="noResult"
+                variant="errorFetching"
 />,
               "size": 12,
             },
@@ -5193,7 +4885,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "className": "empty",
-                "variant": "noResult",
+                "variant": "errorFetching",
               },
               "ref": null,
               "rendered": null,
