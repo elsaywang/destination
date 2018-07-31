@@ -1,4 +1,4 @@
-import { formatKeyValuePair, stringifySignals } from '../stringifySignals';
+import { formatKeyValuePair, stringifySignals, stringifySignal } from '../stringifySignals';
 
 describe('formatKeyValuePair', () => {
     it('should stringify a single key-value pair', () => {
@@ -10,6 +10,7 @@ describe('formatKeyValuePair', () => {
 
         expect(formatKeyValuePair(keyValuePair)).toEqual('"eVar1">"xyz123"');
     });
+
     it('should stringify empty key in quotation marks', () => {
         const keyValuePair = {
             key: '',
@@ -18,6 +19,7 @@ describe('formatKeyValuePair', () => {
 
         expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`""=="xyz123"`);
     });
+
     it('should stringify empty value in quotation marks', () => {
         const keyValuePair = {
             key: 'eVar1',
@@ -26,6 +28,7 @@ describe('formatKeyValuePair', () => {
 
         expect(formatKeyValuePair(keyValuePair)).toEqual(String.raw`"eVar1"==""`);
     });
+
     it('should stringify empty key and empty value in quotation marks', () => {
         const keyValuePair = {
             key: '',
@@ -51,6 +54,7 @@ describe('stringifySignals', () => {
 
         expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123"');
     });
+
     it('should stringify multiple key-value pairs from a single signal', () => {
         const signals = [
             {
@@ -69,6 +73,7 @@ describe('stringifySignals', () => {
 
         expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123" AND "abc123"=="cba321"');
     });
+
     it('should stringify single key-value pairs from multiple signals', () => {
         const signals = [
             {
@@ -91,6 +96,7 @@ describe('stringifySignals', () => {
 
         expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123" OR "def456"=="qrs789"');
     });
+
     it('should stringify multiple key-value pairs from multiple signals', () => {
         const signals = [
             {
@@ -123,9 +129,11 @@ describe('stringifySignals', () => {
             '"eVar1"=="xyz123" AND "eVar2"=="zyx321" OR "def456"=="qrs789" AND "ghi000"=="ihg000"',
         );
     });
+
     it('should stringify empty key-value pairs as an empty string', () => {
         expect(stringifySignals([])).toEqual('');
     });
+
     it('should stringify empty key and empty value as an empty string', () => {
         expect(
             stringifySignals([
@@ -141,6 +149,7 @@ describe('stringifySignals', () => {
             ]),
         ).toEqual('');
     });
+
     it('should stringify multiple key-value pairs with empty key and empty value as an empty string', () => {
         expect(
             stringifySignals([
@@ -161,6 +170,7 @@ describe('stringifySignals', () => {
             ]),
         ).toEqual('');
     });
+
     describe('value formatting', () => {
         describe('when operator is textual', () => {
             it('should wrap the value with double quotes if it is a string', () => {
@@ -184,6 +194,7 @@ describe('stringifySignals', () => {
                 expect(stringifySignals(signals).includes('"xyz123"')).toBeTruthy();
                 expect(stringifySignals(signals).includes('"xyz456"')).toBeTruthy();
             });
+
             it('should wrap the value with double quotes if it is a number', () => {
                 const signals = [
                     {
@@ -206,6 +217,7 @@ describe('stringifySignals', () => {
                 expect(stringifySignals(signals).includes('"-0.123"')).toBeTruthy();
             });
         });
+
         describe('when operator is numeric comparison', () => {
             it('should not wrap the value with double quotes if it is a number', () => {
                 const signals = [
@@ -245,5 +257,37 @@ describe('stringifySignals', () => {
                 expect(stringifySignals(signals).includes('-0.456')).toBeTruthy();
             });
         });
+    });
+});
+
+describe('stringifySignal', () => {
+    it('should stringify and strip last ending parentheses from key in key-value pair of a single signal with advanced flag as true', () => {
+        const signal = {
+            advanced: true,
+            keyValuePairs: [
+                {
+                    key: 'eVar1 (random) (words) (friendly name)',
+                    value: 'xyz123',
+                },
+            ],
+        };
+
+        expect(stringifySignal(signal)).toEqual('"eVar1 (random) (words)"=="xyz123"');
+    });
+
+    it('should stringify but not strip last ending parentheses from key in key-value pair of a single signal with advanced flag as false', () => {
+        const signal = {
+            advanced: false,
+            keyValuePairs: [
+                {
+                    key: 'eVar1 (random) (words) (friendly name)',
+                    value: 'xyz123',
+                },
+            ],
+        };
+
+        expect(stringifySignal(signal)).toEqual(
+            '"eVar1 (random) (words) (friendly name)"=="xyz123"',
+        );
     });
 });
