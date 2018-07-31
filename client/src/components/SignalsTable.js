@@ -134,9 +134,13 @@ class SignalsTable extends Component {
 
     renderKeyValuePairs(keyValuePairs) {
         return (
-            <div>
+            <div className={styles.keyValuePairs}>
                 {keyValuePairs.map(({ key, value }) => {
-                    return <div key={`${key}-${value}`}>{`${key}=${value}`}</div>;
+                    return (
+                        <div className={styles.keyValuePairs} key={`${key}-${value}`}>
+                            {`${key}=${value}`}
+                        </div>
+                    );
                 })}
             </div>
         );
