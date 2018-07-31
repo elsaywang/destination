@@ -7,6 +7,7 @@ const andDelimiter = ' AND ';
 
 const formatString = value => (isEmpty(value) ? String.raw`""` : value);
 const formatOperator = operator => (operator === 'contains' ? ` ${operator} ` : operator);
+const stripEndingParentheses = key => key.replace(/^(.*)\(.*\)$/, '$1').trim();
 
 export const stringifyKeyValuePair = ({ key = '', operator = '==', value = '' }) => {
     if (isKeyValuePairEmpty({ key, value })) {
@@ -33,7 +34,18 @@ export const formatKeyValuePair = ({ key = '', operator = '==', value = '' }) =>
 export const stringifySignal = signal =>
     signal.keyValuePairs
         .filter(kvp => !isKeyValuePairEmpty(kvp))
-        .map(stringifyKeyValuePair)
+        .map(kvp => {
+            let keyValuePair = kvp;
+
+            if (signal.advanced) {
+                keyValuePair = {
+                    ...kvp,
+                    key: stripEndingParentheses(kvp.key),
+                };
+            }
+
+            return stringifyKeyValuePair(keyValuePair);
+        })
         .join(andDelimiter);
 
 export const stringifySignals = signals => signals.map(stringifySignal).join(orDelimiter);
