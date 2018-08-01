@@ -2,8 +2,13 @@
     margin-left: -1.25em;
 }
 :local(.truncate) {
-    width: 220px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+:local(.sourceName) {
+    max-width: 200px;
+}
+:local(.keyValuePairs) {
+    width: 100%;
 }
