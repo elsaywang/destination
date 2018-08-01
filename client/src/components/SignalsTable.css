@@ -1,8 +1,8 @@
 :local(.traitsPopover) {
     margin-left: -1.25em;
 }
-:local(.trim) {
-    width: 250px;
+:local(.truncate) {
+    width: 220px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

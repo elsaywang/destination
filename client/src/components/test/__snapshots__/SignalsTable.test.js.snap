@@ -42,29 +42,29 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 
 exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render one key-value pair as \`\${key}=\${value}\` inside a div 1`] = `
 <div
-  className="trim"
+  className="truncate"
 >
   <div
-    className="trim"
+    className="truncate"
   >
-    k=v
+    k=v asdhaksjdhaskdhasdkhsadasdahsdkadhaksdh
   </div>
 </div>
 `;
 
 exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render two key-value pairs on separate lines 1`] = `
 <div
-  className="trim"
+  className="truncate"
 >
   <div
-    className="trim"
+    className="truncate"
   >
-    k1=v1
+    k1=v1 asdhaksjdhaskdhasdkhsadasdahsdkadhaksdh
   </div>
   <div
-    className="trim"
+    className="truncate"
   >
-    k2=v2
+    k2=v2 asdhaksjdhaskdhasdkhsadasdahsdkadhaksdh
   </div>
 </div>
 `;
