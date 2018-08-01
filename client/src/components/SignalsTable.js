@@ -138,7 +138,7 @@ class SignalsTable extends Component {
                 {keyValuePairs.map(({ key, value }) => {
                     return (
                         <div className={styles.truncate} key={`${key}-${value}`}>
-                            {`${key}=${value} asdhaksjdhaskdhasdkhsadasdahsdkadhaksdh`}
+                            {`${key}=${value}`}
                         </div>
                     );
                 })}

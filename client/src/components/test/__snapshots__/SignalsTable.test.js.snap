@@ -47,7 +47,7 @@ exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should r
   <div
     className="truncate"
   >
-    k=v asdhaksjdhaskdhasdkhsadasdahsdkadhaksdh
+    k=v
   </div>
 </div>
 `;
@@ -59,12 +59,12 @@ exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should r
   <div
     className="truncate"
   >
-    k1=v1 asdhaksjdhaskdhasdkhsadasdahsdkadhaksdh
+    k1=v1
   </div>
   <div
     className="truncate"
   >
-    k2=v2 asdhaksjdhaskdhasdkhsadasdahsdkadhaksdh
+    k2=v2
   </div>
 </div>
 `;
