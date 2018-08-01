@@ -7,3 +7,10 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
+:local(.keyValuePairs) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 18em;
+}
