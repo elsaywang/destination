@@ -107,7 +107,7 @@ class SignalsTable extends Component {
             const dataSourceId = dataSourceIds[0];
             return (
                 <Link href={dataSourceEditUrl(dataSourceId)}>
-                    <div data-test="source-name" className={styles.sourceName}>
+                    <div data-test="source-name" className={styles.trim}>
                         {sourceName}
                     </div>
                 </Link>
@@ -134,10 +134,10 @@ class SignalsTable extends Component {
 
     renderKeyValuePairs(keyValuePairs) {
         return (
-            <div className={styles.keyValuePairs}>
+            <div className={styles.trim}>
                 {keyValuePairs.map(({ key, value }) => {
                     return (
-                        <div className={styles.keyValuePairs} key={`${key}-${value}`}>
+                        <div className={styles.trim} key={`${key}-${value}`}>
                             {`${key}=${value}`}
                         </div>
                     );

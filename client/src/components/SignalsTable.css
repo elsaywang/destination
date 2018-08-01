@@ -1,16 +1,9 @@
 :local(.traitsPopover) {
     margin-left: -1.25em;
 }
-:local(.sourceName) {
-    max-width: 200px;
+:local(.trim) {
+    width: 250px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-}
-
-:local(.keyValuePairs) {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 18em;
 }
