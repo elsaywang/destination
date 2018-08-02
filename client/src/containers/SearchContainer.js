@@ -103,8 +103,10 @@ class SearchContainer extends Component {
         }
 
         this.props.toggleAdvancedSearch(value);
+        this.props.clearSearch();
 
         this.setState({
+            searched: false,
             advanced: value,
             source: {
                 name: '',
@@ -244,6 +246,7 @@ class SearchContainer extends Component {
             () => this.props.callSearch({ search: this.state }),
         );
     };
+
     handleLoadMore = (throttleMs = defaultThrottleMs) => {
         if (this.props.isEndOfResults) {
             return;

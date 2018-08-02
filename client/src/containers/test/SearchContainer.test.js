@@ -212,6 +212,7 @@ describe('<SearchContainer /> component', () => {
 
             wrapper.instance().onAdvancedSearchChange(true);
             expect(wrapper.state('advanced')).toBe(true);
+            expect(wrapper.state('searched')).toBe(false);
             expect(wrapper.state('source').name).toBe('');
         });
 
