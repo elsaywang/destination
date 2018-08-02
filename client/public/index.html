@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="version" content="signalsVersion">
     <meta name="branch" content="signalsBranch">
+    <script type="text/javascript" src="/static/coral-shell-ims/js/libs/jquery.js"></script>
+    <script type="text/javascript" src="/static/coral-shell-ims/js/libs/moment.js"></script>
+    <script type="text/javascript" src="/static/coral-shell-ims/js/coral.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/coral-shell-ims/css/coral.css"></link>
+    <link rel="stylesheet" type="text/css" href="/static/css/topnav.css"></link>
     <title>Adobe Audience Manager | Signals</title>
   </head>
   <body>
@@ -14,11 +19,72 @@
       var baseUrl = '//localhost:3000';
 
     </script>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <coral-shell-ims>
+    <coral-shell class="coral-Shell coral--light">
+      <coral-shell-header class="coral-Shell-header coral--dark">
+        <coral-shell-header-home>
+          <a is="coral-shell-homeanchor" icon="adobeAudienceManagerColor" href="/portal/Analytics/reports.ddx#/dashboard" class="pageNav">
+            Adobe Audience Manager
+          </a>
+        </coral-shell-header-home>
+        <coral-shell-header-content></coral-shell-header-content>
+        <coral-shell-header-actions class="coral-Shell-header-actions">
+          <coral-shell-menubar class="coral-Shell-menubar">
+            <coral-shell-menubar-item menu="#menu_help" icon="helpCircle" class="coral-Shell-menubar-item"></coral-shell-menubar-item>
+            <coral-shell-menubar-item menu="#menu_user" icon="userCircleColor"></coral-shell-menubar-item>
+          </coral-shell-menubar>
+        </coral-shell-header-actions>
+      </coral-shell-header>
+      <coral-shell-menu id="menu_organizations">
+        <coral-shell-orgswitcher coral-shell-ims-orgswitcher></coral-shell-orgswitcher>
+      </coral-shell-menu>
+      <coral-shell-menu id="menu_help">
+        <coral-shell-help coral-shell-ims-help>
+          <a is="coral-shell-help-item" target="_blank" icon="globe" href="https://marketing.adobe.com/resources/help/en_US/home/">Experience Cloud Help</a>
+          <a is="coral-shell-help-item" target="_blank" icon="users" href="https://marketing.adobe.com/resources/help/en_US/home/helpcommunity.html">Community</a>
+          <a is="coral-shell-help-item" target="_blank" icon="callCenter" href="https://helpx.adobe.com/marketing-cloud/contact-support.html">Customer Care</a>
+          <a is="coral-shell-help-item" target="_blank" icon="news" href="https://marketing.adobe.com/resources/help/en_US/whatsnew/">What's new in CoralUI</a>
+        </coral-shell-help>
+      </coral-shell-menu>
+      <coral-shell-menu id="menu_pulse" placement="right" from="right" full focusOnShow="off">
+        <!--  Pulse Widget -->
+        <pulse-widget coral-shell-ims-pulse>
+          <pulse-notifications-view></pulse-notifications-view>
+        </pulse-widget>
+      </coral-shell-menu>
+      <coral-shell-menu id="menu_solutions">
+        <coral-shell-solutionswitcher>
+          <coral-shell-solutions coral-shell-ims-advertising-cloud>
+          </coral-shell-solutions>
+          <coral-shell-solutions coral-shell-ims-marketing-cloud>
+          </coral-shell-solutions>
+          <coral-shell-solutions coral-shell-ims-analytics-cloud>
+          </coral-shell-solutions>
+          <coral-shell-solutions secondary coral-shell-ims-services>
+          </coral-shell-solutions>
+        </coral-shell-solutionswitcher>
+      </coral-shell-menu>
+      <coral-shell-menu id="menu_user">
+        <coral-shell-user coral-shell-ims-user>
+          <coral-shell-user-footer>
+            <!-- Static links let you sign out/view profile -->
+            <a is="coral-anchorbutton" variant="minimal">Edit Profile</a>
+            <a is="coral-anchorbutton" variant="minimal">Sign Out</a>
+          </coral-shell-user-footer>
+        </coral-shell-user>
+      </coral-shell-menu>
+      <coral-shell-content>
+        <div id="root"></div>
+      </coral-shell-content>
+    </coral-shell>
+  </coral-shell-ims>
+  <div class="subNav drop-zone coral--dark">
+    <coral-anchorlist class="subNav-anchorlist" hidden></coral-anchorlist>
+  </div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 

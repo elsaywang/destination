@@ -6,8 +6,8 @@ const signalKeysResponse = require('../fixtures/signalKeys.json');
 const limitsResponse = require('../fixtures/limits.json');
 const signalKeysExternalServiceUnavailableResponse = require('../fixtures/signalKeysWithExternalServiceUnavailable.json');
 
-describe('Search Form Integration Tests', function() {
-    beforeEach(function() {
+describe('Search Form Integration Tests', () => {
+    beforeEach(() => {
         cy.clock(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
 
         cy.server();
@@ -24,51 +24,51 @@ describe('Search Form Integration Tests', function() {
         cy.visit('#/search');
     });
 
-    afterEach(function() {
-        cy.clock().then(function(clock) {
+    afterEach(() => {
+        cy.clock().then((clock) => {
             clock.restore();
         });
     });
 
-    it('should show search form when navigating with URL', function() {
+    it('should show search form when navigating with URL', () => {
         cy.get('[data-test="search-form"]').should('exist');
     });
 
-    describe('when Advanced toggle is clicked', function() {
-        beforeEach(function() {
+    describe('when Advanced toggle is clicked', () => {
+        beforeEach(() => {
             cy.get('[data-test="advanced-search-toggle"]').click();
             cy.get('[data-test="advanced-search-filter"]').as('advancedFilter');
             cy.wait('@fetchReportSuites');
         });
 
-        it('should enable filter to filter by user-friendly key names', function() {
+        it('should enable filter to filter by user-friendly key names', () => {
             cy.get('@advancedFilter').should('be.enabled');
         });
 
-        it('should allow you to type a report suite name and press enter on list of suggestions', function() {
+        it('should allow you to type a report suite name and press enter on list of suggestions', () => {
             cy.get('@advancedFilter')
                 .type('te{enter}')
-                .then(function($text) {
-                    cy.get('@advancedFilter').should(function($filter) {
+                .then(($text) => {
+                    cy.get('@advancedFilter').should(($filter) => {
                         expect($filter.val()).to.contains($text.val());
                     });
                 });
         });
 
-        it('should allow you to select a report suite through drop down when you click on the dropdown button', function() {
+        it('should allow you to select a report suite through drop down when you click on the dropdown button', () => {
             cy.get('@advancedFilter')
                 .siblings('button')
                 .click()
-                .then(function($text) {
-                    cy.get('@advancedFilter').should(function($filter) {
+                .then(($text) => {
+                    cy.get('@advancedFilter').should(($filter) => {
                         expect($filter.val()).to.contains($text.text());
                     });
                 });
         });
     });
 
-    describe('when typing in text in Key input with external services available', function() {
-        beforeEach(function() {
+    describe('when typing in text in Key input with external services available', () => {
+        beforeEach(() => {
             cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
                 'fetchSignalKeys',
             );
@@ -78,17 +78,17 @@ describe('Search Form Integration Tests', function() {
             cy.wait('@fetchSignalKeys');
         });
 
-        it('should show autocomplete with suggestions', function() {
+        it('should show autocomplete with suggestions', () => {
             cy.get('.spectrum-Popover.is-open').should('have.length', 1);
             cy.get('.spectrum-SelectList-item').should('have.length', 8);
         });
 
-        describe('when an option is clicked', function() {
-            it('should have the same key value as clicked option', function() {
+        describe('when an option is clicked', () => {
+            it('should have the same key value as clicked option', () => {
                 cy.get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
                     .click()
-                    .then(function($item) {
-                        cy.get('@keyInput').should(function($keyInput) {
+                    .then(($item) => {
+                        cy.get('@keyInput').should(($keyInput) => {
                             expect($keyInput.val()).to.contains($item.text());
                         });
                     });
@@ -96,8 +96,8 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when typing in text in Key input with external services unavailable', function() {
-        beforeEach(function() {
+    describe('when typing in text in Key input with external services unavailable', () => {
+        beforeEach(() => {
             cy.route(
                 /\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/,
                 signalKeysExternalServiceUnavailableResponse,
@@ -107,34 +107,35 @@ describe('Search Form Integration Tests', function() {
             cy.wait('@signalKeysExternalServiceUnavailableResponse');
         });
 
-        it('should not show any autocomplete with suggestions', function() {
+        it('should not show any autocomplete with suggestions', () => {
             cy.get('.spectrum-Popover.is-open').should('not.exist');
             cy.get('.spectrum-SelectList-item').should('not.exist');
         });
 
-        it('should show the in-line error message caused by the unavailable external services', function() {
+        it('should show the in-line error message caused by the unavailable external services', () => {
             const inlineErrorMessage = 'Key friendly names are not available.';
+
             cy.get('[data-test="inline-error"]').should('be.visible');
             cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
         });
     });
 
-    describe('when Operator select is changed', function() {
-        it('should change the value to selected option', function() {
+    describe('when Operator select is changed', () => {
+        it('should change the value to selected option', () => {
             cy.get('.operator')
                 .click()
                 .get('[role=option]:last')
                 .click()
-                .then(function($option) {
-                    cy.get('.operator').should(function($operator) {
+                .then(($option) => {
+                    cy.get('.operator').should(($operator) => {
                         expect($operator.text()).to.contains($option.text());
                     });
                 });
         });
     });
 
-    describe('when typing in text in Value input', function() {
-        beforeEach(function() {
+    describe('when typing in text in Value input', () => {
+        beforeEach(() => {
             cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
                 'fetchSignalKeys',
             );
@@ -143,22 +144,24 @@ describe('Search Form Integration Tests', function() {
             cy.wait('@fetchSignalKeys');
         });
 
-        it('should allow you to type a value in the field after Key field has value', function() {
+        it('should allow you to type a value in the field after Key field has value', () => {
             const value = '1';
+
             cy.get('[data-test="value-search"]').type(value);
 
-            cy.get('[data-test="value-search"]').should(function($text) {
+            cy.get('[data-test="value-search"]').should(($text) => {
                 expect($text.val()).to.contains(value);
             });
         });
 
-        it('should not show any in-line error message', function() {
+        it('should not show any in-line error message', () => {
             cy.get('[data-test="inline-error"]').should('not.exist');
         });
 
-        it('should show in-line error message `Key cannot be empty when value is specified.` if Key input field is clear and type value in Value field', function() {
+        it('should show in-line error message `Key cannot be empty when value is specified.` if Key input field is clear and type value in Value field', () => {
             const value = '1';
             const inlineErrorMessage = 'Key cannot be empty when value is specified.';
+
             cy.get('@keyInput').clear();
             cy.get('[data-test="value-search"]').type(value);
 
@@ -167,8 +170,8 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when Add button is clicked', function() {
-        it('should add a row', function() {
+    describe('when Add button is clicked', () => {
+        it('should add a row', () => {
             cy.get('[data-test="add-button"]').click();
 
             cy.get('[data-test="key-value-pair"]').should('have.length', 2);
@@ -176,8 +179,8 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when 3 rows are added', function() {
-        it('should render 3 rows with remove buttons and no Add button', function() {
+    describe('when 3 rows are added', () => {
+        it('should render 3 rows with remove buttons and no Add button', () => {
             cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="add-button"]').click();
 
@@ -187,8 +190,8 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when Remove button is clicked', function() {
-        it('should remove a row', function() {
+    describe('when Remove button is clicked', () => {
+        it('should remove a row', () => {
             cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="remove-button"]:last').click();
@@ -197,8 +200,8 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when rows are removed down to 1', function() {
-        it('should only show the Add button next to a row', function() {
+    describe('when rows are removed down to 1', () => {
+        it('should only show the Add button next to a row', () => {
             cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="remove-button"]:last').click();
@@ -210,36 +213,36 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when Signal Status select is changed', function() {
-        it('should change the value to selected option', function() {
+    describe('when Signal Status select is changed', () => {
+        it('should change the value to selected option', () => {
             cy.get('.signal-status')
                 .click()
                 .get('[role=option]:last')
                 .click()
-                .then(function($option) {
-                    cy.get('.signal-status').should(function($signalStatus) {
+                .then(($option) => {
+                    cy.get('.signal-status').should(($signalStatus) => {
                         expect($signalStatus.text()).to.contains($option.text());
                     });
                 });
         });
     });
 
-    describe('when View Records For select is changed', function() {
-        it('should change the value to selected option', function() {
+    describe('when View Records For select is changed', () => {
+        it('should change the value to selected option', () => {
             cy.get('.view-records')
                 .click()
                 .get('.spectrum-SelectList-item:first')
                 .click()
-                .then(function($option) {
-                    cy.get('.view-records').should(function($viewRecords) {
+                .then(($option) => {
+                    cy.get('.view-records').should(($viewRecords) => {
                         expect($viewRecords.text()).to.contains($option.text());
                     });
                 });
         });
     });
 
-    describe('when Mininum Counts select is changed', function() {
-        it('should change the value to selected option', function() {
+    describe('when Mininum Counts select is changed', () => {
+        it('should change the value to selected option', () => {
             const value = 50000;
 
             cy.get('[data-test="min-counts"]')
@@ -249,8 +252,8 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('when "Custom Date Range" in the View Records For select is selected', function() {
-        beforeEach(function() {
+    describe('when "Custom Date Range" in the View Records For select is selected', () => {
+        beforeEach(() => {
             cy.get('.view-records')
                 .click()
                 .get('.spectrum-SelectList-item:last')
@@ -259,22 +262,22 @@ describe('Search Form Integration Tests', function() {
             cy.get('[data-test="custom-end-date"]').as('customEndDate');
         });
 
-        it('should show custom start and end date datepickers', function() {
+        it('should show custom start and end date datepickers', () => {
             cy.get('@customStartDate').should('be.visible');
             cy.get('@customEndDate').should('be.visible');
         });
 
-        it('should default the custom start date to 7 days ago', function() {
+        it('should default the custom start date to 7 days ago', () => {
             cy.get('@customStartDate').should('have.value', '04/24/2018');
         });
 
-        it('should default the custom end date to today', function() {
+        it('should default the custom end date to today', () => {
             cy.get('@customEndDate').should('have.value', '05/01/2018');
         });
     });
 
-    describe('when Clear All button is clicked', function() {
-        beforeEach(function() {
+    describe('when Clear All button is clicked', () => {
+        beforeEach(() => {
             const minCounts = 50000;
 
             cy.get('[data-test="advanced-search-toggle"]').click();
@@ -302,7 +305,7 @@ describe('Search Form Integration Tests', function() {
             cy.get('[data-test="clear-all-button"]').click();
         });
 
-        it('should reset the form and clear the results', function() {
+        it('should reset the form and clear the results', () => {
             cy.get('[data-test="advanced-search-filter"]').should('have.length', 0);
             cy.get('[data-test="key-search-field"]').should('have.value', '');
             cy.get('.operator').should('contain', '==');
@@ -411,7 +414,7 @@ describe('Search Form Integration Tests', function() {
         });
     });
 
-    describe('Normalizing search form inputs into API request parameters', function() {
+    describe('Normalizing search form inputs into API request parameters', () => {
         describe('Key-value pair inputs', () => {
             describe('When one key-value pair with empty key and empty value is searched', () => {
                 it('`search` should be excluded', () => {
@@ -494,9 +497,9 @@ describe('Search Form Integration Tests', function() {
             });
         });
 
-        describe('View Records For dropdown', function() {
-            describe('When a date range preset is selected (ex: "Last X Days")', function() {
-                it('`startDate` should be X days ago at UTC midnight in ms and endDate should be excluded', function() {
+        describe('View Records For dropdown', () => {
+            describe('When a date range preset is selected', () => {
+                it('startDate should be X days ago at UTC midnight in ms and endDate should be excluded', () => {
                     const expectedStartDates = [
                         1525046400000, // 1 day ago (April 30), UTC midnight
                         1524528000000, // 7 days ago (April 24), UTC midnight
@@ -523,14 +526,14 @@ describe('Search Form Integration Tests', function() {
                 });
             });
 
-            describe('When a custom date range is selected', function() {
-                it('`startDate` should be the selected start date at UTC midnight in ms, and `endDate` should be the selected end date at UTC end of day in ms', function() {
+            describe('When a custom date range is selected', () => {
+                it('`startDate` should be the selected start date at UTC midnight in ms, and `endDate` should be the selected end date at UTC end of day in ms', () => {
                     const expectedStartDate = 1524355200000; // April 22, UTC midnight
                     const expectedEndDate = 1524614399999; // April 24, UTC end of day
 
                     cy.get('.view-records')
                         .click()
-                        .get(`.spectrum-SelectList-item:last-child`)
+                        .get('.spectrum-SelectList-item:last-child')
                         .click()
                         .get('[data-test="custom-start-date"]')
                         .clear()

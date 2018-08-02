@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@aam/aam-topnav": "1.1.1",
     "@react/react-spectrum": "~2.9.0",
     "@spectrum/spectrum-variables": "^1.0.1",
     "babel-preset-react-app": "^3.1.1",
     "classnames": "^2.2.5",
+    "coral-shell-ims": "git+ssh://git@git.corp.adobe.com:AAM/coral-shell-ims#v2.0.0",
+    "cpx": "^1.5.0",
     "cypress": "^2.1.0",
     "debounce": "^1.1.0",
     "enzyme": "^3.3.0",
@@ -19,6 +22,8 @@
     "jest-localstorage-mock": "^2.2.0",
     "mockdate": "^2.0.2",
     "moment": "^2.22.1",
+    "nodelist-foreach-polyfill": "^1.2.0",
+    "npx": "^10.2.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-app-rewire-define-plugin": "^1.0.0",
@@ -40,19 +45,22 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "start:ci": "./node_modules/.bin/http-server build -p 3000",
-    "build": "react-app-rewired build",
+    "start:ci": "npx http-server build -p 3000",
+    "build": "react-app-rewired build && npm run copy-shell-topnav",
     "build:replace:version": "npx replace-in-file signalsVersion $BUILD_NUMBER build/index.html",
     "build:replace:branch": "npx replace-in-file signalsBranch $BRANCH_NAME build/index.html",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --staged",
-    "cypress:open": "node_modules/.bin/cypress open",
-    "cypress:run": "node_modules/.bin/cypress run",
-    "cypress:ci": "node_modules/.bin/start-server-and-test start:ci http://localhost:3000 cypress:run",
+    "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
+    "cypress:ci": "npx start-server-and-test start:ci http://localhost:3000 cypress:run",
     "lint": "node_modules/@aam/eslint-config-aam/node_modules/eslint/bin/eslint.js src",
+    "copy-coral-shell-ims": "npx cpx -v './node_modules/coral-shell-ims/build/js/{libs/*js,*.js}' ./build/static/coral-shell-ims/js && npx cpx -v ./node_modules/coral-shell-ims/build/css/*.css ./build/static/coral-shell-ims/css && npx cpx -v './node_modules/coral-shell-ims/build/resources/coralui-component-icon/AdobeSpectrumIcons*.{ttf,woff,woff2}' ./build/static/coral-shell-ims/resources/coralui-component-icon",
+    "copy-topnav": "npx cpx -v ./node_modules/@aam/aam-topnav/build/css/*.css ./build/static/css",
+    "copy-shell-topnav": "npm run copy-coral-shell-ims && npm run copy-topnav",
     "json-server": "json-server data-generator.js --port 3002 --routes ./routes.json",
-    "externalize": "rm -f ./src/lib/i18n/messages/en.json && NODE_ENV=development node_modules/.bin/extract-messages -l=en --flat true -o ./src/lib/i18n/messages './src/**/!(*.test).js'"
+    "externalize": "rm -f ./src/lib/i18n/messages/en.json && NODE_ENV=development npx extract-messages -l=en --flat true -o ./src/lib/i18n/messages './src/**/!(*.test).js'"
   },
   "jest": {
     "moduleNameMapper": {
@@ -60,7 +68,7 @@
     }
   },
   "devDependencies": {
-    "@aam/eslint-config-aam": "^1.2.0",
+    "@aam/eslint-config-aam": "^1.2.1",
     "eslint-plugin-prettier": "^2.6.0",
     "faker": "^4.1.0",
     "husky": "^0.14.3",

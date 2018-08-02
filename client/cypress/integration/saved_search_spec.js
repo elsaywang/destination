@@ -6,8 +6,8 @@ const emptySavedSearchResponse = require('../fixtures/emptySavedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
 const errorResponse = require('../fixtures/error.json');
 
-describe('Saved Search Integration Test', function() {
-    beforeEach(function() {
+describe('Saved Search Integration Test', () => {
+    beforeEach(() => {
         cy.server();
         cy.route(
             '/portal/api/v1/users/self/annotations/aam-portal',
@@ -19,7 +19,7 @@ describe('Saved Search Integration Test', function() {
 
         cy.visit('#/search');
     });
-    it("requests user's saved searches", function() {
+    it('requests user\'s saved searches', () => {
         cy.wait('@fetchSavedSearch')
             .its('status')
             .should('eq', 200);
@@ -34,7 +34,7 @@ describe('Saved Search Integration Test', function() {
             .should('exist')
             .should('have.length', 5);
 
-        cy.get('[data-saved-search-id]:first').should(function($tag) {
+        cy.get('[data-saved-search-id]:first').should(($tag) => {
             expect($tag.text()).to.eq(savedSearchResponse.savedSearch[0].name);
         });
 
@@ -43,79 +43,79 @@ describe('Saved Search Integration Test', function() {
             .should('have.length', 7);
     });
 
-    it('should not show a delete button', function() {
+    it('should not show a delete button', () => {
         cy.get('[data-test="saved-search-delete-button"]').should('have.length', 0);
     });
 
-    describe('when a user-defined Saved Search tag is clicked', function() {
-        beforeEach(function() {
+    describe('when a user-defined Saved Search tag is clicked', () => {
+        beforeEach(() => {
             cy.get('[data-saved-search-id]:first').click();
         });
 
-        it('should execute the saved search and show results', function() {
+        it('should execute the saved search and show results', () => {
             cy.get('[data-test="signals-table"]').should('have.length', 1);
         });
 
-        it('should show a highlighted tag for the saved search that was clicked and a delete button', function() {
+        it('should show a highlighted tag for the saved search that was clicked and a delete button', () => {
             cy.get('#isCurrentSearch').should('exist');
             cy.get('[data-test="saved-search-delete-button"]').should('exist');
         });
 
-        it('should pre-fill Key-Value Pair fields', function() {
+        it('should pre-fill Key-Value Pair fields', () => {
             cy.get('[data-test="key-value-pair"]').should(
                 'have.length',
                 savedSearchResponse.savedSearch[0].keyValuePairs.length,
             );
 
-            cy.get('[data-test="key-search-field"]:first').should(function($value) {
+            cy.get('[data-test="key-search-field"]:first').should(($value) => {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].keyValuePairs[0].key);
             });
 
-            cy.get('[data-test="value-search"]:first').should(function($value) {
+            cy.get('[data-test="value-search"]:first').should(($value) => {
                 expect($value.val()).to.eq(
                     String(savedSearchResponse.savedSearch[0].keyValuePairs[0].value),
                 );
             });
         });
 
-        it('should pre-fill Advanced Search fields', function() {
+        it('should pre-fill Advanced Search fields', () => {
             cy.get('[data-test="advanced-search-toggle"]').should('be.checked');
 
-            cy.get('[data-test="advanced-search-filter"]').should(function($value) {
+            cy.get('[data-test="advanced-search-filter"]').should(($value) => {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].source.name);
             });
         });
 
-        it('should pre-fill Signal Status field', function() {
+        it('should pre-fill Signal Status field', () => {
             const signalStatus = savedSearchResponse.savedSearch[0].signalStatus;
 
-            cy.get('.signal-status').should(function($value) {
+            cy.get('.signal-status').should(($value) => {
                 expect($value.text()).to.include(
                     signalStatus.slice(0, 1) + signalStatus.slice(1).toLowerCase(),
                 );
             });
         });
 
-        it('should pre-fill View Records For fields', function() {
-            cy.get('[data-test="view-records"]').should(function($value) {
+        it('should pre-fill View Records For fields', () => {
+            cy.get('[data-test="view-records"]').should(($value) => {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].viewRecordsFor);
             });
         });
 
-        it('should pre-fill Minimum Counts field', function() {
-            cy.get('[data-test="min-counts"]').should(function($value) {
+        it('should pre-fill Minimum Counts field', () => {
+            cy.get('[data-test="min-counts"]').should(($value) => {
                 expect($value.val()).to.eq(
                     String(savedSearchResponse.savedSearch[0].minEventFires),
                 );
             });
         });
 
-        it('should show "Save This Search" button', function() {
+        it('should show "Save This Search" button', () => {
             cy.get('[data-test="save-this-search-button"]').should('be.visible');
         });
 
-        describe('when the delete button next to it is clicked', function() {
-            it("should remove that saved search from user's saved search", function() {
+        describe('when the delete button next to it is clicked', () => {
+            it('should remove that saved search from user\'s saved search', () => {
                 const mockResponseAfterDelete = savedSearchResponse.savedSearch.slice(1);
 
                 cy.route(
@@ -145,18 +145,18 @@ describe('Saved Search Integration Test', function() {
         });
     });
 
-    describe('when "Save This Search" button is clicked', function() {
-        beforeEach(function() {
+    describe('when "Save This Search" button is clicked', () => {
+        beforeEach(() => {
             cy.get('[data-test="search-button"]').click();
             cy.get('[data-test="save-this-search-button"]').click();
         });
 
-        it('should show a modal to allow user to save current search', function() {
+        it('should show a modal to allow user to save current search', () => {
             cy.get('[data-test="save-this-search-dialog-content"]').should('have.length', 1);
         });
 
-        describe('when user fills out fields in modal, and clicks "Cancel" button', function() {
-            it('should reset the modal', function() {
+        describe('when user fills out fields in modal, and clicks "Cancel" button', () => {
+            it('should reset the modal', () => {
                 const searchName = 'Test1234';
 
                 cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
@@ -172,8 +172,8 @@ describe('Saved Search Integration Test', function() {
         });
 
         // TODO: add more fields to add values, pending AAM-36729
-        describe('when user fills out all fields in modal, and clicks "Save" button', function() {
-            beforeEach(function() {
+        describe('when user fills out all fields in modal, and clicks "Save" button', () => {
+            beforeEach(() => {
                 const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
                     newSavedSearchResponse,
                 );
@@ -185,7 +185,7 @@ describe('Saved Search Integration Test', function() {
                 ).as('createSavedSearch');
             });
 
-            it("should save the user's current search with typed searchName", function() {
+            it('should save the user\'s current search with typed searchName', () => {
                 const searchName = 'Test1234';
 
                 cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
@@ -197,19 +197,22 @@ describe('Saved Search Integration Test', function() {
 
                 cy.wait('@createSavedSearch');
 
-                cy.get('[data-saved-search-id]')
-                    .contains(searchName)
-                    .should('exist')
-                    .trigger('mouseover');
-                cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
+                cy.wait(0).then(() => {
+                    cy.get('[data-saved-search-id]')
+                        .contains(searchName)
+                        .should('exist')
+                        .trigger('mouseover');
+                    cy.get('[data-test="saved-search-overlay-trigger"]').contains(searchName);
+                });
             });
         });
 
-        describe('when user fills out only some of fields in modal, and clicks "Save" button', function() {
-            beforeEach(function() {
+        describe('when user fills out only some of fields in modal, and clicks "Save" button', () => {
+            beforeEach(() => {
                 const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
                     newSavedSearchResponseWithDefaultName,
                 );
+
                 cy.route(
                     'PUT',
                     '/portal/api/v1/users/self/annotations/aam-portal',
@@ -217,23 +220,25 @@ describe('Saved Search Integration Test', function() {
                 ).as('createSavedSearch');
             });
 
-            it("should save the user's current search with formattedSignal as default searchName if name text field is not filled", function() {
+            it('should save the user\'s current search with formattedSignal as default searchName if name text field is not filled', () => {
                 const defaultName = '""=""';
 
                 cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
 
                 cy.wait('@createSavedSearch');
 
-                cy.get('[data-saved-search-id]')
-                    .contains(defaultName)
-                    .should('exist')
-                    .trigger('mouseover');
-                cy.get('[data-test="saved-search-overlay-trigger"]').contains(defaultName);
+                cy.wait(0).then(() => {
+                    cy.get('[data-saved-search-id]')
+                        .contains(defaultName)
+                        .should('exist')
+                        .trigger('mouseover');
+                    cy.get('[data-test="saved-search-overlay-trigger"]').contains(defaultName);
+                });
             });
         });
 
-        describe('when user fills out fields in modal, and clicks "Save" button but failed to create', function() {
-            beforeEach(function() {
+        describe('when user fills out fields in modal, and clicks "Save" button but failed to create', () => {
+            beforeEach(() => {
                 cy.server({
                     status: errorResponse.status,
                 });
@@ -245,7 +250,7 @@ describe('Saved Search Integration Test', function() {
                 ).as('createSavedSearchFailed');
             });
 
-            it("should not save the user's current search", function() {
+            it('should not save the user\'s current search', () => {
                 const searchName = 'Test1234';
 
                 cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
@@ -264,14 +269,14 @@ describe('Saved Search Integration Test', function() {
         });
     });
 
-    describe('when a Saved Search tag is hovered over', function() {
-        it('should trigger a popover', function() {
+    describe('when a Saved Search tag is hovered over', () => {
+        it('should trigger a popover', () => {
             cy.get('[data-test="saved-search-tag"]:first').trigger('mouseover');
             cy.get('[data-test="saved-search-overlay-trigger"]').should('have.length', 1);
         });
     });
 
-    describe('Preset saved searches', function() {
+    describe('Preset saved searches', () => {
         beforeEach(() => {
             cy.get('[data-saved-search-preset="top-unused-signals"]').as('topUnusedSignalsTag');
             cy.get('[data-saved-search-preset="new-unused-signals"]').as('newUnusedSignalsTag');
@@ -416,7 +421,7 @@ describe('Saved Search Integration Test', function() {
             cy.get('[data-test="save-this-search-name-field"]').type('Test saved search');
             cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
 
-            cy.getRequestParams('@createSavedSearch').then(savedSearchList => {
+            cy.getRequestParams('@createSavedSearch').then((savedSearchList) => {
                 expect(
                     savedSearchList.filter(savedSearch => savedSearch.presetId !== null).length,
                 ).to.eq(0);

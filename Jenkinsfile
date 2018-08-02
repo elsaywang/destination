@@ -1,7 +1,10 @@
 def uiImage
-def uiImageName = "signal-center-ui:${env.JOB_BASE_NAME}_${env.BUILD_ID}"
+def tag = "${env.JOB_BASE_NAME}_${env.BUILD_ID}".replaceAll(/[^a-zA-Z0-9]/, "_").toLowerCase()
+def uiImageName = "signal-center-ui:${tag}"
 def cypressBaseImage = "cypress/base:8"
 def workspace
+def gitSshKey = "aam-portal-automation-private-key"
+def artifactory = "Artifactory"
 
 node ("docker") {
     properties([
@@ -22,8 +25,14 @@ node ("docker") {
         }
 
         stage ('Building Image') {
-            sh "docker build -t ${uiImageName} --build-arg BUILD_NUMBER=${BUILD_NUMBER} --build-arg BRANCH_NAME=${BRANCH_NAME} ./client"
-            uiImage = docker.image(uiImageName)
+            withCredentials([file(credentialsId: gitSshKey, variable: '_SECRET')]) {
+                sh "cat ${_SECRET} > ${workspace}/client/git_key"
+            }
+
+            withCredentials([usernamePassword(credentialsId: artifactory, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                sh "docker build -t ${uiImageName} --build-arg BUILD_NUMBER=${BUILD_NUMBER} --build-arg BRANCH_NAME=${BRANCH_NAME} --build-arg ARTIFACTORY_USERNAME=${USERNAME} --build-arg ARTIFACTORY_PASS=${PASSWORD} ./client"
+                uiImage = docker.image(uiImageName)
+            }
         }
 
         stage ('Running Unit Tests') {
@@ -50,9 +59,7 @@ node ("docker") {
     } catch (e) {
         // fail the build if an exception is thrown
         currentBuild.result = "FAILED"
-        echo e.getMessage()
         throw e
-
     } finally {
         // Post build steps here
         /* Success or failure, always run post build steps */

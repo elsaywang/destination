@@ -12,6 +12,7 @@ import DashboardContainer from './containers/DashboardContainer';
 import SearchContainer from './containers/SearchContainer';
 import './lib/tour-guide';
 import './lib/tour-guide-initializer';
+import '@aam/aam-topnav';
 
 const { locale, messages } = getLocaleData();
 const store = configureStore();

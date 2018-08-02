@@ -1,5 +1,7 @@
 {
-    "baseUrl": "http://localhost:3000/",
+    "baseUrl": "http://127.0.0.1:3000/",
     "chromeWebSecurity": false,
-    "ignoreTestFiles": "example_spec.js"
+    "ignoreTestFiles": "example_spec.js",
+    "viewportWidth": 1540,
+    "viewportHeight": 1000
 }
