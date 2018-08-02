@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { FormattedNumber } from 'react-intl';
+import classNames from 'classnames';
 import PercentageChange from './common/PercentageChange';
 import Table from './common/Table';
 import {
@@ -107,7 +108,9 @@ class SignalsTable extends Component {
             const dataSourceId = dataSourceIds[0];
             return (
                 <Link href={dataSourceEditUrl(dataSourceId)}>
-                    <div data-test="source-name" className={styles.sourceName}>
+                    <div
+                        data-test="source-name"
+                        className={classNames(styles.truncate, styles.sourceName)}>
                         {sourceName}
                     </div>
                 </Link>
@@ -134,10 +137,12 @@ class SignalsTable extends Component {
 
     renderKeyValuePairs(keyValuePairs) {
         return (
-            <div className={styles.keyValuePairs}>
+            <div className={classNames(styles.truncate, styles.keyValuePairs)}>
                 {keyValuePairs.map(({ key, value }) => {
                     return (
-                        <div className={styles.keyValuePairs} key={`${key}-${value}`}>
+                        <div
+                            className={classNames(styles.truncate, styles.keyValuePairs)}
+                            key={`${key}-${value}`}>
                             {`${key}=${value}`}
                         </div>
                     );
