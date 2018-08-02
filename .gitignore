@@ -4,15 +4,18 @@ node_modules
 # production
 build
 
-#cypress
+# topnav
+client/public/static
+
+# cypress
 **/cypress/screenshots
 **/cypress/videos
 
-#jest
+# jest
 **/coverage/
 test-report.xml
 
-#root only
+# root only
 ./package-lock.json
 
 # misc

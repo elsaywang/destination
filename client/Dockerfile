@@ -29,7 +29,7 @@ RUN ssh-keyscan -t rsa -H git.corp.adobe.com >> /root/.ssh/known_hosts && \
     echo " User root" >> /root/.ssh/config
 RUN touch /root/.npmrc && \
     curl -u $ARTIFACTORY_USERNAME:$ARTIFACTORY_PASS https://artifactory.corp.adobe.com/artifactory/api/npm/auth > /root/.npmrc
-RUN npm install --only=production
+RUN npm install --only=production --unsafe-perm
 
 ## add source code and build app
 ADD public /usr/src/app/client/public
