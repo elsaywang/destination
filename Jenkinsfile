@@ -1,5 +1,5 @@
 def uiImage
-def uiImageName = "signal-center-ui:${env.BUILD_ID}"
+def uiImageName = "signal-center-ui:${env.JOB_BASE_NAME}_${env.BUILD_ID}"
 def cypressBaseImage = "cypress/base:8"
 def workspace
 
@@ -50,7 +50,9 @@ node ("docker") {
     } catch (e) {
         // fail the build if an exception is thrown
         currentBuild.result = "FAILED"
+        echo e.getMessage()
         throw e
+
     } finally {
         // Post build steps here
         /* Success or failure, always run post build steps */
