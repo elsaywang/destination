@@ -445,7 +445,9 @@ describe('<SignalsTable /> component', () => {
                 const signal = {
                     keyValuePairs: [{}],
                     includedInTraits: [123],
-                    categoryType: 'REALTIME',
+                    source: {
+                        sourceType: 'REALTIME',
+                    },
                     totalCount: 10,
                 };
 
