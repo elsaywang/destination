@@ -395,7 +395,6 @@ ShallowWrapper {
             <SavedSearchTable
                         allowsSelection={false}
                         canCreateTraits={undefined}
-                        getResultsBySavedSearch={[Function]}
                         isAdvancedSearchEnabled={false}
                         savedSearch={
                                     Object {
@@ -478,7 +477,6 @@ ShallowWrapper {
             <SavedSearchTable
                         allowsSelection={false}
                         canCreateTraits={undefined}
-                        getResultsBySavedSearch={[Function]}
                         isAdvancedSearchEnabled={false}
                         savedSearch={
                                     Object {
@@ -598,7 +596,6 @@ ShallowWrapper {
             <SavedSearchTable
               allowsSelection={false}
               canCreateTraits={undefined}
-              getResultsBySavedSearch={[Function]}
               isAdvancedSearchEnabled={false}
               savedSearch={
                             Object {
@@ -873,7 +870,6 @@ ShallowWrapper {
             "props": Object {
               "allowsSelection": false,
               "canCreateTraits": undefined,
-              "getResultsBySavedSearch": [Function],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
                 "endDate": "2018-04-29T05:55:48.852Z",
@@ -962,7 +958,6 @@ ShallowWrapper {
             <SavedSearchTable
               allowsSelection={false}
               canCreateTraits={undefined}
-              getResultsBySavedSearch={[Function]}
               isAdvancedSearchEnabled={false}
               savedSearch={
                             Object {
@@ -1242,7 +1237,6 @@ ShallowWrapper {
             "props": Object {
               "allowsSelection": false,
               "canCreateTraits": undefined,
-              "getResultsBySavedSearch": [Function],
               "isAdvancedSearchEnabled": false,
               "savedSearch": Object {
                 "endDate": "2018-04-29T09:22:26.931Z",
@@ -1351,7 +1345,6 @@ ShallowWrapper {
               <SavedSearchTable
                             allowsSelection={false}
                             canCreateTraits={undefined}
-                            getResultsBySavedSearch={[Function]}
                             isAdvancedSearchEnabled={false}
                             savedSearch={
                                           Object {
@@ -1434,7 +1427,6 @@ ShallowWrapper {
               <SavedSearchTable
                             allowsSelection={false}
                             canCreateTraits={undefined}
-                            getResultsBySavedSearch={[Function]}
                             isAdvancedSearchEnabled={false}
                             savedSearch={
                                           Object {
@@ -1554,7 +1546,6 @@ ShallowWrapper {
               <SavedSearchTable
                 allowsSelection={false}
                 canCreateTraits={undefined}
-                getResultsBySavedSearch={[Function]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                                 Object {
@@ -1829,7 +1820,6 @@ ShallowWrapper {
               "props": Object {
                 "allowsSelection": false,
                 "canCreateTraits": undefined,
-                "getResultsBySavedSearch": [Function],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
                   "endDate": "2018-04-29T05:55:48.852Z",
@@ -1918,7 +1908,6 @@ ShallowWrapper {
               <SavedSearchTable
                 allowsSelection={false}
                 canCreateTraits={undefined}
-                getResultsBySavedSearch={[Function]}
                 isAdvancedSearchEnabled={false}
                 savedSearch={
                                 Object {
@@ -2198,7 +2187,6 @@ ShallowWrapper {
               "props": Object {
                 "allowsSelection": false,
                 "canCreateTraits": undefined,
-                "getResultsBySavedSearch": [Function],
                 "isAdvancedSearchEnabled": false,
                 "savedSearch": Object {
                   "endDate": "2018-04-29T09:22:26.931Z",

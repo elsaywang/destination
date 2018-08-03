@@ -50,6 +50,7 @@ class SignalsTable extends Component {
         }
         const records = selectedRowIndexSet.map(index => ({ rowIndex: index, ...items[index] }));
         const selectionMessage = renderSelectedSignalsMessage(records);
+
         onSignalRecordsSelection({
             selectionMessage,
             hasSignalSelectionsTypeWarning: hasSignalSelectionsTypeWarning(records),
@@ -132,7 +133,11 @@ class SignalsTable extends Component {
 
         const sids = includedInTraits === null ? [] : includedInTraits;
 
-        return { keyValuePairs, sids, categoryType };
+        return {
+            keyValuePairs,
+            sids,
+            categoryType,
+        };
     }
 
     renderKeyValuePairs(keyValuePairs) {
@@ -215,6 +220,7 @@ class SignalsTable extends Component {
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
         const items = this.formatSignalsList(results);
         const rowHeight = this.getRowHeight(totalKeyValuePairs);
+
         return (
             <Table
                 dataTest="signals-table"

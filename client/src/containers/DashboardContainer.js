@@ -42,6 +42,7 @@ class DashboardContainer extends Component {
             trackedInDashboardSavedSearchList,
             loadMoreSavedSearch,
         } = nextProps;
+
         handleLazyLoadSavedSearches(
             this.isBottomPassed(),
             visibleSavedSearchList,
@@ -125,7 +126,6 @@ class DashboardContainer extends Component {
                                 </GridRow>
                                 <SavedSearchTable
                                     savedSearch={search}
-                                    getResultsBySavedSearch={this.props.callSearch}
                                     isAdvancedSearchEnabled={false}
                                     allowsSelection={false}
                                     canCreateTraits={this.props.permissions.canCreateTraits}
