@@ -570,7 +570,7 @@ ShallowWrapper {
       "items": Array [
         Object {
           "includedInTraits": Object {
-            "categoryType": undefined,
+            "categoryType": "REALTIME",
             "keyValuePairs": Array [
               Object {
                 "key": "evar18",
@@ -655,7 +655,7 @@ ShallowWrapper {
         "items": Array [
           Object {
             "includedInTraits": Object {
-              "categoryType": undefined,
+              "categoryType": "REALTIME",
               "keyValuePairs": Array [
                 Object {
                   "key": "evar18",
