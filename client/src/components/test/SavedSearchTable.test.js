@@ -34,7 +34,7 @@ describe('<SavedSearchTable/> component', () => {
         allowsSelection: false,
     };
 
-    const wrapper = shallow(<SavedSearchTable {...props} getResultsBySavedSearch={mockFn} />);
+    const wrapper = shallow(<SavedSearchTable {...props} />);
 
     describe('rendering', () => {
         const newState = {

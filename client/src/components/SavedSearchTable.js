@@ -74,7 +74,6 @@ class SavedSearchTable extends Component {
 
 SavedSearchTable.propTypes = {
     savedSearch: PropTypes.object,
-    getResultsBySavedSearch: PropTypes.func,
     isAdvancedSearchEnabled: PropTypes.bool,
     allowsSelection: PropTypes.bool,
     canCreateTraits: PropTypes.bool,
