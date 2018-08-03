@@ -2,13 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import SavedSearchTable from '../SavedSearchTable';
 import EmptySearch from '../EmptySearch';
+import { handleList } from '../../reducers/results';
 import fetch from '../../utils/fetch';
 
 jest.mock('../../utils/fetch');
 fetch.mockImplementation(() => ({ json: () => new Promise(res => ({})) }));
 
 describe('<SavedSearchTable/> component', () => {
-    const mockFn = jest.fn();
     const props = {
         savedSearch: {
             name: "Margot O'Hara",
@@ -38,7 +38,7 @@ describe('<SavedSearchTable/> component', () => {
 
     describe('rendering', () => {
         const newState = {
-            tableResults: {},
+            list: [],
             error: false,
             hasSearched: false,
         };
@@ -61,35 +61,27 @@ describe('<SavedSearchTable/> component', () => {
     });
 
     describe('state changes based on lifecyle events without error', () => {
-        const newState = {
-            tableResults: {
-                pid: 1194,
-                startDate: 1530662400000,
-                endDate: 1531332629645,
-                list: [
+        const response = [
+            {
+                keyValuePairs: [
                     {
-                        keyValuePairs: [
-                            {
-                                key: 'evar18',
-                                value: 'CMS18',
-                            },
-                        ],
-                        source: {
-                            dataSourceIds: null,
-                            reportSuiteIds: null,
-                            sourceType: null,
-                        },
-                        totalCount: 93859,
-                        percentageChange: 0.27783491545226535,
-                        includedInTraits: null,
-                        signalStatus: 'UNUSED',
+                        key: 'evar18',
+                        value: 'CMS18',
                     },
                 ],
-                pageSize: 20,
-                page: 0,
-                total: 20,
-                analyticsServiceAvailable: true,
+                source: {
+                    dataSourceIds: null,
+                    reportSuiteIds: null,
+                    sourceType: null,
+                },
+                totalCount: 93859,
+                percentageChange: 0.27783491545226535,
+                includedInTraits: null,
+                signalStatus: 'UNUSED',
             },
+        ];
+        const newState = {
+            list: handleList(response),
             error: false,
             hasSearched: true,
         };
@@ -112,7 +104,7 @@ describe('<SavedSearchTable/> component', () => {
 
     describe('state changes based on lifecyle events with error', () => {
         const errorState = {
-            tableResults: {},
+            list: [],
             error: true,
             hasSearched: true,
         };

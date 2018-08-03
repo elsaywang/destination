@@ -160,7 +160,7 @@ ShallowWrapper {
         Object {
           "id": 0,
           "includedInTraits": Object {
-            "categoryType": "REALTIME",
+            "categoryType": undefined,
             "keyValuePairs": undefined,
             "sids": undefined,
           },
@@ -178,7 +178,7 @@ ShallowWrapper {
         Object {
           "id": 1,
           "includedInTraits": Object {
-            "categoryType": "ONBOARDED",
+            "categoryType": undefined,
             "keyValuePairs": undefined,
             "sids": undefined,
           },
@@ -253,7 +253,7 @@ ShallowWrapper {
           Object {
             "id": 0,
             "includedInTraits": Object {
-              "categoryType": "REALTIME",
+              "categoryType": undefined,
               "keyValuePairs": undefined,
               "sids": undefined,
             },
@@ -271,7 +271,7 @@ ShallowWrapper {
           Object {
             "id": 1,
             "includedInTraits": Object {
-              "categoryType": "ONBOARDED",
+              "categoryType": undefined,
               "keyValuePairs": undefined,
               "sids": undefined,
             },

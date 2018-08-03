@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import Wait from '@react/react-spectrum/Wait';
 import SignalsTable from './SignalsTable';
 import EmptySearch from './EmptySearch';
+import { handleList } from '../reducers/results';
 import { fetchSignals } from '../utils/fetchSignals';
 import styles from './SavedSearchTable.css';
 
 class SavedSearchTable extends Component {
     state = {
-        tableResults: {},
+        list: [],
         error: false,
         hasSearched: false,
     };
@@ -21,13 +22,13 @@ class SavedSearchTable extends Component {
             const results = await response.json();
 
             this.setState({
-                tableResults: results,
+                list: handleList(results.list),
                 error: false,
                 hasSearched: true,
             });
         } else {
             this.setState({
-                tableResults: {},
+                list: [],
                 error: true,
                 hasSearched: true,
             });
@@ -35,14 +36,14 @@ class SavedSearchTable extends Component {
     }
 
     renderTable() {
-        const { tableResults } = this.state;
+        const { list } = this.state;
         const {
             isAdvancedSearchEnabled,
             allowsSelection,
             canCreateTraits,
             savedSearch,
         } = this.props;
-        const hasSearchResults = !this.state.error && tableResults.list && tableResults.list.length;
+        const hasSearchResults = !this.state.error && list && list.length;
         const totalKeyValuePairs = savedSearch.keyValuePairs.length;
         const withResults = hasSearchResults && !this.state.error;
 
@@ -50,7 +51,7 @@ class SavedSearchTable extends Component {
             return (
                 <SignalsTable
                     isLoaded={hasSearchResults}
-                    results={tableResults.list}
+                    results={list}
                     totalKeyValuePairs={totalKeyValuePairs}
                     canCreateTraits={canCreateTraits}
                     isAdvancedSearchEnabled={isAdvancedSearchEnabled}

@@ -21,8 +21,8 @@ const initialState = {
     isLoaded: false,
 };
 
-export const handleList = (state, action) =>
-    action.payload.list.map(signal => ({
+export const handleList = list =>
+    list.map(signal => ({
         ...signal,
         categoryType: signal.source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
     }));
@@ -39,7 +39,7 @@ const results = handleActions(
         [CALL_SEARCH_FULFILLED]: (state, action) => ({
             ...state,
             ...action.payload,
-            list: handleList(getList(state), action),
+            list: handleList(action.payload.list),
             isEndOfResults: handleIsEndOfResults(state, action),
             isLoaded: true,
         }),
@@ -50,7 +50,7 @@ const results = handleActions(
         [LOAD_MORE_FULFILLED]: (state, action) => ({
             ...state,
             ...action.payload,
-            list: [...getList(state), ...handleList(getList(state), action)],
+            list: [...getList(state), ...handleList(action.payload.list)],
             isEndOfResults: handleIsEndOfResults(state, action),
             isLoaded: true,
         }),

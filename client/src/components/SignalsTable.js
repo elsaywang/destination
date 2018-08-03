@@ -129,14 +129,14 @@ class SignalsTable extends Component {
     }
 
     formatIncludedInTraits(signal) {
-        const { keyValuePairs, includedInTraits, source } = signal;
+        const { keyValuePairs, includedInTraits, categoryType } = signal;
 
         const sids = includedInTraits === null ? [] : includedInTraits;
 
         return {
             keyValuePairs,
             sids,
-            categoryType: source.sourceType === 'ONBOARDED' ? 'ONBOARDED' : 'REALTIME',
+            categoryType,
         };
     }
 

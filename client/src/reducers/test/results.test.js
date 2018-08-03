@@ -20,8 +20,8 @@ describe('results reducer', () => {
                 payload: { list },
             };
 
-            expect(handleList([], action)[0].categoryType).toBeDefined();
-            expect(handleList([], action)[1].categoryType).toBeDefined();
+            expect(handleList(action.payload.list)[0].categoryType).toBeDefined();
+            expect(handleList(action.payload.list)[1].categoryType).toBeDefined();
         });
     });
 
@@ -79,7 +79,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(handleList([], action)[0].categoryType).toEqual('REALTIME');
+        expect(handleList(action.payload.list)[0].categoryType).toEqual('REALTIME');
     });
 
     it('adds a `categoryType` of "REALTIME" for signals with a source type of "ANALYTICS"', () => {
@@ -89,7 +89,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(handleList([], action)[0].categoryType).toEqual('REALTIME');
+        expect(handleList(action.payload.list)[0].categoryType).toEqual('REALTIME');
     });
 
     it('adds a `categoryType` of "REALTIME" for signals with a source type of "ALF"', () => {
@@ -99,7 +99,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(handleList([], action)[0].categoryType).toEqual('REALTIME');
+        expect(handleList(action.payload.list)[0].categoryType).toEqual('REALTIME');
     });
 
     it('adds a `categoryType` of "ONBOARDED" for signals with a source type of "ONBOARDED"', () => {
@@ -109,7 +109,7 @@ describe('results reducer', () => {
             payload: { list },
         };
 
-        expect(handleList([], action)[0].categoryType).toEqual('ONBOARDED');
+        expect(handleList(action.payload.list)[0].categoryType).toEqual('ONBOARDED');
     });
 
     it('should handle THROTTLE_LOAD_MORE', () => {

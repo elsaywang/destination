@@ -497,6 +497,7 @@ ShallowWrapper {
     results={
         Array [
             Object {
+              "categoryType": "REALTIME",
               "includedInTraits": null,
               "keyValuePairs": Array [
                 Object {
@@ -569,6 +570,7 @@ ShallowWrapper {
       "isMaxSelectedRowsReached": undefined,
       "items": Array [
         Object {
+          "categoryType": "REALTIME",
           "includedInTraits": Object {
             "categoryType": "REALTIME",
             "keyValuePairs": Array [
@@ -654,6 +656,7 @@ ShallowWrapper {
         "isMaxSelectedRowsReached": undefined,
         "items": Array [
           Object {
+            "categoryType": "REALTIME",
             "includedInTraits": Object {
               "categoryType": "REALTIME",
               "keyValuePairs": Array [
