@@ -10,6 +10,7 @@ import Layout from './components/Layout';
 import Nav from './components/Nav';
 import DashboardContainer from './containers/DashboardContainer';
 import SearchContainer from './containers/SearchContainer';
+import Footer from './components/Footer';
 import './lib/tour-guide';
 import './lib/tour-guide-initializer';
 import '@aam/aam-topnav';
@@ -27,6 +28,7 @@ ReactDOM.render(
                         <Route exact path="/" component={DashboardContainer} />
                         <Route exact path="/search" component={SearchContainer} />
                     </Switch>
+                    <Footer />
                 </Layout>
             </HashRouter>
         </Provider>

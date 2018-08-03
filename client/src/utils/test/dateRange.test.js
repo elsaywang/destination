@@ -5,6 +5,7 @@ import {
     dateRangeDaysToPreset,
     dateRangePresetToDays,
     getNow,
+    getCurrentYear,
     getDefaultCustomStartDate,
     getDefaultCustomEndDate,
     dateToDaysAgo,
@@ -104,7 +105,14 @@ describe('date range utils', () => {
             expect(actual).toEqual(expected);
         });
     });
-
+    // describe('getCurrentYear', () => {
+    //     it('should return the current year ', () => {
+    //         const actual = getCurrentYear().valueOf();
+    //         const expected = '2018';
+    //
+    //         expect(actual).toEqual(expected);
+    //     });
+    // });
     describe('getDefaultCustomStartDate', () => {
         it('should return the date of the default # of days ago in the format YYYY-MM-DD', () => {
             const actual = getDefaultCustomStartDate();

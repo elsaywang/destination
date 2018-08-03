@@ -1,0 +1,377 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer/> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Footer />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="footerLinks"
+>
+          <a
+                    className="footerLinks footerLinkItem"
+                    href="https://marketing.adobe.com/resources/help/en_US/aam/"
+          >
+                    Help
+          </a>
+          <a
+                    className="footerLinks footerLinkItem"
+                    href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+          >
+                    Terms of Use
+          </a>
+          <a
+                    className="footerLinks footerLinkItem"
+                    href="http://www.adobe.com/go/marketingcloud_privacy"
+          >
+                    Privacy Policy
+          </a>
+          <label
+                    className="footerLabel"
+                    htmlFor="footerLanguage"
+          >
+                    Language: 
+          </label>
+          <a
+                    className="footerLanguage"
+                    href=""
+          >
+                    English
+          </a>
+</div>,
+        <div
+          className="footerCopyRight"
+>
+          © 2018 Adobe Systems Incorporated. All Rights Reserved.
+</div>,
+      ],
+      "className": "footer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            Array [
+              <a
+                className="footerLinks footerLinkItem"
+                href="https://marketing.adobe.com/resources/help/en_US/aam/"
+>
+                Help
+</a>,
+              <a
+                className="footerLinks footerLinkItem"
+                href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+>
+                Terms of Use
+</a>,
+              <a
+                className="footerLinks footerLinkItem"
+                href="http://www.adobe.com/go/marketingcloud_privacy"
+>
+                Privacy Policy
+</a>,
+            ],
+            <label
+              className="footerLabel"
+              htmlFor="footerLanguage"
+>
+              Language: 
+</label>,
+            <a
+              className="footerLanguage"
+              href=""
+>
+              English
+</a>,
+          ],
+          "className": "footerLinks",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "Help",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Help",
+              "className": "footerLinks footerLinkItem",
+              "href": "https://marketing.adobe.com/resources/help/en_US/aam/",
+            },
+            "ref": null,
+            "rendered": "Help",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": "Terms of Use",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Terms of Use",
+              "className": "footerLinks footerLinkItem",
+              "href": "http://www.adobe.com/go/marketingcloud_terms_of_use",
+            },
+            "ref": null,
+            "rendered": "Terms of Use",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": "Privacy Policy",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Privacy Policy",
+              "className": "footerLinks footerLinkItem",
+              "href": "http://www.adobe.com/go/marketingcloud_privacy",
+            },
+            "ref": null,
+            "rendered": "Privacy Policy",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Language: ",
+              "className": "footerLabel",
+              "htmlFor": "footerLanguage",
+            },
+            "ref": null,
+            "rendered": "Language: ",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "English",
+              "className": "footerLanguage",
+              "href": "",
+            },
+            "ref": null,
+            "rendered": "English",
+            "type": "a",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "© 2018 Adobe Systems Incorporated. All Rights Reserved.",
+          "className": "footerCopyRight",
+        },
+        "ref": null,
+        "rendered": "© 2018 Adobe Systems Incorporated. All Rights Reserved.",
+        "type": "div",
+      },
+    ],
+    "type": "footer",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="footerLinks"
+>
+            <a
+                        className="footerLinks footerLinkItem"
+                        href="https://marketing.adobe.com/resources/help/en_US/aam/"
+            >
+                        Help
+            </a>
+            <a
+                        className="footerLinks footerLinkItem"
+                        href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+            >
+                        Terms of Use
+            </a>
+            <a
+                        className="footerLinks footerLinkItem"
+                        href="http://www.adobe.com/go/marketingcloud_privacy"
+            >
+                        Privacy Policy
+            </a>
+            <label
+                        className="footerLabel"
+                        htmlFor="footerLanguage"
+            >
+                        Language: 
+            </label>
+            <a
+                        className="footerLanguage"
+                        href=""
+            >
+                        English
+            </a>
+</div>,
+          <div
+            className="footerCopyRight"
+>
+            © 2018 Adobe Systems Incorporated. All Rights Reserved.
+</div>,
+        ],
+        "className": "footer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              Array [
+                <a
+                  className="footerLinks footerLinkItem"
+                  href="https://marketing.adobe.com/resources/help/en_US/aam/"
+>
+                  Help
+</a>,
+                <a
+                  className="footerLinks footerLinkItem"
+                  href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+>
+                  Terms of Use
+</a>,
+                <a
+                  className="footerLinks footerLinkItem"
+                  href="http://www.adobe.com/go/marketingcloud_privacy"
+>
+                  Privacy Policy
+</a>,
+              ],
+              <label
+                className="footerLabel"
+                htmlFor="footerLanguage"
+>
+                Language: 
+</label>,
+              <a
+                className="footerLanguage"
+                href=""
+>
+                English
+</a>,
+            ],
+            "className": "footerLinks",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "Help",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Help",
+                "className": "footerLinks footerLinkItem",
+                "href": "https://marketing.adobe.com/resources/help/en_US/aam/",
+              },
+              "ref": null,
+              "rendered": "Help",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": "Terms of Use",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Terms of Use",
+                "className": "footerLinks footerLinkItem",
+                "href": "http://www.adobe.com/go/marketingcloud_terms_of_use",
+              },
+              "ref": null,
+              "rendered": "Terms of Use",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": "Privacy Policy",
+              "nodeType": "host",
+              "props": Object {
+                "children": "Privacy Policy",
+                "className": "footerLinks footerLinkItem",
+                "href": "http://www.adobe.com/go/marketingcloud_privacy",
+              },
+              "ref": null,
+              "rendered": "Privacy Policy",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Language: ",
+                "className": "footerLabel",
+                "htmlFor": "footerLanguage",
+              },
+              "ref": null,
+              "rendered": "Language: ",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "English",
+                "className": "footerLanguage",
+                "href": "",
+              },
+              "ref": null,
+              "rendered": "English",
+              "type": "a",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "© 2018 Adobe Systems Incorporated. All Rights Reserved.",
+            "className": "footerCopyRight",
+          },
+          "ref": null,
+          "rendered": "© 2018 Adobe Systems Incorporated. All Rights Reserved.",
+          "type": "div",
+        },
+      ],
+      "type": "footer",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
