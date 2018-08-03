@@ -59,7 +59,6 @@ class TraitsPopover extends Component {
 
     renderTraitLinks = () => {
         return this.state.traits.map(({ sid, name }) => {
-            const label = `${name} - ${sid}`;
             const traitUrl = `/portal/Traits/Traits.ddx#view/${sid}`;
 
             return (
