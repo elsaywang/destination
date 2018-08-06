@@ -18,7 +18,6 @@ describe('Dashboard Integration Tests', () => {
                 'fetchSearchResults',
             );
             cy.visit('/');
-            // cy.scrollTo('bottom');
         });
 
         it("requests user's saved searches", () => {
@@ -222,7 +221,6 @@ describe('Dashboard Integration Tests', () => {
                 'fetchEmptySearchResults',
             );
             cy.visit('/');
-            // cy.scrollTo('bottom');
         });
 
         it("requests user's saved searches", () => {
