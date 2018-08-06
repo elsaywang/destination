@@ -29,6 +29,8 @@ class SignalsTable extends Component {
         switch (column.key) {
             case 'keyValuePairs':
                 return this.renderKeyValuePairs(data);
+            case 'keyName':
+                return this.renderKeyName(data);
             case 'totalCount':
                 return this.renderTotalCounts(data);
             case 'percentageChange':
@@ -78,10 +80,17 @@ class SignalsTable extends Component {
     formatSignalsList(signals) {
         return signals.map(signal => ({
             ...signal,
+            keyName: this.formatKeyName(signal),
             signalType: this.formatSignalType(signal),
             signalSource: this.formatSignalSource(signal),
             includedInTraits: this.formatIncludedInTraits(signal),
         }));
+    }
+
+    formatKeyName(signal) {
+        const { keyValuePairs = [] } = signal;
+
+        return keyValuePairs.map(({ keyName = '—' }) => keyName);
     }
 
     formatSignalType(signal) {
@@ -143,15 +152,28 @@ class SignalsTable extends Component {
     renderKeyValuePairs(keyValuePairs) {
         return (
             <div className={classNames(styles.truncate, styles.keyValuePairs)}>
-                {keyValuePairs.map(({ key, value }) => {
+                {keyValuePairs.map(({ key, value }, index) => {
                     return (
                         <div
                             className={classNames(styles.truncate, styles.keyValuePairs)}
-                            key={`${key}-${value}`}>
+                            key={index}
+                            data-test={`key-value-pair-${index}`}>
                             {`${key}=${value}`}
                         </div>
                     );
                 })}
+            </div>
+        );
+    }
+
+    renderKeyName(keyNames) {
+        return (
+            <div>
+                {keyNames.map((keyName, index) => (
+                    <div className={styles.truncate} key={index} data-test={`key-name-${index}`}>
+                        {keyName}
+                    </div>
+                ))}
             </div>
         );
     }
