@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
@@ -22,14 +22,16 @@ ReactDOM.render(
     <IntlProvider locale={locale} messages={messages}>
         <Provider store={store}>
             <HashRouter>
-                <Layout>
-                    <Nav />
-                    <Switch>
-                        <Route exact path="/" component={DashboardContainer} />
-                        <Route exact path="/search" component={SearchContainer} />
-                    </Switch>
+                <Fragment>
+                    <Layout>
+                        <Nav />
+                        <Switch>
+                            <Route exact path="/" component={DashboardContainer} />
+                            <Route exact path="/search" component={SearchContainer} />
+                        </Switch>
+                    </Layout>
                     <Footer />
-                </Layout>
+                </Fragment>
             </HashRouter>
         </Provider>
     </IntlProvider>,

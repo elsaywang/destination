@@ -1,31 +1,23 @@
 :local(.footer) {
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    right: 0;
-    position: absolute;
-    box-sizing: border-box;
     border-top: 0.0625rem solid var(--spectrum-global-color-grey300);
     padding: 0.9375rem;
     color: var(--spectrum-global-color-grey500);
     overflow: hidden;
+    font-size: 0.8125rem;
+    font-family: var(--spectrum-alias-font-family-condensed);
+    background-color: var(--spectrum-alias-background-color-default);
 }
 :local(.footerLinks) {
     float: left;
     display: inline;
     line-height: 1.5rem;
-    color: var(--spectrum-global-color-grey500);
-}
-:local(.footerLinkItem) {
-    padding-right: 1.25rem;
     text-decoration: none;
     vertical-align: middle;
-}
-:local(.footerLabel) {
-    display: inline;
+    color: var(--spectrum-global-color-grey500);
+    padding-right: 1.25rem;
 }
 :local(.footerLanguage) {
-    display: inline;
+    text-decoration: none;
     color: var(--spectrum-semantic-informative-color-text-small);
 }
 :local(.footerCopyRight) {

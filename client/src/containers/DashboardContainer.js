@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { callSearch, updateSortOptions } from '../actions/searchForm';
 import {
@@ -85,7 +85,7 @@ class DashboardContainer extends Component {
 
     render() {
         return (
-            <div className={styles.dashboardContainer}>
+            <Fragment>
                 <div>
                     <InlineErrorMessage
                         isInvalid={this.props.error.hasError}
@@ -133,7 +133,7 @@ class DashboardContainer extends Component {
                             </Well>
                         ),
                 )}
-            </div>
+            </Fragment>
         );
     }
 }

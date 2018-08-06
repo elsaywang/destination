@@ -24,8 +24,6 @@ export const dateRangePresetToDays = (
 
 export const getNow = () => moment.utc();
 
-export const getCurrentYear = () => getNow().format('YYYY');
-
 export const getDefaultCustomStartDate = () =>
     getNow()
         .subtract(defaultDateRangeDays, 'days')

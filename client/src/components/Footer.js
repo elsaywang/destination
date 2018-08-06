@@ -1,10 +1,7 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { FormItem } from '@react/react-spectrum/Form';
 import { getFooterCopyRightMessage, languageOption } from '../constants/footerOptions';
 import { footerUrls } from '../utils/urls';
 import styles from './Footer.css';
-import classNames from 'classnames';
 
 function Footer(props) {
     return (
@@ -14,15 +11,14 @@ function Footer(props) {
                     <a
                         key={item}
                         target="_blank"
-                        className={classNames(styles.footerLinks, styles.footerLinkItem)}
+                        className={styles.footerLinks}
+                        rel="noopener"
                         href={url}>
                         {item}
                     </a>
                 ))}
-                <label htmlFor={styles.footerLanguage} className={styles.footerLabel}>
-                    {languageOption.label}
-                </label>
-                <a href="#" className={styles.footerLanguage}>
+                <label htmlFor={styles.footerLanguage}>{languageOption.label}</label>
+                <a href="#" rel="noopener" className={styles.footerLanguage}>
                     {languageOption.option}
                 </a>
             </div>

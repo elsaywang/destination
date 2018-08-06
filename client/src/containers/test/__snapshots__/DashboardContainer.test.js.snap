@@ -85,7 +85,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         <div>
@@ -96,7 +96,6 @@ ShallowWrapper {
 </div>,
         Array [],
       ],
-      "className": "dashboardContainer",
     },
     "ref": null,
     "rendered": Array [
@@ -126,13 +125,13 @@ ShallowWrapper {
         "type": "div",
       },
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           <div>
@@ -143,7 +142,6 @@ ShallowWrapper {
 </div>,
           Array [],
         ],
-        "className": "dashboardContainer",
       },
       "ref": null,
       "rendered": Array [
@@ -173,7 +171,7 @@ ShallowWrapper {
           "type": "div",
         },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -332,7 +330,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
         <div>
@@ -513,7 +511,6 @@ ShallowWrapper {
 </Well>,
         ],
       ],
-      "className": "dashboardContainer",
     },
     "ref": null,
     "rendered": Array [
@@ -1277,13 +1274,13 @@ ShallowWrapper {
         "type": [Function],
       },
     ],
-    "type": "div",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
           <div>
@@ -1464,7 +1461,6 @@ ShallowWrapper {
 </Well>,
           ],
         ],
-        "className": "dashboardContainer",
       },
       "ref": null,
       "rendered": Array [
@@ -2228,7 +2224,7 @@ ShallowWrapper {
           "type": [Function],
         },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
