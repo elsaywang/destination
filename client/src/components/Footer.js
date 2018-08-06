@@ -13,6 +13,7 @@ function Footer(props) {
                 {footerUrls.map(({ item, url }) => (
                     <a
                         key={item}
+                        target="_blank"
                         className={classNames(styles.footerLinks, styles.footerLinkItem)}
                         href={url}>
                         {item}
@@ -21,7 +22,7 @@ function Footer(props) {
                 <label htmlFor={styles.footerLanguage} className={styles.footerLabel}>
                     {languageOption.label}
                 </label>
-                <a href="" className={styles.footerLanguage}>
+                <a href="#" className={styles.footerLanguage}>
                     {languageOption.option}
                 </a>
             </div>

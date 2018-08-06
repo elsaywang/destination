@@ -24,18 +24,21 @@ ShallowWrapper {
           <a
                     className="footerLinks footerLinkItem"
                     href="https://marketing.adobe.com/resources/help/en_US/aam/"
+                    target="_blank"
           >
                     Help
           </a>
           <a
                     className="footerLinks footerLinkItem"
                     href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+                    target="_blank"
           >
                     Terms of Use
           </a>
           <a
                     className="footerLinks footerLinkItem"
                     href="http://www.adobe.com/go/marketingcloud_privacy"
+                    target="_blank"
           >
                     Privacy Policy
           </a>
@@ -47,7 +50,7 @@ ShallowWrapper {
           </label>
           <a
                     className="footerLanguage"
-                    href=""
+                    href="#"
           >
                     English
           </a>
@@ -72,18 +75,21 @@ ShallowWrapper {
               <a
                 className="footerLinks footerLinkItem"
                 href="https://marketing.adobe.com/resources/help/en_US/aam/"
+                target="_blank"
 >
                 Help
 </a>,
               <a
                 className="footerLinks footerLinkItem"
                 href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+                target="_blank"
 >
                 Terms of Use
 </a>,
               <a
                 className="footerLinks footerLinkItem"
                 href="http://www.adobe.com/go/marketingcloud_privacy"
+                target="_blank"
 >
                 Privacy Policy
 </a>,
@@ -96,7 +102,7 @@ ShallowWrapper {
 </label>,
             <a
               className="footerLanguage"
-              href=""
+              href="#"
 >
               English
 </a>,
@@ -113,6 +119,7 @@ ShallowWrapper {
               "children": "Help",
               "className": "footerLinks footerLinkItem",
               "href": "https://marketing.adobe.com/resources/help/en_US/aam/",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": "Help",
@@ -126,6 +133,7 @@ ShallowWrapper {
               "children": "Terms of Use",
               "className": "footerLinks footerLinkItem",
               "href": "http://www.adobe.com/go/marketingcloud_terms_of_use",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": "Terms of Use",
@@ -139,6 +147,7 @@ ShallowWrapper {
               "children": "Privacy Policy",
               "className": "footerLinks footerLinkItem",
               "href": "http://www.adobe.com/go/marketingcloud_privacy",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": "Privacy Policy",
@@ -164,7 +173,7 @@ ShallowWrapper {
             "props": Object {
               "children": "English",
               "className": "footerLanguage",
-              "href": "",
+              "href": "#",
             },
             "ref": null,
             "rendered": "English",
@@ -201,18 +210,21 @@ ShallowWrapper {
             <a
                         className="footerLinks footerLinkItem"
                         href="https://marketing.adobe.com/resources/help/en_US/aam/"
+                        target="_blank"
             >
                         Help
             </a>
             <a
                         className="footerLinks footerLinkItem"
                         href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+                        target="_blank"
             >
                         Terms of Use
             </a>
             <a
                         className="footerLinks footerLinkItem"
                         href="http://www.adobe.com/go/marketingcloud_privacy"
+                        target="_blank"
             >
                         Privacy Policy
             </a>
@@ -224,7 +236,7 @@ ShallowWrapper {
             </label>
             <a
                         className="footerLanguage"
-                        href=""
+                        href="#"
             >
                         English
             </a>
@@ -249,18 +261,21 @@ ShallowWrapper {
                 <a
                   className="footerLinks footerLinkItem"
                   href="https://marketing.adobe.com/resources/help/en_US/aam/"
+                  target="_blank"
 >
                   Help
 </a>,
                 <a
                   className="footerLinks footerLinkItem"
                   href="http://www.adobe.com/go/marketingcloud_terms_of_use"
+                  target="_blank"
 >
                   Terms of Use
 </a>,
                 <a
                   className="footerLinks footerLinkItem"
                   href="http://www.adobe.com/go/marketingcloud_privacy"
+                  target="_blank"
 >
                   Privacy Policy
 </a>,
@@ -273,7 +288,7 @@ ShallowWrapper {
 </label>,
               <a
                 className="footerLanguage"
-                href=""
+                href="#"
 >
                 English
 </a>,
@@ -290,6 +305,7 @@ ShallowWrapper {
                 "children": "Help",
                 "className": "footerLinks footerLinkItem",
                 "href": "https://marketing.adobe.com/resources/help/en_US/aam/",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": "Help",
@@ -303,6 +319,7 @@ ShallowWrapper {
                 "children": "Terms of Use",
                 "className": "footerLinks footerLinkItem",
                 "href": "http://www.adobe.com/go/marketingcloud_terms_of_use",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": "Terms of Use",
@@ -316,6 +333,7 @@ ShallowWrapper {
                 "children": "Privacy Policy",
                 "className": "footerLinks footerLinkItem",
                 "href": "http://www.adobe.com/go/marketingcloud_privacy",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": "Privacy Policy",
@@ -341,7 +359,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "English",
                 "className": "footerLanguage",
-                "href": "",
+                "href": "#",
               },
               "ref": null,
               "rendered": "English",
