@@ -1,20 +1,17 @@
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const signalKeysResponse = require('../fixtures/signalKeys.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
-const reportSuitesKeysResponse = require('../fixtures/reportSuitesKeys.json');
 
 describe('Validation Spec', function() {
     beforeEach(function() {
         cy.server();
-        cy
-            .route(
-                '/portal/api/v1/users/self/annotations/aam-portal',
-                savedSearchResponse.savedSearch,
-            )
-            .as('fetchSavedSearch');
-        cy
-            .route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse)
-            .as('fetchSignalKeys');
+        cy.route(
+            '/portal/api/v1/users/self/annotations/aam-portal',
+            savedSearchResponse.savedSearch,
+        ).as('fetchSavedSearch');
+        cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
+            'fetchSignalKeys',
+        );
         cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
 
         cy.visit('#/search');
@@ -28,8 +25,7 @@ describe('Validation Spec', function() {
         describe('when entering first key value pair validly', function() {
             beforeEach(function() {
                 cy.get('[data-test="key-search-field"]:first').type('test');
-                cy
-                    .get('.operator:first')
+                cy.get('.operator:first')
                     .click()
                     .get('[role=option]:last')
                     .click();
@@ -51,8 +47,7 @@ describe('Validation Spec', function() {
 
         describe('when entering second key value pair invalidly,', function() {
             beforeEach(function() {
-                cy
-                    .get('.operator:eq(1)')
+                cy.get('.operator:eq(1)')
                     .click()
                     .get('.spectrum-SelectList-item:nth-child(2)')
                     .click();
@@ -65,9 +60,10 @@ describe('Validation Spec', function() {
             });
 
             it('should show an error message', function() {
-                cy
-                    .get('[data-test="value-search"]:eq(1) ~ [data-test="inline-error"]')
-                    .should('have.length', 1);
+                cy.get('[data-test="value-search"]:eq(1) ~ [data-test="inline-error"]').should(
+                    'have.length',
+                    1,
+                );
             });
 
             it('should have disabled Search button', function() {

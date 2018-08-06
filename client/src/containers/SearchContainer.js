@@ -9,7 +9,6 @@ import { fetchLimits } from '../actions/limits';
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Heading from '@react/react-spectrum/Heading';
-import Button from '@react/react-spectrum/Button';
 import Wait from '@react/react-spectrum/Wait';
 import OverlayTooltip from '../components/common/OverlayTooltip';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';

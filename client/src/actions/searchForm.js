@@ -1,7 +1,5 @@
-import fetch from '../utils/fetch';
 import { createAction } from 'redux-actions';
 import { createAsyncAction } from '../utils/createAsyncAction';
-import { normalizeSearch } from '../utils/normalizeSearch';
 import { fetchSignals } from '../utils/fetchSignals';
 
 export const TOGGLE_ADVANCED_SEARCH = 'TOGGLE_ADVANCED_SEARCH';
