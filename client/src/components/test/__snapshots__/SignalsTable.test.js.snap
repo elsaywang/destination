@@ -40,12 +40,41 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 />
 `;
 
+exports[`<SignalsTable /> component Rendering cells renderKeyName should render a single key-value pair's friendly name inside a div 1`] = `
+<div>
+  <div
+    className="truncate"
+    data-test="key-name-0"
+  >
+    Browser
+  </div>
+</div>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderKeyName should render two key-value pairs on separate lines 1`] = `
+<div>
+  <div
+    className="truncate"
+    data-test="key-name-0"
+  >
+    Browser
+  </div>
+  <div
+    className="truncate"
+    data-test="key-name-1"
+  >
+    Browser Type
+  </div>
+</div>
+`;
+
 exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should render one key-value pair as \`\${key}=\${value}\` inside a div 1`] = `
 <div
   className="truncate keyValuePairs"
 >
   <div
     className="truncate keyValuePairs"
+    data-test="key-value-pair-0"
   >
     k=v
   </div>
@@ -58,11 +87,13 @@ exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should r
 >
   <div
     className="truncate keyValuePairs"
+    data-test="key-value-pair-0"
   >
     k1=v1
   </div>
   <div
     className="truncate keyValuePairs"
+    data-test="key-value-pair-1"
   >
     k2=v2
   </div>
@@ -79,8 +110,6 @@ ShallowWrapper {
     results={
         Array [
             Object {
-              "id": 0,
-              "name": "test1",
               "percentageChange": 0.1234,
               "source": Object {
                 "reportSuiteIds": Array [
@@ -90,8 +119,6 @@ ShallowWrapper {
               },
             },
             Object {
-              "id": 1,
-              "name": "test2",
               "percentageChange": -0.5678,
               "source": Object {
                 "dataSourceIds": Array [
@@ -158,13 +185,12 @@ ShallowWrapper {
       "isMaxSelectedRowsReached": undefined,
       "items": Array [
         Object {
-          "id": 0,
           "includedInTraits": Object {
             "categoryType": undefined,
             "keyValuePairs": undefined,
             "sids": undefined,
           },
-          "name": "test1",
+          "keyName": Array [],
           "percentageChange": 0.1234,
           "signalSource": "123",
           "signalType": "Adobe Analytics",
@@ -176,13 +202,12 @@ ShallowWrapper {
           },
         },
         Object {
-          "id": 1,
           "includedInTraits": Object {
             "categoryType": undefined,
             "keyValuePairs": undefined,
             "sids": undefined,
           },
-          "name": "test2",
+          "keyName": Array [],
           "percentageChange": -0.5678,
           "signalSource": "456",
           "signalType": "Onboarded Records",
@@ -251,13 +276,12 @@ ShallowWrapper {
         "isMaxSelectedRowsReached": undefined,
         "items": Array [
           Object {
-            "id": 0,
             "includedInTraits": Object {
               "categoryType": undefined,
               "keyValuePairs": undefined,
               "sids": undefined,
             },
-            "name": "test1",
+            "keyName": Array [],
             "percentageChange": 0.1234,
             "signalSource": "123",
             "signalType": "Adobe Analytics",
@@ -269,13 +293,12 @@ ShallowWrapper {
             },
           },
           Object {
-            "id": 1,
             "includedInTraits": Object {
               "categoryType": undefined,
               "keyValuePairs": undefined,
               "sids": undefined,
             },
-            "name": "test2",
+            "keyName": Array [],
             "percentageChange": -0.5678,
             "signalSource": "456",
             "signalType": "Onboarded Records",

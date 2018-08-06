@@ -1,0 +1,34 @@
+{
+    "pid": 13577,
+    "startDate": 1532649600000,
+    "endDate": 1533333798677,
+    "list": [
+        {
+            "keyValuePairs": [
+                {
+                    "key": "browser",
+                    "keyName": "Browser",
+                    "value": "chrome mobile"
+                },
+                {
+                    "key": "browsertype",
+                    "keyName": "Browser Type",
+                    "value": "xxx"
+                }
+            ],
+            "source": {
+                "dataSourceIds": [],
+                "reportSuiteIds": ["aampnw.octmr01"],
+                "sourceType": "ANALYTICS"
+            },
+            "totalCount": 15174,
+            "percentageChange": null,
+            "includedInTraits": [],
+            "signalStatus": "UNUSED"
+        }
+    ],
+    "pageSize": 50,
+    "page": 0,
+    "total": 0,
+    "analyticsServiceAvailable": true
+}

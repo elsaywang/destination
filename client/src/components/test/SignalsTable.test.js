@@ -15,14 +15,10 @@ describe('<SignalsTable /> component', () => {
         <SignalsTable
             results={[
                 {
-                    id: 0,
-                    name: 'test1',
                     source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
                     percentageChange: 0.1234,
                 },
                 {
-                    id: 1,
-                    name: 'test2',
                     source: { sourceType: 'ONBOARDED', dataSourceIds: [456] },
                     percentageChange: -0.5678,
                 },
@@ -224,6 +220,21 @@ describe('<SignalsTable /> component', () => {
             });
         });
 
+        describe('renderKeyName', () => {
+            const { renderKeyName } = wrapper.instance();
+
+            it("should render a single key-value pair's friendly name inside a div", () => {
+                const oneKeyName = ['Browser'];
+
+                expect(renderKeyName(oneKeyName)).toMatchSnapshot();
+            });
+            it('should render two key-value pairs on separate lines', () => {
+                const twoKeyNames = ['Browser', 'Browser Type'];
+
+                expect(renderKeyName(twoKeyNames)).toMatchSnapshot();
+            });
+        });
+
         describe('renderTotalCounts', () => {
             const { renderTotalCounts } = wrapper.instance();
             const totalCountsWrapper = shallow(<div>{renderTotalCounts(123456789)}</div>);
@@ -315,17 +326,69 @@ describe('<SignalsTable /> component', () => {
                 const instance = newWrapper.instance();
                 const signals = [{}];
 
+                instance.formatKeyName = jest.fn(() => 'Browser');
                 instance.formatSignalType = jest.fn(() => 'Adobe Analytics');
                 instance.formatSignalSource = jest.fn(() => '—');
                 instance.formatIncludedInTraits = jest.fn(() => []);
 
                 expect(instance.formatSignalsList(signals)).toEqual([
                     {
+                        keyName: 'Browser',
                         signalType: 'Adobe Analytics',
                         signalSource: '—',
                         includedInTraits: [],
                     },
                 ]);
+            });
+        });
+
+        describe('formatKeyName', () => {
+            const { formatKeyName } = wrapper.instance();
+
+            it('should return the friendly key name of a single key-value pair', () => {
+                const signal = {
+                    keyValuePairs: [
+                        {
+                            key: 'browser',
+                            keyName: 'Browser',
+                            value: 'chrome',
+                        },
+                    ],
+                };
+
+                expect(formatKeyName(signal)).toEqual(['Browser']);
+            });
+
+            it('should return the friendly key names of a multiple key-value pairs', () => {
+                const signal = {
+                    keyValuePairs: [
+                        {
+                            key: 'browser',
+                            keyName: 'Browser',
+                            value: 'chrome',
+                        },
+                        {
+                            key: 'browsertype',
+                            keyName: 'Browser Type',
+                            value: 'xxx',
+                        },
+                    ],
+                };
+
+                expect(formatKeyName(signal)).toEqual(['Browser', 'Browser Type']);
+            });
+
+            it("should return '—' (emdash) if the friendly key name of a key-value pair does not exist", () => {
+                const signal = {
+                    keyValuePairs: [
+                        {
+                            key: 'browser',
+                            value: 'chrome',
+                        },
+                    ],
+                };
+
+                expect(formatKeyName(signal)).toEqual(['—']);
             });
         });
 

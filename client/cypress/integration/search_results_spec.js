@@ -1,4 +1,5 @@
 const searchResultsResponse = require('../fixtures/searchResults.json');
+const searchResultsWithMultiKvpResponse = require('../fixtures/searchResultsWithMultiKvp.json');
 const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json');
 const errorResponse = require('../fixtures/error.json');
 
@@ -80,6 +81,26 @@ describe('Search Form Results Integration Tests', function() {
                 cy.get('[data-test="signals-table"]').should('not.exist');
                 cy.get('.spectrum-Loader').should('not.exist');
             });
+        });
+    });
+
+    describe('Search results with signals that contain multiple key-value pairs', () => {
+        beforeEach(() => {
+            cy.route('POST', '/portal/api/v1/signals/list', searchResultsWithMultiKvpResponse).as(
+                'fetchSearchResultsWithMultiKvp',
+            );
+        });
+
+        it('should render key-value pairs and their corresponding key names on separate lines', () => {
+            cy.get('[data-test="advanced-search-toggle"]').click();
+            cy.get('[data-test="search-button"]').click();
+            cy.wait('@fetchSearchResultsWithMultiKvp');
+
+            cy.get('[data-test="key-value-pair-0"]').should('have.text', 'browser=chrome mobile');
+            cy.get('[data-test="key-value-pair-1"]').should('have.text', 'browsertype=xxx');
+
+            cy.get('[data-test="key-name-0"]').should('have.text', 'Browser');
+            cy.get('[data-test="key-name-1"]').should('have.text', 'Browser Type');
         });
     });
 });
