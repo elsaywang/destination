@@ -345,7 +345,7 @@ class SearchContainer extends Component {
 
     render() {
         return (
-            <Fragment>
+            <div className={styles.searchContainer}>
                 <GridRow>
                     <GridColumn size={12}>
                         <Search
@@ -467,7 +467,7 @@ class SearchContainer extends Component {
                         <GridColumn size={12}>{this.renderEmptyState()}</GridColumn>
                     </GridRow>
                 )}
-            </Fragment>
+            </div>
         );
     }
 }
