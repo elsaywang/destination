@@ -98,23 +98,27 @@ describe('<Table /> component', () => {
             const { getTableHeight } = wrapper.instance();
 
             it('should return a string ending in px', () => {
-                expect(getTableHeight(items).substr(-2)).toEqual('px');
+                expect(getTableHeight({ items }).substr(-2)).toEqual('px');
             });
 
             it('should return the amount of pixels that exactly fits the amount of rows in the table', () => {
-                expect(getTableHeight(items)).toEqual('136px');
+                expect(getTableHeight({ items })).toEqual('136px');
             });
 
             it('should return a maximum height if more rows than `maxRows` are passed in', () => {
-                expect(getTableHeight(new Array(15))).toEqual('520px');
+                expect(getTableHeight({ items: new Array(15) })).toEqual('520px');
             });
 
             it('should return a maximum height if more rows than a custom `maxRows` are passed in', () => {
-                expect(getTableHeight(items, defaultRowHeight, 1)).toEqual('88px');
+                expect(getTableHeight({ items, maxRows: 1 })).toEqual('88px');
             });
 
             it('should return the amount of pixels that fits the amount of rows and based on the custom `rowHeight` passed in', () => {
-                expect(getTableHeight(items, 50)).toEqual('140px');
+                expect(getTableHeight({ items, rowHeight: 50 })).toEqual('140px');
+            });
+
+            it('should return the amount of pixels that exactly fits the amount of rows in the table when the header row has no checkbox', () => {
+                expect(getTableHeight({ items, allowsSelection: false })).toEqual('116px');
             });
         });
     });
