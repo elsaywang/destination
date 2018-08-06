@@ -110,6 +110,9 @@ ShallowWrapper {
     results={
         Array [
             Object {
+              "keyValuePairs": Array [
+                Object {},
+              ],
               "percentageChange": 0.1234,
               "source": Object {
                 "reportSuiteIds": Array [
@@ -119,6 +122,9 @@ ShallowWrapper {
               },
             },
             Object {
+              "keyValuePairs": Array [
+                Object {},
+              ],
               "percentageChange": -0.5678,
               "source": Object {
                 "dataSourceIds": Array [
@@ -131,7 +137,6 @@ ShallowWrapper {
     }
     signalType="ALL"
     sortSearch={[Function]}
-    totalKeyValuePairs={3}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -187,10 +192,17 @@ ShallowWrapper {
         Object {
           "includedInTraits": Object {
             "categoryType": undefined,
-            "keyValuePairs": undefined,
+            "keyValuePairs": Array [
+              Object {},
+            ],
             "sids": undefined,
           },
-          "keyName": Array [],
+          "keyName": Array [
+            "—",
+          ],
+          "keyValuePairs": Array [
+            Object {},
+          ],
           "percentageChange": 0.1234,
           "signalSource": "123",
           "signalType": "Adobe Analytics",
@@ -204,10 +216,17 @@ ShallowWrapper {
         Object {
           "includedInTraits": Object {
             "categoryType": undefined,
-            "keyValuePairs": undefined,
+            "keyValuePairs": Array [
+              Object {},
+            ],
             "sids": undefined,
           },
-          "keyName": Array [],
+          "keyName": Array [
+            "—",
+          ],
+          "keyValuePairs": Array [
+            Object {},
+          ],
           "percentageChange": -0.5678,
           "signalSource": "456",
           "signalType": "Onboarded Records",
@@ -222,7 +241,7 @@ ShallowWrapper {
       "onLoadMore": [Function],
       "onSelectionChange": [Function],
       "renderCell": [Function],
-      "rowHeight": 144,
+      "rowHeight": 48,
       "selectedRowIndexes": undefined,
       "sortSearch": undefined,
     },
@@ -278,10 +297,17 @@ ShallowWrapper {
           Object {
             "includedInTraits": Object {
               "categoryType": undefined,
-              "keyValuePairs": undefined,
+              "keyValuePairs": Array [
+                Object {},
+              ],
               "sids": undefined,
             },
-            "keyName": Array [],
+            "keyName": Array [
+              "—",
+            ],
+            "keyValuePairs": Array [
+              Object {},
+            ],
             "percentageChange": 0.1234,
             "signalSource": "123",
             "signalType": "Adobe Analytics",
@@ -295,10 +321,17 @@ ShallowWrapper {
           Object {
             "includedInTraits": Object {
               "categoryType": undefined,
-              "keyValuePairs": undefined,
+              "keyValuePairs": Array [
+                Object {},
+              ],
               "sids": undefined,
             },
-            "keyName": Array [],
+            "keyName": Array [
+              "—",
+            ],
+            "keyValuePairs": Array [
+              Object {},
+            ],
             "percentageChange": -0.5678,
             "signalSource": "456",
             "signalType": "Onboarded Records",
@@ -313,7 +346,7 @@ ShallowWrapper {
         "onLoadMore": [Function],
         "onSelectionChange": [Function],
         "renderCell": [Function],
-        "rowHeight": 144,
+        "rowHeight": 48,
         "selectedRowIndexes": undefined,
         "sortSearch": undefined,
       },

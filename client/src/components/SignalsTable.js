@@ -12,7 +12,7 @@ import {
     generalOnlineDataColumns,
     onboardedRecordsColumns,
 } from '../constants/columns';
-import { defaultRowHeight } from '../constants/rows';
+import { defaultRowHeight, maxRowHeight } from '../constants/rows';
 import {
     renderSelectedSignalsMessage,
     hasSignalSelectionsTypeWarning,
@@ -21,6 +21,7 @@ import { isNumeric } from '../utils/isNumeric';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
+import { isEmpty } from '../utils';
 import { dataSourceEditUrl } from '../utils/urls';
 import Link from '@react/react-spectrum/Link';
 
@@ -223,14 +224,23 @@ class SignalsTable extends Component {
         );
     };
 
-    getRowHeight(totalKeyValuePairs) {
-        return totalKeyValuePairs * defaultRowHeight;
-    }
+    getRowHeight = () => {
+        const { results } = this.props;
+        const items = this.formatSignalsList(results);
+        const defaultKeyValuePairs = 1;
+
+        if (isEmpty(items)) {
+            return defaultRowHeight;
+        }
+
+        const { keyValuePairs: { length: totalKeyValuePairs } = [] } = items[0];
+
+        return totalKeyValuePairs > defaultKeyValuePairs ? maxRowHeight : defaultRowHeight;
+    };
 
     render() {
         const {
             results,
-            totalKeyValuePairs,
             signalType,
             isAdvancedSearchEnabled,
             onSortSearch,
@@ -241,7 +251,7 @@ class SignalsTable extends Component {
         } = this.props;
         const columns = this.getColumns(signalType, isAdvancedSearchEnabled);
         const items = this.formatSignalsList(results);
-        const rowHeight = this.getRowHeight(totalKeyValuePairs);
+        const rowHeight = this.getRowHeight();
 
         return (
             <Table
@@ -263,7 +273,6 @@ class SignalsTable extends Component {
 
 SignalsTable.propTypes = {
     results: PropTypes.array,
-    totalKeyValuePairs: PropTypes.number,
     signalType: PropTypes.string,
     isAdvancedSearchEnabled: PropTypes.bool,
     isMaxSignalSelectionsReached: PropTypes.bool,
