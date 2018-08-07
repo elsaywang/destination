@@ -11,8 +11,8 @@ function Footer(props) {
                     <a
                         key={item}
                         target="_blank"
-                        className={styles.footerLinks}
                         rel="noopener"
+                        className={styles.footerLinks}
                         href={url}>
                         {item}
                     </a>
