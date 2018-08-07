@@ -448,7 +448,6 @@ class SearchContainer extends Component {
                                 results={this.props.results.list}
                                 selectedRowIndexes={this.props.selectedRowIndexes}
                                 signalType={this.state.source.sourceType}
-                                totalKeyValuePairs={this.state.keyValuePairs.length}
                                 isAdvancedSearchEnabled={this.state.advanced}
                                 isMaxSignalSelectionsReached={
                                     this.props.isMaxSignalSelectionsReached

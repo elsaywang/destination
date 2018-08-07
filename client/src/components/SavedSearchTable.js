@@ -44,7 +44,6 @@ class SavedSearchTable extends Component {
             savedSearch,
         } = this.props;
         const hasSearchResults = !this.state.error && list && list.length;
-        const totalKeyValuePairs = savedSearch.keyValuePairs.length;
         const withResults = hasSearchResults && !this.state.error;
 
         if (withResults) {
@@ -52,7 +51,6 @@ class SavedSearchTable extends Component {
                 <SignalsTable
                     isLoaded={hasSearchResults}
                     results={list}
-                    totalKeyValuePairs={totalKeyValuePairs}
                     canCreateTraits={canCreateTraits}
                     isAdvancedSearchEnabled={isAdvancedSearchEnabled}
                     allowsSelection={allowsSelection}
