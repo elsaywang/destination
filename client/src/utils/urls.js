@@ -16,3 +16,18 @@ export const createRuleBasedTraitUrl = options => `${traitsUrl(options)}#new/rul
 export const createOnboardedTraitUrl = options => `${traitsUrl(options)}#new/onboarded`;
 export const dataSourceEditUrl = dataSourceId =>
     `${portalUrl}/Segments/DatasourceManagement.ddx#datasources/edit/${dataSourceId}`;
+
+export const footerUrls = [
+    {
+        item: 'Help',
+        url: 'https://marketing.adobe.com/resources/help/en_US/aam/',
+    },
+    {
+        item: 'Terms of Use',
+        url: 'http://www.adobe.com/go/marketingcloud_terms_of_use',
+    },
+    {
+        item: 'Privacy Policy',
+        url: 'http://www.adobe.com/go/marketingcloud_privacy',
+    },
+];

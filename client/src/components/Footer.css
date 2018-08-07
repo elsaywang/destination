@@ -1,0 +1,29 @@
+:local(.footer) {
+    border-top: 0.0625rem solid var(--spectrum-global-color-grey300);
+    padding: 0.9375rem;
+    color: var(--spectrum-global-color-grey500);
+    overflow: hidden;
+    font-size: 0.8125rem;
+    font-family: var(--spectrum-alias-font-family-condensed);
+    background-color: var(--spectrum-alias-background-color-default);
+}
+:local(.footerLinks) {
+    float: left;
+    display: inline;
+    line-height: 1.5rem;
+    text-decoration: none;
+    vertical-align: middle;
+    color: var(--spectrum-global-color-grey500);
+    padding-right: 1.25rem;
+}
+:local(.footerLanguage) {
+    text-decoration: none;
+    color: var(--spectrum-semantic-informative-color-text-small);
+}
+:local(.footerCopyRight) {
+    float: right;
+    line-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
