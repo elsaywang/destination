@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { getFooterCopyRightMessage, languageOption } from '../constants/footerOptions';
 import { footerUrls } from '../utils/urls';
 import styles from './Footer.css';
 
-function Footer(props) {
+function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerLinks}>
