@@ -516,7 +516,6 @@ ShallowWrapper {
             },
           ]
     }
-    totalKeyValuePairs={1}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

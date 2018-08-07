@@ -15,10 +15,12 @@ describe('<SignalsTable /> component', () => {
         <SignalsTable
             results={[
                 {
+                    keyValuePairs: [{}],
                     source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
                     percentageChange: 0.1234,
                 },
                 {
+                    keyValuePairs: [{}],
                     source: { sourceType: 'ONBOARDED', dataSourceIds: [456] },
                     percentageChange: -0.5678,
                 },
@@ -26,7 +28,6 @@ describe('<SignalsTable /> component', () => {
             signalType="ALL"
             sortSearch={mockFn}
             onLoadMore={mockFn}
-            totalKeyValuePairs={3}
             allowsSelection
         />,
     );
@@ -166,11 +167,63 @@ describe('<SignalsTable /> component', () => {
     });
 
     describe('getRowHeight', () => {
-        const { getRowHeight } = wrapper.instance();
-        it('should should return the correct rowHeight based on the `totalKeyValuePairs` passed in', () => {
-            const totalKeyValuePairs = 4;
-            const expectedRowHeight = 192;
-            expect(getRowHeight(totalKeyValuePairs)).toEqual(expectedRowHeight);
+        it('should should return the default row height if each signal result has one key value pair', () => {
+            const newWrapper = shallow(
+                <SignalsTable
+                    results={[
+                        {
+                            keyValuePairs: [{}],
+                            source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
+                        },
+                    ]}
+                />,
+            );
+            const { getRowHeight } = newWrapper.instance();
+            const expectedRowHeight = 48;
+
+            expect(getRowHeight()).toEqual(expectedRowHeight);
+        });
+
+        it('should should return the max row height if each signal result has two key value pairs', () => {
+            const newWrapper = shallow(
+                <SignalsTable
+                    results={[
+                        {
+                            keyValuePairs: [{}, {}],
+                            source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
+                        },
+                    ]}
+                />,
+            );
+            const { getRowHeight } = newWrapper.instance();
+            const expectedRowHeight = 72;
+
+            expect(getRowHeight()).toEqual(expectedRowHeight);
+        });
+
+        it('should should return the max row height if each signal result has three key value pairs', () => {
+            const newWrapper = shallow(
+                <SignalsTable
+                    results={[
+                        {
+                            keyValuePairs: [{}, {}, {}],
+                            source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
+                        },
+                    ]}
+                />,
+            );
+            const { getRowHeight } = newWrapper.instance();
+            const expectedRowHeight = 72;
+
+            expect(getRowHeight()).toEqual(expectedRowHeight);
+        });
+
+        it('should should return the default row height if there are no signal results', () => {
+            const newWrapper = shallow(<SignalsTable results={[]} />);
+            const { getRowHeight } = newWrapper.instance();
+            const expectedRowHeight = 48;
+
+            expect(getRowHeight()).toEqual(expectedRowHeight);
         });
     });
 
