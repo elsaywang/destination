@@ -43,6 +43,7 @@ class KeyValuePair extends Component {
                     externalServiceAvailable:
                         resp.analyticsServiceAvailable && resp.solrServiceAvailable,
                 });
+
                 return resp.signalKeys;
             })
             .then(json => json.map(key => key.signalKey))
@@ -76,6 +77,7 @@ class KeyValuePair extends Component {
                     externalServiceAvailable:
                         resp.analyticsServiceAvailable && resp.solrServiceAvailable,
                 });
+
                 return resp.signalKeys;
             })
             .then(suites =>
@@ -106,7 +108,7 @@ class KeyValuePair extends Component {
                 autocompleteError: true,
                 autocompleteErrorMessage: 'Key cannot be empty when value is specified.',
             });
-        } else if (!externalServiceAvailable) {
+        } else if (!externalServiceAvailable && !this.props.searched) {
             this.setState({
                 ...error,
                 autocompleteError: true,

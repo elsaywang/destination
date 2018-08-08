@@ -144,7 +144,10 @@ class SearchContainer extends Component {
         let keyValuePairs = [...this.state.keyValuePairs];
 
         keyValuePairs.find(kvp => kvp.id === id).key = value;
-        this.setState({ keyValuePairs });
+        this.setState({
+            searched: false,
+            keyValuePairs,
+        });
     };
 
     onValueChange = (id, value) => {
