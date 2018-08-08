@@ -292,6 +292,7 @@ class SearchContainer extends Component {
             ...this.state,
             filterNewSignals: false,
             ...thisSearch,
+            ...normalizeSortOptions(thisSearch),
             ...currentSearchName,
             presetId: null,
             id: maxId + 1,
