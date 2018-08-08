@@ -31,6 +31,8 @@ class Search extends Component {
             onKeyChange,
             onOperatorChange,
             onValueChange,
+            searched,
+            errors,
         } = this.props;
         const validKeyValuePairsLimit = keyValuePairs.length < 3;
         const isLastPair = id => keyValuePairs[keyValuePairs.length - 1].id === id;
@@ -50,8 +52,8 @@ class Search extends Component {
                         onKeyChange={onKeyChange}
                         onOperatorChange={onOperatorChange}
                         onValueChange={onValueChange}
-                        searched={this.props.searched}
-                        errors={this.props.errors}
+                        searched={searched}
+                        errors={errors}
                     />
                     {isLastPair(pair.id) &&
                         validKeyValuePairsLimit && (
