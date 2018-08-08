@@ -50,6 +50,7 @@ describe('<Search /> component', () => {
                 errorMessage: '',
             },
         },
+        searched: false,
     };
     const mockFn = jest.fn();
     const wrapper = shallow(

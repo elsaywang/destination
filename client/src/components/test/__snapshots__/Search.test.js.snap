@@ -57,6 +57,7 @@ ShallowWrapper {
     onValueChange={[Function]}
     onViewRecordsChange={[Function]}
     reportSuites={Array []}
+    searched={false}
     signalStatus="ALL"
     source={
         Object {
@@ -128,6 +129,7 @@ ShallowWrapper {
                                                                               }
                                                                 }
                                                                 reportSuiteId=""
+                                                                searched={false}
                                                         />
                                                         <Button
                                                                 autoFocus={false}
@@ -333,6 +335,7 @@ ShallowWrapper {
                                                                                                           }
                                                                                     }
                                                                                     reportSuiteId=""
+                                                                                    searched={false}
                                                                         />
                                                                         <Button
                                                                                     autoFocus={false}
@@ -564,6 +567,7 @@ ShallowWrapper {
                                                                                                               }
                                                                                     }
                                                                                     reportSuiteId=""
+                                                                                    searched={false}
                                                                       />
                                                                       <Button
                                                                                     autoFocus={false}
@@ -749,6 +753,7 @@ ShallowWrapper {
                                                                                                                             }
                                                                                           }
                                                                                           reportSuiteId=""
+                                                                                          searched={false}
                                                                         />
                                                                         <Button
                                                                                           autoFocus={false}
@@ -932,6 +937,7 @@ ShallowWrapper {
                                                                                                                       }
                                                                                 }
                                                                                 reportSuiteId=""
+                                                                                searched={false}
                                                             />
                                                             <Button
                                                                                 autoFocus={false}
@@ -1110,6 +1116,7 @@ ShallowWrapper {
                                                                                                                                 }
                                                                               }
                                                                               reportSuiteId=""
+                                                                              searched={false}
                                                     />
                                                     <Button
                                                                               autoFocus={false}
@@ -1285,6 +1292,7 @@ ShallowWrapper {
                                                                                                       }
                                                     }
                                                     reportSuiteId=""
+                                                    searched={false}
                           />
                           <Button
                                                     autoFocus={false}
@@ -1325,6 +1333,7 @@ ShallowWrapper {
                                                                                         }
                               }
                               reportSuiteId=""
+                              searched={false}
 />,
                             <Button
                               autoFocus={false}
@@ -1364,6 +1373,7 @@ ShallowWrapper {
                                 "value": "",
                               },
                               "reportSuiteId": "",
+                              "searched": false,
                             },
                             "ref": null,
                             "rendered": null,
@@ -1986,6 +1996,7 @@ ShallowWrapper {
                                                                                                   }
                                                                                 }
                                                                                 reportSuiteId=""
+                                                                                searched={false}
                                                                       />
                                                                       <Button
                                                                                 autoFocus={false}
@@ -2191,6 +2202,7 @@ ShallowWrapper {
                                                                                                                             }
                                                                                                   }
                                                                                                   reportSuiteId=""
+                                                                                                  searched={false}
                                                                                     />
                                                                                     <Button
                                                                                                   autoFocus={false}
@@ -2422,6 +2434,7 @@ ShallowWrapper {
                                                                                                                               }
                                                                                                 }
                                                                                                 reportSuiteId=""
+                                                                                                searched={false}
                                                                                 />
                                                                                 <Button
                                                                                                 autoFocus={false}
@@ -2607,6 +2620,7 @@ ShallowWrapper {
                                                                                                                                           }
                                                                                                     }
                                                                                                     reportSuiteId=""
+                                                                                                    searched={false}
                                                                                 />
                                                                                 <Button
                                                                                                     autoFocus={false}
@@ -2790,6 +2804,7 @@ ShallowWrapper {
                                                                                                                                   }
                                                                                         }
                                                                                         reportSuiteId=""
+                                                                                        searched={false}
                                                                   />
                                                                   <Button
                                                                                         autoFocus={false}
@@ -2968,6 +2983,7 @@ ShallowWrapper {
                                                                                                                                           }
                                                                                     }
                                                                                     reportSuiteId=""
+                                                                                    searched={false}
                                                         />
                                                         <Button
                                                                                     autoFocus={false}
@@ -3143,6 +3159,7 @@ ShallowWrapper {
                                                                                                               }
                                                         }
                                                         reportSuiteId=""
+                                                        searched={false}
                             />
                             <Button
                                                         autoFocus={false}
@@ -3183,6 +3200,7 @@ ShallowWrapper {
                                                                                               }
                                 }
                                 reportSuiteId=""
+                                searched={false}
 />,
                               <Button
                                 autoFocus={false}
@@ -3222,6 +3240,7 @@ ShallowWrapper {
                                   "value": "",
                                 },
                                 "reportSuiteId": "",
+                                "searched": false,
                               },
                               "ref": null,
                               "rendered": null,
