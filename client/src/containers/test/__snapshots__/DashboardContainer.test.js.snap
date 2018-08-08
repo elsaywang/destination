@@ -2,7 +2,6 @@
 
 exports[`<DashboardContainer /> component rendering when visibleSavedSearchList prop with no records passed in  matches snapshot 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashboardContainer
     callSearch={[Function]}
@@ -178,8 +177,15 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -189,13 +195,13 @@ ShallowWrapper {
         Symbol(observable): [Function],
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`<DashboardContainer /> component when \`visibleSavedSearchList\` is passed in as a prop matches snapshot 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DashboardContainer
     callSearch={[Function]}
@@ -2231,8 +2237,15 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -2242,6 +2255,7 @@ ShallowWrapper {
         Symbol(observable): [Function],
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;

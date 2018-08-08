@@ -2,7 +2,6 @@
 
 exports[`<SearchContainer /> component rendering matches snapshot 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
@@ -1727,8 +1726,15 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -1738,13 +1744,13 @@ ShallowWrapper {
         Symbol(observable): [Function],
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`<SearchContainer /> component state changes based on events .onAddClick() adds another keyValuePair to state.keyValuePairs 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
@@ -1910,6 +1916,12 @@ ShallowWrapper {
                                                     "operator": "==",
                                                     "value": "",
                                                   },
+                                                  Object {
+                                                    "id": 1,
+                                                    "key": "",
+                                                    "operator": "==",
+                                                    "value": "",
+                                                  },
                                                 ]
                               }
                               maxSignalRetentionDays={30}
@@ -2070,6 +2082,12 @@ ShallowWrapper {
                                                   "operator": "==",
                                                   "value": "",
                                                 },
+                                                Object {
+                                                  "id": 1,
+                                                  "key": "",
+                                                  "operator": "==",
+                                                  "value": "",
+                                                },
                                               ]
                         }
                         maxSignalRetentionDays={30}
@@ -2137,6 +2155,12 @@ ShallowWrapper {
                                             "operator": "==",
                                             "value": "",
                                           },
+                                          Object {
+                                            "id": 1,
+                                            "key": "",
+                                            "operator": "==",
+                                            "value": "",
+                                          },
                                         ]
               }
               maxSignalRetentionDays={30}
@@ -2195,6 +2219,12 @@ ShallowWrapper {
               "keyValuePairs": Array [
                 Object {
                   "id": 0,
+                  "key": "",
+                  "operator": "==",
+                  "value": "",
+                },
+                Object {
+                  "id": 1,
                   "key": "",
                   "operator": "==",
                   "value": "",
@@ -2629,6 +2659,12 @@ ShallowWrapper {
                                                               "operator": "==",
                                                               "value": "",
                                                             },
+                                                            Object {
+                                                              "id": 1,
+                                                              "key": "",
+                                                              "operator": "==",
+                                                              "value": "",
+                                                            },
                                                           ]
                                     }
                                     maxSignalRetentionDays={30}
@@ -2789,6 +2825,12 @@ ShallowWrapper {
                                                           "operator": "==",
                                                           "value": "",
                                                         },
+                                                        Object {
+                                                          "id": 1,
+                                                          "key": "",
+                                                          "operator": "==",
+                                                          "value": "",
+                                                        },
                                                       ]
                             }
                             maxSignalRetentionDays={30}
@@ -2856,6 +2898,12 @@ ShallowWrapper {
                                                   "operator": "==",
                                                   "value": "",
                                                 },
+                                                Object {
+                                                  "id": 1,
+                                                  "key": "",
+                                                  "operator": "==",
+                                                  "value": "",
+                                                },
                                               ]
                 }
                 maxSignalRetentionDays={30}
@@ -2914,6 +2962,12 @@ ShallowWrapper {
                 "keyValuePairs": Array [
                   Object {
                     "id": 0,
+                    "key": "",
+                    "operator": "==",
+                    "value": "",
+                  },
+                  Object {
+                    "id": 1,
                     "key": "",
                     "operator": "==",
                     "value": "",
@@ -3315,8 +3369,15 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3326,13 +3387,13 @@ ShallowWrapper {
         Symbol(observable): [Function],
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`<SearchContainer /> component state changes based on events .onRemoveClick() adds another keyValuePair to state.keyValuePairs 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchContainer
     callSearch={[Function]}
@@ -4903,8 +4964,15 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -4914,6 +4982,7 @@ ShallowWrapper {
         Symbol(observable): [Function],
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;

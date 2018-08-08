@@ -2,7 +2,6 @@
 
 exports[`<SaveSearchExecutionContent /> component rendering when Checkbox is unchecked matches snapshot 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SaveSearchExecutionContent
     onDefaultSortingChange={[Function]}
@@ -685,15 +684,22 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`<SaveSearchExecutionContent /> component when Checkbox is checked state.isTrackInDashboardChecked is updated to true  1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SaveSearchExecutionContent
     onDefaultSortingChange={[Function]}
@@ -735,7 +741,7 @@ ShallowWrapper {
           className="contentCheckBox"
 >
           <Checkbox
-                    checked={false}
+                    checked={true}
                     data-test="save-this-search-checkbox"
                     indeterminate={false}
                     label="Track this search result in dashboard"
@@ -843,7 +849,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <Checkbox
-            checked={false}
+            checked={true}
             data-test="save-this-search-checkbox"
             indeterminate={false}
             label="Track this search result in dashboard"
@@ -857,7 +863,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "checked": false,
+            "checked": true,
             "data-test": "save-this-search-checkbox",
             "indeterminate": false,
             "label": "Track this search result in dashboard",
@@ -1067,7 +1073,7 @@ ShallowWrapper {
             className="contentCheckBox"
 >
             <Checkbox
-                        checked={false}
+                        checked={true}
                         data-test="save-this-search-checkbox"
                         indeterminate={false}
                         label="Track this search result in dashboard"
@@ -1175,7 +1181,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <Checkbox
-              checked={false}
+              checked={true}
               data-test="save-this-search-checkbox"
               indeterminate={false}
               label="Track this search result in dashboard"
@@ -1189,7 +1195,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "checked": false,
+              "checked": true,
               "data-test": "save-this-search-checkbox",
               "indeterminate": false,
               "label": "Track this search result in dashboard",
@@ -1376,8 +1382,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
       },
     },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
   },
 }
 `;
