@@ -117,6 +117,22 @@ ShallowWrapper {
                                                 >
                                                         <KeyValuePair
                                                                 advanced={false}
+                                                                errors={
+                                                                        Object {
+                                                                                "reportSuites": Object {
+                                                                                  "errorMessage": "",
+                                                                                  "hasError": false,
+                                                                                },
+                                                                                "savedSearch": Object {
+                                                                                  "errorMessage": "",
+                                                                                  "hasError": false,
+                                                                                },
+                                                                                "searchForm": Object {
+                                                                                  "errorMessage": "",
+                                                                                  "hasError": false,
+                                                                                },
+                                                                              }
+                                                                }
                                                                 onKeyChange={undefined}
                                                                 onOperatorChange={[Function]}
                                                                 onValueChange={[Function]}
@@ -323,6 +339,22 @@ ShallowWrapper {
                                                             >
                                                                         <KeyValuePair
                                                                                     advanced={false}
+                                                                                    errors={
+                                                                                                Object {
+                                                                                                            "reportSuites": Object {
+                                                                                                              "errorMessage": "",
+                                                                                                              "hasError": false,
+                                                                                                            },
+                                                                                                            "savedSearch": Object {
+                                                                                                              "errorMessage": "",
+                                                                                                              "hasError": false,
+                                                                                                            },
+                                                                                                            "searchForm": Object {
+                                                                                                              "errorMessage": "",
+                                                                                                              "hasError": false,
+                                                                                                            },
+                                                                                                          }
+                                                                                    }
                                                                                     onKeyChange={undefined}
                                                                                     onOperatorChange={[Function]}
                                                                                     onValueChange={[Function]}
@@ -555,6 +587,22 @@ ShallowWrapper {
                                                         >
                                                                       <KeyValuePair
                                                                                     advanced={false}
+                                                                                    errors={
+                                                                                                  Object {
+                                                                                                                "reportSuites": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                                "savedSearch": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                                "searchForm": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                              }
+                                                                                    }
                                                                                     onKeyChange={undefined}
                                                                                     onOperatorChange={[Function]}
                                                                                     onValueChange={[Function]}
@@ -741,6 +789,22 @@ ShallowWrapper {
                                                       >
                                                                         <KeyValuePair
                                                                                           advanced={false}
+                                                                                          errors={
+                                                                                                            Object {
+                                                                                                                              "reportSuites": Object {
+                                                                                                                                "errorMessage": "",
+                                                                                                                                "hasError": false,
+                                                                                                                              },
+                                                                                                                              "savedSearch": Object {
+                                                                                                                                "errorMessage": "",
+                                                                                                                                "hasError": false,
+                                                                                                                              },
+                                                                                                                              "searchForm": Object {
+                                                                                                                                "errorMessage": "",
+                                                                                                                                "hasError": false,
+                                                                                                                              },
+                                                                                                                            }
+                                                                                          }
                                                                                           onKeyChange={undefined}
                                                                                           onOperatorChange={[Function]}
                                                                                           onValueChange={[Function]}
@@ -925,6 +989,22 @@ ShallowWrapper {
                                         >
                                                             <KeyValuePair
                                                                                 advanced={false}
+                                                                                errors={
+                                                                                                    Object {
+                                                                                                                        "reportSuites": Object {
+                                                                                                                          "errorMessage": "",
+                                                                                                                          "hasError": false,
+                                                                                                                        },
+                                                                                                                        "savedSearch": Object {
+                                                                                                                          "errorMessage": "",
+                                                                                                                          "hasError": false,
+                                                                                                                        },
+                                                                                                                        "searchForm": Object {
+                                                                                                                          "errorMessage": "",
+                                                                                                                          "hasError": false,
+                                                                                                                        },
+                                                                                                                      }
+                                                                                }
                                                                                 onKeyChange={undefined}
                                                                                 onOperatorChange={[Function]}
                                                                                 onValueChange={[Function]}
@@ -1104,6 +1184,22 @@ ShallowWrapper {
                           >
                                                     <KeyValuePair
                                                                               advanced={false}
+                                                                              errors={
+                                                                                                        Object {
+                                                                                                                                  "reportSuites": Object {
+                                                                                                                                    "errorMessage": "",
+                                                                                                                                    "hasError": false,
+                                                                                                                                  },
+                                                                                                                                  "savedSearch": Object {
+                                                                                                                                    "errorMessage": "",
+                                                                                                                                    "hasError": false,
+                                                                                                                                  },
+                                                                                                                                  "searchForm": Object {
+                                                                                                                                    "errorMessage": "",
+                                                                                                                                    "hasError": false,
+                                                                                                                                  },
+                                                                                                                                }
+                                                                              }
                                                                               onKeyChange={undefined}
                                                                               onOperatorChange={[Function]}
                                                                               onValueChange={[Function]}
@@ -1280,6 +1376,22 @@ ShallowWrapper {
 >
                           <KeyValuePair
                                                     advanced={false}
+                                                    errors={
+                                                                              Object {
+                                                                                                        "reportSuites": Object {
+                                                                                                          "errorMessage": "",
+                                                                                                          "hasError": false,
+                                                                                                        },
+                                                                                                        "savedSearch": Object {
+                                                                                                          "errorMessage": "",
+                                                                                                          "hasError": false,
+                                                                                                        },
+                                                                                                        "searchForm": Object {
+                                                                                                          "errorMessage": "",
+                                                                                                          "hasError": false,
+                                                                                                        },
+                                                                                                      }
+                                                    }
                                                     onKeyChange={undefined}
                                                     onOperatorChange={[Function]}
                                                     onValueChange={[Function]}
@@ -1321,6 +1433,22 @@ ShallowWrapper {
                           "children": Array [
                             <KeyValuePair
                               advanced={false}
+                              errors={
+                                                            Object {
+                                                                                          "reportSuites": Object {
+                                                                                            "errorMessage": "",
+                                                                                            "hasError": false,
+                                                                                          },
+                                                                                          "savedSearch": Object {
+                                                                                            "errorMessage": "",
+                                                                                            "hasError": false,
+                                                                                          },
+                                                                                          "searchForm": Object {
+                                                                                            "errorMessage": "",
+                                                                                            "hasError": false,
+                                                                                          },
+                                                                                        }
+                              }
                               onKeyChange={undefined}
                               onOperatorChange={[Function]}
                               onValueChange={[Function]}
@@ -1363,6 +1491,20 @@ ShallowWrapper {
                             "nodeType": "class",
                             "props": Object {
                               "advanced": false,
+                              "errors": Object {
+                                "reportSuites": Object {
+                                  "errorMessage": "",
+                                  "hasError": false,
+                                },
+                                "savedSearch": Object {
+                                  "errorMessage": "",
+                                  "hasError": false,
+                                },
+                                "searchForm": Object {
+                                  "errorMessage": "",
+                                  "hasError": false,
+                                },
+                              },
                               "onKeyChange": undefined,
                               "onOperatorChange": [Function],
                               "onValueChange": [Function],
@@ -1984,6 +2126,22 @@ ShallowWrapper {
                                                             >
                                                                       <KeyValuePair
                                                                                 advanced={false}
+                                                                                errors={
+                                                                                          Object {
+                                                                                                    "reportSuites": Object {
+                                                                                                      "errorMessage": "",
+                                                                                                      "hasError": false,
+                                                                                                    },
+                                                                                                    "savedSearch": Object {
+                                                                                                      "errorMessage": "",
+                                                                                                      "hasError": false,
+                                                                                                    },
+                                                                                                    "searchForm": Object {
+                                                                                                      "errorMessage": "",
+                                                                                                      "hasError": false,
+                                                                                                    },
+                                                                                                  }
+                                                                                }
                                                                                 onKeyChange={undefined}
                                                                                 onOperatorChange={[Function]}
                                                                                 onValueChange={[Function]}
@@ -2190,6 +2348,22 @@ ShallowWrapper {
                                                                       >
                                                                                     <KeyValuePair
                                                                                                   advanced={false}
+                                                                                                  errors={
+                                                                                                                Object {
+                                                                                                                              "reportSuites": Object {
+                                                                                                                                "errorMessage": "",
+                                                                                                                                "hasError": false,
+                                                                                                                              },
+                                                                                                                              "savedSearch": Object {
+                                                                                                                                "errorMessage": "",
+                                                                                                                                "hasError": false,
+                                                                                                                              },
+                                                                                                                              "searchForm": Object {
+                                                                                                                                "errorMessage": "",
+                                                                                                                                "hasError": false,
+                                                                                                                              },
+                                                                                                                            }
+                                                                                                  }
                                                                                                   onKeyChange={undefined}
                                                                                                   onOperatorChange={[Function]}
                                                                                                   onValueChange={[Function]}
@@ -2422,6 +2596,22 @@ ShallowWrapper {
                                                                 >
                                                                                 <KeyValuePair
                                                                                                 advanced={false}
+                                                                                                errors={
+                                                                                                                Object {
+                                                                                                                                "reportSuites": Object {
+                                                                                                                                  "errorMessage": "",
+                                                                                                                                  "hasError": false,
+                                                                                                                                },
+                                                                                                                                "savedSearch": Object {
+                                                                                                                                  "errorMessage": "",
+                                                                                                                                  "hasError": false,
+                                                                                                                                },
+                                                                                                                                "searchForm": Object {
+                                                                                                                                  "errorMessage": "",
+                                                                                                                                  "hasError": false,
+                                                                                                                                },
+                                                                                                                              }
+                                                                                                }
                                                                                                 onKeyChange={undefined}
                                                                                                 onOperatorChange={[Function]}
                                                                                                 onValueChange={[Function]}
@@ -2608,6 +2798,22 @@ ShallowWrapper {
                                                             >
                                                                                 <KeyValuePair
                                                                                                     advanced={false}
+                                                                                                    errors={
+                                                                                                                        Object {
+                                                                                                                                            "reportSuites": Object {
+                                                                                                                                              "errorMessage": "",
+                                                                                                                                              "hasError": false,
+                                                                                                                                            },
+                                                                                                                                            "savedSearch": Object {
+                                                                                                                                              "errorMessage": "",
+                                                                                                                                              "hasError": false,
+                                                                                                                                            },
+                                                                                                                                            "searchForm": Object {
+                                                                                                                                              "errorMessage": "",
+                                                                                                                                              "hasError": false,
+                                                                                                                                            },
+                                                                                                                                          }
+                                                                                                    }
                                                                                                     onKeyChange={undefined}
                                                                                                     onOperatorChange={[Function]}
                                                                                                     onValueChange={[Function]}
@@ -2792,6 +2998,22 @@ ShallowWrapper {
                                             >
                                                                   <KeyValuePair
                                                                                         advanced={false}
+                                                                                        errors={
+                                                                                                              Object {
+                                                                                                                                    "reportSuites": Object {
+                                                                                                                                      "errorMessage": "",
+                                                                                                                                      "hasError": false,
+                                                                                                                                    },
+                                                                                                                                    "savedSearch": Object {
+                                                                                                                                      "errorMessage": "",
+                                                                                                                                      "hasError": false,
+                                                                                                                                    },
+                                                                                                                                    "searchForm": Object {
+                                                                                                                                      "errorMessage": "",
+                                                                                                                                      "hasError": false,
+                                                                                                                                    },
+                                                                                                                                  }
+                                                                                        }
                                                                                         onKeyChange={undefined}
                                                                                         onOperatorChange={[Function]}
                                                                                         onValueChange={[Function]}
@@ -2971,6 +3193,22 @@ ShallowWrapper {
                             >
                                                         <KeyValuePair
                                                                                     advanced={false}
+                                                                                    errors={
+                                                                                                                Object {
+                                                                                                                                            "reportSuites": Object {
+                                                                                                                                              "errorMessage": "",
+                                                                                                                                              "hasError": false,
+                                                                                                                                            },
+                                                                                                                                            "savedSearch": Object {
+                                                                                                                                              "errorMessage": "",
+                                                                                                                                              "hasError": false,
+                                                                                                                                            },
+                                                                                                                                            "searchForm": Object {
+                                                                                                                                              "errorMessage": "",
+                                                                                                                                              "hasError": false,
+                                                                                                                                            },
+                                                                                                                                          }
+                                                                                    }
                                                                                     onKeyChange={undefined}
                                                                                     onOperatorChange={[Function]}
                                                                                     onValueChange={[Function]}
@@ -3147,6 +3385,22 @@ ShallowWrapper {
 >
                             <KeyValuePair
                                                         advanced={false}
+                                                        errors={
+                                                                                    Object {
+                                                                                                                "reportSuites": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                                "savedSearch": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                                "searchForm": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                              }
+                                                        }
                                                         onKeyChange={undefined}
                                                         onOperatorChange={[Function]}
                                                         onValueChange={[Function]}
@@ -3188,6 +3442,22 @@ ShallowWrapper {
                             "children": Array [
                               <KeyValuePair
                                 advanced={false}
+                                errors={
+                                                                Object {
+                                                                                                "reportSuites": Object {
+                                                                                                  "errorMessage": "",
+                                                                                                  "hasError": false,
+                                                                                                },
+                                                                                                "savedSearch": Object {
+                                                                                                  "errorMessage": "",
+                                                                                                  "hasError": false,
+                                                                                                },
+                                                                                                "searchForm": Object {
+                                                                                                  "errorMessage": "",
+                                                                                                  "hasError": false,
+                                                                                                },
+                                                                                              }
+                                }
                                 onKeyChange={undefined}
                                 onOperatorChange={[Function]}
                                 onValueChange={[Function]}
@@ -3230,6 +3500,20 @@ ShallowWrapper {
                               "nodeType": "class",
                               "props": Object {
                                 "advanced": false,
+                                "errors": Object {
+                                  "reportSuites": Object {
+                                    "errorMessage": "",
+                                    "hasError": false,
+                                  },
+                                  "savedSearch": Object {
+                                    "errorMessage": "",
+                                    "hasError": false,
+                                  },
+                                  "searchForm": Object {
+                                    "errorMessage": "",
+                                    "hasError": false,
+                                  },
+                                },
                                 "onKeyChange": undefined,
                                 "onOperatorChange": [Function],
                                 "onValueChange": [Function],

@@ -108,7 +108,7 @@ class KeyValuePair extends Component {
                 autocompleteError: true,
                 autocompleteErrorMessage: 'Key cannot be empty when value is specified.',
             });
-        } else if (!externalServiceAvailable && !this.props.searched) {
+        } else if (!externalServiceAvailable) {
             this.setState({
                 ...error,
                 autocompleteError: true,
@@ -128,13 +128,15 @@ class KeyValuePair extends Component {
 
     render() {
         const { id, key, value, operator } = this.props.pair;
-        const { advanced } = this.props;
+        const { advanced, errors, searched } = this.props;
         const forKey = `key${id}`;
         const forValue = `value${id}`;
         const keyPlaceholder = `Enter a key${advanced ? ' or key name' : ''}`;
         const keyLabel = `Key${advanced ? ' or Key Name' : ''}`;
         const valuePlaceholder = 'Enter a value';
         const valueLabel = 'Value';
+        const isKeyInvalid =
+            this.state.autocompleteError && !errors.searchForm.hasError && !searched;
 
         return (
             <span data-test="key-value-pair">
@@ -151,12 +153,12 @@ class KeyValuePair extends Component {
                             data-test="key-search-field"
                             id={forKey}
                             placeholder={keyPlaceholder}
-                            invalid={this.state.autocompleteError}
+                            invalid={isKeyInvalid}
                         />
                     </Autocomplete>
                     <InlineErrorMessage
                         className={styles.error}
-                        isInvalid={this.state.autocompleteError}
+                        isInvalid={isKeyInvalid}
                         errorMessage={this.state.autocompleteErrorMessage}
                         showIcon={false}
                     />

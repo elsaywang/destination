@@ -51,6 +51,7 @@ class Search extends Component {
                         onOperatorChange={onOperatorChange}
                         onValueChange={onValueChange}
                         searched={this.props.searched}
+                        errors={this.props.errors}
                     />
                     {isLastPair(pair.id) &&
                         validKeyValuePairsLimit && (
