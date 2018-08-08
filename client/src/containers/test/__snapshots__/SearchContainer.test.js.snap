@@ -123,10 +123,10 @@ ShallowWrapper {
     }
     thisSearch={
         Object {
-            "descending": false,
+            "descending": true,
             "includeInDashboard": false,
             "name": "",
-            "sortBy": "percentageChange",
+            "sortBy": "totalCount",
           }
     }
     throttleLoadMore={[Function]}
@@ -1860,10 +1860,10 @@ ShallowWrapper {
     }
     thisSearch={
         Object {
-            "descending": false,
+            "descending": true,
             "includeInDashboard": false,
             "name": "",
-            "sortBy": "percentageChange",
+            "sortBy": "totalCount",
           }
     }
     throttleLoadMore={[Function]}
@@ -3503,10 +3503,10 @@ ShallowWrapper {
     }
     thisSearch={
         Object {
-            "descending": false,
+            "descending": true,
             "includeInDashboard": false,
             "name": "",
-            "sortBy": "percentageChange",
+            "sortBy": "totalCount",
           }
     }
     throttleLoadMore={[Function]}

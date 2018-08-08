@@ -17,6 +17,7 @@ import {
     defaultSavedSearchLimit,
     defaultTotalVisibleSavedSearch,
 } from '../constants/limitConstants.js';
+import { defaultDescending, defaultSortingKey } from '../constants/sortOptions';
 
 const initialState = {
     list: [],
@@ -26,8 +27,8 @@ const initialState = {
     saveSearch: {
         name: '',
         includeInDashboard: false,
-        sortBy: 'percentageChange',
-        descending: false,
+        sortBy: defaultSortingKey,
+        descending: defaultDescending,
     },
 };
 
