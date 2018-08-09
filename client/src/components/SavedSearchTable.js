@@ -37,12 +37,7 @@ class SavedSearchTable extends Component {
 
     renderTable() {
         const { list } = this.state;
-        const {
-            isAdvancedSearchEnabled,
-            allowsSelection,
-            canCreateTraits,
-            savedSearch,
-        } = this.props;
+        const { isAdvancedSearchEnabled, allowsSelection, canCreateTraits } = this.props;
         const hasSearchResults = !this.state.error && list && list.length;
         const withResults = hasSearchResults && !this.state.error;
 
