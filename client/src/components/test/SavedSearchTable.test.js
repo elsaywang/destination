@@ -6,6 +6,9 @@ import { handleList } from '../../reducers/results';
 import fetch from '../../utils/fetch';
 
 jest.mock('../../utils/fetch');
+jest.mock('../../lib/getStaticUrl', () => ({
+    getStaticUrl: () => 'localhost:3000/',
+}));
 fetch.mockImplementation(() => ({ json: () => new Promise(res => ({})) }));
 
 describe('<SavedSearchTable/> component', () => {

@@ -422,7 +422,7 @@ ShallowWrapper {
         alt="Error fetching data. Please try again later."
         className="noResultImage"
         data-test="error-fetching-data"
-        src="undefinednoResult.svg"
+        src="localhost:3000/noResult.svg"
 />,
       "className": "noResults",
       "message": "Please try again later.",
@@ -438,7 +438,7 @@ ShallowWrapper {
         "alt": "Error fetching data. Please try again later.",
         "className": "noResultImage",
         "data-test": "error-fetching-data",
-        "src": "undefinednoResult.svg",
+        "src": "localhost:3000/noResult.svg",
       },
       "ref": null,
       "rendered": null,
@@ -456,7 +456,7 @@ ShallowWrapper {
           alt="Error fetching data. Please try again later."
           className="noResultImage"
           data-test="error-fetching-data"
-          src="undefinednoResult.svg"
+          src="localhost:3000/noResult.svg"
 />,
         "className": "noResults",
         "message": "Please try again later.",
@@ -472,7 +472,7 @@ ShallowWrapper {
           "alt": "Error fetching data. Please try again later.",
           "className": "noResultImage",
           "data-test": "error-fetching-data",
-          "src": "undefinednoResult.svg",
+          "src": "localhost:3000/noResult.svg",
         },
         "ref": null,
         "rendered": null,

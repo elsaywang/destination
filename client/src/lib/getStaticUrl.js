@@ -1,1 +1,1 @@
-export const getStaticUrl = () => window.baseUrl;
+export const getStaticUrl = () => document.querySelector('meta[name="baseUrl"]').content;

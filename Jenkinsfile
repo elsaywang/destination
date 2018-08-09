@@ -1,5 +1,5 @@
 def uiImage
-def tag = "${env.JOB_BASE_NAME}_${env.BUILD_ID}".replaceAll(/[^a-zA-Z0-9]/, "_").toLowerCase()
+def tag = "${env.BRANCH_NAME}_${env.BUILD_ID}".replaceAll(/[^a-zA-Z0-9]/, "_").toLowerCase()
 def uiImageName = "signal-center-ui:${tag}"
 def cypressBaseImage = "cypress/base:8"
 def workspace
