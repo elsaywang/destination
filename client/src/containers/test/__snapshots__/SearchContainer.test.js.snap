@@ -1760,6 +1760,18 @@ ShallowWrapper {
     clearSearchFields={[Function]}
     errors={
         Object {
+            "reportSuites": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
+            "saveSearch": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
+            "savedSearch": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
             "searchForm": Object {
               "hasError": true,
               "message": "Forbidden",
@@ -1898,6 +1910,18 @@ ShallowWrapper {
                               disabled={false}
                               errors={
                                         Object {
+                                                  "reportSuites": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
+                                                  "saveSearch": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
+                                                  "savedSearch": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
                                                   "searchForm": Object {
                                                     "hasError": true,
                                                     "message": "Forbidden",
@@ -1971,7 +1995,12 @@ ShallowWrapper {
                                         currentSearch=""
                                         deleteSearch={[Function]}
                                         disabled={false}
-                                        error={undefined}
+                                        error={
+                                                  Object {
+                                                            "errorMessage": "",
+                                                            "hasError": false,
+                                                          }
+                                        }
                                         getSavedSearch={[Function]}
                                         isLoaded={false}
                                         list={
@@ -2064,6 +2093,18 @@ ShallowWrapper {
                         disabled={false}
                         errors={
                                     Object {
+                                                "reportSuites": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "saveSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "savedSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "searchForm": Object {
                                                   "hasError": true,
                                                   "message": "Forbidden",
@@ -2137,6 +2178,18 @@ ShallowWrapper {
               disabled={false}
               errors={
                             Object {
+                                          "reportSuites": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
+                                          "saveSearch": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
+                                          "savedSearch": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
                                           "searchForm": Object {
                                             "hasError": true,
                                             "message": "Forbidden",
@@ -2207,6 +2260,18 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "disabled": false,
               "errors": Object {
+                "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "saveSearch": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "savedSearch": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
                 "searchForm": Object {
                   "hasError": true,
                   "message": "Forbidden",
@@ -2282,7 +2347,12 @@ ShallowWrapper {
                                     currentSearch=""
                                     deleteSearch={[Function]}
                                     disabled={false}
-                                    error={undefined}
+                                    error={
+                                                Object {
+                                                            "errorMessage": "",
+                                                            "hasError": false,
+                                                          }
+                                    }
                                     getSavedSearch={[Function]}
                                     isLoaded={false}
                                     list={
@@ -2359,7 +2429,12 @@ ShallowWrapper {
                             currentSearch=""
                             deleteSearch={[Function]}
                             disabled={false}
-                            error={undefined}
+                            error={
+                                          Object {
+                                                        "errorMessage": "",
+                                                        "hasError": false,
+                                                      }
+                            }
                             getSavedSearch={[Function]}
                             isLoaded={false}
                             list={
@@ -2432,7 +2507,12 @@ ShallowWrapper {
                   currentSearch=""
                   deleteSearch={[Function]}
                   disabled={false}
-                  error={undefined}
+                  error={
+                                    Object {
+                                                      "errorMessage": "",
+                                                      "hasError": false,
+                                                    }
+                  }
                   getSavedSearch={[Function]}
                   isLoaded={false}
                   list={
@@ -2505,7 +2585,10 @@ ShallowWrapper {
                   "currentSearch": "",
                   "deleteSearch": [Function],
                   "disabled": false,
-                  "error": undefined,
+                  "error": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "getSavedSearch": [Function],
                   "isLoaded": false,
                   "list": Array [
@@ -2641,6 +2724,18 @@ ShallowWrapper {
                                     disabled={false}
                                     errors={
                                                 Object {
+                                                            "reportSuites": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
+                                                            "saveSearch": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
+                                                            "savedSearch": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
                                                             "searchForm": Object {
                                                               "hasError": true,
                                                               "message": "Forbidden",
@@ -2714,7 +2809,12 @@ ShallowWrapper {
                                                 currentSearch=""
                                                 deleteSearch={[Function]}
                                                 disabled={false}
-                                                error={undefined}
+                                                error={
+                                                            Object {
+                                                                        "errorMessage": "",
+                                                                        "hasError": false,
+                                                                      }
+                                                }
                                                 getSavedSearch={[Function]}
                                                 isLoaded={false}
                                                 list={
@@ -2807,6 +2907,18 @@ ShallowWrapper {
                             disabled={false}
                             errors={
                                           Object {
+                                                        "reportSuites": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
+                                                        "saveSearch": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
+                                                        "savedSearch": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
                                                         "searchForm": Object {
                                                           "hasError": true,
                                                           "message": "Forbidden",
@@ -2880,6 +2992,18 @@ ShallowWrapper {
                 disabled={false}
                 errors={
                                 Object {
+                                                "reportSuites": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "saveSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "savedSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "searchForm": Object {
                                                   "hasError": true,
                                                   "message": "Forbidden",
@@ -2950,6 +3074,18 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "disabled": false,
                 "errors": Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "searchForm": Object {
                     "hasError": true,
                     "message": "Forbidden",
@@ -3025,7 +3161,12 @@ ShallowWrapper {
                                           currentSearch=""
                                           deleteSearch={[Function]}
                                           disabled={false}
-                                          error={undefined}
+                                          error={
+                                                        Object {
+                                                                      "errorMessage": "",
+                                                                      "hasError": false,
+                                                                    }
+                                          }
                                           getSavedSearch={[Function]}
                                           isLoaded={false}
                                           list={
@@ -3102,7 +3243,12 @@ ShallowWrapper {
                                 currentSearch=""
                                 deleteSearch={[Function]}
                                 disabled={false}
-                                error={undefined}
+                                error={
+                                                Object {
+                                                                "errorMessage": "",
+                                                                "hasError": false,
+                                                              }
+                                }
                                 getSavedSearch={[Function]}
                                 isLoaded={false}
                                 list={
@@ -3175,7 +3321,12 @@ ShallowWrapper {
                     currentSearch=""
                     deleteSearch={[Function]}
                     disabled={false}
-                    error={undefined}
+                    error={
+                                        Object {
+                                                            "errorMessage": "",
+                                                            "hasError": false,
+                                                          }
+                    }
                     getSavedSearch={[Function]}
                     isLoaded={false}
                     list={
@@ -3248,7 +3399,10 @@ ShallowWrapper {
                     "currentSearch": "",
                     "deleteSearch": [Function],
                     "disabled": false,
-                    "error": undefined,
+                    "error": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "getSavedSearch": [Function],
                     "isLoaded": false,
                     "list": Array [
@@ -3403,6 +3557,18 @@ ShallowWrapper {
     clearSearchFields={[Function]}
     errors={
         Object {
+            "reportSuites": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
+            "saveSearch": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
+            "savedSearch": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
             "searchForm": Object {
               "hasError": true,
               "message": "Forbidden",
@@ -3541,6 +3707,18 @@ ShallowWrapper {
                               disabled={false}
                               errors={
                                         Object {
+                                                  "reportSuites": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
+                                                  "saveSearch": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
+                                                  "savedSearch": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
                                                   "searchForm": Object {
                                                     "hasError": true,
                                                     "message": "Forbidden",
@@ -3608,7 +3786,12 @@ ShallowWrapper {
                                         currentSearch=""
                                         deleteSearch={[Function]}
                                         disabled={false}
-                                        error={undefined}
+                                        error={
+                                                  Object {
+                                                            "errorMessage": "",
+                                                            "hasError": false,
+                                                          }
+                                        }
                                         getSavedSearch={[Function]}
                                         isLoaded={false}
                                         list={
@@ -3701,6 +3884,18 @@ ShallowWrapper {
                         disabled={false}
                         errors={
                                     Object {
+                                                "reportSuites": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "saveSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "savedSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "searchForm": Object {
                                                   "hasError": true,
                                                   "message": "Forbidden",
@@ -3768,6 +3963,18 @@ ShallowWrapper {
               disabled={false}
               errors={
                             Object {
+                                          "reportSuites": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
+                                          "saveSearch": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
+                                          "savedSearch": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
                                           "searchForm": Object {
                                             "hasError": true,
                                             "message": "Forbidden",
@@ -3832,6 +4039,18 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "disabled": false,
               "errors": Object {
+                "reportSuites": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "saveSearch": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
+                "savedSearch": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
                 "searchForm": Object {
                   "hasError": true,
                   "message": "Forbidden",
@@ -3901,7 +4120,12 @@ ShallowWrapper {
                                     currentSearch=""
                                     deleteSearch={[Function]}
                                     disabled={false}
-                                    error={undefined}
+                                    error={
+                                                Object {
+                                                            "errorMessage": "",
+                                                            "hasError": false,
+                                                          }
+                                    }
                                     getSavedSearch={[Function]}
                                     isLoaded={false}
                                     list={
@@ -3978,7 +4202,12 @@ ShallowWrapper {
                             currentSearch=""
                             deleteSearch={[Function]}
                             disabled={false}
-                            error={undefined}
+                            error={
+                                          Object {
+                                                        "errorMessage": "",
+                                                        "hasError": false,
+                                                      }
+                            }
                             getSavedSearch={[Function]}
                             isLoaded={false}
                             list={
@@ -4051,7 +4280,12 @@ ShallowWrapper {
                   currentSearch=""
                   deleteSearch={[Function]}
                   disabled={false}
-                  error={undefined}
+                  error={
+                                    Object {
+                                                      "errorMessage": "",
+                                                      "hasError": false,
+                                                    }
+                  }
                   getSavedSearch={[Function]}
                   isLoaded={false}
                   list={
@@ -4124,7 +4358,10 @@ ShallowWrapper {
                   "currentSearch": "",
                   "deleteSearch": [Function],
                   "disabled": false,
-                  "error": undefined,
+                  "error": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "getSavedSearch": [Function],
                   "isLoaded": false,
                   "list": Array [
@@ -4260,6 +4497,18 @@ ShallowWrapper {
                                     disabled={false}
                                     errors={
                                                 Object {
+                                                            "reportSuites": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
+                                                            "saveSearch": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
+                                                            "savedSearch": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
                                                             "searchForm": Object {
                                                               "hasError": true,
                                                               "message": "Forbidden",
@@ -4327,7 +4576,12 @@ ShallowWrapper {
                                                 currentSearch=""
                                                 deleteSearch={[Function]}
                                                 disabled={false}
-                                                error={undefined}
+                                                error={
+                                                            Object {
+                                                                        "errorMessage": "",
+                                                                        "hasError": false,
+                                                                      }
+                                                }
                                                 getSavedSearch={[Function]}
                                                 isLoaded={false}
                                                 list={
@@ -4420,6 +4674,18 @@ ShallowWrapper {
                             disabled={false}
                             errors={
                                           Object {
+                                                        "reportSuites": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
+                                                        "saveSearch": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
+                                                        "savedSearch": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
                                                         "searchForm": Object {
                                                           "hasError": true,
                                                           "message": "Forbidden",
@@ -4487,6 +4753,18 @@ ShallowWrapper {
                 disabled={false}
                 errors={
                                 Object {
+                                                "reportSuites": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "saveSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
+                                                "savedSearch": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "searchForm": Object {
                                                   "hasError": true,
                                                   "message": "Forbidden",
@@ -4551,6 +4829,18 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "disabled": false,
                 "errors": Object {
+                  "reportSuites": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "saveSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
+                  "savedSearch": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "searchForm": Object {
                     "hasError": true,
                     "message": "Forbidden",
@@ -4620,7 +4910,12 @@ ShallowWrapper {
                                           currentSearch=""
                                           deleteSearch={[Function]}
                                           disabled={false}
-                                          error={undefined}
+                                          error={
+                                                        Object {
+                                                                      "errorMessage": "",
+                                                                      "hasError": false,
+                                                                    }
+                                          }
                                           getSavedSearch={[Function]}
                                           isLoaded={false}
                                           list={
@@ -4697,7 +4992,12 @@ ShallowWrapper {
                                 currentSearch=""
                                 deleteSearch={[Function]}
                                 disabled={false}
-                                error={undefined}
+                                error={
+                                                Object {
+                                                                "errorMessage": "",
+                                                                "hasError": false,
+                                                              }
+                                }
                                 getSavedSearch={[Function]}
                                 isLoaded={false}
                                 list={
@@ -4770,7 +5070,12 @@ ShallowWrapper {
                     currentSearch=""
                     deleteSearch={[Function]}
                     disabled={false}
-                    error={undefined}
+                    error={
+                                        Object {
+                                                            "errorMessage": "",
+                                                            "hasError": false,
+                                                          }
+                    }
                     getSavedSearch={[Function]}
                     isLoaded={false}
                     list={
@@ -4843,7 +5148,10 @@ ShallowWrapper {
                     "currentSearch": "",
                     "deleteSearch": [Function],
                     "disabled": false,
-                    "error": undefined,
+                    "error": Object {
+                      "errorMessage": "",
+                      "hasError": false,
+                    },
                     "getSavedSearch": [Function],
                     "isLoaded": false,
                     "list": Array [

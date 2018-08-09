@@ -3,14 +3,21 @@ function createAsyncAction(type, fn) {
         let response;
 
         try {
+            dispatch({
+                type: `${type}_PENDING`,
+            });
+
             response = await fn(...args);
 
             if (response.ok) {
+                const json = await response.json();
+
                 dispatch({
-                    type: `${type}`,
-                    payload: response.json(),
+                    type: `${type}_FULFILLED`,
+                    payload: json,
                 });
             } else {
+                // API call went through, but failed with a 4xx or 5xx error.
                 const { ok, status, statusText } = response;
 
                 dispatch({
@@ -24,6 +31,7 @@ function createAsyncAction(type, fn) {
                 });
             }
         } catch (error) {
+            // API call didn't go through. Likely an error in `response.json()`.
             dispatch({
                 type: `${type}_REJECTED`,
                 error: true,

@@ -353,6 +353,8 @@ class SearchContainer extends Component {
         return <Wait size="L" centered />;
     };
 
+    shouldShowResults = () => this.props.results.list.length && this.props.isResultsLoaded;
+
     isSearchDisabled = () => !this.props.isResultsLoaded && this.state.searched;
 
     render() {
@@ -401,7 +403,7 @@ class SearchContainer extends Component {
                                 error={this.props.errors.savedSearch}
                                 disabled={this.isSearchDisabled()}
                             />
-                            {Object.keys(this.props.results.list).length > 0 && (
+                            {this.props.results.list.length > 0 && (
                                 <Fragment>
                                     <div className={styles.saveSearchExecution}>
                                         <SaveSearchExecution
@@ -429,8 +431,8 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
 
-                {Object.keys(this.props.results.list).length ? (
-                    <div style={{ display: 'flex', marginTop: 20 }}>
+                {this.shouldShowResults() ? (
+                    <div style={{ display: 'flex', marginTop: 20 }} data-test="search-results">
                         {!this.state.advanced && (
                             <div className={styles.filterListContainer}>
                                 <SignalTypeFilter
