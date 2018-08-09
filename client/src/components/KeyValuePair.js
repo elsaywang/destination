@@ -43,6 +43,7 @@ class KeyValuePair extends Component {
                     externalServiceAvailable:
                         resp.analyticsServiceAvailable && resp.solrServiceAvailable,
                 });
+
                 return resp.signalKeys;
             })
             .then(json => json.map(key => key.signalKey))
@@ -76,6 +77,7 @@ class KeyValuePair extends Component {
                     externalServiceAvailable:
                         resp.analyticsServiceAvailable && resp.solrServiceAvailable,
                 });
+
                 return resp.signalKeys;
             })
             .then(suites =>
@@ -126,13 +128,15 @@ class KeyValuePair extends Component {
 
     render() {
         const { id, key, value, operator } = this.props.pair;
-        const { advanced } = this.props;
+        const { advanced, errors, searched } = this.props;
         const forKey = `key${id}`;
         const forValue = `value${id}`;
         const keyPlaceholder = `Enter a key${advanced ? ' or key name' : ''}`;
         const keyLabel = `Key${advanced ? ' or Key Name' : ''}`;
         const valuePlaceholder = 'Enter a value';
         const valueLabel = 'Value';
+        const isKeyInvalid =
+            this.state.autocompleteError && !errors.searchForm.hasError && !searched;
 
         return (
             <span data-test="key-value-pair">
@@ -149,12 +153,12 @@ class KeyValuePair extends Component {
                             data-test="key-search-field"
                             id={forKey}
                             placeholder={keyPlaceholder}
-                            invalid={this.state.autocompleteError}
+                            invalid={isKeyInvalid}
                         />
                     </Autocomplete>
                     <InlineErrorMessage
                         className={styles.error}
-                        isInvalid={this.state.autocompleteError}
+                        isInvalid={isKeyInvalid}
                         errorMessage={this.state.autocompleteErrorMessage}
                         showIcon={false}
                     />

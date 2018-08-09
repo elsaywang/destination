@@ -35,6 +35,7 @@ import styles from './SearchContainer.css';
 
 class SearchContainer extends Component {
     state = this.initialState();
+
     initialState() {
         return {
             name: '',
@@ -118,6 +119,7 @@ class SearchContainer extends Component {
 
     onReportSuiteChange = value => {
         this.setState({
+            searched: false,
             source: {
                 ...this.state.source,
                 name: value,
@@ -131,6 +133,7 @@ class SearchContainer extends Component {
         );
 
         this.setState({
+            searched: false,
             source: {
                 ...this.state.source,
                 name: value,
@@ -144,21 +147,30 @@ class SearchContainer extends Component {
         let keyValuePairs = [...this.state.keyValuePairs];
 
         keyValuePairs.find(kvp => kvp.id === id).key = value;
-        this.setState({ keyValuePairs });
+        this.setState({
+            searched: false,
+            keyValuePairs,
+        });
     };
 
     onValueChange = (id, value) => {
         let keyValuePairs = [...this.state.keyValuePairs];
 
         keyValuePairs.find(kvp => kvp.id === id).value = value;
-        this.setState({ keyValuePairs });
+        this.setState({
+            searched: false,
+            keyValuePairs,
+        });
     };
 
     onOperatorChange = (id, value) => {
         let keyValuePairs = [...this.state.keyValuePairs];
 
         keyValuePairs.find(kvp => kvp.id === id).operator = value;
-        this.setState({ keyValuePairs });
+        this.setState({
+            searched: false,
+            keyValuePairs,
+        });
     };
 
     onAddClick = () => {
