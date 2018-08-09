@@ -41,8 +41,8 @@ describe('saveSearch reducer', () => {
         saveSearch: {
             name: '',
             includeInDashboard: false,
-            sortBy: 'percentageChange',
-            descending: false,
+            sortBy: 'totalCount',
+            descending: true,
         },
         totalVisibleSavedSearch: 2,
     };

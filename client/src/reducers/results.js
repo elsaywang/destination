@@ -7,6 +7,7 @@ import {
     CLEAR_SEARCH,
     UPDATE_SORT_OPTIONS,
 } from '../actions/searchForm';
+import { defaultDescending } from '../constants/sortOptions';
 import { pageSize } from '../constants/paginationOptions';
 
 const initialState = {
@@ -15,7 +16,7 @@ const initialState = {
     pageSize,
     total: 0,
     sortBy: undefined,
-    descending: true,
+    descending: defaultDescending,
     isThrottled: false,
     isEndOfResults: false,
     isLoaded: false,

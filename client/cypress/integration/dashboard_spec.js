@@ -8,13 +8,16 @@ describe('Dashboard Integration Tests', () => {
     describe('Preset saved searches', () => {
         beforeEach(() => {
             cy.server();
-            cy.route('GET', '/portal/api/v1/users/self/annotations/aam-portal', savedSearchResponse.savedSearch)
-                .as('fetchSavedSearch');
+            cy.route(
+                'GET',
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            ).as('fetchSavedSearch');
 
-            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse)
-                .as('fetchSearchResults');
+            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                'fetchSearchResults',
+            );
             cy.visit('/');
-            // cy.scrollTo('bottom');
         });
 
         it("requests user's saved searches", () => {
@@ -96,10 +99,12 @@ describe('Dashboard Integration Tests', () => {
         it('should render when no user-defined saved searches exist', () => {
             const firstPresetHeading = 'Top Unused Signals';
             const secondPresetHeading = 'New Unused Signals';
-            cy.route('/portal/api/v1/users/self/annotations/aam-portal', emptySavedSearchResponse.savedSearch)
-                .as('fetchEmptySavedSearch');
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                emptySavedSearchResponse.savedSearch,
+            ).as('fetchEmptySavedSearch');
             cy.reload();
-            // cy.wait('@fetchEmptySavedSearch');
+            cy.wait('@fetchEmptySavedSearch');
 
             cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
@@ -146,9 +151,9 @@ describe('Dashboard Integration Tests', () => {
                 });
 
             cy.url().should('match', /\#\/search/);
-            // cy.get('@fetchSearchResults')
-            //     .its('status')
-            //     .should('eq', 200);
+            cy.get('@fetchSearchResults')
+                .its('status')
+                .should('eq', 200);
 
             cy.get('[data-saved-search-preset="top-unused-signals"]').as('topUnusedSignalsTag');
             cy.get('@topUnusedSignalsTag').should('be.visible');
@@ -181,9 +186,9 @@ describe('Dashboard Integration Tests', () => {
                 });
 
             cy.url().should('match', /\/#\/search/);
-            // cy.get('@fetchSearchResults')
-            //     .its('status')
-            //     .should('eq', 200);
+            cy.get('@fetchSearchResults')
+                .its('status')
+                .should('eq', 200);
 
             cy.get('[data-saved-search-preset="new-unused-signals"]').as('newUnusedSignalsTag');
             cy.get('@newUnusedSignalsTag').should('be.visible');
@@ -199,21 +204,25 @@ describe('Dashboard Integration Tests', () => {
             cy.get('[data-test="signal-status"]').should('have.value', 'UNUSED');
             cy.get('[data-test="view-records"]').should('have.value', '7D');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
-            // cy.getRequestParams('@fetchSearchResults').then(({ filterNewSignals }) => {
-            //     expect(filterNewSignals).to.equal(true);
-            // });
+            cy.getRequestParams('@fetchSearchResults').then(({ filterNewSignals }) => {
+                expect(filterNewSignals).to.equal(true);
+            });
         });
     });
     describe('No saved search result', () => {
         beforeEach(() => {
             cy.server();
-            cy.route('GET', '/portal/api/v1/users/self/annotations/aam-portal', emptySavedSearchResponse.savedSearch)
-                .as('fetchEmptySavedSearch');
-            cy.route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse)
-                .as('fetchEmptySearchResults');
+            cy.route(
+                'GET',
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                emptySavedSearchResponse.savedSearch,
+            ).as('fetchEmptySavedSearch');
+            cy.route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse).as(
+                'fetchEmptySearchResults',
+            );
             cy.visit('/');
-            // cy.scrollTo('bottom');
         });
+
         it("requests user's saved searches", () => {
             cy.wait('@fetchEmptySavedSearch')
                 .its('status')
@@ -269,10 +278,13 @@ describe('Dashboard Integration Tests', () => {
         });
 
         it('should render 2 preset empty tables plus total of user-defined saved searches exist with `includeInDashboard` is set to true with empty results', () => {
-            cy.route('GET', '/portal/api/v1/users/self/annotations/aam-portal', savedSearchResponse.savedSearch)
-                .as('fetchSavedSearch');
+            cy.route(
+                'GET',
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                savedSearchResponse.savedSearch,
+            ).as('fetchSavedSearch');
             cy.reload();
-            // cy.wait('@fetchSavedSearch');
+            cy.wait('@fetchSavedSearch');
 
             cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
@@ -354,10 +366,13 @@ describe('Dashboard Integration Tests', () => {
     describe('Max saved searches by lazy loading', () => {
         beforeEach(() => {
             cy.server();
-            cy.route('/portal/api/v1/users/self/annotations/aam-portal', maxSavedSearchResponse.savedSearch)
-                .as('fetchMaxSavedSearch');
-            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse)
-                .as('fetchSearchResults');
+            cy.route(
+                '/portal/api/v1/users/self/annotations/aam-portal',
+                maxSavedSearchResponse.savedSearch,
+            ).as('fetchMaxSavedSearch');
+            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                'fetchSearchResults',
+            );
             cy.visit('/');
         });
 

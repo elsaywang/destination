@@ -10,6 +10,8 @@ export const sortingOptions = sortColumns.map(({ title, key }) => ({
 
 export const defaultSortingKey = 'totalCount';
 
+export const defaultDescending = true;
+
 export const radioGroupOptions = [
     { label: 'Descending', value: descending },
     { label: 'Ascending', value: ascending },
