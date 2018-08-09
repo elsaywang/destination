@@ -138,7 +138,7 @@ describe('Search Form Integration Tests', () => {
             cy.get('.spectrum-SelectList-item').should('not.exist');
         });
 
-        it('should show the in-line error message caused by the unavailable analytics services', () => {
+        it('should show the in-line error message caused by the unavailable solr services', () => {
             const inlineErrorMessage = 'Key suggestions are not available.';
 
             cy.get('[data-test="inline-error"]').should('be.visible');
