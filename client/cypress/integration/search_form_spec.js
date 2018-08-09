@@ -4,7 +4,8 @@ const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
 const signalKeysResponse = require('../fixtures/signalKeys.json');
 const limitsResponse = require('../fixtures/limits.json');
-const signalKeysExternalServiceUnavailableResponse = require('../fixtures/signalKeysWithExternalServiceUnavailable.json');
+const signalKeysAnalyticsServiceUnavailableResponse = require('../fixtures/signalKeysWithAnalyticsServiceUnavailable.json');
+const signalKeysSolrServiceUnavailableResponse = require('../fixtures/signalKeysWithSolrServiceUnavailable.json');
 
 describe('Search Form Integration Tests', () => {
     beforeEach(() => {
@@ -25,7 +26,7 @@ describe('Search Form Integration Tests', () => {
     });
 
     afterEach(() => {
-        cy.clock().then((clock) => {
+        cy.clock().then(clock => {
             clock.restore();
         });
     });
@@ -48,8 +49,8 @@ describe('Search Form Integration Tests', () => {
         it('should allow you to type a report suite name and press enter on list of suggestions', () => {
             cy.get('@advancedFilter')
                 .type('te{enter}')
-                .then(($text) => {
-                    cy.get('@advancedFilter').should(($filter) => {
+                .then($text => {
+                    cy.get('@advancedFilter').should($filter => {
                         expect($filter.val()).to.contains($text.val());
                     });
                 });
@@ -59,8 +60,8 @@ describe('Search Form Integration Tests', () => {
             cy.get('@advancedFilter')
                 .siblings('button')
                 .click()
-                .then(($text) => {
-                    cy.get('@advancedFilter').should(($filter) => {
+                .then($text => {
+                    cy.get('@advancedFilter').should($filter => {
                         expect($filter.val()).to.contains($text.text());
                     });
                 });
@@ -87,8 +88,8 @@ describe('Search Form Integration Tests', () => {
             it('should have the same key value as clicked option', () => {
                 cy.get('.spectrum-Popover.is-open .spectrum-SelectList-item.is-focused')
                     .click()
-                    .then(($item) => {
-                        cy.get('@keyInput').should(($keyInput) => {
+                    .then($item => {
+                        cy.get('@keyInput').should($keyInput => {
                             expect($keyInput.val()).to.contains($item.text());
                         });
                     });
@@ -96,15 +97,16 @@ describe('Search Form Integration Tests', () => {
         });
     });
 
-    describe('when typing in text in Key input with external services unavailable', () => {
+    describe('when typing in text in Key input with analytics service unavailable', () => {
         beforeEach(() => {
             cy.route(
                 /\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/,
-                signalKeysExternalServiceUnavailableResponse,
-            ).as('signalKeysExternalServiceUnavailableResponse');
+                signalKeysAnalyticsServiceUnavailableResponse,
+            ).as('signalKeysAnalyticsServiceUnavailableResponse');
+            cy.get('[data-test="advanced-search-toggle"]').click();
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
-            cy.wait('@signalKeysExternalServiceUnavailableResponse');
+            cy.wait('@signalKeysAnalyticsServiceUnavailableResponse');
         });
 
         it('should not show any autocomplete with suggestions', () => {
@@ -112,22 +114,45 @@ describe('Search Form Integration Tests', () => {
             cy.get('.spectrum-SelectList-item').should('not.exist');
         });
 
-        it('should show the in-line error message caused by the unavailable external services', () => {
-            const inlineErrorMessage = 'Key friendly names are not available.';
+        it('should show the in-line error message caused by the unavailable analytics services', () => {
+            const inlineErrorMessage = 'Key suggestions for Analytics variables are not available.';
 
             cy.get('[data-test="inline-error"]').should('be.visible');
             cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
         });
     });
 
+    describe('when typing in text in Key input with solr service unavailable', () => {
+        beforeEach(() => {
+            cy.route(
+                /\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/,
+                signalKeysSolrServiceUnavailableResponse,
+            ).as('signalKeysSolrServiceUnavailableResponse');
+            cy.get('[data-test="key-search-field"]').as('keyInput');
+            cy.get('@keyInput').type('a');
+            cy.wait('@signalKeysSolrServiceUnavailableResponse');
+        });
+
+        it('should not show any autocomplete with suggestions', () => {
+            cy.get('.spectrum-Popover.is-open').should('not.exist');
+            cy.get('.spectrum-SelectList-item').should('not.exist');
+        });
+
+        it('should show the in-line error message caused by the unavailable analytics services', () => {
+            const inlineErrorMessage = 'Key suggestions are not available.';
+
+            cy.get('[data-test="inline-error"]').should('be.visible');
+            cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
+        });
+    });
     describe('when Operator select is changed', () => {
         it('should change the value to selected option', () => {
             cy.get('.operator')
                 .click()
                 .get('[role=option]:last')
                 .click()
-                .then(($option) => {
-                    cy.get('.operator').should(($operator) => {
+                .then($option => {
+                    cy.get('.operator').should($operator => {
                         expect($operator.text()).to.contains($option.text());
                     });
                 });
@@ -149,7 +174,7 @@ describe('Search Form Integration Tests', () => {
 
             cy.get('[data-test="value-search"]').type(value);
 
-            cy.get('[data-test="value-search"]').should(($text) => {
+            cy.get('[data-test="value-search"]').should($text => {
                 expect($text.val()).to.contains(value);
             });
         });
@@ -219,8 +244,8 @@ describe('Search Form Integration Tests', () => {
                 .click()
                 .get('[role=option]:last')
                 .click()
-                .then(($option) => {
-                    cy.get('.signal-status').should(($signalStatus) => {
+                .then($option => {
+                    cy.get('.signal-status').should($signalStatus => {
                         expect($signalStatus.text()).to.contains($option.text());
                     });
                 });
@@ -233,8 +258,8 @@ describe('Search Form Integration Tests', () => {
                 .click()
                 .get('.spectrum-SelectList-item:first')
                 .click()
-                .then(($option) => {
-                    cy.get('.view-records').should(($viewRecords) => {
+                .then($option => {
+                    cy.get('.view-records').should($viewRecords => {
                         expect($viewRecords.text()).to.contains($option.text());
                     });
                 });
