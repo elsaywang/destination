@@ -16,7 +16,12 @@ class SavedSearchTable extends Component {
 
     async componentDidMount() {
         const { savedSearch } = this.props;
-        const response = await fetchSignals({ search: savedSearch });
+        const { sortBy, descending } = savedSearch;
+        const sortOptions = { sortBy, descending };
+        const response = await fetchSignals({
+            search: savedSearch,
+            sortOptions,
+        });
 
         if (response.ok) {
             const results = await response.json();
