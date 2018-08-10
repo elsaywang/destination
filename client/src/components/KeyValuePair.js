@@ -39,12 +39,12 @@ class KeyValuePair extends Component {
                 throw new Error(response.statusText);
             })
             .then(resp => {
+                const { analyticsServiceAvailable, solrServiceAvailable, signalKeys } = resp;
                 this.setAutocompleteErrorMessage({
-                    externalServiceAvailable:
-                        resp.analyticsServiceAvailable && resp.solrServiceAvailable,
+                    analyticsServiceAvailable,
+                    solrServiceAvailable,
                 });
-
-                return resp.signalKeys;
+                return signalKeys;
             })
             .then(json => json.map(key => key.signalKey))
             .catch(error =>
@@ -73,12 +73,12 @@ class KeyValuePair extends Component {
                 throw new Error(response.statusText);
             })
             .then(resp => {
+                const { analyticsServiceAvailable, solrServiceAvailable, signalKeys } = resp;
                 this.setAutocompleteErrorMessage({
-                    externalServiceAvailable:
-                        resp.analyticsServiceAvailable && resp.solrServiceAvailable,
+                    analyticsServiceAvailable,
+                    solrServiceAvailable,
                 });
-
-                return resp.signalKeys;
+                return signalKeys;
             })
             .then(suites =>
                 suites.map(suite => ({
@@ -99,7 +99,8 @@ class KeyValuePair extends Component {
     };
 
     setAutocompleteErrorMessage = ({
-        externalServiceAvailable = true,
+        analyticsServiceAvailable = true,
+        solrServiceAvailable = true,
         error = this.getInitialAutocompleteError(),
     } = {}) => {
         if (isKeyEmptyWithValue(this.props.pair)) {
@@ -108,11 +109,18 @@ class KeyValuePair extends Component {
                 autocompleteError: true,
                 autocompleteErrorMessage: 'Key cannot be empty when value is specified.',
             });
-        } else if (!externalServiceAvailable) {
+        } else if (!analyticsServiceAvailable && this.props.advanced) {
             this.setState({
                 ...error,
                 autocompleteError: true,
-                autocompleteErrorMessage: 'Key friendly names are not available.',
+                autocompleteErrorMessage:
+                    'Key suggestions for Analytics variables are not available.',
+            });
+        } else if (!solrServiceAvailable) {
+            this.setState({
+                ...error,
+                autocompleteError: true,
+                autocompleteErrorMessage: 'Key suggestions are not available.',
             });
         } else {
             this.setState({
