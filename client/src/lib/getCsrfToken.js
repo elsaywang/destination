@@ -1,1 +1,1 @@
-export const getCsrfToken = () => window.csrfToken;
+export const getCsrfToken = () => document.querySelector('meta[name="_tk"]').content;

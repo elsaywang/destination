@@ -1,3 +1,4 @@
+const savedSearchResponse = require('../fixtures/savedSearch.json');
 const searchResultsResponse = require('../fixtures/searchResults.json');
 const searchResultsWithMultiKvpResponse = require('../fixtures/searchResultsWithMultiKvp.json');
 const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json');
@@ -9,6 +10,10 @@ describe('Search Form Results Integration Tests', function() {
         cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
             'fetchSearchResults',
         );
+        cy.route(
+            '/portal/api/v1/users/self/annotations/aam-portal',
+            savedSearchResponse.savedSearch,
+        ).as('fetchSavedSearch');
 
         cy.visit('#/search');
     });
@@ -17,26 +22,16 @@ describe('Search Form Results Integration Tests', function() {
         it('should show empty state with start exploring image', function() {
             cy.get('[data-test="empty"]').should('exist');
             cy.get('[data-test="start-exploring"]').should('exist');
-            cy.get('[data-test="signals-table"]').should('not.exist');
+            cy.get('[data-test="search-results"]').should('not.exist');
         });
     });
 
-    describe('when Search button is clicked', function() {
-        // TODO: failing test on jenkins
-        // search results does not clear for this test so
-        // there is no way to see the loader here
-        it.skip('should show loading spinner', function() {
-            cy.get('[data-test="clear-all-button"]').click();
-            cy.get('[data-test="search-button"]').click();
-
-            cy.get('.spectrum-Loader').should('exist');
-        });
-
+    describe('Search success and failure', function() {
         describe('when search results exist', function() {
-            it('should render results table', function() {
+            it('should render results', function() {
                 cy.get('[data-test="search-button"]').click();
 
-                cy.get('[data-test="signals-table"]').should('exist');
+                cy.get('[data-test="search-results"]').should('exist');
                 cy.get('[data-test="empty"]').should('not.exist');
                 cy.get('.spectrum-Loader').should('not.exist');
             });
@@ -54,7 +49,7 @@ describe('Search Form Results Integration Tests', function() {
 
                 cy.get('[data-test="empty"]').should('exist');
                 cy.get('[data-test="no-result-found"]').should('exist');
-                cy.get('[data-test="signals-table"]').should('not.exist');
+                cy.get('[data-test="search-results"]').should('not.exist');
                 cy.get('.spectrum-Loader').should('not.exist');
             });
         });
@@ -78,9 +73,33 @@ describe('Search Form Results Integration Tests', function() {
                     .should('exist')
                     .should('have.text', errorResponse.statusText);
                 cy.get('[data-test="error-fetching-data"]').should('exist');
-                cy.get('[data-test="signals-table"]').should('not.exist');
+                cy.get('[data-test="search-results"]').should('not.exist');
                 cy.get('.spectrum-Loader').should('not.exist');
             });
+        });
+    });
+
+    describe('Loading state during a search', () => {
+        beforeEach(() => {
+            cy.server({ delay: 500 });
+
+            cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                'fetchSearchResultsDelayed',
+            );
+        });
+
+        it('should show loading spinner and disable searching during the first search and during subsequent searches', function() {
+            for (let i = 0; i < 2; i++) {
+                cy.get('[data-test="search-button"]').click();
+
+                cy.get('.spectrum-Loader').should('exist');
+                cy.get('[data-test="search-button"]').should('have.attr', 'disabled');
+                cy.get('[data-test="saved-search-tag-list"]').should('have.attr', 'disabled');
+
+                cy.wait('@fetchSearchResultsDelayed');
+                cy.get('[data-test="search-results"]').should('exist');
+                cy.get('.spectrum-Loader').should('not.exist');
+            }
         });
     });
 
