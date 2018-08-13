@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { CLEAR_SEARCH } from '../actions/searchForm';
+import { CALL_SEARCH_PENDING, CLEAR_SEARCH, LOAD_MORE_PENDING } from '../actions/searchForm';
 import { SELECT_SIGNALS } from '../actions/selectSignals';
 import { defaultMaxSignalSelections } from '../constants/limitConstants';
 
@@ -17,6 +17,8 @@ export default handleActions(
             ...action.payload,
         }),
         [CLEAR_SEARCH]: () => initialState,
+        [CALL_SEARCH_PENDING]: () => initialState,
+        [LOAD_MORE_PENDING]: () => initialState,
     },
     initialState,
 );

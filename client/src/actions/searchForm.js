@@ -6,13 +6,13 @@ export const TOGGLE_ADVANCED_SEARCH = 'TOGGLE_ADVANCED_SEARCH';
 export const toggleAdvancedSearch = createAction(TOGGLE_ADVANCED_SEARCH);
 
 export const CALL_SEARCH = 'CALL_SEARCH';
+export const CALL_SEARCH_PENDING = 'CALL_SEARCH_PENDING';
 export const CALL_SEARCH_FULFILLED = 'CALL_SEARCH_FULFILLED';
 export const CALL_SEARCH_REJECTED = 'CALL_SEARCH_REJECTED';
-export const CALL_SEARCH_PENDING = 'CALL_SEARCH_PENDING';
-
 export const callSearch = createAsyncAction(CALL_SEARCH, fetchSignals);
 
 export const LOAD_MORE = 'LOAD_MORE';
+export const LOAD_MORE_PENDING = 'LOAD_MORE_PENDING';
 export const LOAD_MORE_FULFILLED = 'LOAD_MORE_FULFILLED';
 export const LOAD_MORE_REJECTED = 'LOAD_MORE_REJECTED';
 export const loadMore = createAsyncAction(LOAD_MORE, fetchSignals);

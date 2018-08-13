@@ -46,6 +46,7 @@ class Table extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+        // Skip render optimizations for Dashboard tables, which don't have `selectedRowIndexes`.
         if (!this.props.selectedRowIndexes || !nextProps.selectedRowIndexes) {
             return true;
         }
