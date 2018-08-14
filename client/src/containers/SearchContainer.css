@@ -4,6 +4,7 @@
 }
 
 :local(.filterListContainer) {
+    flex: 0 0 12em;
     border-right: 1px solid var(--spectrum-alias-border-color-dark);
     padding-left: 0;
 }
