@@ -1,5 +1,6 @@
 :local(.row) {
     composes: flexAlignBottom from './Layout.css';
+    flex-wrap: wrap;
 }
 
 :local(.ctas) {
