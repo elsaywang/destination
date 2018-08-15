@@ -76,4 +76,38 @@ describe('<KeyValuePair /> component', () => {
             expect(wrapper.find(InlineErrorMessage).exists()).toBe(true);
         });
     });
+
+    describe('getCompletions', () => {
+        const instance = wrapper.instance();
+
+        describe('when advanced search is not enabled', () => {
+            it('should get regular key suggestions', () => {
+                const spy = jest.spyOn(instance, 'getKeySuggestions').mockImplementation(() => {});
+
+                instance.getCompletions();
+
+                expect(spy).toHaveBeenCalled();
+            });
+        });
+
+        describe('when advanced search is enabled', () => {
+            beforeEach(() => {
+                wrapper.setProps({ advanced: true });
+            });
+
+            afterEach(() => {
+                wrapper.setProps({ advanced: false });
+            });
+
+            it('should get key suggestions for Analytics dimensions', () => {
+                const spy = jest
+                    .spyOn(instance, 'getAnalyticsKeySuggestions')
+                    .mockImplementation(() => {});
+
+                instance.getCompletions();
+
+                expect(spy).toHaveBeenCalled();
+            });
+        });
+    });
 });

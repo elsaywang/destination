@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import debounce from 'debounce-promise';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
 import Textfield from '@react/react-spectrum/Textfield';
 import Label from './common/Label';
 import operatorOptions from '../constants/operatorOptions';
+import { keySuggestionsDebounceMs } from '../constants/lazyLoadConstants';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';
 import fetch from '../utils/fetch';
@@ -28,7 +30,7 @@ class KeyValuePair extends Component {
         };
     }
 
-    getCompletions = key => {
+    getKeySuggestions = key => {
         return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
             .then(response => {
                 if (response.ok) {
@@ -57,7 +59,7 @@ class KeyValuePair extends Component {
             );
     };
 
-    getKeysByReportSuiteId = key => {
+    getAnalyticsKeySuggestions = key => {
         const { reportSuiteId } = this.props;
 
         return fetch(
@@ -97,6 +99,11 @@ class KeyValuePair extends Component {
                 }),
             );
     };
+
+    getCompletions = key =>
+        this.props.advanced ? this.getAnalyticsKeySuggestions(key) : this.getKeySuggestions(key);
+
+    getCompletionsDebounced = debounce(this.getCompletions, keySuggestionsDebounceMs);
 
     setAutocompleteErrorMessage = ({
         analyticsServiceAvailable = true,
@@ -151,9 +158,7 @@ class KeyValuePair extends Component {
                 <Label value={keyLabel} labelFor={forKey} style={{ position: 'relative' }}>
                     <Autocomplete
                         className="key-search"
-                        getCompletions={
-                            advanced ? this.getKeysByReportSuiteId : this.getCompletions
-                        }
+                        getCompletions={this.getCompletionsDebounced}
                         value={key}
                         onChange={this.onKeyChange}>
                         <Textfield

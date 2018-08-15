@@ -6,6 +6,8 @@ const signalKeysResponse = require('../fixtures/signalKeys.json');
 const limitsResponse = require('../fixtures/limits.json');
 const signalKeysAnalyticsServiceUnavailableResponse = require('../fixtures/signalKeysWithAnalyticsServiceUnavailable.json');
 const signalKeysSolrServiceUnavailableResponse = require('../fixtures/signalKeysWithSolrServiceUnavailable.json');
+const keySuggestionsDebounceMs = require('../../src/constants/lazyLoadConstants')
+    .keySuggestionsDebounceMs;
 
 describe('Search Form Integration Tests', () => {
     beforeEach(() => {
@@ -70,12 +72,15 @@ describe('Search Form Integration Tests', () => {
 
     describe('when typing in text in Key input with external services available', () => {
         beforeEach(() => {
-            cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
-                'fetchSignalKeys',
-            );
+            cy.clock();
+            cy.route(
+                /\/portal\/api\/v1\/signals\/keys\?search=.*?&total=8$/,
+                signalKeysResponse,
+            ).as('fetchSignalKeys');
 
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
+            cy.tick(keySuggestionsDebounceMs);
             cy.wait('@fetchSignalKeys');
         });
 
@@ -99,13 +104,15 @@ describe('Search Form Integration Tests', () => {
 
     describe('when typing in text in Key input with analytics service unavailable', () => {
         beforeEach(() => {
+            cy.clock();
             cy.route(
-                /\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/,
+                /\/portal\/api\/v1\/signals\/keys\?search=.*?&total=8$/,
                 signalKeysAnalyticsServiceUnavailableResponse,
             ).as('signalKeysAnalyticsServiceUnavailableResponse');
             cy.get('[data-test="advanced-search-toggle"]').click();
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
+            cy.tick(keySuggestionsDebounceMs);
             cy.wait('@signalKeysAnalyticsServiceUnavailableResponse');
         });
 
@@ -129,12 +136,14 @@ describe('Search Form Integration Tests', () => {
 
     describe('when typing in text in Key input with solr service unavailable', () => {
         beforeEach(() => {
+            cy.clock();
             cy.route(
-                /\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/,
+                /\/portal\/api\/v1\/signals\/keys\?search=.*?&total=8$/,
                 signalKeysSolrServiceUnavailableResponse,
             ).as('signalKeysSolrServiceUnavailableResponse');
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
+            cy.tick(keySuggestionsDebounceMs);
             cy.wait('@signalKeysSolrServiceUnavailableResponse');
         });
 
@@ -171,34 +180,29 @@ describe('Search Form Integration Tests', () => {
 
     describe('when typing in text in Value input', () => {
         beforeEach(() => {
-            cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
-                'fetchSignalKeys',
-            );
+            cy.clock();
+            cy.route(
+                /\/portal\/api\/v1\/signals\/keys\?search=.*?&total=8$/,
+                signalKeysResponse,
+            ).as('fetchSignalKeys');
             cy.get('[data-test="key-search-field"]').as('keyInput');
             cy.get('@keyInput').type('a');
+            cy.tick(keySuggestionsDebounceMs);
             cy.wait('@fetchSignalKeys');
         });
 
-        it('should allow you to type a value in the field after Key field has value', () => {
-            const value = '1';
-
-            cy.get('[data-test="value-search"]').type(value);
-
-            cy.get('[data-test="value-search"]').should($text => {
-                expect($text.val()).to.contains(value);
-            });
-        });
-
-        it('should not show any in-line error message', () => {
-            cy.get('[data-test="inline-error"]').should('not.exist');
-        });
-
-        it('should show in-line error message `Key cannot be empty when value is specified.` if Key input field is clear and type value in Value field', () => {
+        it('should be valid when the Key field has value and should show inline error message when the Key field is empty', () => {
             const value = '1';
             const inlineErrorMessage = 'Key cannot be empty when value is specified.';
 
+            cy.get('[data-test="value-search"]')
+                .type(value)
+                .should('have.value', value);
+
+            cy.get('[data-test="inline-error"]').should('not.exist');
+
             cy.get('@keyInput').clear();
-            cy.get('[data-test="value-search"]').type(value);
+            cy.tick(keySuggestionsDebounceMs);
 
             cy.get('[data-test="inline-error"]').should('be.visible');
             cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
