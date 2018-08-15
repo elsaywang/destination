@@ -9,6 +9,10 @@ import Button from '@react/react-spectrum/Button';
 import Well from '@react/react-spectrum/Well';
 import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
+jest.mock('../../utils/isBottomPassed', () => ({
+    isBottomPassed: () => true,
+}));
+
 describe('<DashboardContainer /> component', () => {
     const store = configureStore();
     const wrapper = shallow(

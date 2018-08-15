@@ -3,7 +3,7 @@ import ReactSpectrumProvider from '@react/react-spectrum/Provider';
 import Heading from '@react/react-spectrum/Heading';
 import { Grid } from '@react/react-spectrum/Grid';
 import { defineMessages, FormattedMessage } from 'react-intl';
-import './Layout.css';
+import styles from './Layout.css';
 
 const messages = defineMessages({
     title: {
@@ -16,7 +16,7 @@ const messages = defineMessages({
 function Layout(props) {
     return (
         <ReactSpectrumProvider scale="medium">
-            <Grid style={{ overflow: 'auto', minHeight: '100vh' }}>
+            <Grid className={styles.grid}>
                 <FormattedMessage {...messages.title}>
                     {text => <Heading>{text}</Heading>}
                 </FormattedMessage>

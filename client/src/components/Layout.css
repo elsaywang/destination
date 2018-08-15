@@ -1,5 +1,16 @@
 @import '~@spectrum/spectrum-variables/css/spectrum-light.css';
 
+/* Manually calculated. */
+:root {
+    --top-nav-height: 3.25rem;
+    --footer-height: 3.375rem;
+}
+
+:local(.grid) {
+    overflow: auto;
+    min-height: calc(100vh - var(--top-nav-height) - var(--footer-height));
+}
+
 :local(.flexAlignBottom) {
     display: flex;
     align-items: baseline;

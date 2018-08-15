@@ -11,6 +11,7 @@ import {
     getVisibleSavedSearchList,
 } from '../reducers/savedSearch';
 import { handleLazyLoadSavedSearches } from '../utils/lazyLoad';
+import { isBottomPassed } from '../utils/isBottomPassed';
 import { populateSearchFields } from '../actions/savedSearchFields';
 import { fetchUserRoles } from '../actions/permissions';
 import Heading from '@react/react-spectrum/Heading';
@@ -44,7 +45,7 @@ class DashboardContainer extends Component {
         } = nextProps;
 
         handleLazyLoadSavedSearches(
-            this.isBottomPassed(),
+            isBottomPassed(),
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,
             loadMoreSavedSearch,
@@ -64,11 +65,6 @@ class DashboardContainer extends Component {
         populateSearchFields(search);
     };
 
-    isBottomPassed = () =>
-        Boolean(
-            window.innerHeight + Math.ceil(window.pageYOffset + 1) >= document.body.offsetHeight,
-        );
-
     onScroll = e => {
         const {
             visibleSavedSearchList,
@@ -76,7 +72,7 @@ class DashboardContainer extends Component {
             loadMoreSavedSearch,
         } = this.props;
         handleLazyLoadSavedSearches(
-            this.isBottomPassed(),
+            isBottomPassed(),
             visibleSavedSearchList,
             trackedInDashboardSavedSearchList,
             loadMoreSavedSearch,
