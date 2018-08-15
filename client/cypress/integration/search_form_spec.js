@@ -120,6 +120,11 @@ describe('Search Form Integration Tests', () => {
             cy.get('[data-test="inline-error"]').should('be.visible');
             cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
         });
+
+        it('should no longer be visible after a successful search', () => {
+            cy.get('[data-test="search-button"]').click();
+            cy.get('[data-test="inline-error"]').should('not.be.visible');
+        });
     });
 
     describe('when typing in text in Key input with solr service unavailable', () => {
@@ -143,6 +148,11 @@ describe('Search Form Integration Tests', () => {
 
             cy.get('[data-test="inline-error"]').should('be.visible');
             cy.get('[data-test="inline-error"]').should('have.text', inlineErrorMessage);
+        });
+
+        it('should no longer be visible after a successful search', () => {
+            cy.get('[data-test="search-button"]').click();
+            cy.get('[data-test="inline-error"]').should('not.be.visible');
         });
     });
     describe('when Operator select is changed', () => {
