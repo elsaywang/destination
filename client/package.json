@@ -47,7 +47,7 @@
   "scripts": {
     "postinstall": "npm run copy-shell-topnav",
     "start": "react-app-rewired start",
-    "start:ci": "npx http-server build -p 3000",
+    "start:ci": "npx http-server build -p 3000 --cors",
     "build": "react-app-rewired build",
     "build:replace:version": "npx replace-in-file signalsVersion $BUILD_NUMBER build/index.html",
     "build:replace:branch": "npx replace-in-file signalsBranch $BRANCH_NAME build/index.html",
