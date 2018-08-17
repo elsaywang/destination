@@ -162,3 +162,5 @@ export const getVisibleSavedSearchList = state =>
         0,
         getTotalVisibleSavedSearchCount(state),
     );
+export const getHasMoreSavedSearches = state =>
+    getTotalVisibleSavedSearchCount(state) < getTrackedInDashboardSavedSearchList(state).length;

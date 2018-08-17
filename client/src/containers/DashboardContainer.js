@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import throttle from 'lodash.throttle';
 import { connect } from 'react-redux';
 import { callSearch, updateSortOptions } from '../actions/searchForm';
 import {
@@ -6,14 +7,11 @@ import {
     loadMoreSavedSearch,
     resetVisibleSavedSearch,
 } from '../actions/savedSearch';
-import {
-    getTrackedInDashboardSavedSearchList,
-    getVisibleSavedSearchList,
-} from '../reducers/savedSearch';
-import { handleLazyLoadSavedSearches } from '../utils/lazyLoad';
-import { isBottomPassed } from '../utils/isBottomPassed';
+import { getHasMoreSavedSearches, getVisibleSavedSearchList } from '../reducers/savedSearch';
+import { isNearBottom } from '../utils/isNearBottom';
 import { populateSearchFields } from '../actions/savedSearchFields';
 import { fetchUserRoles } from '../actions/permissions';
+import { dashboardThrottleMs } from '../constants/lazyLoadConstants';
 import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
@@ -37,20 +35,23 @@ class DashboardContainer extends Component {
         window.removeEventListener('scroll', this.onScroll);
     }
 
-    componentWillReceiveProps(nextProps) {
-        const {
-            visibleSavedSearchList,
-            trackedInDashboardSavedSearchList,
-            loadMoreSavedSearch,
-        } = nextProps;
-
-        handleLazyLoadSavedSearches(
-            isBottomPassed(),
-            visibleSavedSearchList,
-            trackedInDashboardSavedSearchList,
-            loadMoreSavedSearch,
-        );
+    componentDidUpdate() {
+        this.loadMoreThrottled();
     }
+
+    onScroll = () => {
+        this.loadMoreThrottled();
+    };
+
+    loadMore = () => {
+        const { hasMoreSavedSearches, loadMoreSavedSearch } = this.props;
+
+        if (isNearBottom() && hasMoreSavedSearches) {
+            loadMoreSavedSearch();
+        }
+    };
+
+    loadMoreThrottled = throttle(this.loadMore, dashboardThrottleMs);
 
     handleViewAllForSavedSearch = search => {
         const { populateSearchFields, callSearch, updateSortOptions } = this.props;
@@ -63,20 +64,6 @@ class DashboardContainer extends Component {
             sortOptions,
         });
         populateSearchFields(search);
-    };
-
-    onScroll = e => {
-        const {
-            visibleSavedSearchList,
-            trackedInDashboardSavedSearchList,
-            loadMoreSavedSearch,
-        } = this.props;
-        handleLazyLoadSavedSearches(
-            isBottomPassed(),
-            visibleSavedSearchList,
-            trackedInDashboardSavedSearchList,
-            loadMoreSavedSearch,
-        );
     };
 
     render() {
@@ -135,10 +122,10 @@ class DashboardContainer extends Component {
 }
 
 const mapStateToProps = ({ savedSearch, errors, permissions }) => ({
-    trackedInDashboardSavedSearchList: getTrackedInDashboardSavedSearchList(savedSearch),
     error: errors.savedSearch,
     permissions,
     visibleSavedSearchList: getVisibleSavedSearchList(savedSearch),
+    hasMoreSavedSearches: getHasMoreSavedSearches(savedSearch),
 });
 const actionCreators = {
     callSearch,

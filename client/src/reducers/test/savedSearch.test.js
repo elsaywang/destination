@@ -16,6 +16,7 @@ import saveSearchReducer, {
     getTotalVisibleSavedSearchCount,
     getTrackedInDashboardSavedSearchList,
     getVisibleSavedSearchList,
+    getHasMoreSavedSearches,
 } from '../savedSearch';
 import { savedSearchPresets } from '../../constants/savedSearchPresets';
 
@@ -390,6 +391,41 @@ describe('saveSearch reducer', () => {
                     { name: 'test1', kvp: 'ewr-key1', includeInDashboard: true },
                 ];
                 expect(getVisibleSavedSearchList(state)).toEqual(expectedList);
+            });
+        });
+
+        describe('getHasMoreSavedSearches', () => {
+            describe('when the count of visible saved searches is less than the count of total saved searches tracked in the dashboard', () => {
+                const state = {
+                    list: [{ name: 'test1', kvp: 'ewr-key1', includeInDashboard: true }],
+                    totalVisibleSavedSearch: 2,
+                };
+
+                it('should return true', () => {
+                    expect(getHasMoreSavedSearches(state)).toEqual(true);
+                });
+            });
+
+            describe('when the count of visible saved searches is equal to the count of total saved searches tracked in the dashboard', () => {
+                const state = {
+                    list: [{ name: 'test1', kvp: 'ewr-key1', includeInDashboard: false }],
+                    totalVisibleSavedSearch: 2,
+                };
+
+                it('should return false', () => {
+                    expect(getHasMoreSavedSearches(state)).toEqual(false);
+                });
+            });
+
+            describe('when the count of visible saved searches is greater than than the count of total saved searches tracked in the dashboard, should never happen', () => {
+                const state = {
+                    list: [{ name: 'test1', kvp: 'ewr-key1', includeInDashboard: false }],
+                    totalVisibleSavedSearch: 3,
+                };
+
+                it('should return false', () => {
+                    expect(getHasMoreSavedSearches(state)).toEqual(false);
+                });
             });
         });
     });

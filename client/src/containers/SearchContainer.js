@@ -28,7 +28,7 @@ import { normalizeSortOptions } from '../utils/normalizeSortOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
-import { defaultThrottleMs } from '../constants/lazyLoadConstants';
+import { searchResultsThrottleMs } from '../constants/lazyLoadConstants';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
 import styles from './SearchContainer.css';
@@ -258,7 +258,7 @@ class SearchContainer extends Component {
         );
     };
 
-    handleLoadMore = (throttleMs = defaultThrottleMs) => {
+    handleLoadMore = (throttleMs = searchResultsThrottleMs) => {
         if (this.props.isEndOfResults) {
             return;
         }

@@ -32,14 +32,13 @@ describe('Dashboard Integration Tests', () => {
                 .should('eq', 200);
         });
 
-        it('should render first when user-defined saved searches exist with `includeInDashboard` is set to true', () => {
+        it('should render first when user-defined saved searches exist with `includeInDashboard` is set to true and the screen bottom is visible', () => {
             cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
-                .should('have.length', 4);
-            const userDefinedVisibleSavedSearchOne = 'Angus Koss V';
-            const userDefinedVisibleSavedSearchTwo = 'Demarco Stiedemann';
+                .should('have.length', 3);
             const firstPresetHeading = 'Top Unused Signals';
             const secondPresetHeading = 'New Unused Signals';
+            const userDefinedVisibleSavedSearchOne = 'Angus Koss V';
 
             cy.get('[data-test=saved-search-dashboard]')
                 .eq(0)
@@ -77,20 +76,6 @@ describe('Dashboard Integration Tests', () => {
                         'firstUserDefinedVisibleSavedSearchTable',
                     );
                     cy.get('@firstUserDefinedVisibleSavedSearchTable')
-                        .should('exist')
-                        .should('have.length', 1);
-                });
-            cy.get('[data-test=saved-search-dashboard]')
-                .eq(3)
-                .within(() => {
-                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
-                        .should('exist')
-                        .should('have.text', userDefinedVisibleSavedSearchTwo);
-
-                    cy.get('[data-test="signals-table"]').as(
-                        'secondUserDefinedVisibleSavedSearchTable',
-                    );
-                    cy.get('@secondUserDefinedVisibleSavedSearchTable')
                         .should('exist')
                         .should('have.length', 1);
                 });
@@ -277,7 +262,7 @@ describe('Dashboard Integration Tests', () => {
                 });
         });
 
-        it('should render 2 preset empty tables plus total of user-defined saved searches exist with `includeInDashboard` is set to true with empty results', () => {
+        it('should render 2 preset empty tables plus total of user-defined saved searches exist with `includeInDashboard` is set to true with empty results and the screen bottom is visible', () => {
             cy.route(
                 'GET',
                 '/portal/api/v1/users/self/annotations/aam-portal',
@@ -288,11 +273,10 @@ describe('Dashboard Integration Tests', () => {
 
             cy.get('[data-test="saved-search-dashboard"]')
                 .should('exist')
-                .should('have.length', 4);
-            const userDefinedVisibleSavedSearchOne = 'Angus Koss V';
-            const userDefinedVisibleSavedSearchTwo = 'Demarco Stiedemann';
+                .should('have.length', 3);
             const firstPresetHeading = 'Top Unused Signals';
             const secondPresetHeading = 'New Unused Signals';
+            const userDefinedVisibleSavedSearchOne = 'Angus Koss V';
             const buttonLabel = 'View All';
 
             cy.get('[data-test=saved-search-dashboard]')
@@ -333,23 +317,6 @@ describe('Dashboard Integration Tests', () => {
                     cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
                         .should('exist')
                         .should('have.text', userDefinedVisibleSavedSearchOne);
-
-                    cy.get('[data-test="signals-table"]').should('not.exist');
-                    cy.get('[data-test="empty"]')
-                        .should('exist')
-                        .should('have.length', 1);
-                    cy.get('.spectrum-Button.spectrum-Button--primary').as('viewAllButton');
-                    cy.get('@viewAllButton')
-                        .should('exist')
-                        .should('have.text', buttonLabel);
-                });
-
-            cy.get('[data-test=saved-search-dashboard]')
-                .eq(3)
-                .within(() => {
-                    cy.get('.spectrum-Heading.spectrum-Heading--subtitle1')
-                        .should('exist')
-                        .should('have.text', userDefinedVisibleSavedSearchTwo);
 
                     cy.get('[data-test="signals-table"]').should('not.exist');
                     cy.get('[data-test="empty"]')

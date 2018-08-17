@@ -8,10 +8,9 @@ import Heading from '@react/react-spectrum/Heading';
 import Button from '@react/react-spectrum/Button';
 import Well from '@react/react-spectrum/Well';
 import InlineErrorMessage from '../../components/common/InlineErrorMessage';
+import { isNearBottom } from '../../utils/isNearBottom';
 
-jest.mock('../../utils/isBottomPassed', () => ({
-    isBottomPassed: () => true,
-}));
+jest.mock('../../utils/isNearBottom', () => ({ isNearBottom: jest.fn(() => true) }));
 
 describe('<DashboardContainer /> component', () => {
     const store = configureStore();
@@ -168,6 +167,78 @@ describe('<DashboardContainer /> component', () => {
             expect(spyOnClick).toHaveBeenCalled();
             expect(wrapperInstance.props.populateSearchFields).toHaveBeenCalled();
             expect(wrapperInstance.props.callSearch).toHaveBeenCalled();
+        });
+    });
+
+    describe('lazy loading saved searches', () => {
+        const loadMoreSavedSearch = wrapper.instance().props.loadMoreSavedSearch;
+        const loadMoreSavedSearchSpy = jest.fn();
+
+        beforeAll(() => {
+            wrapper.setProps({ loadMoreSavedSearch: loadMoreSavedSearchSpy });
+        });
+
+        afterAll(() => {
+            wrapper.setProps({ loadMoreSavedSearch });
+        });
+
+        describe('loadMore', () => {
+            afterEach(() => {
+                loadMoreSavedSearchSpy.mockClear();
+                wrapper.setProps({ hasMoreSavedSearches: false });
+            });
+
+            describe('when the user has scrolled near the bottom of the screen', () => {
+                describe('when there are more saved searches to load', () => {
+                    beforeEach(() => {
+                        wrapper.setProps({ hasMoreSavedSearches: true });
+                    });
+
+                    it('should load more saved searches', () => {
+                        wrapper.instance().loadMore();
+
+                        expect(loadMoreSavedSearchSpy).toHaveBeenCalled();
+                    });
+                });
+
+                describe('when all saved searches have been loaded', () => {
+                    it('should not load more saved searches', () => {
+                        wrapper.instance().loadMore();
+
+                        expect(loadMoreSavedSearchSpy).not.toHaveBeenCalled();
+                    });
+                });
+            });
+
+            describe('when the user has not scrolled near the bottom of the screen', () => {
+                beforeAll(() => {
+                    isNearBottom.mockImplementation(() => false);
+                });
+
+                afterAll(() => {
+                    isNearBottom.mockImplementation(() => true);
+                });
+
+                describe('when there are more saved searches to load', () => {
+                    beforeEach(() => {
+                        wrapper.setProps({ hasMoreSavedSearches: true });
+                    });
+
+                    it('should not load more saved searches', () => {
+                        wrapper.instance().loadMore();
+
+                        expect(loadMoreSavedSearchSpy).not.toHaveBeenCalled();
+                    });
+                });
+
+                describe('when all saved searches have been loaded', () => {
+                    it('should not load more saved searches', () => {
+                        wrapper.instance().loadMore();
+
+                        expect(loadMoreSavedSearchSpy).not.toHaveBeenCalled();
+                    });
+                });
+            });
         });
     });
 });
