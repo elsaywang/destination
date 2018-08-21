@@ -16,12 +16,12 @@ function Nav(props) {
             variant="compact"
             onChange={noOp}>
             <Tab selected={props.location.pathname === '/'}>
-                <NavLink to="/" className={styles.link}>
+                <NavLink to="/" className={styles.link} data-test="dashboard-nav-link">
                     Dashboard
                 </NavLink>
             </Tab>
             <Tab selected={props.location.pathname === '/search'}>
-                <NavLink to="/search" className={styles.link}>
+                <NavLink to="/search" className={styles.link} data-test="search-nav-link">
                     Search
                 </NavLink>
             </Tab>

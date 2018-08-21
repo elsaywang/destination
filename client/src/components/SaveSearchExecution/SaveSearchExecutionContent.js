@@ -58,18 +58,20 @@ class SaveSearchExecutionContent extends Component {
                 </div>
                 <Label value={defaultSorting} labelFor={defaultSorting}>
                     <Select
+                        data-test="save-this-search-sort-column"
                         options={sortingOptions}
                         onChange={this.props.onDefaultSortingChange}
                         defaultValue={defaultSortingKey}
                     />
                     <div className={styles.contentRadioGroup}>
-                        <RadioGroup>
+                        <RadioGroup data-test="save-this-search-sort-direction">
                             {radioGroupOptions.map(({ label, value }) => (
                                 <Radio
                                     key={value}
                                     {...{ label, value }}
                                     checked={value === descending}
                                     onChange={this.handleRadioChange}
+                                    data-test={`save-this-search-sort-${value}`}
                                 />
                             ))}
                         </RadioGroup>

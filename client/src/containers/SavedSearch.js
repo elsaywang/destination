@@ -16,7 +16,9 @@ class SavedSearch extends Component {
 
         return (
             <div data-test="saved-search">
-                <Heading size={6}>Saved Search</Heading>
+                <Heading size={6} data-test="saved-search-header">
+                    Saved Search
+                </Heading>
                 {!hasError && (
                     <WrappedSavedSearchTagList
                         data-test="wrapped-saved-search-tag-list"

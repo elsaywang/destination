@@ -55,6 +55,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Heading
+          data-test="saved-search-header"
           size={6}
 >
           Saved Search
@@ -107,6 +108,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Saved Search",
+          "data-test": "saved-search-header",
           "size": 6,
         },
         "ref": null,
@@ -175,6 +177,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Heading
+            data-test="saved-search-header"
             size={6}
 >
             Saved Search
@@ -227,6 +230,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Saved Search",
+            "data-test": "saved-search-header",
             "size": 6,
           },
           "ref": null,

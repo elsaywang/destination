@@ -55,6 +55,7 @@ ShallowWrapper {
           value="Default Sorting"
 >
           <Select
+                    data-test="save-this-search-sort-column"
                     defaultValue="totalCount"
                     onChange={[Function]}
                     options={
@@ -78,18 +79,21 @@ ShallowWrapper {
                     className="contentRadioGroup"
           >
                     <RadioGroup
+                              data-test="save-this-search-sort-direction"
                               labelsBelow={false}
                               onChange={[Function]}
                               vertical={false}
                     >
                               <Radio
                                         checked={true}
+                                        data-test="save-this-search-sort-descending"
                                         label="Descending"
                                         onChange={[Function]}
                                         value="descending"
                               />
                               <Radio
                                         checked={false}
+                                        data-test="save-this-search-sort-ascending"
                                         label="Ascending"
                                         onChange={[Function]}
                                         value="ascending"
@@ -184,6 +188,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Select
+              data-test="save-this-search-sort-column"
               defaultValue="totalCount"
               onChange={[Function]}
               options={
@@ -207,18 +212,21 @@ ShallowWrapper {
               className="contentRadioGroup"
 >
               <RadioGroup
+                            data-test="save-this-search-sort-direction"
                             labelsBelow={false}
                             onChange={[Function]}
                             vertical={false}
               >
                             <Radio
                                           checked={true}
+                                          data-test="save-this-search-sort-descending"
                                           label="Descending"
                                           onChange={[Function]}
                                           value="descending"
                             />
                             <Radio
                                           checked={false}
+                                          data-test="save-this-search-sort-ascending"
                                           label="Ascending"
                                           onChange={[Function]}
                                           value="ascending"
@@ -236,6 +244,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "data-test": "save-this-search-sort-column",
               "defaultValue": "totalCount",
               "onChange": [Function],
               "options": Array [
@@ -263,18 +272,21 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <RadioGroup
+                data-test="save-this-search-sort-direction"
                 labelsBelow={false}
                 onChange={[Function]}
                 vertical={false}
 >
                 <Radio
                                 checked={true}
+                                data-test="save-this-search-sort-descending"
                                 label="Descending"
                                 onChange={[Function]}
                                 value="descending"
                 />
                 <Radio
                                 checked={false}
+                                data-test="save-this-search-sort-ascending"
                                 label="Ascending"
                                 onChange={[Function]}
                                 value="ascending"
@@ -291,17 +303,20 @@ ShallowWrapper {
                 "children": Array [
                   <Radio
                     checked={true}
+                    data-test="save-this-search-sort-descending"
                     label="Descending"
                     onChange={[Function]}
                     value="descending"
 />,
                   <Radio
                     checked={false}
+                    data-test="save-this-search-sort-ascending"
                     label="Ascending"
                     onChange={[Function]}
                     value="ascending"
 />,
                 ],
+                "data-test": "save-this-search-sort-direction",
                 "labelsBelow": false,
                 "onChange": [Function],
                 "vertical": false,
@@ -314,6 +329,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "checked": true,
+                    "data-test": "save-this-search-sort-descending",
                     "label": "Descending",
                     "onChange": [Function],
                     "value": "descending",
@@ -328,6 +344,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "checked": false,
+                    "data-test": "save-this-search-sort-ascending",
                     "label": "Ascending",
                     "onChange": [Function],
                     "value": "ascending",
@@ -387,6 +404,7 @@ ShallowWrapper {
             value="Default Sorting"
 >
             <Select
+                        data-test="save-this-search-sort-column"
                         defaultValue="totalCount"
                         onChange={[Function]}
                         options={
@@ -410,18 +428,21 @@ ShallowWrapper {
                         className="contentRadioGroup"
             >
                         <RadioGroup
+                                    data-test="save-this-search-sort-direction"
                                     labelsBelow={false}
                                     onChange={[Function]}
                                     vertical={false}
                         >
                                     <Radio
                                                 checked={true}
+                                                data-test="save-this-search-sort-descending"
                                                 label="Descending"
                                                 onChange={[Function]}
                                                 value="descending"
                                     />
                                     <Radio
                                                 checked={false}
+                                                data-test="save-this-search-sort-ascending"
                                                 label="Ascending"
                                                 onChange={[Function]}
                                                 value="ascending"
@@ -516,6 +537,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Select
+                data-test="save-this-search-sort-column"
                 defaultValue="totalCount"
                 onChange={[Function]}
                 options={
@@ -539,18 +561,21 @@ ShallowWrapper {
                 className="contentRadioGroup"
 >
                 <RadioGroup
+                                data-test="save-this-search-sort-direction"
                                 labelsBelow={false}
                                 onChange={[Function]}
                                 vertical={false}
                 >
                                 <Radio
                                                 checked={true}
+                                                data-test="save-this-search-sort-descending"
                                                 label="Descending"
                                                 onChange={[Function]}
                                                 value="descending"
                                 />
                                 <Radio
                                                 checked={false}
+                                                data-test="save-this-search-sort-ascending"
                                                 label="Ascending"
                                                 onChange={[Function]}
                                                 value="ascending"
@@ -568,6 +593,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "data-test": "save-this-search-sort-column",
                 "defaultValue": "totalCount",
                 "onChange": [Function],
                 "options": Array [
@@ -595,18 +621,21 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <RadioGroup
+                  data-test="save-this-search-sort-direction"
                   labelsBelow={false}
                   onChange={[Function]}
                   vertical={false}
 >
                   <Radio
                                     checked={true}
+                                    data-test="save-this-search-sort-descending"
                                     label="Descending"
                                     onChange={[Function]}
                                     value="descending"
                   />
                   <Radio
                                     checked={false}
+                                    data-test="save-this-search-sort-ascending"
                                     label="Ascending"
                                     onChange={[Function]}
                                     value="ascending"
@@ -623,17 +652,20 @@ ShallowWrapper {
                   "children": Array [
                     <Radio
                       checked={true}
+                      data-test="save-this-search-sort-descending"
                       label="Descending"
                       onChange={[Function]}
                       value="descending"
 />,
                     <Radio
                       checked={false}
+                      data-test="save-this-search-sort-ascending"
                       label="Ascending"
                       onChange={[Function]}
                       value="ascending"
 />,
                   ],
+                  "data-test": "save-this-search-sort-direction",
                   "labelsBelow": false,
                   "onChange": [Function],
                   "vertical": false,
@@ -646,6 +678,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "checked": true,
+                      "data-test": "save-this-search-sort-descending",
                       "label": "Descending",
                       "onChange": [Function],
                       "value": "descending",
@@ -660,6 +693,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "checked": false,
+                      "data-test": "save-this-search-sort-ascending",
                       "label": "Ascending",
                       "onChange": [Function],
                       "value": "ascending",
@@ -753,6 +787,7 @@ ShallowWrapper {
           value="Default Sorting"
 >
           <Select
+                    data-test="save-this-search-sort-column"
                     defaultValue="totalCount"
                     onChange={[Function]}
                     options={
@@ -776,18 +811,21 @@ ShallowWrapper {
                     className="contentRadioGroup"
           >
                     <RadioGroup
+                              data-test="save-this-search-sort-direction"
                               labelsBelow={false}
                               onChange={[Function]}
                               vertical={false}
                     >
                               <Radio
                                         checked={true}
+                                        data-test="save-this-search-sort-descending"
                                         label="Descending"
                                         onChange={[Function]}
                                         value="descending"
                               />
                               <Radio
                                         checked={false}
+                                        data-test="save-this-search-sort-ascending"
                                         label="Ascending"
                                         onChange={[Function]}
                                         value="ascending"
@@ -882,6 +920,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Select
+              data-test="save-this-search-sort-column"
               defaultValue="totalCount"
               onChange={[Function]}
               options={
@@ -905,18 +944,21 @@ ShallowWrapper {
               className="contentRadioGroup"
 >
               <RadioGroup
+                            data-test="save-this-search-sort-direction"
                             labelsBelow={false}
                             onChange={[Function]}
                             vertical={false}
               >
                             <Radio
                                           checked={true}
+                                          data-test="save-this-search-sort-descending"
                                           label="Descending"
                                           onChange={[Function]}
                                           value="descending"
                             />
                             <Radio
                                           checked={false}
+                                          data-test="save-this-search-sort-ascending"
                                           label="Ascending"
                                           onChange={[Function]}
                                           value="ascending"
@@ -934,6 +976,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "data-test": "save-this-search-sort-column",
               "defaultValue": "totalCount",
               "onChange": [Function],
               "options": Array [
@@ -961,18 +1004,21 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <RadioGroup
+                data-test="save-this-search-sort-direction"
                 labelsBelow={false}
                 onChange={[Function]}
                 vertical={false}
 >
                 <Radio
                                 checked={true}
+                                data-test="save-this-search-sort-descending"
                                 label="Descending"
                                 onChange={[Function]}
                                 value="descending"
                 />
                 <Radio
                                 checked={false}
+                                data-test="save-this-search-sort-ascending"
                                 label="Ascending"
                                 onChange={[Function]}
                                 value="ascending"
@@ -989,17 +1035,20 @@ ShallowWrapper {
                 "children": Array [
                   <Radio
                     checked={true}
+                    data-test="save-this-search-sort-descending"
                     label="Descending"
                     onChange={[Function]}
                     value="descending"
 />,
                   <Radio
                     checked={false}
+                    data-test="save-this-search-sort-ascending"
                     label="Ascending"
                     onChange={[Function]}
                     value="ascending"
 />,
                 ],
+                "data-test": "save-this-search-sort-direction",
                 "labelsBelow": false,
                 "onChange": [Function],
                 "vertical": false,
@@ -1012,6 +1061,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "checked": true,
+                    "data-test": "save-this-search-sort-descending",
                     "label": "Descending",
                     "onChange": [Function],
                     "value": "descending",
@@ -1026,6 +1076,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "checked": false,
+                    "data-test": "save-this-search-sort-ascending",
                     "label": "Ascending",
                     "onChange": [Function],
                     "value": "ascending",
@@ -1085,6 +1136,7 @@ ShallowWrapper {
             value="Default Sorting"
 >
             <Select
+                        data-test="save-this-search-sort-column"
                         defaultValue="totalCount"
                         onChange={[Function]}
                         options={
@@ -1108,18 +1160,21 @@ ShallowWrapper {
                         className="contentRadioGroup"
             >
                         <RadioGroup
+                                    data-test="save-this-search-sort-direction"
                                     labelsBelow={false}
                                     onChange={[Function]}
                                     vertical={false}
                         >
                                     <Radio
                                                 checked={true}
+                                                data-test="save-this-search-sort-descending"
                                                 label="Descending"
                                                 onChange={[Function]}
                                                 value="descending"
                                     />
                                     <Radio
                                                 checked={false}
+                                                data-test="save-this-search-sort-ascending"
                                                 label="Ascending"
                                                 onChange={[Function]}
                                                 value="ascending"
@@ -1214,6 +1269,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Select
+                data-test="save-this-search-sort-column"
                 defaultValue="totalCount"
                 onChange={[Function]}
                 options={
@@ -1237,18 +1293,21 @@ ShallowWrapper {
                 className="contentRadioGroup"
 >
                 <RadioGroup
+                                data-test="save-this-search-sort-direction"
                                 labelsBelow={false}
                                 onChange={[Function]}
                                 vertical={false}
                 >
                                 <Radio
                                                 checked={true}
+                                                data-test="save-this-search-sort-descending"
                                                 label="Descending"
                                                 onChange={[Function]}
                                                 value="descending"
                                 />
                                 <Radio
                                                 checked={false}
+                                                data-test="save-this-search-sort-ascending"
                                                 label="Ascending"
                                                 onChange={[Function]}
                                                 value="ascending"
@@ -1266,6 +1325,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "data-test": "save-this-search-sort-column",
                 "defaultValue": "totalCount",
                 "onChange": [Function],
                 "options": Array [
@@ -1293,18 +1353,21 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <RadioGroup
+                  data-test="save-this-search-sort-direction"
                   labelsBelow={false}
                   onChange={[Function]}
                   vertical={false}
 >
                   <Radio
                                     checked={true}
+                                    data-test="save-this-search-sort-descending"
                                     label="Descending"
                                     onChange={[Function]}
                                     value="descending"
                   />
                   <Radio
                                     checked={false}
+                                    data-test="save-this-search-sort-ascending"
                                     label="Ascending"
                                     onChange={[Function]}
                                     value="ascending"
@@ -1321,17 +1384,20 @@ ShallowWrapper {
                   "children": Array [
                     <Radio
                       checked={true}
+                      data-test="save-this-search-sort-descending"
                       label="Descending"
                       onChange={[Function]}
                       value="descending"
 />,
                     <Radio
                       checked={false}
+                      data-test="save-this-search-sort-ascending"
                       label="Ascending"
                       onChange={[Function]}
                       value="ascending"
 />,
                   ],
+                  "data-test": "save-this-search-sort-direction",
                   "labelsBelow": false,
                   "onChange": [Function],
                   "vertical": false,
@@ -1344,6 +1410,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "checked": true,
+                      "data-test": "save-this-search-sort-descending",
                       "label": "Descending",
                       "onChange": [Function],
                       "value": "descending",
@@ -1358,6 +1425,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "checked": false,
+                      "data-test": "save-this-search-sort-ascending",
                       "label": "Ascending",
                       "onChange": [Function],
                       "value": "ascending",
