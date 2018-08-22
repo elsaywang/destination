@@ -137,15 +137,19 @@ class Search extends Component {
                     <Well>
                         <div data-test="search-form">
                             {this.props.advanced && (
-                                <AdvancedSearch
-                                    enabled={this.props.advanced}
-                                    onReportSuiteChange={this.props.onReportSuiteChange}
-                                    onReportSuiteSelect={value =>
-                                        this.props.onReportSuiteSelect(value)
-                                    }
-                                    sourceName={this.props.source.name}
-                                    reportSuites={this.props.reportSuites}
-                                />
+                                <GridRow>
+                                    <GridColumn size={12} className={styles.row}>
+                                        <AdvancedSearch
+                                            enabled={this.props.advanced}
+                                            onReportSuiteChange={this.props.onReportSuiteChange}
+                                            onReportSuiteSelect={value =>
+                                                this.props.onReportSuiteSelect(value)
+                                            }
+                                            sourceName={this.props.source.name}
+                                            reportSuites={this.props.reportSuites}
+                                        />
+                                    </GridColumn>
+                                </GridRow>
                             )}
 
                             <GridRow>
