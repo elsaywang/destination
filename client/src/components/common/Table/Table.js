@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import { TableView } from '@react/react-spectrum/TableView';
 import DataSource from './DataSource';
 import {
@@ -8,6 +9,7 @@ import {
     defaultMaxRows,
     defaultHeadHeight,
 } from '../../../constants/rows';
+import styles from './Table.css';
 
 /**
  * Table component that wraps the react-spectrum table components
@@ -80,7 +82,10 @@ class Table extends Component {
         const height = this.getTableHeight({ items, rowHeight, allowsSelection });
 
         return (
-            <div data-test={dataTest} className="table-wrapper" style={{ height }}>
+            <div
+                data-test={dataTest}
+                className={classNames('table-wrapper', styles.tableWrapper)}
+                style={{ height }}>
                 <TableView
                     dataSource={this.state.dataSource}
                     renderCell={renderCell}

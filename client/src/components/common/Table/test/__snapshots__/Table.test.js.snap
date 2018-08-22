@@ -87,7 +87,7 @@ ShallowWrapper {
         renderCell={[Function]}
         rowHeight={undefined}
 />,
-      "className": "table-wrapper",
+      "className": "table-wrapper tableWrapper",
       "data-test": undefined,
       "style": Object {
         "height": "136px",
@@ -182,7 +182,7 @@ ShallowWrapper {
           renderCell={[Function]}
           rowHeight={undefined}
 />,
-        "className": "table-wrapper",
+        "className": "table-wrapper tableWrapper",
         "data-test": undefined,
         "style": Object {
           "height": "136px",
