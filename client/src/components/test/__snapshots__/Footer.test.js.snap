@@ -22,7 +22,7 @@ ShallowWrapper {
 >
           <a
                     className="footerLinks"
-                    href="https://experiencecloud.adobe.com.com/resources/help/en_US/aam/"
+                    href="https://experiencecloud.adobe.com/resources/help/en_US/aam/"
                     rel="noopener"
                     target="_blank"
           >
@@ -76,7 +76,7 @@ ShallowWrapper {
             Array [
               <a
                 className="footerLinks"
-                href="https://experiencecloud.adobe.com.com/resources/help/en_US/aam/"
+                href="https://experiencecloud.adobe.com/resources/help/en_US/aam/"
                 rel="noopener"
                 target="_blank"
 >
@@ -123,7 +123,7 @@ ShallowWrapper {
             "props": Object {
               "children": "Help",
               "className": "footerLinks",
-              "href": "https://experiencecloud.adobe.com.com/resources/help/en_US/aam/",
+              "href": "https://experiencecloud.adobe.com/resources/help/en_US/aam/",
               "rel": "noopener",
               "target": "_blank",
             },
@@ -217,7 +217,7 @@ ShallowWrapper {
 >
             <a
                         className="footerLinks"
-                        href="https://experiencecloud.adobe.com.com/resources/help/en_US/aam/"
+                        href="https://experiencecloud.adobe.com/resources/help/en_US/aam/"
                         rel="noopener"
                         target="_blank"
             >
@@ -271,7 +271,7 @@ ShallowWrapper {
               Array [
                 <a
                   className="footerLinks"
-                  href="https://experiencecloud.adobe.com.com/resources/help/en_US/aam/"
+                  href="https://experiencecloud.adobe.com/resources/help/en_US/aam/"
                   rel="noopener"
                   target="_blank"
 >
@@ -318,7 +318,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "Help",
                 "className": "footerLinks",
-                "href": "https://experiencecloud.adobe.com.com/resources/help/en_US/aam/",
+                "href": "https://experiencecloud.adobe.com/resources/help/en_US/aam/",
                 "rel": "noopener",
                 "target": "_blank",
               },
