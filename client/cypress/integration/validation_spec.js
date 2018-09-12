@@ -49,7 +49,7 @@ describe('Validation Spec', function() {
             beforeEach(function() {
                 cy.get('.operator:eq(1)')
                     .click()
-                    .get('.spectrum-SelectList-item:nth-child(2)')
+                    .get('.spectrum-Menu-item:nth-child(2)')
                     .click();
                 cy.get('[data-test="value-search"]:eq(1)').type('a');
             });

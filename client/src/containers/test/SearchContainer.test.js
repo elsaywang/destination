@@ -464,6 +464,14 @@ describe('<SearchContainer /> component', () => {
             wrapper.instance().handleSignalTypeChange(newSignalType);
             expect(wrapper.state('source').sourceType).toBe(newSignalType);
         });
+
+        it('.handleSignalTypeChange() for `ONBOARDED` signalType enables the dataSources filter', () => {
+            const onBoarded = 'ONBOARDED';
+            wrapper.instance().handleSignalTypeChange(onBoarded);
+            expect(wrapper.state('source').sourceType).toBe(onBoarded);
+            expect(wrapper.instance().isFilteredByOnboardedRecords()).toBeTruthy();
+            expect(wrapper.find('[data-test="data-source-filter"]')).toBeTruthy();
+        });
     });
 
     describe('handling search events', () => {

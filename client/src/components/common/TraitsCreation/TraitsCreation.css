@@ -1,13 +1,12 @@
 :local(.singleCreationlinkText) {
     display: inline-flex;
     font-size: 0.875rem;
-    margin-left: 0.5em;
-    padding-bottom: 0.1em;
+    padding-left: 0.15em;
     vertical-align: text-bottom;
 }
 :local(.singleCreation) {
     cursor: pointer;
-    margin-left: -0.5em;
+    margin-left: -1.05em;
     white-space: nowrap;
 }
 

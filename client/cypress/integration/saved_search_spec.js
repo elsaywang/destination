@@ -19,7 +19,7 @@ describe('Saved Search Integration Test', () => {
 
         cy.visit('#/search');
     });
-    it('requests user\'s saved searches', () => {
+    it("requests user's saved searches", () => {
         cy.wait('@fetchSavedSearch')
             .its('status')
             .should('eq', 200);
@@ -34,7 +34,7 @@ describe('Saved Search Integration Test', () => {
             .should('exist')
             .should('have.length', 5);
 
-        cy.get('[data-saved-search-id]:first').should(($tag) => {
+        cy.get('[data-saved-search-id]:first').should($tag => {
             expect($tag.text()).to.eq(savedSearchResponse.savedSearch[0].name);
         });
 
@@ -67,11 +67,11 @@ describe('Saved Search Integration Test', () => {
                 savedSearchResponse.savedSearch[0].keyValuePairs.length,
             );
 
-            cy.get('[data-test="key-search-field"]:first').should(($value) => {
+            cy.get('[data-test="key-search-field"]:first').should($value => {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].keyValuePairs[0].key);
             });
 
-            cy.get('[data-test="value-search"]:first').should(($value) => {
+            cy.get('[data-test="value-search"]:first').should($value => {
                 expect($value.val()).to.eq(
                     String(savedSearchResponse.savedSearch[0].keyValuePairs[0].value),
                 );
@@ -81,7 +81,7 @@ describe('Saved Search Integration Test', () => {
         it('should pre-fill Advanced Search fields', () => {
             cy.get('[data-test="advanced-search-toggle"]').should('be.checked');
 
-            cy.get('[data-test="advanced-search-filter"]').should(($value) => {
+            cy.get('[data-test="advanced-search-filter"]').should($value => {
                 expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].source.name);
             });
         });
@@ -89,7 +89,7 @@ describe('Saved Search Integration Test', () => {
         it('should pre-fill Signal Status field', () => {
             const signalStatus = savedSearchResponse.savedSearch[0].signalStatus;
 
-            cy.get('.signal-status').should(($value) => {
+            cy.get('.signal-status').should($value => {
                 expect($value.text()).to.include(
                     signalStatus.slice(0, 1) + signalStatus.slice(1).toLowerCase(),
                 );
@@ -97,13 +97,15 @@ describe('Saved Search Integration Test', () => {
         });
 
         it('should pre-fill View Records For fields', () => {
-            cy.get('[data-test="view-records"]').should(($value) => {
-                expect($value.val()).to.eq(savedSearchResponse.savedSearch[0].viewRecordsFor);
-            });
+            cy.get('[data-test="view-records"]').should(
+                'have.attr',
+                'value',
+                savedSearchResponse.savedSearch[0].viewRecordsFor,
+            );
         });
 
         it('should pre-fill Minimum Counts field', () => {
-            cy.get('[data-test="min-counts"]').should(($value) => {
+            cy.get('[data-test="min-counts"]').should($value => {
                 expect($value.val()).to.eq(
                     String(savedSearchResponse.savedSearch[0].minEventFires),
                 );
@@ -115,7 +117,7 @@ describe('Saved Search Integration Test', () => {
         });
 
         describe('when the delete button next to it is clicked', () => {
-            it('should remove that saved search from user\'s saved search', () => {
+            it("should remove that saved search from user's saved search", () => {
                 const mockResponseAfterDelete = savedSearchResponse.savedSearch.slice(1);
 
                 cy.route(
@@ -124,7 +126,7 @@ describe('Saved Search Integration Test', () => {
                     mockResponseAfterDelete,
                 ).as('deleteSavedSearch');
 
-                cy.get('#isCurrentSearch ~ div > [data-test="saved-search-delete-button"]').click();
+                cy.get('#isCurrentSearch ~ [data-test="saved-search-delete-button"]').click();
 
                 cy.get(
                     '[data-test="saved-search-delete-modal"] ~ .spectrum-Dialog-footer .spectrum-Button--warning',
@@ -185,7 +187,7 @@ describe('Saved Search Integration Test', () => {
                 ).as('createSavedSearch');
             });
 
-            it('should save the user\'s current search with typed searchName', () => {
+            it("should save the user's current search with typed searchName", () => {
                 const searchName = 'Test1234';
 
                 cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
@@ -220,7 +222,7 @@ describe('Saved Search Integration Test', () => {
                 ).as('createSavedSearch');
             });
 
-            it('should save the user\'s current search with formattedSignal as default searchName if name text field is not filled', () => {
+            it("should save the user's current search with formattedSignal as default searchName if name text field is not filled", () => {
                 const defaultName = '""=""';
 
                 cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
@@ -250,7 +252,7 @@ describe('Saved Search Integration Test', () => {
                 ).as('createSavedSearchFailed');
             });
 
-            it('should not save the user\'s current search', () => {
+            it("should not save the user's current search", () => {
                 const searchName = 'Test1234';
 
                 cy.get('[data-test="save-this-search-dialog-content"]').within(() => {
@@ -368,13 +370,14 @@ describe('Saved Search Integration Test', () => {
 
         it('clicking "Top Unused Signals" should populate form correctly and call correct search', () => {
             cy.get('@topUnusedSignalsTag').click();
-            cy.get('[data-test="key-search-field"]').should('have.value', '');
-            cy.get('[data-test="operator"]').should('have.value', '==');
-            cy.get('[data-test="value-search"]').should('have.value', '');
+            cy.wait('@fetchSearchResults');
+            cy.get('[data-test="key-search-field"]').should('have.attr', 'value', '');
+            cy.get('[data-test="operator"]').should('have.attr', 'value', '==');
+            cy.get('[data-test="value-search"]').should('have.attr', 'value', '');
             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
-            cy.get('[data-test="signal-status"]').should('have.value', 'UNUSED');
-            cy.get('[data-test="view-records"]').should('have.value', '7D');
-            cy.get('[data-test="min-counts"]').should('have.value', '1000');
+            cy.get('[data-test="signal-status"]').should('have.attr', 'value', 'UNUSED');
+            cy.get('[data-test="view-records"]').should('have.attr', 'value', '7D');
+            cy.get('[data-test="min-counts"]').should('have.attr', 'value', '1000');
 
             cy.get('@fetchSearchResults')
                 .its('status')
@@ -383,13 +386,14 @@ describe('Saved Search Integration Test', () => {
 
         it('clicking "New Unused Signals" should populate form correctly and call correct search, including `filterNewSignals: true`', () => {
             cy.get('@newUnusedSignalsTag').click();
-            cy.get('[data-test="key-search-field"]').should('have.value', '');
-            cy.get('[data-test="operator"]').should('have.value', '==');
-            cy.get('[data-test="value-search"]').should('have.value', '');
+            cy.wait('@fetchSearchResults');
+            cy.get('[data-test="key-search-field"]').should('have.attr', 'value', '');
+            cy.get('[data-test="operator"]').should('have.attr', 'value', '==');
+            cy.get('[data-test="value-search"]').should('have.attr', 'value', '');
             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
-            cy.get('[data-test="signal-status"]').should('have.value', 'UNUSED');
-            cy.get('[data-test="view-records"]').should('have.value', '7D');
-            cy.get('[data-test="min-counts"]').should('have.value', '1000');
+            cy.get('[data-test="signal-status"]').should('have.attr', 'value', 'UNUSED');
+            cy.get('[data-test="view-records"]').should('have.attr', 'value', '7D');
+            cy.get('[data-test="min-counts"]').should('have.attr', 'value', '1000');
 
             cy.get('@fetchSearchResults')
                 .its('status')
@@ -421,7 +425,7 @@ describe('Saved Search Integration Test', () => {
             cy.get('[data-test="save-this-search-name-field"]').type('Test saved search');
             cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
 
-            cy.getRequestParams('@createSavedSearch').then((savedSearchList) => {
+            cy.getRequestParams('@createSavedSearch').then(savedSearchList => {
                 expect(
                     savedSearchList.filter(savedSearch => savedSearch.presetId !== null).length,
                 ).to.eq(0);
@@ -442,7 +446,7 @@ describe('Saved Search Integration Test', () => {
             cy.get('[data-test="overlay-tooltip"')
                 .should('be.visible')
                 .within(() => {
-                    cy.get('svg').trigger('mouseover');
+                    cy.get('button').trigger('mouseover');
                 });
 
             cy.get('[data-test="saved-search-limit-message"]').should(

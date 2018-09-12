@@ -22,38 +22,38 @@ ShallowWrapper {
       "aria-valuenow": undefined,
       "children": Array [
         <div
-          className="spectrum-Loader-track"
+          className="spectrum-CircleLoader-track"
 />,
         <div
-          className="spectrum-Loader-fills"
+          className="spectrum-CircleLoader-fills"
 >
           <div
-                    className="spectrum-Loader-fill-mask-1"
+                    className="spectrum-CircleLoader-fillMask1"
           >
                     <div
-                              className="spectrum-Loader-fill-submask-1"
+                              className="spectrum-CircleLoader-fillSubMask1"
                               style={Object {}}
                     >
                               <div
-                                        className="spectrum-Loader-fill"
+                                        className="spectrum-CircleLoader-fill"
                               />
                     </div>
           </div>
           <div
-                    className="spectrum-Loader-fill-mask-2"
+                    className="spectrum-CircleLoader-fillMask2"
           >
                     <div
-                              className="spectrum-Loader-fill-submask-2"
+                              className="spectrum-CircleLoader-fillSubMask2"
                               style={Object {}}
                     >
                               <div
-                                        className="spectrum-Loader-fill"
+                                        className="spectrum-CircleLoader-fill"
                               />
                     </div>
           </div>
 </div>,
       ],
-      "className": "spectrum-Loader spectrum-Loader--indeterminate",
+      "className": "spectrum-CircleLoader spectrum-CircleLoader--indeterminate",
       "role": "progressbar",
     },
     "ref": null,
@@ -63,7 +63,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "spectrum-Loader-track",
+          "className": "spectrum-CircleLoader-track",
         },
         "ref": null,
         "rendered": null,
@@ -76,31 +76,31 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="spectrum-Loader-fill-mask-1"
+              className="spectrum-CircleLoader-fillMask1"
 >
               <div
-                            className="spectrum-Loader-fill-submask-1"
+                            className="spectrum-CircleLoader-fillSubMask1"
                             style={Object {}}
               >
                             <div
-                                          className="spectrum-Loader-fill"
+                                          className="spectrum-CircleLoader-fill"
                             />
               </div>
 </div>,
             <div
-              className="spectrum-Loader-fill-mask-2"
+              className="spectrum-CircleLoader-fillMask2"
 >
               <div
-                            className="spectrum-Loader-fill-submask-2"
+                            className="spectrum-CircleLoader-fillSubMask2"
                             style={Object {}}
               >
                             <div
-                                          className="spectrum-Loader-fill"
+                                          className="spectrum-CircleLoader-fill"
                             />
               </div>
 </div>,
           ],
-          "className": "spectrum-Loader-fills",
+          "className": "spectrum-CircleLoader-fills",
         },
         "ref": null,
         "rendered": Array [
@@ -110,14 +110,14 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <div
-                className="spectrum-Loader-fill-submask-1"
+                className="spectrum-CircleLoader-fillSubMask1"
                 style={Object {}}
 >
                 <div
-                                className="spectrum-Loader-fill"
+                                className="spectrum-CircleLoader-fill"
                 />
 </div>,
-              "className": "spectrum-Loader-fill-mask-1",
+              "className": "spectrum-CircleLoader-fillMask1",
             },
             "ref": null,
             "rendered": Object {
@@ -126,9 +126,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <div
-                  className="spectrum-Loader-fill"
+                  className="spectrum-CircleLoader-fill"
 />,
-                "className": "spectrum-Loader-fill-submask-1",
+                "className": "spectrum-CircleLoader-fillSubMask1",
                 "style": Object {},
               },
               "ref": null,
@@ -137,7 +137,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "spectrum-Loader-fill",
+                  "className": "spectrum-CircleLoader-fill",
                 },
                 "ref": null,
                 "rendered": null,
@@ -153,14 +153,14 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <div
-                className="spectrum-Loader-fill-submask-2"
+                className="spectrum-CircleLoader-fillSubMask2"
                 style={Object {}}
 >
                 <div
-                                className="spectrum-Loader-fill"
+                                className="spectrum-CircleLoader-fill"
                 />
 </div>,
-              "className": "spectrum-Loader-fill-mask-2",
+              "className": "spectrum-CircleLoader-fillMask2",
             },
             "ref": null,
             "rendered": Object {
@@ -169,9 +169,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <div
-                  className="spectrum-Loader-fill"
+                  className="spectrum-CircleLoader-fill"
 />,
-                "className": "spectrum-Loader-fill-submask-2",
+                "className": "spectrum-CircleLoader-fillSubMask2",
                 "style": Object {},
               },
               "ref": null,
@@ -180,7 +180,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "spectrum-Loader-fill",
+                  "className": "spectrum-CircleLoader-fill",
                 },
                 "ref": null,
                 "rendered": null,
@@ -207,38 +207,38 @@ ShallowWrapper {
         "aria-valuenow": undefined,
         "children": Array [
           <div
-            className="spectrum-Loader-track"
+            className="spectrum-CircleLoader-track"
 />,
           <div
-            className="spectrum-Loader-fills"
+            className="spectrum-CircleLoader-fills"
 >
             <div
-                        className="spectrum-Loader-fill-mask-1"
+                        className="spectrum-CircleLoader-fillMask1"
             >
                         <div
-                                    className="spectrum-Loader-fill-submask-1"
+                                    className="spectrum-CircleLoader-fillSubMask1"
                                     style={Object {}}
                         >
                                     <div
-                                                className="spectrum-Loader-fill"
+                                                className="spectrum-CircleLoader-fill"
                                     />
                         </div>
             </div>
             <div
-                        className="spectrum-Loader-fill-mask-2"
+                        className="spectrum-CircleLoader-fillMask2"
             >
                         <div
-                                    className="spectrum-Loader-fill-submask-2"
+                                    className="spectrum-CircleLoader-fillSubMask2"
                                     style={Object {}}
                         >
                                     <div
-                                                className="spectrum-Loader-fill"
+                                                className="spectrum-CircleLoader-fill"
                                     />
                         </div>
             </div>
 </div>,
         ],
-        "className": "spectrum-Loader spectrum-Loader--indeterminate",
+        "className": "spectrum-CircleLoader spectrum-CircleLoader--indeterminate",
         "role": "progressbar",
       },
       "ref": null,
@@ -248,7 +248,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "spectrum-Loader-track",
+            "className": "spectrum-CircleLoader-track",
           },
           "ref": null,
           "rendered": null,
@@ -261,31 +261,31 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="spectrum-Loader-fill-mask-1"
+                className="spectrum-CircleLoader-fillMask1"
 >
                 <div
-                                className="spectrum-Loader-fill-submask-1"
+                                className="spectrum-CircleLoader-fillSubMask1"
                                 style={Object {}}
                 >
                                 <div
-                                                className="spectrum-Loader-fill"
+                                                className="spectrum-CircleLoader-fill"
                                 />
                 </div>
 </div>,
               <div
-                className="spectrum-Loader-fill-mask-2"
+                className="spectrum-CircleLoader-fillMask2"
 >
                 <div
-                                className="spectrum-Loader-fill-submask-2"
+                                className="spectrum-CircleLoader-fillSubMask2"
                                 style={Object {}}
                 >
                                 <div
-                                                className="spectrum-Loader-fill"
+                                                className="spectrum-CircleLoader-fill"
                                 />
                 </div>
 </div>,
             ],
-            "className": "spectrum-Loader-fills",
+            "className": "spectrum-CircleLoader-fills",
           },
           "ref": null,
           "rendered": Array [
@@ -295,14 +295,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <div
-                  className="spectrum-Loader-fill-submask-1"
+                  className="spectrum-CircleLoader-fillSubMask1"
                   style={Object {}}
 >
                   <div
-                                    className="spectrum-Loader-fill"
+                                    className="spectrum-CircleLoader-fill"
                   />
 </div>,
-                "className": "spectrum-Loader-fill-mask-1",
+                "className": "spectrum-CircleLoader-fillMask1",
               },
               "ref": null,
               "rendered": Object {
@@ -311,9 +311,9 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <div
-                    className="spectrum-Loader-fill"
+                    className="spectrum-CircleLoader-fill"
 />,
-                  "className": "spectrum-Loader-fill-submask-1",
+                  "className": "spectrum-CircleLoader-fillSubMask1",
                   "style": Object {},
                 },
                 "ref": null,
@@ -322,7 +322,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "spectrum-Loader-fill",
+                    "className": "spectrum-CircleLoader-fill",
                   },
                   "ref": null,
                   "rendered": null,
@@ -338,14 +338,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <div
-                  className="spectrum-Loader-fill-submask-2"
+                  className="spectrum-CircleLoader-fillSubMask2"
                   style={Object {}}
 >
                   <div
-                                    className="spectrum-Loader-fill"
+                                    className="spectrum-CircleLoader-fill"
                   />
 </div>,
-                "className": "spectrum-Loader-fill-mask-2",
+                "className": "spectrum-CircleLoader-fillMask2",
               },
               "ref": null,
               "rendered": Object {
@@ -354,9 +354,9 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <div
-                    className="spectrum-Loader-fill"
+                    className="spectrum-CircleLoader-fill"
 />,
-                  "className": "spectrum-Loader-fill-submask-2",
+                  "className": "spectrum-CircleLoader-fillSubMask2",
                   "style": Object {},
                 },
                 "ref": null,
@@ -365,7 +365,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "spectrum-Loader-fill",
+                    "className": "spectrum-CircleLoader-fill",
                   },
                   "ref": null,
                   "rendered": null,

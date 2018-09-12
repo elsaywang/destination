@@ -5,6 +5,7 @@ import FieldLabel from '@react/react-spectrum/FieldLabel';
 import Info from '@react/react-spectrum/Icon/Info';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Tooltip from '@react/react-spectrum/Tooltip';
+import Button from '@react/react-spectrum/Button';
 import styles from './AdvancedSearch.css';
 
 const AdvancedSearch = ({
@@ -16,10 +17,10 @@ const AdvancedSearch = ({
 }) => {
     const options = reportSuites.map(rs => rs.suite);
     const renderLabel = () => (
-        <div>
-            Report Suite &nbsp;
+        <div className={styles.reportSuitesLabel}>
+            <span>Report Suite &nbsp; </span>
             <OverlayTrigger trigger="hover" placement="right">
-                <Info size="XS" />
+                <Button quiet variant="tool" icon={<Info size="XS" />} />
                 <Tooltip>
                     Please select a report suite to show key suggestions for Analytics variables.
                 </Tooltip>

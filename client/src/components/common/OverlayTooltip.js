@@ -5,12 +5,13 @@ import styles from './OverlayTooltip.css';
 import Tooltip from '@react/react-spectrum/Tooltip';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Info from '@react/react-spectrum/Icon/Info';
+import Button from '@react/react-spectrum/Button';
 
 const OverlayTooltip = ({ message, className }) => {
     return (
         <div className={classNames(styles.tooltip, className)} data-test="overlay-tooltip">
             <OverlayTrigger trigger="hover" placement="right">
-                <Info size="S" />
+                <Button quiet variant="tool" icon={<Info size="S" />} />
                 <Tooltip data-test="saved-search-limit-message">{message}</Tooltip>
             </OverlayTrigger>
         </div>

@@ -20,7 +20,7 @@ describe('<SingleSignalTraitsCreation/> component', () => {
 
         it('includes <Add/> icon with size=`S`', () => {
             expect(wrapper.find(Add).exists()).toBe(true);
-            expect(wrapper.find(Add).props().size).toEqual('S');
+            expect(wrapper.find(Add).props().size).toEqual('XS');
         });
 
         it('renders the correct text passed from `traitsCreationLabelText` prop in a <div/>', () => {

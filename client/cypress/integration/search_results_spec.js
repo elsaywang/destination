@@ -92,13 +92,13 @@ describe('Search Form Results Integration Tests', function() {
             for (let i = 0; i < 2; i++) {
                 cy.get('[data-test="search-button"]').click();
 
-                cy.get('.spectrum-Loader').should('exist');
+                cy.get('.spectrum-CircleLoader-fill').should('exist');
                 cy.get('[data-test="search-button"]').should('have.attr', 'disabled');
                 cy.get('[data-test="saved-search-tag-list"]').should('have.attr', 'disabled');
 
                 cy.wait('@fetchSearchResultsDelayed');
                 cy.get('[data-test="search-results"]').should('exist');
-                cy.get('.spectrum-Loader').should('not.exist');
+                cy.get('.spectrum-CircleLoader-fill').should('not.exist');
             }
         });
     });

@@ -24,8 +24,8 @@
 }
 
 :local(.saveSearchExecutionTooltip) {
-    display: inline-block;
-    padding-top: 3.15rem;
+    display: inline-flex;
+    padding-top: 2.75rem;
 }
 
 :local(.empty) {

@@ -4,6 +4,7 @@ import * as savedSearchActionCreators from '../actions/savedSearch';
 import { selectSignals } from '../actions/selectSignals';
 import { populateSearchFields, clearSearchFields } from '../actions/savedSearchFields';
 import { getReportSuites } from '../actions/reportSuites';
+import { getDataSources } from '../actions/dataSources';
 import { fetchUserRoles } from '../actions/permissions';
 import { fetchLimits } from '../actions/limits';
 import React, { Component, Fragment } from 'react';
@@ -15,6 +16,7 @@ import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import MultiSignalsTraitsCreationContainer from './MultiSignalsTraitsCreationContainer';
 import TraitsCreationWarning from './TraitsCreationWarning';
 import SignalTypeFilter from '../components/SignalTypeFilter';
+import DataSourceFilter from '../components/DataSourceFilter';
 import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
@@ -23,11 +25,17 @@ import { isEndOfResults, isResultsLoaded, getSortOptions } from '../reducers/res
 import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../reducers/savedSearch';
 import { getSelectedRowIndexes, isMaxSignalSelectionsReached } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
+import { getDataSourcesNameId } from '../reducers/dataSources';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { normalizeSortOptions } from '../utils/normalizeSortOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
+import {
+    isDataSourceMatching,
+    matchingDataSource,
+    dataSourceOption,
+} from '../utils/dataSourceOptions';
 import { searchResultsThrottleMs } from '../constants/lazyLoadConstants';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
@@ -93,7 +101,12 @@ class SearchContainer extends Component {
                 filterNewSignals: false,
                 presetId: null,
             },
-            () => this.props.callSearch({ search: this.state }),
+            () => {
+                this.props.callSearch({ search: this.state });
+                if (this.isFilteredByOnboardedRecords()) {
+                    this.props.getDataSources();
+                }
+            },
         );
     };
 
@@ -141,6 +154,24 @@ class SearchContainer extends Component {
                 reportSuiteIds: [matchingReportSuite.suite],
             },
         });
+    };
+
+    onDataSourceSelect = value => {
+        const { dataSources } = this.props;
+        if (isDataSourceMatching(dataSources, value)) {
+            const { name, dataSourceId } = matchingDataSource(dataSources, value);
+            this.setState(
+                {
+                    searched: true,
+                    source: {
+                        ...this.state.source,
+                        name: name,
+                        dataSourceIds: [dataSourceId],
+                    },
+                },
+                () => this.props.callSearch({ search: this.state }),
+            );
+        }
     };
 
     onKeyChange = (id, value) => {
@@ -357,6 +388,8 @@ class SearchContainer extends Component {
 
     isSearchDisabled = () => !this.props.isResultsLoaded && this.state.searched;
 
+    isFilteredByOnboardedRecords = () => this.state.source.sourceType === 'ONBOARDED';
+
     render() {
         return (
             <Fragment>
@@ -454,11 +487,30 @@ class SearchContainer extends Component {
                                     />
                                 </GridColumn>
                             </GridRow>
-                            <GridRow>
-                                <GridColumn size={9} offsetSize={3}>
-                                    <TraitsCreationWarning />
-                                </GridColumn>
-                            </GridRow>
+                            {this.isFilteredByOnboardedRecords() ? (
+                                <GridRow>
+                                    <GridColumn size={3}>
+                                        <DataSourceFilter
+                                            signalType={this.state.source.sourceType}
+                                            dataSources={this.props.dataSources}
+                                            onDataSourceSelect={this.onDataSourceSelect}
+                                            selectedDataSource={dataSourceOption(
+                                                this.state.source.dataSourceIds[0],
+                                                this.state.source.name,
+                                            )}
+                                        />
+                                    </GridColumn>
+                                    <GridColumn size={9}>
+                                        <TraitsCreationWarning />
+                                    </GridColumn>
+                                </GridRow>
+                            ) : (
+                                <GridRow>
+                                    <GridColumn size={9} offsetSize={3}>
+                                        <TraitsCreationWarning />
+                                    </GridColumn>
+                                </GridRow>
+                            )}
                             <SignalsTable
                                 results={this.props.results.list}
                                 selectedRowIndexes={this.props.selectedRowIndexes}
@@ -494,6 +546,7 @@ const mapStateToProps = ({
     errors,
     permissions,
     traitBackfill,
+    dataSources,
 }) => ({
     results,
     sortOptions: getSortOptions(results),
@@ -512,6 +565,7 @@ const mapStateToProps = ({
     reportSuites,
     errors,
     permissions,
+    dataSources: getDataSourcesNameId(dataSources),
 });
 const actionCreators = {
     ...searchFormActionCreators,
@@ -522,6 +576,7 @@ const actionCreators = {
     getReportSuites,
     fetchUserRoles,
     fetchLimits,
+    getDataSources,
 };
 
 export default connect(
