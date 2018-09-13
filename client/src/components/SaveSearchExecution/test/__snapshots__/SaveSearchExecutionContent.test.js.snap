@@ -46,9 +46,16 @@ ShallowWrapper {
           <Checkbox
                     checked={false}
                     data-test="save-this-search-checkbox"
+                    defaultChecked={undefined}
+                    disabled={false}
                     indeterminate={false}
+                    invalid={false}
                     label="Track this search result in dashboard"
                     onChange={[Function]}
+                    quiet={false}
+                    readOnly={false}
+                    renderLabel={true}
+                    required={false}
           />
 </div>,
         <Label
@@ -158,9 +165,16 @@ ShallowWrapper {
           "children": <Checkbox
             checked={false}
             data-test="save-this-search-checkbox"
+            defaultChecked={undefined}
+            disabled={false}
             indeterminate={false}
+            invalid={false}
             label="Track this search result in dashboard"
             onChange={[Function]}
+            quiet={false}
+            readOnly={false}
+            renderLabel={true}
+            required={false}
 />,
           "className": "contentCheckBox",
         },
@@ -172,9 +186,16 @@ ShallowWrapper {
           "props": Object {
             "checked": false,
             "data-test": "save-this-search-checkbox",
+            "defaultChecked": undefined,
+            "disabled": false,
             "indeterminate": false,
+            "invalid": false,
             "label": "Track this search result in dashboard",
             "onChange": [Function],
+            "quiet": false,
+            "readOnly": false,
+            "renderLabel": true,
+            "required": false,
           },
           "ref": null,
           "rendered": null,
@@ -395,9 +416,16 @@ ShallowWrapper {
             <Checkbox
                         checked={false}
                         data-test="save-this-search-checkbox"
+                        defaultChecked={undefined}
+                        disabled={false}
                         indeterminate={false}
+                        invalid={false}
                         label="Track this search result in dashboard"
                         onChange={[Function]}
+                        quiet={false}
+                        readOnly={false}
+                        renderLabel={true}
+                        required={false}
             />
 </div>,
           <Label
@@ -507,9 +535,16 @@ ShallowWrapper {
             "children": <Checkbox
               checked={false}
               data-test="save-this-search-checkbox"
+              defaultChecked={undefined}
+              disabled={false}
               indeterminate={false}
+              invalid={false}
               label="Track this search result in dashboard"
               onChange={[Function]}
+              quiet={false}
+              readOnly={false}
+              renderLabel={true}
+              required={false}
 />,
             "className": "contentCheckBox",
           },
@@ -521,9 +556,16 @@ ShallowWrapper {
             "props": Object {
               "checked": false,
               "data-test": "save-this-search-checkbox",
+              "defaultChecked": undefined,
+              "disabled": false,
               "indeterminate": false,
+              "invalid": false,
               "label": "Track this search result in dashboard",
               "onChange": [Function],
+              "quiet": false,
+              "readOnly": false,
+              "renderLabel": true,
+              "required": false,
             },
             "ref": null,
             "rendered": null,
@@ -783,9 +825,16 @@ ShallowWrapper {
           <Checkbox
                     checked={true}
                     data-test="save-this-search-checkbox"
+                    defaultChecked={undefined}
+                    disabled={false}
                     indeterminate={false}
+                    invalid={false}
                     label="Track this search result in dashboard"
                     onChange={[Function]}
+                    quiet={false}
+                    readOnly={false}
+                    renderLabel={true}
+                    required={false}
           />
 </div>,
         <Label
@@ -895,9 +944,16 @@ ShallowWrapper {
           "children": <Checkbox
             checked={true}
             data-test="save-this-search-checkbox"
+            defaultChecked={undefined}
+            disabled={false}
             indeterminate={false}
+            invalid={false}
             label="Track this search result in dashboard"
             onChange={[Function]}
+            quiet={false}
+            readOnly={false}
+            renderLabel={true}
+            required={false}
 />,
           "className": "contentCheckBox",
         },
@@ -909,9 +965,16 @@ ShallowWrapper {
           "props": Object {
             "checked": true,
             "data-test": "save-this-search-checkbox",
+            "defaultChecked": undefined,
+            "disabled": false,
             "indeterminate": false,
+            "invalid": false,
             "label": "Track this search result in dashboard",
             "onChange": [Function],
+            "quiet": false,
+            "readOnly": false,
+            "renderLabel": true,
+            "required": false,
           },
           "ref": null,
           "rendered": null,
@@ -1132,9 +1195,16 @@ ShallowWrapper {
             <Checkbox
                         checked={true}
                         data-test="save-this-search-checkbox"
+                        defaultChecked={undefined}
+                        disabled={false}
                         indeterminate={false}
+                        invalid={false}
                         label="Track this search result in dashboard"
                         onChange={[Function]}
+                        quiet={false}
+                        readOnly={false}
+                        renderLabel={true}
+                        required={false}
             />
 </div>,
           <Label
@@ -1244,9 +1314,16 @@ ShallowWrapper {
             "children": <Checkbox
               checked={true}
               data-test="save-this-search-checkbox"
+              defaultChecked={undefined}
+              disabled={false}
               indeterminate={false}
+              invalid={false}
               label="Track this search result in dashboard"
               onChange={[Function]}
+              quiet={false}
+              readOnly={false}
+              renderLabel={true}
+              required={false}
 />,
             "className": "contentCheckBox",
           },
@@ -1258,9 +1335,16 @@ ShallowWrapper {
             "props": Object {
               "checked": true,
               "data-test": "save-this-search-checkbox",
+              "defaultChecked": undefined,
+              "disabled": false,
               "indeterminate": false,
+              "invalid": false,
               "label": "Track this search result in dashboard",
               "onChange": [Function],
+              "quiet": false,
+              "readOnly": false,
+              "renderLabel": true,
+              "required": false,
             },
             "ref": null,
             "rendered": null,

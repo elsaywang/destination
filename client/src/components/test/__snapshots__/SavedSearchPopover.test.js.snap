@@ -82,6 +82,7 @@ ShallowWrapper {
           crossOffset={0}
           data-test="saved-search-overlay-trigger"
           defaultShow={false}
+          delayHide={100}
           disabled={false}
           flip={true}
           offset={0}
@@ -90,12 +91,14 @@ ShallowWrapper {
 >
           <Tag
                     className="tag"
+                    closeable={false}
                     data-saved-search-id={undefined}
                     data-saved-search-preset={undefined}
                     data-test="saved-search-tag"
                     disabled={false}
                     id={null}
                     onClick={[Function]}
+                    selected={false}
                     value="Loren Waters"
           />
           <Popover
@@ -222,12 +225,14 @@ ShallowWrapper {
           "children": Array [
             <Tag
               className="tag"
+              closeable={false}
               data-saved-search-id={undefined}
               data-saved-search-preset={undefined}
               data-test="saved-search-tag"
               disabled={false}
               id={null}
               onClick={[Function]}
+              selected={false}
               value="Loren Waters"
 />,
             <Popover
@@ -342,6 +347,7 @@ ShallowWrapper {
           "crossOffset": 0,
           "data-test": "saved-search-overlay-trigger",
           "defaultShow": false,
+          "delayHide": 100,
           "disabled": false,
           "flip": true,
           "offset": 0,
@@ -353,15 +359,17 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": "Loren Waters",
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
               "className": "tag",
+              "closeable": false,
               "data-saved-search-id": undefined,
               "data-saved-search-preset": undefined,
               "data-test": "saved-search-tag",
               "disabled": false,
               "id": null,
               "onClick": [Function],
+              "selected": false,
               "value": "Loren Waters",
             },
             "ref": null,
@@ -810,6 +818,7 @@ ShallowWrapper {
             crossOffset={0}
             data-test="saved-search-overlay-trigger"
             defaultShow={false}
+            delayHide={100}
             disabled={false}
             flip={true}
             offset={0}
@@ -818,12 +827,14 @@ ShallowWrapper {
 >
             <Tag
                         className="tag"
+                        closeable={false}
                         data-saved-search-id={undefined}
                         data-saved-search-preset={undefined}
                         data-test="saved-search-tag"
                         disabled={false}
                         id={null}
                         onClick={[Function]}
+                        selected={false}
                         value="Loren Waters"
             />
             <Popover
@@ -950,12 +961,14 @@ ShallowWrapper {
             "children": Array [
               <Tag
                 className="tag"
+                closeable={false}
                 data-saved-search-id={undefined}
                 data-saved-search-preset={undefined}
                 data-test="saved-search-tag"
                 disabled={false}
                 id={null}
                 onClick={[Function]}
+                selected={false}
                 value="Loren Waters"
 />,
               <Popover
@@ -1070,6 +1083,7 @@ ShallowWrapper {
             "crossOffset": 0,
             "data-test": "saved-search-overlay-trigger",
             "defaultShow": false,
+            "delayHide": 100,
             "disabled": false,
             "flip": true,
             "offset": 0,
@@ -1081,15 +1095,17 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": "Loren Waters",
-              "nodeType": "function",
+              "nodeType": "class",
               "props": Object {
                 "className": "tag",
+                "closeable": false,
                 "data-saved-search-id": undefined,
                 "data-saved-search-preset": undefined,
                 "data-test": "saved-search-tag",
                 "disabled": false,
                 "id": null,
                 "onClick": [Function],
+                "selected": false,
                 "value": "Loren Waters",
               },
               "ref": null,
