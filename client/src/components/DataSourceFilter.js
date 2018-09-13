@@ -15,18 +15,17 @@ class DataSourceFilter extends Component {
         }));
 
         return (
-            <div className={styles.dataSourcesFilter} data-test="seach-results-filter">
-                <Select
-                    data-test="data-source-filter"
-                    placeholder={filterPlaceholder}
-                    onChange={onDataSourceSelect}
-                    options={options}
-                    className={styles.dataSourceSelect}
-                    flexible
-                    quiet
-                    value={selectedDataSource}
-                />
-            </div>
+            <Select
+                data-test="data-source-filter"
+                className={styles.dataSourcesFilter}
+                placeholder={filterPlaceholder}
+                onChange={onDataSourceSelect}
+                options={options}
+                className={styles.dataSourceSelect}
+                flexible
+                quiet
+                value={selectedDataSource}
+            />
         );
     }
 }

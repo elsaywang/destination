@@ -20,23 +20,23 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": <Select
-        className="dataSourceSelect"
-        data-test="data-source-filter"
-        flexible={true}
-        onChange={[Function]}
-        options={Array []}
-        placeholder="Filter by onboarded records"
-        quiet={true}
-        value=""
-/>,
-      "className": "dataSourcesFilter",
-      "data-test": "seach-results-filter",
+      "className": "dataSourceSelect",
+      "data-test": "data-source-filter",
+      "flexible": true,
+      "onChange": [Function],
+      "options": Array [],
+      "placeholder": "Filter by onboarded records",
+      "quiet": true,
+      "value": "",
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "class",
@@ -53,48 +53,6 @@ ShallowWrapper {
       "ref": null,
       "rendered": null,
       "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Select
-          className="dataSourceSelect"
-          data-test="data-source-filter"
-          flexible={true}
-          onChange={[Function]}
-          options={Array []}
-          placeholder="Filter by onboarded records"
-          quiet={true}
-          value=""
-/>,
-        "className": "dataSourcesFilter",
-        "data-test": "seach-results-filter",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "className": "dataSourceSelect",
-          "data-test": "data-source-filter",
-          "flexible": true,
-          "onChange": [Function],
-          "options": Array [],
-          "placeholder": "Filter by onboarded records",
-          "quiet": true,
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
