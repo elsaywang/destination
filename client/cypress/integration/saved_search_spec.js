@@ -209,7 +209,7 @@ describe('Saved Search Integration Test', () => {
             });
         });
 
-        describe('when user fills out only some of fields in modal, and clicks "Save" button', () => {
+        describe('when user fills out only some of fields then clicks Save button', () => {
             beforeEach(() => {
                 const mockResponseAfterCreate = savedSearchResponse.savedSearch.concat(
                     newSavedSearchResponseWithDefaultName,
@@ -222,7 +222,7 @@ describe('Saved Search Integration Test', () => {
                 ).as('createSavedSearch');
             });
 
-            it("should save the user's current search with formattedSignal as default searchName if name text field is not filled", () => {
+            it('should save the current search with default name formattedSignal when no input', () => {
                 const defaultName = '""=""';
 
                 cy.get('.spectrum-Dialog-footer .spectrum-Button.spectrum-Button--primary').click();
@@ -239,7 +239,7 @@ describe('Saved Search Integration Test', () => {
             });
         });
 
-        describe('when user fills out fields in modal, and clicks "Save" button but failed to create', () => {
+        describe('when user fills out fields in modal then clicks Save button but failed to create', () => {
             beforeEach(() => {
                 cy.server({
                     status: errorResponse.status,
