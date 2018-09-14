@@ -83,13 +83,12 @@ describe('Search Form Integration Tests', () => {
             cy.get('@keyInput').type('a');
             cy.tick(keySuggestionsDebounceMs);
             cy.wait('@fetchSignalKeys');
+        });
 
+        it.only('should show autocomplete with suggestions and match the typed option', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
-        });
-
-        it('should show autocomplete with suggestions and match the typed option', () => {
             cy.get('.spectrum-Popover.is-open').should('have.length', 1);
             cy.get('.spectrum-Menu-item').should('have.length', 8);
             cy.get('.spectrum-Popover.is-open .spectrum-Menu-item.is-focused')
@@ -260,12 +259,12 @@ describe('Search Form Integration Tests', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
-            cy.get('[data-test="signal-status"]')
+            cy.get('[data-test="signal-status"] > button')
                 .click()
                 .get('[role=option]:last')
                 .click()
                 .then($option => {
-                    cy.get('.signal-status').should($signalStatus => {
+                    cy.get('.signal-status > button').should($signalStatus => {
                         expect($signalStatus.text()).to.contains($option.text());
                     });
                 });
@@ -277,7 +276,7 @@ describe('Search Form Integration Tests', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
-            cy.get('.view-records')
+            cy.get('.view-records > button')
                 .click()
                 .get('.spectrum-Menu-item:first')
                 .click()
@@ -303,7 +302,7 @@ describe('Search Form Integration Tests', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
-            cy.get('.view-records')
+            cy.get('.view-records > button')
                 .click()
                 .get('.spectrum-Menu-item:last')
                 .click();
@@ -338,12 +337,12 @@ describe('Search Form Integration Tests', () => {
             cy.get('[data-test="add-button"]').click();
             cy.get('[data-test="add-button"]').click();
 
-            cy.get('.signal-status')
+            cy.get('.signal-status >button')
                 .click()
                 .get('[role=option]:last')
                 .click();
 
-            cy.get('.view-records')
+            cy.get('.view-records >button')
                 .click()
                 .get('.spectrum-Menu-item:first')
                 .click();
@@ -372,7 +371,7 @@ describe('Search Form Integration Tests', () => {
     describe('Enhancements to date range search based on max signal retention days', () => {
         describe('"View Records For" dropdown options', () => {
             it('should include default options, but should not include "Last 180 Days" or "Last 365 Days" by default', () => {
-                cy.get('.view-records').click();
+                cy.get('.view-records > button').click();
 
                 cy.get('.spectrum-Menu-item')
                     .contains('Last 1 Day')
@@ -403,7 +402,7 @@ describe('Search Form Integration Tests', () => {
                     maxSignalRetentionDays: 180,
                 }).as('fetchLimits');
                 cy.reload();
-                cy.get('.view-records').click();
+                cy.get('.view-records > button').click();
 
                 cy.get('.spectrum-Menu-item')
                     .contains('Last 180 Days')
@@ -418,7 +417,7 @@ describe('Search Form Integration Tests', () => {
                     maxSignalRetentionDays: 365,
                 }).as('fetchLimits');
                 cy.reload();
-                cy.get('.view-records').click();
+                cy.get('.view-records > button').click();
 
                 cy.get('.spectrum-Menu-item')
                     .contains('Last 180 Days')
@@ -432,7 +431,7 @@ describe('Search Form Integration Tests', () => {
         // TODO: Unskip this test
         describe.skip('Custom Date Range', () => {
             const openCustomStartDateCalendar = () => {
-                cy.get('.view-records')
+                cy.get('.view-records >button ')
                     .click()
                     .then(() => {
                         cy.get('.spectrum-Menu-item:last').click();
@@ -529,7 +528,7 @@ describe('Search Form Integration Tests', () => {
             describe('When "Unused Signals" or "Signals Included In Traits" are selected', () => {
                 it('`signalStatus` should be the dropdown option value', () => {
                     cy.clock().then(clock => clock.restore());
-                    cy.get('.signal-status')
+                    cy.get('.signal-status >button')
                         .click()
                         .get('[role=option]:nth-of-type(2)')
                         .click();
@@ -541,7 +540,7 @@ describe('Search Form Integration Tests', () => {
                         expect(signalStatus).to.equal('UNUSED'),
                     );
 
-                    cy.get('.signal-status')
+                    cy.get('.signal-status >button')
                         .click()
                         .get('[role=option]:last')
                         .click();
