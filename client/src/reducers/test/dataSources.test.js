@@ -1,12 +1,12 @@
-import { GET_DATA_SOURCES_FULFILLED } from '../../actions/dataSources';
-import dataSourcesReducer, { getDataSourcesNameId } from '../dataSources';
+import { FETCH_DATA_SOURCES_FULFILLED } from '../../actions/dataSources';
+import dataSourcesReducer, { getDataSources } from '../dataSources';
 
 describe('dataSourcesReducer', () => {
     const initialState = [];
     it('should return the initial state', () => {
         expect(dataSourcesReducer(initialState, {})).toEqual(initialState);
     });
-    it('should handle GET_DATA_SOURCES_FULFILLED', () => {
+    it('should handle FETCH_DATA_SOURCES_FULFILLED', () => {
         const response = [
             {
                 pid: 1194,
@@ -94,7 +94,7 @@ describe('dataSourcesReducer', () => {
             },
         ];
         const action = {
-            type: GET_DATA_SOURCES_FULFILLED,
+            type: FETCH_DATA_SOURCES_FULFILLED,
             payload: response,
         };
 
@@ -102,7 +102,7 @@ describe('dataSourcesReducer', () => {
     });
 
     describe('selectors', () => {
-        describe('getDataSourcesNameId', () => {
+        describe('getDataSources', () => {
             const state = [
                 {
                     pid: 1194,
@@ -162,7 +162,7 @@ describe('dataSourcesReducer', () => {
                 },
             ];
             it('should return object arrays with `dataSourceId` and `name` properties', () => {
-                expect(getDataSourcesNameId(state)).toEqual([
+                expect(getDataSources(state)).toEqual([
                     { dataSourceId: 167561, name: 'Test Datasource: 1535478301325139132' },
                     { dataSourceId: 167562, name: 'Test Datasource: 1535478301363189506' },
                 ]);

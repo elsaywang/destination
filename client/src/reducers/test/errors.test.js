@@ -6,7 +6,7 @@ import {
 } from '../../actions/searchForm';
 import { GET_SAVED_SEARCH_REJECTED, SAVE_SEARCH_REJECTED } from '../../actions/savedSearch';
 import { GET_REPORT_SUITES_REJECTED } from '../../actions/reportSuites';
-import { GET_DATA_SOURCES_REJECTED } from '../../actions/dataSources';
+import { FETCH_DATA_SOURCES_REJECTED } from '../../actions/dataSources';
 import errorsReducer, { handleErrorState } from '../errors.js';
 
 describe('test on `handleErrorState`', () => {
@@ -141,9 +141,9 @@ describe('test on errors reducer', () => {
         expect(errorsReducer(initialState, action)).toEqual(expectedGetReportSuiteError);
     });
 
-    it('should handle GET_DATA_SOURCES_REJECTED', () => {
+    it('should handle FETCH_DATA_SOURCES_REJECTED', () => {
         const action = {
-            type: GET_DATA_SOURCES_REJECTED,
+            type: FETCH_DATA_SOURCES_REJECTED,
             payload: { message: 'there is error to get dataSources' },
             error: true,
         };

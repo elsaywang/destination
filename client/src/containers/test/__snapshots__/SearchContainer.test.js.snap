@@ -34,6 +34,7 @@ ShallowWrapper {
             },
           }
     }
+    fetchDataSources={[Function]}
     fetchLimits={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
@@ -90,7 +91,6 @@ ShallowWrapper {
             },
           ]
     }
-    getDataSources={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
@@ -1826,6 +1826,7 @@ ShallowWrapper {
             },
           }
     }
+    fetchDataSources={[Function]}
     fetchLimits={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
@@ -1882,7 +1883,6 @@ ShallowWrapper {
             },
           ]
     }
-    getDataSources={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
@@ -3666,6 +3666,7 @@ ShallowWrapper {
             },
           }
     }
+    fetchDataSources={[Function]}
     fetchLimits={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
@@ -3722,7 +3723,6 @@ ShallowWrapper {
             },
           ]
     }
-    getDataSources={[Function]}
     getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}

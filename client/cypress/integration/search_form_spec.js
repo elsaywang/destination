@@ -89,9 +89,9 @@ describe('Search Form Integration Tests', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
-            cy.get('.spectrum-Popover.is-open').should('have.length', 1);
+            cy.get('.spectrum-Popover.spectrum-Popover--bottom').should('have.length', 1);
             cy.get('.spectrum-Menu-item').should('have.length', 8);
-            cy.get('.spectrum-Popover.is-open .spectrum-Menu-item.is-focused')
+            cy.get('.spectrum-Popover.spectrum-Popover--bottom .spectrum-Menu-item.is-focused')
                 .click()
                 .then($item => {
                     cy.get('@keyInput').should($keyInput => {
@@ -116,7 +116,7 @@ describe('Search Form Integration Tests', () => {
         });
 
         it('should not show any autocomplete with suggestions', () => {
-            cy.get('.spectrum-Popover.is-open').should('not.exist');
+            cy.get('.spectrum-Popover.spectrum-Popover--bottom').should('not.exist');
             cy.get('.spectrum-Menu-item').should('not.exist');
         });
 
@@ -147,7 +147,7 @@ describe('Search Form Integration Tests', () => {
         });
 
         it('should not show any autocomplete with suggestions', () => {
-            cy.get('.spectrum-Popover.is-open').should('not.exist');
+            cy.get('.spectrum-Popover.spectrum-Popover--bottom').should('not.exist');
             cy.get('.spectrum-Menu-item').should('not.exist');
         });
 
@@ -439,11 +439,9 @@ describe('Search Form Integration Tests', () => {
                         cy.get('.spectrum-Calendar').as('customStartDateCalendar');
                     });
             };
+            afterEach(() => cy.clock().then(clock => clock.restore()));
             //TODO: look into it, it calls getNow() today's date to calculate the min and max
             it('should have a min start date of 30 days ago by default', () => {
-                cy.clock().then(clock => {
-                    clock.restore();
-                });
                 openCustomStartDateCalendar();
                 cy.get('@customStartDateCalendar').should('have.attr', 'min', '2018-04-01');
             });

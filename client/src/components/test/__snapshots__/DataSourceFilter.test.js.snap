@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <DataSourceFilter
     dataSources={Array []}
     onDataSourceSelect={[Function]}
-    selectedDataSource=""
+    selectedDataSource={undefined}
     signalType="ONBOARDED"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -27,9 +27,8 @@ ShallowWrapper {
       "flexible": true,
       "onChange": [Function],
       "options": Array [],
-      "placeholder": "Filter by onboarded records",
-      "quiet": true,
-      "value": "",
+      "placeholder": "Filter by Onboarded Records",
+      "value": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -46,9 +45,8 @@ ShallowWrapper {
         "flexible": true,
         "onChange": [Function],
         "options": Array [],
-        "placeholder": "Filter by onboarded records",
-        "quiet": true,
-        "value": "",
+        "placeholder": "Filter by Onboarded Records",
+        "value": undefined,
       },
       "ref": null,
       "rendered": null,

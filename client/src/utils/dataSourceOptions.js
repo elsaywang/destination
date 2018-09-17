@@ -1,11 +1,4 @@
-export const dataSourceOption = (dataSourceId, name) => `${name} (${dataSourceId})`;
+export const formatDataSourceLabel = (dataSourceId, name) => `${name} (${dataSourceId})`;
 
-export const matchingDataSource = (dataSources, value) =>
-    dataSources.find(({ dataSourceId, name }) => dataSourceOption(dataSourceId, name) === value);
-
-export const isDataSourceMatching = (dataSources, value) =>
-    Boolean(
-        dataSources.filter(
-            ({ dataSourceId, name }) => dataSourceOption(dataSourceId, name) === value,
-        ).length,
-    );
+export const isValidDataSourceId = (dataSources, selectedDataSourceId) =>
+    dataSources.filter(({ dataSourceId }) => dataSourceId === selectedDataSourceId).length;

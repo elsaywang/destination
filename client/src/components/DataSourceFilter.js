@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Select from '@react/react-spectrum/Select';
 import styles from './DataSourceFilter.css';
-import { getSignalTypeLabel } from '../constants/signalTypeOptions';
-import { dataSourceOption } from '../utils/dataSourceOptions';
+import { formatDataSourceLabel } from '../utils/dataSourceOptions';
 
 class DataSourceFilter extends Component {
     render() {
-        const { signalType, onDataSourceSelect, dataSources, selectedDataSource } = this.props;
-        const filterPlaceholder = `Filter by ${getSignalTypeLabel(signalType).toLowerCase()}`;
+        const { onDataSourceSelect, dataSources, selectedDataSource } = this.props;
+        const filterPlaceholder = `Filter by Onboarded Records`;
         const options = dataSources.map(({ dataSourceId, name }) => ({
-            label: dataSourceOption(dataSourceId, name),
-            value: dataSourceOption(dataSourceId, name),
+            label: formatDataSourceLabel(dataSourceId, name),
+            value: dataSourceId,
         }));
 
         return (
@@ -23,7 +22,6 @@ class DataSourceFilter extends Component {
                 options={options}
                 className={styles.dataSourceSelect}
                 flexible
-                quiet
                 value={selectedDataSource}
             />
         );
@@ -31,7 +29,6 @@ class DataSourceFilter extends Component {
 }
 
 DataSourceFilter.propTypes = {
-    signalType: PropTypes.string.isRequired,
     onDataSourceSelect: PropTypes.func.isRequired,
     dataSources: PropTypes.arrayOf(
         PropTypes.shape({
@@ -39,7 +36,7 @@ DataSourceFilter.propTypes = {
             dataSourceId: PropTypes.number,
         }),
     ).isRequired,
-    selectedDataSource: PropTypes.string.isRequired,
+    selectedDataSource: PropTypes.number,
 };
 
 export default DataSourceFilter;

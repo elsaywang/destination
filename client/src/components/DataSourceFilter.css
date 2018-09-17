@@ -4,5 +4,5 @@
 }
 :local(.dataSourceSelect) {
     display: flex;
-    min-width: 20em;
+    min-width: 24.25em;
 }
