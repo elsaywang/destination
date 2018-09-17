@@ -89,10 +89,13 @@ describe('Search Form Integration Tests', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
-            cy.get('.spectrum-Popover.spectrum-Popover--bottom.is-open').should('have.length', 1);
+            cy.get('.spectrum-Popover.spectrum-Popover--bottom.is-open >ul').should(
+                'have.length',
+                1,
+            );
             cy.get('.spectrum-Menu-item').should('have.length', 8);
             cy.get(
-                '.spectrum-Popover.spectrum-Popover--bottom.is-open .spectrum-Menu-item.is-focused',
+                '.spectrum-Popover.spectrum-Popover--bottom.is-open .spectrum-Menu-item.is-focused >span',
             )
                 .click()
                 .then($item => {
