@@ -85,18 +85,13 @@ describe('Search Form Integration Tests', () => {
             cy.wait('@fetchSignalKeys');
         });
 
-        it('should show autocomplete with suggestions and match the typed option', () => {
+        it.only('should show autocomplete with suggestions and match the typed option', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
-            cy.get('.spectrum-Popover.spectrum-Popover--bottom.is-open >ul').should(
-                'have.length',
-                1,
-            );
+            cy.get('.spectrum-Popover.is-open').should('have.length', 1);
             cy.get('.spectrum-Menu-item').should('have.length', 8);
-            cy.get(
-                '.spectrum-Popover.spectrum-Popover--bottom.is-open .spectrum-Menu-item.is-focused >span',
-            )
+            cy.get('.spectrum-Popover.is-open .spectrum-Menu-item.is-focused >span')
                 .click()
                 .then($item => {
                     cy.get('@keyInput').should($keyInput => {
@@ -121,7 +116,7 @@ describe('Search Form Integration Tests', () => {
         });
 
         it('should not show any autocomplete with suggestions', () => {
-            cy.get('.spectrum-Popover.spectrum-Popover--bottom .is-open').should('not.exist');
+            cy.get('.spectrum-Popover.is-open').should('not.exist');
             cy.get('.spectrum-Menu-item').should('not.exist');
         });
 
@@ -152,7 +147,7 @@ describe('Search Form Integration Tests', () => {
         });
 
         it('should not show any autocomplete with suggestions', () => {
-            cy.get('.spectrum-Popover.spectrum-Popover--bottom .is-open').should('not.exist');
+            cy.get('.spectrum-Popover.is-open').should('not.exist');
             cy.get('.spectrum-Menu-item').should('not.exist');
         });
 
