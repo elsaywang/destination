@@ -148,12 +148,12 @@ describe('Dashboard Integration Tests', () => {
             cy.get('[data-test="key-search-field"]')
                 .should('be.visible')
                 .should('have.value', '');
-            cy.get('[data-test="operator"]').should('have.value', '==');
-            cy.get('[data-test="value-search"]').should('have.value', '');
+            cy.get('[data-test="operator"]').should('have.attr', 'value', '==');
+            cy.get('[data-test="value-search"]').should('have.attr', 'value', '');
             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
-            cy.get('[data-test="signal-status"]').should('have.value', 'UNUSED');
-            cy.get('[data-test="view-records"]').should('have.value', '7D');
-            cy.get('[data-test="min-counts"]').should('have.value', '1000');
+            cy.get('[data-test="signal-status"]').should('have.attr', 'value', 'UNUSED');
+            cy.get('[data-test="view-records"]').should('have.attr', 'value', '7D');
+            cy.get('[data-test="min-counts"]').should('have.attr', 'value', '1000');
         });
 
         it('clicking "View All" for "New Unused Signals" should populate form correctly and call correct search, including `filterNewSignals: true`', () => {
@@ -183,12 +183,12 @@ describe('Dashboard Integration Tests', () => {
             cy.get('[data-test="key-search-field"]')
                 .should('be.visible')
                 .should('have.value', '');
-            cy.get('[data-test="operator"]').should('have.value', '==');
-            cy.get('[data-test="value-search"]').should('have.value', '');
+            cy.get('[data-test="operator"]').should('have.attr', 'value', '==');
+            cy.get('[data-test="value-search"]').should('have.attr', 'value', '');
             cy.get('[data-test="key-value-pair"]').should('have.length', 1);
-            cy.get('[data-test="signal-status"]').should('have.value', 'UNUSED');
-            cy.get('[data-test="view-records"]').should('have.value', '7D');
-            cy.get('[data-test="min-counts"]').should('have.value', '1000');
+            cy.get('[data-test="signal-status"]').should('have.attr', 'value', 'UNUSED');
+            cy.get('[data-test="view-records"]').should('have.attr', 'value', '7D');
+            cy.get('[data-test="min-counts"]').should('have.attr', 'value', '1000');
             cy.getRequestParams('@fetchSearchResults').then(({ filterNewSignals }) => {
                 expect(filterNewSignals).to.equal(true);
             });

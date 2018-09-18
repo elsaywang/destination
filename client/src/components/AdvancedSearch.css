@@ -3,3 +3,7 @@
     align-items: center;
     margin-bottom: 10px;
 }
+:local(.reportSuitesLabel) {
+    display: inline-flex;
+    align-items: center;
+}

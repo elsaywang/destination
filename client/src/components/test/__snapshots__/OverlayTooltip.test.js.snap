@@ -23,19 +23,35 @@ ShallowWrapper {
         boundariesElement={[Function]}
         crossOffset={0}
         defaultShow={false}
+        delayHide={100}
         disabled={false}
         flip={true}
         offset={0}
         placement="right"
         trigger="hover"
 >
-        <Info
-                size="S"
+        <Button
+                autoFocus={false}
+                block={false}
+                disabled={false}
+                element="button"
+                icon={
+                        <Info
+                                size="S"
+                        />
+                }
+                invalid={false}
+                label=""
+                logic={false}
+                quiet={true}
+                selected={false}
+                variant="tool"
         />
         <Tooltip
                 data-test="saved-search-limit-message"
                 open={true}
                 placement="right"
+                role="tooltip"
                 variant="inspect"
         >
                 You may save up to 10 searches
@@ -52,13 +68,28 @@ ShallowWrapper {
       "props": Object {
         "boundariesElement": [Function],
         "children": Array [
-          <Info
-            size="S"
+          <Button
+            autoFocus={false}
+            block={false}
+            disabled={false}
+            element="button"
+            icon={
+                        <Info
+                                    size="S"
+                        />
+            }
+            invalid={false}
+            label=""
+            logic={false}
+            quiet={true}
+            selected={false}
+            variant="tool"
 />,
           <Tooltip
             data-test="saved-search-limit-message"
             open={true}
             placement="right"
+            role="tooltip"
             variant="inspect"
 >
             You may save up to 10 searches
@@ -66,6 +97,7 @@ ShallowWrapper {
         ],
         "crossOffset": 0,
         "defaultShow": false,
+        "delayHide": 100,
         "disabled": false,
         "flip": true,
         "offset": 0,
@@ -77,9 +109,21 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
-            "size": "S",
+            "autoFocus": false,
+            "block": false,
+            "disabled": false,
+            "element": "button",
+            "icon": <Info
+              size="S"
+/>,
+            "invalid": false,
+            "label": "",
+            "logic": false,
+            "quiet": true,
+            "selected": false,
+            "variant": "tool",
           },
           "ref": null,
           "rendered": null,
@@ -94,6 +138,7 @@ ShallowWrapper {
             "data-test": "saved-search-limit-message",
             "open": true,
             "placement": "right",
+            "role": "tooltip",
             "variant": "inspect",
           },
           "ref": null,
@@ -115,19 +160,35 @@ ShallowWrapper {
           boundariesElement={[Function]}
           crossOffset={0}
           defaultShow={false}
+          delayHide={100}
           disabled={false}
           flip={true}
           offset={0}
           placement="right"
           trigger="hover"
 >
-          <Info
-                    size="S"
+          <Button
+                    autoFocus={false}
+                    block={false}
+                    disabled={false}
+                    element="button"
+                    icon={
+                              <Info
+                                        size="S"
+                              />
+                    }
+                    invalid={false}
+                    label=""
+                    logic={false}
+                    quiet={true}
+                    selected={false}
+                    variant="tool"
           />
           <Tooltip
                     data-test="saved-search-limit-message"
                     open={true}
                     placement="right"
+                    role="tooltip"
                     variant="inspect"
           >
                     You may save up to 10 searches
@@ -144,13 +205,28 @@ ShallowWrapper {
         "props": Object {
           "boundariesElement": [Function],
           "children": Array [
-            <Info
-              size="S"
+            <Button
+              autoFocus={false}
+              block={false}
+              disabled={false}
+              element="button"
+              icon={
+                            <Info
+                                          size="S"
+                            />
+              }
+              invalid={false}
+              label=""
+              logic={false}
+              quiet={true}
+              selected={false}
+              variant="tool"
 />,
             <Tooltip
               data-test="saved-search-limit-message"
               open={true}
               placement="right"
+              role="tooltip"
               variant="inspect"
 >
               You may save up to 10 searches
@@ -158,6 +234,7 @@ ShallowWrapper {
           ],
           "crossOffset": 0,
           "defaultShow": false,
+          "delayHide": 100,
           "disabled": false,
           "flip": true,
           "offset": 0,
@@ -169,9 +246,21 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
-              "size": "S",
+              "autoFocus": false,
+              "block": false,
+              "disabled": false,
+              "element": "button",
+              "icon": <Info
+                size="S"
+/>,
+              "invalid": false,
+              "label": "",
+              "logic": false,
+              "quiet": true,
+              "selected": false,
+              "variant": "tool",
             },
             "ref": null,
             "rendered": null,
@@ -186,6 +275,7 @@ ShallowWrapper {
               "data-test": "saved-search-limit-message",
               "open": true,
               "placement": "right",
+              "role": "tooltip",
               "variant": "inspect",
             },
             "ref": null,

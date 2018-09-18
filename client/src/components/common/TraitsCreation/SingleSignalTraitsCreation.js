@@ -15,7 +15,7 @@ const SingleSignalTraitsCreation = ({
                 className={classNames('spectrum-Link', styles.singleCreation)}
                 onClick={storeSessionAndNavigateToTraits}
                 data-test="single-signal-trait-creation">
-                <Add size="S" />
+                <Add size="XS" />
                 <div className={styles.singleCreationlinkText}>{traitsCreationLabelText}</div>
             </div>
         );

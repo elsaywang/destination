@@ -4,6 +4,7 @@ import Tooltip from '@react/react-spectrum/Tooltip';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Info from '@react/react-spectrum/Icon/Info';
 import OverlayTooltip from '../../components/common/OverlayTooltip';
+import Button from '@react/react-spectrum/Button';
 
 describe('<OverlayTooltip /> component', () => {
     const message = 'You may save up to 10 searches';
@@ -23,8 +24,9 @@ describe('<OverlayTooltip /> component', () => {
             expect(wrapper.find(OverlayTrigger).exists()).toBeTruthy();
         });
 
-        it('renders <Info/> icon', () => {
-            expect(wrapper.find(Info).exists()).toBeTruthy();
+        it('renders <Button/> with Info icon', () => {
+            expect(wrapper.find(Button).exists()).toBeTruthy();
+            expect(wrapper.find(Button).props().icon).toEqual(<Info size="S" />);
         });
 
         it('renders <Tooltip/> with message', () => {

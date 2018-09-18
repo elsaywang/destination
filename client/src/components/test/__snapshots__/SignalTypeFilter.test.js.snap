@@ -40,6 +40,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={true}
+                    tabIndex={0}
           >
                     All
           </Tab>
@@ -49,6 +50,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     Adobe Analytics
           </Tab>
@@ -58,6 +60,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     Actionable Log Files
           </Tab>
@@ -67,6 +70,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     General Online Data
           </Tab>
@@ -76,6 +80,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     Onboarded Records
           </Tab>
@@ -109,6 +114,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={true}
+              tabIndex={0}
 >
               All
 </Tab>,
@@ -118,6 +124,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               Adobe Analytics
 </Tab>,
@@ -127,6 +134,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               Actionable Log Files
 </Tab>,
@@ -136,6 +144,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               General Online Data
 </Tab>,
@@ -145,6 +154,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               Onboarded Records
 </Tab>,
@@ -168,6 +178,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": true,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "All",
@@ -184,6 +195,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "Adobe Analytics",
@@ -200,6 +212,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "Actionable Log Files",
@@ -216,6 +229,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "General Online Data",
@@ -232,6 +246,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "Onboarded Records",
@@ -269,6 +284,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={true}
+                        tabIndex={0}
             >
                         All
             </Tab>
@@ -278,6 +294,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         Adobe Analytics
             </Tab>
@@ -287,6 +304,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         Actionable Log Files
             </Tab>
@@ -296,6 +314,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         General Online Data
             </Tab>
@@ -305,6 +324,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         Onboarded Records
             </Tab>
@@ -338,6 +358,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={true}
+                tabIndex={0}
 >
                 All
 </Tab>,
@@ -347,6 +368,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 Adobe Analytics
 </Tab>,
@@ -356,6 +378,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 Actionable Log Files
 </Tab>,
@@ -365,6 +388,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 General Online Data
 </Tab>,
@@ -374,6 +398,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 Onboarded Records
 </Tab>,
@@ -397,6 +422,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": true,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "All",
@@ -413,6 +439,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "Adobe Analytics",
@@ -429,6 +456,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "Actionable Log Files",
@@ -445,6 +473,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "General Online Data",
@@ -461,6 +490,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "Onboarded Records",
@@ -535,6 +565,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     All
           </Tab>
@@ -544,6 +575,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={true}
+                    tabIndex={0}
           >
                     Adobe Analytics
           </Tab>
@@ -553,6 +585,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     Actionable Log Files
           </Tab>
@@ -562,6 +595,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     General Online Data
           </Tab>
@@ -571,6 +605,7 @@ ShallowWrapper {
                     invalid={false}
                     renderChildren={true}
                     selected={false}
+                    tabIndex={0}
           >
                     Onboarded Records
           </Tab>
@@ -604,6 +639,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               All
 </Tab>,
@@ -613,6 +649,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={true}
+              tabIndex={0}
 >
               Adobe Analytics
 </Tab>,
@@ -622,6 +659,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               Actionable Log Files
 </Tab>,
@@ -631,6 +669,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               General Online Data
 </Tab>,
@@ -640,6 +679,7 @@ ShallowWrapper {
               invalid={false}
               renderChildren={true}
               selected={false}
+              tabIndex={0}
 >
               Onboarded Records
 </Tab>,
@@ -663,6 +703,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "All",
@@ -679,6 +720,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": true,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "Adobe Analytics",
@@ -695,6 +737,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "Actionable Log Files",
@@ -711,6 +754,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "General Online Data",
@@ -727,6 +771,7 @@ ShallowWrapper {
               "invalid": false,
               "renderChildren": true,
               "selected": false,
+              "tabIndex": 0,
             },
             "ref": null,
             "rendered": "Onboarded Records",
@@ -764,6 +809,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         All
             </Tab>
@@ -773,6 +819,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={true}
+                        tabIndex={0}
             >
                         Adobe Analytics
             </Tab>
@@ -782,6 +829,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         Actionable Log Files
             </Tab>
@@ -791,6 +839,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         General Online Data
             </Tab>
@@ -800,6 +849,7 @@ ShallowWrapper {
                         invalid={false}
                         renderChildren={true}
                         selected={false}
+                        tabIndex={0}
             >
                         Onboarded Records
             </Tab>
@@ -833,6 +883,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 All
 </Tab>,
@@ -842,6 +893,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={true}
+                tabIndex={0}
 >
                 Adobe Analytics
 </Tab>,
@@ -851,6 +903,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 Actionable Log Files
 </Tab>,
@@ -860,6 +913,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 General Online Data
 </Tab>,
@@ -869,6 +923,7 @@ ShallowWrapper {
                 invalid={false}
                 renderChildren={true}
                 selected={false}
+                tabIndex={0}
 >
                 Onboarded Records
 </Tab>,
@@ -892,6 +947,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "All",
@@ -908,6 +964,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": true,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "Adobe Analytics",
@@ -924,6 +981,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "Actionable Log Files",
@@ -940,6 +998,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "General Online Data",
@@ -956,6 +1015,7 @@ ShallowWrapper {
                 "invalid": false,
                 "renderChildren": true,
                 "selected": false,
+                "tabIndex": 0,
               },
               "ref": null,
               "rendered": "Onboarded Records",

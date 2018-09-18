@@ -9,8 +9,13 @@ ShallowWrapper {
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     clearSearchFields={[Function]}
+    dataSources={Array []}
     errors={
         Object {
+            "dataSources": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
             "reportSuites": Object {
               "errorMessage": "",
               "hasError": false,
@@ -29,6 +34,7 @@ ShallowWrapper {
             },
           }
     }
+    fetchDataSources={[Function]}
     fetchLimits={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
@@ -162,6 +168,10 @@ ShallowWrapper {
                               disabled={false}
                               errors={
                                         Object {
+                                                  "dataSources": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
                                                   "reportSuites": Object {
                                                     "errorMessage": "",
                                                     "hasError": false,
@@ -339,6 +349,10 @@ ShallowWrapper {
                         disabled={false}
                         errors={
                                     Object {
+                                                "dataSources": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "reportSuites": Object {
                                                   "errorMessage": "",
                                                   "hasError": false,
@@ -418,6 +432,10 @@ ShallowWrapper {
               disabled={false}
               errors={
                             Object {
+                                          "dataSources": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
                                           "reportSuites": Object {
                                             "errorMessage": "",
                                             "hasError": false,
@@ -494,6 +512,10 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "disabled": false,
               "errors": Object {
+                "dataSources": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
                 "reportSuites": Object {
                   "errorMessage": "",
                   "hasError": false,
@@ -952,6 +974,10 @@ ShallowWrapper {
                                     disabled={false}
                                     errors={
                                                 Object {
+                                                            "dataSources": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
                                                             "reportSuites": Object {
                                                               "errorMessage": "",
                                                               "hasError": false,
@@ -1129,6 +1155,10 @@ ShallowWrapper {
                             disabled={false}
                             errors={
                                           Object {
+                                                        "dataSources": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
                                                         "reportSuites": Object {
                                                           "errorMessage": "",
                                                           "hasError": false,
@@ -1208,6 +1238,10 @@ ShallowWrapper {
                 disabled={false}
                 errors={
                                 Object {
+                                                "dataSources": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "reportSuites": Object {
                                                   "errorMessage": "",
                                                   "hasError": false,
@@ -1284,6 +1318,10 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "disabled": false,
                 "errors": Object {
+                  "dataSources": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "reportSuites": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -1763,8 +1801,13 @@ ShallowWrapper {
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     clearSearchFields={[Function]}
+    dataSources={Array []}
     errors={
         Object {
+            "dataSources": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
             "reportSuites": Object {
               "errorMessage": "",
               "hasError": false,
@@ -1783,6 +1826,7 @@ ShallowWrapper {
             },
           }
     }
+    fetchDataSources={[Function]}
     fetchLimits={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
@@ -1916,6 +1960,10 @@ ShallowWrapper {
                               disabled={false}
                               errors={
                                         Object {
+                                                  "dataSources": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
                                                   "reportSuites": Object {
                                                     "errorMessage": "",
                                                     "hasError": false,
@@ -2099,6 +2147,10 @@ ShallowWrapper {
                         disabled={false}
                         errors={
                                     Object {
+                                                "dataSources": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "reportSuites": Object {
                                                   "errorMessage": "",
                                                   "hasError": false,
@@ -2184,6 +2236,10 @@ ShallowWrapper {
               disabled={false}
               errors={
                             Object {
+                                          "dataSources": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
                                           "reportSuites": Object {
                                             "errorMessage": "",
                                             "hasError": false,
@@ -2266,6 +2322,10 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "disabled": false,
               "errors": Object {
+                "dataSources": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
                 "reportSuites": Object {
                   "errorMessage": "",
                   "hasError": false,
@@ -2730,6 +2790,10 @@ ShallowWrapper {
                                     disabled={false}
                                     errors={
                                                 Object {
+                                                            "dataSources": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
                                                             "reportSuites": Object {
                                                               "errorMessage": "",
                                                               "hasError": false,
@@ -2913,6 +2977,10 @@ ShallowWrapper {
                             disabled={false}
                             errors={
                                           Object {
+                                                        "dataSources": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
                                                         "reportSuites": Object {
                                                           "errorMessage": "",
                                                           "hasError": false,
@@ -2998,6 +3066,10 @@ ShallowWrapper {
                 disabled={false}
                 errors={
                                 Object {
+                                                "dataSources": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "reportSuites": Object {
                                                   "errorMessage": "",
                                                   "hasError": false,
@@ -3080,6 +3152,10 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "disabled": false,
                 "errors": Object {
+                  "dataSources": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "reportSuites": Object {
                     "errorMessage": "",
                     "hasError": false,
@@ -3565,8 +3641,13 @@ ShallowWrapper {
     changeSortingOrder={[Function]}
     clearSearch={[Function]}
     clearSearchFields={[Function]}
+    dataSources={Array []}
     errors={
         Object {
+            "dataSources": Object {
+              "errorMessage": "",
+              "hasError": false,
+            },
             "reportSuites": Object {
               "errorMessage": "",
               "hasError": false,
@@ -3585,6 +3666,7 @@ ShallowWrapper {
             },
           }
     }
+    fetchDataSources={[Function]}
     fetchLimits={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
@@ -3718,6 +3800,10 @@ ShallowWrapper {
                               disabled={false}
                               errors={
                                         Object {
+                                                  "dataSources": Object {
+                                                    "errorMessage": "",
+                                                    "hasError": false,
+                                                  },
                                                   "reportSuites": Object {
                                                     "errorMessage": "",
                                                     "hasError": false,
@@ -3895,6 +3981,10 @@ ShallowWrapper {
                         disabled={false}
                         errors={
                                     Object {
+                                                "dataSources": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "reportSuites": Object {
                                                   "errorMessage": "",
                                                   "hasError": false,
@@ -3974,6 +4064,10 @@ ShallowWrapper {
               disabled={false}
               errors={
                             Object {
+                                          "dataSources": Object {
+                                            "errorMessage": "",
+                                            "hasError": false,
+                                          },
                                           "reportSuites": Object {
                                             "errorMessage": "",
                                             "hasError": false,
@@ -4050,6 +4144,10 @@ ShallowWrapper {
               "customStartDate": "2018-04-24",
               "disabled": false,
               "errors": Object {
+                "dataSources": Object {
+                  "errorMessage": "",
+                  "hasError": false,
+                },
                 "reportSuites": Object {
                   "errorMessage": "",
                   "hasError": false,
@@ -4508,6 +4606,10 @@ ShallowWrapper {
                                     disabled={false}
                                     errors={
                                                 Object {
+                                                            "dataSources": Object {
+                                                              "errorMessage": "",
+                                                              "hasError": false,
+                                                            },
                                                             "reportSuites": Object {
                                                               "errorMessage": "",
                                                               "hasError": false,
@@ -4685,6 +4787,10 @@ ShallowWrapper {
                             disabled={false}
                             errors={
                                           Object {
+                                                        "dataSources": Object {
+                                                          "errorMessage": "",
+                                                          "hasError": false,
+                                                        },
                                                         "reportSuites": Object {
                                                           "errorMessage": "",
                                                           "hasError": false,
@@ -4764,6 +4870,10 @@ ShallowWrapper {
                 disabled={false}
                 errors={
                                 Object {
+                                                "dataSources": Object {
+                                                  "errorMessage": "",
+                                                  "hasError": false,
+                                                },
                                                 "reportSuites": Object {
                                                   "errorMessage": "",
                                                   "hasError": false,
@@ -4840,6 +4950,10 @@ ShallowWrapper {
                 "customStartDate": "2018-04-24",
                 "disabled": false,
                 "errors": Object {
+                  "dataSources": Object {
+                    "errorMessage": "",
+                    "hasError": false,
+                  },
                   "reportSuites": Object {
                     "errorMessage": "",
                     "hasError": false,

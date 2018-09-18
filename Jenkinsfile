@@ -47,7 +47,8 @@ node ("docker") {
             docker.image(cypressBaseImage).inside("-u root -v ${workspace}/artifacts/ui-build:/usr/src/app/ui-build -v ${workspace}/client:/usr/src/app/client") {
                 sh '(cd /usr/src/app/ui-build && mkdir cypress)'
                 sh 'cp -R /usr/src/app/client/cypress/* /usr/src/app/ui-build/cypress/'
-                sh 'cp -R /usr/src/app/client/cypress.json /usr/src/app/ui-build/cypress.json'
+                sh 'cp /usr/src/app/client/cypress.json /usr/src/app/ui-build/cypress.json'
+                sh 'npm install cypress@`node -p -e \'require("/usr/src/app/client/package.json").dependencies.cypress\'`'
                 sh '(cd /usr/src/app/ui-build && npm run cypress:ci)'
             }
         }

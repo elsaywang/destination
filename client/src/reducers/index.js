@@ -7,6 +7,7 @@ import reportSuites from './reportSuites';
 import errors from './errors';
 import permissions from './permissions';
 import traitBackfill from './traitBackfill';
+import dataSources from './dataSources';
 
 export default combineReducers({
     results,
@@ -17,6 +18,7 @@ export default combineReducers({
     errors,
     permissions,
     traitBackfill,
+    dataSources,
 });
 
 export const getSelectedResults = ({ selectedSignals, results }) =>

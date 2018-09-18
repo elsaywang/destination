@@ -6,6 +6,7 @@ import {
 } from '../../actions/searchForm';
 import { GET_SAVED_SEARCH_REJECTED, SAVE_SEARCH_REJECTED } from '../../actions/savedSearch';
 import { GET_REPORT_SUITES_REJECTED } from '../../actions/reportSuites';
+import { FETCH_DATA_SOURCES_REJECTED } from '../../actions/dataSources';
 import errorsReducer, { handleErrorState } from '../errors.js';
 
 describe('test on `handleErrorState`', () => {
@@ -38,6 +39,10 @@ describe('test on errors reducer', () => {
             errorMessage: '',
         },
         saveSearch: {
+            hasError: false,
+            errorMessage: '',
+        },
+        dataSources: {
             hasError: false,
             errorMessage: '',
         },
@@ -134,6 +139,22 @@ describe('test on errors reducer', () => {
             },
         };
         expect(errorsReducer(initialState, action)).toEqual(expectedGetReportSuiteError);
+    });
+
+    it('should handle FETCH_DATA_SOURCES_REJECTED', () => {
+        const action = {
+            type: FETCH_DATA_SOURCES_REJECTED,
+            payload: { message: 'there is error to get dataSources' },
+            error: true,
+        };
+        const expectedGetDataSourcesError = {
+            ...initialState,
+            dataSources: {
+                hasError: true,
+                errorMessage: 'there is error to get dataSources',
+            },
+        };
+        expect(errorsReducer(initialState, action)).toEqual(expectedGetDataSourcesError);
     });
 
     it('should handle TOGGLE_ADVANCED_SEARCH when payload exists in action and reportSuite state has error', () => {

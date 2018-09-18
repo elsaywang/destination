@@ -65,7 +65,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Add
-          size="S"
+          size="XS"
 />,
         <div
           className="singleCreationlinkText"
@@ -84,7 +84,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "size": "S",
+          "size": "XS",
         },
         "ref": null,
         "rendered": null,
@@ -113,7 +113,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Add
-            size="S"
+            size="XS"
 />,
           <div
             className="singleCreationlinkText"
@@ -132,7 +132,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "size": "S",
+            "size": "XS",
           },
           "ref": null,
           "rendered": null,

@@ -31,6 +31,7 @@ ShallowWrapper {
         crossOffset={0}
         data-test="overlay-trigger"
         defaultShow={false}
+        delayHide={100}
         disabled={false}
         flip={true}
         offset={0}
@@ -106,6 +107,7 @@ ShallowWrapper {
         "crossOffset": 0,
         "data-test": "overlay-trigger",
         "defaultShow": false,
+        "delayHide": 100,
         "disabled": false,
         "flip": true,
         "offset": 0,
@@ -180,6 +182,7 @@ ShallowWrapper {
           crossOffset={0}
           data-test="overlay-trigger"
           defaultShow={false}
+          delayHide={100}
           disabled={false}
           flip={true}
           offset={0}
@@ -255,6 +258,7 @@ ShallowWrapper {
           "crossOffset": 0,
           "data-test": "overlay-trigger",
           "defaultShow": false,
+          "delayHide": 100,
           "disabled": false,
           "flip": true,
           "offset": 0,

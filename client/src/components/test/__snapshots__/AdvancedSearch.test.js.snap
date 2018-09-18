@@ -43,24 +43,44 @@ ShallowWrapper {
     "props": Object {
       "children": <FieldLabel
         label={
-                <div>
-                        Report Suite  
+                <div
+                        className="reportSuitesLabel"
+                >
+                        <span>
+                                Report Suite   
+                        </span>
                         <OverlayTrigger
                                 boundariesElement={[Function]}
                                 crossOffset={0}
                                 defaultShow={false}
+                                delayHide={100}
                                 disabled={false}
                                 flip={true}
                                 offset={0}
                                 placement="right"
                                 trigger="hover"
                         >
-                                <Info
-                                        size="XS"
+                                <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        disabled={false}
+                                        element="button"
+                                        icon={
+                                                <Info
+                                                        size="XS"
+                                                />
+                                        }
+                                        invalid={false}
+                                        label=""
+                                        logic={false}
+                                        quiet={true}
+                                        selected={false}
+                                        variant="tool"
                                 />
                                 <Tooltip
                                         open={true}
                                         placement="right"
+                                        role="tooltip"
                                         variant="inspect"
                                 >
                                         Please select a report suite to show key suggestions for Analytics variables.
@@ -113,24 +133,44 @@ ShallowWrapper {
           required={false}
           value=""
 />,
-        "label": <div>
-          Report Suite  
+        "label": <div
+          className="reportSuitesLabel"
+>
+          <span>
+                    Report Suite   
+          </span>
           <OverlayTrigger
                     boundariesElement={[Function]}
                     crossOffset={0}
                     defaultShow={false}
+                    delayHide={100}
                     disabled={false}
                     flip={true}
                     offset={0}
                     placement="right"
                     trigger="hover"
           >
-                    <Info
-                              size="XS"
+                    <Button
+                              autoFocus={false}
+                              block={false}
+                              disabled={false}
+                              element="button"
+                              icon={
+                                        <Info
+                                                  size="XS"
+                                        />
+                              }
+                              invalid={false}
+                              label=""
+                              logic={false}
+                              quiet={true}
+                              selected={false}
+                              variant="tool"
                     />
                     <Tooltip
                               open={true}
                               placement="right"
+                              role="tooltip"
                               variant="inspect"
                     >
                               Please select a report suite to show key suggestions for Analytics variables.
@@ -174,24 +214,44 @@ ShallowWrapper {
       "props": Object {
         "children": <FieldLabel
           label={
-                    <div>
-                              Report Suite  
+                    <div
+                              className="reportSuitesLabel"
+                    >
+                              <span>
+                                        Report Suite   
+                              </span>
                               <OverlayTrigger
                                         boundariesElement={[Function]}
                                         crossOffset={0}
                                         defaultShow={false}
+                                        delayHide={100}
                                         disabled={false}
                                         flip={true}
                                         offset={0}
                                         placement="right"
                                         trigger="hover"
                               >
-                                        <Info
-                                                  size="XS"
+                                        <Button
+                                                  autoFocus={false}
+                                                  block={false}
+                                                  disabled={false}
+                                                  element="button"
+                                                  icon={
+                                                            <Info
+                                                                      size="XS"
+                                                            />
+                                                  }
+                                                  invalid={false}
+                                                  label=""
+                                                  logic={false}
+                                                  quiet={true}
+                                                  selected={false}
+                                                  variant="tool"
                                         />
                                         <Tooltip
                                                   open={true}
                                                   placement="right"
+                                                  role="tooltip"
                                                   variant="inspect"
                                         >
                                                   Please select a report suite to show key suggestions for Analytics variables.
@@ -244,24 +304,44 @@ ShallowWrapper {
             required={false}
             value=""
 />,
-          "label": <div>
-            Report Suite  
+          "label": <div
+            className="reportSuitesLabel"
+>
+            <span>
+                        Report Suite   
+            </span>
             <OverlayTrigger
                         boundariesElement={[Function]}
                         crossOffset={0}
                         defaultShow={false}
+                        delayHide={100}
                         disabled={false}
                         flip={true}
                         offset={0}
                         placement="right"
                         trigger="hover"
             >
-                        <Info
-                                    size="XS"
+                        <Button
+                                    autoFocus={false}
+                                    block={false}
+                                    disabled={false}
+                                    element="button"
+                                    icon={
+                                                <Info
+                                                            size="XS"
+                                                />
+                                    }
+                                    invalid={false}
+                                    label=""
+                                    logic={false}
+                                    quiet={true}
+                                    selected={false}
+                                    variant="tool"
                         />
                         <Tooltip
                                     open={true}
                                     placement="right"
+                                    role="tooltip"
                                     variant="inspect"
                         >
                                     Please select a report suite to show key suggestions for Analytics variables.
