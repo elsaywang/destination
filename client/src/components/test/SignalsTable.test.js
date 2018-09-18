@@ -380,7 +380,7 @@ describe('<SignalsTable /> component', () => {
                 const signals = [{}];
 
                 instance.formatKeyName = jest.fn(() => 'Browser');
-                instance.formatSignalType = jest.fn(() => 'Adobe Analytics');
+                instance.renderSignalType = jest.fn(() => 'Adobe Analytics');
                 instance.formatSignalSource = jest.fn(() => '—');
                 instance.formatIncludedInTraits = jest.fn(() => []);
 
@@ -477,6 +477,25 @@ describe('<SignalsTable /> component', () => {
                 const signal = { source: { sourceType: 'INVALID' } };
 
                 expect(formatSignalType(signal)).toEqual('—');
+            });
+        });
+
+        describe('renderSignalType', () => {
+            const newWrapper = shallow(<SignalsTable results={[]} />);
+            const { renderSignalType, formatSignalType } = newWrapper.instance();
+
+            const signals = [
+                { source: { sourceType: 'ANALYTICS' } },
+                { source: { sourceType: 'REALTIME' } },
+                { source: { sourceType: 'ALF' } },
+                { source: { sourceType: 'ONBOARDED' } },
+                { source: { sourceType: 'INVALID' } },
+            ];
+            it('should return the correct renderSignalType which contains the text from formatSignalType ', () => {
+                signals.map(signal => {
+                    const signalTypeWrapper = shallow(renderSignalType(signal));
+                    expect(signalTypeWrapper.text()).toEqual(formatSignalType(signal));
+                });
             });
         });
 

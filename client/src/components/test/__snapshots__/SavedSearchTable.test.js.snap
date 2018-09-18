@@ -616,7 +616,11 @@ ShallowWrapper {
           "percentageChange": 0.27783491545226535,
           "signalSource": "—",
           "signalStatus": "UNUSED",
-          "signalType": "—",
+          "signalType": <div
+            className="signalType"
+>
+            —
+</div>,
           "source": Object {
             "dataSourceIds": null,
             "reportSuiteIds": null,
@@ -705,7 +709,11 @@ ShallowWrapper {
             "percentageChange": 0.27783491545226535,
             "signalSource": "—",
             "signalStatus": "UNUSED",
-            "signalType": "—",
+            "signalType": <div
+              className="signalType"
+>
+              —
+</div>,
             "source": Object {
               "dataSourceIds": null,
               "reportSuiteIds": null,

@@ -82,7 +82,7 @@ class SignalsTable extends Component {
         return signals.map(signal => ({
             ...signal,
             keyName: this.formatKeyName(signal),
-            signalType: this.formatSignalType(signal),
+            signalType: this.renderSignalType(signal),
             signalSource: this.formatSignalSource(signal),
             includedInTraits: this.formatIncludedInTraits(signal),
         }));
@@ -94,7 +94,7 @@ class SignalsTable extends Component {
         return keyValuePairs.map(({ keyName = '—' }) => keyName);
     }
 
-    formatSignalType(signal) {
+    formatSignalType = signal => {
         const { sourceType } = signal.source;
 
         switch (sourceType) {
@@ -109,7 +109,11 @@ class SignalsTable extends Component {
             default:
                 return '—';
         }
-    }
+    };
+
+    renderSignalType = signal => {
+        return <div className={styles.signalType}>{this.formatSignalType(signal)}</div>;
+    };
 
     formatSignalSource(signal) {
         const { sourceType, dataSourceIds, reportSuiteIds } = signal.source;

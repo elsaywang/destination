@@ -205,7 +205,11 @@ ShallowWrapper {
           ],
           "percentageChange": 0.1234,
           "signalSource": "123",
-          "signalType": "Adobe Analytics",
+          "signalType": <div
+            className="signalType"
+>
+            Adobe Analytics
+</div>,
           "source": Object {
             "reportSuiteIds": Array [
               123,
@@ -229,7 +233,11 @@ ShallowWrapper {
           ],
           "percentageChange": -0.5678,
           "signalSource": "456",
-          "signalType": "Onboarded Records",
+          "signalType": <div
+            className="signalType"
+>
+            Onboarded Records
+</div>,
           "source": Object {
             "dataSourceIds": Array [
               456,
@@ -310,7 +318,11 @@ ShallowWrapper {
             ],
             "percentageChange": 0.1234,
             "signalSource": "123",
-            "signalType": "Adobe Analytics",
+            "signalType": <div
+              className="signalType"
+>
+              Adobe Analytics
+</div>,
             "source": Object {
               "reportSuiteIds": Array [
                 123,
@@ -334,7 +346,11 @@ ShallowWrapper {
             ],
             "percentageChange": -0.5678,
             "signalSource": "456",
-            "signalType": "Onboarded Records",
+            "signalType": <div
+              className="signalType"
+>
+              Onboarded Records
+</div>,
             "source": Object {
               "dataSourceIds": Array [
                 456,
