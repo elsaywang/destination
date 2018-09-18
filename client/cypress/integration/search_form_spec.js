@@ -85,7 +85,7 @@ describe('Search Form Integration Tests', () => {
             cy.wait('@fetchSignalKeys');
         });
 
-        it.only('should show autocomplete with suggestions and match the typed option', () => {
+        it('should show autocomplete with suggestions and match the typed option', () => {
             cy.clock().then(clock => {
                 clock.restore();
             });
