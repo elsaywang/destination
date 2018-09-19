@@ -100,6 +100,30 @@ exports[`<SignalsTable /> component Rendering cells renderKeyValuePairs should r
 </div>
 `;
 
+exports[`<SignalsTable /> component Rendering cells renderSignalType should render a valid signalType name inside a div 1`] = `
+<div
+  className="signalType"
+/>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderSignalType should render a valid signalType name inside a div 2`] = `
+<div
+  className="signalType"
+/>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderSignalType should render a valid signalType name inside a div 3`] = `
+<div
+  className="signalType"
+/>
+`;
+
+exports[`<SignalsTable /> component Rendering cells renderSignalType should render a valid signalType name inside a div 4`] = `
+<div
+  className="signalType"
+/>
+`;
+
 exports[`<SignalsTable /> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],

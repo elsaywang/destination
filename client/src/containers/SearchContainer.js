@@ -31,12 +31,7 @@ import { normalizeSortOptions } from '../utils/normalizeSortOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
-import {
-    isDataSourceMatching,
-    matchingDataSource,
-    formatDataSourceLabel,
-    isValidDataSourceId,
-} from '../utils/dataSourceOptions';
+import { formatDataSourceLabel, isValidDataSourceId } from '../utils/dataSourceOptions';
 import { searchResultsThrottleMs } from '../constants/lazyLoadConstants';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';

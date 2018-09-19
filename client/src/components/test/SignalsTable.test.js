@@ -256,6 +256,9 @@ describe('<SignalsTable /> component', () => {
                     keyValuePairs: [],
                 });
             });
+            it('should call `renderSignalType` for cells in the `signalType` column', () => {
+                verifyRenderMethodInColumn('renderSignalType', 'signalType', 'Adobe Analytics');
+            });
         });
 
         describe('renderKeyValuePairs', () => {
@@ -288,6 +291,22 @@ describe('<SignalsTable /> component', () => {
             });
         });
 
+        describe('renderSignalType', () => {
+            const { renderSignalType } = wrapper.instance();
+
+            it('should render a valid signalType name inside a div', () => {
+                const signalTypes = [
+                    'General Online Data',
+                    'Adobe Analytics',
+                    'Onboarded Records',
+                    'Actionable Log Files',
+                ];
+
+                signalTypes.map(({ signalType }) =>
+                    expect(renderSignalType(signalType)).toMatchSnapshot(),
+                );
+            });
+        });
         describe('renderTotalCounts', () => {
             const { renderTotalCounts } = wrapper.instance();
             const totalCountsWrapper = shallow(<div>{renderTotalCounts(123456789)}</div>);

@@ -38,6 +38,8 @@ class SignalsTable extends Component {
                 return this.renderPercentageChange(data);
             case 'includedInTraits':
                 return this.renderIncludedInTraits(data);
+            case 'signalType':
+                return this.renderSignalType(data);
             default:
                 return <span>{data}</span>;
         }
@@ -177,6 +179,10 @@ class SignalsTable extends Component {
                 ))}
             </div>
         );
+    }
+
+    renderSignalType(signalType) {
+        return <div className={styles.signalType}>{signalType}</div>;
     }
 
     renderTotalCounts(totalCounts) {
