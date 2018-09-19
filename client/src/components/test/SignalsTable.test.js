@@ -256,6 +256,9 @@ describe('<SignalsTable /> component', () => {
                     keyValuePairs: [],
                 });
             });
+            it('should call `renderSignalType` for cells in the `signalType` column', () => {
+                verifyRenderMethodInColumn('renderSignalType', 'signalType', 'Adobe Analytics');
+            });
         });
 
         describe('renderKeyValuePairs', () => {
@@ -288,6 +291,22 @@ describe('<SignalsTable /> component', () => {
             });
         });
 
+        describe('renderSignalType', () => {
+            const { renderSignalType } = wrapper.instance();
+
+            it('should render a valid signalType name inside a div', () => {
+                const signalTypes = [
+                    'General Online Data',
+                    'Adobe Analytics',
+                    'Onboarded Records',
+                    'Actionable Log Files',
+                ];
+
+                signalTypes.map(({ signalType }) =>
+                    expect(renderSignalType(signalType)).toMatchSnapshot(),
+                );
+            });
+        });
         describe('renderTotalCounts', () => {
             const { renderTotalCounts } = wrapper.instance();
             const totalCountsWrapper = shallow(<div>{renderTotalCounts(123456789)}</div>);
@@ -380,7 +399,7 @@ describe('<SignalsTable /> component', () => {
                 const signals = [{}];
 
                 instance.formatKeyName = jest.fn(() => 'Browser');
-                instance.renderSignalType = jest.fn(() => 'Adobe Analytics');
+                instance.formatSignalType = jest.fn(() => 'Adobe Analytics');
                 instance.formatSignalSource = jest.fn(() => '—');
                 instance.formatIncludedInTraits = jest.fn(() => []);
 
@@ -477,25 +496,6 @@ describe('<SignalsTable /> component', () => {
                 const signal = { source: { sourceType: 'INVALID' } };
 
                 expect(formatSignalType(signal)).toEqual('—');
-            });
-        });
-
-        describe('renderSignalType', () => {
-            const newWrapper = shallow(<SignalsTable results={[]} />);
-            const { renderSignalType, formatSignalType } = newWrapper.instance();
-
-            const signals = [
-                { source: { sourceType: 'ANALYTICS' } },
-                { source: { sourceType: 'REALTIME' } },
-                { source: { sourceType: 'ALF' } },
-                { source: { sourceType: 'ONBOARDED' } },
-                { source: { sourceType: 'INVALID' } },
-            ];
-            it('should return the correct renderSignalType which contains the text from formatSignalType ', () => {
-                signals.map(signal => {
-                    const signalTypeWrapper = shallow(renderSignalType(signal));
-                    expect(signalTypeWrapper.text()).toEqual(formatSignalType(signal));
-                });
             });
         });
 

@@ -38,6 +38,8 @@ class SignalsTable extends Component {
                 return this.renderPercentageChange(data);
             case 'includedInTraits':
                 return this.renderIncludedInTraits(data);
+            case 'signalType':
+                return this.renderSignalType(data);
             default:
                 return <span>{data}</span>;
         }
@@ -82,7 +84,7 @@ class SignalsTable extends Component {
         return signals.map(signal => ({
             ...signal,
             keyName: this.formatKeyName(signal),
-            signalType: this.renderSignalType(signal),
+            signalType: this.formatSignalType(signal),
             signalSource: this.formatSignalSource(signal),
             includedInTraits: this.formatIncludedInTraits(signal),
         }));
@@ -94,7 +96,7 @@ class SignalsTable extends Component {
         return keyValuePairs.map(({ keyName = '—' }) => keyName);
     }
 
-    formatSignalType = signal => {
+    formatSignalType(signal) {
         const { sourceType } = signal.source;
 
         switch (sourceType) {
@@ -109,11 +111,7 @@ class SignalsTable extends Component {
             default:
                 return '—';
         }
-    };
-
-    renderSignalType = signal => {
-        return <div className={styles.signalType}>{this.formatSignalType(signal)}</div>;
-    };
+    }
 
     formatSignalSource(signal) {
         const { sourceType, dataSourceIds, reportSuiteIds } = signal.source;
@@ -181,6 +179,10 @@ class SignalsTable extends Component {
                 ))}
             </div>
         );
+    }
+
+    renderSignalType(signalType) {
+        return <div className={styles.signalType}>{signalType}</div>;
     }
 
     renderTotalCounts(totalCounts) {

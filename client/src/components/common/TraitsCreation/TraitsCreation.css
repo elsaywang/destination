@@ -1,7 +1,7 @@
 :local(.singleCreationlinkText) {
     display: inline-flex;
     font-size: 0.875rem;
-    padding-left: 0.12em;
+    padding-left: 0.15em;
     vertical-align: text-bottom;
 }
 :local(.singleCreation) {
