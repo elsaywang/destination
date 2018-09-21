@@ -24,15 +24,11 @@ function Layout(props) {
                     <FormattedMessage {...messages.title}>
                         {text => <Heading className={styles.message}>{text}</Heading>}
                     </FormattedMessage>
-                    <BetaTag
-                        className={classNames(styles.entry, styles.betaTag)}
-                        data-test="beta-tag"
-                    />
+                    <BetaTag className={classNames(styles.entry, styles.betaTag, 'beta-tag')} />
                     <Button
-                        className={classNames(styles.entry, styles.tourGuide)}
+                        className={classNames(styles.entry, styles.tourGuide, 'tour-guide')}
                         label="Take a Tour"
                         variant="secondary"
-                        data-test="tour-guide"
                     />
                 </GridRow>
                 {props.children}
