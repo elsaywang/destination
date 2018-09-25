@@ -323,6 +323,11 @@ ShallowWrapper {
 >
           <GridColumn
                     size={12}
+                    style={
+                              Object {
+                                        "position": "relative",
+                                      }
+                    }
           >
                     <EmptySearch
                               className="empty"
@@ -914,6 +919,11 @@ ShallowWrapper {
         "props": Object {
           "children": <GridColumn
             size={12}
+            style={
+                        Object {
+                                    "position": "relative",
+                                  }
+            }
 >
             <EmptySearch
                         className="empty"
@@ -933,6 +943,9 @@ ShallowWrapper {
               variant="explore"
 />,
             "size": 12,
+            "style": Object {
+              "position": "relative",
+            },
           },
           "ref": null,
           "rendered": Object {
@@ -1129,6 +1142,11 @@ ShallowWrapper {
 >
             <GridColumn
                         size={12}
+                        style={
+                                    Object {
+                                                "position": "relative",
+                                              }
+                        }
             >
                         <EmptySearch
                                     className="empty"
@@ -1720,6 +1738,11 @@ ShallowWrapper {
           "props": Object {
             "children": <GridColumn
               size={12}
+              style={
+                            Object {
+                                          "position": "relative",
+                                        }
+              }
 >
               <EmptySearch
                             className="empty"
@@ -1739,6 +1762,9 @@ ShallowWrapper {
                 variant="explore"
 />,
               "size": 12,
+              "style": Object {
+                "position": "relative",
+              },
             },
             "ref": null,
             "rendered": Object {
@@ -2121,6 +2147,11 @@ ShallowWrapper {
 >
           <GridColumn
                     size={12}
+                    style={
+                              Object {
+                                        "position": "relative",
+                                      }
+                    }
           >
                     <EmptySearch
                               className="empty"
@@ -2730,6 +2761,11 @@ ShallowWrapper {
         "props": Object {
           "children": <GridColumn
             size={12}
+            style={
+                        Object {
+                                    "position": "relative",
+                                  }
+            }
 >
             <EmptySearch
                         className="empty"
@@ -2749,6 +2785,9 @@ ShallowWrapper {
               variant="errorFetching"
 />,
             "size": 12,
+            "style": Object {
+              "position": "relative",
+            },
           },
           "ref": null,
           "rendered": Object {
@@ -2951,6 +2990,11 @@ ShallowWrapper {
 >
             <GridColumn
                         size={12}
+                        style={
+                                    Object {
+                                                "position": "relative",
+                                              }
+                        }
             >
                         <EmptySearch
                                     className="empty"
@@ -3560,6 +3604,11 @@ ShallowWrapper {
           "props": Object {
             "children": <GridColumn
               size={12}
+              style={
+                            Object {
+                                          "position": "relative",
+                                        }
+              }
 >
               <EmptySearch
                             className="empty"
@@ -3579,6 +3628,9 @@ ShallowWrapper {
                 variant="errorFetching"
 />,
               "size": 12,
+              "style": Object {
+                "position": "relative",
+              },
             },
             "ref": null,
             "rendered": Object {
@@ -3955,6 +4007,11 @@ ShallowWrapper {
 >
           <GridColumn
                     size={12}
+                    style={
+                              Object {
+                                        "position": "relative",
+                                      }
+                    }
           >
                     <EmptySearch
                               className="empty"
@@ -4546,6 +4603,11 @@ ShallowWrapper {
         "props": Object {
           "children": <GridColumn
             size={12}
+            style={
+                        Object {
+                                    "position": "relative",
+                                  }
+            }
 >
             <EmptySearch
                         className="empty"
@@ -4565,6 +4627,9 @@ ShallowWrapper {
               variant="errorFetching"
 />,
             "size": 12,
+            "style": Object {
+              "position": "relative",
+            },
           },
           "ref": null,
           "rendered": Object {
@@ -4761,6 +4826,11 @@ ShallowWrapper {
 >
             <GridColumn
                         size={12}
+                        style={
+                                    Object {
+                                                "position": "relative",
+                                              }
+                        }
             >
                         <EmptySearch
                                     className="empty"
@@ -5352,6 +5422,11 @@ ShallowWrapper {
           "props": Object {
             "children": <GridColumn
               size={12}
+              style={
+                            Object {
+                                          "position": "relative",
+                                        }
+              }
 >
               <EmptySearch
                             className="empty"
@@ -5371,6 +5446,9 @@ ShallowWrapper {
                 variant="errorFetching"
 />,
               "size": 12,
+              "style": Object {
+                "position": "relative",
+              },
             },
             "ref": null,
             "rendered": Object {

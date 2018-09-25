@@ -519,7 +519,9 @@ class SearchContainer extends Component {
                     </div>
                 ) : (
                     <GridRow>
-                        <GridColumn size={12}>{this.renderEmptyState()}</GridColumn>
+                        <GridColumn size={12} style={{ position: 'relative' }}>
+                            {this.renderEmptyState()}
+                        </GridColumn>
                     </GridRow>
                 )}
             </Fragment>
