@@ -36,7 +36,7 @@ describe('Integration Tests for routing', function() {
             .should('be.exist');
         done();
     });
-
+    //TODO: Bring back tour guide button test cases once contexts are finalized
     describe('when routing to signal Dashboard (home) URL', () => {
         beforeEach(() => {
             cy.visit('/');
@@ -50,7 +50,7 @@ describe('Integration Tests for routing', function() {
             cy.title().should('contain', 'Signals');
         });
 
-        it('should contain the Signal Head and the entry button for beta tag and tour Guide', () => {
+        it.skip('should contain the Signal Head and the entry button for beta tag and tour Guide', () => {
             cy.get('.spectrum-Heading')
                 .contains('Signals')
                 .should('be.exist');
@@ -93,7 +93,7 @@ describe('Integration Tests for routing', function() {
             cy.url().should('match', /\#\/search/);
         });
 
-        it('should also contain the Signal Head and the entry button for Beta tag and Tour Guide', () => {
+        it.skip('should also contain the Signal Head and the entry button for Beta tag and Tour Guide', () => {
             cy.get('.spectrum-Heading')
                 .contains('Signals')
                 .should('be.exist');

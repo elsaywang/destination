@@ -6,7 +6,7 @@ import { Tag } from '@react/react-spectrum/TagList';
 
 const BetaTag = ({ className }) => (
     <div className={classNames(className)}>
-        <Tag value="Beta" disabled id="beta">
+        <Tag value="Beta" disabled id="beta-tag">
             Beta
         </Tag>
     </div>

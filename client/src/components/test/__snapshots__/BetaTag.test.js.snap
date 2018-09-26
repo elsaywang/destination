@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": <Tag
         closeable={false}
         disabled={true}
-        id="beta"
+        id="beta-tag"
         selected={false}
         value="Beta"
 >
@@ -37,7 +37,7 @@ ShallowWrapper {
         "children": "Beta",
         "closeable": false,
         "disabled": true,
-        "id": "beta",
+        "id": "beta-tag",
         "selected": false,
         "value": "Beta",
       },
@@ -56,7 +56,7 @@ ShallowWrapper {
         "children": <Tag
           closeable={false}
           disabled={true}
-          id="beta"
+          id="beta-tag"
           selected={false}
           value="Beta"
 >
@@ -73,7 +73,7 @@ ShallowWrapper {
           "children": "Beta",
           "closeable": false,
           "disabled": true,
-          "id": "beta",
+          "id": "beta-tag",
           "selected": false,
           "value": "Beta",
         },

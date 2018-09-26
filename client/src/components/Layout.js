@@ -25,11 +25,12 @@ function Layout(props) {
                         {text => <Heading className={styles.message}>{text}</Heading>}
                     </FormattedMessage>
                     <BetaTag className={classNames(styles.entry, styles.betaTag, 'beta-tag')} />
+                    {/* TODO : Bring back tour guide button once contexts are finalized
                     <Button
                         className={classNames(styles.entry, styles.tourGuide, 'tour-guide')}
                         label="Take a Tour"
                         variant="secondary"
-                    />
+                    />*/}
                 </GridRow>
                 {props.children}
             </Grid>
