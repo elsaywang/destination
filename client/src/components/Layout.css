@@ -16,3 +16,19 @@
     align-items: baseline;
     margin-bottom: 1rem;
 }
+
+:local(.message) {
+    padding-left: 1rem;
+}
+
+:local(.entry) {
+    margin: 2.75rem 0 0 0.1rem;
+}
+
+:local(.betaTag) {
+    display: inline-box;
+}
+
+:local(.tourGuide) {
+    margin-left: 0.85rem;
+}

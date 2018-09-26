@@ -1,0 +1,7 @@
+#beta-tag {
+    display: inline-block;
+    background-color: var(--spectrum-global-color-blue600);
+    color: var(--spectrum-global-color-grey50);
+    border-radius: 100px/100px;
+    margin-left: 5px;
+}
