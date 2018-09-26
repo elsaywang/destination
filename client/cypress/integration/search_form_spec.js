@@ -80,7 +80,7 @@ describe('Search Form Integration Tests', () => {
             ).as('fetchSignalKeys');
 
             cy.get('[data-test="key-search-field"]').as('keyInput');
-            cy.get('@keyInput').type('a');
+            cy.get('@keyInput').type('a', { force: true });
             cy.tick(keySuggestionsDebounceMs);
             cy.wait('@fetchSignalKeys');
         });
