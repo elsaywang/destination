@@ -19,7 +19,7 @@ const SignalSourceFilter = ({
 
     return (
         <Select
-            data-test="signal-source-filter"
+            data-test={`${sourceType.toLowerCase()}-signal-source-filter`}
             className={styles.signalSourcesFilter}
             placeholder={filterPlaceholder}
             onChange={onSignalSourceSelect}

@@ -8,7 +8,7 @@ import {
     getSignalSourcesOptions,
     getMatchedReportSuiteBySuite,
     getMatchedReportSuiteByName,
-    getReportSuitesFromSearchResults,
+    getSelectedReportSuiteFromSearchResults,
 } from '../signalSourceOptions';
 
 describe('signalSourcesOptions utils tests', () => {
@@ -136,13 +136,13 @@ describe('signalSourcesOptions utils tests', () => {
     describe('getSignalSourceFilterPlaceholderText', () => {
         it('should return `Onboarded Records` as placeholder if the sourceType is `ONBOARDED`', () => {
             const sourceType = 'ONBOARDED';
-            const expectedText = 'Onboarded Records';
+            const expectedText = 'onboarded records';
             expect(getSignalSourceFilterPlaceholderText(sourceType)).toEqual(expectedText);
         });
 
         it('should return `Report Suites` as placeholder if the sourceType is `ANALYTICS`', () => {
             const sourceType = 'ANALYTICS';
-            const expectedText = 'Report Suites';
+            const expectedText = 'report suites';
             expect(getSignalSourceFilterPlaceholderText(sourceType)).toEqual(expectedText);
         });
 
@@ -247,39 +247,73 @@ describe('signalSourcesOptions utils tests', () => {
         });
     });
 
-    describe('getReportSuitesFromSearchResults', () => {
-        it('should return the correct reportSuite if results list has reportSuiteIds value', () => {
+    describe('getSelectedReportSuiteFromSearchResults', () => {
+        it("should return the correct reportSuite if results list has reportSuiteIds value based on user's report suite search", () => {
             const expectedRportSuites = 'aampnwtest00';
-            expect(getReportSuitesFromSearchResults(results)).toEqual(expectedRportSuites);
+            expect(getSelectedReportSuiteFromSearchResults(results)).toEqual(expectedRportSuites);
         });
 
-        it('should return the `undefined` if result list has no reportSuiteIds value', () => {
-            const emptyReportSuiteResults = {
+        it("should return the empty string if result list reportSuites value are not all the same based on user's report suite search", () => {
+            const allResults = {
                 pid: 1194,
-                startDate: 1537574400000,
-                endDate: 1538179200000,
+                startDate: 1537747200000,
+                endDate: 1538352000000,
                 list: [
                     {
-                        keyValuePairs: [
-                            {
-                                key: 'evar0',
-                                value: 'CMS0',
-                            },
-                        ],
+                        keyValuePairs: [{ key: 'evar0', value: 'CMS0' }],
                         source: {
                             dataSourceIds: null,
-                            reportSuiteIds: [],
+                            reportSuiteIds: ['mockReportSuite0'],
                             sourceType: 'ANALYTICS',
                         },
-                        totalCount: 2295996900,
-                        percentageChange: 0.307783319327102,
+                        totalCount: 1563032865,
+                        percentageChange: 0.4559854171860064,
+                        includedInTraits: null,
+                        signalStatus: 'UNUSED',
+                    },
+                    {
+                        keyValuePairs: [{ key: 'evar1', value: 'CMS1' }],
+                        source: {
+                            dataSourceIds: null,
+                            reportSuiteIds: ['mockReportSuite1'],
+                            sourceType: 'ANALYTICS',
+                        },
+                        totalCount: 101759964,
+                        percentageChange: 0.9192674881463822,
+                        includedInTraits: null,
+                        signalStatus: 'UNUSED',
+                    },
+                    {
+                        keyValuePairs: [{ key: 'evar2', value: 'CMS2' }],
+                        source: {
+                            dataSourceIds: null,
+                            reportSuiteIds: ['mockReportSuite2'],
+                            sourceType: 'ANALYTICS',
+                        },
+                        totalCount: 3324960152,
+                        percentageChange: 0.07339076288858326,
+                        includedInTraits: null,
+                        signalStatus: 'UNUSED',
+                    },
+                    {
+                        keyValuePairs: [{ key: 'evar3', value: 'CMS3' }],
+                        source: {
+                            dataSourceIds: null,
+                            reportSuiteIds: ['mockReportSuite3'],
+                            sourceType: 'ANALYTICS',
+                        },
+                        totalCount: 551483598,
+                        percentageChange: 0.9792116648437725,
                         includedInTraits: null,
                         signalStatus: 'UNUSED',
                     },
                 ],
+                pageSize: 50,
+                page: 0,
+                total: 50,
+                analyticsServiceAvailable: true,
             };
-
-            expect(getReportSuitesFromSearchResults(emptyReportSuiteResults)).toEqual(undefined);
+            expect(getSelectedReportSuiteFromSearchResults(allResults)).toEqual('');
         });
     });
 });

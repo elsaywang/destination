@@ -653,16 +653,65 @@ describe('Search Form Integration Tests', () => {
             });
 
             describe('When a Report Suite is selected in "advanced search"', () => {
-                it('`source` should be included and contain `sourceType` and `reportSuiteIds`', () => {
+                beforeEach(() => {
                     cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
                         'fetchAdvancedSearchResults',
                     );
 
                     cy.get('[data-test="advanced-search-toggle"]').click();
                     cy.wait('@fetchReportSuites');
+                });
+
+                it('`source` should be included and contain `sourceType` and `reportSuiteIds`', () => {
                     cy.get('[data-test="advanced-search-filter"]').type('te{enter}');
                     cy.get('[data-test="search-button"]').click();
                     cy.wait('@fetchAdvancedSearchResults');
+
+                    cy.getRequestParams('@fetchAdvancedSearchResults').then(
+                        ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
+                            expect(sourceType).to.equal('ANALYTICS');
+                            expect(reportSuiteIds[0]).to.equal(
+                                'test-report-suite-edited1505153440289',
+                            );
+                            expect(dataSourceIds).to.be.undefined;
+                        },
+                    );
+                });
+
+                it('should have a disabled signal source filter without selected value when search button is clicked', () => {
+                    cy.get('[data-test="search-button"]').click();
+                    cy.wait('@fetchAdvancedSearchResults');
+                    cy.get('[data-test="signal-source-filter"]')
+                        .as('reportSuitesFilter')
+                        .should('have.length', 1);
+                });
+            });
+
+            describe.only('When an Analytics Adobe is selected', () => {
+                beforeEach(() => {
+                    cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                        'fetchAdvancedSearchResults',
+                    );
+                    cy.clock().then(clock => clock.restore());
+                });
+
+                it('`source` should be included and contain `sourceType` and `reportSuiteIds`', () => {
+                    cy.get('[data-test="search-button"]').click();
+
+                    cy.get('[data-test="analytics-signal-type-filter"]').click();
+                    cy.wait('@fetchReportSuites');
+
+                    cy.get('[data-test="analytics-signal-source-filter"]').as('reportSuitesFilter');
+
+                    cy.get('@reportSuitesFilter')
+                        .click()
+                        .get('.spectrum-Menu-item:first')
+                        .click()
+                        .then($option => {
+                            cy.get('@reportSuitesFilter').should($reportSuite => {
+                                expect($reportSuite.text()).to.contains($option.text());
+                            });
+                        });
 
                     cy.getRequestParams('@fetchAdvancedSearchResults').then(
                         ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
@@ -694,7 +743,7 @@ describe('Search Form Integration Tests', () => {
                     cy.get('[data-test="onboarded-signal-type-filter"]').click();
                     cy.wait('@fetchDataSources');
 
-                    cy.get('[data-test="signal-source-filter"]').as('dataSourceFilter');
+                    cy.get('[data-test="onboarded-signal-source-filter"]').as('dataSourceFilter');
 
                     cy.get('@dataSourceFilter')
                         .click()

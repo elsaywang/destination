@@ -6,9 +6,9 @@ export const isValidDataSourceId = (dataSources, selectedDataSourceId) =>
 export const getSignalSourceFilterPlaceholderText = sourceType => {
     switch (sourceType) {
         case 'ONBOARDED':
-            return 'Onboarded Records';
+            return 'onboarded records';
         case 'ANALYTICS':
-            return 'Report Suites';
+            return 'report suites';
         default:
             return '';
     }
@@ -51,8 +51,14 @@ export const getSignalSourcesOptions = (signalSources, sourceType) => {
     }
 };
 
-export const getReportSuitesFromSearchResults = results => {
+export const getSelectedReportSuiteFromSearchResults = results => {
     const { list } = results;
-    const source = list.map(({ source }) => source)[0];
-    return source.reportSuiteIds[0];
+    const sources = list.map(({ source }) => source);
+    const reportSuiteIds = sources.map(({ reportSuiteIds }) => reportSuiteIds);
+    const firstReportSuitId = reportSuiteIds[0][0];
+    //need to check if every reportSuiteId from results are the same => user selected a valid one from advanced ComboBox;
+    //else => ''
+    return reportSuiteIds.every(reportSuiteId => reportSuiteId[0] === firstReportSuitId)
+        ? firstReportSuitId
+        : '';
 };
