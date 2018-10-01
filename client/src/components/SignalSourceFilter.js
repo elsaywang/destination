@@ -40,9 +40,10 @@ SignalSourceFilter.propTypes = {
         PropTypes.shape({
             name: PropTypes.string,
             dataSourceId: PropTypes.number,
+            suite: PropTypes.string,
         }),
     ).isRequired,
-    selectedSignalSource: PropTypes.number,
+    selectedSignalSource: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default SignalSourceFilter;
