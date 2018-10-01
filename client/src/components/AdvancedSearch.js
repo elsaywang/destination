@@ -7,6 +7,7 @@ import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import Tooltip from '@react/react-spectrum/Tooltip';
 import Button from '@react/react-spectrum/Button';
 import styles from './AdvancedSearch.css';
+import { getReportSuitesOptions } from '../utils/signalSourceOptions';
 
 const AdvancedSearch = ({
     enabled,
@@ -15,7 +16,8 @@ const AdvancedSearch = ({
     onReportSuiteSelect,
     reportSuites,
 }) => {
-    const options = reportSuites.map(rs => rs.suite);
+    const options = getReportSuitesOptions(reportSuites);
+
     const renderLabel = () => (
         <div className={styles.reportSuitesLabel}>
             <span>Report Suite &nbsp; </span>

@@ -36,6 +36,7 @@ ShallowWrapper {
     }
     fetchDataSources={[Function]}
     fetchLimits={[Function]}
+    fetchReportSuites={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
         Array [
@@ -91,7 +92,6 @@ ShallowWrapper {
             },
           ]
     }
-    getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
     isMaxSignalSelectionsReached={false}
@@ -1854,6 +1854,7 @@ ShallowWrapper {
     }
     fetchDataSources={[Function]}
     fetchLimits={[Function]}
+    fetchReportSuites={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
         Array [
@@ -1909,7 +1910,6 @@ ShallowWrapper {
             },
           ]
     }
-    getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
     isMaxSignalSelectionsReached={false}
@@ -3720,6 +3720,7 @@ ShallowWrapper {
     }
     fetchDataSources={[Function]}
     fetchLimits={[Function]}
+    fetchReportSuites={[Function]}
     fetchUserRoles={[Function]}
     finalizedSavedSearchList={
         Array [
@@ -3775,7 +3776,6 @@ ShallowWrapper {
             },
           ]
     }
-    getReportSuites={[Function]}
     getSavedSearch={[Function]}
     isEndOfResults={false}
     isMaxSignalSelectionsReached={false}

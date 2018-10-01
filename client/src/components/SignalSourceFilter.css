@@ -1,8 +1,8 @@
-:local(.dataSourcesFilter) {
+:local(.signalSourcesFilter) {
     padding-bottom: 1em;
     display: inline-flex;
 }
-:local(.dataSourceSelect) {
+:local(.signalSourceSelect) {
     display: flex;
     min-width: 24.25em;
 }

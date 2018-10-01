@@ -1,13 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DataSourceFilter /> component rendering matches snapshot 1`] = `
+exports[`<SignalSourceFilter /> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <DataSourceFilter
-    dataSources={Array []}
-    onDataSourceSelect={[Function]}
-    selectedDataSource={undefined}
-    signalType="ONBOARDED"
+  Symbol(enzyme.__unrendered__): <SignalSourceFilter
+    disabled={false}
+    onSignalSourceSelect={[Function]}
+    selectedSignalSource={undefined}
+    signalSources={Array []}
+    sourceType="ONBOARDED"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -22,8 +23,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "className": "dataSourceSelect",
-      "data-test": "data-source-filter",
+      "className": "signalSourceSelect",
+      "data-test": "signal-source-filter",
+      "disabled": false,
       "flexible": true,
       "onChange": [Function],
       "options": Array [],
@@ -40,8 +42,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "className": "dataSourceSelect",
-        "data-test": "data-source-filter",
+        "className": "signalSourceSelect",
+        "data-test": "signal-source-filter",
+        "disabled": false,
         "flexible": true,
         "onChange": [Function],
         "options": Array [],

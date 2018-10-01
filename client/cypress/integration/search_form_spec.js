@@ -694,7 +694,7 @@ describe('Search Form Integration Tests', () => {
                     cy.get('[data-test="onboarded-signal-type-filter"]').click();
                     cy.wait('@fetchDataSources');
 
-                    cy.get('[data-test="data-source-filter"]').as('dataSourceFilter');
+                    cy.get('[data-test="signal-source-filter"]').as('dataSourceFilter');
 
                     cy.get('@dataSourceFilter')
                         .click()

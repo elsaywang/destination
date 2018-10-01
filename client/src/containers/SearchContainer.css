@@ -46,3 +46,6 @@
     width: 20em;
     margin-left: -0.25em;
 }
+:local(.advancedSearchTextField) {
+    min-width: 10em;
+}
