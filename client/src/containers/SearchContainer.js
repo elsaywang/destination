@@ -429,7 +429,7 @@ class SearchContainer extends Component {
 
     getSignalSources = () => {
         const { dataSources, reportSuites } = this.props;
-        const { name, reportSuiteIds } = this.state.source;
+        const { reportSuiteIds } = this.state.source;
 
         if (this.isFilteredByOnboardedRecords()) {
             return dataSources;
@@ -443,7 +443,7 @@ class SearchContainer extends Component {
     };
 
     getSelectedSignalSource = () => {
-        const { dataSourceIds, reportSuiteIds, name } = this.state.source;
+        const { dataSourceIds, reportSuiteIds } = this.state.source;
 
         if (this.isFilteredByOnboardedRecords()) {
             return dataSourceIds[0];
@@ -457,7 +457,7 @@ class SearchContainer extends Component {
         //thus this filter above search table should be disabled;
         //Also the selected report suite should be coherent within search table result, not from the this.state.source
         if (this.isFilteredByAdobeAnalytics() && this.state.advanced) {
-            return getSelectedReportSuiteFromSearchResults(this.props.results, name);
+            return getSelectedReportSuiteFromSearchResults(this.props.results);
         }
 
         return '';
