@@ -36,13 +36,20 @@ SignalSourceFilter.propTypes = {
     disabled: PropTypes.bool.isRequired,
     sourceType: PropTypes.string.isRequired,
     onSignalSourceSelect: PropTypes.func.isRequired,
-    signalSources: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string,
-            dataSourceId: PropTypes.number,
-            suite: PropTypes.string,
-        }),
-    ).isRequired,
+    signalSources: PropTypes.oneOfType([
+        PropTypes.arrayOf(
+            PropTypes.shape({
+                dataSourceId: PropTypes.number.isRequired,
+                name: PropTypes.string.isRequired,
+            }),
+        ), //dataSources filter
+        PropTypes.arrayOf(
+            PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                suite: PropTypes.string.isRequired,
+            }),
+        ), //reportSuites filter
+    ]).isRequired,
     selectedSignalSource: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 

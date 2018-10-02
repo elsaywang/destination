@@ -51,8 +51,7 @@ export const getSignalSourcesOptions = (signalSources, sourceType) => {
     }
 };
 
-export const getSelectedReportSuiteFromSearchResults = results => {
-    const { list } = results;
+export const getSelectedReportSuiteFromSearchResults = ({ list }) => {
     const sources = list.map(({ source }) => source);
     const reportSuiteIds = sources.map(({ reportSuiteIds }) => reportSuiteIds);
     const firstReportSuitId = reportSuiteIds[0][0];

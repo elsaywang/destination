@@ -681,13 +681,14 @@ describe('Search Form Integration Tests', () => {
                 it('should have a disabled signal source filter without selected value when search button is clicked', () => {
                     cy.get('[data-test="search-button"]').click();
                     cy.wait('@fetchAdvancedSearchResults');
-                    cy.get('[data-test="signal-source-filter"]')
+                    cy.get('[data-test="analytics-signal-source-filter"]')
                         .as('reportSuitesFilter')
                         .should('have.length', 1);
+                    cy.get('@reportSuitesFilter').should('have.class', 'is-disabled');
                 });
             });
 
-            describe.only('When an Analytics Adobe is selected', () => {
+            describe('When Adobe Analytics is selected', () => {
                 beforeEach(() => {
                     cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
                         'fetchAdvancedSearchResults',
