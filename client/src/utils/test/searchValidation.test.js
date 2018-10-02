@@ -17,10 +17,13 @@ describe('Search Validation Utils', () => {
     });
 
     describe('isValueValid() should check if a value is valid based on passed in operator and value', () => {
-        it('should return true when given operator of "==" or "contains" and any value', () => {
+        it('should return true when given operator of "==" or "contains" or "!=" and any value', () => {
             expect(validationUtils.isValueValid({ operator: '==', value: '' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: '1234' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: 'abcd' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: '!=', value: '' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: '!=', value: '1234' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: '!=', value: 'abcd' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: 'contains', value: '' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: 'contains', value: '1234' })).toBe(
                 true,
@@ -87,6 +90,11 @@ describe('Search Validation Utils', () => {
                 {
                     key: '',
                     operator: '==',
+                    value: '',
+                },
+                {
+                    key: 'abc',
+                    operator: '!=',
                     value: '',
                 },
                 {
