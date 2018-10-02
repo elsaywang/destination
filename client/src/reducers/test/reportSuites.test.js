@@ -1,4 +1,4 @@
-import { GET_REPORT_SUITES_FULFILLED } from '../../actions/reportSuites';
+import { FETCH_REPORT_SUITES_FULFILLED } from '../../actions/reportSuites';
 import reportSuitesReducer from '../reportSuites';
 
 describe('reportSuitesReducer', () => {
@@ -6,7 +6,7 @@ describe('reportSuitesReducer', () => {
     it('should return the initial state', () => {
         expect(reportSuitesReducer(initialState, {})).toEqual(initialState);
     });
-    it('should handle GET_REPORT_SUITES_FULFILLED', () => {
+    it('should handle FETCH_REPORT_SUITES_FULFILLED', () => {
         const response = [
             {
                 dataSourceId: 167463,
@@ -24,7 +24,7 @@ describe('reportSuitesReducer', () => {
             },
         ];
         const action = {
-            type: GET_REPORT_SUITES_FULFILLED,
+            type: FETCH_REPORT_SUITES_FULFILLED,
             payload: response,
         };
 

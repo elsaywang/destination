@@ -30,6 +30,7 @@ ShallowWrapper {
               "components.Layout.title": "Signals",
             },
             "now": [Function],
+            "onError": [Function],
             "textComponent": "span",
             "timeZone": null,
           }
@@ -1584,6 +1585,7 @@ ShallowWrapper {
           "components.Layout.title": "Signals",
         },
         "now": [Function],
+        "onError": [Function],
         "textComponent": "span",
         "timeZone": null,
       },

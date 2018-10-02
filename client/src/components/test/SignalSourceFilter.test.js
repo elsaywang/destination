@@ -1,17 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Select from '@react/react-spectrum/Select';
-import DataSourceFilter from '../DataSourceFilter';
+import SignalSourceFilter from '../SignalSourceFilter';
 
-describe('<DataSourceFilter /> component', () => {
+describe('<SignalSourceFilter /> component', () => {
     const mockFn = jest.fn();
     const props = {
-        signalType: 'ONBOARDED',
-        onDataSourceSelect: mockFn,
-        dataSources: [],
-        selectedDataSource: undefined,
+        sourceType: 'ONBOARDED',
+        onSignalSourceSelect: mockFn,
+        signalSources: [],
+        selectedSignalSource: undefined,
+        disabled: false,
     };
-    const wrapper = shallow(<DataSourceFilter {...props} />);
+    const wrapper = shallow(<SignalSourceFilter {...props} />);
     describe('rendering', () => {
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
@@ -23,7 +24,7 @@ describe('<DataSourceFilter /> component', () => {
 
         it('renders <Select /> with datasources props passed in', () => {
             wrapper.setProps({
-                dataSources: [
+                signalSources: [
                     { dataSourceId: 167507, name: 'Test Datasource: 1535390150786140362' },
                 ],
             });

@@ -3,7 +3,7 @@ import * as searchFormActionCreators from '../actions/searchForm';
 import * as savedSearchActionCreators from '../actions/savedSearch';
 import { selectSignals } from '../actions/selectSignals';
 import { populateSearchFields, clearSearchFields } from '../actions/savedSearchFields';
-import { getReportSuites } from '../actions/reportSuites';
+import { fetchReportSuites } from '../actions/reportSuites';
 import { fetchDataSources } from '../actions/dataSources';
 import { fetchUserRoles } from '../actions/permissions';
 import { fetchLimits } from '../actions/limits';
@@ -16,7 +16,7 @@ import { GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import MultiSignalsTraitsCreationContainer from './MultiSignalsTraitsCreationContainer';
 import TraitsCreationWarning from './TraitsCreationWarning';
 import SignalTypeFilter from '../components/SignalTypeFilter';
-import DataSourceFilter from '../components/DataSourceFilter';
+import SignalSourceFilter from '../components/SignalSourceFilter';
 import SignalsTable from '../components/SignalsTable';
 import Search from '../components/Search';
 import SavedSearch from './SavedSearch';
@@ -31,7 +31,14 @@ import { normalizeSortOptions } from '../utils/normalizeSortOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getTooltipMessage } from '../constants/tooltipMessageOptions';
-import { formatDataSourceLabel, isValidDataSourceId } from '../utils/dataSourceOptions';
+import {
+    formatDataSourceLabel,
+    isValidDataSourceId,
+    isValidReportSuite,
+    getMatchedReportSuiteBySuite,
+    getMatchedReportSuiteByName,
+    getSelectedReportSuiteFromSearchResults,
+} from '../utils/signalSourceOptions';
 import { searchResultsThrottleMs } from '../constants/lazyLoadConstants';
 import { defaultEventFiresMinimum, defaultEventFiresStep } from '../constants/limitConstants';
 import EmptySearch from '../components/EmptySearch';
@@ -102,13 +109,16 @@ class SearchContainer extends Component {
                 if (this.isFilteredByOnboardedRecords() && !this.props.dataSources.length) {
                     this.props.fetchDataSources();
                 }
+                if (this.isFilteredByAdobeAnalytics() && !this.props.reportSuites.length) {
+                    this.props.fetchReportSuites();
+                }
             },
         );
     };
 
     onAdvancedSearchChange = value => {
         if (value && !this.props.reportSuites.length) {
-            this.props.getReportSuites();
+            this.props.fetchReportSuites();
         }
 
         this.props.toggleAdvancedSearch(value);
@@ -126,45 +136,73 @@ class SearchContainer extends Component {
         });
     };
 
+    //ReportSuite ComboBox onChange value is the option { label } or user typed value
     onReportSuiteChange = value => {
+        const { reportSuites } = this.props;
+        const matchingReportSuite = getMatchedReportSuiteByName(reportSuites, value);
+
         this.setState({
             searched: false,
             source: {
                 ...this.state.source,
                 name: value,
+                reportSuiteIds: matchingReportSuite ? [matchingReportSuite.suite] : [],
             },
         });
     };
 
-    onReportSuiteSelect = value => {
-        const matchingReportSuite = this.props.reportSuites.find(
-            reportSuite => reportSuite.suite.toLowerCase() === value.toLowerCase(),
-        );
+    //ReportSuite ComboBox onSelect value is the object { label,value }
+    onReportSuiteSelect = ({ value }) => {
+        const { reportSuites } = this.props;
+        const matchingReportSuite = getMatchedReportSuiteBySuite(reportSuites, value);
 
         this.setState({
             searched: false,
             source: {
                 ...this.state.source,
-                name: value,
+                name: matchingReportSuite.name,
                 dataSourceIds: [],
                 reportSuiteIds: [matchingReportSuite.suite],
             },
         });
     };
 
-    onDataSourceSelect = value => {
-        const { dataSources } = this.props;
-        if (isValidDataSourceId(dataSources, value)) {
-            this.setState(
-                {
-                    searched: true,
-                    source: {
-                        ...this.state.source,
-                        dataSourceIds: [value],
+    handleSignalSourceSelect = value => {
+        if (this.isFilteredByOnboardedRecords()) {
+            const { dataSources } = this.props;
+
+            if (isValidDataSourceId(dataSources, value)) {
+                this.setState(
+                    {
+                        searched: true,
+                        source: {
+                            ...this.state.source,
+                            dataSourceIds: [value],
+                        },
                     },
-                },
-                () => this.props.callSearch({ search: this.state }),
-            );
+                    () => this.props.callSearch({ search: this.state }),
+                );
+            }
+        }
+
+        if (this.isFilteredByAdobeAnalytics()) {
+            const { reportSuites } = this.props;
+
+            if (isValidReportSuite(reportSuites, value)) {
+                const matchingReportSuite = getMatchedReportSuiteBySuite(reportSuites, value);
+
+                this.setState(
+                    {
+                        searched: true,
+                        source: {
+                            ...this.state.source,
+                            name: matchingReportSuite.name,
+                            reportSuiteIds: [value],
+                        },
+                    },
+                    () => this.props.callSearch({ search: this.state }),
+                );
+            }
         }
     };
 
@@ -384,6 +422,47 @@ class SearchContainer extends Component {
 
     isFilteredByOnboardedRecords = () => this.state.source.sourceType === 'ONBOARDED';
 
+    isFilteredByAdobeAnalytics = () => this.state.source.sourceType === 'ANALYTICS';
+
+    isFilteredBySignalSource = () =>
+        this.isFilteredByOnboardedRecords() || this.isFilteredByAdobeAnalytics();
+
+    getSignalSources = () => {
+        const { dataSources, reportSuites } = this.props;
+        const { reportSuiteIds } = this.state.source;
+
+        if (this.isFilteredByOnboardedRecords()) {
+            return dataSources;
+        }
+
+        if (this.isFilteredByAdobeAnalytics()) {
+            return reportSuites;
+        }
+
+        return [];
+    };
+
+    getSelectedSignalSource = () => {
+        const { dataSourceIds, reportSuiteIds } = this.state.source;
+
+        if (this.isFilteredByOnboardedRecords()) {
+            return dataSourceIds[0];
+        }
+
+        if (this.isFilteredByAdobeAnalytics() && !this.state.advanced) {
+            return reportSuiteIds[0];
+        }
+
+        //If advanced seach is enabled, the only filter should be used is the ReportSuitesComboBox in the search panel,
+        //thus this filter above search table should be disabled;
+        //Also the selected report suite should be coherent within search table result, not from the this.state.source
+        if (this.isFilteredByAdobeAnalytics() && this.state.advanced) {
+            return getSelectedReportSuiteFromSearchResults(this.props.results);
+        }
+
+        return '';
+    };
+
     render() {
         return (
             <Fragment>
@@ -481,13 +560,15 @@ class SearchContainer extends Component {
                                     />
                                 </GridColumn>
                             </GridRow>
-                            {this.isFilteredByOnboardedRecords() ? (
+                            {this.isFilteredBySignalSource() ? (
                                 <GridRow>
                                     <GridColumn size={3}>
-                                        <DataSourceFilter
-                                            dataSources={this.props.dataSources}
-                                            onDataSourceSelect={this.onDataSourceSelect}
-                                            selectedDataSource={this.state.source.dataSourceIds[0]}
+                                        <SignalSourceFilter
+                                            disabled={this.state.advanced}
+                                            sourceType={this.state.source.sourceType}
+                                            signalSources={this.getSignalSources()}
+                                            onSignalSourceSelect={this.handleSignalSourceSelect}
+                                            selectedSignalSource={this.getSelectedSignalSource()}
                                         />
                                     </GridColumn>
                                     <GridColumn size={9}>
@@ -565,7 +646,7 @@ const actionCreators = {
     selectSignals,
     populateSearchFields,
     clearSearchFields,
-    getReportSuites,
+    fetchReportSuites,
     fetchUserRoles,
     fetchLimits,
     fetchDataSources,

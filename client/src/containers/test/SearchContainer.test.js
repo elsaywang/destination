@@ -350,11 +350,35 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.state('source').name).toBe('');
         });
 
-        it('.onReportSuiteChange() changes source name state to the given value', () => {
+        it('.onReportSuiteChange() changes source name state and reportSuiteIds to the given value if it is matched', () => {
             expect(wrapper.state('source').name).toBe(initialState.source.name);
 
+            wrapper.setProps({
+                reportSuites: [
+                    {
+                        suite: 'test-report-suite',
+                        name: 'test report suite',
+                    },
+                ],
+            });
             wrapper.instance().onReportSuiteChange('test report suite');
             expect(wrapper.state('source').name).toBe('test report suite');
+            expect(wrapper.state('source').reportSuiteIds).toEqual(['test-report-suite']);
+        });
+
+        it('.onReportSuiteChange() changes only the source name state to the given value if it is not matched', () => {
+            wrapper.setProps({
+                reportSuites: [
+                    {
+                        suite: 'test-report-suite',
+                        name: 'test report suite',
+                    },
+                ],
+            });
+
+            wrapper.instance().onReportSuiteChange('test report suite123');
+            expect(wrapper.state('source').name).toBe('test report suite123');
+            expect(wrapper.state('source').reportSuiteIds).toEqual([]);
         });
 
         it('.onReportSuiteSelect() changes source state to reflect the report suite that corresponds to the given value', () => {
@@ -362,14 +386,15 @@ describe('<SearchContainer /> component', () => {
                 reportSuites: [
                     {
                         suite: 'test-report-suite-123',
+                        name: 'Test Report Suite 123',
                     },
                 ],
             });
 
-            wrapper.instance().onReportSuiteSelect('test-report-suite-123');
+            wrapper.instance().onReportSuiteSelect({ value: 'test-report-suite-123' });
 
             expect(wrapper.state('source')).toEqual({
-                name: 'test-report-suite-123',
+                name: 'Test Report Suite 123',
                 dataSourceIds: [],
                 reportSuiteIds: ['test-report-suite-123'],
                 sourceType: 'ANALYTICS',
@@ -469,8 +494,8 @@ describe('<SearchContainer /> component', () => {
             const onBoarded = 'ONBOARDED';
             wrapper.instance().handleSignalTypeChange(onBoarded);
             expect(wrapper.state('source').sourceType).toBe(onBoarded);
-            expect(wrapper.instance().isFilteredByOnboardedRecords()).toBeTruthy();
-            expect(wrapper.find('[data-test="data-source-filter"]')).toBeTruthy();
+            expect(wrapper.instance().isFilteredBySignalSource()).toBeTruthy();
+            expect(wrapper.find('[data-test="signal-source-filter"]')).toBeTruthy();
         });
     });
 

@@ -22,8 +22,8 @@ const normalizeSourceType = ({ source: { sourceType } }) => sourceType !== 'ALL'
 const normalizeDataSourceIds = ({ source: { dataSourceIds } }) =>
     dataSourceIds && dataSourceIds.length && { dataSourceIds };
 
-const normalizeReportSuiteIds = ({ advanced, source: { reportSuiteIds } }) =>
-    advanced && reportSuiteIds && reportSuiteIds.length && { reportSuiteIds };
+const normalizeReportSuiteIds = ({ source: { reportSuiteIds } }) =>
+    reportSuiteIds && reportSuiteIds.length && { reportSuiteIds };
 
 const normalizeSource = search => {
     const sourceType = normalizeSourceType(search);

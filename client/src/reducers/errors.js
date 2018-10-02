@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
 import { CLEAR_SEARCH, CALL_SEARCH_REJECTED, TOGGLE_ADVANCED_SEARCH } from '../actions/searchForm';
 import { GET_SAVED_SEARCH_REJECTED, SAVE_SEARCH_REJECTED } from '../actions/savedSearch';
-import { GET_REPORT_SUITES_REJECTED } from '../actions/reportSuites';
+import { FETCH_REPORT_SUITES_REJECTED } from '../actions/reportSuites';
 import { FETCH_DATA_SOURCES_REJECTED } from '../actions/dataSources';
 
 const initialState = {
@@ -52,7 +52,7 @@ export default handleActions(
             ...state,
             saveSearch: handleErrorState(state, action),
         }),
-        [GET_REPORT_SUITES_REJECTED]: (state, action) => ({
+        [FETCH_REPORT_SUITES_REJECTED]: (state, action) => ({
             ...state,
             reportSuites: handleErrorState(state, action),
         }),
