@@ -9,7 +9,7 @@ import { keySuggestionsDebounceMs } from '../constants/lazyLoadConstants';
 import styles from './KeyValuePair.css';
 import classNames from 'classnames';
 import fetch from '../utils/fetch';
-import { isValueValid, isKeyEmptyWithValue } from '../utils/searchValidation';
+import { isValueValid, isKeyEmptyWithValue, isKeyValuePairEmpty } from '../utils/searchValidation';
 import InlineErrorMessage from './common/InlineErrorMessage';
 
 class KeyValuePair extends Component {
@@ -22,6 +22,14 @@ class KeyValuePair extends Component {
     }
 
     state = this.getInitialAutocompleteError();
+
+    componentWillReceiveProps(nextProps) {
+        const { pair } = nextProps;
+        //if clearAll is called,need to reset the error state to initial.
+        if (isKeyValuePairEmpty(pair)) {
+            this.setState(this.getInitialAutocompleteError());
+        }
+    }
 
     getInitialAutocompleteError() {
         return {
