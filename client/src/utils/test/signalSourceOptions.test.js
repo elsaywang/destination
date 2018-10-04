@@ -49,6 +49,23 @@ describe('signalSourcesOptions utils tests', () => {
         },
     ];
 
+    const reportSuitesWithNoNames = [
+        {
+            dataSourceId: 180083,
+            pid: 13577,
+            suite: 'aampnw.octmr01',
+            datacenter: 'pnw',
+            ssf: true,
+        },
+        {
+            dataSourceId: 180084,
+            pid: 13577,
+            suite: 'aamdal.octmr02',
+            datacenter: 'dal',
+            ssf: true,
+        },
+    ];
+
     const results = {
         pid: 13577,
         startDate: 1537574400000,
@@ -184,6 +201,16 @@ describe('signalSourcesOptions utils tests', () => {
             ];
             expect(getReportSuitesOptions(reportSuites)).toEqual(expectedReportSuitesOptions);
         });
+
+        it('should have `label` and `value` both are the suite value if reportSuite has no name property', () => {
+            const expectedReportSuitesOptions = [
+                { label: 'aampnw.octmr01', value: 'aampnw.octmr01' },
+                { label: 'aamdal.octmr02', value: 'aamdal.octmr02' },
+            ];
+            expect(getReportSuitesOptions(reportSuitesWithNoNames)).toEqual(
+                expectedReportSuitesOptions,
+            );
+        });
     });
     describe('getSignalSources', () => {
         it('should return the correct data sources options if sourceType is`ONBOARDED`', () => {
@@ -228,7 +255,7 @@ describe('signalSourcesOptions utils tests', () => {
         });
     });
     describe('getMatchedReportSuiteByName', () => {
-        it('should return the matched report suite option by given name', () => {
+        it('should return the matched by name report suite option by given name', () => {
             const name = 'Oct MR 02';
             const expectedMatchedSuite = {
                 dataSourceId: 180084,
@@ -241,9 +268,24 @@ describe('signalSourcesOptions utils tests', () => {
             expect(getMatchedReportSuiteByName(reportSuites, name)).toEqual(expectedMatchedSuite);
         });
 
+        it('should return the matched by suite report suite option by given name if no name property in reportSuites', () => {
+            const name = 'aamdal.octmr02';
+            const expectedMatchedSuite = {
+                dataSourceId: 180084,
+                datacenter: 'dal',
+                pid: 13577,
+                ssf: true,
+                suite: 'aamdal.octmr02',
+            };
+            expect(getMatchedReportSuiteByName(reportSuitesWithNoNames, name)).toEqual(
+                expectedMatchedSuite,
+            );
+        });
+
         it('should return undefined if given name is not in any record within reportSuites', () => {
             const name = 'Oct MR 01NA';
-            expect(getMatchedReportSuiteBySuite(reportSuites, name)).toEqual(undefined);
+            expect(getMatchedReportSuiteByName(reportSuites, name)).toEqual(undefined);
+            expect(getMatchedReportSuiteByName(reportSuitesWithNoNames, name)).toEqual(undefined);
         });
     });
 

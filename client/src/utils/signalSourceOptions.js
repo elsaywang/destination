@@ -17,11 +17,14 @@ export const getSignalSourceFilterPlaceholderText = sourceType => {
 export const isValidReportSuite = (reportSuites, selectedReportSuite) =>
     Boolean(reportSuites.filter(({ suite }) => suite === selectedReportSuite).length);
 
-export const getMatchedReportSuiteBySuite = (reportSuites, suite) =>
-    reportSuites.find(reportSuite => reportSuite.suite.toLowerCase() === suite.toLowerCase());
+export const getMatchedReportSuiteBySuite = (reportSuites, suiteValue) =>
+    reportSuites.find(({ suite }) => suite.toLowerCase() === suiteValue.toLowerCase());
 
-export const getMatchedReportSuiteByName = (reportSuites, name) =>
-    reportSuites.find(reportSuite => reportSuite.name.toLowerCase() === name.toLowerCase());
+export const getMatchedReportSuiteByName = (reportSuites, nameValue) =>
+    reportSuites.find(({ name, suite }) => {
+        const matchedProp = name || suite;
+        return matchedProp.toLowerCase() === nameValue.toLowerCase();
+    });
 
 export const getDataSourcesOptions = dataSources =>
     dataSources.map(({ dataSourceId, name }) => ({
@@ -31,7 +34,7 @@ export const getDataSourcesOptions = dataSources =>
 
 export const getReportSuitesOptions = reportSuites =>
     reportSuites.map(({ name, suite }) => ({
-        label: name,
+        label: name || suite,
         value: suite,
     }));
 
