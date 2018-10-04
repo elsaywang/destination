@@ -19,6 +19,14 @@ describe('fetch util', () => {
                 expect(actual).toEqual(expected);
             });
 
+            it('should add the header "AAM-Disable-Escaping-HTML": true', () => {
+                const { headers } = getOptionsWithAAMAuth();
+                const { 'AAM-Disable-Escaping-HTML': actual } = headers;
+                const expected = true;
+
+                expect(actual).toEqual(expected);
+            });
+
             it('should add the header "Content-Type: application/json"', () => {
                 const { headers } = getOptionsWithAAMAuth();
                 const { 'content-type': actual } = headers;
@@ -33,6 +41,16 @@ describe('fetch util', () => {
                 });
                 const { 'AAM-CSRF-Token': actual } = headers;
                 const expected = 'abc';
+
+                expect(actual).toEqual(expected);
+            });
+
+            it('should not allow overwriting the default "AAM-Disable-Escaping-HTML" header', () => {
+                const { headers } = getOptionsWithAAMAuth({
+                    headers: { 'AAM-Disable-Escaping-HTML': false },
+                });
+                const { 'AAM-Disable-Escaping-HTML': actual } = headers;
+                const expected = true;
 
                 expect(actual).toEqual(expected);
             });
@@ -55,6 +73,7 @@ describe('fetch util', () => {
                 });
                 const expected = {
                     'AAM-CSRF-Token': 'abc',
+                    'AAM-Disable-Escaping-HTML': true,
                     Cookie: 'JSESSIONID=8f0dfc27-b930-4e9f-a199-7fdb0560332d',
                     'content-type': 'application/json',
                 };
@@ -131,6 +150,7 @@ describe('fetch util', () => {
                 method: 'POST',
                 headers: {
                     'AAM-CSRF-Token': 'abc',
+                    'AAM-Disable-Escaping-HTML': true,
                     'content-type': 'application/json',
                 },
                 credentials: 'same-origin',
