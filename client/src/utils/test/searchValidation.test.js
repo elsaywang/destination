@@ -16,16 +16,62 @@ describe('Search Validation Utils', () => {
         });
     });
 
+    describe("isComparisonOperator() shoudl check if operator is one of the valid ['>', '>=', '<', '<=']", () => {
+        it('given any one of the valid operators, it should return true', () => {
+            ['>', '>=', '<', '<='].map(operator =>
+                expect(validationUtils.isComparisonOperator(operator)).toBe(true),
+            );
+        });
+
+        it('given any value not included in the list, it should return false', () => {
+            ['==', '!=', 'contains', 'startswith', 'endswith'].map(operator =>
+                expect(validationUtils.isComparisonOperator(operator)).toBe(false),
+            );
+        });
+    });
+
+    describe("isPatternOperator() shoudl check if operator is one of the valid ['==', '!=', 'contains', 'startswith', 'endswith']", () => {
+        it('given any one of the valid operators, it should return true', () => {
+            ['==', '!=', 'contains', 'startswith', 'endswith'].map(operator =>
+                expect(validationUtils.isPatternOperator(operator)).toBe(true),
+            );
+        });
+
+        it('given any value not included in the list, it should return false', () => {
+            ['>', '>=', '<', '<=', '!', '~'].map(operator =>
+                expect(validationUtils.isPatternOperator(operator)).toBe(false),
+            );
+        });
+    });
+
     describe('isValueValid() should check if a value is valid based on passed in operator and value', () => {
-        it('should return true when given operator of "==" or "contains" and any value', () => {
+        it('should return true when given operator of "==" or "contains" or "!=" or "startswith" or "endswith" and any value', () => {
             expect(validationUtils.isValueValid({ operator: '==', value: '' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: '1234' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: 'abcd' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: '!=', value: '' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: '!=', value: '1234' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: '!=', value: 'abcd' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: 'contains', value: '' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: 'contains', value: '1234' })).toBe(
                 true,
             );
             expect(validationUtils.isValueValid({ operator: 'contains', value: 'abcd' })).toBe(
+                true,
+            );
+            expect(validationUtils.isValueValid({ operator: 'startswith', value: '' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: 'startswith', value: '1234' })).toBe(
+                true,
+            );
+            expect(validationUtils.isValueValid({ operator: 'startswith', value: 'abcd' })).toBe(
+                true,
+            );
+
+            expect(validationUtils.isValueValid({ operator: 'endswith', value: '' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: 'endswith', value: '1234' })).toBe(
+                true,
+            );
+            expect(validationUtils.isValueValid({ operator: 'endswith', value: 'abcd' })).toBe(
                 true,
             );
         });
@@ -91,8 +137,23 @@ describe('Search Validation Utils', () => {
                 },
                 {
                     key: 'abc',
+                    operator: '!=',
+                    value: '',
+                },
+                {
+                    key: 'abc',
                     operator: 'contains',
                     value: 'abc',
+                },
+                {
+                    key: 'abc',
+                    operator: 'startswith',
+                    value: 'a',
+                },
+                {
+                    key: 'abc',
+                    operator: 'endswith',
+                    value: 'c',
                 },
                 {
                     key: 'abc',

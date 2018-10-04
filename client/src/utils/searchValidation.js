@@ -3,8 +3,10 @@ import { isEmpty } from './index';
 export const isG6CompliantNumber = value =>
     !(/[^-.0-9]/.test(value) || /.+[-]+$/.test(value) || /\..*\.+$/.test(value));
 
-export const isComparisonOperator = operator =>
-    operator === '>' || operator === '>=' || operator === '<' || operator === '<=';
+export const isComparisonOperator = operator => ['>', '>=', '<', '<='].includes(operator);
+
+export const isPatternOperator = operator =>
+    ['==', '!=', 'contains', 'startswith', 'endswith'].includes(operator);
 
 const stripQuotes = value => (/^".*"$/.test(value) ? value.substr(1, value.length - 2) : value);
 
@@ -20,7 +22,7 @@ export const isValueValid = ({ operator, value }) => {
         (isComparisonOperator(operator) &&
             !isEmpty(normalizedValue) &&
             isG6CompliantNumber(normalizedValue)) ||
-        (operator === '==' || operator === 'contains')
+        isPatternOperator(operator)
     );
 };
 

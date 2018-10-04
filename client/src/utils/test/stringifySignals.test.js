@@ -55,6 +55,22 @@ describe('stringifySignals', () => {
         expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123"');
     });
 
+    it('should stringify a single key-value pair from a single signal with operator', () => {
+        const signals = [
+            {
+                keyValuePairs: [
+                    {
+                        key: 'eVar1',
+                        operator: '!=',
+                        value: 'xyz123',
+                    },
+                ],
+            },
+        ];
+
+        expect(stringifySignals(signals)).toEqual('"eVar1"!="xyz123"');
+    });
+
     it('should stringify multiple key-value pairs from a single signal', () => {
         const signals = [
             {
@@ -67,11 +83,18 @@ describe('stringifySignals', () => {
                         key: 'abc123',
                         value: 'cba321',
                     },
+                    {
+                        key: 'abc124',
+                        operator: '!=',
+                        value: 'cba321',
+                    },
                 ],
             },
         ];
 
-        expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123" AND "abc123"=="cba321"');
+        expect(stringifySignals(signals)).toEqual(
+            '"eVar1"=="xyz123" AND "abc123"=="cba321" AND "abc124"!="cba321"',
+        );
     });
 
     it('should stringify single key-value pairs from multiple signals', () => {
@@ -92,9 +115,20 @@ describe('stringifySignals', () => {
                     },
                 ],
             },
+            {
+                keyValuePairs: [
+                    {
+                        key: 'def456',
+                        operator: '!=',
+                        value: 'qrs789',
+                    },
+                ],
+            },
         ];
 
-        expect(stringifySignals(signals)).toEqual('"eVar1"=="xyz123" OR "def456"=="qrs789"');
+        expect(stringifySignals(signals)).toEqual(
+            '"eVar1"=="xyz123" OR "def456"=="qrs789" OR "def456"!="qrs789"',
+        );
     });
 
     it('should stringify multiple key-value pairs from multiple signals', () => {
@@ -109,6 +143,11 @@ describe('stringifySignals', () => {
                         key: 'eVar2',
                         value: 'zyx321',
                     },
+                    {
+                        key: 'eVar2',
+                        operator: '!=',
+                        value: 'zyx321',
+                    },
                 ],
             },
             {
@@ -121,12 +160,17 @@ describe('stringifySignals', () => {
                         key: 'ghi000',
                         value: 'ihg000',
                     },
+                    {
+                        key: 'ghi000',
+                        operator: '!=',
+                        value: 'ihg000',
+                    },
                 ],
             },
         ];
 
         expect(stringifySignals(signals)).toEqual(
-            '"eVar1"=="xyz123" AND "eVar2"=="zyx321" OR "def456"=="qrs789" AND "ghi000"=="ihg000"',
+            '"eVar1"=="xyz123" AND "eVar2"=="zyx321" AND "eVar2"!="zyx321" OR "def456"=="qrs789" AND "ghi000"=="ihg000" AND "ghi000"!="ihg000"',
         );
     });
 
@@ -165,6 +209,11 @@ describe('stringifySignals', () => {
                             value: '',
                             operator: '==',
                         },
+                        {
+                            key: '',
+                            value: '',
+                            operator: '!=',
+                        },
                     ],
                 },
             ]),
@@ -187,12 +236,18 @@ describe('stringifySignals', () => {
                                 value: 'xyz456',
                                 operator: 'contains',
                             },
+                            {
+                                key: 'eVar3',
+                                value: 'xyz789',
+                                operator: '!=',
+                            },
                         ],
                     },
                 ];
 
                 expect(stringifySignals(signals).includes('"xyz123"')).toBeTruthy();
                 expect(stringifySignals(signals).includes('"xyz456"')).toBeTruthy();
+                expect(stringifySignals(signals).includes('"xyz789"')).toBeTruthy();
             });
 
             it('should wrap the value with double quotes if it is a number', () => {
@@ -209,12 +264,18 @@ describe('stringifySignals', () => {
                                 value: -0.123,
                                 operator: 'contains',
                             },
+                            {
+                                key: 'eVar3',
+                                value: -0.456,
+                                operator: '!=',
+                            },
                         ],
                     },
                 ];
 
                 expect(stringifySignals(signals).includes('"123"')).toBeTruthy();
                 expect(stringifySignals(signals).includes('"-0.123"')).toBeTruthy();
+                expect(stringifySignals(signals).includes('"-0.456"')).toBeTruthy();
             });
         });
 

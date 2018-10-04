@@ -54,6 +54,36 @@ describe('Validation Spec', function() {
                 cy.get('[data-test="value-search"]:eq(1)').type('a');
             });
 
+            it('should show up as invalid for key field', function() {
+                cy.get('[data-test="key-search-field"]:eq(1)').should('have.class', 'is-invalid');
+            });
+
+            it('should not show up as invalid for value field', function() {
+                cy.get('[data-test="value-search"]:eq(1)').should('not.have.class', 'is-invalid');
+                cy.get('[data-test="value-search"]:eq(1)').should('not.have.attr', 'aria-invalid');
+            });
+
+            it('should not show an error message for value seach', function() {
+                cy.get('[data-test="value-search"]:eq(1) ~ [data-test="inline-error"]').should(
+                    'have.length',
+                    0,
+                );
+            });
+
+            it('should have disabled Search button', function() {
+                cy.get('[data-test="search-button"]').should('be.disabled');
+            });
+        });
+
+        describe('when entering third key value pair invalidly,', function() {
+            beforeEach(function() {
+                cy.get('.operator:eq(1)')
+                    .click()
+                    .get('.spectrum-Menu-item:nth-child(3)')
+                    .click();
+                cy.get('[data-test="value-search"]:eq(1)').type('a');
+            });
+
             it('should show up as invalid for value field', function() {
                 cy.get('[data-test="value-search"]:eq(1)').should('have.class', 'is-invalid');
                 cy.get('[data-test="value-search"]:eq(1)').should('have.attr', 'aria-invalid');

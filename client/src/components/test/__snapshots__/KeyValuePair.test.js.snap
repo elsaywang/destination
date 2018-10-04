@@ -79,6 +79,10 @@ ShallowWrapper {
                                 "value": "==",
                               },
                               Object {
+                                "label": "!=",
+                                "value": "!=",
+                              },
+                              Object {
                                 "label": ">",
                                 "value": ">",
                               },
@@ -97,6 +101,14 @@ ShallowWrapper {
                               Object {
                                 "label": "contains",
                                 "value": "contains",
+                              },
+                              Object {
+                                "label": "starts with",
+                                "value": "startswith",
+                              },
+                              Object {
+                                "label": "ends with",
+                                "value": "endswith",
                               },
                             ]
           }
@@ -255,6 +267,10 @@ ShallowWrapper {
               "value": "==",
             },
             Object {
+              "label": "!=",
+              "value": "!=",
+            },
+            Object {
               "label": ">",
               "value": ">",
             },
@@ -273,6 +289,14 @@ ShallowWrapper {
             Object {
               "label": "contains",
               "value": "contains",
+            },
+            Object {
+              "label": "starts with",
+              "value": "startswith",
+            },
+            Object {
+              "label": "ends with",
+              "value": "endswith",
             },
           ],
           "value": "==",
@@ -412,6 +436,10 @@ ShallowWrapper {
                                       "value": "==",
                                     },
                                     Object {
+                                      "label": "!=",
+                                      "value": "!=",
+                                    },
+                                    Object {
                                       "label": ">",
                                       "value": ">",
                                     },
@@ -430,6 +458,14 @@ ShallowWrapper {
                                     Object {
                                       "label": "contains",
                                       "value": "contains",
+                                    },
+                                    Object {
+                                      "label": "starts with",
+                                      "value": "startswith",
+                                    },
+                                    Object {
+                                      "label": "ends with",
+                                      "value": "endswith",
                                     },
                                   ]
             }
@@ -588,6 +624,10 @@ ShallowWrapper {
                 "value": "==",
               },
               Object {
+                "label": "!=",
+                "value": "!=",
+              },
+              Object {
                 "label": ">",
                 "value": ">",
               },
@@ -606,6 +646,14 @@ ShallowWrapper {
               Object {
                 "label": "contains",
                 "value": "contains",
+              },
+              Object {
+                "label": "starts with",
+                "value": "startswith",
+              },
+              Object {
+                "label": "ends with",
+                "value": "endswith",
               },
             ],
             "value": "==",
