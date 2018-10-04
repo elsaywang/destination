@@ -20,7 +20,7 @@ export const isValueValid = ({ operator, value }) => {
         (isComparisonOperator(operator) &&
             !isEmpty(normalizedValue) &&
             isG6CompliantNumber(normalizedValue)) ||
-        (operator === '==' || operator === 'contains' || operator === '!=')
+        ['==', '!=', 'contains', 'startswith', 'endswith'].includes(operator)
     );
 };
 

@@ -102,6 +102,14 @@ ShallowWrapper {
                                 "label": "contains",
                                 "value": "contains",
                               },
+                              Object {
+                                "label": "starts with",
+                                "value": "startswith",
+                              },
+                              Object {
+                                "label": "ends with",
+                                "value": "endswith",
+                              },
                             ]
           }
           value="=="
@@ -282,6 +290,14 @@ ShallowWrapper {
               "label": "contains",
               "value": "contains",
             },
+            Object {
+              "label": "starts with",
+              "value": "startswith",
+            },
+            Object {
+              "label": "ends with",
+              "value": "endswith",
+            },
           ],
           "value": "==",
         },
@@ -442,6 +458,14 @@ ShallowWrapper {
                                     Object {
                                       "label": "contains",
                                       "value": "contains",
+                                    },
+                                    Object {
+                                      "label": "starts with",
+                                      "value": "startswith",
+                                    },
+                                    Object {
+                                      "label": "ends with",
+                                      "value": "endswith",
                                     },
                                   ]
             }
@@ -622,6 +646,14 @@ ShallowWrapper {
               Object {
                 "label": "contains",
                 "value": "contains",
+              },
+              Object {
+                "label": "starts with",
+                "value": "startswith",
+              },
+              Object {
+                "label": "ends with",
+                "value": "endswith",
               },
             ],
             "value": "==",

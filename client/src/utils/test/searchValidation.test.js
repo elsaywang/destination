@@ -17,7 +17,7 @@ describe('Search Validation Utils', () => {
     });
 
     describe('isValueValid() should check if a value is valid based on passed in operator and value', () => {
-        it('should return true when given operator of "==" or "contains" or "!=" and any value', () => {
+        it('should return true when given operator of "==" or "contains" or "!=" or "startswith" or "endswith" and any value', () => {
             expect(validationUtils.isValueValid({ operator: '==', value: '' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: '1234' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: 'abcd' })).toBe(true);
@@ -29,6 +29,21 @@ describe('Search Validation Utils', () => {
                 true,
             );
             expect(validationUtils.isValueValid({ operator: 'contains', value: 'abcd' })).toBe(
+                true,
+            );
+            expect(validationUtils.isValueValid({ operator: 'startswith', value: '' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: 'startswith', value: '1234' })).toBe(
+                true,
+            );
+            expect(validationUtils.isValueValid({ operator: 'startswith', value: 'abcd' })).toBe(
+                true,
+            );
+
+            expect(validationUtils.isValueValid({ operator: 'endswith', value: '' })).toBe(true);
+            expect(validationUtils.isValueValid({ operator: 'endswith', value: '1234' })).toBe(
+                true,
+            );
+            expect(validationUtils.isValueValid({ operator: 'endswith', value: 'abcd' })).toBe(
                 true,
             );
         });
@@ -101,6 +116,16 @@ describe('Search Validation Utils', () => {
                     key: 'abc',
                     operator: 'contains',
                     value: 'abc',
+                },
+                {
+                    key: 'abc',
+                    operator: 'startswith',
+                    value: 'a',
+                },
+                {
+                    key: 'abc',
+                    operator: 'endswith',
+                    value: 'c',
                 },
                 {
                     key: 'abc',
