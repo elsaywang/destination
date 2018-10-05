@@ -79,10 +79,6 @@ ShallowWrapper {
                                 "value": "==",
                               },
                               Object {
-                                "label": "!=",
-                                "value": "!=",
-                              },
-                              Object {
                                 "label": ">",
                                 "value": ">",
                               },
@@ -267,10 +263,6 @@ ShallowWrapper {
               "value": "==",
             },
             Object {
-              "label": "!=",
-              "value": "!=",
-            },
-            Object {
               "label": ">",
               "value": ">",
             },
@@ -434,10 +426,6 @@ ShallowWrapper {
                                     Object {
                                       "label": "==",
                                       "value": "==",
-                                    },
-                                    Object {
-                                      "label": "!=",
-                                      "value": "!=",
                                     },
                                     Object {
                                       "label": ">",
@@ -622,10 +610,6 @@ ShallowWrapper {
               Object {
                 "label": "==",
                 "value": "==",
-              },
-              Object {
-                "label": "!=",
-                "value": "!=",
               },
               Object {
                 "label": ">",

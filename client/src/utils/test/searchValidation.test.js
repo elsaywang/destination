@@ -32,7 +32,7 @@ describe('Search Validation Utils', () => {
 
     describe("isPatternOperator() shoudl check if operator is one of the valid ['==', '!=', 'contains', 'startswith', 'endswith']", () => {
         it('given any one of the valid operators, it should return true', () => {
-            ['==', '!=', 'contains', 'startswith', 'endswith'].map(operator =>
+            ['==', 'contains', 'startswith', 'endswith'].map(operator =>
                 expect(validationUtils.isPatternOperator(operator)).toBe(true),
             );
         });
@@ -49,9 +49,6 @@ describe('Search Validation Utils', () => {
             expect(validationUtils.isValueValid({ operator: '==', value: '' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: '1234' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: '==', value: 'abcd' })).toBe(true);
-            expect(validationUtils.isValueValid({ operator: '!=', value: '' })).toBe(true);
-            expect(validationUtils.isValueValid({ operator: '!=', value: '1234' })).toBe(true);
-            expect(validationUtils.isValueValid({ operator: '!=', value: 'abcd' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: 'contains', value: '' })).toBe(true);
             expect(validationUtils.isValueValid({ operator: 'contains', value: '1234' })).toBe(
                 true,
@@ -133,11 +130,6 @@ describe('Search Validation Utils', () => {
                 {
                     key: '',
                     operator: '==',
-                    value: '',
-                },
-                {
-                    key: 'abc',
-                    operator: '!=',
                     value: '',
                 },
                 {
