@@ -112,7 +112,7 @@ describe('Search Form Integration Tests', () => {
         });
     });
 
-    describe('when typing in text in Key input with external services available', () => {
+    describe.skip('when typing in text in Key input with external services available', () => {
         beforeEach(() => {
             cy.clock();
             cy.route(

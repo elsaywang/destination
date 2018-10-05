@@ -39,7 +39,7 @@ class KeyValuePair extends Component {
     }
 
     getKeySuggestions = key => {
-        return fetch(`/portal/api/v1/signals/keys?search=${key}&total=8`)
+        return fetch(`/portal/api/v1/signals/keys?search=${encodeURIComponent(key)}&total=8`)
             .then(response => {
                 if (response.ok) {
                     this.setAutocompleteErrorMessage();
@@ -71,7 +71,9 @@ class KeyValuePair extends Component {
         const { reportSuiteId } = this.props;
 
         return fetch(
-            `/portal/api/v1/signals/keys?search=${key}&reportSuiteId=${reportSuiteId}&total=8`,
+            `/portal/api/v1/signals/keys?search=${encodeURIComponent(
+                key,
+            )}&reportSuiteId=${encodeURIComponent(reportSuiteId)}&total=8`,
         )
             .then(response => {
                 if (response.ok) {

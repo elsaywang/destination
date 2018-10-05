@@ -6,6 +6,7 @@ export const getOptionsWithAAMAuth = (options = { headers: {} }) => ({
         'content-type': 'application/json',
         ...options.headers,
         'AAM-CSRF-Token': getCsrfToken(),
+        'AAM-Disable-Escaping-HTML': true,
     },
     credentials: 'same-origin',
 });
