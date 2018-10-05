@@ -251,7 +251,7 @@ describe('signalSourcesOptions utils tests', () => {
         });
         it('should return undefined if given suiteId is not in any record within reportSuites', () => {
             const suite = 'aamdal.octmr01NA';
-            expect(getMatchedReportSuiteBySuite(reportSuites, suite)).toEqual(undefined);
+            expect(getMatchedReportSuiteBySuite(reportSuites, suite)).toBeUndefined();
         });
     });
     describe('getMatchedReportSuiteByName', () => {
@@ -284,8 +284,8 @@ describe('signalSourcesOptions utils tests', () => {
 
         it('should return undefined if given name is not in any record within reportSuites', () => {
             const name = 'Oct MR 01NA';
-            expect(getMatchedReportSuiteByName(reportSuites, name)).toEqual(undefined);
-            expect(getMatchedReportSuiteByName(reportSuitesWithNoNames, name)).toEqual(undefined);
+            expect(getMatchedReportSuiteByName(reportSuites, name)).toBeUndefined();
+            expect(getMatchedReportSuiteByName(reportSuitesWithNoNames, name)).toBeUndefined();
         });
     });
 
