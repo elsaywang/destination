@@ -6,7 +6,7 @@ export const isG6CompliantNumber = value =>
 export const isComparisonOperator = operator => ['>', '>=', '<', '<='].includes(operator);
 
 export const isPatternOperator = operator =>
-    ['==', '!=', 'contains', 'startswith', 'endswith'].includes(operator);
+    ['==', 'contains', 'startswith', 'endswith'].includes(operator);
 
 const stripQuotes = value => (/^".*"$/.test(value) ? value.substr(1, value.length - 2) : value);
 
