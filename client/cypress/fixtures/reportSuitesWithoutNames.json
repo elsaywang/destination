@@ -1,0 +1,28 @@
+{
+    "list": [
+        {
+            "dataSourceId": 168815,
+            "pid": 1194,
+            "suite": "test-report-suite-edited1505153440289",
+            "datacenter": "sin"
+        },
+        {
+            "dataSourceId": 169626,
+            "pid": 1194,
+            "suite": "test-report-suite-edited1505154745046",
+            "datacenter": "sin"
+        },
+        {
+            "dataSourceId": 169627,
+            "pid": 1194,
+            "suite": "test-report-suite-edited1505154844254",
+            "datacenter": "sin"
+        },
+        {
+            "dataSourceId": 169628,
+            "pid": 1194,
+            "suite": "test-report-suite-edited1505154887068",
+            "datacenter": "sin"
+        }
+    ]
+}

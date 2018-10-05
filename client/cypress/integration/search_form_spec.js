@@ -2,6 +2,7 @@ const searchResultsResponse = require('../fixtures/searchResults.json');
 const emptySearchResultsResponse = require('../fixtures/emptySearchResults.json');
 const savedSearchResponse = require('../fixtures/savedSearch.json');
 const reportSuitesResponse = require('../fixtures/reportSuites.json');
+const reportSuitesWithoutNamesResponse = require('../fixtures/reportSuitesWithoutNames.json');
 const signalKeysResponse = require('../fixtures/signalKeys.json');
 const limitsResponse = require('../fixtures/limits.json');
 const signalKeysAnalyticsServiceUnavailableResponse = require('../fixtures/signalKeysWithAnalyticsServiceUnavailable.json');
@@ -45,11 +46,50 @@ describe('Search Form Integration Tests', () => {
             cy.wait('@fetchReportSuites');
         });
 
-        it('should enable filter to filter by user-friendly key names', () => {
+        it('should enable filter to filter by report suite names', () => {
             cy.get('@advancedFilter').should('be.enabled');
         });
 
-        it('should allow you to type a report suite name and press enter on list of suggestions', () => {
+        it('should allow you to type a report suite name and press enter on list of name suggestions', () => {
+            cy.clock().then(clock => clock.restore());
+            cy.get('@advancedFilter')
+                .type('Te{enter}')
+                .then($text => {
+                    cy.get('@advancedFilter').should($filter => {
+                        expect($filter.val()).to.contains($text.val());
+                    });
+                });
+        });
+
+        it('should allow you to select a report suite through drop down when you click on the dropdown button', () => {
+            cy.clock().then(clock => clock.restore());
+            cy.get('@advancedFilter')
+                .siblings('button')
+                .click()
+                .then($text => {
+                    cy.get('@advancedFilter').should($filter => {
+                        expect($filter.val()).to.contains($text.text());
+                    });
+                });
+        });
+    });
+
+    describe('when Advanced toggle is clicked but reportSuites has no name in response', () => {
+        beforeEach(() => {
+            cy.route('/portal/api/v1/report-suites', reportSuitesWithoutNamesResponse.list).as(
+                'fetchReportSuitesWithoutNames',
+            );
+            cy.reload();
+            cy.get('[data-test="advanced-search-toggle"]').click();
+            cy.get('[data-test="advanced-search-filter"]').as('advancedFilter');
+        });
+
+        it('should enable filter to filter by report suite ids', () => {
+            cy.get('@advancedFilter').should('be.enabled');
+        });
+
+        it('should allow you to type a report suite name and press enter on list of suite suggestions', () => {
+            cy.clock().then(clock => clock.restore());
             cy.get('@advancedFilter')
                 .type('te{enter}')
                 .then($text => {
@@ -60,6 +100,7 @@ describe('Search Form Integration Tests', () => {
         });
 
         it('should allow you to select a report suite through drop down when you click on the dropdown button', () => {
+            cy.clock().then(clock => clock.restore());
             cy.get('@advancedFilter')
                 .siblings('button')
                 .click()
