@@ -74,7 +74,7 @@ describe('Search Form Integration Tests', () => {
         });
     });
 
-    describe.only('when Advanced toggle is clicked but reportSuites has no name in response', () => {
+    describe('when Advanced toggle is clicked but reportSuites has no name in response', () => {
         beforeEach(() => {
             cy.route('/portal/api/v1/report-suites', reportSuitesWithoutNamesResponse.list).as(
                 'fetchReportSuitesWithoutNames',
