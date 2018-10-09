@@ -27,6 +27,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "isMaxSignalSelectionsReached": undefined,
+      "selectedDataSources": undefined,
       "selectedSignals": Object {
         "hasSignalSelectionsTypeWarning": false,
         "records": Array [],
@@ -45,6 +46,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "isMaxSignalSelectionsReached": undefined,
+        "selectedDataSources": undefined,
         "selectedSignals": Object {
           "hasSignalSelectionsTypeWarning": false,
           "records": Array [],

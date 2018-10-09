@@ -7,9 +7,12 @@ import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
     getCreateTraitURL() {
-        const { categoryType } = this.props;
-
-        return categoryType === 'ONBOARDED' ? createOnboardedTraitUrl() : createRuleBasedTraitUrl();
+        const { categoryType, signalType } = this.props;
+        //for multiple creations, need to check signalType
+        if (categoryType === 'ONBOARDED' || signalType === 'ONBOARDED') {
+            return createOnboardedTraitUrl();
+        }
+        return createRuleBasedTraitUrl();
     }
 
     getLinkText() {
@@ -21,11 +24,22 @@ class TraitsCreation extends Component {
     storeSessionAndNavigateToTraits = e => {
         e.preventDefault();
 
-        const { keyValuePairs, multiCreation, selectedResults } = this.props;
+        const {
+            keyValuePairs,
+            multiCreation,
+            selectedResults,
+            selectedDataSources,
+            signalType,
+        } = this.props;
+
         const signals = multiCreation ? selectedResults : [{ keyValuePairs }];
         const signalsParams = {
             signals: stringifySignals(signals),
         };
+
+        if (signalType === 'ONBOARDED') {
+            signalsParams['source'] = { dataSourceIds: [...selectedDataSources] };
+        }
 
         sessionStorage.setItem('signalsParams', JSON.stringify(signalsParams));
 
@@ -36,6 +50,7 @@ class TraitsCreation extends Component {
         const {
             multiCreation,
             selectedSignals,
+            selectedDataSources,
             canCreateTraits,
             isMaxSignalSelectionsReached,
         } = this.props;
@@ -43,6 +58,7 @@ class TraitsCreation extends Component {
         return multiCreation ? (
             <MultiSignalsTraitsCreation
                 selectedSignals={selectedSignals}
+                selectedDataSources={selectedDataSources}
                 storeSessionAndNavigateToTraits={this.storeSessionAndNavigateToTraits}
                 isMaxSignalSelectionsReached={isMaxSignalSelectionsReached}
             />
@@ -58,6 +74,7 @@ class TraitsCreation extends Component {
 
 TraitsCreation.propTypes = {
     categoryType: PropTypes.string,
+    signalType: PropTypes.string,
     keyValuePairs: PropTypes.array,
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({
@@ -65,6 +82,7 @@ TraitsCreation.propTypes = {
         hasSignalSelectionsTypeWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
+    selectedDataSources: PropTypes.array,
     canCreateTraits: PropTypes.bool,
     isMaxSignalSelectionsReached: PropTypes.bool,
 };

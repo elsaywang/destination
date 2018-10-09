@@ -46,7 +46,7 @@ class SignalsTable extends Component {
     };
 
     handleSelectionChange = selectedItems => {
-        const { onSignalRecordsSelection, results } = this.props;
+        const { onSignalRecordsSelection, results, signalType } = this.props;
         const items = this.formatSignalsList(results);
         const selectedRowIndexSet = [];
         //selectedItems is iterable
@@ -58,6 +58,7 @@ class SignalsTable extends Component {
 
         onSignalRecordsSelection({
             selectionMessage,
+            signalType,
             hasSignalSelectionsTypeWarning: hasSignalSelectionsTypeWarning(records),
             selectedRowIndexes: selectedRowIndexSet,
         });
@@ -141,7 +142,7 @@ class SignalsTable extends Component {
     }
 
     formatIncludedInTraits(signal) {
-        const { keyValuePairs, includedInTraits, categoryType } = signal;
+        const { keyValuePairs, includedInTraits, categoryType, source } = signal;
 
         const sids = includedInTraits === null ? [] : includedInTraits;
 
@@ -149,6 +150,7 @@ class SignalsTable extends Component {
             keyValuePairs,
             sids,
             categoryType,
+            source,
         };
     }
 
@@ -210,7 +212,8 @@ class SignalsTable extends Component {
     };
 
     renderIncludedInTraits = data => {
-        const { keyValuePairs, sids, categoryType } = data;
+        const { keyValuePairs, sids, categoryType, source } = data;
+        const { dataSourceIds, sourceType } = source;
         const number = sids.length;
 
         if (number === 0) {
@@ -219,6 +222,9 @@ class SignalsTable extends Component {
                     canCreateTraits={this.props.canCreateTraits}
                     keyValuePairs={keyValuePairs}
                     categoryType={categoryType}
+                    signalType={sourceType}
+                    multiCreation={false}
+                    selectedDataSources={dataSourceIds}
                 />
             );
         }

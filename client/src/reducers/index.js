@@ -25,3 +25,18 @@ export const getSelectedResults = ({ selectedSignals, results }) =>
     getSelectedRowIndexes(selectedSignals).map(index => ({
         ...results.list[index],
     }));
+
+export const getSelectedResultsDataSources = ({ selectedSignals, results }) => {
+    const dataSources = getSelectedResults({ selectedSignals, results }).map(
+        ({ source }) => source,
+    );
+    //flatten the nested subarrays
+    return dataSources
+        .map(({ dataSourceIds }) => dataSourceIds)
+        .reduce((prevDataSourceIds, currentDataSourceIds) => {
+            //dataSourceIds may be null
+            return currentDataSourceIds
+                ? [...prevDataSourceIds, ...currentDataSourceIds]
+                : [...prevDataSourceIds];
+        }, []);
+};

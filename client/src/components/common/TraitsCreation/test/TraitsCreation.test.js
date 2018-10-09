@@ -141,15 +141,67 @@ describe('<TraitsCreation /> component', () => {
             expect(Object.keys(sessionStorage.__STORE__).length).toBe(1);
         });
 
+        it('for single-signal `ONBOARDED` signal type trait creation , should store signalsParams in sessionStorage based on keyValuePairs and selectedDataSources', () => {
+            const keyValuePairs = [{ key: 'key1', value: 'value1' }];
+            const expectedSignals = [{ keyValuePairs }];
+            const selectedDataSources = [12345];
+            const signalType = 'ONBOARDED';
+            const signalsParams = {
+                signals: stringifySignals(expectedSignals),
+                source: {
+                    dataSourceIds: [...selectedDataSources],
+                },
+            };
+
+            wrapper.setProps({ keyValuePairs, selectedDataSources, signalType });
+
+            wrapper.instance().storeSessionAndNavigateToTraits(event);
+
+            const KEY = 'signalsParams';
+            const VALUE = JSON.stringify(signalsParams);
+
+            expect(sessionStorage.setItem).toHaveBeenLastCalledWith(KEY, VALUE);
+            expect(sessionStorage.__STORE__[KEY]).toBe(VALUE);
+            expect(Object.keys(sessionStorage.__STORE__).length).toBe(1);
+        });
+
         it("for multi-signal trait creation, should store signalsParams in sessionStorage based on the `selectedSignals` prop's `records`", () => {
             const selectedSignals = {
                 records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
             };
+            const signalType = 'ANALYTICS';
             const signalsParams = {
                 signals: stringifySignals(selectedSignals.records),
             };
 
             wrapper.setProps({ selectedSignals });
+            wrapper.setProps({ signalType });
+            wrapper.instance().storeSessionAndNavigateToTraits(event);
+
+            const KEY = 'signalsParams';
+            const VALUE = JSON.stringify(signalsParams);
+
+            expect(sessionStorage.setItem).toHaveBeenLastCalledWith(KEY, VALUE);
+            expect(sessionStorage.__STORE__[KEY]).toBe(VALUE);
+            expect(Object.keys(sessionStorage.__STORE__).length).toBe(1);
+        });
+
+        it("for multi-signal `ONBOARDED` signal type trait creation, should store signalsParams in sessionStorage based on the `selectedSignals` prop's `records`", () => {
+            const selectedSignals = {
+                records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
+            };
+            const signalType = 'ONBOARDED';
+            const selectedDataSources = [12345, 78919];
+
+            const signalsParams = {
+                signals: stringifySignals(selectedSignals.records),
+                source: {
+                    dataSourceIds: [...selectedDataSources],
+                },
+            };
+
+            wrapper.setProps({ selectedSignals, signalType, selectedDataSources });
+
             wrapper.instance().storeSessionAndNavigateToTraits(event);
 
             const KEY = 'signalsParams';
