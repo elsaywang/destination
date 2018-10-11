@@ -3,10 +3,9 @@
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 1`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType="REALTIME"
   keyValuePairs={undefined}
   multiCreation={false}
-  selectedDataSources={
+  selectedDataSourceIds={
     Array [
       123,
     ]
@@ -18,10 +17,9 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 2`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType="ONBOARDED"
   keyValuePairs={undefined}
   multiCreation={false}
-  selectedDataSources={
+  selectedDataSourceIds={
     Array [
       456,
     ]
@@ -33,10 +31,9 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 3`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType="REALTIME"
   keyValuePairs={undefined}
   multiCreation={false}
-  selectedDataSources={
+  selectedDataSourceIds={
     Array [
       789,
     ]
@@ -48,10 +45,9 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 4`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType="REALTIME"
   keyValuePairs={undefined}
   multiCreation={false}
-  selectedDataSources={
+  selectedDataSourceIds={
     Array [
       1919,
     ]
@@ -63,10 +59,9 @@ exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 5`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType="REALTIME"
   keyValuePairs={undefined}
   multiCreation={false}
-  selectedDataSources={null}
+  selectedDataSourceIds={null}
   signalType="ALL"
 />
 `;

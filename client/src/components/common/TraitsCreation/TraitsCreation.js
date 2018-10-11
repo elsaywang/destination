@@ -7,39 +7,40 @@ import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
     getCreateTraitURL() {
-        const { categoryType, signalType } = this.props;
-        //for multiple creations, need to check signalType
-        if (categoryType === 'ONBOARDED' || signalType === 'ONBOARDED') {
-            return createOnboardedTraitUrl();
-        }
-        return createRuleBasedTraitUrl();
+        return this.shouldCreateOnboardedTrait()
+            ? createOnboardedTraitUrl()
+            : createRuleBasedTraitUrl();
     }
 
     getLinkText() {
-        const { categoryType } = this.props;
+        return this.props.signalType === 'ONBOARDED'
+            ? 'Create Onboarded Trait'
+            : 'Create Rule-Based Trait';
+    }
 
-        return categoryType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-Based Trait';
+    shouldCreateOnboardedTrait() {
+        // For single signal creation, check the `signalType` of the signal result.
+        // For multi signal creation, check if all selected signals are onboarded and
+        // come from the same data source.
+        const { signalType, doAllSelectedResultsShareSameDataSource } = this.props;
+
+        return signalType === 'ONBOARDED' || doAllSelectedResultsShareSameDataSource;
     }
 
     storeSessionAndNavigateToTraits = e => {
         e.preventDefault();
 
-        const {
-            keyValuePairs,
-            multiCreation,
-            selectedResults,
-            selectedDataSources,
-            signalType,
-        } = this.props;
+        const { keyValuePairs, multiCreation, selectedResults, selectedDataSourceIds } = this.props;
 
         const signals = multiCreation ? selectedResults : [{ keyValuePairs }];
         const signalsParams = {
             signals: stringifySignals(signals),
+            ...(this.shouldCreateOnboardedTrait() && {
+                source: {
+                    dataSourceIds: selectedDataSourceIds,
+                },
+            }),
         };
-
-        if (signalType === 'ONBOARDED') {
-            signalsParams['source'] = { dataSourceIds: [...selectedDataSources] };
-        }
 
         sessionStorage.setItem('signalsParams', JSON.stringify(signalsParams));
 
@@ -50,7 +51,6 @@ class TraitsCreation extends Component {
         const {
             multiCreation,
             selectedSignals,
-            selectedDataSources,
             canCreateTraits,
             isMaxSignalSelectionsReached,
         } = this.props;
@@ -58,7 +58,6 @@ class TraitsCreation extends Component {
         return multiCreation ? (
             <MultiSignalsTraitsCreation
                 selectedSignals={selectedSignals}
-                selectedDataSources={selectedDataSources}
                 storeSessionAndNavigateToTraits={this.storeSessionAndNavigateToTraits}
                 isMaxSignalSelectionsReached={isMaxSignalSelectionsReached}
             />
@@ -73,7 +72,6 @@ class TraitsCreation extends Component {
 }
 
 TraitsCreation.propTypes = {
-    categoryType: PropTypes.string,
     signalType: PropTypes.string,
     keyValuePairs: PropTypes.array,
     multiCreation: PropTypes.bool,
@@ -82,7 +80,7 @@ TraitsCreation.propTypes = {
         hasSignalSelectionsTypeWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
-    selectedDataSources: PropTypes.array,
+    selectedDataSourceIds: PropTypes.array,
     canCreateTraits: PropTypes.bool,
     isMaxSignalSelectionsReached: PropTypes.bool,
 };

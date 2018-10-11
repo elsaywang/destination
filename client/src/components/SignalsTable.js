@@ -212,7 +212,7 @@ class SignalsTable extends Component {
     };
 
     renderIncludedInTraits = data => {
-        const { keyValuePairs, sids, categoryType, source } = data;
+        const { keyValuePairs, sids, source } = data;
         const { dataSourceIds, sourceType } = source;
         const number = sids.length;
 
@@ -221,10 +221,9 @@ class SignalsTable extends Component {
                 <TraitsCreation
                     canCreateTraits={this.props.canCreateTraits}
                     keyValuePairs={keyValuePairs}
-                    categoryType={categoryType}
                     signalType={sourceType}
                     multiCreation={false}
-                    selectedDataSources={dataSourceIds}
+                    selectedDataSourceIds={dataSourceIds}
                 />
             );
         }

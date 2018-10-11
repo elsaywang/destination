@@ -8,7 +8,7 @@ import { stringifySignals } from '../../../../utils/stringifySignals';
 describe('<TraitsCreation /> component', () => {
     describe('rendering when it is used in Single-Signal Traits Creation', () => {
         const props = {
-            categoryType: 'ONBOARDED',
+            signalType: 'ONBOARDED',
             keyValuePairs: [],
             canCreateTraits: true,
         };
@@ -30,7 +30,7 @@ describe('<TraitsCreation /> component', () => {
 
         describe('Trait creation label', () => {
             it('is for creating an onboarded trait when the single signal is an onboarded signal', () => {
-                wrapper.setProps({ categoryType: 'ONBOARDED' });
+                wrapper.setProps({ signalType: 'ONBOARDED' });
 
                 expect(
                     wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
@@ -38,7 +38,7 @@ describe('<TraitsCreation /> component', () => {
             });
 
             it('is for creating a rule-based trait when the single signal is a real-time signal', () => {
-                wrapper.setProps({ categoryType: 'REALTIME' });
+                wrapper.setProps({ signalType: 'REALTIME' });
 
                 expect(
                     wrapper.find(SingleSignalTraitsCreation).props().traitsCreationLabelText,
@@ -75,14 +75,14 @@ describe('<TraitsCreation /> component', () => {
 
     describe('getCreateTraitURL', () => {
         const props = {
-            categoryType: 'ONBOARDED',
+            signalType: 'ONBOARDED',
             keyValuePairs: [],
         };
         const wrapper = shallow(<TraitsCreation {...props} />);
 
-        it('returns the Create Rule-Based Trait URL when the `categoryType` is "REALTIME"', () => {
+        it('returns the Create Rule-Based Trait URL when the `signalType` is "REALTIME"', () => {
             wrapper.setProps({
-                categoryType: 'REALTIME',
+                signalType: 'REALTIME',
                 keyValuePairs: [],
             });
 
@@ -94,9 +94,9 @@ describe('<TraitsCreation /> component', () => {
             ).toBeTruthy();
         });
 
-        it('returns the Create Onboarded Trait URL when the `categoryType` is "ONBOARDED"', () => {
+        it('returns the Create Onboarded Trait URL when the `signalType` is "ONBOARDED"', () => {
             wrapper.setProps({
-                categoryType: 'ONBOARDED',
+                signalType: 'ONBOARDED',
                 keyValuePairs: [],
             });
 
@@ -111,7 +111,6 @@ describe('<TraitsCreation /> component', () => {
 
     describe('storeSessionAndNavigateToTraits', () => {
         const props = {
-            categoryType: 'ONBOARDED',
             keyValuePairs: [],
         };
         const wrapper = shallow(<TraitsCreation {...props} />);
@@ -126,11 +125,12 @@ describe('<TraitsCreation /> component', () => {
         it('for single-signal trait creation, should store signalsParams in sessionStorage based on keyValuePairs', () => {
             const keyValuePairs = [{ key: 'key1', value: 'value1' }];
             const expectedSignals = [{ keyValuePairs }];
+            const signalType = 'ALF';
             const signalsParams = {
                 signals: stringifySignals(expectedSignals),
             };
 
-            wrapper.setProps({ keyValuePairs });
+            wrapper.setProps({ keyValuePairs, signalType });
             wrapper.instance().storeSessionAndNavigateToTraits(event);
 
             const KEY = 'signalsParams';
@@ -141,19 +141,19 @@ describe('<TraitsCreation /> component', () => {
             expect(Object.keys(sessionStorage.__STORE__).length).toBe(1);
         });
 
-        it('for single-signal `ONBOARDED` signal type trait creation , should store signalsParams in sessionStorage based on keyValuePairs and selectedDataSources', () => {
+        it('for single-signal `ONBOARDED` signal type trait creation , should store signalsParams in sessionStorage based on keyValuePairs and selectedDataSourceIds', () => {
             const keyValuePairs = [{ key: 'key1', value: 'value1' }];
             const expectedSignals = [{ keyValuePairs }];
-            const selectedDataSources = [12345];
+            const selectedDataSourceIds = [12345];
             const signalType = 'ONBOARDED';
             const signalsParams = {
                 signals: stringifySignals(expectedSignals),
                 source: {
-                    dataSourceIds: [...selectedDataSources],
+                    dataSourceIds: [...selectedDataSourceIds],
                 },
             };
 
-            wrapper.setProps({ keyValuePairs, selectedDataSources, signalType });
+            wrapper.setProps({ keyValuePairs, selectedDataSourceIds, signalType });
 
             wrapper.instance().storeSessionAndNavigateToTraits(event);
 
@@ -174,8 +174,7 @@ describe('<TraitsCreation /> component', () => {
                 signals: stringifySignals(selectedSignals.records),
             };
 
-            wrapper.setProps({ selectedSignals });
-            wrapper.setProps({ signalType });
+            wrapper.setProps({ selectedSignals, signalType });
             wrapper.instance().storeSessionAndNavigateToTraits(event);
 
             const KEY = 'signalsParams';
@@ -191,16 +190,16 @@ describe('<TraitsCreation /> component', () => {
                 records: [{ keyValuePairs: [{ key: 'key1', value: 'value1' }] }],
             };
             const signalType = 'ONBOARDED';
-            const selectedDataSources = [12345, 78919];
+            const selectedDataSourceIds = [12345, 78919];
 
             const signalsParams = {
                 signals: stringifySignals(selectedSignals.records),
                 source: {
-                    dataSourceIds: [...selectedDataSources],
+                    dataSourceIds: [...selectedDataSourceIds],
                 },
             };
 
-            wrapper.setProps({ selectedSignals, signalType, selectedDataSources });
+            wrapper.setProps({ selectedSignals, signalType, selectedDataSourceIds });
 
             wrapper.instance().storeSessionAndNavigateToTraits(event);
 
