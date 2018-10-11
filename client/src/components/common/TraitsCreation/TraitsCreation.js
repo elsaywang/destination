@@ -7,24 +7,39 @@ import { stringifySignals } from '../../../utils/stringifySignals';
 
 class TraitsCreation extends Component {
     getCreateTraitURL() {
-        const { categoryType } = this.props;
-
-        return categoryType === 'ONBOARDED' ? createOnboardedTraitUrl() : createRuleBasedTraitUrl();
+        return this.shouldCreateOnboardedTrait()
+            ? createOnboardedTraitUrl()
+            : createRuleBasedTraitUrl();
     }
 
     getLinkText() {
-        const { categoryType } = this.props;
+        return this.props.signalType === 'ONBOARDED'
+            ? 'Create Onboarded Trait'
+            : 'Create Rule-Based Trait';
+    }
 
-        return categoryType === 'ONBOARDED' ? 'Create Onboarded Trait' : 'Create Rule-Based Trait';
+    shouldCreateOnboardedTrait() {
+        // For single signal creation, check the `signalType` of the signal result.
+        // For multi signal creation, check if all selected signals are onboarded and
+        // come from the same data source.
+        const { signalType, doAllSelectedResultsShareSameDataSource } = this.props;
+
+        return signalType === 'ONBOARDED' || doAllSelectedResultsShareSameDataSource;
     }
 
     storeSessionAndNavigateToTraits = e => {
         e.preventDefault();
 
-        const { keyValuePairs, multiCreation, selectedResults } = this.props;
+        const { keyValuePairs, multiCreation, selectedResults, selectedDataSourceIds } = this.props;
+
         const signals = multiCreation ? selectedResults : [{ keyValuePairs }];
         const signalsParams = {
             signals: stringifySignals(signals),
+            ...(this.shouldCreateOnboardedTrait() && {
+                source: {
+                    dataSourceIds: selectedDataSourceIds,
+                },
+            }),
         };
 
         sessionStorage.setItem('signalsParams', JSON.stringify(signalsParams));
@@ -57,7 +72,7 @@ class TraitsCreation extends Component {
 }
 
 TraitsCreation.propTypes = {
-    categoryType: PropTypes.string,
+    signalType: PropTypes.string,
     keyValuePairs: PropTypes.array,
     multiCreation: PropTypes.bool,
     selectedSignals: PropTypes.shape({
@@ -65,6 +80,7 @@ TraitsCreation.propTypes = {
         hasSignalSelectionsTypeWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
+    selectedDataSourceIds: PropTypes.array,
     canCreateTraits: PropTypes.bool,
     isMaxSignalSelectionsReached: PropTypes.bool,
 };

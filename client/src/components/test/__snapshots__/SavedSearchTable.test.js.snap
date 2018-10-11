@@ -603,6 +603,11 @@ ShallowWrapper {
               },
             ],
             "sids": Array [],
+            "source": Object {
+              "dataSourceIds": null,
+              "reportSuiteIds": null,
+              "sourceType": null,
+            },
           },
           "keyName": Array [
             "—",
@@ -692,6 +697,11 @@ ShallowWrapper {
                 },
               ],
               "sids": Array [],
+              "source": Object {
+                "dataSourceIds": null,
+                "reportSuiteIds": null,
+                "sourceType": null,
+              },
             },
             "keyName": Array [
               "—",

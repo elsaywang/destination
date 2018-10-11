@@ -254,6 +254,7 @@ describe('<SignalsTable /> component', () => {
                 verifyRenderMethodInColumn('renderIncludedInTraits', 'includedInTraits', {
                     sids: [],
                     keyValuePairs: [],
+                    source: { dataSourceIds: [], sourceType: 'ONBOARDED' },
                 });
             });
             it('should call `renderSignalType` for cells in the `signalType` column', () => {
@@ -349,11 +350,31 @@ describe('<SignalsTable /> component', () => {
             describe('when signals are not included in traits', () => {
                 const { renderIncludedInTraits } = wrapper.instance();
                 const signals = [
-                    { sids: [], sourceType: 'ANALYTICS' },
-                    { sids: [], sourceType: 'ONBOARDED' },
-                    { sids: [], sourceType: 'REALTIME' },
-                    { sids: [], sourceType: 'ALF' },
-                    { sids: [], sourceType: '-' },
+                    {
+                        sids: [],
+                        categoryType: 'REALTIME',
+                        source: { dataSourceIds: [123], sourceType: 'ANALYTICS' },
+                    },
+                    {
+                        sids: [],
+                        categoryType: 'ONBOARDED',
+                        source: { dataSourceIds: [456], sourceType: 'ONBOARDED' },
+                    },
+                    {
+                        sids: [],
+                        categoryType: 'REALTIME',
+                        source: { dataSourceIds: [789], sourceType: 'REALTIME' },
+                    },
+                    {
+                        sids: [],
+                        categoryType: 'REALTIME',
+                        source: { dataSourceIds: [1919], sourceType: 'ALF' },
+                    },
+                    {
+                        sids: [],
+                        categoryType: 'REALTIME',
+                        source: { dataSourceIds: null, sourceType: 'ALL' },
+                    },
                 ];
 
                 it('should render <TraitsCreation />', () => {
@@ -373,7 +394,11 @@ describe('<SignalsTable /> component', () => {
 
             describe('when signals are included in traits', () => {
                 const { renderIncludedInTraits } = wrapper.instance();
-                const data = { sids: [1, 2, 3], sourceType: 'ANALYTICS' };
+                const data = {
+                    sids: [1, 2, 3],
+                    categoryType: 'REALTIME',
+                    source: { dataSourceIds: [123], sourceType: 'ANALYTICS' },
+                };
                 const includedInTraitsWrapper = shallow(<div>{renderIncludedInTraits(data)}</div>);
 
                 it('should render <TraitsPopover />', () => {

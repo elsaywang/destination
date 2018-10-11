@@ -4,6 +4,7 @@
     padding-left: 0.15em;
     vertical-align: text-bottom;
 }
+
 :local(.singleCreation) {
     cursor: pointer;
     margin-left: -1.05em;
@@ -14,8 +15,10 @@
     display: flex;
     justify-content: flex-end;
 }
+
 :local(.message) {
     display: flex;
     padding: 0.5em;
     font-weight: 800;
+    white-space: nowrap;
 }

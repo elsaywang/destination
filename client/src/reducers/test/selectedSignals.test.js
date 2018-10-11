@@ -5,6 +5,7 @@ import {
     finalizedSelectedRowIndexes,
     finalizedSelectedSignals,
     hasSignalSelectionsTypeWarning,
+    getSelectedSignalType,
 } from '../selectedSignals';
 
 describe('selected signals reducer', () => {
@@ -92,6 +93,21 @@ describe('selected signals reducer', () => {
                     selectedRowIndexes: [0, 1, 2, 3, 4],
                 };
                 expect(finalizedSelectedSignals(state)).toEqual(expectedSelectedSignal);
+            });
+        });
+
+        describe('getSelectedSignalType', () => {
+            it('return the expected signalType', () => {
+                const state = {
+                    hasSignalSelectionsTypeWarning: false,
+                    selectionMessage: '10 signals have been selected',
+                    selectedRowIndexes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                    maxSignalSelections: 5,
+                    signalType: 'ONBOARDED',
+                };
+                const expectedSelectedSignalType = 'ONBOARDED';
+
+                expect(getSelectedSignalType(state)).toEqual(expectedSelectedSignalType);
             });
         });
     });

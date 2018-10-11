@@ -3,40 +3,66 @@
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 1`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType={undefined}
   keyValuePairs={undefined}
+  multiCreation={false}
+  selectedDataSourceIds={
+    Array [
+      123,
+    ]
+  }
+  signalType="ANALYTICS"
 />
 `;
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 2`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType={undefined}
   keyValuePairs={undefined}
+  multiCreation={false}
+  selectedDataSourceIds={
+    Array [
+      456,
+    ]
+  }
+  signalType="ONBOARDED"
 />
 `;
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 3`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType={undefined}
   keyValuePairs={undefined}
+  multiCreation={false}
+  selectedDataSourceIds={
+    Array [
+      789,
+    ]
+  }
+  signalType="REALTIME"
 />
 `;
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 4`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType={undefined}
   keyValuePairs={undefined}
+  multiCreation={false}
+  selectedDataSourceIds={
+    Array [
+      1919,
+    ]
+  }
+  signalType="ALF"
 />
 `;
 
 exports[`<SignalsTable /> component Rendering cells renderIncludedInTraits when signals are not included in traits passes \`categoryType\` prop\` 5`] = `
 <TraitsCreation
   canCreateTraits={undefined}
-  categoryType={undefined}
   keyValuePairs={undefined}
+  multiCreation={false}
+  selectedDataSourceIds={null}
+  signalType="ALL"
 />
 `;
 
@@ -220,6 +246,12 @@ ShallowWrapper {
               Object {},
             ],
             "sids": undefined,
+            "source": Object {
+              "reportSuiteIds": Array [
+                123,
+              ],
+              "sourceType": "ANALYTICS",
+            },
           },
           "keyName": Array [
             "—",
@@ -244,6 +276,12 @@ ShallowWrapper {
               Object {},
             ],
             "sids": undefined,
+            "source": Object {
+              "dataSourceIds": Array [
+                456,
+              ],
+              "sourceType": "ONBOARDED",
+            },
           },
           "keyName": Array [
             "—",
@@ -325,6 +363,12 @@ ShallowWrapper {
                 Object {},
               ],
               "sids": undefined,
+              "source": Object {
+                "reportSuiteIds": Array [
+                  123,
+                ],
+                "sourceType": "ANALYTICS",
+              },
             },
             "keyName": Array [
               "—",
@@ -349,6 +393,12 @@ ShallowWrapper {
                 Object {},
               ],
               "sids": undefined,
+              "source": Object {
+                "dataSourceIds": Array [
+                  456,
+                ],
+                "sourceType": "ONBOARDED",
+              },
             },
             "keyName": Array [
               "—",
