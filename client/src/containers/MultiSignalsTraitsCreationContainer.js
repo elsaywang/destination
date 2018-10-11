@@ -46,10 +46,6 @@ const mapStateToProps = ({ selectedSignals, results, signalType }) => ({
         selectedSignals,
         results,
     }),
-    hasOnboardedSignalSelectionsWarning: invalidSelectedOnboardedResultsTraitCreation({
-        selectedSignals,
-        results,
-    }),
     selectedDataSourceIds: getSharedDataSourceIdsOfSelectedOnboardedResults({
         selectedSignals,
         results,
