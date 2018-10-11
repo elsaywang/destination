@@ -9,7 +9,11 @@ const MultiSignalsTraitsCreation = ({
     storeSessionAndNavigateToTraits,
     isMaxSignalSelectionsReached,
 }) => {
-    const { selectionMessage, hasSignalSelectionsTypeWarning } = selectedSignals;
+    const {
+        selectionMessage,
+        hasSignalSelectionsTypeWarning,
+        hasOnboardedSignalSelectionsWarning,
+    } = selectedSignals;
 
     return (
         <div className={styles.multiCreation}>
@@ -19,7 +23,11 @@ const MultiSignalsTraitsCreation = ({
                 label="Create Trait From Multiple Signals"
                 icon={<Add />}
                 variant="action"
-                disabled={hasSignalSelectionsTypeWarning || isMaxSignalSelectionsReached}
+                disabled={
+                    hasSignalSelectionsTypeWarning ||
+                    isMaxSignalSelectionsReached ||
+                    hasOnboardedSignalSelectionsWarning
+                }
                 data-test="multi-signals-trait-creation"
             />
         </div>
@@ -30,6 +38,7 @@ MultiSignalsTraitsCreation.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasSignalSelectionsTypeWarning: PropTypes.bool,
+        hasOnboardedSignalSelectionsWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
     storeSessionAndNavigateToTraits: PropTypes.func.isRequired,

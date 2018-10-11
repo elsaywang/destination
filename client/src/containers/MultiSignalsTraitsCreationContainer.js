@@ -6,6 +6,7 @@ import {
     getSelectedResults,
     doAllSelectedResultsShareSameDataSource,
     getSharedDataSourceIdsOfSelectedOnboardedResults,
+    invalidSelectedOnboardedResultsTraitCreation,
 } from '../reducers';
 import { isMaxSignalSelectionsReached, getSelectedSignalType } from '../reducers/selectedSignals';
 
@@ -22,6 +23,7 @@ MultiSignalsTraitsCreationContainer.propTypes = {
     selectedSignals: PropTypes.shape({
         selectionMessage: PropTypes.string,
         hasSignalSelectionsTypeWarning: PropTypes.bool,
+        hasOnboardedSignalSelectionsWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
     }),
     selectedDataSourceIds: PropTypes.array,
@@ -32,9 +34,19 @@ MultiSignalsTraitsCreationContainer.propTypes = {
 };
 
 const mapStateToProps = ({ selectedSignals, results, signalType }) => ({
-    selectedSignals,
+    selectedSignals: {
+        ...selectedSignals,
+        hasOnboardedSignalSelectionsWarning: invalidSelectedOnboardedResultsTraitCreation({
+            selectedSignals,
+            results,
+        }),
+    },
     signalType: getSelectedSignalType(selectedSignals),
     selectedResults: getSelectedResults({
+        selectedSignals,
+        results,
+    }),
+    hasOnboardedSignalSelectionsWarning: invalidSelectedOnboardedResultsTraitCreation({
         selectedSignals,
         results,
     }),

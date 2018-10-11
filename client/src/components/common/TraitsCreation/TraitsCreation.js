@@ -79,6 +79,7 @@ TraitsCreation.propTypes = {
         selectionMessage: PropTypes.string,
         hasSignalSelectionsTypeWarning: PropTypes.bool,
         selectedRowIndexes: PropTypes.array,
+        hasOnboardedSignalSelectionsWarning: PropTypes.bool,
     }),
     selectedDataSourceIds: PropTypes.array,
     canCreateTraits: PropTypes.bool,

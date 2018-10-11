@@ -4,6 +4,7 @@ import {
     areAllSelectedResultsOnboarded,
     doAllSelectedResultsShareSameDataSource,
     getSharedDataSourceIdsOfSelectedOnboardedResults,
+    invalidSelectedOnboardedResultsTraitCreation,
 } from '../';
 
 describe('root reducer', () => {
@@ -216,6 +217,124 @@ describe('root reducer', () => {
                 };
 
                 const actual = doAllSelectedResultsShareSameDataSource({
+                    selectedSignals: emptySelectedSignals,
+                    results,
+                });
+                const expected = false;
+
+                expect(actual).toEqual(expected);
+            });
+        });
+
+        describe('invalidSelectedOnboardedResultsTraitCreation', () => {
+            const generateResults = sourceList => ({
+                list: sourceList.map(({ sourceType, dataSourceIds }) => ({
+                    source: {
+                        sourceType,
+                        dataSourceIds,
+                    },
+                })),
+            });
+            const selectedSignals = {
+                selectedRowIndexes: [0, 1],
+            };
+
+            it('onboarded trait creation should be valid if all selected signals are onboarded and share the same data source id', () => {
+                const results = generateResults([
+                    {
+                        sourceType: 'ONBOARDED',
+                        dataSourceIds: [12345],
+                    },
+                    {
+                        sourceType: 'ONBOARDED',
+                        dataSourceIds: [12345],
+                    },
+                ]);
+                const actual = invalidSelectedOnboardedResultsTraitCreation({
+                    selectedSignals,
+                    results,
+                });
+                const expected = false;
+
+                expect(actual).toEqual(expected);
+            });
+
+            it('onboarded trait creation should be invalid if all selected signals are onboarded but do not share the same data source id', () => {
+                const results = generateResults([
+                    {
+                        sourceType: 'ONBOARDED',
+                        dataSourceIds: [12345],
+                    },
+                    {
+                        sourceType: 'ONBOARDED',
+                        dataSourceIds: [67890],
+                    },
+                ]);
+                const actual = invalidSelectedOnboardedResultsTraitCreation({
+                    selectedSignals,
+                    results,
+                });
+                const expected = true;
+
+                expect(actual).toEqual(expected);
+            });
+
+            it('onboarded trait creation should be valid if not all selected signals are onboarded, and thus cannot share the same data source id', () => {
+                const results = generateResults([
+                    {
+                        sourceType: 'ONBOARDED',
+                        dataSourceIds: [12345],
+                    },
+                    {
+                        sourceType: 'ANALYTICS',
+                        dataSourceIds: [],
+                    },
+                ]);
+                const actual = invalidSelectedOnboardedResultsTraitCreation({
+                    selectedSignals,
+                    results,
+                });
+                const expected = false;
+
+                expect(actual).toEqual(expected);
+            });
+
+            it('onboarded trait creation shoud be valid if no selected signals are onboarded', () => {
+                const results = generateResults([
+                    {
+                        sourceType: 'ALF',
+                        dataSourceIds: [],
+                    },
+                    {
+                        sourceType: 'REALTIME',
+                        dataSourceIds: [],
+                    },
+                ]);
+                const actual = invalidSelectedOnboardedResultsTraitCreation({
+                    selectedSignals,
+                    results,
+                });
+                const expected = false;
+
+                expect(actual).toEqual(expected);
+            });
+
+            it('onboarded trait creation shoud be valid if no signals are selected', () => {
+                const results = generateResults([
+                    {
+                        sourceType: 'ALF',
+                        dataSourceIds: [],
+                    },
+                    {
+                        sourceType: 'REALTIME',
+                        dataSourceIds: [],
+                    },
+                ]);
+                const emptySelectedSignals = {
+                    selectedRowIndexes: [],
+                };
+
+                const actual = invalidSelectedOnboardedResultsTraitCreation({
                     selectedSignals: emptySelectedSignals,
                     results,
                 });
