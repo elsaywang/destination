@@ -54,3 +54,11 @@ export const getSharedDataSourceIdsOfSelectedOnboardedResults = ({ selectedSigna
     doAllSelectedResultsShareSameDataSource({ selectedSignals, results })
         ? [...new Set(getDataSourceIdsOfSelectedResults({ selectedSignals, results }))]
         : [];
+
+//Ex: 1.Signal A and Signal B both with sourceType 'ONBOARDED', and Signal A with dsId 12345, Signal B with dsId 12345 => valid
+//Ex: 2.Signal A and Signal B both with sourceType 'ONBOARDED', and Signal A with dsId 12345, Signal B with dsId 12346 => invalid
+export const invalidSelectedOnboardedResultsTraitCreation = ({ selectedSignals, results }) =>
+    areAllSelectedResultsOnboarded({ selectedSignals, results }) &&
+    !getDataSourceIdsOfSelectedResults({ selectedSignals, results }).every(
+        (dataSourceId, index, dataSourceIdList) => dataSourceId === dataSourceIdList[0],
+    );

@@ -15,6 +15,13 @@ export const SignalsSelectionLimitMessage = ({ maxSignalSelections }) => (
     </span>
 );
 
+export const OnboardedSignalSelectionWarningMessage = () => (
+    <span>
+        Sorry, you can only create an onboarded trait from multiple onboarded signals if they all
+        share the same data source.
+    </span>
+);
+
 SignalsSelectionLimitMessage.propTypes = {
     maxSignalSelections: PropTypes.number.isRequired,
 };

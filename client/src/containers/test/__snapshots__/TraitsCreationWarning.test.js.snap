@@ -4,6 +4,7 @@ exports[`<TraitsCreationWarning/> component rendering when \`hasSignalSelections
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
+    hasOnboardedSignalSelectionsWarning={false}
     hasSignalSelectionsTypeWarning={false}
     isMaxSignalSelectionsReached={false}
     maxSignalSelections={5}
@@ -42,10 +43,90 @@ ShallowWrapper {
 }
 `;
 
-exports[`<TraitsCreationWarning/> component rendering when \`hasSignalSelectionsTypeWarning\` prop is true matches snapshot 1`] = `
+exports[`<TraitsCreationWarning/> component rendering when only \`hasOnboardedSignalSelectionsWarning\` props is true matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
+    hasOnboardedSignalSelectionsWarning={true}
+    hasSignalSelectionsTypeWarning={false}
+    isMaxSignalSelectionsReached={false}
+    maxSignalSelections={5}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Unknown />,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {},
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Unknown />,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`<TraitsCreationWarning/> component rendering when only \`hasSignalSelectionsTypeWarning\` prop is true matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TraitsCreationWarning
+    hasOnboardedSignalSelectionsWarning={false}
     hasSignalSelectionsTypeWarning={true}
     isMaxSignalSelectionsReached={false}
     maxSignalSelections={5}
@@ -120,10 +201,11 @@ ShallowWrapper {
 }
 `;
 
-exports[`<TraitsCreationWarning/> component rendering when \`isMaxSignalSelectionsReached\` props is true matches snapshot 1`] = `
+exports[`<TraitsCreationWarning/> component rendering when only \`isMaxSignalSelectionsReached\` props is true matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TraitsCreationWarning
+    hasOnboardedSignalSelectionsWarning={false}
     hasSignalSelectionsTypeWarning={false}
     isMaxSignalSelectionsReached={true}
     maxSignalSelections={5}
