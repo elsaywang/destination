@@ -35,7 +35,7 @@ describe('<SavedSearchPopover /> component', () => {
             minEventFires: 88991,
             signalStatus: 'USED',
             viewRecordsFor: '7D',
-            sortBy: 'percentageChange',
+            sortBy: 'keyValuePairs',
         };
         const wrapper = createShallowIntlComponent(
             <SavedSearchPopover

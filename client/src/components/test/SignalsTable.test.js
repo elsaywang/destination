@@ -52,7 +52,6 @@ describe('<SignalsTable /> component', () => {
             signalType,
             signalSource,
             totalCount,
-            percentageChange,
             includedInTraits,
         } = columnKeys;
 
@@ -64,7 +63,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualAllSignalsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(signalSource)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(totalCount)).toBeTruthy();
-            expect(actualAllSignalsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualAllSignalsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAllSignalsColumnsIncludes(keyName)).toBeFalsy();
@@ -78,7 +76,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualAnalyticsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(signalSource)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(totalCount)).toBeTruthy();
-            expect(actualAnalyticsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualAnalyticsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAnalyticsColumnsIncludes(keyName)).toBeFalsy();
@@ -91,7 +88,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualAdvancedAnalyticsColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(keyName)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(totalCount)).toBeTruthy();
-            expect(actualAdvancedAnalyticsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualAdvancedAnalyticsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualAdvancedAnalyticsColumnsIncludes(signalType)).toBeFalsy();
@@ -105,7 +101,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualActionableLogFilesColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(signalType)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(totalCount)).toBeTruthy();
-            expect(actualActionableLogFilesColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualActionableLogFilesColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualActionableLogFilesColumnsIncludes(keyName)).toBeFalsy();
@@ -119,7 +114,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualGeneralOnlineDataColumnsIncludes(keyValuePairs)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(signalType)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(totalCount)).toBeTruthy();
-            expect(actualGeneralOnlineDataColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualGeneralOnlineDataColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualGeneralOnlineDataColumnsIncludes(keyName)).toBeFalsy();
@@ -134,7 +128,6 @@ describe('<SignalsTable /> component', () => {
             expect(actualOnboardedRecordsColumnsIncludes(signalType)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(signalSource)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(totalCount)).toBeTruthy();
-            expect(actualOnboardedRecordsColumnsIncludes(percentageChange)).toBeTruthy();
             expect(actualOnboardedRecordsColumnsIncludes(includedInTraits)).toBeTruthy();
 
             expect(actualOnboardedRecordsColumnsIncludes(keyName)).toBeFalsy();
@@ -247,9 +240,6 @@ describe('<SignalsTable /> component', () => {
             it('should call `renderTotalCounts` for cells in the `totalCount` column', () => {
                 verifyRenderMethodInColumn('renderTotalCounts', 'totalCount', 123456789);
             });
-            it('should call `renderPercentageChange` for cells in the `percentageChange` column', () => {
-                verifyRenderMethodInColumn('renderPercentageChange', 'percentageChange', 0.1234);
-            });
             it('should call `renderIncludedInTraits` for cells in the `includedInTraits` column', () => {
                 verifyRenderMethodInColumn('renderIncludedInTraits', 'includedInTraits', {
                     sids: [],
@@ -314,35 +304,6 @@ describe('<SignalsTable /> component', () => {
 
             it('renders <FormattedNumber />', () => {
                 expect(totalCountsWrapper.find(FormattedNumber).exists()).toBeTruthy();
-            });
-        });
-
-        describe('renderPercentageChange', () => {
-            const { renderPercentageChange } = wrapper.instance();
-            const percentageChangeWrapper = shallow(<div>{renderPercentageChange(0.1234)}</div>);
-
-            it('renders <PercentageChange />', () => {
-                expect(percentageChangeWrapper.find(PercentageChange).exists()).toBeTruthy();
-            });
-            it('passes `percentageChange` prop', () => {
-                expect(
-                    percentageChangeWrapper.find(PercentageChange).props().percentageChange,
-                ).toEqual(0.1234);
-            });
-            it('passes the largest percentageChange magnitude from all results as `maxPercentageMagnitude` prop', () => {
-                expect(
-                    percentageChangeWrapper.find(PercentageChange).props().maxPercentageMagnitude,
-                ).toEqual(0.5678);
-            });
-
-            it('renders `-` when `null` or non-numeric value is passed in ', () => {
-                const tests = ['test', undefined, null, ''];
-                tests.map(test => {
-                    const nonePercentageChangeWrapper = shallow(
-                        <div>{renderPercentageChange(test)}</div>,
-                    );
-                    expect(nonePercentageChangeWrapper.text()).toEqual('—');
-                });
             });
         });
 

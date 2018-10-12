@@ -578,12 +578,6 @@ ShallowWrapper {
           "width": 96,
         },
         Object {
-          "key": "percentageChange",
-          "sortable": true,
-          "title": "Percentage Change",
-          "width": 165,
-        },
-        Object {
           "key": "includedInTraits",
           "title": "Included In Traits",
           "width": 155,
@@ -670,12 +664,6 @@ ShallowWrapper {
             "sortable": true,
             "title": "Total Counts",
             "width": 96,
-          },
-          Object {
-            "key": "percentageChange",
-            "sortable": true,
-            "title": "Percentage Change",
-            "width": 165,
           },
           Object {
             "key": "includedInTraits",

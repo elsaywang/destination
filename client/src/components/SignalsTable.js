@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { FormattedNumber } from 'react-intl';
 import classNames from 'classnames';
-import PercentageChange from './common/PercentageChange';
 import Table from './common/Table';
 import {
     allSignalsColumns,
@@ -34,8 +33,6 @@ class SignalsTable extends Component {
                 return this.renderKeyName(data);
             case 'totalCount':
                 return this.renderTotalCounts(data);
-            case 'percentageChange':
-                return this.renderPercentageChange(data);
             case 'includedInTraits':
                 return this.renderIncludedInTraits(data);
             case 'signalType':
@@ -194,22 +191,6 @@ class SignalsTable extends Component {
             </FormattedNumber>
         );
     }
-
-    renderPercentageChange = percentageChange => {
-        if (percentageChange === null || !isNumeric(percentageChange)) {
-            return '—';
-        }
-        const maxPercentageMagnitude = Math.max(
-            ...this.props.results.map(item => Math.abs(item.percentageChange)),
-        );
-
-        return (
-            <PercentageChange
-                percentageChange={percentageChange}
-                maxPercentageMagnitude={maxPercentageMagnitude}
-            />
-        );
-    };
 
     renderIncludedInTraits = data => {
         const { keyValuePairs, sids, source } = data;

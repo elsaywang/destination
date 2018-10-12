@@ -36,16 +36,6 @@ describe('normalizeSortOptions util', () => {
             expect(actual).toEqual(expected);
         });
 
-        it('should keep `sortBy` if it is `percentageChange`', () => {
-            const { sortBy: actual } = normalizeSortOptions({
-                ...baseSortOptions,
-                sortBy: 'percentageChange',
-            });
-            const expected = 'percentageChange';
-
-            expect(actual).toEqual(expected);
-        });
-
         it('should exclude `sortBy` if it is an unsupported sort column key', () => {
             const { sortBy: actual } = normalizeSortOptions({
                 ...baseSortOptions,
