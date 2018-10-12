@@ -54,7 +54,7 @@ ShallowWrapper {
             "minEventFires": 88991,
             "name": "Loren Waters",
             "signalStatus": "USED",
-            "sortBy": "percentageChange",
+            "sortBy": "keyValuePairs",
             "source": Object {
               "dataSourceIds": Array [],
               "reportSuiteIds": Array [],
@@ -207,7 +207,7 @@ ShallowWrapper {
                     <div
                               data-test="saved-search-popover-sort-by"
                     >
-                              Percentage Change
+                              Key Name
                     </div>
           </Popover>
 </OverlayTrigger>,
@@ -341,7 +341,7 @@ ShallowWrapper {
               <div
                             data-test="saved-search-popover-sort-by"
               >
-                            Percentage Change
+                            Key Name
               </div>
 </Popover>,
           ],
@@ -480,7 +480,7 @@ ShallowWrapper {
                 <div
                   data-test="saved-search-popover-sort-by"
 >
-                  Percentage Change
+                  Key Name
 </div>,
               ],
               "data-test": "saved-search-popover",
@@ -790,11 +790,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Percentage Change",
+                  "children": "Key Name",
                   "data-test": "saved-search-popover-sort-by",
                 },
                 "ref": null,
-                "rendered": "Percentage Change",
+                "rendered": "Key Name",
                 "type": "div",
               },
             ],
@@ -943,7 +943,7 @@ ShallowWrapper {
                         <div
                                     data-test="saved-search-popover-sort-by"
                         >
-                                    Percentage Change
+                                    Key Name
                         </div>
             </Popover>
 </OverlayTrigger>,
@@ -1077,7 +1077,7 @@ ShallowWrapper {
                 <div
                                 data-test="saved-search-popover-sort-by"
                 >
-                                Percentage Change
+                                Key Name
                 </div>
 </Popover>,
             ],
@@ -1216,7 +1216,7 @@ ShallowWrapper {
                   <div
                     data-test="saved-search-popover-sort-by"
 >
-                    Percentage Change
+                    Key Name
 </div>,
                 ],
                 "data-test": "saved-search-popover",
@@ -1526,11 +1526,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Percentage Change",
+                    "children": "Key Name",
                     "data-test": "saved-search-popover-sort-by",
                   },
                   "ref": null,
-                  "rendered": "Percentage Change",
+                  "rendered": "Key Name",
                   "type": "div",
                 },
               ],

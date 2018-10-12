@@ -7,7 +7,6 @@ export const columnKeys = {
     signalType: 'signalType',
     signalSource: 'signalSource',
     totalCount: 'totalCount',
-    percentageChange: 'percentageChange',
     includedInTraits: 'includedInTraits',
 };
 
@@ -77,12 +76,7 @@ const totalRecords = {
     width: 96,
     sortable: true,
 };
-const percentageChange = {
-    title: 'Percentage Change',
-    key: columnKeys.percentageChange,
-    width: 165,
-    sortable: true,
-};
+
 const includedInTraits = {
     title: 'Included In Traits',
     key: columnKeys.includedInTraits,
@@ -97,7 +91,6 @@ export const allSignalsColumns = [
     signalType,
     signalSource,
     totalCounts,
-    percentageChange,
     includedInTraits,
 ];
 
@@ -106,25 +99,12 @@ export const analyticsColumns = [
     signalType,
     reportSuite,
     eventFires,
-    percentageChange,
     includedInTraits,
 ];
 
-export const advancedAnalyticsColumns = [
-    keyValuePairs,
-    keyName,
-    eventFires,
-    percentageChange,
-    includedInTraits,
-];
+export const advancedAnalyticsColumns = [keyValuePairs, keyName, eventFires, includedInTraits];
 
-export const actionableLogFilesColumns = [
-    keyValuePairs,
-    signalType,
-    eventFires,
-    percentageChange,
-    includedInTraits,
-];
+export const actionableLogFilesColumns = [keyValuePairs, signalType, eventFires, includedInTraits];
 
 export const generalOnlineDataColumns = [...actionableLogFilesColumns];
 
@@ -133,13 +113,11 @@ export const onboardedRecordsColumns = [
     signalType,
     onboardedRecord,
     totalRecords,
-    percentageChange,
     includedInTraits,
 ];
 
 export const sortColumns = [
     totalCounts,
-    percentageChange,
     {
         ...keyValuePairs,
         title: 'Key Name',
@@ -159,6 +137,6 @@ export const columns = [
     totalCounts,
     eventFires,
     totalRecords,
-    percentageChange,
+
     includedInTraits,
 ];

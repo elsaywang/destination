@@ -162,7 +162,6 @@ ShallowWrapper {
               "keyValuePairs": Array [
                 Object {},
               ],
-              "percentageChange": 0.1234,
               "source": Object {
                 "reportSuiteIds": Array [
                   123,
@@ -174,7 +173,6 @@ ShallowWrapper {
               "keyValuePairs": Array [
                 Object {},
               ],
-              "percentageChange": -0.5678,
               "source": Object {
                 "dataSourceIds": Array [
                   456,
@@ -225,12 +223,6 @@ ShallowWrapper {
           "width": 96,
         },
         Object {
-          "key": "percentageChange",
-          "sortable": true,
-          "title": "Percentage Change",
-          "width": 165,
-        },
-        Object {
           "key": "includedInTraits",
           "title": "Included In Traits",
           "width": 155,
@@ -259,7 +251,6 @@ ShallowWrapper {
           "keyValuePairs": Array [
             Object {},
           ],
-          "percentageChange": 0.1234,
           "signalSource": "123",
           "signalType": "Adobe Analytics",
           "source": Object {
@@ -289,7 +280,6 @@ ShallowWrapper {
           "keyValuePairs": Array [
             Object {},
           ],
-          "percentageChange": -0.5678,
           "signalSource": "456",
           "signalType": "Onboarded Records",
           "source": Object {
@@ -342,12 +332,6 @@ ShallowWrapper {
             "width": 96,
           },
           Object {
-            "key": "percentageChange",
-            "sortable": true,
-            "title": "Percentage Change",
-            "width": 165,
-          },
-          Object {
             "key": "includedInTraits",
             "title": "Included In Traits",
             "width": 155,
@@ -376,7 +360,6 @@ ShallowWrapper {
             "keyValuePairs": Array [
               Object {},
             ],
-            "percentageChange": 0.1234,
             "signalSource": "123",
             "signalType": "Adobe Analytics",
             "source": Object {
@@ -406,7 +389,6 @@ ShallowWrapper {
             "keyValuePairs": Array [
               Object {},
             ],
-            "percentageChange": -0.5678,
             "signalSource": "456",
             "signalType": "Onboarded Records",
             "source": Object {

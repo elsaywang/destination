@@ -73,10 +73,6 @@ ShallowWrapper {
                                           "value": "totalCount",
                                         },
                                         Object {
-                                          "label": "Percentage Change",
-                                          "value": "percentageChange",
-                                        },
-                                        Object {
                                           "label": "Key Name",
                                           "value": "keyValuePairs",
                                         },
@@ -220,10 +216,6 @@ ShallowWrapper {
                                             "value": "totalCount",
                                           },
                                           Object {
-                                            "label": "Percentage Change",
-                                            "value": "percentageChange",
-                                          },
-                                          Object {
                                             "label": "Key Name",
                                             "value": "keyValuePairs",
                                           },
@@ -273,10 +265,6 @@ ShallowWrapper {
                 Object {
                   "label": "Total Counts",
                   "value": "totalCount",
-                },
-                Object {
-                  "label": "Percentage Change",
-                  "value": "percentageChange",
                 },
                 Object {
                   "label": "Key Name",
@@ -443,10 +431,6 @@ ShallowWrapper {
                                                   "value": "totalCount",
                                                 },
                                                 Object {
-                                                  "label": "Percentage Change",
-                                                  "value": "percentageChange",
-                                                },
-                                                Object {
                                                   "label": "Key Name",
                                                   "value": "keyValuePairs",
                                                 },
@@ -590,10 +574,6 @@ ShallowWrapper {
                                                   "value": "totalCount",
                                                 },
                                                 Object {
-                                                  "label": "Percentage Change",
-                                                  "value": "percentageChange",
-                                                },
-                                                Object {
                                                   "label": "Key Name",
                                                   "value": "keyValuePairs",
                                                 },
@@ -643,10 +623,6 @@ ShallowWrapper {
                   Object {
                     "label": "Total Counts",
                     "value": "totalCount",
-                  },
-                  Object {
-                    "label": "Percentage Change",
-                    "value": "percentageChange",
                   },
                   Object {
                     "label": "Key Name",
@@ -852,10 +828,6 @@ ShallowWrapper {
                                           "value": "totalCount",
                                         },
                                         Object {
-                                          "label": "Percentage Change",
-                                          "value": "percentageChange",
-                                        },
-                                        Object {
                                           "label": "Key Name",
                                           "value": "keyValuePairs",
                                         },
@@ -999,10 +971,6 @@ ShallowWrapper {
                                             "value": "totalCount",
                                           },
                                           Object {
-                                            "label": "Percentage Change",
-                                            "value": "percentageChange",
-                                          },
-                                          Object {
                                             "label": "Key Name",
                                             "value": "keyValuePairs",
                                           },
@@ -1052,10 +1020,6 @@ ShallowWrapper {
                 Object {
                   "label": "Total Counts",
                   "value": "totalCount",
-                },
-                Object {
-                  "label": "Percentage Change",
-                  "value": "percentageChange",
                 },
                 Object {
                   "label": "Key Name",
@@ -1222,10 +1186,6 @@ ShallowWrapper {
                                                   "value": "totalCount",
                                                 },
                                                 Object {
-                                                  "label": "Percentage Change",
-                                                  "value": "percentageChange",
-                                                },
-                                                Object {
                                                   "label": "Key Name",
                                                   "value": "keyValuePairs",
                                                 },
@@ -1369,10 +1329,6 @@ ShallowWrapper {
                                                   "value": "totalCount",
                                                 },
                                                 Object {
-                                                  "label": "Percentage Change",
-                                                  "value": "percentageChange",
-                                                },
-                                                Object {
                                                   "label": "Key Name",
                                                   "value": "keyValuePairs",
                                                 },
@@ -1422,10 +1378,6 @@ ShallowWrapper {
                   Object {
                     "label": "Total Counts",
                     "value": "totalCount",
-                  },
-                  Object {
-                    "label": "Percentage Change",
-                    "value": "percentageChange",
                   },
                   Object {
                     "label": "Key Name",

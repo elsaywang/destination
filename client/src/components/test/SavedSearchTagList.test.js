@@ -21,7 +21,6 @@ describe('<SavedSearchTagList /> component', () => {
             type: 'Lek',
             source: 'Buckinghamshire',
             totalCount: 59925,
-            percentageChange: 45886,
             includedTraits: [0, 1, 2],
             signalStatus: 'USED',
             viewRecordsFor: '7D',

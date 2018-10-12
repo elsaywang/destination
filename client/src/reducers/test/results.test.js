@@ -123,7 +123,6 @@ describe('results reducer', () => {
     });
 
     it('should handle UPDATE_SORT_OPTIONS', () => {
-        const state = { sortBy: 'percentageChange' };
         const sortOptions = {
             sortBy: 'totalCount',
             sortDir: -1,
