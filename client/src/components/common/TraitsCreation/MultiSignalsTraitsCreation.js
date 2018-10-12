@@ -15,6 +15,11 @@ const MultiSignalsTraitsCreation = ({
         hasOnboardedSignalSelectionsWarning,
     } = selectedSignals;
 
+    const isTraitCreationDisabled =
+        hasSignalSelectionsTypeWarning ||
+        isMaxSignalSelectionsReached ||
+        hasOnboardedSignalSelectionsWarning;
+
     return (
         <div className={styles.multiCreation}>
             <span className={styles.message}>{selectionMessage}</span>
@@ -23,11 +28,7 @@ const MultiSignalsTraitsCreation = ({
                 label="Create Trait From Multiple Signals"
                 icon={<Add />}
                 variant="action"
-                disabled={
-                    hasSignalSelectionsTypeWarning ||
-                    isMaxSignalSelectionsReached ||
-                    hasOnboardedSignalSelectionsWarning
-                }
+                disabled={isTraitCreationDisabled}
                 data-test="multi-signals-trait-creation"
             />
         </div>
