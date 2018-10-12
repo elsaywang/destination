@@ -4,7 +4,6 @@ import { FormattedNumber } from 'react-intl';
 import { columnKeys } from '../../constants/columns';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
-import PercentageChange from '../../components/common/PercentageChange';
 import TraitsPopover from '../../containers/TraitsPopover';
 import TraitsCreation from '../../components/common/TraitsCreation';
 import Link from '@react/react-spectrum/Link';
@@ -17,12 +16,10 @@ describe('<SignalsTable /> component', () => {
                 {
                     keyValuePairs: [{}],
                     source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
-                    percentageChange: 0.1234,
                 },
                 {
                     keyValuePairs: [{}],
                     source: { sourceType: 'ONBOARDED', dataSourceIds: [456] },
-                    percentageChange: -0.5678,
                 },
             ]}
             signalType="ALL"

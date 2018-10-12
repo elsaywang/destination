@@ -162,7 +162,6 @@ ShallowWrapper {
               "keyValuePairs": Array [
                 Object {},
               ],
-              "percentageChange": 0.1234,
               "source": Object {
                 "reportSuiteIds": Array [
                   123,
@@ -174,7 +173,6 @@ ShallowWrapper {
               "keyValuePairs": Array [
                 Object {},
               ],
-              "percentageChange": -0.5678,
               "source": Object {
                 "dataSourceIds": Array [
                   456,
@@ -253,7 +251,6 @@ ShallowWrapper {
           "keyValuePairs": Array [
             Object {},
           ],
-          "percentageChange": 0.1234,
           "signalSource": "123",
           "signalType": "Adobe Analytics",
           "source": Object {
@@ -283,7 +280,6 @@ ShallowWrapper {
           "keyValuePairs": Array [
             Object {},
           ],
-          "percentageChange": -0.5678,
           "signalSource": "456",
           "signalType": "Onboarded Records",
           "source": Object {
@@ -364,7 +360,6 @@ ShallowWrapper {
             "keyValuePairs": Array [
               Object {},
             ],
-            "percentageChange": 0.1234,
             "signalSource": "123",
             "signalType": "Adobe Analytics",
             "source": Object {
@@ -394,7 +389,6 @@ ShallowWrapper {
             "keyValuePairs": Array [
               Object {},
             ],
-            "percentageChange": -0.5678,
             "signalSource": "456",
             "signalType": "Onboarded Records",
             "source": Object {

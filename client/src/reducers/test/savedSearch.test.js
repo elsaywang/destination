@@ -73,7 +73,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: false,
-                sortBy: 'percentageChange',
+                sortBy: 'totalCounts',
                 descending: false,
             },
         };
@@ -87,7 +87,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sortBy: 'percentageChange',
+                sortBy: 'totalCounts',
                 descending: false,
             },
         });
@@ -99,7 +99,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'New Save This Search Name',
                 includeInDashboard: true,
-                sortBy: 'percentageChange',
+                sortBy: 'totalCounts',
                 descending: false,
             },
         };
@@ -212,7 +212,7 @@ describe('saveSearch reducer', () => {
             saveSearch: {
                 name: 'Test',
                 includeInDashboard: false,
-                sortBy: 'percentageChange',
+                sortBy: 'totalCounts',
                 descending: false,
             },
         };

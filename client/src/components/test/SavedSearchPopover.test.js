@@ -241,7 +241,7 @@ describe('<SavedSearchPopover /> component', () => {
             minEventFires: 88991,
             signalStatus: 'USED',
             viewRecordsFor: '7D',
-            sortBy: 'percentageChange',
+            sortBy: 'keyValuePairs',
         };
 
         it('should return true if the saved search is selected and not a preset', () => {

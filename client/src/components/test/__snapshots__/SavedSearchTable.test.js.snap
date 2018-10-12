@@ -528,7 +528,6 @@ ShallowWrapper {
                   "value": "CMS18",
                 },
               ],
-              "percentageChange": 0.27783491545226535,
               "signalStatus": "UNUSED",
               "source": Object {
                 "dataSourceIds": null,
@@ -612,7 +611,6 @@ ShallowWrapper {
               "value": "CMS18",
             },
           ],
-          "percentageChange": 0.27783491545226535,
           "signalSource": "—",
           "signalStatus": "UNUSED",
           "signalType": "—",
@@ -700,7 +698,6 @@ ShallowWrapper {
                 "value": "CMS18",
               },
             ],
-            "percentageChange": 0.27783491545226535,
             "signalSource": "—",
             "signalStatus": "UNUSED",
             "signalType": "—",

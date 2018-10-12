@@ -4,7 +4,6 @@ import SavedSearchTable from '../SavedSearchTable';
 import EmptySearch from '../EmptySearch';
 import { handleList } from '../../reducers/results';
 import fetch from '../../utils/fetch';
-
 jest.mock('../../utils/fetch');
 jest.mock('../../lib/getStaticUrl', () => ({
     getStaticUrl: () => 'localhost:3000/',
@@ -78,7 +77,6 @@ describe('<SavedSearchTable/> component', () => {
                     sourceType: null,
                 },
                 totalCount: 93859,
-                percentageChange: 0.27783491545226535,
                 includedInTraits: null,
                 signalStatus: 'UNUSED',
             },
