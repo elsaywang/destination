@@ -61,20 +61,23 @@ const onboardedRecord = {
 const totalCounts = {
     title: 'Total Counts',
     key: columnKeys.totalCount,
-    width: 96,
+    width: 150,
     sortable: true,
+    align: 'right',
 };
 const eventFires = {
     title: 'Event Fires',
     key: columnKeys.totalCount,
-    width: 96,
+    width: 150,
     sortable: true,
+    align: 'right',
 };
 const totalRecords = {
     title: 'Total Records',
     key: columnKeys.totalCount,
-    width: 96,
+    width: 150,
     sortable: true,
+    align: 'right',
 };
 
 const includedInTraits = {

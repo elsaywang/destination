@@ -187,7 +187,7 @@ class SignalsTable extends Component {
     renderTotalCounts(totalCounts) {
         return (
             <FormattedNumber value={totalCounts}>
-                {counts => <div style={{ width: '100%', textAlign: 'right' }}>{counts}</div>}
+                {counts => <div style={{ width: '100%' }}>{counts}</div>}
             </FormattedNumber>
         );
     }

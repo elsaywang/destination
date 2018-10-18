@@ -217,10 +217,11 @@ ShallowWrapper {
           "width": 180,
         },
         Object {
+          "align": "right",
           "key": "totalCount",
           "sortable": true,
           "title": "Total Counts",
-          "width": 96,
+          "width": 150,
         },
         Object {
           "key": "includedInTraits",
@@ -326,10 +327,11 @@ ShallowWrapper {
             "width": 180,
           },
           Object {
+            "align": "right",
             "key": "totalCount",
             "sortable": true,
             "title": "Total Counts",
-            "width": 96,
+            "width": 150,
           },
           Object {
             "key": "includedInTraits",
