@@ -14,7 +14,8 @@ describe('<SaveSearchExecution/>', () => {
     describe('rendering when no error passes in', () => {
         const mockFn = jest.fn();
         const props = {
-            disabled: true,
+            isSavedSearchLimitReached: true,
+            savedSearchLimit: 10,
             confirmSaveThisSearch: mockFn,
             cancelSaveSearch: mockFn,
             updateSaveSearchName: mockFn,
@@ -55,12 +56,12 @@ describe('<SaveSearchExecution/>', () => {
             ).toBeTruthy();
         });
 
-        it('Trigger <Button/> should be disabled when prop `disabled` is passed in as true', () => {
+        it('Trigger <Button/> should be disabled when prop `isSavedSearchLimitReached` is passed in as true', () => {
             expect(children.find(Button).props().disabled).toBeTruthy();
         });
 
-        it('Trigger <Button/> should be active when prop `disabled` is passed in as false', () => {
-            wrapper.setProps({ disabled: false });
+        it('Trigger <Button/> should be active when prop `isSavedSearchLimitReached` is passed in as false', () => {
+            wrapper.setProps({ isSavedSearchLimitReached: false });
             const updatedChildren = wrapper.find(ModalTrigger).children();
             expect(updatedChildren.find(Button).props().disabled).toBeFalsy();
         });
@@ -69,7 +70,7 @@ describe('<SaveSearchExecution/>', () => {
     describe('rendering when error passes in', () => {
         const mockFn = jest.fn();
         const props = {
-            disabled: false,
+            isSavedSearchLimitReached: false,
             error: {
                 hasError: true,
                 errorMessage: 'Invalid Method',

@@ -28,7 +28,17 @@ ShallowWrapper {
         flip={true}
         offset={0}
         placement="right"
-        trigger="hover"
+        style={
+                Object {
+                        "word-break": "break-word",
+                      }
+        }
+        trigger={
+                Array [
+                        "hover",
+                        "focus",
+                      ]
+        }
 >
         <Button
                 autoFocus={false}
@@ -102,7 +112,13 @@ ShallowWrapper {
         "flip": true,
         "offset": 0,
         "placement": "right",
-        "trigger": "hover",
+        "style": Object {
+          "word-break": "break-word",
+        },
+        "trigger": Array [
+          "hover",
+          "focus",
+        ],
       },
       "ref": null,
       "rendered": Array [
@@ -165,7 +181,17 @@ ShallowWrapper {
           flip={true}
           offset={0}
           placement="right"
-          trigger="hover"
+          style={
+                    Object {
+                              "word-break": "break-word",
+                            }
+          }
+          trigger={
+                    Array [
+                              "hover",
+                              "focus",
+                            ]
+          }
 >
           <Button
                     autoFocus={false}
@@ -239,7 +265,13 @@ ShallowWrapper {
           "flip": true,
           "offset": 0,
           "placement": "right",
-          "trigger": "hover",
+          "style": Object {
+            "word-break": "break-word",
+          },
+          "trigger": Array [
+            "hover",
+            "focus",
+          ],
         },
         "ref": null,
         "rendered": Array [

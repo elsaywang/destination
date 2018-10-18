@@ -30,7 +30,7 @@ import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dat
 import { normalizeSortOptions } from '../utils/normalizeSortOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
-import { getTooltipMessage } from '../constants/tooltipMessageOptions';
+import { getSaveThisSearchMessage } from '../constants/tooltipMessageOptions';
 import {
     formatDataSourceLabel,
     isValidDataSourceId,
@@ -394,8 +394,7 @@ class SearchContainer extends Component {
 
     isCustomDateRangeEnabled = () => this.state.viewRecordsFor === 'custom';
 
-    saveThisSearchMessage = () =>
-        getTooltipMessage(this.props.isSavedSearchLimitReached, this.props.savedSearchLimit);
+    saveThisSearchMessage = () => getSaveThisSearchMessage(this.props.savedSearchLimit);
 
     getSearchResultsMessage = () =>
         getSearchResultsMessageBySignalTypeLabel(this.state.name, this.state.source.sourceType);
@@ -513,7 +512,10 @@ class SearchContainer extends Component {
                                 <Fragment>
                                     <div className={styles.saveSearchExecution}>
                                         <SaveSearchExecution
-                                            disabled={this.props.isSavedSearchLimitReached}
+                                            isSavedSearchLimitReached={
+                                                this.props.isSavedSearchLimitReached
+                                            }
+                                            savedSearchLimit={this.props.savedSearchLimit}
                                             confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
                                             cancelSaveSearch={this.props.cancelSaveSearch}
                                             updateSaveSearchName={this.props.updateSaveSearchName}

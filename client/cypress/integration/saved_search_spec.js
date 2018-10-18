@@ -443,15 +443,13 @@ describe('Saved Search Integration Test', () => {
 
             cy.get('[data-test="search-button"]').click();
 
-            cy.get('[data-test="overlay-tooltip"')
-                .should('be.visible')
-                .within(() => {
-                    cy.get('button').trigger('mouseover');
-                });
+            cy.get('[data-test="save-this-search-button-overlay-trigger"]').within(() => {
+                cy.get('button').trigger('mouseover', { force: true });
+            });
 
             cy.get('[data-test="saved-search-limit-message"]').should(
                 'have.text',
-                'Saved search limit (10) reached',
+                'Saved Search limit (10) reached.',
             );
         });
     });

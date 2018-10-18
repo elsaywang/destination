@@ -58,6 +58,11 @@ ShallowWrapper {
                                 flip={true}
                                 offset={0}
                                 placement="right"
+                                style={
+                                        Object {
+                                                "word-break": "break-word",
+                                              }
+                                }
                                 trigger="hover"
                         >
                                 <Button
@@ -160,6 +165,11 @@ ShallowWrapper {
                     flip={true}
                     offset={0}
                     placement="right"
+                    style={
+                              Object {
+                                        "word-break": "break-word",
+                                      }
+                    }
                     trigger="hover"
           >
                     <Button
@@ -247,6 +257,11 @@ ShallowWrapper {
                                         flip={true}
                                         offset={0}
                                         placement="right"
+                                        style={
+                                                  Object {
+                                                            "word-break": "break-word",
+                                                          }
+                                        }
                                         trigger="hover"
                               >
                                         <Button
@@ -349,6 +364,11 @@ ShallowWrapper {
                         flip={true}
                         offset={0}
                         placement="right"
+                        style={
+                                    Object {
+                                                "word-break": "break-word",
+                                              }
+                        }
                         trigger="hover"
             >
                         <Button

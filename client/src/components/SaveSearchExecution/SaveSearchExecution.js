@@ -1,21 +1,49 @@
 import React, { Component } from 'react';
-import Button from '@react/react-spectrum/Button';
 import PropTypes from 'prop-types';
+import Button from '@react/react-spectrum/Button';
 import Add from '@react/react-spectrum/Icon/Add';
-import styles from './SaveSearchExecution.css';
-// TODO: BRING BACK OverlayTrigger once PopOver is fixed
-// import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
-// import Popover from '@react/react-spectrum/Popover';
+import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
+import Tooltip from '@react/react-spectrum/Tooltip';
+// TODO: BRING BACK PopOver once it's fixed
+// import Popover from '@react/react-spectrum/Popover';
 import Dialog from '@react/react-spectrum/Dialog';
+import styles from './SaveSearchExecution.css';
 import SaveSearchExecutionContent from './SaveSearchExecutionContent';
 import { saveSearch } from './saveSearchExecutionMessages';
+import { getMaxSavedSearchTooltipMessage } from '../../constants/tooltipMessageOptions';
 import InlineErrorMessage from '../../components/common/InlineErrorMessage';
 
 class SaveSearchExecution extends Component {
+    renderButton() {
+        const { isSavedSearchLimitReached, savedSearchLimit } = this.props;
+        const button = (
+            <Button
+                data-test="save-this-search-button"
+                label={saveSearch}
+                variant="action"
+                quiet
+                icon={<Add />}
+                disabled={isSavedSearchLimitReached}
+            />
+        );
+
+        return isSavedSearchLimitReached ? (
+            <div data-test="save-this-search-button-overlay-trigger">
+                <OverlayTrigger trigger={['hover', 'focus']} placement="top">
+                    {button}
+                    <Tooltip data-test="saved-search-limit-message">
+                        {getMaxSavedSearchTooltipMessage(savedSearchLimit)}
+                    </Tooltip>
+                </OverlayTrigger>
+            </div>
+        ) : (
+            button
+        );
+    }
+
     render() {
         const {
-            disabled,
             confirmSaveThisSearch,
             updateSaveSearchName,
             cancelSaveSearch,
@@ -42,14 +70,7 @@ class SaveSearchExecution extends Component {
                 <InlineErrorMessage isInvalid={hasError} errorMessage={errorMessage} />
             ) : (
                 <ModalTrigger>
-                    <Button
-                        data-test="save-this-search-button"
-                        label={saveSearch}
-                        variant="action"
-                        quiet
-                        icon={<Add />}
-                        disabled={disabled}
-                    />
+                    {this.renderButton()}
                     <Dialog
                         className={styles.triggerDialog}
                         modalcontent
@@ -73,7 +94,8 @@ class SaveSearchExecution extends Component {
 }
 
 SaveSearchExecution.propTypes = {
-    disabled: PropTypes.bool,
+    isSavedSearchLimitReached: PropTypes.bool,
+    savedSearchLimit: PropTypes.number,
     confirmSaveThisSearch: PropTypes.func,
     cancelSaveSearch: PropTypes.func,
     updateSaveSearchName: PropTypes.func,
