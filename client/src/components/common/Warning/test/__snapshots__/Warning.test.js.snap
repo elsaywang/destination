@@ -27,6 +27,7 @@ ShallowWrapper {
 />,
       ],
       "className": "warning",
+      "data-test": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -73,6 +74,7 @@ ShallowWrapper {
 />,
         ],
         "className": "warning",
+        "data-test": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -161,6 +163,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "warning",
+      "data-test": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -223,6 +226,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "warning",
+        "data-test": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -319,6 +323,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "warning",
+      "data-test": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -375,6 +380,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "warning",
+        "data-test": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -467,6 +473,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": "warning",
+      "data-test": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -523,6 +530,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": "warning",
+        "data-test": undefined,
       },
       "ref": null,
       "rendered": Array [

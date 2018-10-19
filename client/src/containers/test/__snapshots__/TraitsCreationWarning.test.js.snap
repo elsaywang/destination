@@ -66,6 +66,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <Unknown />,
+      "dataTest": "multi-signals-trait-creation-warning-onboarded-selections",
     },
     "ref": null,
     "rendered": Object {
@@ -86,6 +87,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <Unknown />,
+        "dataTest": "multi-signals-trait-creation-warning-onboarded-selections",
       },
       "ref": null,
       "rendered": Object {
@@ -145,6 +147,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <Unknown />,
+      "dataTest": "multi-signals-trait-creation-warning-selections-type",
     },
     "ref": null,
     "rendered": Object {
@@ -165,6 +168,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <Unknown />,
+        "dataTest": "multi-signals-trait-creation-warning-selections-type",
       },
       "ref": null,
       "rendered": Object {
@@ -226,6 +230,7 @@ ShallowWrapper {
       "children": <Unknown
         maxSignalSelections={5}
 />,
+      "dataTest": "multi-signals-trait-creation-warning-max-selections",
     },
     "ref": null,
     "rendered": Object {
@@ -250,6 +255,7 @@ ShallowWrapper {
         "children": <Unknown
           maxSignalSelections={5}
 />,
+        "dataTest": "multi-signals-trait-creation-warning-max-selections",
       },
       "ref": null,
       "rendered": Object {

@@ -4,7 +4,7 @@ import Alert from '@react/react-spectrum/Icon/Alert';
 
 const Warning = props => {
     return (
-        <div className={styles.warning}>
+        <div className={styles.warning} data-test={props.dataTest}>
             <Alert size="S" variant="warning" />
             <div className={styles.warningMessage}>{props.children}</div>
         </div>

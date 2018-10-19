@@ -25,19 +25,19 @@ export class TraitsCreationWarning extends Component {
 
         if (isMaxSignalSelectionsReached) {
             return (
-                <Warning>
+                <Warning dataTest="multi-signals-trait-creation-warning-max-selections">
                     <SignalsSelectionLimitMessage maxSignalSelections={maxSignalSelections} />
                 </Warning>
             );
         } else if (hasSignalSelectionsTypeWarning) {
             return (
-                <Warning>
+                <Warning dataTest="multi-signals-trait-creation-warning-selections-type">
                     <SignalsSelectionWarningMessage />
                 </Warning>
             );
         } else if (hasOnboardedSignalSelectionsWarning) {
             return (
-                <Warning>
+                <Warning dataTest="multi-signals-trait-creation-warning-onboarded-selections">
                     <OnboardedSignalSelectionWarningMessage />
                 </Warning>
             );
