@@ -111,7 +111,7 @@ export const actionableLogFilesColumns = [keyValuePairs, signalType, eventFires,
 
 export const generalOnlineDataColumns = [...actionableLogFilesColumns];
 
-export const dataSourcesColumns = [
+export const onboardedRecordsColumns = [
     keyValuePairs,
     signalType,
     dataSource,
