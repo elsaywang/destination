@@ -9,7 +9,7 @@ import {
     advancedAnalyticsColumns,
     actionableLogFilesColumns,
     generalOnlineDataColumns,
-    onboardedRecordsColumns,
+    dataSourcesColumns,
 } from '../constants/columns';
 import { defaultRowHeight, maxRowHeight } from '../constants/rows';
 import {
@@ -72,7 +72,7 @@ class SignalsTable extends Component {
             case 'REALTIME':
                 return generalOnlineDataColumns;
             case 'ONBOARDED':
-                return onboardedRecordsColumns;
+                return dataSourcesColumns;
             default:
                 return allSignalsColumns;
         }

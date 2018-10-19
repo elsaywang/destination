@@ -1,4 +1,4 @@
-const onboardedRecords = 'Onboarded Records';
+const dataSources = 'Onboarded Records';
 
 export const equalize = (number, name) => (number > 1 ? `${name}s` : name);
 
@@ -44,10 +44,10 @@ export const formatSelectedSignalsSelectionMessage = (
 };
 
 export const getTotalOnboardedRecords = rowRecords =>
-    rowRecords.filter(record => record.signalType === onboardedRecords).length;
+    rowRecords.filter(record => record.signalType === dataSources).length;
 
 export const getTotalRealTimeRecords = rowRecords =>
-    rowRecords.filter(record => record.signalType !== onboardedRecords).length;
+    rowRecords.filter(record => record.signalType !== dataSources).length;
 
 export const renderSelectedSignalsMessage = rowRecords => {
     if (!rowRecords.length) {
