@@ -150,7 +150,7 @@ describe('signalSourcesOptions utils tests', () => {
     describe('getSignalSourceFilterPlaceholderText', () => {
         it('should return `Onboarded Records` as placeholder if the sourceType is `ONBOARDED`', () => {
             const sourceType = 'ONBOARDED';
-            const expectedText = 'onboarded records';
+            const expectedText = 'data source';
             expect(getSignalSourceFilterPlaceholderText(sourceType)).toEqual(expectedText);
         });
 

@@ -6,7 +6,7 @@ export const isValidDataSourceId = (dataSources, selectedDataSourceId) =>
 export const getSignalSourceFilterPlaceholderText = sourceType => {
     switch (sourceType) {
         case 'ONBOARDED':
-            return 'onboarded records';
+            return 'data source';
         case 'ANALYTICS':
             return 'report suites';
         default:

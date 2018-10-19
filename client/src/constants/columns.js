@@ -41,8 +41,8 @@ const reportSuite = {
     width: 180,
 };
 
-const onboardedRecord = {
-    title: 'Onboarded Record',
+const dataSource = {
+    title: 'Data Source',
     key: columnKeys.signalSource,
     width: 180,
 };
@@ -114,7 +114,7 @@ export const generalOnlineDataColumns = [...actionableLogFilesColumns];
 export const onboardedRecordsColumns = [
     keyValuePairs,
     signalType,
-    onboardedRecord,
+    dataSource,
     totalRecords,
     includedInTraits,
 ];
@@ -136,7 +136,7 @@ export const columns = [
     signalType,
     signalSource,
     reportSuite,
-    onboardedRecord,
+    dataSource,
     totalCounts,
     eventFires,
     totalRecords,
