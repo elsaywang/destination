@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@aam/aam-topnav": "~1.1.4",
+    "@aam/aam-topnav": "~1.1.8",
     "@react/react-spectrum": "~2.12.0",
     "@spectrum/spectrum-variables": "^1.0.1",
     "babel-preset-react-app": "^3.1.1",
