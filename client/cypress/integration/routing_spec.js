@@ -54,7 +54,6 @@ describe('Integration Tests for routing', function() {
             cy.get('.spectrum-Heading')
                 .contains('Signals')
                 .should('be.exist');
-            cy.get('.beta-tag').should('be.exist');
             cy.get('.spectrum-Button.spectrum-Button--secondary.tour-guide')
                 .contains('Take a Tour')
                 .should('be.exist');
@@ -97,7 +96,6 @@ describe('Integration Tests for routing', function() {
             cy.get('.spectrum-Heading')
                 .contains('Signals')
                 .should('be.exist');
-            cy.get('.beta-tag').should('be.exist');
             cy.get('.spectrum-Button.spectrum-Button--secondary.tour-guide')
                 .contains('Take a Tour')
                 .should('be.exist');
