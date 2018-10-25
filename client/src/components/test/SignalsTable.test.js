@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { FormattedNumber } from 'react-intl';
 import { columnKeys } from '../../constants/columns';
+import { formatDataSourceOptionLabel } from '../../utils/signalSourceOptions';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 import TraitsPopover from '../../containers/TraitsPopover';
@@ -542,7 +543,7 @@ describe('<SignalsTable /> component', () => {
                 expect(formatSignalSource(signal)).toEqual('—');
             });
 
-            it('should return the sourceName value with Hyper Link when signal includes sourceName property ', () => {
+            it('should return the sourceName value with Hyper Link when signal includes sourceName with sourceId property ', () => {
                 const signal = {
                     source: { sourceType: 'ONBOARDED', dataSourceIds: [123] },
                     sourceName: 'test1',
@@ -550,7 +551,7 @@ describe('<SignalsTable /> component', () => {
                 const linkWrapper = shallow(<div>{formatSignalSource(signal)}</div>);
                 expect(linkWrapper.find(Link).exists()).toBeTruthy();
                 expect(linkWrapper.find("[data-test='source-name']").text()).toEqual(
-                    signal.sourceName,
+                    formatDataSourceOptionLabel(signal.source.dataSourceIds[0], signal.sourceName),
                 );
             });
         });

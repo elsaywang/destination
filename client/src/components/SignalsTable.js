@@ -16,7 +16,7 @@ import {
     renderSelectedSignalsMessage,
     hasSignalSelectionsTypeWarning,
 } from '../utils/signalSelection';
-import { isNumeric } from '../utils/isNumeric';
+import { formatDataSourceOptionLabel } from '../utils/signalSourceOptions';
 import styles from './SignalsTable.css';
 import TraitsCreation from './common/TraitsCreation';
 import TraitsPopover from '../containers/TraitsPopover';
@@ -122,7 +122,7 @@ class SignalsTable extends Component {
                     <div
                         data-test="source-name"
                         className={classNames(styles.truncate, styles.sourceName)}>
-                        {sourceName}
+                        {formatDataSourceOptionLabel(dataSourceId, sourceName)}
                     </div>
                 </Link>
             );
@@ -130,9 +130,13 @@ class SignalsTable extends Component {
 
         switch (sourceType) {
             case 'ANALYTICS':
-                return reportSuiteIds && reportSuiteIds.length ? reportSuiteIds.join('') : '—';
+                return reportSuiteIds && reportSuiteIds.length
+                    ? formatDataSourceOptionLabel(reportSuiteIds.join(''), sourceName)
+                    : '—';
             case 'ONBOARDED':
-                return dataSourceIds && dataSourceIds.length ? dataSourceIds.join('') : '—';
+                return dataSourceIds && dataSourceIds.length
+                    ? formatDataSourceOptionLabel(dataSourceIds.join(''), sourceName)
+                    : '—';
             default:
                 return '—';
         }

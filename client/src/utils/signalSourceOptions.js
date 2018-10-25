@@ -1,7 +1,14 @@
-export const formatDataSourceLabel = (dataSourceId, name) => `${name} (${dataSourceId})`;
+export const formatDataSourceOptionLabel = (dataSourceId, name) =>
+    name ? `${name} (${dataSourceId})` : `${dataSourceId}`;
 
-export const isValidDataSourceId = (dataSources, selectedDataSourceId) =>
-    Boolean(dataSources.filter(({ dataSourceId }) => dataSourceId === selectedDataSourceId).length);
+export const formatReportSuiteOptionLabel = (suite, name) =>
+    name ? `${suite} (${name})` : `${suite}`;
+
+export const trimSignalSourceOptionLabel = signalSourceLabel =>
+    signalSourceLabel.replace(/\s*\(.*?\)\s*/g, '');
+
+export const isValidDataSourceName = (dataSources, selectedDataSourceName) =>
+    Boolean(dataSources.filter(({ name }) => name === selectedDataSourceName).length);
 
 export const getSignalSourceFilterPlaceholderText = sourceType => {
     switch (sourceType) {
@@ -9,6 +16,17 @@ export const getSignalSourceFilterPlaceholderText = sourceType => {
             return 'data source';
         case 'ANALYTICS':
             return 'report suites';
+        default:
+            return '';
+    }
+};
+
+export const getSignalSourceLabel = sourceType => {
+    switch (sourceType) {
+        case 'ONBOARDED':
+            return 'Data Source';
+        case 'ANALYTICS':
+            return 'Report Suite';
         default:
             return '';
     }
@@ -23,18 +41,21 @@ export const getMatchedReportSuiteBySuite = (reportSuites, suiteValue) =>
 export const getMatchedReportSuiteByName = (reportSuites, nameValue) =>
     reportSuites.find(({ name, suite }) => {
         const matchedProp = name || suite;
-        return matchedProp.toLowerCase() === nameValue.toLowerCase();
+        return matchedProp.toLowerCase() === trimSignalSourceOptionLabel(nameValue).toLowerCase();
     });
+
+export const getMatchedDataSourceByName = (dataSources, nameValue) =>
+    dataSources.find(({ name }) => name.toLowerCase() === nameValue.toLowerCase());
 
 export const getDataSourcesOptions = dataSources =>
     dataSources.map(({ dataSourceId, name }) => ({
-        label: formatDataSourceLabel(dataSourceId, name),
-        value: dataSourceId,
+        label: formatDataSourceOptionLabel(dataSourceId, name),
+        value: name,
     }));
 
 export const getReportSuitesOptions = reportSuites =>
     reportSuites.map(({ name, suite }) => ({
-        label: name || suite,
+        label: formatReportSuiteOptionLabel(suite, name),
         value: suite,
     }));
 

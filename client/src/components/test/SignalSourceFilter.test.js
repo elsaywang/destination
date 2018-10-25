@@ -31,7 +31,7 @@ describe('<SignalSourceFilter /> component', () => {
             expect(wrapper.find(Select).props().options).toEqual([
                 {
                     label: 'Test Datasource: 1535390150786140362 (167507)',
-                    value: 167507,
+                    value: 'Test Datasource: 1535390150786140362',
                 },
             ]);
         });
