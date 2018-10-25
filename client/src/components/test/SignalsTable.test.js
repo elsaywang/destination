@@ -2,7 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { FormattedNumber } from 'react-intl';
 import { columnKeys } from '../../constants/columns';
-import { formatDataSourceOptionLabel } from '../../utils/signalSourceOptions';
+import {
+    formatDataSourceOptionLabel,
+    formatReportSuiteOptionLabel,
+} from '../../utils/signalSourceOptions';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
 import TraitsPopover from '../../containers/TraitsPopover';
@@ -487,11 +490,32 @@ describe('<SignalsTable /> component', () => {
             const newWrapper = shallow(<SignalsTable results={[]} />);
             const { formatSignalSource } = newWrapper.instance();
 
-            // TODO: it should actually return the names of the report suite
-            it('should return the signal`s report suite ID when its `sourceType` is "ANALYTICS"', () => {
-                const signal = { source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] } };
+            it('should return the signal`s report suite Name with Id when its `sourceType` is "ANALYTICS" when sourceName has value', () => {
+                const signal = {
+                    source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
+                    sourceName: 'Report ABC 123',
+                };
 
-                expect(formatSignalSource(signal)).toEqual('123');
+                expect(formatSignalSource(signal)).toEqual(
+                    formatReportSuiteOptionLabel(
+                        signal.source.reportSuiteIds[0],
+                        signal.sourceName,
+                    ),
+                );
+            });
+
+            it('should return the signal`s report suite ID when its `sourceType` is "ANALYTICS" when sourceName is unavaible', () => {
+                const signal = {
+                    source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
+                    sourceName: undefined,
+                };
+
+                expect(formatSignalSource(signal)).toEqual(
+                    formatReportSuiteOptionLabel(
+                        signal.source.reportSuiteIds[0],
+                        signal.sourceName,
+                    ),
+                );
             });
 
             it('should return "—" (emdash) when the signal`s `sourceType` is "ANALYTICS" and `reportSuiteIds` is null (should never happen)', () => {
