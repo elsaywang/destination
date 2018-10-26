@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Select from '@react/react-spectrum/Select';
 import styles from './SignalSourceFilter.css';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import {
     getSignalSourceFilterPlaceholderText,
     getSignalSourcesOptions,
+    getSignalSourceLabel,
 } from '../utils/signalSourceOptions';
 
 const SignalSourceFilter = ({
@@ -18,17 +20,18 @@ const SignalSourceFilter = ({
     const options = getSignalSourcesOptions(signalSources, sourceType);
 
     return (
-        <Select
-            data-test={`${sourceType.toLowerCase()}-signal-source-filter`}
-            className={styles.signalSourcesFilter}
-            placeholder={filterPlaceholder}
-            onChange={onSignalSourceSelect}
-            options={options}
-            className={styles.signalSourceSelect}
-            flexible
-            disabled={disabled}
-            value={selectedSignalSource}
-        />
+        <FieldLabel label={getSignalSourceLabel(sourceType)}>
+            <Select
+                data-test={`${sourceType.toLowerCase()}-signal-source-filter`}
+                className={styles.signalSourcesFilter}
+                placeholder={filterPlaceholder}
+                onChange={onSignalSourceSelect}
+                options={options}
+                flexible
+                disabled={disabled}
+                value={selectedSignalSource}
+            />
+        </FieldLabel>
     );
 };
 
@@ -50,7 +53,7 @@ SignalSourceFilter.propTypes = {
             }),
         ), //reportSuites filter
     ]).isRequired,
-    selectedSignalSource: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    selectedSignalSource: PropTypes.string,
 };
 
 export default SignalSourceFilter;

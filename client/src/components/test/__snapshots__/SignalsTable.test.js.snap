@@ -252,7 +252,12 @@ ShallowWrapper {
           "keyValuePairs": Array [
             Object {},
           ],
-          "signalSource": "123",
+          "signalSource": <div
+            className="truncate sourceName"
+            data-test="report-suite-name"
+>
+            123
+</div>,
           "signalType": "Adobe Analytics",
           "source": Object {
             "reportSuiteIds": Array [
@@ -362,7 +367,12 @@ ShallowWrapper {
             "keyValuePairs": Array [
               Object {},
             ],
-            "signalSource": "123",
+            "signalSource": <div
+              className="truncate sourceName"
+              data-test="report-suite-name"
+>
+              123
+</div>,
             "signalType": "Adobe Analytics",
             "source": Object {
               "reportSuiteIds": Array [

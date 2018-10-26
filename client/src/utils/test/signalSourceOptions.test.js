@@ -1,11 +1,15 @@
 import {
-    formatDataSourceLabel,
-    isValidDataSourceId,
+    formatDataSourceOptionName,
+    formatReportSuiteOptionName,
+    trimReportSuiteOptionName,
+    isValidDataSourceName,
     getSignalSourceFilterPlaceholderText,
+    getSignalSourceLabel,
     isValidReportSuite,
     getDataSourcesOptions,
     getReportSuitesOptions,
     getSignalSourcesOptions,
+    getMatchedDataSourceByName,
     getMatchedReportSuiteBySuite,
     getMatchedReportSuiteByName,
     getSelectedReportSuiteFromSearchResults,
@@ -126,38 +130,89 @@ describe('signalSourcesOptions utils tests', () => {
         analyticsServiceAvailable: true,
     };
 
-    describe('formatDataSourceLabel', () => {
-        it('should return the valid option value', () => {
+    describe('formatDataSourceOptionName', () => {
+        it('should return the correct format of sourceName with dataSourceId when both have value', () => {
             const { dataSourceId, name } = dataSource;
-            expect(formatDataSourceLabel(dataSourceId, name)).toEqual(
+            expect(formatDataSourceOptionName(dataSourceId, name)).toEqual(
                 'Test Datasource: 1535390150786140362 (167507)',
             );
         });
+
+        it('should return only the dataSourceId when name has no value', () => {
+            const dataSourceIdOnly = {
+                dataSourceId: 167507,
+                name: '',
+            };
+            const { dataSourceId, name } = dataSourceIdOnly;
+            expect(formatDataSourceOptionName(dataSourceId, name)).toEqual('167507');
+        });
     });
 
-    describe('isValidDataSourceId', () => {
-        it('should return true if the value input is valid selectedDataSourceId', () => {
-            const selectedDataSourceId = 167507;
-            expect(isValidDataSourceId(dataSources, selectedDataSourceId)).toBeTruthy();
+    describe('formatReportSuiteOptionName', () => {
+        it('should return the correct format of Suite with SuiteName when both have value', () => {
+            const { suite, name } = reportSuites[0];
+            const expectedSuiteOptionLabel = 'aampnw.octmr01 (OCT MR 01)';
+            expect(formatReportSuiteOptionName(suite, name)).toEqual(expectedSuiteOptionLabel);
         });
 
-        it('should return false if the value input is invalid selectedDataSourceId', () => {
-            const selectedDataSourceId = 3347;
-            expect(isValidDataSourceId(dataSources, selectedDataSourceId)).toBeFalsy();
+        it('should return only the Suite when name is unavailble', () => {
+            const suiteOnly = reportSuitesWithNoNames[0];
+            const { suite, name } = suiteOnly;
+            const expectedSuiteOptionLabel = 'aampnw.octmr01';
+            expect(formatReportSuiteOptionName(suite, name)).toEqual(expectedSuiteOptionLabel);
+        });
+    });
+
+    describe('trimReportSuiteOptionName', () => {
+        it('should return the trimmed SignalSource name without dataSourceId appended', () => {
+            const nameValue = 'Test Report Suite 1540404368306 (170201)';
+            const trimmedValue = 'Test Report Suite 1540404368306';
+            expect(trimReportSuiteOptionName(nameValue)).toEqual(trimmedValue);
+        });
+    });
+    describe('isValidDataSourceName', () => {
+        it('should return true if the value input is valid selectedDataSourceName', () => {
+            const selectedDataSourceName = 'Test Datasource: 1535390150786140362';
+            expect(isValidDataSourceName(dataSources, selectedDataSourceName)).toBeTruthy();
+        });
+
+        it('should return false if the value input is invalid selectedDataSourceName', () => {
+            const selectedDataSourceName = 'Test Datasource: 15353901507861';
+            expect(isValidDataSourceName(dataSources, selectedDataSourceName)).toBeFalsy();
         });
     });
 
     describe('getSignalSourceFilterPlaceholderText', () => {
-        it('should return `Onboarded Records` as placeholder if the sourceType is `ONBOARDED`', () => {
+        it('should return `data source` as placeholder if the sourceType is `ONBOARDED`', () => {
             const sourceType = 'ONBOARDED';
             const expectedText = 'data source';
             expect(getSignalSourceFilterPlaceholderText(sourceType)).toEqual(expectedText);
         });
 
-        it('should return `Report Suites` as placeholder if the sourceType is `ANALYTICS`', () => {
+        it('should return `report suites` as placeholder if the sourceType is `ANALYTICS`', () => {
             const sourceType = 'ANALYTICS';
             const expectedText = 'report suites';
             expect(getSignalSourceFilterPlaceholderText(sourceType)).toEqual(expectedText);
+        });
+
+        it('should return empty as placeholder by default', () => {
+            const sourceType = 'ALL';
+            const expectedText = '';
+            expect(getSignalSourceFilterPlaceholderText(sourceType)).toEqual(expectedText);
+        });
+    });
+
+    describe('getSignalSourceLabel', () => {
+        it('should return `Data Source` as label if the sourceType is `ONBOARDED`', () => {
+            const sourceType = 'ONBOARDED';
+            const expectedText = 'Data Source';
+            expect(getSignalSourceLabel(sourceType)).toEqual(expectedText);
+        });
+
+        it('should return `Report Suite` as label if the sourceType is `ANALYTICS`', () => {
+            const sourceType = 'ANALYTICS';
+            const expectedText = 'Report Suite';
+            expect(getSignalSourceLabel(sourceType)).toEqual(expectedText);
         });
 
         it('should return empty as placeholder by default', () => {
@@ -182,19 +237,28 @@ describe('signalSourcesOptions utils tests', () => {
     describe('getDataSourcesOptions', () => {
         it('should return the correct format `label` and `value` of data sources options', () => {
             const expectedDataSourcesOptions = [
-                { label: 'Test Datasource: 1535390150786140362 (167507)', value: 167507 },
-                { label: 'Test Datasource: 1535390172458130751 (167513)', value: 167513 },
-                { label: 'Test Datasource: 1535390172501188046 (167514)', value: 167514 },
+                {
+                    label: 'Test Datasource: 1535390150786140362 (167507)',
+                    value: 'Test Datasource: 1535390150786140362',
+                },
+                {
+                    label: 'Test Datasource: 1535390172458130751 (167513)',
+                    value: 'Test Datasource: 1535390172458130751',
+                },
+                {
+                    label: 'Test Datasource: 1535390172501188046 (167514)',
+                    value: 'Test Datasource: 1535390172501188046',
+                },
             ];
             expect(getDataSourcesOptions(dataSources)).toEqual(expectedDataSourcesOptions);
         });
     });
 
     describe('getReportSuitesOptions', () => {
-        it('should return the correct format `label` and `value` of data sources options', () => {
+        it('should return the correct format `label` and `value` of report suite options', () => {
             const expectedReportSuitesOptions = [
-                { label: 'OCT MR 01', value: 'aampnw.octmr01' },
-                { label: 'Oct MR 02', value: 'aamdal.octmr02' },
+                { label: 'aampnw.octmr01 (OCT MR 01)', value: 'aampnw.octmr01' },
+                { label: 'aamdal.octmr02 (Oct MR 02)', value: 'aamdal.octmr02' },
             ];
             expect(getReportSuitesOptions(reportSuites)).toEqual(expectedReportSuitesOptions);
         });
@@ -283,6 +347,23 @@ describe('signalSourcesOptions utils tests', () => {
             const name = 'Oct MR 01NA';
             expect(getMatchedReportSuiteByName(reportSuites, name)).toBeUndefined();
             expect(getMatchedReportSuiteByName(reportSuitesWithNoNames, name)).toBeUndefined();
+        });
+    });
+
+    describe('getMatchedDataSourceByName', () => {
+        it('should return the matched by dataSource option by given name', () => {
+            const name = 'Test Datasource: 1535390150786140362';
+            const expectedMatchedDS = {
+                dataSourceId: 167507,
+                name: 'Test Datasource: 1535390150786140362',
+            };
+            expect(getMatchedDataSourceByName(dataSources, name)).toEqual(expectedMatchedDS);
+        });
+
+        it('should return undefined if given name is not in any record within dataSources', () => {
+            const name = 'Test Datasource: 15353901507861403628';
+            expect(getMatchedDataSourceByName(dataSources, name)).toBeUndefined();
+            expect(getMatchedDataSourceByName(dataSources, name)).toBeUndefined();
         });
     });
 

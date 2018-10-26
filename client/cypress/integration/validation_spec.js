@@ -12,7 +12,9 @@ describe('Validation Spec', function() {
         cy.route(/\/portal\/api\/v1\/signals\/keys\?search=.+&total=8/, signalKeysResponse).as(
             'fetchSignalKeys',
         );
-        cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
+        cy.route('/portal/api/v1/report-suites/?sortBy=suite', reportSuitesResponse.list).as(
+            'fetchReportSuites',
+        );
 
         cy.visit('#/search');
     });

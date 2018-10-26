@@ -391,10 +391,13 @@ describe('<SearchContainer /> component', () => {
                 ],
             });
 
-            wrapper.instance().onReportSuiteSelect({ value: 'test-report-suite-123' });
+            wrapper.instance().onReportSuiteSelect({
+                value: 'test-report-suite-123',
+                label: 'test-report-suite-123 (Test Report Suite 123)',
+            });
 
             expect(wrapper.state('source')).toEqual({
-                name: 'Test Report Suite 123',
+                name: 'test-report-suite-123 (Test Report Suite 123)',
                 dataSourceIds: [],
                 reportSuiteIds: ['test-report-suite-123'],
                 sourceType: 'ANALYTICS',

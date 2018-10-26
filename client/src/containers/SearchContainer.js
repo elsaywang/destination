@@ -32,11 +32,13 @@ import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getSaveThisSearchMessage } from '../constants/tooltipMessageOptions';
 import {
-    formatDataSourceLabel,
-    isValidDataSourceId,
+    formatDataSourceOptionName,
+    formatReportSuiteOptionName,
+    isValidDataSourceName,
     isValidReportSuite,
     getMatchedReportSuiteBySuite,
     getMatchedReportSuiteByName,
+    getMatchedDataSourceByName,
     getSelectedReportSuiteFromSearchResults,
 } from '../utils/signalSourceOptions';
 import { searchResultsThrottleMs } from '../constants/lazyLoadConstants';
@@ -152,7 +154,7 @@ class SearchContainer extends Component {
     };
 
     //ReportSuite ComboBox onSelect value is the object { label,value }
-    onReportSuiteSelect = ({ value }) => {
+    onReportSuiteSelect = ({ value, label }) => {
         const { reportSuites } = this.props;
         const matchingReportSuite = getMatchedReportSuiteBySuite(reportSuites, value);
 
@@ -160,7 +162,7 @@ class SearchContainer extends Component {
             searched: false,
             source: {
                 ...this.state.source,
-                name: matchingReportSuite.name,
+                name: label,
                 dataSourceIds: [],
                 reportSuiteIds: [matchingReportSuite.suite],
             },
@@ -171,13 +173,16 @@ class SearchContainer extends Component {
         if (this.isFilteredByOnboardedRecords()) {
             const { dataSources } = this.props;
 
-            if (isValidDataSourceId(dataSources, value)) {
+            if (isValidDataSourceName(dataSources, value)) {
+                const { dataSourceId } = getMatchedDataSourceByName(dataSources, value);
+
                 this.setState(
                     {
                         searched: true,
                         source: {
                             ...this.state.source,
-                            dataSourceIds: [value],
+                            name: value,
+                            dataSourceIds: [dataSourceId],
                         },
                     },
                     () => this.props.callSearch({ search: this.state }),
@@ -189,14 +194,12 @@ class SearchContainer extends Component {
             const { reportSuites } = this.props;
 
             if (isValidReportSuite(reportSuites, value)) {
-                const matchingReportSuite = getMatchedReportSuiteBySuite(reportSuites, value);
-
                 this.setState(
                     {
                         searched: true,
                         source: {
                             ...this.state.source,
-                            name: matchingReportSuite.name,
+                            name: formatReportSuiteOptionName(reportSuites, value),
                             reportSuiteIds: [value],
                         },
                     },
@@ -428,7 +431,6 @@ class SearchContainer extends Component {
 
     getSignalSources = () => {
         const { dataSources, reportSuites } = this.props;
-        const { reportSuiteIds } = this.state.source;
 
         if (this.isFilteredByOnboardedRecords()) {
             return dataSources;
@@ -442,10 +444,10 @@ class SearchContainer extends Component {
     };
 
     getSelectedSignalSource = () => {
-        const { dataSourceIds, reportSuiteIds } = this.state.source;
+        const { reportSuiteIds, name } = this.state.source;
 
         if (this.isFilteredByOnboardedRecords()) {
-            return dataSourceIds[0];
+            return name;
         }
 
         if (this.isFilteredByAdobeAnalytics() && !this.state.advanced) {

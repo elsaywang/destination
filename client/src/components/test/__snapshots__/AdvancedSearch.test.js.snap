@@ -103,11 +103,11 @@ ShallowWrapper {
                 options={
                         Array [
                                 Object {
-                                  "label": "Test Report Suite Edited1505153440289",
+                                  "label": "test-report-suite-edited1505153440289 (Test Report Suite Edited1505153440289)",
                                   "value": "test-report-suite-edited1505153440289",
                                 },
                                 Object {
-                                  "label": "Test Report Suite Edited1505154745046",
+                                  "label": "test-report-suite-edited1505154745046 (Test Report Suite Edited1505154745046)",
                                   "value": "test-report-suite-edited1505154745046",
                                 },
                               ]
@@ -136,11 +136,11 @@ ShallowWrapper {
           options={
                     Array [
                               Object {
-                                "label": "Test Report Suite Edited1505153440289",
+                                "label": "test-report-suite-edited1505153440289 (Test Report Suite Edited1505153440289)",
                                 "value": "test-report-suite-edited1505153440289",
                               },
                               Object {
-                                "label": "Test Report Suite Edited1505154745046",
+                                "label": "test-report-suite-edited1505154745046 (Test Report Suite Edited1505154745046)",
                                 "value": "test-report-suite-edited1505154745046",
                               },
                             ]
@@ -213,11 +213,11 @@ ShallowWrapper {
           "onSelect": [Function],
           "options": Array [
             Object {
-              "label": "Test Report Suite Edited1505153440289",
+              "label": "test-report-suite-edited1505153440289 (Test Report Suite Edited1505153440289)",
               "value": "test-report-suite-edited1505153440289",
             },
             Object {
-              "label": "Test Report Suite Edited1505154745046",
+              "label": "test-report-suite-edited1505154745046 (Test Report Suite Edited1505154745046)",
               "value": "test-report-suite-edited1505154745046",
             },
           ],
@@ -302,11 +302,11 @@ ShallowWrapper {
                     options={
                               Array [
                                         Object {
-                                          "label": "Test Report Suite Edited1505153440289",
+                                          "label": "test-report-suite-edited1505153440289 (Test Report Suite Edited1505153440289)",
                                           "value": "test-report-suite-edited1505153440289",
                                         },
                                         Object {
-                                          "label": "Test Report Suite Edited1505154745046",
+                                          "label": "test-report-suite-edited1505154745046 (Test Report Suite Edited1505154745046)",
                                           "value": "test-report-suite-edited1505154745046",
                                         },
                                       ]
@@ -335,11 +335,11 @@ ShallowWrapper {
             options={
                         Array [
                                     Object {
-                                      "label": "Test Report Suite Edited1505153440289",
+                                      "label": "test-report-suite-edited1505153440289 (Test Report Suite Edited1505153440289)",
                                       "value": "test-report-suite-edited1505153440289",
                                     },
                                     Object {
-                                      "label": "Test Report Suite Edited1505154745046",
+                                      "label": "test-report-suite-edited1505154745046 (Test Report Suite Edited1505154745046)",
                                       "value": "test-report-suite-edited1505154745046",
                                     },
                                   ]
@@ -412,11 +412,11 @@ ShallowWrapper {
             "onSelect": [Function],
             "options": Array [
               Object {
-                "label": "Test Report Suite Edited1505153440289",
+                "label": "test-report-suite-edited1505153440289 (Test Report Suite Edited1505153440289)",
                 "value": "test-report-suite-edited1505153440289",
               },
               Object {
-                "label": "Test Report Suite Edited1505154745046",
+                "label": "test-report-suite-edited1505154745046 (Test Report Suite Edited1505154745046)",
                 "value": "test-report-suite-edited1505154745046",
               },
             ],
