@@ -123,7 +123,7 @@ class SignalsTable extends Component {
             return (
                 <Link href={dataSourceEditUrl(dataSourceId)}>
                     <div
-                        data-test="source-name"
+                        data-test="data-source-name"
                         className={classNames(styles.truncate, styles.sourceName)}>
                         {formatDataSourceOptionName(dataSourceId, sourceName)}
                     </div>
@@ -133,9 +133,15 @@ class SignalsTable extends Component {
 
         switch (sourceType) {
             case 'ANALYTICS':
-                return reportSuiteIds && reportSuiteIds.length
-                    ? formatReportSuiteOptionName(reportSuiteIds.join(''), sourceName)
-                    : '—';
+                return reportSuiteIds && reportSuiteIds.length ? (
+                    <div
+                        data-test="report-suite-name"
+                        className={classNames(styles.truncate, styles.sourceName)}>
+                        {formatReportSuiteOptionName(reportSuiteIds.join(''), sourceName)}
+                    </div>
+                ) : (
+                    '—'
+                );
             case 'ONBOARDED':
                 return dataSourceIds && dataSourceIds.length
                     ? formatDataSourceOptionName(dataSourceIds.join(''), sourceName)

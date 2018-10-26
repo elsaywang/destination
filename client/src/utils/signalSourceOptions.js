@@ -4,7 +4,7 @@ export const formatDataSourceOptionName = (dataSourceId, name) =>
 export const formatReportSuiteOptionName = (suite, name) =>
     name ? `${suite} (${name})` : `${suite}`;
 
-export const trimSignalSourceOptionLabel = signalSourceLabel =>
+export const trimReportSuiteOptionName = signalSourceLabel =>
     signalSourceLabel.replace(/\s*\(.*?\)\s*/g, '');
 
 export const isValidDataSourceName = (dataSources, selectedDataSourceName) =>
@@ -41,7 +41,7 @@ export const getMatchedReportSuiteBySuite = (reportSuites, suiteValue) =>
 export const getMatchedReportSuiteByName = (reportSuites, nameValue) =>
     reportSuites.find(({ name, suite }) => {
         const matchedProp = name || suite;
-        return matchedProp.toLowerCase() === trimSignalSourceOptionLabel(nameValue).toLowerCase();
+        return matchedProp.toLowerCase() === trimReportSuiteOptionName(nameValue).toLowerCase();
     });
 
 export const getMatchedDataSourceByName = (dataSources, nameValue) =>

@@ -1,7 +1,7 @@
 import {
     formatDataSourceOptionName,
     formatReportSuiteOptionName,
-    trimSignalSourceOptionLabel,
+    trimReportSuiteOptionName,
     isValidDataSourceName,
     getSignalSourceFilterPlaceholderText,
     getSignalSourceLabel,
@@ -163,11 +163,11 @@ describe('signalSourcesOptions utils tests', () => {
         });
     });
 
-    describe('trimSignalSourceOptionLabel', () => {
+    describe('trimReportSuiteOptionName', () => {
         it('should return the trimmed SignalSource name without dataSourceId appended', () => {
             const nameValue = 'Test Report Suite 1540404368306 (170201)';
             const trimmedValue = 'Test Report Suite 1540404368306';
-            expect(trimSignalSourceOptionLabel(nameValue)).toEqual(trimmedValue);
+            expect(trimReportSuiteOptionName(nameValue)).toEqual(trimmedValue);
         });
     });
     describe('isValidDataSourceName', () => {

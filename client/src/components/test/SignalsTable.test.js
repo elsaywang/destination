@@ -495,8 +495,8 @@ describe('<SignalsTable /> component', () => {
                     source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
                     sourceName: 'Report ABC 123',
                 };
-
-                expect(formatSignalSource(signal)).toEqual(
+                const reportSuiteWrapper = shallow(<div>{formatSignalSource(signal)}</div>);
+                expect(reportSuiteWrapper.find("[data-test='report-suite-name']").text()).toEqual(
                     formatReportSuiteOptionName(signal.source.reportSuiteIds[0], signal.sourceName),
                 );
             });
@@ -506,8 +506,8 @@ describe('<SignalsTable /> component', () => {
                     source: { sourceType: 'ANALYTICS', reportSuiteIds: [123] },
                     sourceName: undefined,
                 };
-
-                expect(formatSignalSource(signal)).toEqual(
+                const reportSuiteWrapper = shallow(<div>{formatSignalSource(signal)}</div>);
+                expect(reportSuiteWrapper.find("[data-test='report-suite-name']").text()).toEqual(
                     formatReportSuiteOptionName(signal.source.reportSuiteIds[0], signal.sourceName),
                 );
             });
@@ -568,7 +568,7 @@ describe('<SignalsTable /> component', () => {
                 };
                 const linkWrapper = shallow(<div>{formatSignalSource(signal)}</div>);
                 expect(linkWrapper.find(Link).exists()).toBeTruthy();
-                expect(linkWrapper.find("[data-test='source-name']").text()).toEqual(
+                expect(linkWrapper.find("[data-test='data-source-name']").text()).toEqual(
                     formatDataSourceOptionName(signal.source.dataSourceIds[0], signal.sourceName),
                 );
             });
