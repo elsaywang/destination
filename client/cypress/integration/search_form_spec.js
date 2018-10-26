@@ -23,7 +23,9 @@ describe('Search Form Integration Tests', () => {
         cy.route('POST', '/portal/api/v1/signals/list', emptySearchResultsResponse).as(
             'fetchSearchResults',
         );
-        cy.route('/portal/api/v1/report-suites', reportSuitesResponse.list).as('fetchReportSuites');
+        cy.route('/portal/api/v1/report-suites/?sortBy=suite', reportSuitesResponse.list).as(
+            'fetchReportSuites',
+        );
         cy.route('/portal/api/v1/signals/limits', limitsResponse).as('fetchLimits');
 
         cy.visit('#/search');
@@ -773,7 +775,7 @@ describe('Search Form Integration Tests', () => {
                         'fetchOnboardedSearchResults',
                     );
                     cy.route(
-                        '/portal/api/v1/datasources/?inboundOnly=true&excludeReportSuites=true',
+                        '/portal/api/v1/datasources/?inboundOnly=true&sortBy=name&excludeReportSuites=true',
                         dataSourcesResponse.list,
                     ).as('fetchDataSources');
                     cy.clock().then(clock => clock.restore());
