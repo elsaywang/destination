@@ -1,7 +1,7 @@
-export const formatDataSourceOptionLabel = (dataSourceId, name) =>
+export const formatDataSourceOptionName = (dataSourceId, name) =>
     name ? `${name} (${dataSourceId})` : `${dataSourceId}`;
 
-export const formatReportSuiteOptionLabel = (suite, name) =>
+export const formatReportSuiteOptionName = (suite, name) =>
     name ? `${suite} (${name})` : `${suite}`;
 
 export const trimSignalSourceOptionLabel = signalSourceLabel =>
@@ -49,13 +49,13 @@ export const getMatchedDataSourceByName = (dataSources, nameValue) =>
 
 export const getDataSourcesOptions = dataSources =>
     dataSources.map(({ dataSourceId, name }) => ({
-        label: formatDataSourceOptionLabel(dataSourceId, name),
+        label: formatDataSourceOptionName(dataSourceId, name),
         value: name,
     }));
 
 export const getReportSuitesOptions = reportSuites =>
     reportSuites.map(({ name, suite }) => ({
-        label: formatReportSuiteOptionLabel(suite, name),
+        label: formatReportSuiteOptionName(suite, name),
         value: suite,
     }));
 

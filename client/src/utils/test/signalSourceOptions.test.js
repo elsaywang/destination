@@ -1,6 +1,6 @@
 import {
-    formatDataSourceOptionLabel,
-    formatReportSuiteOptionLabel,
+    formatDataSourceOptionName,
+    formatReportSuiteOptionName,
     trimSignalSourceOptionLabel,
     isValidDataSourceName,
     getSignalSourceFilterPlaceholderText,
@@ -130,10 +130,10 @@ describe('signalSourcesOptions utils tests', () => {
         analyticsServiceAvailable: true,
     };
 
-    describe('formatDataSourceOptionLabel', () => {
+    describe('formatDataSourceOptionName', () => {
         it('should return the correct format of sourceName with dataSourceId when both have value', () => {
             const { dataSourceId, name } = dataSource;
-            expect(formatDataSourceOptionLabel(dataSourceId, name)).toEqual(
+            expect(formatDataSourceOptionName(dataSourceId, name)).toEqual(
                 'Test Datasource: 1535390150786140362 (167507)',
             );
         });
@@ -144,22 +144,22 @@ describe('signalSourcesOptions utils tests', () => {
                 name: '',
             };
             const { dataSourceId, name } = dataSourceIdOnly;
-            expect(formatDataSourceOptionLabel(dataSourceId, name)).toEqual('167507');
+            expect(formatDataSourceOptionName(dataSourceId, name)).toEqual('167507');
         });
     });
 
-    describe('formatReportSuiteOptionLabel', () => {
+    describe('formatReportSuiteOptionName', () => {
         it('should return the correct format of Suite with SuiteName when both have value', () => {
             const { suite, name } = reportSuites[0];
             const expectedSuiteOptionLabel = 'aampnw.octmr01 (OCT MR 01)';
-            expect(formatReportSuiteOptionLabel(suite, name)).toEqual(expectedSuiteOptionLabel);
+            expect(formatReportSuiteOptionName(suite, name)).toEqual(expectedSuiteOptionLabel);
         });
 
         it('should return only the Suite when name is unavailble', () => {
             const suiteOnly = reportSuitesWithNoNames[0];
             const { suite, name } = suiteOnly;
             const expectedSuiteOptionLabel = 'aampnw.octmr01';
-            expect(formatReportSuiteOptionLabel(suite, name)).toEqual(expectedSuiteOptionLabel);
+            expect(formatReportSuiteOptionName(suite, name)).toEqual(expectedSuiteOptionLabel);
         });
     });
 

@@ -32,8 +32,8 @@ import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getSaveThisSearchMessage } from '../constants/tooltipMessageOptions';
 import {
-    formatDataSourceOptionLabel,
-    formatReportSuiteOptionLabel,
+    formatDataSourceOptionName,
+    formatReportSuiteOptionName,
     isValidDataSourceName,
     isValidReportSuite,
     getMatchedReportSuiteBySuite,
@@ -199,7 +199,7 @@ class SearchContainer extends Component {
                         searched: true,
                         source: {
                             ...this.state.source,
-                            name: formatReportSuiteOptionLabel(reportSuites, value),
+                            name: formatReportSuiteOptionName(reportSuites, value),
                             reportSuiteIds: [value],
                         },
                     },

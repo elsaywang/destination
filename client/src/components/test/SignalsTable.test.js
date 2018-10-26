@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import { FormattedNumber } from 'react-intl';
 import { columnKeys } from '../../constants/columns';
 import {
-    formatDataSourceOptionLabel,
-    formatReportSuiteOptionLabel,
+    formatDataSourceOptionName,
+    formatReportSuiteOptionName,
 } from '../../utils/signalSourceOptions';
 import SignalsTable from '../SignalsTable';
 import Table from '../../components/common/Table';
@@ -497,10 +497,7 @@ describe('<SignalsTable /> component', () => {
                 };
 
                 expect(formatSignalSource(signal)).toEqual(
-                    formatReportSuiteOptionLabel(
-                        signal.source.reportSuiteIds[0],
-                        signal.sourceName,
-                    ),
+                    formatReportSuiteOptionName(signal.source.reportSuiteIds[0], signal.sourceName),
                 );
             });
 
@@ -511,10 +508,7 @@ describe('<SignalsTable /> component', () => {
                 };
 
                 expect(formatSignalSource(signal)).toEqual(
-                    formatReportSuiteOptionLabel(
-                        signal.source.reportSuiteIds[0],
-                        signal.sourceName,
-                    ),
+                    formatReportSuiteOptionName(signal.source.reportSuiteIds[0], signal.sourceName),
                 );
             });
 
@@ -575,7 +569,7 @@ describe('<SignalsTable /> component', () => {
                 const linkWrapper = shallow(<div>{formatSignalSource(signal)}</div>);
                 expect(linkWrapper.find(Link).exists()).toBeTruthy();
                 expect(linkWrapper.find("[data-test='source-name']").text()).toEqual(
-                    formatDataSourceOptionLabel(signal.source.dataSourceIds[0], signal.sourceName),
+                    formatDataSourceOptionName(signal.source.dataSourceIds[0], signal.sourceName),
                 );
             });
         });
