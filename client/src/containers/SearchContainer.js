@@ -461,7 +461,11 @@ class SearchContainer extends Component {
         //If advanced seach is enabled, the only filter should be used is the ReportSuitesComboBox in the search panel,
         //thus this filter above search table should be disabled;
         //Also the selected report suite should be coherent within search table result, not from the this.state.source
-        if (this.isFilteredByAdobeAnalytics() && this.state.advanced) {
+        if (
+            this.isFilteredByAdobeAnalytics() &&
+            this.state.advanced &&
+            this.props.results.list.length
+        ) {
             return getSelectedReportSuiteFromSearchResults(this.props.results);
         }
 
@@ -469,6 +473,17 @@ class SearchContainer extends Component {
     };
 
     render() {
+        const renderSignalSourceFilter = (
+            <GridColumn size={3}>
+                <SignalSourceFilter
+                    disabled={this.state.advanced}
+                    sourceType={this.state.source.sourceType}
+                    signalSources={this.getSignalSources()}
+                    onSignalSourceSelect={this.handleSignalSourceSelect}
+                    selectedSignalSource={this.getSelectedSignalSource()}
+                />
+            </GridColumn>
+        );
         return (
             <Fragment>
                 <GridRow>
@@ -568,15 +583,7 @@ class SearchContainer extends Component {
                                 </GridRow>
                                 {this.isFilteredBySignalSource() ? (
                                     <GridRow>
-                                        <GridColumn size={3}>
-                                            <SignalSourceFilter
-                                                disabled={this.state.advanced}
-                                                sourceType={this.state.source.sourceType}
-                                                signalSources={this.getSignalSources()}
-                                                onSignalSourceSelect={this.handleSignalSourceSelect}
-                                                selectedSignalSource={this.getSelectedSignalSource()}
-                                            />
-                                        </GridColumn>
+                                        {renderSignalSourceFilter}
                                         <GridColumn size={9}>
                                             <TraitsCreationWarning />
                                         </GridColumn>
@@ -606,6 +613,7 @@ class SearchContainer extends Component {
                         ) : (
                             <GridRow>
                                 <GridColumn size={12} style={{ position: 'relative' }}>
+                                    {this.isFilteredBySignalSource() && renderSignalSourceFilter}
                                     {this.renderEmptyState()}
                                 </GridColumn>
                             </GridRow>
