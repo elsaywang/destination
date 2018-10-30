@@ -10,8 +10,8 @@ describe('signalType Util', () => {
     });
 
     describe('test on `getSignalTypeLabelMessage` func', () => {
-        it('should return `in All Signals` message when signal type is `ALL`', () => {
-            expect(getSignalTypeLabelMessage('ALL')).toBe('in All Signals');
+        it('should return `in All Signal Types` message when signal type is `ALL`', () => {
+            expect(getSignalTypeLabelMessage('ALL')).toBe('in All Signal Types');
         });
 
         it('should return `in ${getSignalTypeLabel(signalType)}` message when signalType is valid and not `ALL`', () => {
@@ -54,7 +54,7 @@ describe('signalType Util', () => {
             const searchName = '';
             const type = 'ALL';
             expect(getSearchResultsMessageBySignalTypeLabel(searchName, type)).toBe(
-                `in All Signals`,
+                `in All Signal Types`,
             );
         });
     });

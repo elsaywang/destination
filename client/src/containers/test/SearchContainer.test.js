@@ -54,16 +54,16 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(EmptySearch).props().variant).toEqual('explore');
         });
 
-        it('does not render <SignalSourceFilter /> component when there are no props.results passed in ', () => {
-            expect(wrapper.find(SignalTypeFilter).exists()).toBe(false);
+        it('does always render <SignalSourceFilter /> component when there are no props.results passed in ', () => {
+            expect(wrapper.find(SignalTypeFilter).exists()).toBe(true);
         });
 
         it('does not render <SignalsTable /> component when there are no props.results passed in', () => {
             expect(wrapper.find(SignalsTable).exists()).toBe(false);
         });
 
-        it('does not render <SaveSearchExecution /> component when there are no props.results passed in', () => {
-            expect(wrapper.find(SaveSearchExecution).exists()).toBe(false);
+        it('does always render <SaveSearchExecution /> component when there are no props.results passed in', () => {
+            expect(wrapper.find(SaveSearchExecution).exists()).toBe(true);
         });
 
         it('does not render <Wait /> component when there are no props.results passed in and searched state is falsy', () => {
@@ -83,6 +83,11 @@ describe('<SearchContainer /> component', () => {
                     },
                     isResultsLoaded: true,
                 });
+                wrapper.setState({ searched: true });
+            });
+
+            it('matches snapshot', () => {
+                expect(wrapper).toMatchSnapshot();
             });
 
             it('renders <SignalSourceFilter /> component', () => {

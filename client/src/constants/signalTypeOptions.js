@@ -1,5 +1,5 @@
 export const signalTypeOptions = [
-    { label: `All`, value: 'ALL' },
+    { label: `All Signal Types`, value: 'ALL' },
     { label: `Adobe Analytics`, value: 'ANALYTICS' },
     { label: `Actionable Log Files`, value: 'ALF' },
     { label: `General Online Data`, value: 'REALTIME' },

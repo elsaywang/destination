@@ -42,7 +42,7 @@ ShallowWrapper {
                     selected={true}
                     tabIndex={0}
           >
-                    All
+                    All Signal Types
           </Tab>
           <Tab
                     data-test="analytics-signal-type-filter"
@@ -116,7 +116,7 @@ ShallowWrapper {
               selected={true}
               tabIndex={0}
 >
-              All
+              All Signal Types
 </Tab>,
             <Tab
               data-test="analytics-signal-type-filter"
@@ -172,7 +172,7 @@ ShallowWrapper {
             "key": "ALL",
             "nodeType": "class",
             "props": Object {
-              "children": "All",
+              "children": "All Signal Types",
               "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
@@ -181,7 +181,7 @@ ShallowWrapper {
               "tabIndex": 0,
             },
             "ref": null,
-            "rendered": "All",
+            "rendered": "All Signal Types",
             "type": [Function],
           },
           Object {
@@ -286,7 +286,7 @@ ShallowWrapper {
                         selected={true}
                         tabIndex={0}
             >
-                        All
+                        All Signal Types
             </Tab>
             <Tab
                         data-test="analytics-signal-type-filter"
@@ -360,7 +360,7 @@ ShallowWrapper {
                 selected={true}
                 tabIndex={0}
 >
-                All
+                All Signal Types
 </Tab>,
               <Tab
                 data-test="analytics-signal-type-filter"
@@ -416,7 +416,7 @@ ShallowWrapper {
               "key": "ALL",
               "nodeType": "class",
               "props": Object {
-                "children": "All",
+                "children": "All Signal Types",
                 "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
@@ -425,7 +425,7 @@ ShallowWrapper {
                 "tabIndex": 0,
               },
               "ref": null,
-              "rendered": "All",
+              "rendered": "All Signal Types",
               "type": [Function],
             },
             Object {
@@ -567,7 +567,7 @@ ShallowWrapper {
                     selected={false}
                     tabIndex={0}
           >
-                    All
+                    All Signal Types
           </Tab>
           <Tab
                     data-test="analytics-signal-type-filter"
@@ -641,7 +641,7 @@ ShallowWrapper {
               selected={false}
               tabIndex={0}
 >
-              All
+              All Signal Types
 </Tab>,
             <Tab
               data-test="analytics-signal-type-filter"
@@ -697,7 +697,7 @@ ShallowWrapper {
             "key": "ALL",
             "nodeType": "class",
             "props": Object {
-              "children": "All",
+              "children": "All Signal Types",
               "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
@@ -706,7 +706,7 @@ ShallowWrapper {
               "tabIndex": 0,
             },
             "ref": null,
-            "rendered": "All",
+            "rendered": "All Signal Types",
             "type": [Function],
           },
           Object {
@@ -811,7 +811,7 @@ ShallowWrapper {
                         selected={false}
                         tabIndex={0}
             >
-                        All
+                        All Signal Types
             </Tab>
             <Tab
                         data-test="analytics-signal-type-filter"
@@ -885,7 +885,7 @@ ShallowWrapper {
                 selected={false}
                 tabIndex={0}
 >
-                All
+                All Signal Types
 </Tab>,
               <Tab
                 data-test="analytics-signal-type-filter"
@@ -941,7 +941,7 @@ ShallowWrapper {
               "key": "ALL",
               "nodeType": "class",
               "props": Object {
-                "children": "All",
+                "children": "All Signal Types",
                 "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
@@ -950,7 +950,7 @@ ShallowWrapper {
                 "tabIndex": 0,
               },
               "ref": null,
-              "rendered": "All",
+              "rendered": "All Signal Types",
               "type": [Function],
             },
             Object {
