@@ -411,7 +411,7 @@ describe('Search Form Integration Tests', () => {
 
     describe('Enhancements to date range search based on max signal retention days', () => {
         describe('"View Records For" dropdown options', () => {
-            it('should include default options, but should not include "Last 180 Days" or "Last 365 Days" by default', () => {
+            it('should include options for the default date range presets and custom date range', () => {
                 cy.get('.view-records > button').click();
 
                 cy.get('.spectrum-Menu-item')
@@ -429,43 +429,30 @@ describe('Search Form Integration Tests', () => {
                 cy.get('.spectrum-Menu-item')
                     .contains('Custom Date Range')
                     .should('exist');
-
-                cy.get('.spectrum-Menu-item')
-                    .contains('Last 180 Days')
-                    .should('not.exist');
-                cy.get('.spectrum-Menu-item')
-                    .contains('Last 365 Days')
-                    .should('not.exist');
             });
 
-            it('should include "Last 180 Days" when `maxSignalRetentionDays` is 180', () => {
-                cy.route('/portal/api/v1/signals/limits', {
-                    maxSignalRetentionDays: 180,
-                }).as('fetchLimits');
-                cy.reload();
-                cy.get('.view-records > button').click();
+            it('should never include "Last 180 Days" or "Last 365 Days", regardless of the value of `maxSignalRetentionDays`', () => {
+                const setMaxSignalRetentionDays = days => {
+                    cy.route('/portal/api/v1/signals/limits', {
+                        maxSignalRetentionDays: days,
+                    }).as('fetchLimits');
+                    cy.reload();
+                };
 
-                cy.get('.spectrum-Menu-item')
-                    .contains('Last 180 Days')
-                    .should('exist');
-                cy.get('.spectrum-Menu-item')
-                    .contains('Last 365 Days')
-                    .should('not.exist');
-            });
+                const verifyDateRangeOptions = () => {
+                    cy.get('.view-records > button').click();
+                    cy.get('.spectrum-Menu-item')
+                        .contains('Last 180 Days')
+                        .should('not.exist');
+                    cy.get('.spectrum-Menu-item')
+                        .contains('Last 365 Days')
+                        .should('not.exist');
+                };
 
-            it('should include "Last 365 Days" when `maxSignalRetentionDays` is 365', () => {
-                cy.route('/portal/api/v1/signals/limits', {
-                    maxSignalRetentionDays: 365,
-                }).as('fetchLimits');
-                cy.reload();
-                cy.get('.view-records > button').click();
-
-                cy.get('.spectrum-Menu-item')
-                    .contains('Last 180 Days')
-                    .should('exist');
-                cy.get('.spectrum-Menu-item')
-                    .contains('Last 365 Days')
-                    .should('exist');
+                for (const days in [30, 180, 365]) {
+                    setMaxSignalRetentionDays(days);
+                    verifyDateRangeOptions();
+                }
             });
         });
 

@@ -42,12 +42,12 @@ describe('date range utils', () => {
             expect(isDateRangePreset('30D')).toBeTruthy();
         });
 
-        it('should return true for 180D', () => {
-            expect(isDateRangePreset('180D')).toBeTruthy();
+        it('should return false for 180D', () => {
+            expect(isDateRangePreset('180D')).toBeFalsy();
         });
 
-        it('should return true for 365D', () => {
-            expect(isDateRangePreset('365D')).toBeTruthy();
+        it('should return false for 365D', () => {
+            expect(isDateRangePreset('365D')).toBeFalsy();
         });
     });
 
