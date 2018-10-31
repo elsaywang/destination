@@ -431,7 +431,8 @@ class SearchContainer extends Component {
     isFilteredByAdobeAnalytics = () => this.state.source.sourceType === 'ANALYTICS';
 
     isFilteredBySignalSource = () =>
-        this.isFilteredByOnboardedRecords() || this.isFilteredByAdobeAnalytics();
+        this.state.searched &&
+        (this.isFilteredByOnboardedRecords() || this.isFilteredByAdobeAnalytics());
 
     getSignalSources = () => {
         const { dataSources, reportSuites } = this.props;
@@ -612,8 +613,8 @@ class SearchContainer extends Component {
                             </Fragment>
                         ) : (
                             <GridRow>
+                                {this.isFilteredBySignalSource() && renderSignalSourceFilter}
                                 <GridColumn size={12} style={{ position: 'relative' }}>
-                                    {this.isFilteredBySignalSource() && renderSignalSourceFilter}
                                     {this.renderEmptyState()}
                                 </GridColumn>
                             </GridRow>

@@ -732,80 +732,148 @@ describe('Search Form Integration Tests', () => {
             });
 
             describe('When Adobe Analytics is selected', () => {
-                beforeEach(() => {
-                    cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
-                        'fetchAdvancedSearchResults',
-                    );
-                    cy.clock().then(clock => clock.restore());
+                describe('where there are results after filtered', () => {
+                    beforeEach(() => {
+                        cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                            'fetchAdvancedSearchResults',
+                        );
+                        cy.clock().then(clock => clock.restore());
+                    });
+
+                    it('`source` should be included and contain `sourceType` and `reportSuiteIds`', () => {
+                        cy.get('[data-test="search-button"]').click();
+                        cy.wait('@fetchAdvancedSearchResults');
+                        cy.get('[data-test="analytics-signal-type-filter"]').click();
+                        cy.wait(500);
+                        cy.get('[data-test="analytics-signal-source-filter"]').as(
+                            'reportSuitesFilter',
+                        );
+
+                        cy.get('@reportSuitesFilter')
+                            .click()
+                            .get('.spectrum-Menu-item:first')
+                            .click()
+                            .then($option => {
+                                cy.get('@reportSuitesFilter').should($reportSuite => {
+                                    expect($reportSuite.text()).to.contains($option.text());
+                                });
+                            });
+                    });
                 });
 
-                it('`source` should be included and contain `sourceType` and `reportSuiteIds`', () => {
-                    cy.get('[data-test="search-button"]').click();
+                describe('where there no results after filtered', () => {
+                    beforeEach(() => {
+                        cy.route(
+                            'POST',
+                            '/portal/api/v1/signals/list',
+                            emptySearchResultsResponse,
+                        ).as('fetchAdvancedSearchWithoutResults');
+                        cy.clock().then(clock => clock.restore());
+                    });
 
-                    cy.get('[data-test="analytics-signal-type-filter"]').click();
-                    cy.wait('@fetchReportSuites');
+                    it('should render <EmptySearch/> with no results component', () => {
+                        cy.get('[data-test="search-button"]').click();
+                        cy.wait('@fetchAdvancedSearchWithoutResults');
+                        cy.get('[data-test="analytics-signal-type-filter"]').click();
+                        cy.wait('@fetchReportSuites');
 
-                    cy.get('[data-test="analytics-signal-source-filter"]').as('reportSuitesFilter');
+                        cy.get('[data-test="analytics-signal-source-filter"]').as(
+                            'reportSuitesFilter',
+                        );
 
-                    cy.get('@reportSuitesFilter')
-                        .click()
-                        .get('.spectrum-Menu-item:first')
-                        .click()
-                        .then($option => {
-                            cy.get('@reportSuitesFilter').should($reportSuite => {
-                                expect($reportSuite.text()).to.contains($option.text());
+                        cy.get('@reportSuitesFilter')
+                            .click()
+                            .get('.spectrum-Menu-item:first')
+                            .click()
+                            .then($option => {
+                                cy.get('@reportSuitesFilter').should($reportSuite => {
+                                    expect($reportSuite.text()).to.contains($option.text());
+                                });
                             });
-                        });
 
-                    cy.getRequestParams('@fetchAdvancedSearchResults').then(
-                        ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
-                            expect(sourceType).to.equal('ANALYTICS');
-                            expect(reportSuiteIds[0]).to.equal(
-                                'test-report-suite-edited1505153440289',
-                            );
-                            expect(dataSourceIds).to.be.undefined;
-                        },
-                    );
+                        cy.get('[data-test="no-result-found"]').should('exist');
+                    });
                 });
             });
 
             describe('When an Onboarded Record is selected', () => {
-                beforeEach(() => {
-                    cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
-                        'fetchOnboardedSearchResults',
-                    );
-                    cy.route(
-                        '/portal/api/v1/datasources/?inboundOnly=true&sortBy=name&excludeReportSuites=true',
-                        dataSourcesResponse.list,
-                    ).as('fetchDataSources');
-                    cy.clock().then(clock => clock.restore());
-                });
+                describe('where there are results after filtered', () => {
+                    beforeEach(() => {
+                        cy.route('POST', '/portal/api/v1/signals/list', searchResultsResponse).as(
+                            'fetchOnboardedSearchResults',
+                        );
+                        cy.route(
+                            '/portal/api/v1/datasources/?inboundOnly=true&sortBy=name&excludeReportSuites=true',
+                            dataSourcesResponse.list,
+                        ).as('fetchDataSources');
+                        cy.clock().then(clock => clock.restore());
+                    });
 
-                it('`source` should be included and contain `sourceType` and `dataSourceIds`', () => {
-                    cy.get('[data-test="search-button"]').click();
+                    it('`source` should be included and contain `sourceType` and `dataSourceIds`', () => {
+                        cy.get('[data-test="search-button"]').click();
 
-                    cy.get('[data-test="onboarded-signal-type-filter"]').click();
-                    cy.wait('@fetchDataSources');
+                        cy.get('[data-test="onboarded-signal-type-filter"]').click();
+                        cy.wait(500);
 
-                    cy.get('[data-test="onboarded-signal-source-filter"]').as('dataSourceFilter');
+                        cy.get('[data-test="onboarded-signal-source-filter"]').as(
+                            'dataSourceFilter',
+                        );
 
-                    cy.get('@dataSourceFilter')
-                        .click()
-                        .get('.spectrum-Menu-item:first')
-                        .click()
-                        .then($option => {
-                            cy.get('@dataSourceFilter').should($dataSource => {
-                                expect($dataSource.text()).to.contains($option.text());
+                        cy.get('@dataSourceFilter')
+                            .click()
+                            .get('.spectrum-Menu-item:first')
+                            .click()
+                            .then($option => {
+                                cy.get('@dataSourceFilter').should($dataSource => {
+                                    expect($dataSource.text()).to.contains($option.text());
+                                });
                             });
-                        });
 
-                    cy.getRequestParams('@fetchOnboardedSearchResults').then(
-                        ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
-                            expect(sourceType).to.equal('ONBOARDED');
-                            expect(reportSuiteIds).to.be.undefined;
-                            expect(dataSourceIds[0]).to.equal(167507);
-                        },
-                    );
+                        cy.getRequestParams('@fetchOnboardedSearchResults').then(
+                            ({ source: { sourceType, reportSuiteIds, dataSourceIds } }) => {
+                                expect(sourceType).to.equal('ONBOARDED');
+                                expect(reportSuiteIds).to.be.undefined;
+                                expect(dataSourceIds[0]).to.equal(167507);
+                            },
+                        );
+                    });
+                });
+                describe('where there no results after filtered', () => {
+                    beforeEach(() => {
+                        cy.route(
+                            'POST',
+                            '/portal/api/v1/signals/list',
+                            emptySearchResultsResponse,
+                        ).as('fetchOnboardedSearchWithoutResults');
+                        cy.route(
+                            '/portal/api/v1/datasources/?inboundOnly=true&sortBy=name&excludeReportSuites=true',
+                            dataSourcesResponse.list,
+                        ).as('fetchDataSources');
+                        cy.clock().then(clock => clock.restore());
+                    });
+
+                    it('should render <EmptySearch/> with no results component', () => {
+                        cy.get('[data-test="search-button"]').click();
+
+                        cy.get('[data-test="onboarded-signal-type-filter"]').click();
+                        cy.wait('@fetchDataSources');
+
+                        cy.get('[data-test="onboarded-signal-source-filter"]').as(
+                            'dataSourceFilter',
+                        );
+
+                        cy.get('@dataSourceFilter')
+                            .click()
+                            .get('.spectrum-Menu-item:first')
+                            .click()
+                            .then($option => {
+                                cy.get('@dataSourceFilter').should($reportSuite => {
+                                    expect($reportSuite.text()).to.contains($option.text());
+                                });
+                            });
+
+                        cy.get('[data-test="no-result-found"]').should('exist');
+                    });
                 });
             });
         });

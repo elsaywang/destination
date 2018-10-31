@@ -1233,43 +1233,43 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": <GridColumn
-                  size={12}
-                  style={
-                                    Object {
-                                                      "position": "relative",
-                                                    }
-                  }
+                "children": Array [
+                  false,
+                  <GridColumn
+                    size={12}
+                    style={
+                                        Object {
+                                                            "position": "relative",
+                                                          }
+                    }
 >
-                  <EmptySearch
-                                    className="empty"
-                                    variant="explore"
-                  />
+                    <EmptySearch
+                                        className="empty"
+                                        variant="explore"
+                    />
 </GridColumn>,
+                ],
                 "reverse": false,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    false,
-                    <EmptySearch
+              "rendered": Array [
+                false,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <EmptySearch
                       className="empty"
                       variant="explore"
 />,
-                  ],
-                  "size": 12,
-                  "style": Object {
-                    "position": "relative",
+                    "size": 12,
+                    "style": Object {
+                      "position": "relative",
+                    },
                   },
-                },
-                "ref": null,
-                "rendered": Array [
-                  false,
-                  Object {
+                  "ref": null,
+                  "rendered": Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "function",
@@ -1281,9 +1281,9 @@ ShallowWrapper {
                     "rendered": null,
                     "type": [Function],
                   },
-                ],
-                "type": [Function],
-              },
+                  "type": [Function],
+                },
+              ],
               "type": [Function],
             },
             "type": "div",
@@ -2379,43 +2379,43 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": <GridColumn
-                    size={12}
-                    style={
-                                        Object {
-                                                            "position": "relative",
-                                                          }
-                    }
+                  "children": Array [
+                    false,
+                    <GridColumn
+                      size={12}
+                      style={
+                                            Object {
+                                                                  "position": "relative",
+                                                                }
+                      }
 >
-                    <EmptySearch
-                                        className="empty"
-                                        variant="explore"
-                    />
+                      <EmptySearch
+                                            className="empty"
+                                            variant="explore"
+                      />
 </GridColumn>,
+                  ],
                   "reverse": false,
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      false,
-                      <EmptySearch
+                "rendered": Array [
+                  false,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <EmptySearch
                         className="empty"
                         variant="explore"
 />,
-                    ],
-                    "size": 12,
-                    "style": Object {
-                      "position": "relative",
+                      "size": 12,
+                      "style": Object {
+                        "position": "relative",
+                      },
                     },
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    false,
-                    Object {
+                    "ref": null,
+                    "rendered": Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "function",
@@ -2427,9 +2427,9 @@ ShallowWrapper {
                       "rendered": null,
                       "type": [Function],
                     },
-                  ],
-                  "type": [Function],
-                },
+                    "type": [Function],
+                  },
+                ],
                 "type": [Function],
               },
               "type": "div",
@@ -6738,43 +6738,43 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": <GridColumn
-                  size={12}
-                  style={
-                                    Object {
-                                                      "position": "relative",
-                                                    }
-                  }
+                "children": Array [
+                  false,
+                  <GridColumn
+                    size={12}
+                    style={
+                                        Object {
+                                                            "position": "relative",
+                                                          }
+                    }
 >
-                  <EmptySearch
-                                    className="empty"
-                                    variant="errorFetching"
-                  />
+                    <EmptySearch
+                                        className="empty"
+                                        variant="errorFetching"
+                    />
 </GridColumn>,
+                ],
                 "reverse": false,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    false,
-                    <EmptySearch
+              "rendered": Array [
+                false,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <EmptySearch
                       className="empty"
                       variant="errorFetching"
 />,
-                  ],
-                  "size": 12,
-                  "style": Object {
-                    "position": "relative",
+                    "size": 12,
+                    "style": Object {
+                      "position": "relative",
+                    },
                   },
-                },
-                "ref": null,
-                "rendered": Array [
-                  false,
-                  Object {
+                  "ref": null,
+                  "rendered": Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "function",
@@ -6786,9 +6786,9 @@ ShallowWrapper {
                     "rendered": null,
                     "type": [Function],
                   },
-                ],
-                "type": [Function],
-              },
+                  "type": [Function],
+                },
+              ],
               "type": [Function],
             },
             "type": "div",
@@ -7908,43 +7908,43 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": <GridColumn
-                    size={12}
-                    style={
-                                        Object {
-                                                            "position": "relative",
-                                                          }
-                    }
+                  "children": Array [
+                    false,
+                    <GridColumn
+                      size={12}
+                      style={
+                                            Object {
+                                                                  "position": "relative",
+                                                                }
+                      }
 >
-                    <EmptySearch
-                                        className="empty"
-                                        variant="errorFetching"
-                    />
+                      <EmptySearch
+                                            className="empty"
+                                            variant="errorFetching"
+                      />
 </GridColumn>,
+                  ],
                   "reverse": false,
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      false,
-                      <EmptySearch
+                "rendered": Array [
+                  false,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <EmptySearch
                         className="empty"
                         variant="errorFetching"
 />,
-                    ],
-                    "size": 12,
-                    "style": Object {
-                      "position": "relative",
+                      "size": 12,
+                      "style": Object {
+                        "position": "relative",
+                      },
                     },
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    false,
-                    Object {
+                    "ref": null,
+                    "rendered": Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "function",
@@ -7956,9 +7956,9 @@ ShallowWrapper {
                       "rendered": null,
                       "type": [Function],
                     },
-                  ],
-                  "type": [Function],
-                },
+                    "type": [Function],
+                  },
+                ],
                 "type": [Function],
               },
               "type": "div",
@@ -9234,43 +9234,43 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": <GridColumn
-                  size={12}
-                  style={
-                                    Object {
-                                                      "position": "relative",
-                                                    }
-                  }
+                "children": Array [
+                  false,
+                  <GridColumn
+                    size={12}
+                    style={
+                                        Object {
+                                                            "position": "relative",
+                                                          }
+                    }
 >
-                  <EmptySearch
-                                    className="empty"
-                                    variant="errorFetching"
-                  />
+                    <EmptySearch
+                                        className="empty"
+                                        variant="errorFetching"
+                    />
 </GridColumn>,
+                ],
                 "reverse": false,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    false,
-                    <EmptySearch
+              "rendered": Array [
+                false,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <EmptySearch
                       className="empty"
                       variant="errorFetching"
 />,
-                  ],
-                  "size": 12,
-                  "style": Object {
-                    "position": "relative",
+                    "size": 12,
+                    "style": Object {
+                      "position": "relative",
+                    },
                   },
-                },
-                "ref": null,
-                "rendered": Array [
-                  false,
-                  Object {
+                  "ref": null,
+                  "rendered": Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "function",
@@ -9282,9 +9282,9 @@ ShallowWrapper {
                     "rendered": null,
                     "type": [Function],
                   },
-                ],
-                "type": [Function],
-              },
+                  "type": [Function],
+                },
+              ],
               "type": [Function],
             },
             "type": "div",
@@ -10380,43 +10380,43 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": <GridColumn
-                    size={12}
-                    style={
-                                        Object {
-                                                            "position": "relative",
-                                                          }
-                    }
+                  "children": Array [
+                    false,
+                    <GridColumn
+                      size={12}
+                      style={
+                                            Object {
+                                                                  "position": "relative",
+                                                                }
+                      }
 >
-                    <EmptySearch
-                                        className="empty"
-                                        variant="errorFetching"
-                    />
+                      <EmptySearch
+                                            className="empty"
+                                            variant="errorFetching"
+                      />
 </GridColumn>,
+                  ],
                   "reverse": false,
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      false,
-                      <EmptySearch
+                "rendered": Array [
+                  false,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <EmptySearch
                         className="empty"
                         variant="errorFetching"
 />,
-                    ],
-                    "size": 12,
-                    "style": Object {
-                      "position": "relative",
+                      "size": 12,
+                      "style": Object {
+                        "position": "relative",
+                      },
                     },
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    false,
-                    Object {
+                    "ref": null,
+                    "rendered": Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "function",
@@ -10428,9 +10428,9 @@ ShallowWrapper {
                       "rendered": null,
                       "type": [Function],
                     },
-                  ],
-                  "type": [Function],
-                },
+                    "type": [Function],
+                  },
+                ],
                 "type": [Function],
               },
               "type": "div",
