@@ -482,7 +482,7 @@ class SearchContainer extends Component {
             </GridColumn>
         );
 
-        const renderSignalTypeFiler = (
+        const renderSignalTypeFilter = (
             <div className={styles.filterListContainer}>
                 <SignalTypeFilter
                     onSignalTypeChange={this.handleSignalTypeChange}
@@ -572,7 +572,7 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
                 <div style={{ display: 'flex', marginTop: 20 }} data-test="search-results">
-                    {!this.state.advanced && renderSignalTypeFiler}
+                    {!this.state.advanced && renderSignalTypeFilter}
                     <div className={styles.tableContainer}>
                         {this.state.searched && (
                             <GridRow valign="middle">
