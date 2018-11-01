@@ -462,11 +462,7 @@ class SearchContainer extends Component {
         //If advanced seach is enabled, the only filter should be used is the ReportSuitesComboBox in the search panel,
         //thus this filter above search table should be disabled;
         //Also the selected report suite should be coherent within search table result, not from the this.state.source
-        if (
-            this.isFilteredByAdobeAnalytics() &&
-            this.state.advanced &&
-            this.props.results.list.length
-        ) {
+        if (this.isFilteredByAdobeAnalytics() && this.state.advanced) {
             return getSelectedReportSuiteFromSearchResults(this.props.results);
         }
 
@@ -485,6 +481,23 @@ class SearchContainer extends Component {
                 />
             </GridColumn>
         );
+
+        const renderSignalTypeFiler = (
+            <div className={styles.filterListContainer}>
+                <SignalTypeFilter
+                    onSignalTypeChange={this.handleSignalTypeChange}
+                    signalType={this.state.source.sourceType}
+                    isSearched={this.state.searched}
+                />
+            </div>
+        );
+
+        const renderSearchResultsHeading = (
+            <GridColumn size={7}>
+                <Heading size={3}>Search Results {this.getSearchResultsMessage()}</Heading>
+            </GridColumn>
+        );
+
         return (
             <Fragment>
                 <GridRow>
@@ -559,29 +572,20 @@ class SearchContainer extends Component {
                     </GridColumn>
                 </GridRow>
                 <div style={{ display: 'flex', marginTop: 20 }} data-test="search-results">
-                    {!this.state.advanced && (
-                        <div className={styles.filterListContainer}>
-                            <SignalTypeFilter
-                                onSignalTypeChange={this.handleSignalTypeChange}
-                                signalType={this.state.source.sourceType}
-                            />
-                        </div>
-                    )}
+                    {!this.state.advanced && renderSignalTypeFiler}
                     <div className={styles.tableContainer}>
+                        {this.state.searched && (
+                            <GridRow valign="middle">
+                                {renderSearchResultsHeading}
+                                <GridColumn size={5}>
+                                    <MultiSignalsTraitsCreationContainer
+                                        canCreateTraits={this.props.permissions.canCreateTraits}
+                                    />
+                                </GridColumn>
+                            </GridRow>
+                        )}
                         {this.isSearchedWithResults() ? (
                             <Fragment>
-                                <GridRow valign="middle">
-                                    <GridColumn size={7}>
-                                        <Heading size={3}>
-                                            Search Results {this.getSearchResultsMessage()}
-                                        </Heading>
-                                    </GridColumn>
-                                    <GridColumn size={5}>
-                                        <MultiSignalsTraitsCreationContainer
-                                            canCreateTraits={this.props.permissions.canCreateTraits}
-                                        />
-                                    </GridColumn>
-                                </GridRow>
                                 {this.isFilteredBySignalSource() ? (
                                     <GridRow>
                                         {renderSignalSourceFilter}

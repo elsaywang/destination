@@ -4,6 +4,7 @@ exports[`<SignalTypeFilter /> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
+    isSearched={false}
     onSignalTypeChange={[Function]}
     signalType="ALL"
 />,
@@ -32,6 +33,7 @@ ShallowWrapper {
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
+          selectedIndex={0}
           variant="compact"
 >
           <Tab
@@ -163,6 +165,7 @@ ShallowWrapper {
           "onChange": [Function],
           "orientation": "vertical",
           "quiet": false,
+          "selectedIndex": 0,
           "variant": "compact",
         },
         "ref": null,
@@ -276,6 +279,7 @@ ShallowWrapper {
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
+            selectedIndex={0}
             variant="compact"
 >
             <Tab
@@ -407,6 +411,7 @@ ShallowWrapper {
             "onChange": [Function],
             "orientation": "vertical",
             "quiet": false,
+            "selectedIndex": 0,
             "variant": "compact",
           },
           "ref": null,
@@ -529,6 +534,7 @@ exports[`<SignalTypeFilter /> component rendering renders correctly selected <Ta
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
+    isSearched={true}
     onSignalTypeChange={[Function]}
     signalType="ANALYTICS"
 />,
@@ -557,6 +563,7 @@ ShallowWrapper {
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
+          selectedIndex={0}
           variant="compact"
 >
           <Tab
@@ -688,6 +695,7 @@ ShallowWrapper {
           "onChange": [Function],
           "orientation": "vertical",
           "quiet": false,
+          "selectedIndex": 0,
           "variant": "compact",
         },
         "ref": null,
@@ -801,6 +809,7 @@ ShallowWrapper {
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
+            selectedIndex={0}
             variant="compact"
 >
             <Tab
@@ -932,6 +941,7 @@ ShallowWrapper {
             "onChange": [Function],
             "orientation": "vertical",
             "quiet": false,
+            "selectedIndex": 0,
             "variant": "compact",
           },
           "ref": null,

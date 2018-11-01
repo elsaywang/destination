@@ -397,7 +397,7 @@ describe('Search Form Integration Tests', () => {
             cy.get('[data-test="clear-all-button"]').click();
         });
 
-        it('should reset the form and clear the results', () => {
+        it('should reset the form and clear the results and reset the signal type to all', () => {
             cy.get('[data-test="advanced-search-filter"]').should('have.length', 0);
             cy.get('[data-test="key-search-field"]').should('have.value', '');
             cy.get('.operator').should('contain', '==');
@@ -406,6 +406,7 @@ describe('Search Form Integration Tests', () => {
             cy.get('.view-records').should('contain', '7 Days');
             cy.get('[data-test="min-counts"]').should('have.value', '1000');
             cy.get('[data-test="signals-table"]').should('have.length', 0);
+            cy.get('[data-test="all-signal-type-filter"]').should('have.class', 'is-selected');
         });
     });
 

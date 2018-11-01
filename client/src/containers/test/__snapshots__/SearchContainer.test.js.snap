@@ -357,6 +357,7 @@ ShallowWrapper {
                     className="filterListContainer"
           >
                     <SignalTypeFilter
+                              isSearched={false}
                               onSignalTypeChange={[Function]}
                               signalType="ALL"
                     />
@@ -1143,6 +1144,7 @@ ShallowWrapper {
               className="filterListContainer"
 >
               <SignalTypeFilter
+                            isSearched={false}
                             onSignalTypeChange={[Function]}
                             signalType="ALL"
               />
@@ -1183,6 +1185,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <SignalTypeFilter
+                isSearched={false}
                 onSignalTypeChange={[Function]}
                 signalType="ALL"
 />,
@@ -1194,6 +1197,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "isSearched": false,
                 "onSignalTypeChange": [Function],
                 "signalType": "ALL",
               },
@@ -1208,84 +1212,90 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <GridRow
-                reverse={false}
+              "children": Array [
+                false,
+                <GridRow
+                  reverse={false}
 >
-                <GridColumn
-                                size={12}
-                                style={
-                                                Object {
-                                                                "position": "relative",
-                                                              }
-                                }
-                >
-                                <EmptySearch
-                                                className="empty"
-                                                variant="explore"
-                                />
-                </GridColumn>
+                  <GridColumn
+                                    size={12}
+                                    style={
+                                                      Object {
+                                                                        "position": "relative",
+                                                                      }
+                                    }
+                  >
+                                    <EmptySearch
+                                                      className="empty"
+                                                      variant="explore"
+                                    />
+                  </GridColumn>
 </GridRow>,
+              ],
               "className": "tableContainer",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  false,
-                  <GridColumn
-                    size={12}
-                    style={
-                                        Object {
-                                                            "position": "relative",
-                                                          }
-                    }
+            "rendered": Array [
+              false,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    false,
+                    <GridColumn
+                      size={12}
+                      style={
+                                            Object {
+                                                                  "position": "relative",
+                                                                }
+                      }
 >
-                    <EmptySearch
-                                        className="empty"
-                                        variant="explore"
-                    />
+                      <EmptySearch
+                                            className="empty"
+                                            variant="explore"
+                      />
 </GridColumn>,
-                ],
-                "reverse": false,
-              },
-              "ref": null,
-              "rendered": Array [
-                false,
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <EmptySearch
-                      className="empty"
-                      variant="explore"
-/>,
-                    "size": 12,
-                    "style": Object {
-                      "position": "relative",
-                    },
-                  },
-                  "ref": null,
-                  "rendered": Object {
+                  ],
+                  "reverse": false,
+                },
+                "ref": null,
+                "rendered": Array [
+                  false,
+                  Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
-                      "className": "empty",
-                      "variant": "explore",
+                      "children": <EmptySearch
+                        className="empty"
+                        variant="explore"
+/>,
+                      "size": 12,
+                      "style": Object {
+                        "position": "relative",
+                      },
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "className": "empty",
+                        "variant": "explore",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
+                ],
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
         ],
@@ -1503,6 +1513,7 @@ ShallowWrapper {
                         className="filterListContainer"
             >
                         <SignalTypeFilter
+                                    isSearched={false}
                                     onSignalTypeChange={[Function]}
                                     signalType="ALL"
                         />
@@ -2289,6 +2300,7 @@ ShallowWrapper {
                 className="filterListContainer"
 >
                 <SignalTypeFilter
+                                isSearched={false}
                                 onSignalTypeChange={[Function]}
                                 signalType="ALL"
                 />
@@ -2329,6 +2341,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <SignalTypeFilter
+                  isSearched={false}
                   onSignalTypeChange={[Function]}
                   signalType="ALL"
 />,
@@ -2340,6 +2353,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "isSearched": false,
                   "onSignalTypeChange": [Function],
                   "signalType": "ALL",
                 },
@@ -2354,84 +2368,90 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <GridRow
-                  reverse={false}
+                "children": Array [
+                  false,
+                  <GridRow
+                    reverse={false}
 >
-                  <GridColumn
-                                    size={12}
-                                    style={
-                                                      Object {
-                                                                        "position": "relative",
-                                                                      }
-                                    }
-                  >
-                                    <EmptySearch
-                                                      className="empty"
-                                                      variant="explore"
-                                    />
-                  </GridColumn>
+                    <GridColumn
+                                        size={12}
+                                        style={
+                                                            Object {
+                                                                                "position": "relative",
+                                                                              }
+                                        }
+                    >
+                                        <EmptySearch
+                                                            className="empty"
+                                                            variant="explore"
+                                        />
+                    </GridColumn>
 </GridRow>,
+                ],
                 "className": "tableContainer",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    false,
-                    <GridColumn
-                      size={12}
-                      style={
-                                            Object {
-                                                                  "position": "relative",
-                                                                }
-                      }
+              "rendered": Array [
+                false,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      false,
+                      <GridColumn
+                        size={12}
+                        style={
+                                                Object {
+                                                                        "position": "relative",
+                                                                      }
+                        }
 >
-                      <EmptySearch
-                                            className="empty"
-                                            variant="explore"
-                      />
+                        <EmptySearch
+                                                className="empty"
+                                                variant="explore"
+                        />
 </GridColumn>,
-                  ],
-                  "reverse": false,
-                },
-                "ref": null,
-                "rendered": Array [
-                  false,
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <EmptySearch
-                        className="empty"
-                        variant="explore"
-/>,
-                      "size": 12,
-                      "style": Object {
-                        "position": "relative",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Object {
+                    ],
+                    "reverse": false,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    false,
+                    Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "class",
                       "props": Object {
-                        "className": "empty",
-                        "variant": "explore",
+                        "children": <EmptySearch
+                          className="empty"
+                          variant="explore"
+/>,
+                        "size": 12,
+                        "style": Object {
+                          "position": "relative",
+                        },
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "className": "empty",
+                          "variant": "explore",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
                       "type": [Function],
                     },
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
+                  ],
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
           ],
@@ -2834,6 +2854,7 @@ ShallowWrapper {
                     className="filterListContainer"
           >
                     <SignalTypeFilter
+                              isSearched={true}
                               onSignalTypeChange={[Function]}
                               signalType="ALL"
                     />
@@ -2841,29 +2862,29 @@ ShallowWrapper {
           <div
                     className="tableContainer"
           >
-                    <Unknown>
-                              <GridRow
-                                        reverse={false}
-                                        valign="middle"
+                    <GridRow
+                              reverse={false}
+                              valign="middle"
+                    >
+                              <GridColumn
+                                        size={7}
                               >
-                                        <GridColumn
-                                                  size={7}
+                                        <Heading
+                                                  size={3}
                                         >
-                                                  <Heading
-                                                            size={3}
-                                                  >
-                                                            Search Results 
-                                                            in All Signal Types
-                                                  </Heading>
-                                        </GridColumn>
-                                        <GridColumn
-                                                  size={5}
-                                        >
-                                                  <Connect(MultiSignalsTraitsCreationContainer)
-                                                            canCreateTraits={undefined}
-                                                  />
-                                        </GridColumn>
-                              </GridRow>
+                                                  Search Results 
+                                                  in All Signal Types
+                                        </Heading>
+                              </GridColumn>
+                              <GridColumn
+                                        size={5}
+                              >
+                                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                  canCreateTraits={undefined}
+                                        />
+                              </GridColumn>
+                    </GridRow>
+                    <Unknown>
                               <GridRow
                                         reverse={false}
                               >
@@ -3656,6 +3677,7 @@ ShallowWrapper {
               className="filterListContainer"
 >
               <SignalTypeFilter
+                            isSearched={true}
                             onSignalTypeChange={[Function]}
                             signalType="ALL"
               />
@@ -3663,29 +3685,29 @@ ShallowWrapper {
             <div
               className="tableContainer"
 >
-              <Unknown>
-                            <GridRow
-                                          reverse={false}
-                                          valign="middle"
+              <GridRow
+                            reverse={false}
+                            valign="middle"
+              >
+                            <GridColumn
+                                          size={7}
                             >
-                                          <GridColumn
-                                                        size={7}
+                                          <Heading
+                                                        size={3}
                                           >
-                                                        <Heading
-                                                                      size={3}
-                                                        >
-                                                                      Search Results 
-                                                                      in All Signal Types
-                                                        </Heading>
-                                          </GridColumn>
-                                          <GridColumn
-                                                        size={5}
-                                          >
-                                                        <Connect(MultiSignalsTraitsCreationContainer)
-                                                                      canCreateTraits={undefined}
-                                                        />
-                                          </GridColumn>
-                            </GridRow>
+                                                        Search Results 
+                                                        in All Signal Types
+                                          </Heading>
+                            </GridColumn>
+                            <GridColumn
+                                          size={5}
+                            >
+                                          <Connect(MultiSignalsTraitsCreationContainer)
+                                                        canCreateTraits={undefined}
+                                          />
+                            </GridColumn>
+              </GridRow>
+              <Unknown>
                             <GridRow
                                           reverse={false}
                             >
@@ -3732,6 +3754,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <SignalTypeFilter
+                isSearched={true}
                 onSignalTypeChange={[Function]}
                 signalType="ALL"
 />,
@@ -3743,6 +3766,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "isSearched": true,
                 "onSignalTypeChange": [Function],
                 "signalType": "ALL",
               },
@@ -3757,278 +3781,260 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <Unknown>
+              "children": Array [
                 <GridRow
-                                reverse={false}
-                                valign="middle"
-                >
-                                <GridColumn
-                                                size={7}
-                                >
-                                                <Heading
-                                                                size={3}
-                                                >
-                                                                Search Results 
-                                                                in All Signal Types
-                                                </Heading>
-                                </GridColumn>
-                                <GridColumn
-                                                size={5}
-                                >
-                                                <Connect(MultiSignalsTraitsCreationContainer)
-                                                                canCreateTraits={undefined}
-                                                />
-                                </GridColumn>
-                </GridRow>
-                <GridRow
-                                reverse={false}
-                >
-                                <GridColumn
-                                                offsetSize={3}
-                                                size={9}
-                                >
-                                                <Connect(TraitsCreationWarning) />
-                                </GridColumn>
-                </GridRow>
-                <SignalsTable
-                                allowsSelection={undefined}
-                                canCreateTraits={undefined}
-                                isAdvancedSearchEnabled={false}
-                                isMaxSignalSelectionsReached={false}
-                                onLoadMore={[Function]}
-                                onSignalRecordsSelection={[Function]}
-                                onSortSearch={[Function]}
-                                results={
-                                                Array [
-                                                                Object {
-                                                                  "id": 0,
-                                                                  "name": "test",
-                                                                },
-                                                              ]
-                                }
-                                selectedRowIndexes={Array []}
-                                signalType="ALL"
-                />
+                  reverse={false}
+                  valign="middle"
+>
+                  <GridColumn
+                                    size={7}
+                  >
+                                    <Heading
+                                                      size={3}
+                                    >
+                                                      Search Results 
+                                                      in All Signal Types
+                                    </Heading>
+                  </GridColumn>
+                  <GridColumn
+                                    size={5}
+                  >
+                                    <Connect(MultiSignalsTraitsCreationContainer)
+                                                      canCreateTraits={undefined}
+                                    />
+                  </GridColumn>
+</GridRow>,
+                <Unknown>
+                  <GridRow
+                                    reverse={false}
+                  >
+                                    <GridColumn
+                                                      offsetSize={3}
+                                                      size={9}
+                                    >
+                                                      <Connect(TraitsCreationWarning) />
+                                    </GridColumn>
+                  </GridRow>
+                  <SignalsTable
+                                    allowsSelection={undefined}
+                                    canCreateTraits={undefined}
+                                    isAdvancedSearchEnabled={false}
+                                    isMaxSignalSelectionsReached={false}
+                                    onLoadMore={[Function]}
+                                    onSignalRecordsSelection={[Function]}
+                                    onSortSearch={[Function]}
+                                    results={
+                                                      Array [
+                                                                        Object {
+                                                                          "id": 0,
+                                                                          "name": "test",
+                                                                        },
+                                                                      ]
+                                    }
+                                    selectedRowIndexes={Array []}
+                                    signalType="ALL"
+                  />
 </Unknown>,
+              ],
               "className": "tableContainer",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": Array [
-                  <GridRow
-                    reverse={false}
-                    valign="middle"
->
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
                     <GridColumn
-                                        size={7}
-                    >
-                                        <Heading
-                                                            size={3}
-                                        >
-                                                            Search Results 
-                                                            in All Signal Types
-                                        </Heading>
-                    </GridColumn>
-                    <GridColumn
-                                        size={5}
-                    >
-                                        <Connect(MultiSignalsTraitsCreationContainer)
-                                                            canCreateTraits={undefined}
-                                        />
-                    </GridColumn>
-</GridRow>,
-                  <GridRow
-                    reverse={false}
+                      size={7}
 >
-                    <GridColumn
-                                        offsetSize={3}
-                                        size={9}
-                    >
-                                        <Connect(TraitsCreationWarning) />
-                    </GridColumn>
-</GridRow>,
-                  <SignalsTable
-                    allowsSelection={undefined}
-                    canCreateTraits={undefined}
-                    isAdvancedSearchEnabled={false}
-                    isMaxSignalSelectionsReached={false}
-                    onLoadMore={[Function]}
-                    onSignalRecordsSelection={[Function]}
-                    onSortSearch={[Function]}
-                    results={
-                                        Array [
-                                                            Object {
-                                                              "id": 0,
-                                                              "name": "test",
-                                                            },
-                                                          ]
-                    }
-                    selectedRowIndexes={Array []}
-                    signalType="ALL"
-/>,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      <GridColumn
-                        size={7}
->
-                        <Heading
-                                                size={3}
-                        >
-                                                Search Results 
-                                                in All Signal Types
-                        </Heading>
+                      <Heading
+                                            size={3}
+                      >
+                                            Search Results 
+                                            in All Signal Types
+                      </Heading>
 </GridColumn>,
-                      <GridColumn
-                        size={5}
+                    <GridColumn
+                      size={5}
 >
-                        <Connect(MultiSignalsTraitsCreationContainer)
-                                                canCreateTraits={undefined}
-                        />
+                      <Connect(MultiSignalsTraitsCreationContainer)
+                                            canCreateTraits={undefined}
+                      />
 </GridColumn>,
-                    ],
-                    "reverse": false,
-                    "valign": "middle",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <Heading
-                          size={3}
->
-                          Search Results 
-                          in All Signal Types
-</Heading>,
-                        "size": 7,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": Array [
-                            "Search Results ",
-                            "in All Signal Types",
-                          ],
-                          "size": 3,
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          "Search Results ",
-                          "in All Signal Types",
-                        ],
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <Connect(MultiSignalsTraitsCreationContainer)
-                          canCreateTraits={undefined}
-/>,
-                        "size": 5,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "canCreateTraits": undefined,
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
                   ],
-                  "type": [Function],
+                  "reverse": false,
+                  "valign": "middle",
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <GridColumn
-                      offsetSize={3}
-                      size={9}
->
-                      <Connect(TraitsCreationWarning) />
-</GridColumn>,
-                    "reverse": false,
-                  },
-                  "ref": null,
-                  "rendered": Object {
+                "ref": null,
+                "rendered": Array [
+                  Object {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "children": <Connect(TraitsCreationWarning) />,
-                      "offsetSize": 3,
-                      "size": 9,
+                      "children": <Heading
+                        size={3}
+>
+                        Search Results 
+                        in All Signal Types
+</Heading>,
+                      "size": 7,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": Array [
+                          "Search Results ",
+                          "in All Signal Types",
+                        ],
+                        "size": 3,
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Search Results ",
+                        "in All Signal Types",
+                      ],
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <Connect(MultiSignalsTraitsCreationContainer)
+                        canCreateTraits={undefined}
+/>,
+                      "size": 5,
                     },
                     "ref": null,
                     "rendered": Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "class",
-                      "props": Object {},
+                      "props": Object {
+                        "canCreateTraits": undefined,
+                      },
                       "ref": null,
                       "rendered": null,
                       "type": [Function],
                     },
                     "type": [Function],
                   },
-                  "type": [Function],
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <GridRow
+                      reverse={false}
+>
+                      <GridColumn
+                                            offsetSize={3}
+                                            size={9}
+                      >
+                                            <Connect(TraitsCreationWarning) />
+                      </GridColumn>
+</GridRow>,
+                    <SignalsTable
+                      allowsSelection={undefined}
+                      canCreateTraits={undefined}
+                      isAdvancedSearchEnabled={false}
+                      isMaxSignalSelectionsReached={false}
+                      onLoadMore={[Function]}
+                      onSignalRecordsSelection={[Function]}
+                      onSortSearch={[Function]}
+                      results={
+                                            Array [
+                                                                  Object {
+                                                                    "id": 0,
+                                                                    "name": "test",
+                                                                  },
+                                                                ]
+                      }
+                      selectedRowIndexes={Array []}
+                      signalType="ALL"
+/>,
+                  ],
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "allowsSelection": undefined,
-                    "canCreateTraits": undefined,
-                    "isAdvancedSearchEnabled": false,
-                    "isMaxSignalSelectionsReached": false,
-                    "onLoadMore": [Function],
-                    "onSignalRecordsSelection": [Function],
-                    "onSortSearch": [Function],
-                    "results": Array [
-                      Object {
-                        "id": 0,
-                        "name": "test",
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <GridColumn
+                        offsetSize={3}
+                        size={9}
+>
+                        <Connect(TraitsCreationWarning) />
+</GridColumn>,
+                      "reverse": false,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <Connect(TraitsCreationWarning) />,
+                        "offsetSize": 3,
+                        "size": 9,
                       },
-                    ],
-                    "selectedRowIndexes": Array [],
-                    "signalType": "ALL",
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    "type": [Function],
                   },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": Symbol(react.fragment),
-            },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "allowsSelection": undefined,
+                      "canCreateTraits": undefined,
+                      "isAdvancedSearchEnabled": false,
+                      "isMaxSignalSelectionsReached": false,
+                      "onLoadMore": [Function],
+                      "onSignalRecordsSelection": [Function],
+                      "onSortSearch": [Function],
+                      "results": Array [
+                        Object {
+                          "id": 0,
+                          "name": "test",
+                        },
+                      ],
+                      "selectedRowIndexes": Array [],
+                      "signalType": "ALL",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": Symbol(react.fragment),
+              },
+            ],
             "type": "div",
           },
         ],
@@ -4246,6 +4252,7 @@ ShallowWrapper {
                         className="filterListContainer"
             >
                         <SignalTypeFilter
+                                    isSearched={true}
                                     onSignalTypeChange={[Function]}
                                     signalType="ALL"
                         />
@@ -4253,29 +4260,29 @@ ShallowWrapper {
             <div
                         className="tableContainer"
             >
-                        <Unknown>
-                                    <GridRow
-                                                reverse={false}
-                                                valign="middle"
+                        <GridRow
+                                    reverse={false}
+                                    valign="middle"
+                        >
+                                    <GridColumn
+                                                size={7}
                                     >
-                                                <GridColumn
-                                                            size={7}
+                                                <Heading
+                                                            size={3}
                                                 >
-                                                            <Heading
-                                                                        size={3}
-                                                            >
-                                                                        Search Results 
-                                                                        in All Signal Types
-                                                            </Heading>
-                                                </GridColumn>
-                                                <GridColumn
-                                                            size={5}
-                                                >
-                                                            <Connect(MultiSignalsTraitsCreationContainer)
-                                                                        canCreateTraits={undefined}
-                                                            />
-                                                </GridColumn>
-                                    </GridRow>
+                                                            Search Results 
+                                                            in All Signal Types
+                                                </Heading>
+                                    </GridColumn>
+                                    <GridColumn
+                                                size={5}
+                                    >
+                                                <Connect(MultiSignalsTraitsCreationContainer)
+                                                            canCreateTraits={undefined}
+                                                />
+                                    </GridColumn>
+                        </GridRow>
+                        <Unknown>
                                     <GridRow
                                                 reverse={false}
                                     >
@@ -5068,6 +5075,7 @@ ShallowWrapper {
                 className="filterListContainer"
 >
                 <SignalTypeFilter
+                                isSearched={true}
                                 onSignalTypeChange={[Function]}
                                 signalType="ALL"
                 />
@@ -5075,29 +5083,29 @@ ShallowWrapper {
               <div
                 className="tableContainer"
 >
-                <Unknown>
-                                <GridRow
-                                                reverse={false}
-                                                valign="middle"
+                <GridRow
+                                reverse={false}
+                                valign="middle"
+                >
+                                <GridColumn
+                                                size={7}
                                 >
-                                                <GridColumn
-                                                                size={7}
+                                                <Heading
+                                                                size={3}
                                                 >
-                                                                <Heading
-                                                                                size={3}
-                                                                >
-                                                                                Search Results 
-                                                                                in All Signal Types
-                                                                </Heading>
-                                                </GridColumn>
-                                                <GridColumn
-                                                                size={5}
-                                                >
-                                                                <Connect(MultiSignalsTraitsCreationContainer)
-                                                                                canCreateTraits={undefined}
-                                                                />
-                                                </GridColumn>
-                                </GridRow>
+                                                                Search Results 
+                                                                in All Signal Types
+                                                </Heading>
+                                </GridColumn>
+                                <GridColumn
+                                                size={5}
+                                >
+                                                <Connect(MultiSignalsTraitsCreationContainer)
+                                                                canCreateTraits={undefined}
+                                                />
+                                </GridColumn>
+                </GridRow>
+                <Unknown>
                                 <GridRow
                                                 reverse={false}
                                 >
@@ -5144,6 +5152,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <SignalTypeFilter
+                  isSearched={true}
                   onSignalTypeChange={[Function]}
                   signalType="ALL"
 />,
@@ -5155,6 +5164,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "isSearched": true,
                   "onSignalTypeChange": [Function],
                   "signalType": "ALL",
                 },
@@ -5169,278 +5179,260 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <Unknown>
+                "children": Array [
                   <GridRow
-                                    reverse={false}
-                                    valign="middle"
-                  >
-                                    <GridColumn
-                                                      size={7}
-                                    >
-                                                      <Heading
-                                                                        size={3}
-                                                      >
-                                                                        Search Results 
-                                                                        in All Signal Types
-                                                      </Heading>
-                                    </GridColumn>
-                                    <GridColumn
-                                                      size={5}
-                                    >
-                                                      <Connect(MultiSignalsTraitsCreationContainer)
-                                                                        canCreateTraits={undefined}
-                                                      />
-                                    </GridColumn>
-                  </GridRow>
-                  <GridRow
-                                    reverse={false}
-                  >
-                                    <GridColumn
-                                                      offsetSize={3}
-                                                      size={9}
-                                    >
-                                                      <Connect(TraitsCreationWarning) />
-                                    </GridColumn>
-                  </GridRow>
-                  <SignalsTable
-                                    allowsSelection={undefined}
-                                    canCreateTraits={undefined}
-                                    isAdvancedSearchEnabled={false}
-                                    isMaxSignalSelectionsReached={false}
-                                    onLoadMore={[Function]}
-                                    onSignalRecordsSelection={[Function]}
-                                    onSortSearch={[Function]}
-                                    results={
-                                                      Array [
-                                                                        Object {
-                                                                          "id": 0,
-                                                                          "name": "test",
-                                                                        },
-                                                                      ]
-                                    }
-                                    selectedRowIndexes={Array []}
-                                    signalType="ALL"
-                  />
+                    reverse={false}
+                    valign="middle"
+>
+                    <GridColumn
+                                        size={7}
+                    >
+                                        <Heading
+                                                            size={3}
+                                        >
+                                                            Search Results 
+                                                            in All Signal Types
+                                        </Heading>
+                    </GridColumn>
+                    <GridColumn
+                                        size={5}
+                    >
+                                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                            canCreateTraits={undefined}
+                                        />
+                    </GridColumn>
+</GridRow>,
+                  <Unknown>
+                    <GridRow
+                                        reverse={false}
+                    >
+                                        <GridColumn
+                                                            offsetSize={3}
+                                                            size={9}
+                                        >
+                                                            <Connect(TraitsCreationWarning) />
+                                        </GridColumn>
+                    </GridRow>
+                    <SignalsTable
+                                        allowsSelection={undefined}
+                                        canCreateTraits={undefined}
+                                        isAdvancedSearchEnabled={false}
+                                        isMaxSignalSelectionsReached={false}
+                                        onLoadMore={[Function]}
+                                        onSignalRecordsSelection={[Function]}
+                                        onSortSearch={[Function]}
+                                        results={
+                                                            Array [
+                                                                                Object {
+                                                                                  "id": 0,
+                                                                                  "name": "test",
+                                                                                },
+                                                                              ]
+                                        }
+                                        selectedRowIndexes={Array []}
+                                        signalType="ALL"
+                    />
 </Unknown>,
+                ],
                 "className": "tableContainer",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": Array [
-                    <GridRow
-                      reverse={false}
-                      valign="middle"
->
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
                       <GridColumn
-                                            size={7}
-                      >
-                                            <Heading
-                                                                  size={3}
-                                            >
-                                                                  Search Results 
-                                                                  in All Signal Types
-                                            </Heading>
-                      </GridColumn>
-                      <GridColumn
-                                            size={5}
-                      >
-                                            <Connect(MultiSignalsTraitsCreationContainer)
-                                                                  canCreateTraits={undefined}
-                                            />
-                      </GridColumn>
-</GridRow>,
-                    <GridRow
-                      reverse={false}
+                        size={7}
 >
-                      <GridColumn
-                                            offsetSize={3}
-                                            size={9}
-                      >
-                                            <Connect(TraitsCreationWarning) />
-                      </GridColumn>
-</GridRow>,
-                    <SignalsTable
-                      allowsSelection={undefined}
-                      canCreateTraits={undefined}
-                      isAdvancedSearchEnabled={false}
-                      isMaxSignalSelectionsReached={false}
-                      onLoadMore={[Function]}
-                      onSignalRecordsSelection={[Function]}
-                      onSortSearch={[Function]}
-                      results={
-                                            Array [
-                                                                  Object {
-                                                                    "id": 0,
-                                                                    "name": "test",
-                                                                  },
-                                                                ]
-                      }
-                      selectedRowIndexes={Array []}
-                      signalType="ALL"
-/>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": Array [
-                        <GridColumn
-                          size={7}
->
-                          <Heading
-                                                    size={3}
-                          >
-                                                    Search Results 
-                                                    in All Signal Types
-                          </Heading>
+                        <Heading
+                                                size={3}
+                        >
+                                                Search Results 
+                                                in All Signal Types
+                        </Heading>
 </GridColumn>,
-                        <GridColumn
-                          size={5}
+                      <GridColumn
+                        size={5}
 >
-                          <Connect(MultiSignalsTraitsCreationContainer)
-                                                    canCreateTraits={undefined}
-                          />
+                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                canCreateTraits={undefined}
+                        />
 </GridColumn>,
-                      ],
-                      "reverse": false,
-                      "valign": "middle",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": <Heading
-                            size={3}
->
-                            Search Results 
-                            in All Signal Types
-</Heading>,
-                          "size": 7,
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "function",
-                          "props": Object {
-                            "children": Array [
-                              "Search Results ",
-                              "in All Signal Types",
-                            ],
-                            "size": 3,
-                          },
-                          "ref": null,
-                          "rendered": Array [
-                            "Search Results ",
-                            "in All Signal Types",
-                          ],
-                          "type": [Function],
-                        },
-                        "type": [Function],
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": <Connect(MultiSignalsTraitsCreationContainer)
-                            canCreateTraits={undefined}
-/>,
-                          "size": 5,
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "canCreateTraits": undefined,
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": [Function],
-                        },
-                        "type": [Function],
-                      },
                     ],
-                    "type": [Function],
+                    "reverse": false,
+                    "valign": "middle",
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <GridColumn
-                        offsetSize={3}
-                        size={9}
->
-                        <Connect(TraitsCreationWarning) />
-</GridColumn>,
-                      "reverse": false,
-                    },
-                    "ref": null,
-                    "rendered": Object {
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": <Connect(TraitsCreationWarning) />,
-                        "offsetSize": 3,
-                        "size": 9,
+                        "children": <Heading
+                          size={3}
+>
+                          Search Results 
+                          in All Signal Types
+</Heading>,
+                        "size": 7,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "children": Array [
+                            "Search Results ",
+                            "in All Signal Types",
+                          ],
+                          "size": 3,
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Search Results ",
+                          "in All Signal Types",
+                        ],
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <Connect(MultiSignalsTraitsCreationContainer)
+                          canCreateTraits={undefined}
+/>,
+                        "size": 5,
                       },
                       "ref": null,
                       "rendered": Object {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "class",
-                        "props": Object {},
+                        "props": Object {
+                          "canCreateTraits": undefined,
+                        },
                         "ref": null,
                         "rendered": null,
                         "type": [Function],
                       },
                       "type": [Function],
                     },
-                    "type": [Function],
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <GridRow
+                        reverse={false}
+>
+                        <GridColumn
+                                                offsetSize={3}
+                                                size={9}
+                        >
+                                                <Connect(TraitsCreationWarning) />
+                        </GridColumn>
+</GridRow>,
+                      <SignalsTable
+                        allowsSelection={undefined}
+                        canCreateTraits={undefined}
+                        isAdvancedSearchEnabled={false}
+                        isMaxSignalSelectionsReached={false}
+                        onLoadMore={[Function]}
+                        onSignalRecordsSelection={[Function]}
+                        onSortSearch={[Function]}
+                        results={
+                                                Array [
+                                                                        Object {
+                                                                          "id": 0,
+                                                                          "name": "test",
+                                                                        },
+                                                                      ]
+                        }
+                        selectedRowIndexes={Array []}
+                        signalType="ALL"
+/>,
+                    ],
                   },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "allowsSelection": undefined,
-                      "canCreateTraits": undefined,
-                      "isAdvancedSearchEnabled": false,
-                      "isMaxSignalSelectionsReached": false,
-                      "onLoadMore": [Function],
-                      "onSignalRecordsSelection": [Function],
-                      "onSortSearch": [Function],
-                      "results": Array [
-                        Object {
-                          "id": 0,
-                          "name": "test",
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <GridColumn
+                          offsetSize={3}
+                          size={9}
+>
+                          <Connect(TraitsCreationWarning) />
+</GridColumn>,
+                        "reverse": false,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": <Connect(TraitsCreationWarning) />,
+                          "offsetSize": 3,
+                          "size": 9,
                         },
-                      ],
-                      "selectedRowIndexes": Array [],
-                      "signalType": "ALL",
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {},
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                      "type": [Function],
                     },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                ],
-                "type": Symbol(react.fragment),
-              },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "allowsSelection": undefined,
+                        "canCreateTraits": undefined,
+                        "isAdvancedSearchEnabled": false,
+                        "isMaxSignalSelectionsReached": false,
+                        "onLoadMore": [Function],
+                        "onSignalRecordsSelection": [Function],
+                        "onSortSearch": [Function],
+                        "results": Array [
+                          Object {
+                            "id": 0,
+                            "name": "test",
+                          },
+                        ],
+                        "selectedRowIndexes": Array [],
+                        "signalType": "ALL",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": Symbol(react.fragment),
+                },
+              ],
               "type": "div",
             },
           ],
@@ -5844,6 +5836,7 @@ ShallowWrapper {
                     className="filterListContainer"
           >
                     <SignalTypeFilter
+                              isSearched={true}
                               onSignalTypeChange={[Function]}
                               signalType="ALL"
                     />
@@ -5851,6 +5844,28 @@ ShallowWrapper {
           <div
                     className="tableContainer"
           >
+                    <GridRow
+                              reverse={false}
+                              valign="middle"
+                    >
+                              <GridColumn
+                                        size={7}
+                              >
+                                        <Heading
+                                                  size={3}
+                                        >
+                                                  Search Results 
+                                                  in All Signal Types
+                                        </Heading>
+                              </GridColumn>
+                              <GridColumn
+                                        size={5}
+                              >
+                                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                  canCreateTraits={undefined}
+                                        />
+                              </GridColumn>
+                    </GridRow>
                     <GridRow
                               reverse={false}
                     >
@@ -6648,6 +6663,7 @@ ShallowWrapper {
               className="filterListContainer"
 >
               <SignalTypeFilter
+                            isSearched={true}
                             onSignalTypeChange={[Function]}
                             signalType="ALL"
               />
@@ -6655,6 +6671,28 @@ ShallowWrapper {
             <div
               className="tableContainer"
 >
+              <GridRow
+                            reverse={false}
+                            valign="middle"
+              >
+                            <GridColumn
+                                          size={7}
+                            >
+                                          <Heading
+                                                        size={3}
+                                          >
+                                                        Search Results 
+                                                        in All Signal Types
+                                          </Heading>
+                            </GridColumn>
+                            <GridColumn
+                                          size={5}
+                            >
+                                          <Connect(MultiSignalsTraitsCreationContainer)
+                                                        canCreateTraits={undefined}
+                                          />
+                            </GridColumn>
+              </GridRow>
               <GridRow
                             reverse={false}
               >
@@ -6688,6 +6726,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <SignalTypeFilter
+                isSearched={true}
                 onSignalTypeChange={[Function]}
                 signalType="ALL"
 />,
@@ -6699,6 +6738,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "isSearched": true,
                 "onSignalTypeChange": [Function],
                 "signalType": "ALL",
               },
@@ -6713,84 +6753,200 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <GridRow
-                reverse={false}
+              "children": Array [
+                <GridRow
+                  reverse={false}
+                  valign="middle"
 >
-                <GridColumn
-                                size={12}
-                                style={
-                                                Object {
-                                                                "position": "relative",
-                                                              }
-                                }
-                >
-                                <EmptySearch
-                                                className="empty"
-                                                variant="errorFetching"
-                                />
-                </GridColumn>
+                  <GridColumn
+                                    size={7}
+                  >
+                                    <Heading
+                                                      size={3}
+                                    >
+                                                      Search Results 
+                                                      in All Signal Types
+                                    </Heading>
+                  </GridColumn>
+                  <GridColumn
+                                    size={5}
+                  >
+                                    <Connect(MultiSignalsTraitsCreationContainer)
+                                                      canCreateTraits={undefined}
+                                    />
+                  </GridColumn>
 </GridRow>,
+                <GridRow
+                  reverse={false}
+>
+                  <GridColumn
+                                    size={12}
+                                    style={
+                                                      Object {
+                                                                        "position": "relative",
+                                                                      }
+                                    }
+                  >
+                                    <EmptySearch
+                                                      className="empty"
+                                                      variant="errorFetching"
+                                    />
+                  </GridColumn>
+</GridRow>,
+              ],
               "className": "tableContainer",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  false,
-                  <GridColumn
-                    size={12}
-                    style={
-                                        Object {
-                                                            "position": "relative",
-                                                          }
-                    }
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <GridColumn
+                      size={7}
 >
-                    <EmptySearch
-                                        className="empty"
-                                        variant="errorFetching"
-                    />
+                      <Heading
+                                            size={3}
+                      >
+                                            Search Results 
+                                            in All Signal Types
+                      </Heading>
 </GridColumn>,
-                ],
-                "reverse": false,
-              },
-              "ref": null,
-              "rendered": Array [
-                false,
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <EmptySearch
-                      className="empty"
-                      variant="errorFetching"
-/>,
-                    "size": 12,
-                    "style": Object {
-                      "position": "relative",
-                    },
-                  },
-                  "ref": null,
-                  "rendered": Object {
+                    <GridColumn
+                      size={5}
+>
+                      <Connect(MultiSignalsTraitsCreationContainer)
+                                            canCreateTraits={undefined}
+                      />
+</GridColumn>,
+                  ],
+                  "reverse": false,
+                  "valign": "middle",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
-                      "className": "empty",
-                      "variant": "errorFetching",
+                      "children": <Heading
+                        size={3}
+>
+                        Search Results 
+                        in All Signal Types
+</Heading>,
+                      "size": 7,
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": Array [
+                          "Search Results ",
+                          "in All Signal Types",
+                        ],
+                        "size": 3,
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Search Results ",
+                        "in All Signal Types",
+                      ],
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
-                  "type": [Function],
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <Connect(MultiSignalsTraitsCreationContainer)
+                        canCreateTraits={undefined}
+/>,
+                      "size": 5,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "canCreateTraits": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    false,
+                    <GridColumn
+                      size={12}
+                      style={
+                                            Object {
+                                                                  "position": "relative",
+                                                                }
+                      }
+>
+                      <EmptySearch
+                                            className="empty"
+                                            variant="errorFetching"
+                      />
+</GridColumn>,
+                  ],
+                  "reverse": false,
                 },
-              ],
-              "type": [Function],
-            },
+                "ref": null,
+                "rendered": Array [
+                  false,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <EmptySearch
+                        className="empty"
+                        variant="errorFetching"
+/>,
+                      "size": 12,
+                      "style": Object {
+                        "position": "relative",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "className": "empty",
+                        "variant": "errorFetching",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
         ],
@@ -7014,6 +7170,7 @@ ShallowWrapper {
                         className="filterListContainer"
             >
                         <SignalTypeFilter
+                                    isSearched={true}
                                     onSignalTypeChange={[Function]}
                                     signalType="ALL"
                         />
@@ -7021,6 +7178,28 @@ ShallowWrapper {
             <div
                         className="tableContainer"
             >
+                        <GridRow
+                                    reverse={false}
+                                    valign="middle"
+                        >
+                                    <GridColumn
+                                                size={7}
+                                    >
+                                                <Heading
+                                                            size={3}
+                                                >
+                                                            Search Results 
+                                                            in All Signal Types
+                                                </Heading>
+                                    </GridColumn>
+                                    <GridColumn
+                                                size={5}
+                                    >
+                                                <Connect(MultiSignalsTraitsCreationContainer)
+                                                            canCreateTraits={undefined}
+                                                />
+                                    </GridColumn>
+                        </GridRow>
                         <GridRow
                                     reverse={false}
                         >
@@ -7818,6 +7997,7 @@ ShallowWrapper {
                 className="filterListContainer"
 >
                 <SignalTypeFilter
+                                isSearched={true}
                                 onSignalTypeChange={[Function]}
                                 signalType="ALL"
                 />
@@ -7825,6 +8005,28 @@ ShallowWrapper {
               <div
                 className="tableContainer"
 >
+                <GridRow
+                                reverse={false}
+                                valign="middle"
+                >
+                                <GridColumn
+                                                size={7}
+                                >
+                                                <Heading
+                                                                size={3}
+                                                >
+                                                                Search Results 
+                                                                in All Signal Types
+                                                </Heading>
+                                </GridColumn>
+                                <GridColumn
+                                                size={5}
+                                >
+                                                <Connect(MultiSignalsTraitsCreationContainer)
+                                                                canCreateTraits={undefined}
+                                                />
+                                </GridColumn>
+                </GridRow>
                 <GridRow
                                 reverse={false}
                 >
@@ -7858,6 +8060,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <SignalTypeFilter
+                  isSearched={true}
                   onSignalTypeChange={[Function]}
                   signalType="ALL"
 />,
@@ -7869,6 +8072,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "isSearched": true,
                   "onSignalTypeChange": [Function],
                   "signalType": "ALL",
                 },
@@ -7883,84 +8087,200 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <GridRow
-                  reverse={false}
+                "children": Array [
+                  <GridRow
+                    reverse={false}
+                    valign="middle"
 >
-                  <GridColumn
-                                    size={12}
-                                    style={
-                                                      Object {
-                                                                        "position": "relative",
-                                                                      }
-                                    }
-                  >
-                                    <EmptySearch
-                                                      className="empty"
-                                                      variant="errorFetching"
-                                    />
-                  </GridColumn>
+                    <GridColumn
+                                        size={7}
+                    >
+                                        <Heading
+                                                            size={3}
+                                        >
+                                                            Search Results 
+                                                            in All Signal Types
+                                        </Heading>
+                    </GridColumn>
+                    <GridColumn
+                                        size={5}
+                    >
+                                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                            canCreateTraits={undefined}
+                                        />
+                    </GridColumn>
 </GridRow>,
+                  <GridRow
+                    reverse={false}
+>
+                    <GridColumn
+                                        size={12}
+                                        style={
+                                                            Object {
+                                                                                "position": "relative",
+                                                                              }
+                                        }
+                    >
+                                        <EmptySearch
+                                                            className="empty"
+                                                            variant="errorFetching"
+                                        />
+                    </GridColumn>
+</GridRow>,
+                ],
                 "className": "tableContainer",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    false,
-                    <GridColumn
-                      size={12}
-                      style={
-                                            Object {
-                                                                  "position": "relative",
-                                                                }
-                      }
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <GridColumn
+                        size={7}
 >
-                      <EmptySearch
-                                            className="empty"
-                                            variant="errorFetching"
-                      />
+                        <Heading
+                                                size={3}
+                        >
+                                                Search Results 
+                                                in All Signal Types
+                        </Heading>
 </GridColumn>,
-                  ],
-                  "reverse": false,
-                },
-                "ref": null,
-                "rendered": Array [
-                  false,
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <EmptySearch
-                        className="empty"
-                        variant="errorFetching"
-/>,
-                      "size": 12,
-                      "style": Object {
-                        "position": "relative",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Object {
+                      <GridColumn
+                        size={5}
+>
+                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                canCreateTraits={undefined}
+                        />
+</GridColumn>,
+                    ],
+                    "reverse": false,
+                    "valign": "middle",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "class",
                       "props": Object {
-                        "className": "empty",
-                        "variant": "errorFetching",
+                        "children": <Heading
+                          size={3}
+>
+                          Search Results 
+                          in All Signal Types
+</Heading>,
+                        "size": 7,
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "children": Array [
+                            "Search Results ",
+                            "in All Signal Types",
+                          ],
+                          "size": 3,
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Search Results ",
+                          "in All Signal Types",
+                        ],
+                        "type": [Function],
+                      },
                       "type": [Function],
                     },
-                    "type": [Function],
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <Connect(MultiSignalsTraitsCreationContainer)
+                          canCreateTraits={undefined}
+/>,
+                        "size": 5,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "canCreateTraits": undefined,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      false,
+                      <GridColumn
+                        size={12}
+                        style={
+                                                Object {
+                                                                        "position": "relative",
+                                                                      }
+                        }
+>
+                        <EmptySearch
+                                                className="empty"
+                                                variant="errorFetching"
+                        />
+</GridColumn>,
+                    ],
+                    "reverse": false,
                   },
-                ],
-                "type": [Function],
-              },
+                  "ref": null,
+                  "rendered": Array [
+                    false,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <EmptySearch
+                          className="empty"
+                          variant="errorFetching"
+/>,
+                        "size": 12,
+                        "style": Object {
+                          "position": "relative",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "className": "empty",
+                          "variant": "errorFetching",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
           ],
@@ -8358,6 +8678,7 @@ ShallowWrapper {
                     className="filterListContainer"
           >
                     <SignalTypeFilter
+                              isSearched={true}
                               onSignalTypeChange={[Function]}
                               signalType="ALL"
                     />
@@ -8365,6 +8686,28 @@ ShallowWrapper {
           <div
                     className="tableContainer"
           >
+                    <GridRow
+                              reverse={false}
+                              valign="middle"
+                    >
+                              <GridColumn
+                                        size={7}
+                              >
+                                        <Heading
+                                                  size={3}
+                                        >
+                                                  Search Results 
+                                                  in All Signal Types
+                                        </Heading>
+                              </GridColumn>
+                              <GridColumn
+                                        size={5}
+                              >
+                                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                  canCreateTraits={undefined}
+                                        />
+                              </GridColumn>
+                    </GridRow>
                     <GridRow
                               reverse={false}
                     >
@@ -9144,6 +9487,7 @@ ShallowWrapper {
               className="filterListContainer"
 >
               <SignalTypeFilter
+                            isSearched={true}
                             onSignalTypeChange={[Function]}
                             signalType="ALL"
               />
@@ -9151,6 +9495,28 @@ ShallowWrapper {
             <div
               className="tableContainer"
 >
+              <GridRow
+                            reverse={false}
+                            valign="middle"
+              >
+                            <GridColumn
+                                          size={7}
+                            >
+                                          <Heading
+                                                        size={3}
+                                          >
+                                                        Search Results 
+                                                        in All Signal Types
+                                          </Heading>
+                            </GridColumn>
+                            <GridColumn
+                                          size={5}
+                            >
+                                          <Connect(MultiSignalsTraitsCreationContainer)
+                                                        canCreateTraits={undefined}
+                                          />
+                            </GridColumn>
+              </GridRow>
               <GridRow
                             reverse={false}
               >
@@ -9184,6 +9550,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <SignalTypeFilter
+                isSearched={true}
                 onSignalTypeChange={[Function]}
                 signalType="ALL"
 />,
@@ -9195,6 +9562,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "isSearched": true,
                 "onSignalTypeChange": [Function],
                 "signalType": "ALL",
               },
@@ -9209,84 +9577,200 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <GridRow
-                reverse={false}
+              "children": Array [
+                <GridRow
+                  reverse={false}
+                  valign="middle"
 >
-                <GridColumn
-                                size={12}
-                                style={
-                                                Object {
-                                                                "position": "relative",
-                                                              }
-                                }
-                >
-                                <EmptySearch
-                                                className="empty"
-                                                variant="errorFetching"
-                                />
-                </GridColumn>
+                  <GridColumn
+                                    size={7}
+                  >
+                                    <Heading
+                                                      size={3}
+                                    >
+                                                      Search Results 
+                                                      in All Signal Types
+                                    </Heading>
+                  </GridColumn>
+                  <GridColumn
+                                    size={5}
+                  >
+                                    <Connect(MultiSignalsTraitsCreationContainer)
+                                                      canCreateTraits={undefined}
+                                    />
+                  </GridColumn>
 </GridRow>,
+                <GridRow
+                  reverse={false}
+>
+                  <GridColumn
+                                    size={12}
+                                    style={
+                                                      Object {
+                                                                        "position": "relative",
+                                                                      }
+                                    }
+                  >
+                                    <EmptySearch
+                                                      className="empty"
+                                                      variant="errorFetching"
+                                    />
+                  </GridColumn>
+</GridRow>,
+              ],
               "className": "tableContainer",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  false,
-                  <GridColumn
-                    size={12}
-                    style={
-                                        Object {
-                                                            "position": "relative",
-                                                          }
-                    }
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <GridColumn
+                      size={7}
 >
-                    <EmptySearch
-                                        className="empty"
-                                        variant="errorFetching"
-                    />
+                      <Heading
+                                            size={3}
+                      >
+                                            Search Results 
+                                            in All Signal Types
+                      </Heading>
 </GridColumn>,
-                ],
-                "reverse": false,
-              },
-              "ref": null,
-              "rendered": Array [
-                false,
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": <EmptySearch
-                      className="empty"
-                      variant="errorFetching"
-/>,
-                    "size": 12,
-                    "style": Object {
-                      "position": "relative",
-                    },
-                  },
-                  "ref": null,
-                  "rendered": Object {
+                    <GridColumn
+                      size={5}
+>
+                      <Connect(MultiSignalsTraitsCreationContainer)
+                                            canCreateTraits={undefined}
+                      />
+</GridColumn>,
+                  ],
+                  "reverse": false,
+                  "valign": "middle",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
-                      "className": "empty",
-                      "variant": "errorFetching",
+                      "children": <Heading
+                        size={3}
+>
+                        Search Results 
+                        in All Signal Types
+</Heading>,
+                      "size": 7,
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": Array [
+                          "Search Results ",
+                          "in All Signal Types",
+                        ],
+                        "size": 3,
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Search Results ",
+                        "in All Signal Types",
+                      ],
+                      "type": [Function],
+                    },
                     "type": [Function],
                   },
-                  "type": [Function],
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <Connect(MultiSignalsTraitsCreationContainer)
+                        canCreateTraits={undefined}
+/>,
+                      "size": 5,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "canCreateTraits": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    false,
+                    <GridColumn
+                      size={12}
+                      style={
+                                            Object {
+                                                                  "position": "relative",
+                                                                }
+                      }
+>
+                      <EmptySearch
+                                            className="empty"
+                                            variant="errorFetching"
+                      />
+</GridColumn>,
+                  ],
+                  "reverse": false,
                 },
-              ],
-              "type": [Function],
-            },
+                "ref": null,
+                "rendered": Array [
+                  false,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <EmptySearch
+                        className="empty"
+                        variant="errorFetching"
+/>,
+                      "size": 12,
+                      "style": Object {
+                        "position": "relative",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "className": "empty",
+                        "variant": "errorFetching",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
             "type": "div",
           },
         ],
@@ -9504,6 +9988,7 @@ ShallowWrapper {
                         className="filterListContainer"
             >
                         <SignalTypeFilter
+                                    isSearched={true}
                                     onSignalTypeChange={[Function]}
                                     signalType="ALL"
                         />
@@ -9511,6 +9996,28 @@ ShallowWrapper {
             <div
                         className="tableContainer"
             >
+                        <GridRow
+                                    reverse={false}
+                                    valign="middle"
+                        >
+                                    <GridColumn
+                                                size={7}
+                                    >
+                                                <Heading
+                                                            size={3}
+                                                >
+                                                            Search Results 
+                                                            in All Signal Types
+                                                </Heading>
+                                    </GridColumn>
+                                    <GridColumn
+                                                size={5}
+                                    >
+                                                <Connect(MultiSignalsTraitsCreationContainer)
+                                                            canCreateTraits={undefined}
+                                                />
+                                    </GridColumn>
+                        </GridRow>
                         <GridRow
                                     reverse={false}
                         >
@@ -10290,6 +10797,7 @@ ShallowWrapper {
                 className="filterListContainer"
 >
                 <SignalTypeFilter
+                                isSearched={true}
                                 onSignalTypeChange={[Function]}
                                 signalType="ALL"
                 />
@@ -10297,6 +10805,28 @@ ShallowWrapper {
               <div
                 className="tableContainer"
 >
+                <GridRow
+                                reverse={false}
+                                valign="middle"
+                >
+                                <GridColumn
+                                                size={7}
+                                >
+                                                <Heading
+                                                                size={3}
+                                                >
+                                                                Search Results 
+                                                                in All Signal Types
+                                                </Heading>
+                                </GridColumn>
+                                <GridColumn
+                                                size={5}
+                                >
+                                                <Connect(MultiSignalsTraitsCreationContainer)
+                                                                canCreateTraits={undefined}
+                                                />
+                                </GridColumn>
+                </GridRow>
                 <GridRow
                                 reverse={false}
                 >
@@ -10330,6 +10860,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <SignalTypeFilter
+                  isSearched={true}
                   onSignalTypeChange={[Function]}
                   signalType="ALL"
 />,
@@ -10341,6 +10872,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "isSearched": true,
                   "onSignalTypeChange": [Function],
                   "signalType": "ALL",
                 },
@@ -10355,84 +10887,200 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <GridRow
-                  reverse={false}
+                "children": Array [
+                  <GridRow
+                    reverse={false}
+                    valign="middle"
 >
-                  <GridColumn
-                                    size={12}
-                                    style={
-                                                      Object {
-                                                                        "position": "relative",
-                                                                      }
-                                    }
-                  >
-                                    <EmptySearch
-                                                      className="empty"
-                                                      variant="errorFetching"
-                                    />
-                  </GridColumn>
+                    <GridColumn
+                                        size={7}
+                    >
+                                        <Heading
+                                                            size={3}
+                                        >
+                                                            Search Results 
+                                                            in All Signal Types
+                                        </Heading>
+                    </GridColumn>
+                    <GridColumn
+                                        size={5}
+                    >
+                                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                            canCreateTraits={undefined}
+                                        />
+                    </GridColumn>
 </GridRow>,
+                  <GridRow
+                    reverse={false}
+>
+                    <GridColumn
+                                        size={12}
+                                        style={
+                                                            Object {
+                                                                                "position": "relative",
+                                                                              }
+                                        }
+                    >
+                                        <EmptySearch
+                                                            className="empty"
+                                                            variant="errorFetching"
+                                        />
+                    </GridColumn>
+</GridRow>,
+                ],
                 "className": "tableContainer",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    false,
-                    <GridColumn
-                      size={12}
-                      style={
-                                            Object {
-                                                                  "position": "relative",
-                                                                }
-                      }
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <GridColumn
+                        size={7}
 >
-                      <EmptySearch
-                                            className="empty"
-                                            variant="errorFetching"
-                      />
+                        <Heading
+                                                size={3}
+                        >
+                                                Search Results 
+                                                in All Signal Types
+                        </Heading>
 </GridColumn>,
-                  ],
-                  "reverse": false,
-                },
-                "ref": null,
-                "rendered": Array [
-                  false,
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <EmptySearch
-                        className="empty"
-                        variant="errorFetching"
-/>,
-                      "size": 12,
-                      "style": Object {
-                        "position": "relative",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": Object {
+                      <GridColumn
+                        size={5}
+>
+                        <Connect(MultiSignalsTraitsCreationContainer)
+                                                canCreateTraits={undefined}
+                        />
+</GridColumn>,
+                    ],
+                    "reverse": false,
+                    "valign": "middle",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "class",
                       "props": Object {
-                        "className": "empty",
-                        "variant": "errorFetching",
+                        "children": <Heading
+                          size={3}
+>
+                          Search Results 
+                          in All Signal Types
+</Heading>,
+                        "size": 7,
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "children": Array [
+                            "Search Results ",
+                            "in All Signal Types",
+                          ],
+                          "size": 3,
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Search Results ",
+                          "in All Signal Types",
+                        ],
+                        "type": [Function],
+                      },
                       "type": [Function],
                     },
-                    "type": [Function],
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <Connect(MultiSignalsTraitsCreationContainer)
+                          canCreateTraits={undefined}
+/>,
+                        "size": 5,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "canCreateTraits": undefined,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      false,
+                      <GridColumn
+                        size={12}
+                        style={
+                                                Object {
+                                                                        "position": "relative",
+                                                                      }
+                        }
+>
+                        <EmptySearch
+                                                className="empty"
+                                                variant="errorFetching"
+                        />
+</GridColumn>,
+                    ],
+                    "reverse": false,
                   },
-                ],
-                "type": [Function],
-              },
+                  "ref": null,
+                  "rendered": Array [
+                    false,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <EmptySearch
+                          className="empty"
+                          variant="errorFetching"
+/>,
+                        "size": 12,
+                        "style": Object {
+                          "position": "relative",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "className": "empty",
+                          "variant": "errorFetching",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
           ],

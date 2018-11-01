@@ -15,13 +15,20 @@ class SignalTypeFilter extends Component {
             REALTIME: 27,
             ONBOARDED: 37407,
         },
+        selectedIndex: 0,
     };
+
+    //validate if filter is cleared, reset to the default initial selected tab index
+    componentDidUpdate(prevProps) {
+        if (!this.props.isSearched && prevProps.isSearched) {
+            this.setState({ selectedIndex: 0 });
+        }
+    }
 
     handleSignalTypeChange = tabIndex => {
         // const signalTypeOptions = getSignalTypeOptions(this.state.counts);
         const { value } = signalTypeOptions[tabIndex];
-
-        this.props.onSignalTypeChange(value);
+        this.setState({ selectedIndex: tabIndex }, () => this.props.onSignalTypeChange(value));
     };
 
     renderTab = option => (
@@ -45,6 +52,7 @@ class SignalTypeFilter extends Component {
                     className={styles.signalType}
                     orientation="vertical"
                     variant="compact"
+                    selectedIndex={this.state.selectedIndex}
                     onChange={this.handleSignalTypeChange}>
                     {signalTypeOptions.map(this.renderTab)}
                 </TabList>
@@ -55,6 +63,7 @@ class SignalTypeFilter extends Component {
 
 SignalTypeFilter.propTypes = {
     counts: PropTypes.object,
+    isSearched: PropTypes.bool,
     onSignalTypeChange: PropTypes.func,
     signalType: PropTypes.string,
 };
