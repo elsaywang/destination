@@ -32,7 +32,6 @@ import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
 import { formatSignal } from '../utils/stringifySignals';
 import { getSaveThisSearchMessage } from '../constants/tooltipMessageOptions';
 import {
-    formatDataSourceOptionName,
     formatReportSuiteOptionName,
     isValidDataSourceName,
     isValidReportSuite,
@@ -105,6 +104,7 @@ class SearchContainer extends Component {
                 },
                 filterNewSignals: false,
                 presetId: null,
+                searched: true,
             },
             () => {
                 this.props.callSearch({ search: this.state });
@@ -411,14 +411,18 @@ class SearchContainer extends Component {
             return <EmptySearch className={styles.empty} variant={'errorFetching'} />;
         }
 
-        if (this.props.isResultsLoaded && this.state.searched) {
+        if (this.isSearchedWithNoResult()) {
             return <EmptySearch className={styles.empty} variant={'noResult'} />;
         }
 
         return <Wait size="L" centered />;
     };
 
-    shouldShowResults = () => this.props.results.list.length && this.props.isResultsLoaded;
+    isSearchedWithNoResult = () =>
+        this.props.isResultsLoaded && this.state.searched && !this.props.results.list.length;
+
+    isSearchedWithResults = () =>
+        this.props.isResultsLoaded && this.state.searched && this.props.results.list.length;
 
     isSearchDisabled = () => !this.props.isResultsLoaded && this.state.searched;
 
@@ -427,7 +431,8 @@ class SearchContainer extends Component {
     isFilteredByAdobeAnalytics = () => this.state.source.sourceType === 'ANALYTICS';
 
     isFilteredBySignalSource = () =>
-        this.isFilteredByOnboardedRecords() || this.isFilteredByAdobeAnalytics();
+        this.state.searched &&
+        (this.isFilteredByOnboardedRecords() || this.isFilteredByAdobeAnalytics());
 
     getSignalSources = () => {
         const { dataSources, reportSuites } = this.props;
@@ -465,6 +470,34 @@ class SearchContainer extends Component {
     };
 
     render() {
+        const renderSignalSourceFilter = (
+            <GridColumn size={3}>
+                <SignalSourceFilter
+                    disabled={this.state.advanced}
+                    sourceType={this.state.source.sourceType}
+                    signalSources={this.getSignalSources()}
+                    onSignalSourceSelect={this.handleSignalSourceSelect}
+                    selectedSignalSource={this.getSelectedSignalSource()}
+                />
+            </GridColumn>
+        );
+
+        const renderSignalTypeFilter = (
+            <div className={styles.filterListContainer}>
+                <SignalTypeFilter
+                    onSignalTypeChange={this.handleSignalTypeChange}
+                    signalType={this.state.source.sourceType}
+                    isSearched={this.state.searched}
+                />
+            </div>
+        );
+
+        const renderSearchResultsHeading = (
+            <GridColumn size={7}>
+                <Heading size={3}>Search Results {this.getSearchResultsMessage()}</Heading>
+            </GridColumn>
+        );
+
         return (
             <Fragment>
                 <GridRow>
@@ -510,105 +543,88 @@ class SearchContainer extends Component {
                                 error={this.props.errors.savedSearch}
                                 disabled={this.isSearchDisabled()}
                             />
-                            {this.props.results.list.length > 0 && (
-                                <Fragment>
-                                    <div className={styles.saveSearchExecution}>
-                                        <SaveSearchExecution
-                                            isSavedSearchLimitReached={
-                                                this.props.isSavedSearchLimitReached
-                                            }
-                                            savedSearchLimit={this.props.savedSearchLimit}
-                                            confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
-                                            cancelSaveSearch={this.props.cancelSaveSearch}
-                                            updateSaveSearchName={this.props.updateSaveSearchName}
-                                            trackSearchResultInDashboard={
-                                                this.props.trackSearchResultInDashboard
-                                            }
-                                            selectDefaultSorting={this.props.selectDefaultSorting}
-                                            changeSortingOrder={this.props.changeSortingOrder}
-                                            error={this.props.errors.saveSearch}
-                                        />
-                                    </div>
-                                    {!this.props.errors.saveSearch.hasError && (
-                                        <OverlayTooltip
-                                            className={styles.saveSearchExecutionTooltip}
-                                            message={this.saveThisSearchMessage()}
-                                        />
-                                    )}
-                                </Fragment>
-                            )}
+                            <Fragment>
+                                <div className={styles.saveSearchExecution}>
+                                    <SaveSearchExecution
+                                        isSavedSearchLimitReached={
+                                            this.props.isSavedSearchLimitReached
+                                        }
+                                        savedSearchLimit={this.props.savedSearchLimit}
+                                        confirmSaveThisSearch={this.handleSaveThisSearchConfirm}
+                                        cancelSaveSearch={this.props.cancelSaveSearch}
+                                        updateSaveSearchName={this.props.updateSaveSearchName}
+                                        trackSearchResultInDashboard={
+                                            this.props.trackSearchResultInDashboard
+                                        }
+                                        selectDefaultSorting={this.props.selectDefaultSorting}
+                                        changeSortingOrder={this.props.changeSortingOrder}
+                                        error={this.props.errors.saveSearch}
+                                    />
+                                </div>
+                                {!this.props.errors.saveSearch.hasError && (
+                                    <OverlayTooltip
+                                        className={styles.saveSearchExecutionTooltip}
+                                        message={this.saveThisSearchMessage()}
+                                    />
+                                )}
+                            </Fragment>
                         </div>
                     </GridColumn>
                 </GridRow>
-
-                {this.shouldShowResults() ? (
-                    <div style={{ display: 'flex', marginTop: 20 }} data-test="search-results">
-                        {!this.state.advanced && (
-                            <div className={styles.filterListContainer}>
-                                <SignalTypeFilter
-                                    onSignalTypeChange={this.handleSignalTypeChange}
-                                    signalType={this.state.source.sourceType}
-                                />
-                            </div>
-                        )}
-                        <div className={styles.tableContainer}>
+                <div style={{ display: 'flex', marginTop: 20 }} data-test="search-results">
+                    {!this.state.advanced && renderSignalTypeFilter}
+                    <div className={styles.tableContainer}>
+                        {this.state.searched && (
                             <GridRow valign="middle">
-                                <GridColumn size={7}>
-                                    <Heading size={3}>
-                                        Search Results {this.getSearchResultsMessage()}
-                                    </Heading>
-                                </GridColumn>
+                                {renderSearchResultsHeading}
                                 <GridColumn size={5}>
                                     <MultiSignalsTraitsCreationContainer
                                         canCreateTraits={this.props.permissions.canCreateTraits}
                                     />
                                 </GridColumn>
                             </GridRow>
-                            {this.isFilteredBySignalSource() ? (
-                                <GridRow>
-                                    <GridColumn size={3}>
-                                        <SignalSourceFilter
-                                            disabled={this.state.advanced}
-                                            sourceType={this.state.source.sourceType}
-                                            signalSources={this.getSignalSources()}
-                                            onSignalSourceSelect={this.handleSignalSourceSelect}
-                                            selectedSignalSource={this.getSelectedSignalSource()}
-                                        />
-                                    </GridColumn>
-                                    <GridColumn size={9}>
-                                        <TraitsCreationWarning />
-                                    </GridColumn>
-                                </GridRow>
-                            ) : (
-                                <GridRow>
-                                    <GridColumn size={9} offsetSize={3}>
-                                        <TraitsCreationWarning />
-                                    </GridColumn>
-                                </GridRow>
-                            )}
-                            <SignalsTable
-                                results={this.props.results.list}
-                                selectedRowIndexes={this.props.selectedRowIndexes}
-                                signalType={this.state.source.sourceType}
-                                isAdvancedSearchEnabled={this.state.advanced}
-                                isMaxSignalSelectionsReached={
-                                    this.props.isMaxSignalSelectionsReached
-                                }
-                                onSortSearch={this.handleSortSearch}
-                                onSignalRecordsSelection={this.props.selectSignals}
-                                onLoadMore={this.handleLoadMore}
-                                canCreateTraits={this.props.permissions.canCreateTraits}
-                                allowsSelection={this.props.permissions.canCreateTraits}
-                            />
-                        </div>
+                        )}
+                        {this.isSearchedWithResults() ? (
+                            <Fragment>
+                                {this.isFilteredBySignalSource() ? (
+                                    <GridRow>
+                                        {renderSignalSourceFilter}
+                                        <GridColumn size={9}>
+                                            <TraitsCreationWarning />
+                                        </GridColumn>
+                                    </GridRow>
+                                ) : (
+                                    <GridRow>
+                                        <GridColumn size={9} offsetSize={3}>
+                                            <TraitsCreationWarning />
+                                        </GridColumn>
+                                    </GridRow>
+                                )}
+                                <SignalsTable
+                                    results={this.props.results.list}
+                                    selectedRowIndexes={this.props.selectedRowIndexes}
+                                    signalType={this.state.source.sourceType}
+                                    isAdvancedSearchEnabled={this.state.advanced}
+                                    isMaxSignalSelectionsReached={
+                                        this.props.isMaxSignalSelectionsReached
+                                    }
+                                    onSortSearch={this.handleSortSearch}
+                                    onSignalRecordsSelection={this.props.selectSignals}
+                                    onLoadMore={this.handleLoadMore}
+                                    canCreateTraits={this.props.permissions.canCreateTraits}
+                                    allowsSelection={this.props.permissions.canCreateTraits}
+                                />
+                            </Fragment>
+                        ) : (
+                            <GridRow>
+                                {this.isFilteredBySignalSource() && renderSignalSourceFilter}
+                                <GridColumn size={12} style={{ position: 'relative' }}>
+                                    {this.renderEmptyState()}
+                                </GridColumn>
+                            </GridRow>
+                        )}
                     </div>
-                ) : (
-                    <GridRow>
-                        <GridColumn size={12} style={{ position: 'relative' }}>
-                            {this.renderEmptyState()}
-                        </GridColumn>
-                    </GridRow>
-                )}
+                </div>
             </Fragment>
         );
     }

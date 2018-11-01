@@ -78,10 +78,13 @@ export const getSignalSourcesOptions = (signalSources, sourceType) => {
 export const getSelectedReportSuiteFromSearchResults = ({ list }) => {
     const sources = list.map(({ source }) => source);
     const reportSuiteIds = sources.map(({ reportSuiteIds }) => reportSuiteIds);
-    const firstReportSuitId = reportSuiteIds[0][0];
+    if (!reportSuiteIds.length) {
+        return '';
+    }
+    const firstReportSuiteId = reportSuiteIds[0][0];
     //need to check if every reportSuiteId from results are the same => user selected a valid one from advanced ComboBox;
     //else => ''
-    return reportSuiteIds.every(reportSuiteId => reportSuiteId[0] === firstReportSuitId)
-        ? firstReportSuitId
+    return reportSuiteIds.every(reportSuiteId => reportSuiteId[0] === firstReportSuiteId)
+        ? firstReportSuiteId
         : '';
 };

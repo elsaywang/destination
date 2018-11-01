@@ -22,7 +22,7 @@ describe('Search Form Results Integration Tests', function() {
         it('should show empty state with start exploring image', function() {
             cy.get('[data-test="empty"]').should('exist');
             cy.get('[data-test="start-exploring"]').should('exist');
-            cy.get('[data-test="search-results"]').should('not.exist');
+            cy.get('[data-test="search-results"]').should('exist');
         });
     });
 
@@ -49,7 +49,7 @@ describe('Search Form Results Integration Tests', function() {
 
                 cy.get('[data-test="empty"]').should('exist');
                 cy.get('[data-test="no-result-found"]').should('exist');
-                cy.get('[data-test="search-results"]').should('not.exist');
+                cy.get('[data-test="search-results"]').should('exist');
                 cy.get('.spectrum-Loader').should('not.exist');
             });
         });
@@ -62,7 +62,6 @@ describe('Search Form Results Integration Tests', function() {
 
                 cy.route('POST', '/portal/api/v1/signals/list', errorResponse).as('searchFailed');
             });
-
             it('should show inline error message and not show any results', function() {
                 cy.get('[data-test="search-button"]').click();
                 cy.wait('@searchFailed');
@@ -73,7 +72,7 @@ describe('Search Form Results Integration Tests', function() {
                     .should('exist')
                     .should('have.text', errorResponse.statusText);
                 cy.get('[data-test="error-fetching-data"]').should('exist');
-                cy.get('[data-test="search-results"]').should('not.exist');
+                cy.get('[data-test="search-results"]').should('exist');
                 cy.get('.spectrum-Loader').should('not.exist');
             });
         });

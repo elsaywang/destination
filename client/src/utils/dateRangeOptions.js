@@ -1,5 +1,4 @@
 import { validDateRangeDays } from '../constants/dateRangeConstants';
-import { defaultMaxSignalRetentionDays } from '../constants/limitConstants';
 import { dateRangeDaysToPreset } from './dateRange';
 
 export const getDateRangeOptions = (dateRangeDays = validDateRangeDays) => [

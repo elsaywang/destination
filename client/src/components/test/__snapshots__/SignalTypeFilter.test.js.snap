@@ -4,6 +4,7 @@ exports[`<SignalTypeFilter /> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
+    isSearched={false}
     onSignalTypeChange={[Function]}
     signalType="ALL"
 />,
@@ -32,6 +33,7 @@ ShallowWrapper {
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
+          selectedIndex={0}
           variant="compact"
 >
           <Tab
@@ -42,7 +44,7 @@ ShallowWrapper {
                     selected={true}
                     tabIndex={0}
           >
-                    All
+                    All Signal Types
           </Tab>
           <Tab
                     data-test="analytics-signal-type-filter"
@@ -116,7 +118,7 @@ ShallowWrapper {
               selected={true}
               tabIndex={0}
 >
-              All
+              All Signal Types
 </Tab>,
             <Tab
               data-test="analytics-signal-type-filter"
@@ -163,6 +165,7 @@ ShallowWrapper {
           "onChange": [Function],
           "orientation": "vertical",
           "quiet": false,
+          "selectedIndex": 0,
           "variant": "compact",
         },
         "ref": null,
@@ -172,7 +175,7 @@ ShallowWrapper {
             "key": "ALL",
             "nodeType": "class",
             "props": Object {
-              "children": "All",
+              "children": "All Signal Types",
               "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
@@ -181,7 +184,7 @@ ShallowWrapper {
               "tabIndex": 0,
             },
             "ref": null,
-            "rendered": "All",
+            "rendered": "All Signal Types",
             "type": [Function],
           },
           Object {
@@ -276,6 +279,7 @@ ShallowWrapper {
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
+            selectedIndex={0}
             variant="compact"
 >
             <Tab
@@ -286,7 +290,7 @@ ShallowWrapper {
                         selected={true}
                         tabIndex={0}
             >
-                        All
+                        All Signal Types
             </Tab>
             <Tab
                         data-test="analytics-signal-type-filter"
@@ -360,7 +364,7 @@ ShallowWrapper {
                 selected={true}
                 tabIndex={0}
 >
-                All
+                All Signal Types
 </Tab>,
               <Tab
                 data-test="analytics-signal-type-filter"
@@ -407,6 +411,7 @@ ShallowWrapper {
             "onChange": [Function],
             "orientation": "vertical",
             "quiet": false,
+            "selectedIndex": 0,
             "variant": "compact",
           },
           "ref": null,
@@ -416,7 +421,7 @@ ShallowWrapper {
               "key": "ALL",
               "nodeType": "class",
               "props": Object {
-                "children": "All",
+                "children": "All Signal Types",
                 "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
@@ -425,7 +430,7 @@ ShallowWrapper {
                 "tabIndex": 0,
               },
               "ref": null,
-              "rendered": "All",
+              "rendered": "All Signal Types",
               "type": [Function],
             },
             Object {
@@ -529,6 +534,7 @@ exports[`<SignalTypeFilter /> component rendering renders correctly selected <Ta
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SignalTypeFilter
+    isSearched={true}
     onSignalTypeChange={[Function]}
     signalType="ANALYTICS"
 />,
@@ -557,6 +563,7 @@ ShallowWrapper {
           onChange={[Function]}
           orientation="vertical"
           quiet={false}
+          selectedIndex={0}
           variant="compact"
 >
           <Tab
@@ -567,7 +574,7 @@ ShallowWrapper {
                     selected={false}
                     tabIndex={0}
           >
-                    All
+                    All Signal Types
           </Tab>
           <Tab
                     data-test="analytics-signal-type-filter"
@@ -641,7 +648,7 @@ ShallowWrapper {
               selected={false}
               tabIndex={0}
 >
-              All
+              All Signal Types
 </Tab>,
             <Tab
               data-test="analytics-signal-type-filter"
@@ -688,6 +695,7 @@ ShallowWrapper {
           "onChange": [Function],
           "orientation": "vertical",
           "quiet": false,
+          "selectedIndex": 0,
           "variant": "compact",
         },
         "ref": null,
@@ -697,7 +705,7 @@ ShallowWrapper {
             "key": "ALL",
             "nodeType": "class",
             "props": Object {
-              "children": "All",
+              "children": "All Signal Types",
               "data-test": "all-signal-type-filter",
               "disabled": false,
               "invalid": false,
@@ -706,7 +714,7 @@ ShallowWrapper {
               "tabIndex": 0,
             },
             "ref": null,
-            "rendered": "All",
+            "rendered": "All Signal Types",
             "type": [Function],
           },
           Object {
@@ -801,6 +809,7 @@ ShallowWrapper {
             onChange={[Function]}
             orientation="vertical"
             quiet={false}
+            selectedIndex={0}
             variant="compact"
 >
             <Tab
@@ -811,7 +820,7 @@ ShallowWrapper {
                         selected={false}
                         tabIndex={0}
             >
-                        All
+                        All Signal Types
             </Tab>
             <Tab
                         data-test="analytics-signal-type-filter"
@@ -885,7 +894,7 @@ ShallowWrapper {
                 selected={false}
                 tabIndex={0}
 >
-                All
+                All Signal Types
 </Tab>,
               <Tab
                 data-test="analytics-signal-type-filter"
@@ -932,6 +941,7 @@ ShallowWrapper {
             "onChange": [Function],
             "orientation": "vertical",
             "quiet": false,
+            "selectedIndex": 0,
             "variant": "compact",
           },
           "ref": null,
@@ -941,7 +951,7 @@ ShallowWrapper {
               "key": "ALL",
               "nodeType": "class",
               "props": Object {
-                "children": "All",
+                "children": "All Signal Types",
                 "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "invalid": false,
@@ -950,7 +960,7 @@ ShallowWrapper {
                 "tabIndex": 0,
               },
               "ref": null,
-              "rendered": "All",
+              "rendered": "All Signal Types",
               "type": [Function],
             },
             Object {

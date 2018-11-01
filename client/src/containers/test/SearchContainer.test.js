@@ -54,16 +54,16 @@ describe('<SearchContainer /> component', () => {
             expect(wrapper.find(EmptySearch).props().variant).toEqual('explore');
         });
 
-        it('does not render <SignalSourceFilter /> component when there are no props.results passed in ', () => {
-            expect(wrapper.find(SignalTypeFilter).exists()).toBe(false);
+        it('does always render <SignalSourceFilter /> component when there are no props.results passed in ', () => {
+            expect(wrapper.find(SignalTypeFilter).exists()).toBe(true);
         });
 
         it('does not render <SignalsTable /> component when there are no props.results passed in', () => {
             expect(wrapper.find(SignalsTable).exists()).toBe(false);
         });
 
-        it('does not render <SaveSearchExecution /> component when there are no props.results passed in', () => {
-            expect(wrapper.find(SaveSearchExecution).exists()).toBe(false);
+        it('does always render <SaveSearchExecution /> component when there are no props.results passed in', () => {
+            expect(wrapper.find(SaveSearchExecution).exists()).toBe(true);
         });
 
         it('does not render <Wait /> component when there are no props.results passed in and searched state is falsy', () => {
@@ -83,6 +83,11 @@ describe('<SearchContainer /> component', () => {
                     },
                     isResultsLoaded: true,
                 });
+                wrapper.setState({ searched: true });
+            });
+
+            it('matches snapshot', () => {
+                expect(wrapper).toMatchSnapshot();
             });
 
             it('renders <SignalSourceFilter /> component', () => {
@@ -149,9 +154,12 @@ describe('<SearchContainer /> component', () => {
         });
 
         describe('Helpers', () => {
-            describe('shouldShowResults', () => {
+            describe('isSearchedWithResults', () => {
                 describe('when results exist and are loaded', () => {
                     beforeAll(() => {
+                        wrapper.setState({
+                            searched: true,
+                        });
                         wrapper.setProps({
                             results: {
                                 list: [
@@ -166,12 +174,15 @@ describe('<SearchContainer /> component', () => {
                     });
 
                     it('should return true', () => {
-                        expect(wrapper.instance().shouldShowResults()).toBeTruthy();
+                        expect(wrapper.instance().isSearchedWithResults()).toBeTruthy();
                     });
                 });
 
                 describe('when results do not exist but have been requested', () => {
                     beforeAll(() => {
+                        wrapper.setState({
+                            searched: true,
+                        });
                         wrapper.setProps({
                             results: {
                                 list: [],
@@ -181,12 +192,15 @@ describe('<SearchContainer /> component', () => {
                     });
 
                     it('should return false', () => {
-                        expect(wrapper.instance().shouldShowResults()).toBeFalsy();
+                        expect(wrapper.instance().isSearchedWithResults()).toBeFalsy();
                     });
                 });
 
                 describe('when results do not exist and have not been requested', () => {
                     beforeAll(() => {
+                        wrapper.setState({
+                            searched: false,
+                        });
                         wrapper.setProps({
                             results: {
                                 list: [],
@@ -196,12 +210,15 @@ describe('<SearchContainer /> component', () => {
                     });
 
                     it('should return false', () => {
-                        expect(wrapper.instance().shouldShowResults()).toBeFalsy();
+                        expect(wrapper.instance().isSearchedWithResults()).toBeFalsy();
                     });
                 });
 
                 describe('when results exist but have not been requested, should never happen', () => {
                     beforeAll(() => {
+                        wrapper.setState({
+                            searched: true,
+                        });
                         wrapper.setProps({
                             results: {
                                 list: [
@@ -216,7 +233,7 @@ describe('<SearchContainer /> component', () => {
                     });
 
                     it('should return false', () => {
-                        expect(wrapper.instance().shouldShowResults()).toBeFalsy();
+                        expect(wrapper.instance().isSearchedWithResults()).toBeFalsy();
                     });
                 });
 
@@ -227,6 +244,78 @@ describe('<SearchContainer /> component', () => {
                         },
                         isResultsLoaded: true,
                     });
+                    wrapper.setState({ searched: true });
+                });
+            });
+
+            describe('isSearchedWithNoResult', () => {
+                describe('when searched,results do not exist and are loaded', () => {
+                    beforeAll(() => {
+                        wrapper.setState({
+                            searched: true,
+                        });
+                        wrapper.setProps({
+                            results: {
+                                list: [],
+                            },
+                            isResultsLoaded: true,
+                        });
+                    });
+
+                    it('should return true', () => {
+                        expect(wrapper.instance().isSearchedWithNoResult()).toBeTruthy();
+                    });
+                });
+
+                describe('when results do not exist and have not been requested', () => {
+                    beforeAll(() => {
+                        wrapper.setState({
+                            searched: false,
+                        });
+                        wrapper.setProps({
+                            results: {
+                                list: [],
+                            },
+                            isResultsLoaded: false,
+                        });
+                    });
+
+                    it('should return false', () => {
+                        expect(wrapper.instance().isSearchedWithNoResult()).toBeFalsy();
+                    });
+                });
+
+                describe('when results exist but have not been requested, should never happen', () => {
+                    beforeAll(() => {
+                        wrapper.setState({
+                            searched: true,
+                        });
+                        wrapper.setProps({
+                            results: {
+                                list: [
+                                    {
+                                        id: 0,
+                                        name: 'test',
+                                    },
+                                ],
+                            },
+                            isResultsLoaded: false,
+                        });
+                    });
+
+                    it('should return false', () => {
+                        expect(wrapper.instance().isSearchedWithNoResult()).toBeFalsy();
+                    });
+                });
+
+                afterAll(() => {
+                    wrapper.setProps({
+                        results: {
+                            list: [],
+                        },
+                        isResultsLoaded: true,
+                    });
+                    wrapper.setState({ searched: true });
                 });
             });
 

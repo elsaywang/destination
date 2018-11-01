@@ -5,7 +5,6 @@ import {
     validDateRangeDays,
     defaultDateRangeDays,
 } from '../constants/dateRangeConstants';
-import { defaultMaxSignalRetentionDays } from '../constants/limitConstants';
 
 /**
  * Most utils in this file are adapted from trait_builder/create.js  and adobe_am_utils.js in the portal.

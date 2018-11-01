@@ -9,6 +9,7 @@ describe('<SignalTypeFilter /> component', () => {
     const mockFn = jest.fn();
     const props = {
         signalType: 'ALL',
+        isSearched: false,
     };
     const state = {
         counts: {
@@ -18,9 +19,14 @@ describe('<SignalTypeFilter /> component', () => {
             REALTIME: 27,
             ONBOARDED: 37407,
         },
+        selectedIndex: 0,
     };
     const wrapper = shallow(
-        <SignalTypeFilter onSignalTypeChange={mockFn} signalType={props.signalType} />,
+        <SignalTypeFilter
+            onSignalTypeChange={mockFn}
+            signalType={props.signalType}
+            isSearched={props.isSearched}
+        />,
     );
     // const signalTypeOptions = getSignalTypeOptions(state.counts);
 
@@ -44,7 +50,7 @@ describe('<SignalTypeFilter /> component', () => {
                 option => option.value === signalType,
             ).label;
 
-            wrapper.setProps({ signalType });
+            wrapper.setProps({ signalType, isSearched: true });
 
             expect(
                 wrapper
@@ -87,14 +93,23 @@ describe('<SignalTypeFilter /> component', () => {
     describe('event handlers', () => {
         it('.handleSignalTypeChange() calls `onSignalTypeChange` prop with a signalType that corresponds to index of the signal type tab clicked', () => {
             wrapper.instance().handleSignalTypeChange(0);
+            expect(wrapper.instance().state.selectedIndex).toBe(0);
             expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ALL');
+
             wrapper.instance().handleSignalTypeChange(1);
+            expect(wrapper.instance().state.selectedIndex).toBe(1);
             expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ANALYTICS');
+
             wrapper.instance().handleSignalTypeChange(2);
+            expect(wrapper.instance().state.selectedIndex).toBe(2);
             expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ALF');
+
             wrapper.instance().handleSignalTypeChange(3);
+            expect(wrapper.instance().state.selectedIndex).toBe(3);
             expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('REALTIME');
+
             wrapper.instance().handleSignalTypeChange(4);
+            expect(wrapper.instance().state.selectedIndex).toBe(4);
             expect(wrapper.instance().props.onSignalTypeChange).toHaveBeenCalledWith('ONBOARDED');
         });
     });
