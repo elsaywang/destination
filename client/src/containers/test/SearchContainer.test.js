@@ -135,13 +135,7 @@ describe('<SearchContainer /> component', () => {
         describe('when search results in an error', () => {
             beforeAll(() => {
                 wrapper.setProps({
-                    errors: {
-                        ...wrapper.instance().props.errors,
-                        searchForm: {
-                            hasError: true,
-                            message: 'Forbidden',
-                        },
-                    },
+                    hasSearchFormError: true,
                 });
 
                 wrapper.setState({ searched: true });

@@ -93,6 +93,8 @@ ShallowWrapper {
           ]
     }
     getSavedSearch={[Function]}
+    hasError={false}
+    hasSearchFormError={false}
     isEndOfResults={false}
     isMaxSignalSelectionsReached={false}
     isResultsLoaded={false}
@@ -111,7 +113,19 @@ ShallowWrapper {
           }
     }
     saveSearch={[Function]}
+    saveSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearch={Array []}
+    savedSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearchFields={
         Object {
             "name": "",
@@ -2585,6 +2599,8 @@ ShallowWrapper {
           ]
     }
     getSavedSearch={[Function]}
+    hasError={false}
+    hasSearchFormError={false}
     isEndOfResults={false}
     isMaxSignalSelectionsReached={false}
     isResultsLoaded={true}
@@ -2608,7 +2624,19 @@ ShallowWrapper {
           }
     }
     saveSearch={[Function]}
+    saveSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearch={Array []}
+    savedSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearchFields={
         Object {
             "name": "",
@@ -5502,8 +5530,8 @@ ShallowWrapper {
               "hasError": false,
             },
             "searchForm": Object {
-              "hasError": true,
-              "message": "Forbidden",
+              "errorMessage": "",
+              "hasError": false,
             },
           }
     }
@@ -5566,6 +5594,8 @@ ShallowWrapper {
           ]
     }
     getSavedSearch={[Function]}
+    hasError={false}
+    hasSearchFormError={true}
     isEndOfResults={false}
     isMaxSignalSelectionsReached={false}
     isResultsLoaded={true}
@@ -5584,7 +5614,19 @@ ShallowWrapper {
           }
     }
     saveSearch={[Function]}
+    saveSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearch={Array []}
+    savedSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearchFields={
         Object {
             "name": "",
@@ -5658,8 +5700,8 @@ ShallowWrapper {
                                                     "hasError": false,
                                                   },
                                                   "searchForm": Object {
-                                                    "hasError": true,
-                                                    "message": "Forbidden",
+                                                    "errorMessage": "",
+                                                    "hasError": false,
                                                   },
                                                 }
                               }
@@ -5921,8 +5963,8 @@ ShallowWrapper {
                                                   "hasError": false,
                                                 },
                                                 "searchForm": Object {
-                                                  "hasError": true,
-                                                  "message": "Forbidden",
+                                                  "errorMessage": "",
+                                                  "hasError": false,
                                                 },
                                               }
                         }
@@ -6010,8 +6052,8 @@ ShallowWrapper {
                                             "hasError": false,
                                           },
                                           "searchForm": Object {
-                                            "hasError": true,
-                                            "message": "Forbidden",
+                                            "errorMessage": "",
+                                            "hasError": false,
                                           },
                                         }
               }
@@ -6096,8 +6138,8 @@ ShallowWrapper {
                   "hasError": false,
                 },
                 "searchForm": Object {
-                  "hasError": true,
-                  "message": "Forbidden",
+                  "errorMessage": "",
+                  "hasError": false,
                 },
               },
               "eventFiresMinimum": 0,
@@ -6992,8 +7034,8 @@ ShallowWrapper {
                                                               "hasError": false,
                                                             },
                                                             "searchForm": Object {
-                                                              "hasError": true,
-                                                              "message": "Forbidden",
+                                                              "errorMessage": "",
+                                                              "hasError": false,
                                                             },
                                                           }
                                     }
@@ -7255,8 +7297,8 @@ ShallowWrapper {
                                                           "hasError": false,
                                                         },
                                                         "searchForm": Object {
-                                                          "hasError": true,
-                                                          "message": "Forbidden",
+                                                          "errorMessage": "",
+                                                          "hasError": false,
                                                         },
                                                       }
                             }
@@ -7344,8 +7386,8 @@ ShallowWrapper {
                                                   "hasError": false,
                                                 },
                                                 "searchForm": Object {
-                                                  "hasError": true,
-                                                  "message": "Forbidden",
+                                                  "errorMessage": "",
+                                                  "hasError": false,
                                                 },
                                               }
                 }
@@ -7430,8 +7472,8 @@ ShallowWrapper {
                     "hasError": false,
                   },
                   "searchForm": Object {
-                    "hasError": true,
-                    "message": "Forbidden",
+                    "errorMessage": "",
+                    "hasError": false,
                   },
                 },
                 "eventFiresMinimum": 0,
@@ -8350,8 +8392,8 @@ ShallowWrapper {
               "hasError": false,
             },
             "searchForm": Object {
-              "hasError": true,
-              "message": "Forbidden",
+              "errorMessage": "",
+              "hasError": false,
             },
           }
     }
@@ -8414,6 +8456,8 @@ ShallowWrapper {
           ]
     }
     getSavedSearch={[Function]}
+    hasError={false}
+    hasSearchFormError={true}
     isEndOfResults={false}
     isMaxSignalSelectionsReached={false}
     isResultsLoaded={true}
@@ -8432,7 +8476,19 @@ ShallowWrapper {
           }
     }
     saveSearch={[Function]}
+    saveSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearch={Array []}
+    savedSearchError={
+        Object {
+            "errorMessage": "",
+            "hasError": false,
+          }
+    }
     savedSearchFields={
         Object {
             "name": "",
@@ -8506,8 +8562,8 @@ ShallowWrapper {
                                                     "hasError": false,
                                                   },
                                                   "searchForm": Object {
-                                                    "hasError": true,
-                                                    "message": "Forbidden",
+                                                    "errorMessage": "",
+                                                    "hasError": false,
                                                   },
                                                 }
                               }
@@ -8763,8 +8819,8 @@ ShallowWrapper {
                                                   "hasError": false,
                                                 },
                                                 "searchForm": Object {
-                                                  "hasError": true,
-                                                  "message": "Forbidden",
+                                                  "errorMessage": "",
+                                                  "hasError": false,
                                                 },
                                               }
                         }
@@ -8846,8 +8902,8 @@ ShallowWrapper {
                                             "hasError": false,
                                           },
                                           "searchForm": Object {
-                                            "hasError": true,
-                                            "message": "Forbidden",
+                                            "errorMessage": "",
+                                            "hasError": false,
                                           },
                                         }
               }
@@ -8926,8 +8982,8 @@ ShallowWrapper {
                   "hasError": false,
                 },
                 "searchForm": Object {
-                  "hasError": true,
-                  "message": "Forbidden",
+                  "errorMessage": "",
+                  "hasError": false,
                 },
               },
               "eventFiresMinimum": 0,
@@ -9816,8 +9872,8 @@ ShallowWrapper {
                                                               "hasError": false,
                                                             },
                                                             "searchForm": Object {
-                                                              "hasError": true,
-                                                              "message": "Forbidden",
+                                                              "errorMessage": "",
+                                                              "hasError": false,
                                                             },
                                                           }
                                     }
@@ -10073,8 +10129,8 @@ ShallowWrapper {
                                                           "hasError": false,
                                                         },
                                                         "searchForm": Object {
-                                                          "hasError": true,
-                                                          "message": "Forbidden",
+                                                          "errorMessage": "",
+                                                          "hasError": false,
                                                         },
                                                       }
                             }
@@ -10156,8 +10212,8 @@ ShallowWrapper {
                                                   "hasError": false,
                                                 },
                                                 "searchForm": Object {
-                                                  "hasError": true,
-                                                  "message": "Forbidden",
+                                                  "errorMessage": "",
+                                                  "hasError": false,
                                                 },
                                               }
                 }
@@ -10236,8 +10292,8 @@ ShallowWrapper {
                     "hasError": false,
                   },
                   "searchForm": Object {
-                    "hasError": true,
-                    "message": "Forbidden",
+                    "errorMessage": "",
+                    "hasError": false,
                   },
                 },
                 "eventFiresMinimum": 0,
