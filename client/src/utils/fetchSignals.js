@@ -19,5 +19,5 @@ export const fetchSignals = ({
         method: 'POST',
     };
 
-    return fetch('/portal/api/v1/signals/list', options); //.then(err => console.error(err));
+    return fetch('/portal/api/v1/signals/list', options);
 };
