@@ -7,7 +7,25 @@ import {
 import { GET_SAVED_SEARCH_REJECTED, SAVE_SEARCH_REJECTED } from '../../actions/savedSearch';
 import { FETCH_REPORT_SUITES_REJECTED } from '../../actions/reportSuites';
 import { FETCH_DATA_SOURCES_REJECTED } from '../../actions/dataSources';
-import errorsReducer, { handleErrorState } from '../errors.js';
+import errorsReducer, {
+    handleErrorState,
+    getSearchFormError,
+    hasSearchFormError,
+    getSearchFormErrorMessage,
+    getSavedSearchError,
+    hasSavedSearchError,
+    getSavedSearchErrorMessage,
+    getReportSuitesError,
+    hasReportSuitesError,
+    getReportSuitesErrorMessage,
+    getSaveSearchError,
+    hasSaveSearchError,
+    getSaveSearchErrorMessage,
+    getDataSourcesError,
+    hasDataSourcesError,
+    getDataSourcesErrorMessage,
+    hasError,
+} from '../errors.js';
 
 describe('test on `handleErrorState`', () => {
     it('should return error state object with `hasError` is true and `errorMessage`', () => {
@@ -191,5 +209,117 @@ describe('test on errors reducer', () => {
             },
         };
         expect(errorsReducer(initialState, action)).toEqual(expectedToggleAdvancedSearchError);
+    });
+
+    describe('error Selectors', () => {
+        const error = {
+            searchForm: {
+                hasError: true,
+                errorMessage: 'error in search form',
+            },
+            savedSearch: {
+                hasError: true,
+                errorMessage: 'error in saved search',
+            },
+            reportSuites: {
+                hasError: true,
+                errorMessage: 'error in report suites',
+            },
+            saveSearch: {
+                hasError: true,
+                errorMessage: 'error in save search',
+            },
+            dataSources: {
+                hasError: true,
+                errorMessage: 'error in data sources',
+            },
+        };
+        describe('SearchForm selectors', () => {
+            const searchFormError = {
+                hasError: true,
+                errorMessage: 'error in search form',
+            };
+            it('getSearchFormError should return SearchForm error state', () => {
+                expect(getSearchFormError(error)).toEqual(searchFormError);
+            });
+            it('hasSearchFormError should return true ', () => {
+                expect(hasSearchFormError(error)).toBeTruthy();
+            });
+            it('getSearchFormErrorMessage should return correct errorMessage ', () => {
+                expect(getSearchFormErrorMessage(error)).toEqual(searchFormError.errorMessage);
+            });
+        });
+
+        describe('savedSearch selectors', () => {
+            const savedSearchError = {
+                hasError: true,
+                errorMessage: 'error in saved search',
+            };
+            it('getSavedSearchError should return savedSearch error state', () => {
+                expect(getSavedSearchError(error)).toEqual(savedSearchError);
+            });
+            it('hasSavedSearchError should return true', () => {
+                expect(hasSavedSearchError(error)).toBeTruthy();
+            });
+            it('getSavedSearchMessage should return correct errorMessage', () => {
+                expect(getSavedSearchErrorMessage(error)).toEqual(savedSearchError.errorMessage);
+            });
+        });
+
+        describe('saveSearch selectors', () => {
+            const saveSearchError = {
+                hasError: true,
+                errorMessage: 'error in save search',
+            };
+            it('getSaveSearchError should return save search error state', () => {
+                expect(getSaveSearchError(error)).toEqual(saveSearchError);
+            });
+            it('hasSaveSearchError should return true', () => {
+                expect(hasSaveSearchError(error)).toBeTruthy();
+            });
+            it('getSaveSearchErrorMessage should return correct errorMessage', () => {
+                expect(getSaveSearchErrorMessage(error)).toEqual(saveSearchError.errorMessage);
+            });
+        });
+
+        describe('reportSuites selectors', () => {
+            const reportSuitesError = {
+                hasError: true,
+                errorMessage: 'error in report suites',
+            };
+            it('getReportSuitesError should return reportSuite error state', () => {
+                expect(getReportSuitesError(error)).toEqual(reportSuitesError);
+            });
+            it('hasReportSuitesError should return true', () => {
+                expect(hasReportSuitesError(error)).toBeTruthy();
+            });
+            it('getReportSuitesErrorMessage should return correct errorMessage', () => {
+                expect(getReportSuitesErrorMessage(error)).toEqual(reportSuitesError.errorMessage);
+            });
+        });
+
+        describe('dataSources selectors', () => {
+            const dataSourcesError = {
+                hasError: true,
+                errorMessage: 'error in data sources',
+            };
+
+            it('getDataSourcesError should return dataSources error state', () => {
+                expect(getDataSourcesError(error)).toEqual(dataSourcesError);
+            });
+            it('hasDataSourcesError should return true', () => {
+                expect(hasDataSourcesError(error)).toBeTruthy();
+            });
+
+            it('getDataSourcesErrorMessage should return correct errorMessage', () => {
+                expect(getDataSourcesErrorMessage(error)).toEqual(dataSourcesError.errorMessage);
+            });
+        });
+
+        describe('hasError selector', () => {
+            it('should return true if any error selector `hasError` return true', () => {
+                expect(hasError(error)).toBeTruthy();
+            });
+        });
     });
 });

@@ -135,13 +135,7 @@ describe('<SearchContainer /> component', () => {
         describe('when search results in an error', () => {
             beforeAll(() => {
                 wrapper.setProps({
-                    errors: {
-                        ...wrapper.instance().props.errors,
-                        searchForm: {
-                            hasError: true,
-                            message: 'Forbidden',
-                        },
-                    },
+                    hasSearchFormError: true,
                 });
 
                 wrapper.setState({ searched: true });
@@ -320,10 +314,10 @@ describe('<SearchContainer /> component', () => {
             });
 
             describe('isSearchDisabled', () => {
-                describe('when a search has been executed but results are still loading', () => {
+                describe('when a search has been executed without error but results are still loading', () => {
                     beforeAll(() => {
                         wrapper.setState({ searched: true });
-                        wrapper.setProps({ isResultsLoaded: false });
+                        wrapper.setProps({ isResultsLoaded: false, hasError: false });
                     });
 
                     it('should return true', () => {
@@ -331,10 +325,10 @@ describe('<SearchContainer /> component', () => {
                     });
                 });
 
-                describe('when a search has been executed and results have loaded', () => {
+                describe('when a search has been executed without error and results have loaded', () => {
                     beforeAll(() => {
                         wrapper.setState({ searched: true });
-                        wrapper.setProps({ isResultsLoaded: true });
+                        wrapper.setProps({ isResultsLoaded: true, hasError: false });
                     });
 
                     it('should return false', () => {
@@ -342,10 +336,10 @@ describe('<SearchContainer /> component', () => {
                     });
                 });
 
-                describe('when a search has not been executed and no results were loaded', () => {
+                describe('when a search has not been executed and no results were loaded and no error', () => {
                     beforeAll(() => {
                         wrapper.setState({ searched: false });
-                        wrapper.setProps({ isResultsLoaded: false });
+                        wrapper.setProps({ isResultsLoaded: false, hasError: false });
                     });
 
                     it('should return false', () => {
@@ -353,10 +347,32 @@ describe('<SearchContainer /> component', () => {
                     });
                 });
 
-                describe('when a search has not been executed but results have loaded', () => {
+                describe('when a search has not been executed but results have loaded without error', () => {
                     beforeAll(() => {
                         wrapper.setState({ searched: false });
-                        wrapper.setProps({ isResultsLoaded: true });
+                        wrapper.setProps({ isResultsLoaded: true, hasError: false });
+                    });
+
+                    it('should return false', () => {
+                        expect(wrapper.instance().isSearchDisabled()).toBeFalsy();
+                    });
+                });
+
+                describe('when a search has been executed with error and results were not loaded ', () => {
+                    beforeAll(() => {
+                        wrapper.setState({ searched: true });
+                        wrapper.setProps({ isResultsLoaded: false, hasError: true });
+                    });
+
+                    it('should return false', () => {
+                        expect(wrapper.instance().isSearchDisabled()).toBeFalsy();
+                    });
+                });
+
+                describe('when a search has not been executed  and results were not loaded but error occured', () => {
+                    beforeAll(() => {
+                        wrapper.setState({ searched: false });
+                        wrapper.setProps({ isResultsLoaded: false, hasError: true });
                     });
 
                     it('should return false', () => {
@@ -366,7 +382,7 @@ describe('<SearchContainer /> component', () => {
 
                 afterAll(() => {
                     wrapper.setState({ searched: true });
-                    wrapper.setProps({ isResultsLoaded: true });
+                    wrapper.setProps({ isResultsLoaded: true, hasError: false });
                 });
             });
         });

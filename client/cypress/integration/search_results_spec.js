@@ -75,6 +75,13 @@ describe('Search Form Results Integration Tests', function() {
                 cy.get('[data-test="search-results"]').should('exist');
                 cy.get('.spectrum-Loader').should('not.exist');
             });
+
+            it('should not disable the saved search tag list and search button', () => {
+                cy.get('[data-test="saved-search-tag-list"]').as('savedSearches');
+                cy.get('[data-test="search-button"]').as('searchButton');
+                cy.get('@savedSearches').should('not.have.attr', 'disabled');
+                cy.get('@searchButton').should('not.have.attr', 'disabled');
+            });
         });
     });
 

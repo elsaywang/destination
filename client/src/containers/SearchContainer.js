@@ -26,6 +26,12 @@ import { isSavedSearchLimitReached, getNormalizedSavedSearchList } from '../redu
 import { getSelectedRowIndexes, isMaxSignalSelectionsReached } from '../reducers/selectedSignals';
 import { getMaxSignalRetentionDays } from '../reducers/traitBackfill';
 import { getDataSources } from '../reducers/dataSources';
+import {
+    getSavedSearchError,
+    getSaveSearchError,
+    hasSearchFormError,
+    hasError,
+} from '../reducers/errors';
 import { getDefaultCustomStartDate, getDefaultCustomEndDate } from '../utils/dateRange';
 import { normalizeSortOptions } from '../utils/normalizeSortOptions';
 import { getSearchResultsMessageBySignalTypeLabel } from '../utils/signalType';
@@ -407,7 +413,7 @@ class SearchContainer extends Component {
             return <EmptySearch className={styles.empty} variant={'explore'} />;
         }
 
-        if (this.props.errors.searchForm.hasError) {
+        if (this.props.hasSearchFormError) {
             return <EmptySearch className={styles.empty} variant={'errorFetching'} />;
         }
 
@@ -424,7 +430,8 @@ class SearchContainer extends Component {
     isSearchedWithResults = () =>
         this.props.isResultsLoaded && this.state.searched && this.props.results.list.length;
 
-    isSearchDisabled = () => !this.props.isResultsLoaded && this.state.searched;
+    isSearchDisabled = () =>
+        !this.props.isResultsLoaded && this.state.searched && !this.props.hasError;
 
     isFilteredByOnboardedRecords = () => this.state.source.sourceType === 'ONBOARDED';
 
@@ -540,7 +547,7 @@ class SearchContainer extends Component {
                                 list={this.props.finalizedSavedSearchList}
                                 onSavedSearchClick={this.handleSavedSearchClick}
                                 currentSearch={this.state.name}
-                                error={this.props.errors.savedSearch}
+                                error={this.props.savedSearchError}
                                 disabled={this.isSearchDisabled()}
                             />
                             <Fragment>
@@ -558,10 +565,10 @@ class SearchContainer extends Component {
                                         }
                                         selectDefaultSorting={this.props.selectDefaultSorting}
                                         changeSortingOrder={this.props.changeSortingOrder}
-                                        error={this.props.errors.saveSearch}
+                                        error={this.props.saveSearchError}
                                     />
                                 </div>
-                                {!this.props.errors.saveSearch.hasError && (
+                                {!this.props.hasSaveSearchError && (
                                     <OverlayTooltip
                                         className={styles.saveSearchExecutionTooltip}
                                         message={this.saveThisSearchMessage()}
@@ -657,6 +664,10 @@ const mapStateToProps = ({
     isMaxSignalSelectionsReached: isMaxSignalSelectionsReached(selectedSignals),
     reportSuites,
     errors,
+    saveSearchError: getSaveSearchError(errors),
+    savedSearchError: getSavedSearchError(errors),
+    hasSearchFormError: hasSearchFormError(errors),
+    hasError: hasError(errors),
     permissions,
     dataSources: getDataSources(dataSources),
 });

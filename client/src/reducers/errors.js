@@ -70,3 +70,30 @@ export default handleActions(
     },
     initialState,
 );
+
+export const getSearchFormError = state => state.searchForm;
+export const hasSearchFormError = state => getSearchFormError(state).hasError;
+export const getSearchFormErrorMessage = state => getSearchFormError(state).errorMessage;
+
+export const getSavedSearchError = state => state.savedSearch;
+export const hasSavedSearchError = state => getSavedSearchError(state).hasError;
+export const getSavedSearchErrorMessage = state => getSavedSearchError(state).errorMessage;
+
+export const getSaveSearchError = state => state.saveSearch;
+export const hasSaveSearchError = state => getSaveSearchError(state).hasError;
+export const getSaveSearchErrorMessage = state => getSaveSearchError(state).errorMessage;
+
+export const getReportSuitesError = state => state.reportSuites;
+export const hasReportSuitesError = state => getReportSuitesError(state).hasError;
+export const getReportSuitesErrorMessage = state => getReportSuitesError(state).errorMessage;
+
+export const getDataSourcesError = state => state.dataSources;
+export const hasDataSourcesError = state => getDataSourcesError(state).hasError;
+export const getDataSourcesErrorMessage = state => getDataSourcesError(state).errorMessage;
+
+export const hasError = state =>
+    hasSearchFormError(state) ||
+    hasSavedSearchError(state) ||
+    hasSaveSearchError(state) ||
+    hasReportSuitesError(state) ||
+    hasDataSourcesError(state);
