@@ -31,3 +31,8 @@ export const footerUrls = [
         url: 'http://www.adobe.com/go/marketingcloud_privacy',
     },
 ];
+
+export const dataExplorerDocumentationLink = {
+    url: '//experiencecloud.adobe.com/resources/help/en_US/aam/data-explorer.html',
+    description: 'Learn more about Data Explorer',
+};

@@ -50,6 +50,15 @@ describe('Integration Tests for routing', function() {
             cy.title().should('contain', 'Signals');
         });
 
+        it('should contain the Signal Head and the link button for data explorer documentation', () => {
+            cy.get('.spectrum-Heading')
+                .contains('Signals')
+                .should('be.exist');
+            cy.get('[data-test="data-explorer-documentation-link"]')
+                .contains('Learn more about Data Explorer')
+                .should('be.exist');
+        });
+
         it.skip('should contain the Signal Head and the entry button for beta tag and tour Guide', () => {
             cy.get('.spectrum-Heading')
                 .contains('Signals')
@@ -98,6 +107,15 @@ describe('Integration Tests for routing', function() {
                 .should('be.exist');
             cy.get('.spectrum-Button.spectrum-Button--secondary.tour-guide')
                 .contains('Take a Tour')
+                .should('be.exist');
+        });
+
+        it('should contain the Signal Head and the link button for data explorer documentation', () => {
+            cy.get('.spectrum-Heading')
+                .contains('Signals')
+                .should('be.exist');
+            cy.get('[data-test="data-explorer-documentation-link"]')
+                .contains('Learn more about Data Explorer')
                 .should('be.exist');
         });
 

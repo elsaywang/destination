@@ -18,7 +18,7 @@
 }
 
 :local(.message) {
-    padding-left: 1rem;
+    margin-left: 1rem;
 }
 
 :local(.entry) {
@@ -31,4 +31,8 @@
 
 :local(.tourGuide) {
     margin-left: 0.85rem;
+}
+
+:local(.dataExplorerDocumentationLink) {
+    text-align: right;
 }
