@@ -82,29 +82,22 @@ class DashboardContainer extends Component {
                                 data-test="saved-search-dashboard"
                                 className={styles.dashboardTable}
                                 key={search.name}>
-                                <GridRow valign="middle">
-                                    <GridColumn size={5}>
+                                <GridRow>
+                                    <GridColumn size={12} className={styles.gridColumnFlex}>
                                         <div className={styles.tableHeader}>
                                             <Heading size={3}>{search.name}</Heading>
                                             <span className={styles.signalTypeNameHeader}>
                                                 {search.signalType}
                                             </span>
                                         </div>
-                                    </GridColumn>
-                                    <GridColumn size={7}>
-                                        <GridRow>
-                                            <GridColumn size={2} offsetSize={10}>
-                                                <Button
-                                                    label="View All"
-                                                    variant="primary"
-                                                    element="a"
-                                                    href="#/search"
-                                                    onClick={() =>
-                                                        this.handleViewAllForSavedSearch(search)
-                                                    }
-                                                />
-                                            </GridColumn>
-                                        </GridRow>
+                                        <Button
+                                            label="View All"
+                                            variant="primary"
+                                            element="a"
+                                            href="#/search"
+                                            className={styles.viewAllButton}
+                                            onClick={() => this.handleViewAllForSavedSearch(search)}
+                                        />
                                     </GridColumn>
                                 </GridRow>
                                 <SavedSearchTable

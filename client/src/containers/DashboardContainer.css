@@ -9,3 +9,10 @@
 :local(.signalTypeNameHeader) {
     padding: 1.25em 0 0 1em;
 }
+:local(.gridColumnFlex) {
+    justify-content: space-between;
+    display: flex;
+}
+:local(.viewAllButton) {
+    margin: 0.8em 2.6em 0.8em 0;
+}
