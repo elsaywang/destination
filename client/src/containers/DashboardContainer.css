@@ -14,5 +14,5 @@
     display: flex;
 }
 :local(.viewAllButton) {
-    margin: 0.75em;
+    margin: 0.75rem;
 }
