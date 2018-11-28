@@ -4,6 +4,7 @@ def uiImageName = "signal-center-ui:${tag}"
 def cypressBaseImage = "cypress/base:8"
 def workspace
 def gitSshKey = "aam-portal-automation-private-key"
+def npmRegistryToken = "npm-registry-token"
 def artifactory = "Artifactory"
 
 node ("docker") {
@@ -29,8 +30,11 @@ node ("docker") {
                 sh "cat ${_SECRET} > ${workspace}/client/git_key"
             }
 
-            withCredentials([usernamePassword(credentialsId: artifactory, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                sh "docker build -t ${uiImageName} --build-arg BUILD_NUMBER=${BUILD_NUMBER} --build-arg BRANCH_NAME=${BRANCH_NAME} --build-arg ARTIFACTORY_USERNAME=${USERNAME} --build-arg ARTIFACTORY_PASS=${PASSWORD} ./client"
+            withCredentials([
+                usernamePassword(credentialsId: artifactory, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD'),
+                string(credentialsId: npmRegistryToken, variable: 'NPM_TOKEN')
+            ]) {
+                sh "docker build -t ${uiImageName} --build-arg BUILD_NUMBER=${BUILD_NUMBER} --build-arg BRANCH_NAME=${BRANCH_NAME} --build-arg ARTIFACTORY_USERNAME=${USERNAME} --build-arg ARTIFACTORY_PASS=${PASSWORD} --build-arg NPM_TOKEN=${NPM_TOKEN} ./client"
                 uiImage = docker.image(uiImageName)
             }
         }
