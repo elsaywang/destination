@@ -83,13 +83,15 @@ class DashboardContainer extends Component {
                                 className={styles.dashboardTable}
                                 key={search.name}>
                                 <GridRow>
-                                    <GridColumn size={12} className={styles.gridColumnFlex}>
+                                    <GridColumn size={9}>
                                         <div className={styles.tableHeader}>
                                             <Heading size={3}>{search.name}</Heading>
                                             <span className={styles.signalTypeNameHeader}>
                                                 {search.signalType}
                                             </span>
                                         </div>
+                                    </GridColumn>
+                                    <GridColumn size={3} className={styles.gridColumnRightAlign}>
                                         <Button
                                             label="View All"
                                             variant="primary"

@@ -9,9 +9,8 @@
 :local(.signalTypeNameHeader) {
     padding: 1.25em 0 0 1em;
 }
-:local(.gridColumnFlex) {
-    justify-content: space-between;
-    display: flex;
+:local(.gridColumnRightAlign) {
+    text-align: right;
 }
 :local(.viewAllButton) {
     margin: 0.75rem;
