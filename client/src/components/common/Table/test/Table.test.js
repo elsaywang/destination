@@ -116,10 +116,6 @@ describe('<Table /> component', () => {
             it('should return the amount of pixels that fits the amount of rows and based on the custom `rowHeight` passed in', () => {
                 expect(getTableHeight({ items, rowHeight: 50 })).toEqual('140px');
             });
-
-            it('should return the amount of pixels that exactly fits the amount of rows in the table when the header row has no checkbox', () => {
-                expect(getTableHeight({ items, allowsSelection: false })).toEqual('116px');
-            });
         });
     });
 });

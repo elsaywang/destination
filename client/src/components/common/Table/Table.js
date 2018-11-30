@@ -3,12 +3,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { TableView } from '@react/react-spectrum/TableView';
 import DataSource from './DataSource';
-import {
-    defaultRowHeight,
-    defaultHeadHeightWithoutSelection,
-    defaultMaxRows,
-    defaultHeadHeight,
-} from '../../../constants/rows';
+import { defaultRowHeight, defaultMaxRows, defaultHeadHeight } from '../../../constants/rows';
 import styles from './Table.css';
 
 /**
@@ -35,16 +30,10 @@ class Table extends Component {
      * Dynamically set the height of the table's container to show up to a
      * certain number of rows.
      */
-    getTableHeight({
-        items,
-        rowHeight = defaultRowHeight,
-        allowsSelection = true,
-        maxRows = defaultMaxRows,
-    }) {
-        const headHeight = allowsSelection ? defaultHeadHeight : defaultHeadHeightWithoutSelection;
+    getTableHeight({ items, rowHeight = defaultRowHeight, maxRows = defaultMaxRows }) {
         const bodyHeight = Math.min(items.length, maxRows) * rowHeight;
 
-        return `${headHeight + bodyHeight}px`;
+        return `${defaultHeadHeight + bodyHeight}px`;
     }
 
     shouldComponentUpdate(nextProps) {
@@ -79,7 +68,7 @@ class Table extends Component {
             allowsSelection,
         } = this.props;
 
-        const height = this.getTableHeight({ items, rowHeight, allowsSelection });
+        const height = this.getTableHeight({ items, rowHeight });
 
         return (
             <div
