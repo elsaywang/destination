@@ -8,6 +8,7 @@ const MultiSignalsTraitsCreation = ({
     selectedSignals,
     storeSessionAndNavigateToTraits,
     isMaxSignalSelectionsReached,
+    multiTraitCreationButtonText,
 }) => {
     const {
         selectionMessage,
@@ -25,7 +26,7 @@ const MultiSignalsTraitsCreation = ({
             <span className={styles.message}>{selectionMessage}</span>
             <Button
                 onClick={storeSessionAndNavigateToTraits}
-                label="Create Trait From Multiple Signals"
+                label={multiTraitCreationButtonText}
                 icon={<Add />}
                 variant="action"
                 disabled={isTraitCreationDisabled}
@@ -44,6 +45,7 @@ MultiSignalsTraitsCreation.propTypes = {
     }),
     storeSessionAndNavigateToTraits: PropTypes.func.isRequired,
     isMaxSignalSelectionsReached: PropTypes.bool,
+    multiTraitCreationButtonText: PropTypes.string,
 };
 
 export default MultiSignalsTraitsCreation;

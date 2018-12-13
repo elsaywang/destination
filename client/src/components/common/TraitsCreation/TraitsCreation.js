@@ -18,6 +18,12 @@ class TraitsCreation extends Component {
             : 'Create Rule-Based Trait';
     }
 
+    getButtonText() {
+        return this.props.selectedResults.length > 1
+            ? 'Create Trait From Selected Signals'
+            : 'Create Trait From Selected Signal';
+    }
+
     shouldCreateOnboardedTrait() {
         // For single signal creation, check the `signalType` of the signal result.
         // For multi signal creation, check if all selected signals are onboarded and
@@ -60,6 +66,7 @@ class TraitsCreation extends Component {
                 selectedSignals={selectedSignals}
                 storeSessionAndNavigateToTraits={this.storeSessionAndNavigateToTraits}
                 isMaxSignalSelectionsReached={isMaxSignalSelectionsReached}
+                multiTraitCreationButtonText={this.getButtonText()}
             />
         ) : (
             <SingleSignalTraitsCreation
