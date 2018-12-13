@@ -91,7 +91,7 @@ ShallowWrapper {
       "className": "table-wrapper tableWrapper",
       "data-test": undefined,
       "style": Object {
-        "height": "136px",
+        "height": "130px",
       },
     },
     "ref": null,
@@ -186,7 +186,7 @@ ShallowWrapper {
         "className": "table-wrapper tableWrapper",
         "data-test": undefined,
         "style": Object {
-          "height": "136px",
+          "height": "130px",
         },
       },
       "ref": null,

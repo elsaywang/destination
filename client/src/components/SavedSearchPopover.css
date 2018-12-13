@@ -22,3 +22,11 @@
     display: inline-flex;
     margin-right: 10px;
 }
+
+:local(.tag) {
+    cursor: pointer;
+}
+
+:local(.tag span) {
+    cursor: pointer;
+}

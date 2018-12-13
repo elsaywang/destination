@@ -9,6 +9,7 @@ ARG BUILD_NUMBER
 ARG BRANCH_NAME
 ARG ARTIFACTORY_USERNAME
 ARG ARTIFACTORY_PASS
+ARG NPM_TOKEN
 
 # add bash dependencies since this is an alpine image
 RUN apk add --no-cache git \
@@ -28,7 +29,8 @@ RUN ssh-keyscan -t rsa -H git.corp.adobe.com >> /root/.ssh/known_hosts && \
     echo " Host git.corp.adobe.com" >> /root/.ssh/config && \
     echo " User root" >> /root/.ssh/config
 RUN touch /root/.npmrc && \
-    curl -u $ARTIFACTORY_USERNAME:$ARTIFACTORY_PASS https://artifactory.corp.adobe.com/artifactory/api/npm/auth > /root/.npmrc
+    curl -u $ARTIFACTORY_USERNAME:$ARTIFACTORY_PASS https://artifactory.corp.adobe.com/artifactory/api/npm/auth > /root/.npmrc && \
+    echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> /root/.npmrc
 RUN npm install --only=production --unsafe-perm
 
 ## add source code and build app
