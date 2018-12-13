@@ -10,6 +10,7 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
         selectedSignals: { selectionMessage: '', hasSignalSelectionsTypeWarning: false },
         storeSessionAndNavigateToTraits: mockFn,
         isMaxSignalSelectionsReached: false,
+        multiTraitCreationButtonText: 'Create Trait From Selected Signals',
     };
     const wrapper = shallow(<MultiSignalsTraitsCreation {...props} />);
 
@@ -35,7 +36,7 @@ describe('<MultiSignalsTraitsCreation/> component', () => {
         });
 
         it('has the correct hardcoded label', () => {
-            expect(button.props().label).toEqual('Create Trait From Multiple Signals');
+            expect(button.props().label).toEqual('Create Trait From Selected Signals');
         });
 
         it('has "action" variant when no warning message and falsy isMaxSignalSelectionsReached  is passed from props', () => {

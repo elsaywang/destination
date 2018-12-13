@@ -19,7 +19,7 @@ class TraitsCreation extends Component {
     }
 
     getButtonText() {
-        return this.props.selectedResults.length > 1
+        return this.props.selectedResults && this.props.selectedResults.length > 1
             ? 'Create Trait From Selected Signals'
             : 'Create Trait From Selected Signal';
     }
