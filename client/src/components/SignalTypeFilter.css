@@ -1,6 +1,6 @@
 :local(.heading) {
     display: block;
-    padding-left: 20px;
+    padding: 5px 12px;
     font-size: 1.2em;
     font-weight: lighter;
 }

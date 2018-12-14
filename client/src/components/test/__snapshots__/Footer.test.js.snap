@@ -52,7 +52,7 @@ ShallowWrapper {
           </label>
           <a
                     className="footerLanguage"
-                    href="#"
+                    href=""
                     rel="noopener"
           >
                     English
@@ -107,7 +107,7 @@ ShallowWrapper {
 </label>,
             <a
               className="footerLanguage"
-              href="#"
+              href=""
               rel="noopener"
 >
               English
@@ -181,7 +181,7 @@ ShallowWrapper {
             "props": Object {
               "children": "English",
               "className": "footerLanguage",
-              "href": "#",
+              "href": "",
               "rel": "noopener",
             },
             "ref": null,
@@ -247,7 +247,7 @@ ShallowWrapper {
             </label>
             <a
                         className="footerLanguage"
-                        href="#"
+                        href=""
                         rel="noopener"
             >
                         English
@@ -302,7 +302,7 @@ ShallowWrapper {
 </label>,
               <a
                 className="footerLanguage"
-                href="#"
+                href=""
                 rel="noopener"
 >
                 English
@@ -376,7 +376,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "English",
                 "className": "footerLanguage",
-                "href": "#",
+                "href": "",
                 "rel": "noopener",
               },
               "ref": null,

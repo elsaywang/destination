@@ -10,11 +10,7 @@ import Button from '@react/react-spectrum/Button';
 const OverlayTooltip = ({ message, className }) => {
     return (
         <div className={classNames(styles.tooltip, className)} data-test="overlay-tooltip">
-            {/* TODO: Remove `style` attribute below after updating to latest react-spectrum. */}
-            <OverlayTrigger
-                trigger={['hover', 'focus']}
-                placement="right"
-                style={{ 'word-break': 'break-word' }}>
+            <OverlayTrigger trigger={['hover', 'focus']} placement="right">
                 <Button quiet variant="tool" icon={<Info size="S" />} />
                 <Tooltip data-test="saved-search-limit-message">{message}</Tooltip>
             </OverlayTrigger>
