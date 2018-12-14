@@ -5,6 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MultiSignalsTraitsCreation
     isMaxSignalSelectionsReached={false}
+    multiTraitCreationButtonText="Create Trait From Selected Signals"
     selectedSignals={
         Object {
             "hasSignalSelectionsTypeWarning": false,
@@ -38,7 +39,7 @@ ShallowWrapper {
           element="button"
           icon={<Add />}
           invalid={false}
-          label="Create Trait From Multiple Signals"
+          label="Create Trait From Selected Signals"
           logic={false}
           onClick={[Function]}
           quiet={false}
@@ -74,7 +75,7 @@ ShallowWrapper {
           "element": "button",
           "icon": <Add />,
           "invalid": false,
-          "label": "Create Trait From Multiple Signals",
+          "label": "Create Trait From Selected Signals",
           "logic": false,
           "onClick": [Function],
           "quiet": false,
@@ -106,7 +107,7 @@ ShallowWrapper {
             element="button"
             icon={<Add />}
             invalid={false}
-            label="Create Trait From Multiple Signals"
+            label="Create Trait From Selected Signals"
             logic={false}
             onClick={[Function]}
             quiet={false}
@@ -142,7 +143,7 @@ ShallowWrapper {
             "element": "button",
             "icon": <Add />,
             "invalid": false,
-            "label": "Create Trait From Multiple Signals",
+            "label": "Create Trait From Selected Signals",
             "logic": false,
             "onClick": [Function],
             "quiet": false,
