@@ -33,7 +33,9 @@ class SignalTypeFilter extends Component {
                     value={this.state.value}
                     aria-label="Filter By Signal Types"
                     onSelect={this.handleSignalTypeSelect}>
-                    <SideNavItem value="ALL">All</SideNavItem>
+                    <SideNavItem data-test="all-signal-type-filter" value="ALL">
+                        All
+                    </SideNavItem>
                     {categoryTypes.map(categoryType => (
                         <SideNavHeading label={`${categoryType} SIGNALS`} key={categoryType}>
                             {signalTypeOptions.reduce((acc, option) => {
