@@ -52,6 +52,7 @@ ShallowWrapper {
           >
                     <SideNavItem
                               aria-current="page"
+                              data-test="analytics-signal-type-filter"
                               disabled={false}
                               onClick={[Function]}
                               onSelect={[Function]}
@@ -62,6 +63,7 @@ ShallowWrapper {
                     </SideNavItem>
                     <SideNavItem
                               aria-current="page"
+                              data-test="alf-signal-type-filter"
                               disabled={false}
                               onClick={[Function]}
                               onSelect={[Function]}
@@ -72,6 +74,7 @@ ShallowWrapper {
                     </SideNavItem>
                     <SideNavItem
                               aria-current="page"
+                              data-test="realtime-signal-type-filter"
                               disabled={false}
                               onClick={[Function]}
                               onSelect={[Function]}
@@ -86,6 +89,7 @@ ShallowWrapper {
           >
                     <SideNavItem
                               aria-current="page"
+                              data-test="onboarded-signal-type-filter"
                               disabled={false}
                               onClick={[Function]}
                               onSelect={[Function]}
@@ -137,6 +141,7 @@ ShallowWrapper {
 >
                 <SideNavItem
                                 aria-current="page"
+                                data-test="analytics-signal-type-filter"
                                 disabled={false}
                                 onClick={[Function]}
                                 onSelect={[Function]}
@@ -147,6 +152,7 @@ ShallowWrapper {
                 </SideNavItem>
                 <SideNavItem
                                 aria-current="page"
+                                data-test="alf-signal-type-filter"
                                 disabled={false}
                                 onClick={[Function]}
                                 onSelect={[Function]}
@@ -157,6 +163,7 @@ ShallowWrapper {
                 </SideNavItem>
                 <SideNavItem
                                 aria-current="page"
+                                data-test="realtime-signal-type-filter"
                                 disabled={false}
                                 onClick={[Function]}
                                 onSelect={[Function]}
@@ -171,6 +178,7 @@ ShallowWrapper {
 >
                 <SideNavItem
                                 aria-current="page"
+                                data-test="onboarded-signal-type-filter"
                                 disabled={false}
                                 onClick={[Function]}
                                 onSelect={[Function]}
@@ -215,6 +223,7 @@ ShallowWrapper {
               "children": Array [
                 <SideNavItem
                   aria-current="page"
+                  data-test="analytics-signal-type-filter"
                   disabled={false}
                   onClick={[Function]}
                   onSelect={[Function]}
@@ -225,6 +234,7 @@ ShallowWrapper {
 </SideNavItem>,
                 <SideNavItem
                   aria-current="page"
+                  data-test="alf-signal-type-filter"
                   disabled={false}
                   onClick={[Function]}
                   onSelect={[Function]}
@@ -235,6 +245,7 @@ ShallowWrapper {
 </SideNavItem>,
                 <SideNavItem
                   aria-current="page"
+                  data-test="realtime-signal-type-filter"
                   disabled={false}
                   onClick={[Function]}
                   onSelect={[Function]}
@@ -255,6 +266,7 @@ ShallowWrapper {
                 "props": Object {
                   "aria-current": "page",
                   "children": "Adobe Analytics",
+                  "data-test": "analytics-signal-type-filter",
                   "disabled": false,
                   "onClick": [Function],
                   "onSelect": [Function],
@@ -272,6 +284,7 @@ ShallowWrapper {
                 "props": Object {
                   "aria-current": "page",
                   "children": "Actionable Log Files",
+                  "data-test": "alf-signal-type-filter",
                   "disabled": false,
                   "onClick": [Function],
                   "onSelect": [Function],
@@ -289,6 +302,7 @@ ShallowWrapper {
                 "props": Object {
                   "aria-current": "page",
                   "children": "General Online Data",
+                  "data-test": "realtime-signal-type-filter",
                   "disabled": false,
                   "onClick": [Function],
                   "onSelect": [Function],
@@ -310,6 +324,7 @@ ShallowWrapper {
               "children": Array [
                 <SideNavItem
                   aria-current="page"
+                  data-test="onboarded-signal-type-filter"
                   disabled={false}
                   onClick={[Function]}
                   onSelect={[Function]}
@@ -330,6 +345,7 @@ ShallowWrapper {
                 "props": Object {
                   "aria-current": "page",
                   "children": "Onboarded Records",
+                  "data-test": "onboarded-signal-type-filter",
                   "disabled": false,
                   "onClick": [Function],
                   "onSelect": [Function],
@@ -386,6 +402,7 @@ ShallowWrapper {
             >
                         <SideNavItem
                                     aria-current="page"
+                                    data-test="analytics-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -396,6 +413,7 @@ ShallowWrapper {
                         </SideNavItem>
                         <SideNavItem
                                     aria-current="page"
+                                    data-test="alf-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -406,6 +424,7 @@ ShallowWrapper {
                         </SideNavItem>
                         <SideNavItem
                                     aria-current="page"
+                                    data-test="realtime-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -420,6 +439,7 @@ ShallowWrapper {
             >
                         <SideNavItem
                                     aria-current="page"
+                                    data-test="onboarded-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -471,6 +491,7 @@ ShallowWrapper {
 >
                   <SideNavItem
                                     aria-current="page"
+                                    data-test="analytics-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -481,6 +502,7 @@ ShallowWrapper {
                   </SideNavItem>
                   <SideNavItem
                                     aria-current="page"
+                                    data-test="alf-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -491,6 +513,7 @@ ShallowWrapper {
                   </SideNavItem>
                   <SideNavItem
                                     aria-current="page"
+                                    data-test="realtime-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -505,6 +528,7 @@ ShallowWrapper {
 >
                   <SideNavItem
                                     aria-current="page"
+                                    data-test="onboarded-signal-type-filter"
                                     disabled={false}
                                     onClick={[Function]}
                                     onSelect={[Function]}
@@ -549,6 +573,7 @@ ShallowWrapper {
                 "children": Array [
                   <SideNavItem
                     aria-current="page"
+                    data-test="analytics-signal-type-filter"
                     disabled={false}
                     onClick={[Function]}
                     onSelect={[Function]}
@@ -559,6 +584,7 @@ ShallowWrapper {
 </SideNavItem>,
                   <SideNavItem
                     aria-current="page"
+                    data-test="alf-signal-type-filter"
                     disabled={false}
                     onClick={[Function]}
                     onSelect={[Function]}
@@ -569,6 +595,7 @@ ShallowWrapper {
 </SideNavItem>,
                   <SideNavItem
                     aria-current="page"
+                    data-test="realtime-signal-type-filter"
                     disabled={false}
                     onClick={[Function]}
                     onSelect={[Function]}
@@ -589,6 +616,7 @@ ShallowWrapper {
                   "props": Object {
                     "aria-current": "page",
                     "children": "Adobe Analytics",
+                    "data-test": "analytics-signal-type-filter",
                     "disabled": false,
                     "onClick": [Function],
                     "onSelect": [Function],
@@ -606,6 +634,7 @@ ShallowWrapper {
                   "props": Object {
                     "aria-current": "page",
                     "children": "Actionable Log Files",
+                    "data-test": "alf-signal-type-filter",
                     "disabled": false,
                     "onClick": [Function],
                     "onSelect": [Function],
@@ -623,6 +652,7 @@ ShallowWrapper {
                   "props": Object {
                     "aria-current": "page",
                     "children": "General Online Data",
+                    "data-test": "realtime-signal-type-filter",
                     "disabled": false,
                     "onClick": [Function],
                     "onSelect": [Function],
@@ -644,6 +674,7 @@ ShallowWrapper {
                 "children": Array [
                   <SideNavItem
                     aria-current="page"
+                    data-test="onboarded-signal-type-filter"
                     disabled={false}
                     onClick={[Function]}
                     onSelect={[Function]}
@@ -664,6 +695,7 @@ ShallowWrapper {
                   "props": Object {
                     "aria-current": "page",
                     "children": "Onboarded Records",
+                    "data-test": "onboarded-signal-type-filter",
                     "disabled": false,
                     "onClick": [Function],
                     "onSelect": [Function],

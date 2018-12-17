@@ -36,13 +36,19 @@ class SignalTypeFilter extends Component {
                     <SideNavItem value="ALL">All</SideNavItem>
                     {categoryTypes.map(categoryType => (
                         <SideNavHeading label={`${categoryType} SIGNALS`} key={categoryType}>
-                            {signalTypeOptions
-                                .filter(({ category }) => category === categoryType)
-                                .map(({ value, label }) => (
-                                    <SideNavItem value={value} key={value}>
-                                        {label}
-                                    </SideNavItem>
-                                ))}
+                            {signalTypeOptions.reduce((acc, option) => {
+                                if (option.category === categoryType) {
+                                    acc.push(
+                                        <SideNavItem
+                                            value={option.value}
+                                            key={option.value}
+                                            data-test={`${option.value.toLowerCase()}-signal-type-filter`}>
+                                            {option.label}
+                                        </SideNavItem>,
+                                    );
+                                }
+                                return acc;
+                            }, [])}
                         </SideNavHeading>
                     ))}
                 </SideNav>
