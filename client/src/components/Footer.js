@@ -18,7 +18,7 @@ function Footer() {
                     </a>
                 ))}
                 <label htmlFor={styles.footerLanguage}>{languageOption.label}</label>
-                <a href="#" rel="noopener" className={styles.footerLanguage}>
+                <a href="" rel="noopener" className={styles.footerLanguage}>
                     {languageOption.option}
                 </a>
             </div>
