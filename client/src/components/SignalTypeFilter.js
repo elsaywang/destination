@@ -10,6 +10,12 @@ class SignalTypeFilter extends Component {
         value: 'ALL',
     };
 
+    componentDidUpdate(prevProps) {
+        if (!this.props.isSearched && prevProps.isSearched) {
+            this.setState({ value: 'ALL' });
+        }
+    }
+
     handleSignalTypeSelect = value => {
         this.setState({ value }, () => this.props.onSignalTypeChange(value));
     };
@@ -24,7 +30,7 @@ class SignalTypeFilter extends Component {
                     autoFocus
                     manageTabIndex
                     typeToSelect
-                    defaultValue="Filter By Signal Type"
+                    defaultValue={this.state.value}
                     aria-label="Filter By Signal Types"
                     onSelect={this.handleSignalTypeSelect}>
                     <SideNavItem value="ALL">All</SideNavItem>
