@@ -30,7 +30,7 @@ class SignalTypeFilter extends Component {
                     autoFocus
                     manageTabIndex
                     typeToSelect
-                    defaultValue={this.state.value}
+                    value={this.state.value}
                     aria-label="Filter By Signal Types"
                     onSelect={this.handleSignalTypeSelect}>
                     <SideNavItem value="ALL">All</SideNavItem>
