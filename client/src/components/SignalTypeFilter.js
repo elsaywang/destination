@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { SideNav, SideNavItem, SideNavHeading } from '@react/react-spectrum/SideNav';
 import Heading from '@react/react-spectrum/Heading';
 import styles from './SignalTypeFilter.css';
+import { signalTypeOptions, categoryTypes } from '../constants/signalTypeOptions';
 
 class SignalTypeFilter extends Component {
     state = {
@@ -27,14 +28,17 @@ class SignalTypeFilter extends Component {
                     aria-label="Filter By Signal Types"
                     onSelect={this.handleSignalTypeSelect}>
                     <SideNavItem value="ALL">All</SideNavItem>
-                    <SideNavHeading label="REAL-TIME SIGNALS">
-                        <SideNavItem value="ANALYTICS">Adobe Analytics</SideNavItem>
-                        <SideNavItem value="ALF">Actionable Log Files</SideNavItem>
-                        <SideNavItem value="REALTIME">General Online Data</SideNavItem>
-                    </SideNavHeading>
-                    <SideNavHeading label="ONBOARDED SIGNALS">
-                        <SideNavItem value="ONBOARDED">Onboarded Records</SideNavItem>
-                    </SideNavHeading>
+                    {categoryTypes.map(categoryType => (
+                        <SideNavHeading label={`${categoryType} SIGNALS`} key={categoryType}>
+                            {signalTypeOptions
+                                .filter(({ category }) => category === categoryType)
+                                .map(({ value, label }) => (
+                                    <SideNavItem value={value} key={value}>
+                                        {label}
+                                    </SideNavItem>
+                                ))}
+                        </SideNavHeading>
+                    ))}
                 </SideNav>
             </Fragment>
         );
