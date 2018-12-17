@@ -39,6 +39,7 @@ ShallowWrapper {
 >
           <SideNavItem
                     aria-current="page"
+                    data-test="all-signal-type-filter"
                     disabled={false}
                     onClick={[Function]}
                     onSelect={[Function]}
@@ -127,6 +128,7 @@ ShallowWrapper {
           "children": Array [
             <SideNavItem
               aria-current="page"
+              data-test="all-signal-type-filter"
               disabled={false}
               onClick={[Function]}
               onSelect={[Function]}
@@ -205,6 +207,7 @@ ShallowWrapper {
             "props": Object {
               "aria-current": "page",
               "children": "All",
+              "data-test": "all-signal-type-filter",
               "disabled": false,
               "onClick": [Function],
               "onSelect": [Function],
@@ -389,6 +392,7 @@ ShallowWrapper {
 >
             <SideNavItem
                         aria-current="page"
+                        data-test="all-signal-type-filter"
                         disabled={false}
                         onClick={[Function]}
                         onSelect={[Function]}
@@ -477,6 +481,7 @@ ShallowWrapper {
             "children": Array [
               <SideNavItem
                 aria-current="page"
+                data-test="all-signal-type-filter"
                 disabled={false}
                 onClick={[Function]}
                 onSelect={[Function]}
@@ -555,6 +560,7 @@ ShallowWrapper {
               "props": Object {
                 "aria-current": "page",
                 "children": "All",
+                "data-test": "all-signal-type-filter",
                 "disabled": false,
                 "onClick": [Function],
                 "onSelect": [Function],
