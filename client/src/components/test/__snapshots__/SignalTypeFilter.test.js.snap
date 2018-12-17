@@ -31,10 +31,10 @@ ShallowWrapper {
         <SideNav
           aria-label="Filter By Signal Types"
           autoFocus={true}
-          defaultValue="ALL"
           manageTabIndex={true}
           onSelect={[Function]}
           typeToSelect={true}
+          value="ALL"
           variant="default"
 >
           <SideNavItem
@@ -182,10 +182,10 @@ ShallowWrapper {
 </SideNavHeading>,
             ],
           ],
-          "defaultValue": "ALL",
           "manageTabIndex": true,
           "onSelect": [Function],
           "typeToSelect": true,
+          "value": "ALL",
           "variant": "default",
         },
         "ref": null,
@@ -365,10 +365,10 @@ ShallowWrapper {
           <SideNav
             aria-label="Filter By Signal Types"
             autoFocus={true}
-            defaultValue="ALL"
             manageTabIndex={true}
             onSelect={[Function]}
             typeToSelect={true}
+            value="ALL"
             variant="default"
 >
             <SideNavItem
@@ -516,10 +516,10 @@ ShallowWrapper {
 </SideNavHeading>,
               ],
             ],
-            "defaultValue": "ALL",
             "manageTabIndex": true,
             "onSelect": [Function],
             "typeToSelect": true,
+            "value": "ALL",
             "variant": "default",
           },
           "ref": null,
