@@ -252,10 +252,9 @@ ShallowWrapper {
 >
             <GridRow
                         reverse={false}
-                        valign="middle"
             >
                         <GridColumn
-                                    size={5}
+                                    size={9}
                         >
                                     <div
                                                 className="tableHeader"
@@ -271,31 +270,24 @@ ShallowWrapper {
                                     </div>
                         </GridColumn>
                         <GridColumn
-                                    size={7}
+                                    className="gridColumnRightAlign"
+                                    size={3}
                         >
-                                    <GridRow
-                                                reverse={false}
-                                    >
-                                                <GridColumn
-                                                            offsetSize={10}
-                                                            size={2}
-                                                >
-                                                            <Button
-                                                                        autoFocus={false}
-                                                                        block={false}
-                                                                        disabled={false}
-                                                                        element="a"
-                                                                        href="#/search"
-                                                                        invalid={false}
-                                                                        label="View All"
-                                                                        logic={false}
-                                                                        onClick={[Function]}
-                                                                        quiet={false}
-                                                                        selected={false}
-                                                                        variant="primary"
-                                                            />
-                                                </GridColumn>
-                                    </GridRow>
+                                    <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                className="viewAllButton"
+                                                disabled={false}
+                                                element="a"
+                                                href="#/search"
+                                                invalid={false}
+                                                label="View All"
+                                                logic={false}
+                                                onClick={[Function]}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="primary"
+                                    />
                         </GridColumn>
             </GridRow>
             <SavedSearchTable
@@ -334,10 +326,9 @@ ShallowWrapper {
 >
             <GridRow
                         reverse={false}
-                        valign="middle"
             >
                         <GridColumn
-                                    size={5}
+                                    size={9}
                         >
                                     <div
                                                 className="tableHeader"
@@ -353,31 +344,24 @@ ShallowWrapper {
                                     </div>
                         </GridColumn>
                         <GridColumn
-                                    size={7}
+                                    className="gridColumnRightAlign"
+                                    size={3}
                         >
-                                    <GridRow
-                                                reverse={false}
-                                    >
-                                                <GridColumn
-                                                            offsetSize={10}
-                                                            size={2}
-                                                >
-                                                            <Button
-                                                                        autoFocus={false}
-                                                                        block={false}
-                                                                        disabled={false}
-                                                                        element="a"
-                                                                        href="#/search"
-                                                                        invalid={false}
-                                                                        label="View All"
-                                                                        logic={false}
-                                                                        onClick={[Function]}
-                                                                        quiet={false}
-                                                                        selected={false}
-                                                                        variant="primary"
-                                                            />
-                                                </GridColumn>
-                                    </GridRow>
+                                    <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                className="viewAllButton"
+                                                disabled={false}
+                                                element="a"
+                                                href="#/search"
+                                                invalid={false}
+                                                label="View All"
+                                                logic={false}
+                                                onClick={[Function]}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="primary"
+                                    />
                         </GridColumn>
             </GridRow>
             <SavedSearchTable
@@ -453,10 +437,9 @@ ShallowWrapper {
           "children": Array [
             <GridRow
               reverse={false}
-              valign="middle"
 >
               <GridColumn
-                            size={5}
+                            size={9}
               >
                             <div
                                           className="tableHeader"
@@ -472,31 +455,24 @@ ShallowWrapper {
                             </div>
               </GridColumn>
               <GridColumn
-                            size={7}
+                            className="gridColumnRightAlign"
+                            size={3}
               >
-                            <GridRow
-                                          reverse={false}
-                            >
-                                          <GridColumn
-                                                        offsetSize={10}
-                                                        size={2}
-                                          >
-                                                        <Button
-                                                                      autoFocus={false}
-                                                                      block={false}
-                                                                      disabled={false}
-                                                                      element="a"
-                                                                      href="#/search"
-                                                                      invalid={false}
-                                                                      label="View All"
-                                                                      logic={false}
-                                                                      onClick={[Function]}
-                                                                      quiet={false}
-                                                                      selected={false}
-                                                                      variant="primary"
-                                                        />
-                                          </GridColumn>
-                            </GridRow>
+                            <Button
+                                          autoFocus={false}
+                                          block={false}
+                                          className="viewAllButton"
+                                          disabled={false}
+                                          element="a"
+                                          href="#/search"
+                                          invalid={false}
+                                          label="View All"
+                                          logic={false}
+                                          onClick={[Function]}
+                                          quiet={false}
+                                          selected={false}
+                                          variant="primary"
+                            />
               </GridColumn>
 </GridRow>,
             <SavedSearchTable
@@ -541,7 +517,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <GridColumn
-                  size={5}
+                  size={9}
 >
                   <div
                                     className="tableHeader"
@@ -557,35 +533,27 @@ ShallowWrapper {
                   </div>
 </GridColumn>,
                 <GridColumn
-                  size={7}
+                  className="gridColumnRightAlign"
+                  size={3}
 >
-                  <GridRow
-                                    reverse={false}
-                  >
-                                    <GridColumn
-                                                      offsetSize={10}
-                                                      size={2}
-                                    >
-                                                      <Button
-                                                                        autoFocus={false}
-                                                                        block={false}
-                                                                        disabled={false}
-                                                                        element="a"
-                                                                        href="#/search"
-                                                                        invalid={false}
-                                                                        label="View All"
-                                                                        logic={false}
-                                                                        onClick={[Function]}
-                                                                        quiet={false}
-                                                                        selected={false}
-                                                                        variant="primary"
-                                                      />
-                                    </GridColumn>
-                  </GridRow>
+                  <Button
+                                    autoFocus={false}
+                                    block={false}
+                                    className="viewAllButton"
+                                    disabled={false}
+                                    element="a"
+                                    href="#/search"
+                                    invalid={false}
+                                    label="View All"
+                                    logic={false}
+                                    onClick={[Function]}
+                                    quiet={false}
+                                    selected={false}
+                                    variant="primary"
+                  />
 </GridColumn>,
               ],
               "reverse": false,
-              "valign": "middle",
             },
             "ref": null,
             "rendered": Array [
@@ -606,7 +574,7 @@ ShallowWrapper {
                                         className="signalTypeNameHeader"
                     />
 </div>,
-                  "size": 5,
+                  "size": 9,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -662,30 +630,23 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": <GridRow
-                    reverse={false}
->
-                    <GridColumn
-                                        offsetSize={10}
-                                        size={2}
-                    >
-                                        <Button
-                                                            autoFocus={false}
-                                                            block={false}
-                                                            disabled={false}
-                                                            element="a"
-                                                            href="#/search"
-                                                            invalid={false}
-                                                            label="View All"
-                                                            logic={false}
-                                                            onClick={[Function]}
-                                                            quiet={false}
-                                                            selected={false}
-                                                            variant="primary"
-                                        />
-                    </GridColumn>
-</GridRow>,
-                  "size": 7,
+                  "children": <Button
+                    autoFocus={false}
+                    block={false}
+                    className="viewAllButton"
+                    disabled={false}
+                    element="a"
+                    href="#/search"
+                    invalid={false}
+                    label="View All"
+                    logic={false}
+                    onClick={[Function]}
+                    quiet={false}
+                    selected={false}
+                    variant="primary"
+/>,
+                  "className": "gridColumnRightAlign",
+                  "size": 3,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -693,75 +654,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <GridColumn
-                      offsetSize={10}
-                      size={2}
->
-                      <Button
-                                            autoFocus={false}
-                                            block={false}
-                                            disabled={false}
-                                            element="a"
-                                            href="#/search"
-                                            invalid={false}
-                                            label="View All"
-                                            logic={false}
-                                            onClick={[Function]}
-                                            quiet={false}
-                                            selected={false}
-                                            variant="primary"
-                      />
-</GridColumn>,
-                    "reverse": false,
+                    "autoFocus": false,
+                    "block": false,
+                    "className": "viewAllButton",
+                    "disabled": false,
+                    "element": "a",
+                    "href": "#/search",
+                    "invalid": false,
+                    "label": "View All",
+                    "logic": false,
+                    "onClick": [Function],
+                    "quiet": false,
+                    "selected": false,
+                    "variant": "primary",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-/>,
-                      "offsetSize": 10,
-                      "size": 2,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "autoFocus": false,
-                        "block": false,
-                        "disabled": false,
-                        "element": "a",
-                        "href": "#/search",
-                        "invalid": false,
-                        "label": "View All",
-                        "logic": false,
-                        "onClick": [Function],
-                        "quiet": false,
-                        "selected": false,
-                        "variant": "primary",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
+                  "rendered": null,
                   "type": [Function],
                 },
                 "type": [Function],
@@ -815,10 +723,9 @@ ShallowWrapper {
           "children": Array [
             <GridRow
               reverse={false}
-              valign="middle"
 >
               <GridColumn
-                            size={5}
+                            size={9}
               >
                             <div
                                           className="tableHeader"
@@ -834,31 +741,24 @@ ShallowWrapper {
                             </div>
               </GridColumn>
               <GridColumn
-                            size={7}
+                            className="gridColumnRightAlign"
+                            size={3}
               >
-                            <GridRow
-                                          reverse={false}
-                            >
-                                          <GridColumn
-                                                        offsetSize={10}
-                                                        size={2}
-                                          >
-                                                        <Button
-                                                                      autoFocus={false}
-                                                                      block={false}
-                                                                      disabled={false}
-                                                                      element="a"
-                                                                      href="#/search"
-                                                                      invalid={false}
-                                                                      label="View All"
-                                                                      logic={false}
-                                                                      onClick={[Function]}
-                                                                      quiet={false}
-                                                                      selected={false}
-                                                                      variant="primary"
-                                                        />
-                                          </GridColumn>
-                            </GridRow>
+                            <Button
+                                          autoFocus={false}
+                                          block={false}
+                                          className="viewAllButton"
+                                          disabled={false}
+                                          element="a"
+                                          href="#/search"
+                                          invalid={false}
+                                          label="View All"
+                                          logic={false}
+                                          onClick={[Function]}
+                                          quiet={false}
+                                          selected={false}
+                                          variant="primary"
+                            />
               </GridColumn>
 </GridRow>,
             <SavedSearchTable
@@ -908,7 +808,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <GridColumn
-                  size={5}
+                  size={9}
 >
                   <div
                                     className="tableHeader"
@@ -924,35 +824,27 @@ ShallowWrapper {
                   </div>
 </GridColumn>,
                 <GridColumn
-                  size={7}
+                  className="gridColumnRightAlign"
+                  size={3}
 >
-                  <GridRow
-                                    reverse={false}
-                  >
-                                    <GridColumn
-                                                      offsetSize={10}
-                                                      size={2}
-                                    >
-                                                      <Button
-                                                                        autoFocus={false}
-                                                                        block={false}
-                                                                        disabled={false}
-                                                                        element="a"
-                                                                        href="#/search"
-                                                                        invalid={false}
-                                                                        label="View All"
-                                                                        logic={false}
-                                                                        onClick={[Function]}
-                                                                        quiet={false}
-                                                                        selected={false}
-                                                                        variant="primary"
-                                                      />
-                                    </GridColumn>
-                  </GridRow>
+                  <Button
+                                    autoFocus={false}
+                                    block={false}
+                                    className="viewAllButton"
+                                    disabled={false}
+                                    element="a"
+                                    href="#/search"
+                                    invalid={false}
+                                    label="View All"
+                                    logic={false}
+                                    onClick={[Function]}
+                                    quiet={false}
+                                    selected={false}
+                                    variant="primary"
+                  />
 </GridColumn>,
               ],
               "reverse": false,
-              "valign": "middle",
             },
             "ref": null,
             "rendered": Array [
@@ -973,7 +865,7 @@ ShallowWrapper {
                                         className="signalTypeNameHeader"
                     />
 </div>,
-                  "size": 5,
+                  "size": 9,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1029,30 +921,23 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": <GridRow
-                    reverse={false}
->
-                    <GridColumn
-                                        offsetSize={10}
-                                        size={2}
-                    >
-                                        <Button
-                                                            autoFocus={false}
-                                                            block={false}
-                                                            disabled={false}
-                                                            element="a"
-                                                            href="#/search"
-                                                            invalid={false}
-                                                            label="View All"
-                                                            logic={false}
-                                                            onClick={[Function]}
-                                                            quiet={false}
-                                                            selected={false}
-                                                            variant="primary"
-                                        />
-                    </GridColumn>
-</GridRow>,
-                  "size": 7,
+                  "children": <Button
+                    autoFocus={false}
+                    block={false}
+                    className="viewAllButton"
+                    disabled={false}
+                    element="a"
+                    href="#/search"
+                    invalid={false}
+                    label="View All"
+                    logic={false}
+                    onClick={[Function]}
+                    quiet={false}
+                    selected={false}
+                    variant="primary"
+/>,
+                  "className": "gridColumnRightAlign",
+                  "size": 3,
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1060,75 +945,22 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <GridColumn
-                      offsetSize={10}
-                      size={2}
->
-                      <Button
-                                            autoFocus={false}
-                                            block={false}
-                                            disabled={false}
-                                            element="a"
-                                            href="#/search"
-                                            invalid={false}
-                                            label="View All"
-                                            logic={false}
-                                            onClick={[Function]}
-                                            quiet={false}
-                                            selected={false}
-                                            variant="primary"
-                      />
-</GridColumn>,
-                    "reverse": false,
+                    "autoFocus": false,
+                    "block": false,
+                    "className": "viewAllButton",
+                    "disabled": false,
+                    "element": "a",
+                    "href": "#/search",
+                    "invalid": false,
+                    "label": "View All",
+                    "logic": false,
+                    "onClick": [Function],
+                    "quiet": false,
+                    "selected": false,
+                    "variant": "primary",
                   },
                   "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": <Button
-                        autoFocus={false}
-                        block={false}
-                        disabled={false}
-                        element="a"
-                        href="#/search"
-                        invalid={false}
-                        label="View All"
-                        logic={false}
-                        onClick={[Function]}
-                        quiet={false}
-                        selected={false}
-                        variant="primary"
-/>,
-                      "offsetSize": 10,
-                      "size": 2,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "autoFocus": false,
-                        "block": false,
-                        "disabled": false,
-                        "element": "a",
-                        "href": "#/search",
-                        "invalid": false,
-                        "label": "View All",
-                        "logic": false,
-                        "onClick": [Function],
-                        "quiet": false,
-                        "selected": false,
-                        "variant": "primary",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
-                    "type": [Function],
-                  },
+                  "rendered": null,
                   "type": [Function],
                 },
                 "type": [Function],
@@ -1202,10 +1034,9 @@ ShallowWrapper {
 >
               <GridRow
                             reverse={false}
-                            valign="middle"
               >
                             <GridColumn
-                                          size={5}
+                                          size={9}
                             >
                                           <div
                                                         className="tableHeader"
@@ -1221,31 +1052,24 @@ ShallowWrapper {
                                           </div>
                             </GridColumn>
                             <GridColumn
-                                          size={7}
+                                          className="gridColumnRightAlign"
+                                          size={3}
                             >
-                                          <GridRow
-                                                        reverse={false}
-                                          >
-                                                        <GridColumn
-                                                                      offsetSize={10}
-                                                                      size={2}
-                                                        >
-                                                                      <Button
-                                                                                    autoFocus={false}
-                                                                                    block={false}
-                                                                                    disabled={false}
-                                                                                    element="a"
-                                                                                    href="#/search"
-                                                                                    invalid={false}
-                                                                                    label="View All"
-                                                                                    logic={false}
-                                                                                    onClick={[Function]}
-                                                                                    quiet={false}
-                                                                                    selected={false}
-                                                                                    variant="primary"
-                                                                      />
-                                                        </GridColumn>
-                                          </GridRow>
+                                          <Button
+                                                        autoFocus={false}
+                                                        block={false}
+                                                        className="viewAllButton"
+                                                        disabled={false}
+                                                        element="a"
+                                                        href="#/search"
+                                                        invalid={false}
+                                                        label="View All"
+                                                        logic={false}
+                                                        onClick={[Function]}
+                                                        quiet={false}
+                                                        selected={false}
+                                                        variant="primary"
+                                          />
                             </GridColumn>
               </GridRow>
               <SavedSearchTable
@@ -1284,10 +1108,9 @@ ShallowWrapper {
 >
               <GridRow
                             reverse={false}
-                            valign="middle"
               >
                             <GridColumn
-                                          size={5}
+                                          size={9}
                             >
                                           <div
                                                         className="tableHeader"
@@ -1303,31 +1126,24 @@ ShallowWrapper {
                                           </div>
                             </GridColumn>
                             <GridColumn
-                                          size={7}
+                                          className="gridColumnRightAlign"
+                                          size={3}
                             >
-                                          <GridRow
-                                                        reverse={false}
-                                          >
-                                                        <GridColumn
-                                                                      offsetSize={10}
-                                                                      size={2}
-                                                        >
-                                                                      <Button
-                                                                                    autoFocus={false}
-                                                                                    block={false}
-                                                                                    disabled={false}
-                                                                                    element="a"
-                                                                                    href="#/search"
-                                                                                    invalid={false}
-                                                                                    label="View All"
-                                                                                    logic={false}
-                                                                                    onClick={[Function]}
-                                                                                    quiet={false}
-                                                                                    selected={false}
-                                                                                    variant="primary"
-                                                                      />
-                                                        </GridColumn>
-                                          </GridRow>
+                                          <Button
+                                                        autoFocus={false}
+                                                        block={false}
+                                                        className="viewAllButton"
+                                                        disabled={false}
+                                                        element="a"
+                                                        href="#/search"
+                                                        invalid={false}
+                                                        label="View All"
+                                                        logic={false}
+                                                        onClick={[Function]}
+                                                        quiet={false}
+                                                        selected={false}
+                                                        variant="primary"
+                                          />
                             </GridColumn>
               </GridRow>
               <SavedSearchTable
@@ -1403,10 +1219,9 @@ ShallowWrapper {
             "children": Array [
               <GridRow
                 reverse={false}
-                valign="middle"
 >
                 <GridColumn
-                                size={5}
+                                size={9}
                 >
                                 <div
                                                 className="tableHeader"
@@ -1422,31 +1237,24 @@ ShallowWrapper {
                                 </div>
                 </GridColumn>
                 <GridColumn
-                                size={7}
+                                className="gridColumnRightAlign"
+                                size={3}
                 >
-                                <GridRow
-                                                reverse={false}
-                                >
-                                                <GridColumn
-                                                                offsetSize={10}
-                                                                size={2}
-                                                >
-                                                                <Button
-                                                                                autoFocus={false}
-                                                                                block={false}
-                                                                                disabled={false}
-                                                                                element="a"
-                                                                                href="#/search"
-                                                                                invalid={false}
-                                                                                label="View All"
-                                                                                logic={false}
-                                                                                onClick={[Function]}
-                                                                                quiet={false}
-                                                                                selected={false}
-                                                                                variant="primary"
-                                                                />
-                                                </GridColumn>
-                                </GridRow>
+                                <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                className="viewAllButton"
+                                                disabled={false}
+                                                element="a"
+                                                href="#/search"
+                                                invalid={false}
+                                                label="View All"
+                                                logic={false}
+                                                onClick={[Function]}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="primary"
+                                />
                 </GridColumn>
 </GridRow>,
               <SavedSearchTable
@@ -1491,7 +1299,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <GridColumn
-                    size={5}
+                    size={9}
 >
                     <div
                                         className="tableHeader"
@@ -1507,35 +1315,27 @@ ShallowWrapper {
                     </div>
 </GridColumn>,
                   <GridColumn
-                    size={7}
+                    className="gridColumnRightAlign"
+                    size={3}
 >
-                    <GridRow
-                                        reverse={false}
-                    >
-                                        <GridColumn
-                                                            offsetSize={10}
-                                                            size={2}
-                                        >
-                                                            <Button
-                                                                                autoFocus={false}
-                                                                                block={false}
-                                                                                disabled={false}
-                                                                                element="a"
-                                                                                href="#/search"
-                                                                                invalid={false}
-                                                                                label="View All"
-                                                                                logic={false}
-                                                                                onClick={[Function]}
-                                                                                quiet={false}
-                                                                                selected={false}
-                                                                                variant="primary"
-                                                            />
-                                        </GridColumn>
-                    </GridRow>
+                    <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        className="viewAllButton"
+                                        disabled={false}
+                                        element="a"
+                                        href="#/search"
+                                        invalid={false}
+                                        label="View All"
+                                        logic={false}
+                                        onClick={[Function]}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="primary"
+                    />
 </GridColumn>,
                 ],
                 "reverse": false,
-                "valign": "middle",
               },
               "ref": null,
               "rendered": Array [
@@ -1556,7 +1356,7 @@ ShallowWrapper {
                                             className="signalTypeNameHeader"
                       />
 </div>,
-                    "size": 5,
+                    "size": 9,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1612,30 +1412,23 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <GridRow
-                      reverse={false}
->
-                      <GridColumn
-                                            offsetSize={10}
-                                            size={2}
-                      >
-                                            <Button
-                                                                  autoFocus={false}
-                                                                  block={false}
-                                                                  disabled={false}
-                                                                  element="a"
-                                                                  href="#/search"
-                                                                  invalid={false}
-                                                                  label="View All"
-                                                                  logic={false}
-                                                                  onClick={[Function]}
-                                                                  quiet={false}
-                                                                  selected={false}
-                                                                  variant="primary"
-                                            />
-                      </GridColumn>
-</GridRow>,
-                    "size": 7,
+                    "children": <Button
+                      autoFocus={false}
+                      block={false}
+                      className="viewAllButton"
+                      disabled={false}
+                      element="a"
+                      href="#/search"
+                      invalid={false}
+                      label="View All"
+                      logic={false}
+                      onClick={[Function]}
+                      quiet={false}
+                      selected={false}
+                      variant="primary"
+/>,
+                    "className": "gridColumnRightAlign",
+                    "size": 3,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1643,75 +1436,22 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "children": <GridColumn
-                        offsetSize={10}
-                        size={2}
->
-                        <Button
-                                                autoFocus={false}
-                                                block={false}
-                                                disabled={false}
-                                                element="a"
-                                                href="#/search"
-                                                invalid={false}
-                                                label="View All"
-                                                logic={false}
-                                                onClick={[Function]}
-                                                quiet={false}
-                                                selected={false}
-                                                variant="primary"
-                        />
-</GridColumn>,
-                      "reverse": false,
+                      "autoFocus": false,
+                      "block": false,
+                      "className": "viewAllButton",
+                      "disabled": false,
+                      "element": "a",
+                      "href": "#/search",
+                      "invalid": false,
+                      "label": "View All",
+                      "logic": false,
+                      "onClick": [Function],
+                      "quiet": false,
+                      "selected": false,
+                      "variant": "primary",
                     },
                     "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-/>,
-                        "offsetSize": 10,
-                        "size": 2,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "autoFocus": false,
-                          "block": false,
-                          "disabled": false,
-                          "element": "a",
-                          "href": "#/search",
-                          "invalid": false,
-                          "label": "View All",
-                          "logic": false,
-                          "onClick": [Function],
-                          "quiet": false,
-                          "selected": false,
-                          "variant": "primary",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
+                    "rendered": null,
                     "type": [Function],
                   },
                   "type": [Function],
@@ -1765,10 +1505,9 @@ ShallowWrapper {
             "children": Array [
               <GridRow
                 reverse={false}
-                valign="middle"
 >
                 <GridColumn
-                                size={5}
+                                size={9}
                 >
                                 <div
                                                 className="tableHeader"
@@ -1784,31 +1523,24 @@ ShallowWrapper {
                                 </div>
                 </GridColumn>
                 <GridColumn
-                                size={7}
+                                className="gridColumnRightAlign"
+                                size={3}
                 >
-                                <GridRow
-                                                reverse={false}
-                                >
-                                                <GridColumn
-                                                                offsetSize={10}
-                                                                size={2}
-                                                >
-                                                                <Button
-                                                                                autoFocus={false}
-                                                                                block={false}
-                                                                                disabled={false}
-                                                                                element="a"
-                                                                                href="#/search"
-                                                                                invalid={false}
-                                                                                label="View All"
-                                                                                logic={false}
-                                                                                onClick={[Function]}
-                                                                                quiet={false}
-                                                                                selected={false}
-                                                                                variant="primary"
-                                                                />
-                                                </GridColumn>
-                                </GridRow>
+                                <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                className="viewAllButton"
+                                                disabled={false}
+                                                element="a"
+                                                href="#/search"
+                                                invalid={false}
+                                                label="View All"
+                                                logic={false}
+                                                onClick={[Function]}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="primary"
+                                />
                 </GridColumn>
 </GridRow>,
               <SavedSearchTable
@@ -1858,7 +1590,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <GridColumn
-                    size={5}
+                    size={9}
 >
                     <div
                                         className="tableHeader"
@@ -1874,35 +1606,27 @@ ShallowWrapper {
                     </div>
 </GridColumn>,
                   <GridColumn
-                    size={7}
+                    className="gridColumnRightAlign"
+                    size={3}
 >
-                    <GridRow
-                                        reverse={false}
-                    >
-                                        <GridColumn
-                                                            offsetSize={10}
-                                                            size={2}
-                                        >
-                                                            <Button
-                                                                                autoFocus={false}
-                                                                                block={false}
-                                                                                disabled={false}
-                                                                                element="a"
-                                                                                href="#/search"
-                                                                                invalid={false}
-                                                                                label="View All"
-                                                                                logic={false}
-                                                                                onClick={[Function]}
-                                                                                quiet={false}
-                                                                                selected={false}
-                                                                                variant="primary"
-                                                            />
-                                        </GridColumn>
-                    </GridRow>
+                    <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        className="viewAllButton"
+                                        disabled={false}
+                                        element="a"
+                                        href="#/search"
+                                        invalid={false}
+                                        label="View All"
+                                        logic={false}
+                                        onClick={[Function]}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="primary"
+                    />
 </GridColumn>,
                 ],
                 "reverse": false,
-                "valign": "middle",
               },
               "ref": null,
               "rendered": Array [
@@ -1923,7 +1647,7 @@ ShallowWrapper {
                                             className="signalTypeNameHeader"
                       />
 </div>,
-                    "size": 5,
+                    "size": 9,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1979,30 +1703,23 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <GridRow
-                      reverse={false}
->
-                      <GridColumn
-                                            offsetSize={10}
-                                            size={2}
-                      >
-                                            <Button
-                                                                  autoFocus={false}
-                                                                  block={false}
-                                                                  disabled={false}
-                                                                  element="a"
-                                                                  href="#/search"
-                                                                  invalid={false}
-                                                                  label="View All"
-                                                                  logic={false}
-                                                                  onClick={[Function]}
-                                                                  quiet={false}
-                                                                  selected={false}
-                                                                  variant="primary"
-                                            />
-                      </GridColumn>
-</GridRow>,
-                    "size": 7,
+                    "children": <Button
+                      autoFocus={false}
+                      block={false}
+                      className="viewAllButton"
+                      disabled={false}
+                      element="a"
+                      href="#/search"
+                      invalid={false}
+                      label="View All"
+                      logic={false}
+                      onClick={[Function]}
+                      quiet={false}
+                      selected={false}
+                      variant="primary"
+/>,
+                    "className": "gridColumnRightAlign",
+                    "size": 3,
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2010,75 +1727,22 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "children": <GridColumn
-                        offsetSize={10}
-                        size={2}
->
-                        <Button
-                                                autoFocus={false}
-                                                block={false}
-                                                disabled={false}
-                                                element="a"
-                                                href="#/search"
-                                                invalid={false}
-                                                label="View All"
-                                                logic={false}
-                                                onClick={[Function]}
-                                                quiet={false}
-                                                selected={false}
-                                                variant="primary"
-                        />
-</GridColumn>,
-                      "reverse": false,
+                      "autoFocus": false,
+                      "block": false,
+                      "className": "viewAllButton",
+                      "disabled": false,
+                      "element": "a",
+                      "href": "#/search",
+                      "invalid": false,
+                      "label": "View All",
+                      "logic": false,
+                      "onClick": [Function],
+                      "quiet": false,
+                      "selected": false,
+                      "variant": "primary",
                     },
                     "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": <Button
-                          autoFocus={false}
-                          block={false}
-                          disabled={false}
-                          element="a"
-                          href="#/search"
-                          invalid={false}
-                          label="View All"
-                          logic={false}
-                          onClick={[Function]}
-                          quiet={false}
-                          selected={false}
-                          variant="primary"
-/>,
-                        "offsetSize": 10,
-                        "size": 2,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "autoFocus": false,
-                          "block": false,
-                          "disabled": false,
-                          "element": "a",
-                          "href": "#/search",
-                          "invalid": false,
-                          "label": "View All",
-                          "logic": false,
-                          "onClick": [Function],
-                          "quiet": false,
-                          "selected": false,
-                          "variant": "primary",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
-                      "type": [Function],
-                    },
+                    "rendered": null,
                     "type": [Function],
                   },
                   "type": [Function],
