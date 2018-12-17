@@ -1,68 +1,65 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Tab, TabList } from '@react/react-spectrum/TabList';
+import { SideNav, SideNavItem, SideNavHeading } from '@react/react-spectrum/SideNav';
 import Heading from '@react/react-spectrum/Heading';
 import styles from './SignalTypeFilter.css';
-import { signalTypeOptions } from '../constants/signalTypeOptions';
+import { signalTypeOptions, categoryTypes } from '../constants/signalTypeOptions';
 
 class SignalTypeFilter extends Component {
-    // Phase 2 feature is commented out
     state = {
-        counts: {
-            ALL: 72093,
-            ANALYTICS: 34300,
-            ALF: 359,
-            REALTIME: 27,
-            ONBOARDED: 37407,
-        },
-        selectedIndex: 0,
+        value: 'ALL',
     };
 
-    //validate if filter is cleared, reset to the default initial selected tab index
     componentDidUpdate(prevProps) {
         if (!this.props.isSearched && prevProps.isSearched) {
-            this.setState({ selectedIndex: 0 });
+            this.setState({ value: 'ALL' });
         }
     }
 
-    handleSignalTypeChange = tabIndex => {
-        // const signalTypeOptions = getSignalTypeOptions(this.state.counts);
-        const { value } = signalTypeOptions[tabIndex];
-        this.setState({ selectedIndex: tabIndex }, () => this.props.onSignalTypeChange(value));
+    handleSignalTypeSelect = value => {
+        this.setState({ value }, () => this.props.onSignalTypeChange(value));
     };
 
-    renderTab = option => (
-        <Tab
-            key={option.value}
-            selected={this.props.signalType === option.value}
-            data-test={`${option.value.toLowerCase()}-signal-type-filter`}>
-            {option.label}
-        </Tab>
-    );
-
     render() {
-        // const signalTypeOptions = getSignalTypeOptions(this.state.counts);
-
         return (
             <Fragment>
                 <Heading size={3} className={styles.heading}>
                     Filter by Signal Type
                 </Heading>
-                <TabList
-                    className={styles.signalType}
-                    orientation="vertical"
-                    variant="compact"
-                    selectedIndex={this.state.selectedIndex}
-                    onChange={this.handleSignalTypeChange}>
-                    {signalTypeOptions.map(this.renderTab)}
-                </TabList>
+                <SideNav
+                    autoFocus
+                    manageTabIndex
+                    typeToSelect
+                    value={this.state.value}
+                    aria-label="Filter By Signal Types"
+                    onSelect={this.handleSignalTypeSelect}>
+                    <SideNavItem data-test="all-signal-type-filter" value="ALL">
+                        All
+                    </SideNavItem>
+                    {categoryTypes.map(categoryType => (
+                        <SideNavHeading label={`${categoryType} SIGNALS`} key={categoryType}>
+                            {signalTypeOptions.reduce((acc, option) => {
+                                if (option.category === categoryType) {
+                                    acc.push(
+                                        <SideNavItem
+                                            value={option.value}
+                                            key={option.value}
+                                            data-test={`${option.value.toLowerCase()}-signal-type-filter`}>
+                                            {option.label}
+                                        </SideNavItem>,
+                                    );
+                                }
+                                return acc;
+                            }, [])}
+                        </SideNavHeading>
+                    ))}
+                </SideNav>
             </Fragment>
         );
     }
 }
 
 SignalTypeFilter.propTypes = {
-    counts: PropTypes.object,
     isSearched: PropTypes.bool,
     onSignalTypeChange: PropTypes.func,
     signalType: PropTypes.string,

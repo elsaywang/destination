@@ -21,11 +21,7 @@ const AdvancedSearch = ({
     const renderLabel = () => (
         <div className={styles.reportSuitesLabel}>
             <span>Report Suite &nbsp; </span>
-            {/* TODO: Remove `style` attribute below after updating to latest react-spectrum. */}
-            <OverlayTrigger
-                trigger="hover"
-                placement="right"
-                style={{ 'word-break': 'break-word' }}>
+            <OverlayTrigger trigger="hover" placement="right">
                 <Button quiet variant="tool" icon={<Info size="XS" />} />
                 <Tooltip>
                     Please select a report suite to show key suggestions for Analytics variables.

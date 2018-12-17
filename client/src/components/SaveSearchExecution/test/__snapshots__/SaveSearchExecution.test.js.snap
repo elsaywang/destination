@@ -154,7 +154,6 @@ ShallowWrapper {
           confirmLabel="Save"
           keyboardConfirm={false}
           modalcontent={true}
-          mode="centered"
           onCancel={[Function]}
           onClose={[Function]}
           onConfirm={[Function]}
@@ -329,7 +328,6 @@ ShallowWrapper {
           "confirmLabel": "Save",
           "keyboardConfirm": false,
           "modalcontent": true,
-          "mode": "centered",
           "onCancel": [Function],
           "onClose": [Function],
           "onConfirm": [Function],
@@ -418,7 +416,6 @@ ShallowWrapper {
             confirmLabel="Save"
             keyboardConfirm={false}
             modalcontent={true}
-            mode="centered"
             onCancel={[Function]}
             onClose={[Function]}
             onConfirm={[Function]}
@@ -593,7 +590,6 @@ ShallowWrapper {
             "confirmLabel": "Save",
             "keyboardConfirm": false,
             "modalcontent": true,
-            "mode": "centered",
             "onCancel": [Function],
             "onClose": [Function],
             "onConfirm": [Function],

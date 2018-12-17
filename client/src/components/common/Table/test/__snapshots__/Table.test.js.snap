@@ -52,7 +52,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <TableView
+        acceptsDrops={false}
+        allowsMultipleSelection={true}
         allowsSelection={true}
+        canDragItems={false}
         dataSource={
                 DataSource {
                         "_events": Object {},
@@ -84,6 +87,7 @@ ShallowWrapper {
                         "sortSearch": [Function],
                       }
         }
+        dropPosition="between"
         onSelectionChange={[Function]}
         renderCell={[Function]}
         rowHeight={undefined}
@@ -100,7 +104,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "acceptsDrops": false,
+        "allowsMultipleSelection": true,
         "allowsSelection": true,
+        "canDragItems": false,
         "dataSource": DataSource {
           "_events": Object {},
           "_eventsCount": 0,
@@ -130,6 +137,7 @@ ShallowWrapper {
           "sortDir": -1,
           "sortSearch": [Function],
         },
+        "dropPosition": "between",
         "onSelectionChange": [Function],
         "renderCell": [Function],
         "rowHeight": undefined,
@@ -147,7 +155,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <TableView
+          acceptsDrops={false}
+          allowsMultipleSelection={true}
           allowsSelection={true}
+          canDragItems={false}
           dataSource={
                     DataSource {
                               "_events": Object {},
@@ -179,6 +190,7 @@ ShallowWrapper {
                               "sortSearch": [Function],
                             }
           }
+          dropPosition="between"
           onSelectionChange={[Function]}
           renderCell={[Function]}
           rowHeight={undefined}
@@ -195,7 +207,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "acceptsDrops": false,
+          "allowsMultipleSelection": true,
           "allowsSelection": true,
+          "canDragItems": false,
           "dataSource": DataSource {
             "_events": Object {},
             "_eventsCount": 0,
@@ -225,6 +240,7 @@ ShallowWrapper {
             "sortDir": -1,
             "sortSearch": [Function],
           },
+          "dropPosition": "between",
           "onSelectionChange": [Function],
           "renderCell": [Function],
           "rowHeight": undefined,
