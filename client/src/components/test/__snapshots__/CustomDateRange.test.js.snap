@@ -24,10 +24,13 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Label
-          value="Start Date"
+        <FieldLabel
+          className="fieldLabel"
+          id="label-custom-start-date"
+          label="Start Date"
 >
           <Datepicker
+                    aria-labelledby="label-custom-start-date"
                     className="custom-start-date"
                     data-test="custom-start-date"
                     disabled={false}
@@ -48,11 +51,14 @@ ShallowWrapper {
                     value="2018-04-24"
                     valueFormat="YYYY-MM-DD"
           />
-</Label>,
-        <Label
-          value="End Date"
+</FieldLabel>,
+        <FieldLabel
+          className="fieldLabel"
+          id="label-custom-end-date"
+          label="End Date"
 >
           <Datepicker
+                    aria-labelledby="label-custom-end-date"
                     className="custom-end-date"
                     data-test="custom-end-date"
                     disabled={false}
@@ -73,7 +79,7 @@ ShallowWrapper {
                     value="2018-05-01"
                     valueFormat="YYYY-MM-DD"
           />
-</Label>,
+</FieldLabel>,
       ],
     },
     "ref": null,
@@ -84,6 +90,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <Datepicker
+            aria-labelledby="label-custom-start-date"
             className="custom-start-date"
             data-test="custom-start-date"
             disabled={false}
@@ -104,7 +111,9 @@ ShallowWrapper {
             value="2018-04-24"
             valueFormat="YYYY-MM-DD"
 />,
-          "value": "Start Date",
+          "className": "fieldLabel",
+          "id": "label-custom-start-date",
+          "label": "Start Date",
         },
         "ref": null,
         "rendered": Object {
@@ -112,6 +121,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "aria-labelledby": "label-custom-start-date",
             "className": "custom-start-date",
             "data-test": "custom-start-date",
             "disabled": false,
@@ -144,6 +154,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <Datepicker
+            aria-labelledby="label-custom-end-date"
             className="custom-end-date"
             data-test="custom-end-date"
             disabled={false}
@@ -164,7 +175,9 @@ ShallowWrapper {
             value="2018-05-01"
             valueFormat="YYYY-MM-DD"
 />,
-          "value": "End Date",
+          "className": "fieldLabel",
+          "id": "label-custom-end-date",
+          "label": "End Date",
         },
         "ref": null,
         "rendered": Object {
@@ -172,6 +185,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "aria-labelledby": "label-custom-end-date",
             "className": "custom-end-date",
             "data-test": "custom-end-date",
             "disabled": false,
@@ -208,10 +222,13 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Label
-            value="Start Date"
+          <FieldLabel
+            className="fieldLabel"
+            id="label-custom-start-date"
+            label="Start Date"
 >
             <Datepicker
+                        aria-labelledby="label-custom-start-date"
                         className="custom-start-date"
                         data-test="custom-start-date"
                         disabled={false}
@@ -232,11 +249,14 @@ ShallowWrapper {
                         value="2018-04-24"
                         valueFormat="YYYY-MM-DD"
             />
-</Label>,
-          <Label
-            value="End Date"
+</FieldLabel>,
+          <FieldLabel
+            className="fieldLabel"
+            id="label-custom-end-date"
+            label="End Date"
 >
             <Datepicker
+                        aria-labelledby="label-custom-end-date"
                         className="custom-end-date"
                         data-test="custom-end-date"
                         disabled={false}
@@ -257,7 +277,7 @@ ShallowWrapper {
                         value="2018-05-01"
                         valueFormat="YYYY-MM-DD"
             />
-</Label>,
+</FieldLabel>,
         ],
       },
       "ref": null,
@@ -268,6 +288,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Datepicker
+              aria-labelledby="label-custom-start-date"
               className="custom-start-date"
               data-test="custom-start-date"
               disabled={false}
@@ -288,7 +309,9 @@ ShallowWrapper {
               value="2018-04-24"
               valueFormat="YYYY-MM-DD"
 />,
-            "value": "Start Date",
+            "className": "fieldLabel",
+            "id": "label-custom-start-date",
+            "label": "Start Date",
           },
           "ref": null,
           "rendered": Object {
@@ -296,6 +319,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "aria-labelledby": "label-custom-start-date",
               "className": "custom-start-date",
               "data-test": "custom-start-date",
               "disabled": false,
@@ -328,6 +352,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Datepicker
+              aria-labelledby="label-custom-end-date"
               className="custom-end-date"
               data-test="custom-end-date"
               disabled={false}
@@ -348,7 +373,9 @@ ShallowWrapper {
               value="2018-05-01"
               valueFormat="YYYY-MM-DD"
 />,
-            "value": "End Date",
+            "className": "fieldLabel",
+            "id": "label-custom-end-date",
+            "label": "End Date",
           },
           "ref": null,
           "rendered": Object {
@@ -356,6 +383,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "aria-labelledby": "label-custom-end-date",
               "className": "custom-end-date",
               "data-test": "custom-end-date",
               "disabled": false,
