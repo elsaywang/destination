@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SaveSearchExecutionContent from '../SaveSearchExecutionContent';
-import Label from '../../../components/common/Label';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import Textfield from '@react/react-spectrum/Textfield';
 import Checkbox from '@react/react-spectrum/Checkbox';
 import Select from '@react/react-spectrum/Select';
@@ -35,11 +35,11 @@ describe('<SaveSearchExecutionContent /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it(`renders <Label/> with correct label and value and it's child <Textfield> with correct placeholder name`, () => {
-            expect(wrapper.find(Label).exists()).toBeTruthy();
+        it(`renders <FieldLabel /> with correct label and value and it's child <Textfield> with correct placeholder name`, () => {
+            expect(wrapper.find(FieldLabel).exists()).toBeTruthy();
             expect(
                 wrapper
-                    .find(Label)
+                    .find(FieldLabel)
                     .children()
                     .find(Textfield),
             ).toBeTruthy();
@@ -65,7 +65,7 @@ describe('<SaveSearchExecutionContent /> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <Label/> children of <Select/> and <RadioGroup/> including 2 <Radio/>', () => {
+        it('renders <FieldLabel/> children of <Select/> and <RadioGroup/> including 2 <Radio/>', () => {
             wrapper.setState({ isTrackInDashboardChecked: true });
             expect(wrapper.find(Select)).toBeTruthy();
             expect(wrapper.find(RadioGroup).exists()).toBeTruthy();

@@ -23,9 +23,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Label
+        <FieldLabel
+          label="Name (Required)"
           labelFor="Save This Search"
-          value="Name (Required)"
 >
           <Textfield
                     autoFocus={false}
@@ -39,7 +39,7 @@ ShallowWrapper {
                     readOnly={false}
                     required={true}
           />
-</Label>,
+</FieldLabel>,
         <div
           className="contentCheckBox"
 >
@@ -58,9 +58,9 @@ ShallowWrapper {
                     required={false}
           />
 </div>,
-        <Label
+        <FieldLabel
+          label="Default Sorting"
           labelFor="Default Sorting"
-          value="Default Sorting"
 >
           <Select
                     data-test="save-this-search-sort-column"
@@ -104,7 +104,7 @@ ShallowWrapper {
                               />
                     </RadioGroup>
           </div>
-</Label>,
+</FieldLabel>,
       ],
       "data-test": "save-this-search-dialog-content",
     },
@@ -127,8 +127,8 @@ ShallowWrapper {
             readOnly={false}
             required={true}
 />,
+          "label": "Name (Required)",
           "labelFor": "Save This Search",
-          "value": "Name (Required)",
         },
         "ref": null,
         "rendered": Object {
@@ -248,8 +248,8 @@ ShallowWrapper {
               </RadioGroup>
 </div>,
           ],
+          "label": "Default Sorting",
           "labelFor": "Default Sorting",
-          "value": "Default Sorting",
         },
         "ref": null,
         "rendered": Array [
@@ -381,9 +381,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Label
+          <FieldLabel
+            label="Name (Required)"
             labelFor="Save This Search"
-            value="Name (Required)"
 >
             <Textfield
                         autoFocus={false}
@@ -397,7 +397,7 @@ ShallowWrapper {
                         readOnly={false}
                         required={true}
             />
-</Label>,
+</FieldLabel>,
           <div
             className="contentCheckBox"
 >
@@ -416,9 +416,9 @@ ShallowWrapper {
                         required={false}
             />
 </div>,
-          <Label
+          <FieldLabel
+            label="Default Sorting"
             labelFor="Default Sorting"
-            value="Default Sorting"
 >
             <Select
                         data-test="save-this-search-sort-column"
@@ -462,7 +462,7 @@ ShallowWrapper {
                                     />
                         </RadioGroup>
             </div>
-</Label>,
+</FieldLabel>,
         ],
         "data-test": "save-this-search-dialog-content",
       },
@@ -485,8 +485,8 @@ ShallowWrapper {
               readOnly={false}
               required={true}
 />,
+            "label": "Name (Required)",
             "labelFor": "Save This Search",
-            "value": "Name (Required)",
           },
           "ref": null,
           "rendered": Object {
@@ -606,8 +606,8 @@ ShallowWrapper {
                 </RadioGroup>
 </div>,
             ],
+            "label": "Default Sorting",
             "labelFor": "Default Sorting",
-            "value": "Default Sorting",
           },
           "ref": null,
           "rendered": Array [
@@ -778,9 +778,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Label
+        <FieldLabel
+          label="Name (Required)"
           labelFor="Save This Search"
-          value="Name (Required)"
 >
           <Textfield
                     autoFocus={false}
@@ -794,7 +794,7 @@ ShallowWrapper {
                     readOnly={false}
                     required={true}
           />
-</Label>,
+</FieldLabel>,
         <div
           className="contentCheckBox"
 >
@@ -813,9 +813,9 @@ ShallowWrapper {
                     required={false}
           />
 </div>,
-        <Label
+        <FieldLabel
+          label="Default Sorting"
           labelFor="Default Sorting"
-          value="Default Sorting"
 >
           <Select
                     data-test="save-this-search-sort-column"
@@ -859,7 +859,7 @@ ShallowWrapper {
                               />
                     </RadioGroup>
           </div>
-</Label>,
+</FieldLabel>,
       ],
       "data-test": "save-this-search-dialog-content",
     },
@@ -882,8 +882,8 @@ ShallowWrapper {
             readOnly={false}
             required={true}
 />,
+          "label": "Name (Required)",
           "labelFor": "Save This Search",
-          "value": "Name (Required)",
         },
         "ref": null,
         "rendered": Object {
@@ -1003,8 +1003,8 @@ ShallowWrapper {
               </RadioGroup>
 </div>,
           ],
+          "label": "Default Sorting",
           "labelFor": "Default Sorting",
-          "value": "Default Sorting",
         },
         "ref": null,
         "rendered": Array [
@@ -1136,9 +1136,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Label
+          <FieldLabel
+            label="Name (Required)"
             labelFor="Save This Search"
-            value="Name (Required)"
 >
             <Textfield
                         autoFocus={false}
@@ -1152,7 +1152,7 @@ ShallowWrapper {
                         readOnly={false}
                         required={true}
             />
-</Label>,
+</FieldLabel>,
           <div
             className="contentCheckBox"
 >
@@ -1171,9 +1171,9 @@ ShallowWrapper {
                         required={false}
             />
 </div>,
-          <Label
+          <FieldLabel
+            label="Default Sorting"
             labelFor="Default Sorting"
-            value="Default Sorting"
 >
             <Select
                         data-test="save-this-search-sort-column"
@@ -1217,7 +1217,7 @@ ShallowWrapper {
                                     />
                         </RadioGroup>
             </div>
-</Label>,
+</FieldLabel>,
         ],
         "data-test": "save-this-search-dialog-content",
       },
@@ -1240,8 +1240,8 @@ ShallowWrapper {
               readOnly={false}
               required={true}
 />,
+            "label": "Name (Required)",
             "labelFor": "Save This Search",
-            "value": "Name (Required)",
           },
           "ref": null,
           "rendered": Object {
@@ -1361,8 +1361,8 @@ ShallowWrapper {
                 </RadioGroup>
 </div>,
             ],
+            "label": "Default Sorting",
             "labelFor": "Default Sorting",
-            "value": "Default Sorting",
           },
           "ref": null,
           "rendered": Array [
