@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import Datepicker from '@react/react-spectrum/Datepicker';
-import Label from './common/Label';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { customDateFormat } from '../constants/dateRangeConstants';
 import { getNow, parseDate, boundDate } from '../utils/dateRange';
 
@@ -57,8 +57,9 @@ class CustomDateRange extends Component {
 
         return (
             <Fragment>
-                <Label value="Start Date">
+                <FieldLabel label="Start Date" id="label-custom-start-date">
                     <Datepicker
+                        aria-labelledby="label-custom-start-date"
                         className="custom-start-date"
                         data-test="custom-start-date"
                         value={customStartDate}
@@ -69,10 +70,11 @@ class CustomDateRange extends Component {
                         displayFormat="MM/DD/YYYY"
                         quiet
                     />
-                </Label>
+                </FieldLabel>
 
-                <Label value="End Date">
+                <FieldLabel label="End Date" id="label-custom-end-date">
                     <Datepicker
+                        aria-labelledby="label-custom-end-date"
                         className="custom-end-date"
                         data-test="custom-end-date"
                         value={customEndDate}
@@ -83,7 +85,7 @@ class CustomDateRange extends Component {
                         displayFormat="MM/DD/YYYY"
                         quiet
                     />
-                </Label>
+                </FieldLabel>
             </Fragment>
         );
     }

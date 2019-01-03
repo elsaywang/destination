@@ -3,7 +3,7 @@ import debounce from 'debounce-promise';
 import Autocomplete from '@react/react-spectrum/Autocomplete';
 import Select from '@react/react-spectrum/Select';
 import Textfield from '@react/react-spectrum/Textfield';
-import Label from './common/Label';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import operatorOptions from '../constants/operatorOptions';
 import { keySuggestionsDebounceMs } from '../constants/lazyLoadConstants';
 import styles from './KeyValuePair.css';
@@ -164,8 +164,8 @@ class KeyValuePair extends Component {
             this.state.autocompleteError && !errors.searchForm.hasError && !searched;
 
         return (
-            <span data-test="key-value-pair">
-                <Label value={keyLabel} labelFor={forKey} style={{ position: 'relative' }}>
+            <span data-test="key-value-pair" style={{ display: 'inherit' }}>
+                <FieldLabel label={keyLabel} labelFor={forKey}>
                     <Autocomplete
                         className="key-search"
                         getCompletions={this.getCompletionsDebounced}
@@ -180,12 +180,11 @@ class KeyValuePair extends Component {
                         />
                     </Autocomplete>
                     <InlineErrorMessage
-                        className={styles.error}
                         isInvalid={isKeyInvalid}
                         errorMessage={this.state.autocompleteErrorMessage}
                         showIcon={false}
                     />
-                </Label>
+                </FieldLabel>
                 <Select
                     className={classNames(styles.operator, 'operator')}
                     value={operator}
@@ -193,7 +192,7 @@ class KeyValuePair extends Component {
                     options={operatorOptions}
                     data-test="operator"
                 />
-                <Label value={valueLabel} labelFor={forValue} style={{ position: 'relative' }}>
+                <FieldLabel label={valueLabel} labelFor={forValue}>
                     <Textfield
                         className={classNames(styles.textField, 'value-search')}
                         data-test="value-search"
@@ -204,12 +203,11 @@ class KeyValuePair extends Component {
                         invalid={!isValueValid(this.props.pair)}
                     />
                     <InlineErrorMessage
-                        className={styles.error}
                         isInvalid={!isValueValid(this.props.pair)}
                         errorMessage="It can only be numerical values when it's > or <."
                         showIcon={false}
                     />
-                </Label>
+                </FieldLabel>
             </span>
         );
     }

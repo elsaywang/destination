@@ -38,7 +38,7 @@ class Search extends Component {
 
         return (
             <GridRow key={pair.id}>
-                <GridColumn size={12} className={styles.row}>
+                <GridColumn size={7} className={styles.row}>
                     <KeyValuePair
                         key={pair.id}
                         pair={pair}
@@ -52,17 +52,18 @@ class Search extends Component {
                         searched={searched}
                         errors={errors}
                     />
-                    {isLastPair(pair.id) &&
-                        validKeyValuePairsLimit && (
-                            <Button
-                                label="Add"
-                                data-test="add-button"
-                                onClick={onAddClick}
-                                icon={<AddCircle />}
-                                variant="action"
-                                quiet
-                            />
-                        )}
+                </GridColumn>
+                <GridColumn size={5} className={styles.rowButtons}>
+                    {isLastPair(pair.id) && validKeyValuePairsLimit && (
+                        <Button
+                            label="Add"
+                            data-test="add-button"
+                            onClick={onAddClick}
+                            icon={<AddCircle />}
+                            variant="action"
+                            quiet
+                        />
+                    )}
                     {pair.id !== 0 && (
                         <Button
                             label="Remove"
