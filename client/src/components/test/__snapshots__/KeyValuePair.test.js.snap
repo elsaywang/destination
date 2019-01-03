@@ -32,14 +32,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Label
+        <FieldLabel
+          label="Key"
           labelFor="key0"
-          style={
-                    Object {
-                              "position": "relative",
-                            }
-          }
-          value="Key"
 >
           <Autocomplete
                     allowCreate={false}
@@ -62,12 +57,11 @@ ShallowWrapper {
                     />
           </Autocomplete>
           <InlineErrorMessage
-                    className="error"
                     errorMessage=""
                     isInvalid={false}
                     showIcon={false}
           />
-</Label>,
+</FieldLabel>,
         <Select
           className="operator operator"
           data-test="operator"
@@ -110,14 +104,9 @@ ShallowWrapper {
           }
           value="=="
 />,
-        <Label
+        <FieldLabel
+          label="Value"
           labelFor="value0"
-          style={
-                    Object {
-                              "position": "relative",
-                            }
-          }
-          value="Value"
 >
           <Textfield
                     autoFocus={false}
@@ -134,14 +123,16 @@ ShallowWrapper {
                     value=""
           />
           <InlineErrorMessage
-                    className="error"
                     errorMessage="It can only be numerical values when it's > or <."
                     isInvalid={false}
                     showIcon={false}
           />
-</Label>,
+</FieldLabel>,
       ],
       "data-test": "key-value-pair",
+      "style": Object {
+        "display": "inherit",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -172,17 +163,13 @@ ShallowWrapper {
               />
 </Autocomplete>,
             <InlineErrorMessage
-              className="error"
               errorMessage=""
               isInvalid={false}
               showIcon={false}
 />,
           ],
+          "label": "Key",
           "labelFor": "key0",
-          "style": Object {
-            "position": "relative",
-          },
-          "value": "Key",
         },
         "ref": null,
         "rendered": Array [
@@ -237,7 +224,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "className": "error",
               "errorMessage": "",
               "isInvalid": false,
               "showIcon": false,
@@ -318,17 +304,13 @@ ShallowWrapper {
               value=""
 />,
             <InlineErrorMessage
-              className="error"
               errorMessage="It can only be numerical values when it's > or <."
               isInvalid={false}
               showIcon={false}
 />,
           ],
+          "label": "Value",
           "labelFor": "value0",
-          "style": Object {
-            "position": "relative",
-          },
-          "value": "Value",
         },
         "ref": null,
         "rendered": Array [
@@ -359,7 +341,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "className": "error",
               "errorMessage": "It can only be numerical values when it's > or <.",
               "isInvalid": false,
               "showIcon": false,
@@ -381,14 +362,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Label
+          <FieldLabel
+            label="Key"
             labelFor="key0"
-            style={
-                        Object {
-                                    "position": "relative",
-                                  }
-            }
-            value="Key"
 >
             <Autocomplete
                         allowCreate={false}
@@ -411,12 +387,11 @@ ShallowWrapper {
                         />
             </Autocomplete>
             <InlineErrorMessage
-                        className="error"
                         errorMessage=""
                         isInvalid={false}
                         showIcon={false}
             />
-</Label>,
+</FieldLabel>,
           <Select
             className="operator operator"
             data-test="operator"
@@ -459,14 +434,9 @@ ShallowWrapper {
             }
             value="=="
 />,
-          <Label
+          <FieldLabel
+            label="Value"
             labelFor="value0"
-            style={
-                        Object {
-                                    "position": "relative",
-                                  }
-            }
-            value="Value"
 >
             <Textfield
                         autoFocus={false}
@@ -483,14 +453,16 @@ ShallowWrapper {
                         value=""
             />
             <InlineErrorMessage
-                        className="error"
                         errorMessage="It can only be numerical values when it's > or <."
                         isInvalid={false}
                         showIcon={false}
             />
-</Label>,
+</FieldLabel>,
         ],
         "data-test": "key-value-pair",
+        "style": Object {
+          "display": "inherit",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -521,17 +493,13 @@ ShallowWrapper {
                 />
 </Autocomplete>,
               <InlineErrorMessage
-                className="error"
                 errorMessage=""
                 isInvalid={false}
                 showIcon={false}
 />,
             ],
+            "label": "Key",
             "labelFor": "key0",
-            "style": Object {
-              "position": "relative",
-            },
-            "value": "Key",
           },
           "ref": null,
           "rendered": Array [
@@ -586,7 +554,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": "error",
                 "errorMessage": "",
                 "isInvalid": false,
                 "showIcon": false,
@@ -667,17 +634,13 @@ ShallowWrapper {
                 value=""
 />,
               <InlineErrorMessage
-                className="error"
                 errorMessage="It can only be numerical values when it's > or <."
                 isInvalid={false}
                 showIcon={false}
 />,
             ],
+            "label": "Value",
             "labelFor": "value0",
-            "style": Object {
-              "position": "relative",
-            },
-            "value": "Value",
           },
           "ref": null,
           "rendered": Array [
@@ -708,7 +671,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": "error",
                 "errorMessage": "It can only be numerical values when it's > or <.",
                 "isInvalid": false,
                 "showIcon": false,

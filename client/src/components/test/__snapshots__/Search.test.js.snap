@@ -113,7 +113,7 @@ ShallowWrapper {
                                         >
                                                 <GridColumn
                                                         className="row"
-                                                        size={12}
+                                                        size={7}
                                                 >
                                                         <KeyValuePair
                                                                 advanced={false}
@@ -147,6 +147,11 @@ ShallowWrapper {
                                                                 reportSuiteId=""
                                                                 searched={false}
                                                         />
+                                                </GridColumn>
+                                                <GridColumn
+                                                        className="rowButtons"
+                                                        size={5}
+                                                >
                                                         <Button
                                                                 autoFocus={false}
                                                                 block={false}
@@ -171,8 +176,9 @@ ShallowWrapper {
                                                         className="row"
                                                         size={10}
                                                 >
-                                                        <Label
-                                                                value="Signal Status"
+                                                        <FieldLabel
+                                                                className="fieldLabel"
+                                                                label="Signal Status"
                                                         >
                                                                 <Select
                                                                         className="signal-status"
@@ -197,9 +203,10 @@ ShallowWrapper {
                                                                         quiet={true}
                                                                         value="ALL"
                                                                 />
-                                                        </Label>
-                                                        <Label
-                                                                value="View Records For"
+                                                        </FieldLabel>
+                                                        <FieldLabel
+                                                                className="fieldLabel"
+                                                                label="View Records For"
                                                         >
                                                                 <Select
                                                                         className="view-records"
@@ -232,9 +239,9 @@ ShallowWrapper {
                                                                         quiet={true}
                                                                         value="7D"
                                                                 />
-                                                        </Label>
-                                                        <Label
-                                                                value="Minimum Counts"
+                                                        </FieldLabel>
+                                                        <FieldLabel
+                                                                label="Minimum Counts"
                                                         >
                                                                 <NumberInput
                                                                         className="min-counts"
@@ -251,7 +258,7 @@ ShallowWrapper {
                                                                         step={1000}
                                                                         value={1000}
                                                                 />
-                                                        </Label>
+                                                        </FieldLabel>
                                                 </GridColumn>
                                                 <GridColumn
                                                         className="ctas"
@@ -335,7 +342,7 @@ ShallowWrapper {
                                                 >
                                                             <GridColumn
                                                                         className="row"
-                                                                        size={12}
+                                                                        size={7}
                                                             >
                                                                         <KeyValuePair
                                                                                     advanced={false}
@@ -369,6 +376,11 @@ ShallowWrapper {
                                                                                     reportSuiteId=""
                                                                                     searched={false}
                                                                         />
+                                                            </GridColumn>
+                                                            <GridColumn
+                                                                        className="rowButtons"
+                                                                        size={5}
+                                                            >
                                                                         <Button
                                                                                     autoFocus={false}
                                                                                     block={false}
@@ -393,8 +405,9 @@ ShallowWrapper {
                                                                         className="row"
                                                                         size={10}
                                                             >
-                                                                        <Label
-                                                                                    value="Signal Status"
+                                                                        <FieldLabel
+                                                                                    className="fieldLabel"
+                                                                                    label="Signal Status"
                                                                         >
                                                                                     <Select
                                                                                                 className="signal-status"
@@ -419,9 +432,10 @@ ShallowWrapper {
                                                                                                 quiet={true}
                                                                                                 value="ALL"
                                                                                     />
-                                                                        </Label>
-                                                                        <Label
-                                                                                    value="View Records For"
+                                                                        </FieldLabel>
+                                                                        <FieldLabel
+                                                                                    className="fieldLabel"
+                                                                                    label="View Records For"
                                                                         >
                                                                                     <Select
                                                                                                 className="view-records"
@@ -454,9 +468,9 @@ ShallowWrapper {
                                                                                                 quiet={true}
                                                                                                 value="7D"
                                                                                     />
-                                                                        </Label>
-                                                                        <Label
-                                                                                    value="Minimum Counts"
+                                                                        </FieldLabel>
+                                                                        <FieldLabel
+                                                                                    label="Minimum Counts"
                                                                         >
                                                                                     <NumberInput
                                                                                                 className="min-counts"
@@ -473,7 +487,7 @@ ShallowWrapper {
                                                                                                 step={1000}
                                                                                                 value={1000}
                                                                                     />
-                                                                        </Label>
+                                                                        </FieldLabel>
                                                             </GridColumn>
                                                             <GridColumn
                                                                         className="ctas"
@@ -583,7 +597,7 @@ ShallowWrapper {
                                           >
                                                         <GridColumn
                                                                       className="row"
-                                                                      size={12}
+                                                                      size={7}
                                                         >
                                                                       <KeyValuePair
                                                                                     advanced={false}
@@ -617,6 +631,11 @@ ShallowWrapper {
                                                                                     reportSuiteId=""
                                                                                     searched={false}
                                                                       />
+                                                        </GridColumn>
+                                                        <GridColumn
+                                                                      className="rowButtons"
+                                                                      size={5}
+                                                        >
                                                                       <Button
                                                                                     autoFocus={false}
                                                                                     block={false}
@@ -641,8 +660,9 @@ ShallowWrapper {
                                                                       className="row"
                                                                       size={10}
                                                         >
-                                                                      <Label
-                                                                                    value="Signal Status"
+                                                                      <FieldLabel
+                                                                                    className="fieldLabel"
+                                                                                    label="Signal Status"
                                                                       >
                                                                                     <Select
                                                                                                   className="signal-status"
@@ -667,9 +687,10 @@ ShallowWrapper {
                                                                                                   quiet={true}
                                                                                                   value="ALL"
                                                                                     />
-                                                                      </Label>
-                                                                      <Label
-                                                                                    value="View Records For"
+                                                                      </FieldLabel>
+                                                                      <FieldLabel
+                                                                                    className="fieldLabel"
+                                                                                    label="View Records For"
                                                                       >
                                                                                     <Select
                                                                                                   className="view-records"
@@ -702,9 +723,9 @@ ShallowWrapper {
                                                                                                   quiet={true}
                                                                                                   value="7D"
                                                                                     />
-                                                                      </Label>
-                                                                      <Label
-                                                                                    value="Minimum Counts"
+                                                                      </FieldLabel>
+                                                                      <FieldLabel
+                                                                                    label="Minimum Counts"
                                                                       >
                                                                                     <NumberInput
                                                                                                   className="min-counts"
@@ -721,7 +742,7 @@ ShallowWrapper {
                                                                                                   step={1000}
                                                                                                   value={1000}
                                                                                     />
-                                                                      </Label>
+                                                                      </FieldLabel>
                                                         </GridColumn>
                                                         <GridColumn
                                                                       className="ctas"
@@ -785,7 +806,7 @@ ShallowWrapper {
                                     >
                                                       <GridColumn
                                                                         className="row"
-                                                                        size={12}
+                                                                        size={7}
                                                       >
                                                                         <KeyValuePair
                                                                                           advanced={false}
@@ -819,6 +840,11 @@ ShallowWrapper {
                                                                                           reportSuiteId=""
                                                                                           searched={false}
                                                                         />
+                                                      </GridColumn>
+                                                      <GridColumn
+                                                                        className="rowButtons"
+                                                                        size={5}
+                                                      >
                                                                         <Button
                                                                                           autoFocus={false}
                                                                                           block={false}
@@ -843,8 +869,9 @@ ShallowWrapper {
                                                                         className="row"
                                                                         size={10}
                                                       >
-                                                                        <Label
-                                                                                          value="Signal Status"
+                                                                        <FieldLabel
+                                                                                          className="fieldLabel"
+                                                                                          label="Signal Status"
                                                                         >
                                                                                           <Select
                                                                                                             className="signal-status"
@@ -869,9 +896,10 @@ ShallowWrapper {
                                                                                                             quiet={true}
                                                                                                             value="ALL"
                                                                                           />
-                                                                        </Label>
-                                                                        <Label
-                                                                                          value="View Records For"
+                                                                        </FieldLabel>
+                                                                        <FieldLabel
+                                                                                          className="fieldLabel"
+                                                                                          label="View Records For"
                                                                         >
                                                                                           <Select
                                                                                                             className="view-records"
@@ -904,9 +932,9 @@ ShallowWrapper {
                                                                                                             quiet={true}
                                                                                                             value="7D"
                                                                                           />
-                                                                        </Label>
-                                                                        <Label
-                                                                                          value="Minimum Counts"
+                                                                        </FieldLabel>
+                                                                        <FieldLabel
+                                                                                          label="Minimum Counts"
                                                                         >
                                                                                           <NumberInput
                                                                                                             className="min-counts"
@@ -923,7 +951,7 @@ ShallowWrapper {
                                                                                                             step={1000}
                                                                                                             value={1000}
                                                                                           />
-                                                                        </Label>
+                                                                        </FieldLabel>
                                                       </GridColumn>
                                                       <GridColumn
                                                                         className="ctas"
@@ -985,7 +1013,7 @@ ShallowWrapper {
                     >
                                         <GridColumn
                                                             className="row"
-                                                            size={12}
+                                                            size={7}
                                         >
                                                             <KeyValuePair
                                                                                 advanced={false}
@@ -1019,6 +1047,11 @@ ShallowWrapper {
                                                                                 reportSuiteId=""
                                                                                 searched={false}
                                                             />
+                                        </GridColumn>
+                                        <GridColumn
+                                                            className="rowButtons"
+                                                            size={5}
+                                        >
                                                             <Button
                                                                                 autoFocus={false}
                                                                                 block={false}
@@ -1043,8 +1076,9 @@ ShallowWrapper {
                                                             className="row"
                                                             size={10}
                                         >
-                                                            <Label
-                                                                                value="Signal Status"
+                                                            <FieldLabel
+                                                                                className="fieldLabel"
+                                                                                label="Signal Status"
                                                             >
                                                                                 <Select
                                                                                                     className="signal-status"
@@ -1069,9 +1103,10 @@ ShallowWrapper {
                                                                                                     quiet={true}
                                                                                                     value="ALL"
                                                                                 />
-                                                            </Label>
-                                                            <Label
-                                                                                value="View Records For"
+                                                            </FieldLabel>
+                                                            <FieldLabel
+                                                                                className="fieldLabel"
+                                                                                label="View Records For"
                                                             >
                                                                                 <Select
                                                                                                     className="view-records"
@@ -1104,9 +1139,9 @@ ShallowWrapper {
                                                                                                     quiet={true}
                                                                                                     value="7D"
                                                                                 />
-                                                            </Label>
-                                                            <Label
-                                                                                value="Minimum Counts"
+                                                            </FieldLabel>
+                                                            <FieldLabel
+                                                                                label="Minimum Counts"
                                                             >
                                                                                 <NumberInput
                                                                                                     className="min-counts"
@@ -1123,7 +1158,7 @@ ShallowWrapper {
                                                                                                     step={1000}
                                                                                                     value={1000}
                                                                                 />
-                                                            </Label>
+                                                            </FieldLabel>
                                         </GridColumn>
                                         <GridColumn
                                                             className="ctas"
@@ -1180,7 +1215,7 @@ ShallowWrapper {
 >
                           <GridColumn
                                                     className="row"
-                                                    size={12}
+                                                    size={7}
                           >
                                                     <KeyValuePair
                                                                               advanced={false}
@@ -1214,6 +1249,11 @@ ShallowWrapper {
                                                                               reportSuiteId=""
                                                                               searched={false}
                                                     />
+                          </GridColumn>
+                          <GridColumn
+                                                    className="rowButtons"
+                                                    size={5}
+                          >
                                                     <Button
                                                                               autoFocus={false}
                                                                               block={false}
@@ -1239,8 +1279,9 @@ ShallowWrapper {
                                                 className="row"
                                                 size={10}
                         >
-                                                <Label
-                                                                        value="Signal Status"
+                                                <FieldLabel
+                                                                        className="fieldLabel"
+                                                                        label="Signal Status"
                                                 >
                                                                         <Select
                                                                                                 className="signal-status"
@@ -1265,9 +1306,10 @@ ShallowWrapper {
                                                                                                 quiet={true}
                                                                                                 value="ALL"
                                                                         />
-                                                </Label>
-                                                <Label
-                                                                        value="View Records For"
+                                                </FieldLabel>
+                                                <FieldLabel
+                                                                        className="fieldLabel"
+                                                                        label="View Records For"
                                                 >
                                                                         <Select
                                                                                                 className="view-records"
@@ -1300,9 +1342,9 @@ ShallowWrapper {
                                                                                                 quiet={true}
                                                                                                 value="7D"
                                                                         />
-                                                </Label>
-                                                <Label
-                                                                        value="Minimum Counts"
+                                                </FieldLabel>
+                                                <FieldLabel
+                                                                        label="Minimum Counts"
                                                 >
                                                                         <NumberInput
                                                                                                 className="min-counts"
@@ -1319,7 +1361,7 @@ ShallowWrapper {
                                                                                                 step={1000}
                                                                                                 value={1000}
                                                                         />
-                                                </Label>
+                                                </FieldLabel>
                         </GridColumn>
                         <GridColumn
                                                 className="ctas"
@@ -1370,68 +1412,75 @@ ShallowWrapper {
                       "key": "0",
                       "nodeType": "class",
                       "props": Object {
-                        "children": <GridColumn
-                          className="row"
-                          size={12}
+                        "children": Array [
+                          <GridColumn
+                            className="row"
+                            size={7}
 >
-                          <KeyValuePair
-                                                    advanced={false}
-                                                    errors={
-                                                                              Object {
-                                                                                                        "reportSuites": Object {
-                                                                                                          "errorMessage": "",
-                                                                                                          "hasError": false,
-                                                                                                        },
-                                                                                                        "savedSearch": Object {
-                                                                                                          "errorMessage": "",
-                                                                                                          "hasError": false,
-                                                                                                        },
-                                                                                                        "searchForm": Object {
-                                                                                                          "errorMessage": "",
-                                                                                                          "hasError": false,
-                                                                                                        },
-                                                                                                      }
-                                                    }
-                                                    onKeyChange={undefined}
-                                                    onOperatorChange={[Function]}
-                                                    onValueChange={[Function]}
-                                                    pair={
-                                                                              Object {
-                                                                                                        "id": 0,
-                                                                                                        "key": "",
-                                                                                                        "operator": "==",
-                                                                                                        "value": "",
-                                                                                                      }
-                                                    }
-                                                    reportSuiteId=""
-                                                    searched={false}
-                          />
-                          <Button
-                                                    autoFocus={false}
-                                                    block={false}
-                                                    data-test="add-button"
-                                                    disabled={false}
-                                                    element="button"
-                                                    icon={<AddCircle />}
-                                                    invalid={false}
-                                                    label="Add"
-                                                    logic={false}
-                                                    onClick={[Function]}
-                                                    quiet={true}
-                                                    selected={false}
-                                                    variant="action"
-                          />
+                            <KeyValuePair
+                                                        advanced={false}
+                                                        errors={
+                                                                                    Object {
+                                                                                                                "reportSuites": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                                "savedSearch": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                                "searchForm": Object {
+                                                                                                                  "errorMessage": "",
+                                                                                                                  "hasError": false,
+                                                                                                                },
+                                                                                                              }
+                                                        }
+                                                        onKeyChange={undefined}
+                                                        onOperatorChange={[Function]}
+                                                        onValueChange={[Function]}
+                                                        pair={
+                                                                                    Object {
+                                                                                                                "id": 0,
+                                                                                                                "key": "",
+                                                                                                                "operator": "==",
+                                                                                                                "value": "",
+                                                                                                              }
+                                                        }
+                                                        reportSuiteId=""
+                                                        searched={false}
+                            />
 </GridColumn>,
+                          <GridColumn
+                            className="rowButtons"
+                            size={5}
+>
+                            <Button
+                                                        autoFocus={false}
+                                                        block={false}
+                                                        data-test="add-button"
+                                                        disabled={false}
+                                                        element="button"
+                                                        icon={<AddCircle />}
+                                                        invalid={false}
+                                                        label="Add"
+                                                        logic={false}
+                                                        onClick={[Function]}
+                                                        quiet={true}
+                                                        selected={false}
+                                                        variant="action"
+                            />
+</GridColumn>,
+                        ],
                         "reverse": false,
                       },
                       "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": Array [
-                            <KeyValuePair
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": <KeyValuePair
                               advanced={false}
                               errors={
                                                             Object {
@@ -1463,29 +1512,11 @@ ShallowWrapper {
                               reportSuiteId=""
                               searched={false}
 />,
-                            <Button
-                              autoFocus={false}
-                              block={false}
-                              data-test="add-button"
-                              disabled={false}
-                              element="button"
-                              icon={<AddCircle />}
-                              invalid={false}
-                              label="Add"
-                              logic={false}
-                              onClick={[Function]}
-                              quiet={true}
-                              selected={false}
-                              variant="action"
-/>,
-                            false,
-                          ],
-                          "className": "row",
-                          "size": 12,
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          Object {
+                            "className": "row",
+                            "size": 7,
+                          },
+                          "ref": null,
+                          "rendered": Object {
                             "instance": null,
                             "key": "0",
                             "nodeType": "class",
@@ -1521,33 +1552,64 @@ ShallowWrapper {
                             "rendered": null,
                             "type": [Function],
                           },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "class",
-                            "props": Object {
-                              "autoFocus": false,
-                              "block": false,
-                              "data-test": "add-button",
-                              "disabled": false,
-                              "element": "button",
-                              "icon": <AddCircle />,
-                              "invalid": false,
-                              "label": "Add",
-                              "logic": false,
-                              "onClick": [Function],
-                              "quiet": true,
-                              "selected": false,
-                              "variant": "action",
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": [Function],
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": Array [
+                              <Button
+                                autoFocus={false}
+                                block={false}
+                                data-test="add-button"
+                                disabled={false}
+                                element="button"
+                                icon={<AddCircle />}
+                                invalid={false}
+                                label="Add"
+                                logic={false}
+                                onClick={[Function]}
+                                quiet={true}
+                                selected={false}
+                                variant="action"
+/>,
+                              false,
+                            ],
+                            "className": "rowButtons",
+                            "size": 5,
                           },
-                          false,
-                        ],
-                        "type": [Function],
-                      },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "autoFocus": false,
+                                "block": false,
+                                "data-test": "add-button",
+                                "disabled": false,
+                                "element": "button",
+                                "icon": <AddCircle />,
+                                "invalid": false,
+                                "label": "Add",
+                                "logic": false,
+                                "onClick": [Function],
+                                "quiet": true,
+                                "selected": false,
+                                "variant": "action",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            false,
+                          ],
+                          "type": [Function],
+                        },
+                      ],
                       "type": [Function],
                     },
                     Object {
@@ -1560,8 +1622,9 @@ ShallowWrapper {
                             className="row"
                             size={10}
 >
-                            <Label
-                                                        value="Signal Status"
+                            <FieldLabel
+                                                        className="fieldLabel"
+                                                        label="Signal Status"
                             >
                                                         <Select
                                                                                     className="signal-status"
@@ -1586,9 +1649,10 @@ ShallowWrapper {
                                                                                     quiet={true}
                                                                                     value="ALL"
                                                         />
-                            </Label>
-                            <Label
-                                                        value="View Records For"
+                            </FieldLabel>
+                            <FieldLabel
+                                                        className="fieldLabel"
+                                                        label="View Records For"
                             >
                                                         <Select
                                                                                     className="view-records"
@@ -1621,9 +1685,9 @@ ShallowWrapper {
                                                                                     quiet={true}
                                                                                     value="7D"
                                                         />
-                            </Label>
-                            <Label
-                                                        value="Minimum Counts"
+                            </FieldLabel>
+                            <FieldLabel
+                                                        label="Minimum Counts"
                             >
                                                         <NumberInput
                                                                                     className="min-counts"
@@ -1640,7 +1704,7 @@ ShallowWrapper {
                                                                                     step={1000}
                                                                                     value={1000}
                                                         />
-                            </Label>
+                            </FieldLabel>
 </GridColumn>,
                           <GridColumn
                             className="ctas"
@@ -1686,8 +1750,9 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": Array [
-                              <Label
-                                value="Signal Status"
+                              <FieldLabel
+                                className="fieldLabel"
+                                label="Signal Status"
 >
                                 <Select
                                                                 className="signal-status"
@@ -1712,9 +1777,10 @@ ShallowWrapper {
                                                                 quiet={true}
                                                                 value="ALL"
                                 />
-</Label>,
-                              <Label
-                                value="View Records For"
+</FieldLabel>,
+                              <FieldLabel
+                                className="fieldLabel"
+                                label="View Records For"
 >
                                 <Select
                                                                 className="view-records"
@@ -1747,10 +1813,10 @@ ShallowWrapper {
                                                                 quiet={true}
                                                                 value="7D"
                                 />
-</Label>,
+</FieldLabel>,
                               null,
-                              <Label
-                                value="Minimum Counts"
+                              <FieldLabel
+                                label="Minimum Counts"
 >
                                 <NumberInput
                                                                 className="min-counts"
@@ -1767,7 +1833,7 @@ ShallowWrapper {
                                                                 step={1000}
                                                                 value={1000}
                                 />
-</Label>,
+</FieldLabel>,
                             ],
                             "className": "row",
                             "size": 10,
@@ -1802,7 +1868,8 @@ ShallowWrapper {
                                   quiet={true}
                                   value="ALL"
 />,
-                                "value": "Signal Status",
+                                "className": "fieldLabel",
+                                "label": "Signal Status",
                               },
                               "ref": null,
                               "rendered": Object {
@@ -1872,7 +1939,8 @@ ShallowWrapper {
                                   quiet={true}
                                   value="7D"
 />,
-                                "value": "View Records For",
+                                "className": "fieldLabel",
+                                "label": "View Records For",
                               },
                               "ref": null,
                               "rendered": Object {
@@ -1935,7 +2003,7 @@ ShallowWrapper {
                                   step={1000}
                                   value={1000}
 />,
-                                "value": "Minimum Counts",
+                                "label": "Minimum Counts",
                               },
                               "ref": null,
                               "rendered": Object {
@@ -2122,7 +2190,7 @@ ShallowWrapper {
                                                   >
                                                             <GridColumn
                                                                       className="row"
-                                                                      size={12}
+                                                                      size={7}
                                                             >
                                                                       <KeyValuePair
                                                                                 advanced={false}
@@ -2156,6 +2224,11 @@ ShallowWrapper {
                                                                                 reportSuiteId=""
                                                                                 searched={false}
                                                                       />
+                                                            </GridColumn>
+                                                            <GridColumn
+                                                                      className="rowButtons"
+                                                                      size={5}
+                                                            >
                                                                       <Button
                                                                                 autoFocus={false}
                                                                                 block={false}
@@ -2180,8 +2253,9 @@ ShallowWrapper {
                                                                       className="row"
                                                                       size={10}
                                                             >
-                                                                      <Label
-                                                                                value="Signal Status"
+                                                                      <FieldLabel
+                                                                                className="fieldLabel"
+                                                                                label="Signal Status"
                                                                       >
                                                                                 <Select
                                                                                           className="signal-status"
@@ -2206,9 +2280,10 @@ ShallowWrapper {
                                                                                           quiet={true}
                                                                                           value="ALL"
                                                                                 />
-                                                                      </Label>
-                                                                      <Label
-                                                                                value="View Records For"
+                                                                      </FieldLabel>
+                                                                      <FieldLabel
+                                                                                className="fieldLabel"
+                                                                                label="View Records For"
                                                                       >
                                                                                 <Select
                                                                                           className="view-records"
@@ -2241,9 +2316,9 @@ ShallowWrapper {
                                                                                           quiet={true}
                                                                                           value="7D"
                                                                                 />
-                                                                      </Label>
-                                                                      <Label
-                                                                                value="Minimum Counts"
+                                                                      </FieldLabel>
+                                                                      <FieldLabel
+                                                                                label="Minimum Counts"
                                                                       >
                                                                                 <NumberInput
                                                                                           className="min-counts"
@@ -2260,7 +2335,7 @@ ShallowWrapper {
                                                                                           step={1000}
                                                                                           value={1000}
                                                                                 />
-                                                                      </Label>
+                                                                      </FieldLabel>
                                                             </GridColumn>
                                                             <GridColumn
                                                                       className="ctas"
@@ -2344,7 +2419,7 @@ ShallowWrapper {
                                                         >
                                                                       <GridColumn
                                                                                     className="row"
-                                                                                    size={12}
+                                                                                    size={7}
                                                                       >
                                                                                     <KeyValuePair
                                                                                                   advanced={false}
@@ -2378,6 +2453,11 @@ ShallowWrapper {
                                                                                                   reportSuiteId=""
                                                                                                   searched={false}
                                                                                     />
+                                                                      </GridColumn>
+                                                                      <GridColumn
+                                                                                    className="rowButtons"
+                                                                                    size={5}
+                                                                      >
                                                                                     <Button
                                                                                                   autoFocus={false}
                                                                                                   block={false}
@@ -2402,8 +2482,9 @@ ShallowWrapper {
                                                                                     className="row"
                                                                                     size={10}
                                                                       >
-                                                                                    <Label
-                                                                                                  value="Signal Status"
+                                                                                    <FieldLabel
+                                                                                                  className="fieldLabel"
+                                                                                                  label="Signal Status"
                                                                                     >
                                                                                                   <Select
                                                                                                                 className="signal-status"
@@ -2428,9 +2509,10 @@ ShallowWrapper {
                                                                                                                 quiet={true}
                                                                                                                 value="ALL"
                                                                                                   />
-                                                                                    </Label>
-                                                                                    <Label
-                                                                                                  value="View Records For"
+                                                                                    </FieldLabel>
+                                                                                    <FieldLabel
+                                                                                                  className="fieldLabel"
+                                                                                                  label="View Records For"
                                                                                     >
                                                                                                   <Select
                                                                                                                 className="view-records"
@@ -2463,9 +2545,9 @@ ShallowWrapper {
                                                                                                                 quiet={true}
                                                                                                                 value="7D"
                                                                                                   />
-                                                                                    </Label>
-                                                                                    <Label
-                                                                                                  value="Minimum Counts"
+                                                                                    </FieldLabel>
+                                                                                    <FieldLabel
+                                                                                                  label="Minimum Counts"
                                                                                     >
                                                                                                   <NumberInput
                                                                                                                 className="min-counts"
@@ -2482,7 +2564,7 @@ ShallowWrapper {
                                                                                                                 step={1000}
                                                                                                                 value={1000}
                                                                                                   />
-                                                                                    </Label>
+                                                                                    </FieldLabel>
                                                                       </GridColumn>
                                                                       <GridColumn
                                                                                     className="ctas"
@@ -2592,7 +2674,7 @@ ShallowWrapper {
                                                 >
                                                                 <GridColumn
                                                                                 className="row"
-                                                                                size={12}
+                                                                                size={7}
                                                                 >
                                                                                 <KeyValuePair
                                                                                                 advanced={false}
@@ -2626,6 +2708,11 @@ ShallowWrapper {
                                                                                                 reportSuiteId=""
                                                                                                 searched={false}
                                                                                 />
+                                                                </GridColumn>
+                                                                <GridColumn
+                                                                                className="rowButtons"
+                                                                                size={5}
+                                                                >
                                                                                 <Button
                                                                                                 autoFocus={false}
                                                                                                 block={false}
@@ -2650,8 +2737,9 @@ ShallowWrapper {
                                                                                 className="row"
                                                                                 size={10}
                                                                 >
-                                                                                <Label
-                                                                                                value="Signal Status"
+                                                                                <FieldLabel
+                                                                                                className="fieldLabel"
+                                                                                                label="Signal Status"
                                                                                 >
                                                                                                 <Select
                                                                                                                 className="signal-status"
@@ -2676,9 +2764,10 @@ ShallowWrapper {
                                                                                                                 quiet={true}
                                                                                                                 value="ALL"
                                                                                                 />
-                                                                                </Label>
-                                                                                <Label
-                                                                                                value="View Records For"
+                                                                                </FieldLabel>
+                                                                                <FieldLabel
+                                                                                                className="fieldLabel"
+                                                                                                label="View Records For"
                                                                                 >
                                                                                                 <Select
                                                                                                                 className="view-records"
@@ -2711,9 +2800,9 @@ ShallowWrapper {
                                                                                                                 quiet={true}
                                                                                                                 value="7D"
                                                                                                 />
-                                                                                </Label>
-                                                                                <Label
-                                                                                                value="Minimum Counts"
+                                                                                </FieldLabel>
+                                                                                <FieldLabel
+                                                                                                label="Minimum Counts"
                                                                                 >
                                                                                                 <NumberInput
                                                                                                                 className="min-counts"
@@ -2730,7 +2819,7 @@ ShallowWrapper {
                                                                                                                 step={1000}
                                                                                                                 value={1000}
                                                                                                 />
-                                                                                </Label>
+                                                                                </FieldLabel>
                                                                 </GridColumn>
                                                                 <GridColumn
                                                                                 className="ctas"
@@ -2794,7 +2883,7 @@ ShallowWrapper {
                                         >
                                                             <GridColumn
                                                                                 className="row"
-                                                                                size={12}
+                                                                                size={7}
                                                             >
                                                                                 <KeyValuePair
                                                                                                     advanced={false}
@@ -2828,6 +2917,11 @@ ShallowWrapper {
                                                                                                     reportSuiteId=""
                                                                                                     searched={false}
                                                                                 />
+                                                            </GridColumn>
+                                                            <GridColumn
+                                                                                className="rowButtons"
+                                                                                size={5}
+                                                            >
                                                                                 <Button
                                                                                                     autoFocus={false}
                                                                                                     block={false}
@@ -2852,8 +2946,9 @@ ShallowWrapper {
                                                                                 className="row"
                                                                                 size={10}
                                                             >
-                                                                                <Label
-                                                                                                    value="Signal Status"
+                                                                                <FieldLabel
+                                                                                                    className="fieldLabel"
+                                                                                                    label="Signal Status"
                                                                                 >
                                                                                                     <Select
                                                                                                                         className="signal-status"
@@ -2878,9 +2973,10 @@ ShallowWrapper {
                                                                                                                         quiet={true}
                                                                                                                         value="ALL"
                                                                                                     />
-                                                                                </Label>
-                                                                                <Label
-                                                                                                    value="View Records For"
+                                                                                </FieldLabel>
+                                                                                <FieldLabel
+                                                                                                    className="fieldLabel"
+                                                                                                    label="View Records For"
                                                                                 >
                                                                                                     <Select
                                                                                                                         className="view-records"
@@ -2913,9 +3009,9 @@ ShallowWrapper {
                                                                                                                         quiet={true}
                                                                                                                         value="7D"
                                                                                                     />
-                                                                                </Label>
-                                                                                <Label
-                                                                                                    value="Minimum Counts"
+                                                                                </FieldLabel>
+                                                                                <FieldLabel
+                                                                                                    label="Minimum Counts"
                                                                                 >
                                                                                                     <NumberInput
                                                                                                                         className="min-counts"
@@ -2932,7 +3028,7 @@ ShallowWrapper {
                                                                                                                         step={1000}
                                                                                                                         value={1000}
                                                                                                     />
-                                                                                </Label>
+                                                                                </FieldLabel>
                                                             </GridColumn>
                                                             <GridColumn
                                                                                 className="ctas"
@@ -2994,7 +3090,7 @@ ShallowWrapper {
                       >
                                             <GridColumn
                                                                   className="row"
-                                                                  size={12}
+                                                                  size={7}
                                             >
                                                                   <KeyValuePair
                                                                                         advanced={false}
@@ -3028,6 +3124,11 @@ ShallowWrapper {
                                                                                         reportSuiteId=""
                                                                                         searched={false}
                                                                   />
+                                            </GridColumn>
+                                            <GridColumn
+                                                                  className="rowButtons"
+                                                                  size={5}
+                                            >
                                                                   <Button
                                                                                         autoFocus={false}
                                                                                         block={false}
@@ -3052,8 +3153,9 @@ ShallowWrapper {
                                                                   className="row"
                                                                   size={10}
                                             >
-                                                                  <Label
-                                                                                        value="Signal Status"
+                                                                  <FieldLabel
+                                                                                        className="fieldLabel"
+                                                                                        label="Signal Status"
                                                                   >
                                                                                         <Select
                                                                                                               className="signal-status"
@@ -3078,9 +3180,10 @@ ShallowWrapper {
                                                                                                               quiet={true}
                                                                                                               value="ALL"
                                                                                         />
-                                                                  </Label>
-                                                                  <Label
-                                                                                        value="View Records For"
+                                                                  </FieldLabel>
+                                                                  <FieldLabel
+                                                                                        className="fieldLabel"
+                                                                                        label="View Records For"
                                                                   >
                                                                                         <Select
                                                                                                               className="view-records"
@@ -3113,9 +3216,9 @@ ShallowWrapper {
                                                                                                               quiet={true}
                                                                                                               value="7D"
                                                                                         />
-                                                                  </Label>
-                                                                  <Label
-                                                                                        value="Minimum Counts"
+                                                                  </FieldLabel>
+                                                                  <FieldLabel
+                                                                                        label="Minimum Counts"
                                                                   >
                                                                                         <NumberInput
                                                                                                               className="min-counts"
@@ -3132,7 +3235,7 @@ ShallowWrapper {
                                                                                                               step={1000}
                                                                                                               value={1000}
                                                                                         />
-                                                                  </Label>
+                                                                  </FieldLabel>
                                             </GridColumn>
                                             <GridColumn
                                                                   className="ctas"
@@ -3189,7 +3292,7 @@ ShallowWrapper {
 >
                             <GridColumn
                                                         className="row"
-                                                        size={12}
+                                                        size={7}
                             >
                                                         <KeyValuePair
                                                                                     advanced={false}
@@ -3223,6 +3326,11 @@ ShallowWrapper {
                                                                                     reportSuiteId=""
                                                                                     searched={false}
                                                         />
+                            </GridColumn>
+                            <GridColumn
+                                                        className="rowButtons"
+                                                        size={5}
+                            >
                                                         <Button
                                                                                     autoFocus={false}
                                                                                     block={false}
@@ -3248,8 +3356,9 @@ ShallowWrapper {
                                                     className="row"
                                                     size={10}
                           >
-                                                    <Label
-                                                                              value="Signal Status"
+                                                    <FieldLabel
+                                                                              className="fieldLabel"
+                                                                              label="Signal Status"
                                                     >
                                                                               <Select
                                                                                                         className="signal-status"
@@ -3274,9 +3383,10 @@ ShallowWrapper {
                                                                                                         quiet={true}
                                                                                                         value="ALL"
                                                                               />
-                                                    </Label>
-                                                    <Label
-                                                                              value="View Records For"
+                                                    </FieldLabel>
+                                                    <FieldLabel
+                                                                              className="fieldLabel"
+                                                                              label="View Records For"
                                                     >
                                                                               <Select
                                                                                                         className="view-records"
@@ -3309,9 +3419,9 @@ ShallowWrapper {
                                                                                                         quiet={true}
                                                                                                         value="7D"
                                                                               />
-                                                    </Label>
-                                                    <Label
-                                                                              value="Minimum Counts"
+                                                    </FieldLabel>
+                                                    <FieldLabel
+                                                                              label="Minimum Counts"
                                                     >
                                                                               <NumberInput
                                                                                                         className="min-counts"
@@ -3328,7 +3438,7 @@ ShallowWrapper {
                                                                                                         step={1000}
                                                                                                         value={1000}
                                                                               />
-                                                    </Label>
+                                                    </FieldLabel>
                           </GridColumn>
                           <GridColumn
                                                     className="ctas"
@@ -3379,68 +3489,75 @@ ShallowWrapper {
                         "key": "0",
                         "nodeType": "class",
                         "props": Object {
-                          "children": <GridColumn
-                            className="row"
-                            size={12}
+                          "children": Array [
+                            <GridColumn
+                              className="row"
+                              size={7}
 >
-                            <KeyValuePair
-                                                        advanced={false}
-                                                        errors={
-                                                                                    Object {
-                                                                                                                "reportSuites": Object {
-                                                                                                                  "errorMessage": "",
-                                                                                                                  "hasError": false,
-                                                                                                                },
-                                                                                                                "savedSearch": Object {
-                                                                                                                  "errorMessage": "",
-                                                                                                                  "hasError": false,
-                                                                                                                },
-                                                                                                                "searchForm": Object {
-                                                                                                                  "errorMessage": "",
-                                                                                                                  "hasError": false,
-                                                                                                                },
-                                                                                                              }
-                                                        }
-                                                        onKeyChange={undefined}
-                                                        onOperatorChange={[Function]}
-                                                        onValueChange={[Function]}
-                                                        pair={
-                                                                                    Object {
-                                                                                                                "id": 0,
-                                                                                                                "key": "",
-                                                                                                                "operator": "==",
-                                                                                                                "value": "",
-                                                                                                              }
-                                                        }
-                                                        reportSuiteId=""
-                                                        searched={false}
-                            />
-                            <Button
-                                                        autoFocus={false}
-                                                        block={false}
-                                                        data-test="add-button"
-                                                        disabled={false}
-                                                        element="button"
-                                                        icon={<AddCircle />}
-                                                        invalid={false}
-                                                        label="Add"
-                                                        logic={false}
-                                                        onClick={[Function]}
-                                                        quiet={true}
-                                                        selected={false}
-                                                        variant="action"
-                            />
+                              <KeyValuePair
+                                                            advanced={false}
+                                                            errors={
+                                                                                          Object {
+                                                                                                                        "reportSuites": Object {
+                                                                                                                          "errorMessage": "",
+                                                                                                                          "hasError": false,
+                                                                                                                        },
+                                                                                                                        "savedSearch": Object {
+                                                                                                                          "errorMessage": "",
+                                                                                                                          "hasError": false,
+                                                                                                                        },
+                                                                                                                        "searchForm": Object {
+                                                                                                                          "errorMessage": "",
+                                                                                                                          "hasError": false,
+                                                                                                                        },
+                                                                                                                      }
+                                                            }
+                                                            onKeyChange={undefined}
+                                                            onOperatorChange={[Function]}
+                                                            onValueChange={[Function]}
+                                                            pair={
+                                                                                          Object {
+                                                                                                                        "id": 0,
+                                                                                                                        "key": "",
+                                                                                                                        "operator": "==",
+                                                                                                                        "value": "",
+                                                                                                                      }
+                                                            }
+                                                            reportSuiteId=""
+                                                            searched={false}
+                              />
 </GridColumn>,
+                            <GridColumn
+                              className="rowButtons"
+                              size={5}
+>
+                              <Button
+                                                            autoFocus={false}
+                                                            block={false}
+                                                            data-test="add-button"
+                                                            disabled={false}
+                                                            element="button"
+                                                            icon={<AddCircle />}
+                                                            invalid={false}
+                                                            label="Add"
+                                                            logic={false}
+                                                            onClick={[Function]}
+                                                            quiet={true}
+                                                            selected={false}
+                                                            variant="action"
+                              />
+</GridColumn>,
+                          ],
                           "reverse": false,
                         },
                         "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": Array [
-                              <KeyValuePair
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "children": <KeyValuePair
                                 advanced={false}
                                 errors={
                                                                 Object {
@@ -3472,29 +3589,11 @@ ShallowWrapper {
                                 reportSuiteId=""
                                 searched={false}
 />,
-                              <Button
-                                autoFocus={false}
-                                block={false}
-                                data-test="add-button"
-                                disabled={false}
-                                element="button"
-                                icon={<AddCircle />}
-                                invalid={false}
-                                label="Add"
-                                logic={false}
-                                onClick={[Function]}
-                                quiet={true}
-                                selected={false}
-                                variant="action"
-/>,
-                              false,
-                            ],
-                            "className": "row",
-                            "size": 12,
-                          },
-                          "ref": null,
-                          "rendered": Array [
-                            Object {
+                              "className": "row",
+                              "size": 7,
+                            },
+                            "ref": null,
+                            "rendered": Object {
                               "instance": null,
                               "key": "0",
                               "nodeType": "class",
@@ -3530,33 +3629,64 @@ ShallowWrapper {
                               "rendered": null,
                               "type": [Function],
                             },
-                            Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "class",
-                              "props": Object {
-                                "autoFocus": false,
-                                "block": false,
-                                "data-test": "add-button",
-                                "disabled": false,
-                                "element": "button",
-                                "icon": <AddCircle />,
-                                "invalid": false,
-                                "label": "Add",
-                                "logic": false,
-                                "onClick": [Function],
-                                "quiet": true,
-                                "selected": false,
-                                "variant": "action",
-                              },
-                              "ref": null,
-                              "rendered": null,
-                              "type": [Function],
+                            "type": [Function],
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "children": Array [
+                                <Button
+                                  autoFocus={false}
+                                  block={false}
+                                  data-test="add-button"
+                                  disabled={false}
+                                  element="button"
+                                  icon={<AddCircle />}
+                                  invalid={false}
+                                  label="Add"
+                                  logic={false}
+                                  onClick={[Function]}
+                                  quiet={true}
+                                  selected={false}
+                                  variant="action"
+/>,
+                                false,
+                              ],
+                              "className": "rowButtons",
+                              "size": 5,
                             },
-                            false,
-                          ],
-                          "type": [Function],
-                        },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "autoFocus": false,
+                                  "block": false,
+                                  "data-test": "add-button",
+                                  "disabled": false,
+                                  "element": "button",
+                                  "icon": <AddCircle />,
+                                  "invalid": false,
+                                  "label": "Add",
+                                  "logic": false,
+                                  "onClick": [Function],
+                                  "quiet": true,
+                                  "selected": false,
+                                  "variant": "action",
+                                },
+                                "ref": null,
+                                "rendered": null,
+                                "type": [Function],
+                              },
+                              false,
+                            ],
+                            "type": [Function],
+                          },
+                        ],
                         "type": [Function],
                       },
                       Object {
@@ -3569,8 +3699,9 @@ ShallowWrapper {
                               className="row"
                               size={10}
 >
-                              <Label
-                                                            value="Signal Status"
+                              <FieldLabel
+                                                            className="fieldLabel"
+                                                            label="Signal Status"
                               >
                                                             <Select
                                                                                           className="signal-status"
@@ -3595,9 +3726,10 @@ ShallowWrapper {
                                                                                           quiet={true}
                                                                                           value="ALL"
                                                             />
-                              </Label>
-                              <Label
-                                                            value="View Records For"
+                              </FieldLabel>
+                              <FieldLabel
+                                                            className="fieldLabel"
+                                                            label="View Records For"
                               >
                                                             <Select
                                                                                           className="view-records"
@@ -3630,9 +3762,9 @@ ShallowWrapper {
                                                                                           quiet={true}
                                                                                           value="7D"
                                                             />
-                              </Label>
-                              <Label
-                                                            value="Minimum Counts"
+                              </FieldLabel>
+                              <FieldLabel
+                                                            label="Minimum Counts"
                               >
                                                             <NumberInput
                                                                                           className="min-counts"
@@ -3649,7 +3781,7 @@ ShallowWrapper {
                                                                                           step={1000}
                                                                                           value={1000}
                                                             />
-                              </Label>
+                              </FieldLabel>
 </GridColumn>,
                             <GridColumn
                               className="ctas"
@@ -3695,8 +3827,9 @@ ShallowWrapper {
                             "nodeType": "class",
                             "props": Object {
                               "children": Array [
-                                <Label
-                                  value="Signal Status"
+                                <FieldLabel
+                                  className="fieldLabel"
+                                  label="Signal Status"
 >
                                   <Select
                                                                     className="signal-status"
@@ -3721,9 +3854,10 @@ ShallowWrapper {
                                                                     quiet={true}
                                                                     value="ALL"
                                   />
-</Label>,
-                                <Label
-                                  value="View Records For"
+</FieldLabel>,
+                                <FieldLabel
+                                  className="fieldLabel"
+                                  label="View Records For"
 >
                                   <Select
                                                                     className="view-records"
@@ -3756,10 +3890,10 @@ ShallowWrapper {
                                                                     quiet={true}
                                                                     value="7D"
                                   />
-</Label>,
+</FieldLabel>,
                                 null,
-                                <Label
-                                  value="Minimum Counts"
+                                <FieldLabel
+                                  label="Minimum Counts"
 >
                                   <NumberInput
                                                                     className="min-counts"
@@ -3776,7 +3910,7 @@ ShallowWrapper {
                                                                     step={1000}
                                                                     value={1000}
                                   />
-</Label>,
+</FieldLabel>,
                               ],
                               "className": "row",
                               "size": 10,
@@ -3811,7 +3945,8 @@ ShallowWrapper {
                                     quiet={true}
                                     value="ALL"
 />,
-                                  "value": "Signal Status",
+                                  "className": "fieldLabel",
+                                  "label": "Signal Status",
                                 },
                                 "ref": null,
                                 "rendered": Object {
@@ -3881,7 +4016,8 @@ ShallowWrapper {
                                     quiet={true}
                                     value="7D"
 />,
-                                  "value": "View Records For",
+                                  "className": "fieldLabel",
+                                  "label": "View Records For",
                                 },
                                 "ref": null,
                                 "rendered": Object {
@@ -3944,7 +4080,7 @@ ShallowWrapper {
                                     step={1000}
                                     value={1000}
 />,
-                                  "value": "Minimum Counts",
+                                  "label": "Minimum Counts",
                                 },
                                 "ref": null,
                                 "rendered": Object {

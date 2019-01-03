@@ -10,7 +10,7 @@
     "classnames": "^2.2.5",
     "coral-shell-ims": "git+ssh://git@git.corp.adobe.com:AAM/coral-shell-ims#v2.0.0",
     "cpx": "^1.5.0",
-    "cypress": "^3.1.0",
+    "cypress": "3.1.0",
     "debounce": "^1.1.0",
     "debounce-promise": "^3.1.0",
     "enzyme": "3.4.1",

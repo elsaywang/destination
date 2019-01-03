@@ -1,14 +1,23 @@
 :local(.row) {
-    composes: flexAlignBottom from './Layout.css';
-    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+:local(.rowButtons) {
+    margin-top: 25px;
 }
 
 :local(.ctas) {
     display: flex;
-    align-items: flex-end;
+    align-items: end;
 }
 
 :local(.error) {
     float: right;
     margin-top: 8px;
+}
+
+:local(.fieldLabel) {
+    margin-right: 20px;
 }
