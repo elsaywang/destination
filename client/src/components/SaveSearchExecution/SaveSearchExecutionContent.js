@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Label from '../../components/common/Label';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import Textfield from '@react/react-spectrum/Textfield';
 import Checkbox from '@react/react-spectrum/Checkbox';
 import RadioGroup from '@react/react-spectrum/RadioGroup';
@@ -38,7 +38,7 @@ class SaveSearchExecutionContent extends Component {
     render() {
         return (
             <div data-test="save-this-search-dialog-content">
-                <Label value={textFieldLabelName} labelFor={saveSearch}>
+                <FieldLabel label={textFieldLabelName} labelFor={saveSearch}>
                     <Textfield
                         data-test="save-this-search-name-field"
                         className={styles.contentTextField}
@@ -47,7 +47,7 @@ class SaveSearchExecutionContent extends Component {
                         required
                         quiet
                     />
-                </Label>
+                </FieldLabel>
                 <div className={styles.contentCheckBox}>
                     <Checkbox
                         data-test="save-this-search-checkbox"
@@ -56,7 +56,7 @@ class SaveSearchExecutionContent extends Component {
                         checked={this.state.isTrackInDashboardChecked}
                     />
                 </div>
-                <Label value={defaultSorting} labelFor={defaultSorting}>
+                <FieldLabel label={defaultSorting} labelFor={defaultSorting}>
                     <Select
                         data-test="save-this-search-sort-column"
                         options={sortingOptions}
@@ -76,7 +76,7 @@ class SaveSearchExecutionContent extends Component {
                             ))}
                         </RadioGroup>
                     </div>
-                </Label>
+                </FieldLabel>
             </div>
         );
     }

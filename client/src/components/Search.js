@@ -10,7 +10,7 @@ import RemoveCircle from '@react/react-spectrum/Icon/RemoveCircle';
 import AdvancedSearch from './AdvancedSearch';
 import CustomDateRange from './CustomDateRange';
 import KeyValuePair from './KeyValuePair';
-import Label from './common/Label';
+import FieldLabel from '@react/react-spectrum/FieldLabel';
 import InlineErrorMessage from './common/InlineErrorMessage';
 import styles from './Search.css';
 import statusOptions from '../constants/signalStatusOptions';
@@ -156,7 +156,9 @@ class Search extends Component {
 
                                     <GridRow>
                                         <GridColumn size={10} className={styles.row}>
-                                            <Label value="Signal Status">
+                                            <FieldLabel
+                                                label="Signal Status"
+                                                className={styles.fieldLabel}>
                                                 <Select
                                                     className="signal-status"
                                                     data-test="signal-status"
@@ -165,9 +167,11 @@ class Search extends Component {
                                                     options={statusOptions}
                                                     quiet
                                                 />
-                                            </Label>
+                                            </FieldLabel>
 
-                                            <Label value="View Records For">
+                                            <FieldLabel
+                                                label="View Records For"
+                                                className={styles.fieldLabel}>
                                                 <Select
                                                     className="view-records"
                                                     data-test="view-records"
@@ -176,11 +180,11 @@ class Search extends Component {
                                                     options={getDateRangeOptions()}
                                                     quiet
                                                 />
-                                            </Label>
+                                            </FieldLabel>
 
                                             {this.renderCustomDatepickers()}
 
-                                            <Label value="Minimum Counts">
+                                            <FieldLabel label="Minimum Counts">
                                                 <NumberInput
                                                     className="min-counts"
                                                     data-test="min-counts"
@@ -190,7 +194,7 @@ class Search extends Component {
                                                     step={this.props.eventFiresStep}
                                                     quiet
                                                 />
-                                            </Label>
+                                            </FieldLabel>
                                         </GridColumn>
 
                                         {this.renderCTAs()}

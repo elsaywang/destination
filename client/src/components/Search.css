@@ -17,3 +17,7 @@
     float: right;
     margin-top: 8px;
 }
+
+:local(.fieldLabel) {
+    margin-right: 20px;
+}

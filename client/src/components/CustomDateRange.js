@@ -5,6 +5,7 @@ import Datepicker from '@react/react-spectrum/Datepicker';
 import FieldLabel from '@react/react-spectrum/FieldLabel';
 import { customDateFormat } from '../constants/dateRangeConstants';
 import { getNow, parseDate, boundDate } from '../utils/dateRange';
+import styles from './Search.css';
 
 class CustomDateRange extends Component {
     handleCustomStartDateChange = valueText => {
@@ -57,7 +58,10 @@ class CustomDateRange extends Component {
 
         return (
             <Fragment>
-                <FieldLabel label="Start Date" id="label-custom-start-date">
+                <FieldLabel
+                    label="Start Date"
+                    id="label-custom-start-date"
+                    className={styles.fieldLabel}>
                     <Datepicker
                         aria-labelledby="label-custom-start-date"
                         className="custom-start-date"
@@ -72,7 +76,10 @@ class CustomDateRange extends Component {
                     />
                 </FieldLabel>
 
-                <FieldLabel label="End Date" id="label-custom-end-date">
+                <FieldLabel
+                    label="End Date"
+                    id="label-custom-end-date"
+                    className={styles.fieldLabel}>
                     <Datepicker
                         aria-labelledby="label-custom-end-date"
                         className="custom-end-date"
