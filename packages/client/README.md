@@ -1,2 +1,2 @@
-# portal-pii
-PII destinations UI
+# portal-destinations
+Destinations UI
