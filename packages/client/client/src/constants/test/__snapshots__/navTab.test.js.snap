@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav Tab routes constants matches snapshot 1`] = `
+Array [
+  Object {
+    "name": "",
+    "route": "/",
+  },
+  Object {
+    "name": "People-Based",
+    "route": "/destinations",
+  },
+  Object {
+    "name": "Device-Based",
+    "route": "/deviceBased",
+  },
+  Object {
+    "name": "Cookie-Based",
+    "route": "/cookieBased",
+  },
+  Object {
+    "name": "URL-Based",
+    "route": "/urlBased",
+  },
+  Object {
+    "name": "Adobe Experience Cloud",
+    "route": "/adobeExperienceCloud",
+  },
+]
+`;

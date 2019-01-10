@@ -1,0 +1,16 @@
+:local(.link) {
+    color: inherit;
+    text-decoration: none;
+}
+:local(.configButton){
+    text-align: right;
+}
+:local(.buttonLink) {
+    color: var(--spectrum-global-color-grey600);
+    padding-left: 0.5rem;
+    text-decoration: none;
+}
+
+:local(.navList) {
+    border-bottom: 1px solid var(--spectrum-alias-border-color-dark);
+}

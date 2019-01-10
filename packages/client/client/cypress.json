@@ -1,0 +1,7 @@
+{
+    "baseUrl": "http://127.0.0.1:3002/",
+    "chromeWebSecurity": false,
+    "ignoreTestFiles": "example_spec.js",
+    "viewportWidth": 1540,
+    "viewportHeight": 1000
+}

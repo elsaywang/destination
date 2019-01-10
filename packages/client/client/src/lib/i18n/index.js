@@ -1,0 +1,1 @@
+export { getLocaleData } from './getLocaleData';

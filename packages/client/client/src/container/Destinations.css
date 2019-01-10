@@ -1,0 +1,15 @@
+:local(.search){
+  padding: 0 0 1rem 1rem;
+}
+:local(.searchText){
+  width: 25rem;
+}
+:local(.filterListContainer) {
+    flex: 0 0 10em;
+    border-right: 1px solid var(--spectrum-alias-border-color-dark);
+}
+
+:local(.tableContainer) {
+    flex: 1;
+    padding-top: 1rem;
+}
