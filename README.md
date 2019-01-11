@@ -18,7 +18,7 @@ npx lerna run build
 
 ```
 
-Please refer to lerna documentation to know more about the capabilites of lerna and if you want to execute specific commands on a specific package.
+Please refer to [Lerna](https://github.com/lerna/lerna#readme) documentation to know more about the capabilites of lerna and if you want to execute specific commands on a specific package.
 
 Otherwise you can always navigate to the exact package that you want to work on and run your know npm commands.
 
