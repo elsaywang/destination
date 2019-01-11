@@ -36,7 +36,7 @@ export const columns = [
     },
 ];
 
-const generateItems = () => {
+export const generateItems = () => {
     let data = [];
     const platforms = ['Facebook', 'Google', 'LinkedIn', 'Twitter'];
     for (let i = 0; i < 20; i++) {

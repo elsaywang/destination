@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Table from '../components/Table';
-import { columns, mockItems } from '../constants/tableData';
+import { columns, generateItems } from '../constants/tableData';
 import SideNavFilter from '../components/SideNavFilter';
 import Search from '@react/react-spectrum/Search';
 import styles from './Destinations.css';
@@ -16,6 +16,10 @@ class Destinations extends Component {
         const { destinationType } = this.props;
         return ['People-Based', 'Device-Based'].includes(destinationType);
     };
+
+    componentWillMount() {
+        this.setState({ items: this.props.items || generateItems() });
+    }
 
     render() {
         const { destinationType, items } = this.props;
@@ -40,10 +44,16 @@ class Destinations extends Component {
                     </div>
                     <Table
                         dataTest="peopleBased-destination-table"
-                        items={items || mockItems}
+                        items={this.state.items}
+                        reachedEndOfRows={() => {
+                            this.setState(prevState => {
+                                return { items: prevState.items.concat(generateItems()) };
+                            });
+                        }}
+                        height={500}
                         columns={columns}
+                        rowHeight={500}
                         renderCell={this.renderCell}
-                        allowsSelection={false}
                     />
                 </div>
             </div>
