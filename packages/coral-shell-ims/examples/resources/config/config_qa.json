@@ -1,0 +1,193 @@
+{
+    "products":{
+        "advertisingCloud": {
+            "label" : "Advertising Cloud",
+            "solutions" : {
+                "dma_adlens":{
+                    "macid":"AD_LENS",
+                    "longname":"Adobe Media Optimizer",
+                    "name":"Media Optimizer",
+                    "icon":"adobeMediaOptimizer",
+                    "description":"Adobe Media Optimizer is a programmatic ad-buying solution. It helps you find and forecast the best mix of ad channels based on your budget, then automates the delivery of content right to your audience.",
+                    "learnmorelink":"http://adobe.com/marketing-cloud/online-advertising-management.html",
+                    "href":"https://enterprise-test.efrontier.com/CMDashboard/?ims=1"
+                }
+            }
+        },
+        "marketingCloud": {
+            "label" : "Marketing Cloud",
+            "solutions" : {
+                "dma_campaign":{
+                    "macid":"CAMPAIGN",
+                    "longname":"Adobe Campaign",
+                    "name":"Campaign",
+                    "icon":"adobeCampaign",
+                    "description":"Adobe Campaign lets you plan, deliver, and measure campaigns across all of your online and offline channels. It helps increase your productivity and deliver relevant experiences to your customers.",
+                    "learnmorelink":"http://adobe.com/marketing-cloud/campaign-management.html",
+                    "direct":"true",
+                    "href":"https://<tenant>.marketing-qa.corp.adobe.com/campaign"
+                },
+                "dma_aem_ams":{
+                    "macid":"MANAGEDSERVICE",
+                    "name":"Experience Manager",
+                    "icon":"adobeExperienceManager",
+                    "direct":"true",
+                    "href":"https://<tenant>.marketing-qa.corp.adobe.com/experiencemanager",
+                    "description":"As a content management solution, Adobe Experience Manager makes it easy to manage your assets and content for your websites, mobile apps, communities, and forms.",
+                    "learnmorelink":"http://adobe.com/marketing-cloud/enterprise-content-management.html"
+                },
+                "dma_scene7":{
+                    "macid":"SCENE7",
+                    "name":"Experience Manager",
+                    "longname":"Adobe Experience Manager",
+                    "icon":"adobeExperienceManager",
+                    "description":"As a content management solution, Adobe Experience Manager makes it easy to manage your assets and content for your websites, mobile apps, communities, and forms.",
+                    "learnmorelink":"http://adobe.com/marketing-cloud/enterprise-content-management.html",
+                    "regions":"gemini",
+                    "direct":"true",
+                    "href":"https://<tenant>.marketing-qa.corp.adobe.com/experiencemanager"
+                },
+                "dma_tnt":{
+                    "macid":"TEST_AND_TARGET",
+                    "name":"Target",
+                    "longname":"Adobe Target",
+                    "icon":"adobeTarget",
+                    "description":"Adobe Target helps you identify what your customers want, so you can deliver personalized and engaging experiences in real time.",
+                    "learnmorelink":"http://www.adobe.com/marketing-cloud/testing-targeting.html",
+                    "direct":"true",
+                    "href":"https://<tenant>.marketing-qa.corp.adobe.com/target"
+                },
+                "dma_bullseye":{
+                    "macid":"BULLSEYE",
+                    "name":"Target",
+                    "longname":"Adobe Target",
+                    "icon":"adobeTarget",
+                    "description":"Adobe Target helps you identify what your customers want, so you can deliver personalized and engaging experiences in real time.",
+                    "learnmorelink":"http://www.adobe.com/marketing-cloud/testing-targeting.html",
+                    "direct":"true",
+                    "href":"https://<tenant>.marketing-qa.corp.adobe.com/target"
+                },
+                "dma_primetime":{
+                    "macid":"PRIMETIME",
+                    "name":"Primetime",
+                    "longname":"Adobe Primetime",
+                    "icon":"adobePrimetime",
+                    "description":"Adobe Primetime is a multiscreen TV platform that helps broadcasters create engaging TV and film experiences that are personalized for any audience.",
+                    "direct":"true",
+                    "learnmorelink":"http://www.adobe.com/marketing-cloud/primetime-tv-platform.html",
+                    "href":"http://console-qa-primetime.corp.adobe.com/?ims=1"
+                },
+                "dma_social":{
+                    "macid":"SOCIAL",
+                    "longname":"Adobe Social",
+                    "name":"Social",
+                    "icon":"adobeSocial",
+                    "description":"As a social management platform, Adobe Social makes it easy to measure and improve customer relationships through social marketing and integrating it into the overall marketing plan.",
+                    "learnmorelink":"http://www.adobe.com/marketing-cloud/social-media-marketing.html",
+                    "href":"https://co-publisher.dev.omniture.com/?ims=1"
+                }
+            }
+        },
+        "analyticsCloud": {
+            "label" : "Analytics Cloud",
+            "solutions" : {
+                "dma_analytics":{
+                    "macid":"SITE_CATALYST",
+                    "longname":"Adobe Analytics",
+                    "name":"Analytics",
+                    "icon":"adobeAnalytics",
+                    "companyProperty":"login_company",
+                    "linked_products":["dma_social"],
+                    "description":"See the big picture with customer intelligence from Adobe Analytics, the industry-leading solution for applying real-time analytics and detailed segmentation across every marketing channel.",
+                    "learnmorelink":"http://www.adobe.com/marketing-cloud/web-analytics.html",
+                    "href":"https://www.qe5.ut1.omniture.com/sc15/reports/index.html?a=Main.Index&allow_project_redirect=1&ims=1"
+                },
+                "dma_audiencemanager":{
+                    "macid":"AUDIENCE_MANAGER",
+                    "longname":"Adobe Audience Manager",
+                    "name":"Audience Manager",
+                    "icon":"adobeAudienceManager",
+                    "description":"As a data management platform, Adobe Audience Manager helps you build unique audience profiles, so you can discover and target your most valuable customer segments on every channel.",
+                    "learnmorelink":"http://www.adobe.com/marketing-cloud/data-management-platform.html",
+                    "href":"https://use-qe1-por1.demdex.com/portal/Analytics/AnalyticsHome.ddx?ims=1"
+                }
+            }
+        }
+    },
+    "services":[
+        {
+            "name":"Activation",
+            "longname":"Activation Core Service",
+            "icon":"launch",
+            "default": "true",
+            "direct":"true",
+            "description":"Activate web-based technologies, trigger real-time actions, and turn on in-app analytics and optimization with the Activation core service.",
+            "learnmorelink":"http://www.adobe.com/marketing-cloud/activation.html",
+            "href":"https://<tenant>.marketing-qa.corp.adobe.com/activation"
+        },
+        {
+            "name":"Administration",
+            "icon":"login",
+            "direct":"true",
+            "roles":["LICENSE_ADMIN","SUPPORT_ADMIN","DEPLOYMENT_ADMIN","org_admin"],
+            "macid":"ADMIN",
+            "href":"https://<tenant>.marketing-qa.corp.adobe.com/content/mac/<tenant>.html/tools"
+        },
+        {
+            "name":"Assets",
+            "icon":"image",
+            "default": "true",
+            "direct":"true",
+            "description":"Easily store, sync, and share all of your digital assets in a central location, to save time and deliver a more consistent customer experience.",
+            "learnmorelink":"http://www.adobe.com/marketing-cloud/enterprise-content-management/assets-on-demand.html",
+            "href":"https://<tenant>.marketing-qa.corp.adobe.com/content/mac/<tenant>.html/assets"
+        },
+        {
+            "name":"Data Platform",
+            "icon":"data",
+            "forPC":"dma_dataplatform",
+            "macid":"DATA_PLATFORM",
+            "default": "true",
+            "direct":"true",
+            "description":"The Data Platform allows you to combine data from different sources to drive powerful data-science functionality within the Marketing Cloud.",
+            "learnmorelink":"http://www.adobe.com/marketing-cloud",
+            "href":"https://ui-external-qe2.mcdp.adobemc.com/"
+        },
+        {
+            "name":"Exchange",
+            "icon":"sync",
+            "default":"true",
+            "direct":"true",
+            "learnmorelink":"https://marketing.adobe.com/exchange",
+            "href":"http://marketing-qa.corp.adobe.com/resources"
+        },
+        {
+            "name":"Feed",
+            "icon":"comment",
+            "default": "true",
+            "direct":"true",
+            "description":"",
+            "href":"http://<tenant>.marketing-qa.corp.adobe.com/content/mac/default/feed.html"
+        },
+        {
+            "name":"Mobile Services",
+            "icon":"mobileServices",
+            "default": "true",
+            "direct":"true",
+            "forPC":"dma_analytics,dma_bullseye,dma_tnt",
+            "description":"Whether you're building a mobile site or launching a mobile app, understand how your customers are interacting with your brand, wherever they are.",
+            "learnmorelink":"http://www.adobe.com/marketing-cloud/mobile-marketing.html",
+            "href":"http://mobilemarketing.qe5.ut1.omniture.com/"
+        },
+        {
+            "name":"Profiles & Audiences",
+            "icon":"user",
+            "default": "true",
+            "direct":"true",
+            "description":"Continually build a comprehensive view of your individual customers using both authenticated and anonymous data.",
+            "forPC":"dma_audience_library,dma_crs,dma_analytics:triggers",
+            "learnmorelink":"http://www.adobe.com/solutions/digital-marketing/profile-management.html",
+            "href":"https://<tenant>.marketing-qa.corp.adobe.com/audiences.html/<tenant>/audiences/folder"
+        }
+    ]
+}

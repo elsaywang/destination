@@ -1,0 +1,37 @@
+{
+  "name": "@aam/aam-topnav",
+  "version": "1.1.9",
+  "description": "TopNav component of Adobe Audience Manager",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm rebuild node-sass",
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && npm run babel && npm run sass",
+    "babel": "npx babel ./src -d ./build",
+    "sass": "npx node-sass ./src/scss -o ./build/css",
+    "postcss": "npx postcss --no-map  -r ./build/css/*.css"
+  },
+  "keywords": [
+    "TopNav",
+    "Site Navigation",
+    "js"
+  ],
+  "publishConfig": {
+    "registry": "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-aam-npm-modules-release/"
+  },
+  "author": "Vincent Y.",
+  "license": "ISC",
+  "dependencies": {
+    "@aam/aam-userroles": "1.1.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "node-sass": "^4.9.0",
+    "nodelist-foreach-polyfill": "^1.2.0",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^5.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1"
+  }
+}

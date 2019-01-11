@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`localization util matches snapshot 1`] = `
+Object {
+  "title": Object {
+    "defaultMessage": "Configuration",
+    "description": "Title for the Configuration page",
+    "id": "components.Layout.title",
+  },
+}
+`;
+
+exports[`localization util matches snapshot 2`] = `
+Object {
+  "title": Object {
+    "defaultMessage": "Destinations",
+    "description": "Title for the Destinations page",
+    "id": "components.Layout.title",
+  },
+}
+`;

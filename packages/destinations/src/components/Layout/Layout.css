@@ -1,0 +1,32 @@
+@import '~@spectrum/spectrum-variables/css/spectrum-light.css';
+
+/* Manually calculated. */
+:root {
+    --top-nav-height: 3.25rem;
+    --footer-height: 3.375rem;
+}
+
+:local(.grid) {
+    overflow: auto;
+    padding-top: 1rem;
+    min-height: calc(120vh - var(--top-nav-height) - var(--footer-height));
+}
+
+:local(.flexAlignBottom) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+:local(.message) {
+    margin: 1rem;
+}
+
+:local(.entry) {
+    margin: 2.75rem 0 0 0.1rem;
+}
+
+
+:local(.createDestinations) {
+    text-align: right;
+}

@@ -1,0 +1,11 @@
+{
+    "baseUrl": "http://127.0.0.1:3000/",
+    "chromeWebSecurity": false,
+    "ignoreTestFiles": "example_spec.js",
+    "viewportWidth": 1540,
+    "viewportHeight": 1000,
+    "reporter": "junit",
+    "reporterOptions": {
+        "mochaFile": "cypress/results/cypress-test-report.[hash].xml"
+    }
+}

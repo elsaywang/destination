@@ -8,8 +8,16 @@
     "url": "git@git.corp.adobe.com:AAM/portal-signals.git"
   },
   "engines": {
-    "node": "^9.6.1"
+    "node": "10.15.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lerna": "^3.8.5",
+    "retire": "^2.0.2"
+  },
+  "scripts": {
+    "genvulnerabilitiesreport": "npx retire > vulnerabilities-report.txt 2>&1 || echo \"Generated vulnerability report\" ",
+    "clean": "npx lerna exec -- rm -r package-lock.json || true  && npx lerna clean --yes || true && rm -r node_modules || true"
+  }
 }

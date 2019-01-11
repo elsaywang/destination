@@ -1,0 +1,14 @@
+# production
+build
+
+# topnav
+public/static
+
+# cypress
+cypress/screenshots
+cypress/videos
+cypress/results
+
+# jest
+coverage/
+test-report.xml

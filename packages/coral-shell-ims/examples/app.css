@@ -1,0 +1,103 @@
+/*
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2012 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+
+
+#bg_default {
+    background-color: #9a7897; /* Fallback color */
+}
+
+@media only screen {
+    #bg_default {
+        background-image: url('resources/1024x640.jpg');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #bg_default {
+        background-image: url('resources/1280x800.jpg');
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #bg_default {
+        background-image: url('resources/1280x800.jpg');
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px) {
+    #bg_default {
+        background-image: url('resources/1280x800.jpg');
+    }
+}
+
+@media only screen and (min-width: 2048px) {
+    #bg_default {
+        background-image: url('resources/1280x800.jpg');
+    }
+}
+
+.login-box{background-color:#000;background-color:rgba(0,0,0,0.85);width:370px;height:280px;margin:auto;color:#fff;line-height:16px;top:0;bottom:0;left:0;right:0;position:relative;margin-top:10%}
+.login-box .leftbox{width:295px;margin:0 auto;padding-top:1px}
+.login-box .leftbox div.create-id{text-align:center;padding-bottom:20px}
+.login-box .leftbox div.sign-in{margin-top:45px}
+.login-box .leftbox div.sign-in button{width:100%}
+.login-box .leftbox p{text-align:center}
+.login-box .leftbox p.micon{margin-top:48px}
+.login-box .leftbox h1{font-family:adobe-clean,Helvetica,Arial,sans-serif;font-weight:300;margin-top:22px;color:white;font-size:28px;line-height:28px;text-align:center}
+.login-box .leftbox span.select.login-product{width:100%;margin-bottom:30px}
+.login-box .leftbox span.select.login-product button{text-align:center}
+.login-box .leftbox .or-spacer{margin-top:30px;margin-bottom:30px;font-style:italic;font-size:12px}
+.login-box .leftbox .or-spacer .leftDivider{margin-right:7px}
+.login-box .leftbox .or-spacer span.divider{border-top:solid;border-top-width:1px;height:0;width:10px;display:inline-block;color:#565656;margin-top:10px;border-left:white}
+.login-box .leftbox div.wait{position:absolute;left:50%;margin-top:-230px;margin-left:-10px}
+.messages .alert{margin:0 0 10px 0;font-family:adobe-clean,Helvetica,Arial,sans-serif;font-weight:normal;font-size:13px;color:#3b3b3b}
+.messages .error{font-weight:bold}
+hidden{display:none}
+#usage-box
+{width:100%;height:35px;position:fixed;bottom:0;background-color:#000;background-color:rgba(0,0,0,0.85);font-family:adobe-clean,Helvetica,Arial,sans-serif;font-weight:normal;font-size:12px;vertical-align:middle;margin:0;padding:0;color:#ccc;list-style:none}
+#usage-box li{padding:8px 0 8px 25px;float:left;margin:0}
+#usage-box li:last-child{float:right;padding-right:25px}
+#usage-box a,#usage-box a:visited{color:#ccc;}
+#usage-box a.lang,#usage-box a.lang:visited{color:#449fdf}
+@media all and (max-width:634px){.leftbox{float:none;display:block}
+#usage-box{position:relative}
+}
+.background{position:absolute;top:0;left:0;bottom:0;right:0;background-size:cover;background-position:bottom right;background-repeat:no-repeat;background-color:transparent}
+#username,#password{height:38px;margin:0 0 10px 0;width:270px}
+#username:invalid,#password:invalid{color:black;box-shadow:none;border:.0625rem solid #b9b9b9}
+#username:invalid:focus,#password:invalid:focus{outline:0;-webkit-box-shadow:0 0 .1875rem #3287d2;-moz-box-shadow:0 0 .1875rem #3287d2;box-shadow:0 0 .1875rem #3287d2;border:.0625rem solid #3287d2}
+div.sign-in-crx{margin-top:50px;padding-left:10px}
+/*html {text-rendering: optimizeLegibility !important;-webkit-font-smoothing: antialiased;font-smoothing: antialiased;-moz-font-smoothing: antialiased;}*/
+
+/** Hiding Shell initially **/
+coral-shell-ims.shellContainer{
+    display:none;
+}
+
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 0.6s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}

@@ -1,0 +1,27 @@
+{
+    "name": "@aam/aam-userroles",
+    "version": "1.1.0",
+    "description": "UserRoles module of Adobe Audience Manager",
+    "main": "index.js",
+    "scripts": {
+        "build": "npx babel ./src -d ./build"
+    },
+    "keywords": [
+        "UserRoles",
+        "RBAC",
+        "js"
+    ],
+    "publishConfig": {
+        "registry": "https://artifactory.corp.adobe.com:443/artifactory/api/npm/npm-aam-npm-modules-release/"
+    },
+    "author": "Vincent Y",
+    "license": "ISC",
+    "dependencies": {
+        "whatwg-fetch": "^2.0.4",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-latest": "^6.24.1"
+    }
+}

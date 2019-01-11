@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`peopleBasedDestinationsTypeOptions matches snapshot 1`] = `
+Array [
+  Object {
+    "label": "ALL",
+    "value": "ALL",
+  },
+  Object {
+    "label": "FACEBOOK",
+    "value": "FB",
+  },
+  Object {
+    "label": "GOOGLE",
+    "value": "GOOGL",
+  },
+  Object {
+    "label": "LINKEDIN",
+    "value": "LNKD",
+  },
+  Object {
+    "label": "TWITTER",
+    "value": "TWTR",
+  },
+]
+`;

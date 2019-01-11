@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <title>Coral Shell IMS Example</title>
+  <link rel="stylesheet" type="text/css" href="../../css/coral.css">
+  <link rel="stylesheet" type="text/css" href="resources/cloudviz.css">
+  <link rel="stylesheet" type="text/css" href="app.css">
+  <script type="text/javascript" src="../../js/libs/jquery.js"></script>
+  <script type="text/javascript" src="../../js/coral.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="https://static.adobelogin.com/imslib/stg1/imslib.min.js"></script>
+  <script type="text/javascript" src="resources/moment.js"></script>
+  <script type="text/javascript" src="resources/cloudviz-all.min.js"></script>
+</head>
+
+<body class="coral--light">
+
+  <div id="backgrounds">
+    <div id="bg_default" class="background"></div>
+  </div>
+  <div class="login-box" style="position:relative;">
+    <div class="leftbox">
+      <p class="micon"><i class="coral-Icon coral-Icon--sizeM coral-Icon--adobeMarketingCloud"></i></p>
+      <h1>IMS &amp; Shell 3</h1>
+      <div class="sign-in-adobeid">
+        <div class="sign-in">
+          <a data-adobeid-action="signin"><button class="coral-Button coral-Button--primary">Sign In with an Adobe ID </button></a>
+        </div>
+      </div>
+      <coral-wait hidden centered size="L"></coral-wait>
+    </div>
+  </div>  
+
+  <!--
+  Outer component hits APIs, listens to events, and call APIs of sub-components.
+
+  Attributes are added to elements of interest so they can be found easily (vs querying by tagname).
+
+  Special attributes:
+    * [coral-shell-ims-menu-organizations] - The menu item that has the current organization's name. The label will be set to reflect the current organization.
+    * [coral-shell-ims-menu-notifications] - The menu item that has the notifications icon. The badge attribute will be set to reflect the number of notifications. This information can be gathered from the pulse component.
+    * [coral-shell-ims-solutions] - The list containing products. These will be populated on login and when organizations are switched.
+    * [coral-shell-ims-services] - The list containing services (secondary products). These will be populated on login and when organizations are switched.
+    * [coral-shell-ims-help] - The help component. Its events will be listened to and its API will be used to populate results when a search is performed (see coral-shell-help's examples).
+    * [coral-shell-ims-orgswitcher] - The orgswitcher comopnent.  Its events will be listened to and its API will be used to populate organizations on login.
+    * [coral-shell-ims-pulse] - The pulse component. Its events will be listened to in order to populate the badge attribute on the corresponding menu item.
+    * [coral-shell-ims-user] - The user component. Its content will be populated on login.
+-->
+<coral-shell-ims class="shellContainer"
+  clientid="MarketingCloud11_qa"
+  organizationsendpoint="https://ims-na1-stg1.adobelogin.com/ims/organizations/v1"
+  profileendpoint="https://ims-na1-stg1.adobelogin.com/ims/profile/v1"
+  jsonconfig="https://shell-cdn.marketing-qa.corp.adobe.com/v2/en-us/latest.json"
+  logoutendpoint="https://ims-na1-stg1.adobelogin.com/ims/logout/v1"
+  logoutredirecturl="https://git.corp.adobe.com/pages/amangal/coral-shell-ims/"
+  profileredirecturl="https://<tenantId>.marketing-qa.corp.adobe.com/content/mac/default/tools/profile.html"
+  manageorgurl="https://<tenantId>.marketing-qa.corp.adobe.com/content/mac/default/orgs.html"
+  avatarendpoint="https://adobeid-na1-stg1.services.adobe.com/ims/avatar/download/{userId}?size=small"
+  setactiveorgendpoint="https://<tenantId>.marketing-qa.corp.adobe.com/content/mac/default/header.setActiveOrg.json"
+  setactivepcendpoint="https://<tenantId>.marketing-qa.corp.adobe.com/content/mac/default/header.setActivePC.json"
+  pulseendpoint="https://mc-qe.adobe.io"
+  marketingcloudendpoint="https://<tenantId>.marketing-qa.corp.adobe.com"
+  getlinkendpoint="https://<tenantId>.marketing-qa.corp.adobe.com/content/mac/default/tools/accountslinking/jcr:content.{productId}.getLink.json?orgId={orgId}&companyName={companyName}&fromProfile=false"
+  loginendpoint="https://<tenantId>.marketing-qa.corp.adobe.com/content/mac/default/tools/accountslinking/jcr:content.{productId}.login.json"
+  linkendpoint="https://<tenantId>.marketing-qa.corp.adobe.com/content/mac/default/tools/accountslinking/jcr:content.{productId}.link.json"
+  troubleLink="https://marketing.adobe.com/resources/help/en_US/mcloud/link_accounts.html"
+  apiKey="pulse_int"
+  imsuser="true">
+ 
+  <coral-shell>
+ 
+    <coral-shell-header>
+ 
+      <coral-shell-header-home>
+        <!-- Static home button -->
+        <a is="coral-shell-homeanchor" icon="adobeExperienceManager" href="/">Adobe Experience Manager</a>
+      </coral-shell-header-home>
+ 
+      <coral-shell-header-content>
+        <coral-shell-workspaces>
+          <!-- Static workspaces -->
+          <a is="coral-shell-workspace" href="#workspace1" selected>Workspace 1</a>
+          <a is="coral-shell-workspace" href="#workspace2">Workspace 2</a>
+          <a is="coral-shell-workspace" href="#workspace3">Workspace 3</a>
+        </coral-shell-workspaces>
+      </coral-shell-header-content>
+ 
+      <coral-shell-header-actions>
+        <coral-shell-menubar>
+          <coral-shell-menubar-item menu="#menu_organizations" coral-shell-ims-menu-organizations></coral-shell-menubar-item>
+          <coral-shell-menubar-item menu="#menu_help" icon="helpCircle"></coral-shell-menubar-item>
+          <coral-shell-menubar-item menu="#menu_solutions" icon="apps"></coral-shell-menubar-item>
+          <coral-shell-menubar-item menu="#menu_pulse" icon="bell" coral-shell-ims-menu-notifications></coral-shell-menubar-item>
+          <coral-shell-menubar-item menu="#menu_user" icon="userCircleColor"></coral-shell-menubar-item>
+        </coral-shell-menubar>
+      </coral-shell-header-actions>
+ 
+    </coral-shell-header>
+ 
+    <coral-shell-menu id="menu_organizations">
+      <coral-shell-orgswitcher coral-shell-ims-orgswitcher>
+      </coral-shell-orgswitcher>
+    </coral-shell-menu>
+ 
+    <coral-shell-menu id="menu_help">
+      <coral-shell-help coral-shell-ims-help>
+        <!-- Static help items, not populated by IMS -->
+        <a is="coral-shell-help-item" icon="globe" href="/learn">Marketing Cloud Help</a>
+        <a is="coral-shell-help-item" icon="users" href="/community">Community</a>
+        <a is="coral-shell-help-item" icon="callCenter" href="/customercare">Customer Care</a>
+        <a is="coral-shell-help-item" icon="news" href="/news">What's new in CoralUI</a>
+        <a is="coral-shell-help-item" icon="servers" href="/status">Adobe Marketing Cloud Status</a>
+        <a is="coral-shell-help-item" icon="lightbulb" href="/getstarted">Getting Started with CoralUI</a>
+      </coral-shell-help>
+    </coral-shell-menu>
+ 
+    <coral-shell-menu id="menu_pulse" placement="right" from="right" full focusOnShow="off">
+    <!--  Pulse Widget -->
+      <pulse-widget coral-shell-ims-pulse>
+        <pulse-notifications-view>
+        </pulse-notifications-view>
+    </pulse-widget>
+    </coral-shell-menu>
+ 
+    <coral-shell-menu id="menu_solutions" class="coral--dark" placement="top" from="top" focusOnShow="off" full top>
+      <coral-shell-solutionswitcher>
+        <coral-shell-solutions coral-shell-ims-marketing-cloud>
+        </coral-shell-solutions>
+        <coral-shell-solutions coral-shell-ims-analytics-cloud>
+        </coral-shell-solutions>
+        <coral-shell-solutions coral-shell-ims-advertising-cloud>
+        </coral-shell-solutions>
+        <coral-shell-solutions secondary coral-shell-ims-services>
+        </coral-shell-solutions>
+      </coral-shell-solutionswitcher>
+    </coral-shell-menu>
+ 
+    <coral-shell-menu id="menu_user">
+      <coral-shell-user coral-shell-ims-user>
+        <coral-shell-user-footer>
+          <!-- Static links let you sign out/view profile -->
+          <a is="coral-anchorbutton" variant="minimal" href="#profile">Edit Profile</a>
+          <a is="coral-anchorbutton" variant="minimal" href="#signout">Sign Out</a>
+        </coral-shell-user-footer>
+      </coral-shell-user>
+    </coral-shell-menu>
+ 
+    <coral-shell-content>
+      <!-- Main application goes here -->
+    </coral-shell-content>
+ 
+  </coral-shell>
+ 
+</coral-shell-ims>
+    
+</body>
+</html>
