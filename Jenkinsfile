@@ -122,7 +122,7 @@ node ("docker") {
         }
 
         stage ('Generate Destinations Release ZIP File') {
-            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/packages/destinations/build/", glob: '**/*.*', zipFile: "destinationscd -${env.BRANCH_NAME}-build-${env.BUILD_NUMBER}-bundle.zip"
+            zip archive: true, fingerprint: true, dir: "${workspace}/artifacts/ui-build/packages/destinations/build/", glob: '**/*.*', zipFile: "destinations-${env.BRANCH_NAME}-build-${env.BUILD_NUMBER}-bundle.zip"
         }
 
     } catch (e) {
