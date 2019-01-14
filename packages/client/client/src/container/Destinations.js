@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Table from '../components/Table';
-import { columns, generateItems } from '../constants/tableData';
+import { columns } from '../constants/tableData';
 import SideNavFilter from '../components/SideNavFilter';
 import Search from '@react/react-spectrum/Search';
 import styles from './Destinations.css';
 import { peopleBasedDestinationsTypeOptions } from '../constants/peopleBasedDestinationsOptions';
+import { fetchDestinations } from '../redux/actions/destinations';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
@@ -18,11 +20,12 @@ class Destinations extends Component {
     };
 
     componentWillMount() {
-        this.setState({ items: this.props.items || generateItems() });
+        this.props.fetchDestinations();
     }
 
     render() {
-        const { destinationType, items } = this.props;
+        const { fetchDestinations, destinations, destinationType } = this.props;
+
         const renderSideNavFilter = (
             <div className={styles.filterListContainer}>
                 <SideNavFilter
@@ -42,19 +45,20 @@ class Destinations extends Component {
                     <div className={styles.search}>
                         <Search placeholder="Search" onChange={() => {}} onSubmit={() => {}} />
                     </div>
-                    <Table
-                        dataTest="peopleBased-destination-table"
-                        items={this.state.items}
-                        reachedEndOfRows={() => {
-                            this.setState(prevState => {
-                                return { items: prevState.items.concat(generateItems()) };
-                            });
-                        }}
-                        height={500}
-                        columns={columns}
-                        rowHeight={500}
-                        renderCell={this.renderCell}
-                    />
+
+                    {destinations.requestInFlight ? (
+                        <p>Loading</p>
+                    ) : (
+                        <Table
+                            dataTest="peopleBased-destination-table"
+                            items={destinations.list}
+                            reachedEndOfRows={fetchDestinations}
+                            height={500}
+                            columns={columns}
+                            rowHeight={500}
+                            renderCell={this.renderCell}
+                        />
+                    )}
                 </div>
             </div>
         );
@@ -62,14 +66,28 @@ class Destinations extends Component {
 }
 
 Destinations.propTypes = {
-    items: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number,
-            name: PropTypes.string,
-            enabled: PropTypes.bool,
-            createdBy: PropTypes.string,
-        }),
-    ),
+    fetchDestinations: PropTypes.func.isRequired,
+    destinations: PropTypes.shape({
+        list: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.number,
+                name: PropTypes.string,
+                enabled: PropTypes.bool,
+                createdBy: PropTypes.string,
+            }),
+        ),
+    }),
     destinationType: PropTypes.string.isRequired,
 };
-export default Destinations;
+
+const mapStateToProps = ({ destinations }) => ({
+    destinations,
+});
+const actionCreators = { fetchDestinations };
+
+export { Destinations };
+
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(Destinations);

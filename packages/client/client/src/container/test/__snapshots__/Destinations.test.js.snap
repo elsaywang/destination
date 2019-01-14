@@ -5,42 +5,46 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Destinations
     destinationType="People-Based"
-    items={
-        Array [
-            Object {
-              "action": "",
-              "description": "Maxime ut totam nemo assumenda ratione impedit.",
-              "id": 0,
-              "name": "input",
-              "platform": "Twitter",
-              "shareableAudience": 41898,
-            },
-            Object {
-              "action": "",
-              "description": "Et nesciunt voluptatibus facilis blanditiis.",
-              "id": 1,
-              "name": "Bedfordshire",
-              "platform": "Google",
-              "shareableAudience": 18751,
-            },
-            Object {
-              "action": "",
-              "description": "Repellat sit dolor ut quisquam et ducimus.",
-              "id": 2,
-              "name": "Shoes",
-              "platform": "Twitter",
-              "shareableAudience": 5434,
-            },
-            Object {
-              "action": "",
-              "description": "Blanditiis tenetur culpa aut distinctio.",
-              "id": 3,
-              "name": "mesh",
-              "platform": "LinkedIn",
-              "shareableAudience": 40918,
-            },
-          ]
+    destinations={
+        Object {
+            "list": Array [
+              Object {
+                "action": "",
+                "description": "Maxime ut totam nemo assumenda ratione impedit.",
+                "id": 0,
+                "name": "input",
+                "platform": "Twitter",
+                "shareableAudience": 41898,
+              },
+              Object {
+                "action": "",
+                "description": "Et nesciunt voluptatibus facilis blanditiis.",
+                "id": 1,
+                "name": "Bedfordshire",
+                "platform": "Google",
+                "shareableAudience": 18751,
+              },
+              Object {
+                "action": "",
+                "description": "Repellat sit dolor ut quisquam et ducimus.",
+                "id": 2,
+                "name": "Shoes",
+                "platform": "Twitter",
+                "shareableAudience": 5434,
+              },
+              Object {
+                "action": "",
+                "description": "Blanditiis tenetur culpa aut distinctio.",
+                "id": 3,
+                "name": "mesh",
+                "platform": "LinkedIn",
+                "shareableAudience": 40918,
+              },
+            ],
+            "requestInFlight": false,
+          }
     }
+    fetchDestinations={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
