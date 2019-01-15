@@ -50,6 +50,8 @@
     "start": "PORT=3002 react-scripts start",
     "start:ci": "npx http-server build -p 3002 --cors",
     "build": "react-scripts build",
+    "build:replace:version": "npx replace-in-file appVersion $BUILD_NUMBER build/index.html",
+    "build:replace:branch": "npx replace-in-file appBranch $BRANCH_NAME build/index.html",
     "test": "react-scripts test",
     "cypress:open": "npx cypress open",
     "cypress:run": "npx cypress run",
