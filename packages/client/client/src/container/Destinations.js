@@ -38,14 +38,13 @@ class Destinations extends Component {
         );
         return (
             <div
-                style={{ display: 'flex' }}
+                className={styles.destinationContainer}
                 data-test={`${destinationType.toLowerCase()}-destinations`}>
                 {this.showSideNavFilter() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
                     <div className={styles.search}>
                         <Search placeholder="Search" onChange={() => {}} onSubmit={() => {}} />
                     </div>
-
                     {destinations.requestInFlight ? (
                         <p>Loading</p>
                     ) : (
@@ -53,9 +52,9 @@ class Destinations extends Component {
                             dataTest="peopleBased-destination-table"
                             items={destinations.list}
                             reachedEndOfRows={fetchDestinations}
-                            height={500}
+                            height={900}
                             columns={columns}
-                            rowHeight={500}
+                            rowHeight={250}
                             renderCell={this.renderCell}
                         />
                     )}

@@ -18,7 +18,9 @@ const Layout = ({ children, heading }) => {
         <IntlProvider locale="en">
             <ReactSpectrumProvider scale="medium">
                 <Grid className={styles.grid}>
-                    <GridRow valign="middle">
+                    <GridRow
+                        className={classNames({ [styles.gridRow]: heading === 'Configuration' })}
+                        valign="middle">
                         <GridColumn size={6}>
                             <GridRow>
                                 <FormattedMessage {...title}>

@@ -32,6 +32,7 @@ ShallowWrapper {
                 variant="fluid"
         >
                 <GridRow
+                        className=""
                         reverse={false}
                         valign="middle"
                 >
@@ -92,6 +93,7 @@ ShallowWrapper {
           variant="fluid"
 >
           <GridRow
+                    className=""
                     reverse={false}
                     valign="middle"
           >
@@ -151,6 +153,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <GridRow
+              className=""
               reverse={false}
               valign="middle"
 >
@@ -249,6 +252,7 @@ ShallowWrapper {
                   />
 </GridColumn>,
               ],
+              "className": "",
               "reverse": false,
               "valign": "middle",
             },
@@ -400,6 +404,7 @@ ShallowWrapper {
                     variant="fluid"
           >
                     <GridRow
+                              className=""
                               reverse={false}
                               valign="middle"
                     >
@@ -460,6 +465,7 @@ ShallowWrapper {
             variant="fluid"
 >
             <GridRow
+                        className=""
                         reverse={false}
                         valign="middle"
             >
@@ -519,6 +525,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <GridRow
+                className=""
                 reverse={false}
                 valign="middle"
 >
@@ -617,6 +624,7 @@ ShallowWrapper {
                     />
 </GridColumn>,
                 ],
+                "className": "",
                 "reverse": false,
                 "valign": "middle",
               },
@@ -802,6 +810,7 @@ ShallowWrapper {
                 variant="fluid"
         >
                 <GridRow
+                        className=""
                         reverse={false}
                         valign="middle"
                 >
@@ -861,6 +870,7 @@ ShallowWrapper {
           variant="fluid"
 >
           <GridRow
+                    className=""
                     reverse={false}
                     valign="middle"
           >
@@ -919,6 +929,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <GridRow
+              className=""
               reverse={false}
               valign="middle"
 >
@@ -1017,6 +1028,7 @@ ShallowWrapper {
                   />
 </GridColumn>,
               ],
+              "className": "",
               "reverse": false,
               "valign": "middle",
             },
@@ -1160,6 +1172,7 @@ ShallowWrapper {
                     variant="fluid"
           >
                     <GridRow
+                              className=""
                               reverse={false}
                               valign="middle"
                     >
@@ -1219,6 +1232,7 @@ ShallowWrapper {
             variant="fluid"
 >
             <GridRow
+                        className=""
                         reverse={false}
                         valign="middle"
             >
@@ -1277,6 +1291,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <GridRow
+                className=""
                 reverse={false}
                 valign="middle"
 >
@@ -1375,6 +1390,7 @@ ShallowWrapper {
                     />
 </GridColumn>,
                 ],
+                "className": "",
                 "reverse": false,
                 "valign": "middle",
               },

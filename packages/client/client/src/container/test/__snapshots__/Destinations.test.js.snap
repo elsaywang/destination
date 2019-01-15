@@ -147,7 +147,7 @@ ShallowWrapper {
                                       ]
                     }
                     dataTest="peopleBased-destination-table"
-                    height={500}
+                    height={900}
                     items={
                               Array [
                                         Object {
@@ -186,14 +186,12 @@ ShallowWrapper {
                     }
                     reachedEndOfRows={[Function]}
                     renderCell={[Function]}
-                    rowHeight={500}
+                    rowHeight={250}
           />
 </div>,
       ],
+      "className": undefined,
       "data-test": "people-based-destinations",
-      "style": Object {
-        "display": "flex",
-      },
     },
     "ref": null,
     "rendered": Array [
@@ -328,7 +326,7 @@ ShallowWrapper {
                                         ]
               }
               dataTest="peopleBased-destination-table"
-              height={500}
+              height={900}
               items={
                             Array [
                                           Object {
@@ -367,7 +365,7 @@ ShallowWrapper {
               }
               reachedEndOfRows={[Function]}
               renderCell={[Function]}
-              rowHeight={500}
+              rowHeight={250}
 />,
           ],
           "className": undefined,
@@ -447,7 +445,7 @@ ShallowWrapper {
                 },
               ],
               "dataTest": "peopleBased-destination-table",
-              "height": 500,
+              "height": 900,
               "items": Array [
                 Object {
                   "action": "",
@@ -484,7 +482,7 @@ ShallowWrapper {
               ],
               "reachedEndOfRows": [Function],
               "renderCell": [Function],
-              "rowHeight": 500,
+              "rowHeight": 250,
             },
             "ref": null,
             "rendered": null,
@@ -590,7 +588,7 @@ ShallowWrapper {
                                               ]
                         }
                         dataTest="peopleBased-destination-table"
-                        height={500}
+                        height={900}
                         items={
                                     Array [
                                                 Object {
@@ -629,14 +627,12 @@ ShallowWrapper {
                         }
                         reachedEndOfRows={[Function]}
                         renderCell={[Function]}
-                        rowHeight={500}
+                        rowHeight={250}
             />
 </div>,
         ],
+        "className": undefined,
         "data-test": "people-based-destinations",
-        "style": Object {
-          "display": "flex",
-        },
       },
       "ref": null,
       "rendered": Array [
@@ -771,7 +767,7 @@ ShallowWrapper {
                                               ]
                 }
                 dataTest="peopleBased-destination-table"
-                height={500}
+                height={900}
                 items={
                                 Array [
                                                 Object {
@@ -810,7 +806,7 @@ ShallowWrapper {
                 }
                 reachedEndOfRows={[Function]}
                 renderCell={[Function]}
-                rowHeight={500}
+                rowHeight={250}
 />,
             ],
             "className": undefined,
@@ -890,7 +886,7 @@ ShallowWrapper {
                   },
                 ],
                 "dataTest": "peopleBased-destination-table",
-                "height": 500,
+                "height": 900,
                 "items": Array [
                   Object {
                     "action": "",
@@ -927,7 +923,7 @@ ShallowWrapper {
                 ],
                 "reachedEndOfRows": [Function],
                 "renderCell": [Function],
-                "rowHeight": 500,
+                "rowHeight": 250,
               },
               "ref": null,
               "rendered": null,
