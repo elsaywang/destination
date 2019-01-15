@@ -120,17 +120,20 @@ ShallowWrapper {
                                         Object {
                                           "active": true,
                                           "key": "platform",
+                                          "sortable": true,
                                           "title": "PLATFORM",
                                           "width": 150,
                                         },
                                         Object {
                                           "key": "name",
+                                          "sortable": true,
                                           "title": "NAME",
                                           "width": 200,
                                         },
                                         Object {
                                           "key": "description",
                                           "minWidth": 200,
+                                          "sortable": true,
                                           "title": "DESCRIPTION",
                                         },
                                         Object {
@@ -299,17 +302,20 @@ ShallowWrapper {
                                           Object {
                                             "active": true,
                                             "key": "platform",
+                                            "sortable": true,
                                             "title": "PLATFORM",
                                             "width": 150,
                                           },
                                           Object {
                                             "key": "name",
+                                            "sortable": true,
                                             "title": "NAME",
                                             "width": 200,
                                           },
                                           Object {
                                             "key": "description",
                                             "minWidth": 200,
+                                            "sortable": true,
                                             "title": "DESCRIPTION",
                                           },
                                           Object {
@@ -419,17 +425,20 @@ ShallowWrapper {
                 Object {
                   "active": true,
                   "key": "platform",
+                  "sortable": true,
                   "title": "PLATFORM",
                   "width": 150,
                 },
                 Object {
                   "key": "name",
+                  "sortable": true,
                   "title": "NAME",
                   "width": 200,
                 },
                 Object {
                   "key": "description",
                   "minWidth": 200,
+                  "sortable": true,
                   "title": "DESCRIPTION",
                 },
                 Object {
@@ -561,17 +570,20 @@ ShallowWrapper {
                                                 Object {
                                                   "active": true,
                                                   "key": "platform",
+                                                  "sortable": true,
                                                   "title": "PLATFORM",
                                                   "width": 150,
                                                 },
                                                 Object {
                                                   "key": "name",
+                                                  "sortable": true,
                                                   "title": "NAME",
                                                   "width": 200,
                                                 },
                                                 Object {
                                                   "key": "description",
                                                   "minWidth": 200,
+                                                  "sortable": true,
                                                   "title": "DESCRIPTION",
                                                 },
                                                 Object {
@@ -740,17 +752,20 @@ ShallowWrapper {
                                                 Object {
                                                   "active": true,
                                                   "key": "platform",
+                                                  "sortable": true,
                                                   "title": "PLATFORM",
                                                   "width": 150,
                                                 },
                                                 Object {
                                                   "key": "name",
+                                                  "sortable": true,
                                                   "title": "NAME",
                                                   "width": 200,
                                                 },
                                                 Object {
                                                   "key": "description",
                                                   "minWidth": 200,
+                                                  "sortable": true,
                                                   "title": "DESCRIPTION",
                                                 },
                                                 Object {
@@ -860,17 +875,20 @@ ShallowWrapper {
                   Object {
                     "active": true,
                     "key": "platform",
+                    "sortable": true,
                     "title": "PLATFORM",
                     "width": 150,
                   },
                   Object {
                     "key": "name",
+                    "sortable": true,
                     "title": "NAME",
                     "width": 200,
                   },
                   Object {
                     "key": "description",
                     "minWidth": 200,
+                    "sortable": true,
                     "title": "DESCRIPTION",
                   },
                   Object {

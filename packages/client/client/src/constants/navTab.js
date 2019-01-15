@@ -1,5 +1,5 @@
 export const routes = [
-    { route: '/', name: '' },
+    { route: '/', name: 'All' },
     { route: '/destinations', name: 'People-Based' },
     { route: '/deviceBased', name: 'Device-Based' },
     { route: '/cookieBased', name: 'Cookie-Based' },

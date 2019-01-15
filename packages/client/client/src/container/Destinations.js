@@ -8,6 +8,7 @@ import Search from '@react/react-spectrum/Search';
 import styles from './Destinations.css';
 import { peopleBasedDestinationsTypeOptions } from '../constants/peopleBasedDestinationsOptions';
 import { fetchDestinations } from '../redux/actions/destinations';
+import columnsForDestinationType from '../constants/columns';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
@@ -53,7 +54,7 @@ class Destinations extends Component {
                             items={destinations.list}
                             reachedEndOfRows={fetchDestinations}
                             height={900}
-                            columns={columns}
+                            columns={columnsForDestinationType[destinationType]}
                             rowHeight={250}
                             renderCell={this.renderCell}
                         />
