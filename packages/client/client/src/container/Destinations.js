@@ -25,6 +25,7 @@ class Destinations extends Component {
 
     handleSideNavFilterChange = e => {
         this.props.updateIntegratedPlatformType(e);
+        this.props.fetchDestinations();
     };
 
     componentWillUnmount() {
@@ -51,7 +52,7 @@ class Destinations extends Component {
                 data-test={`${destinationType.toLowerCase()}-destinations`}>
                 {this.showSideNavFilter() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
-                    {destinations.requestInFlight ? (
+                    {destinations.inFlight ? (
                         <p>Loading</p>
                     ) : (
                         <Table
@@ -60,7 +61,7 @@ class Destinations extends Component {
                             height={900}
                             columns={
                                 columnsForDestinationType[integratedPlatformType || destinationType]
-                            } //TODO: fix the columnName rendering issue when switch SideNavFilter
+                            }
                             rowHeight={250}
                             renderCell={this.renderCell}
                         />
