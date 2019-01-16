@@ -158,9 +158,7 @@ Make sure that you are using the `name` and `version` defined in `@aam/aam-compo
 {
 
     "dependencies": {
-    ...
     "@aam/aam-component": "0.0.0",
-    ...
 }
 ```
 
@@ -172,8 +170,8 @@ $ npx lerna bootstrap
 
 Once you have this, your component is ready to be used in Destinations, how ? simply import the component and use it in your JSX
 
-``` javascript
-import AamComponent from '@aam/aam-component`
+``` jsx
+import AamComponent from '@aam/aam-component'
 
 ...
 render () {(
