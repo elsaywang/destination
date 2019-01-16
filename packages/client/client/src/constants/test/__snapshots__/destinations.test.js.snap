@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`destinations creations drop down Menu Options constants matches snapshot 1`] = `
+exports[`destination categories constant matches snapshot 1`] = `
+Array [
+  "All",
+  "Adobe Experience Cloud",
+  "Integrated Platforms",
+  "Custom",
+]
+`;
+
+exports[`destinations creations drop down Menu Options constant matches snapshot 1`] = `
 Array [
   Object {
     "label": "Experience Cloud Activation",

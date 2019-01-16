@@ -1,5 +1,6 @@
 import { generateItems } from '../../constants/tableData';
 import { createAsyncAction } from '../../utils/createAsyncAction';
+import { createAction } from 'redux-actions';
 
 const FETCH_DESTINATIONS = 'FETCH_DESTINATIONS';
 export const FETCH_DESTINATIONS_PENDING = 'FETCH_DESTINATIONS_PENDING';
@@ -17,3 +18,6 @@ export const fetchDestinations = createAsyncAction(FETCH_DESTINATIONS, () => {
         }),
     );
 });
+
+export const UPDATE_INTEGRATED_PLATFORM_TYPE = 'UPDATE_INTEGRATED_PLATFORM_TYPE';
+export const updateIntegratedPlatformType = createAction(UPDATE_INTEGRATED_PLATFORM_TYPE);

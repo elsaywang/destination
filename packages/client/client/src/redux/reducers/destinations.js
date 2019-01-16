@@ -3,6 +3,7 @@ import {
     FETCH_DESTINATIONS_PENDING,
     FETCH_DESTINATIONS_FULFILLED,
     FETCH_DESTINATIONS_REJECTED,
+    UPDATE_INTEGRATED_PLATFORM_TYPE,
 } from '../actions/destinations';
 
 export default handleActions(
@@ -29,6 +30,13 @@ export default handleActions(
                 inFlight: false,
             }),
         ],
+        [
+            UPDATE_INTEGRATED_PLATFORM_TYPE,
+            (state, action) => ({
+                ...state,
+                integratedPlatformType: action.payload,
+            }),
+        ],
     ]),
-    { list: [], destinationType: 'ALL' },
+    { list: [], integratedPlatformType: '' },
 );

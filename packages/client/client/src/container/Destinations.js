@@ -2,12 +2,11 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Table from '../components/Table';
-import { columns } from '../constants/tableData';
 import SideNavFilter from '../components/SideNavFilter';
-import Search from '@react/react-spectrum/Search';
 import styles from './Destinations.css';
-import { peopleBasedDestinationsTypeOptions } from '../constants/peopleBasedDestinationsOptions';
-import { fetchDestinations } from '../redux/actions/destinations';
+import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
+import { destinationCategories } from '../constants/destinations';
+import { fetchDestinations, updateIntegratedPlatformType } from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
 
 class Destinations extends Component {
@@ -17,23 +16,32 @@ class Destinations extends Component {
 
     showSideNavFilter = () => {
         const { destinationType } = this.props;
-        return ['People-Based', 'Device-Based'].includes(destinationType);
+        return destinationType === 'Integrated Platforms';
     };
 
     componentWillMount() {
         this.props.fetchDestinations();
     }
 
+    handleSideNavFilterChange = e => {
+        this.props.updateIntegratedPlatformType(e);
+    };
+
+    componentWillUnmount() {
+        this.props.updateIntegratedPlatformType('');
+    }
+
     render() {
         const { fetchDestinations, destinations, destinationType } = this.props;
+        const { integratedPlatformType, list } = destinations;
 
         const renderSideNavFilter = (
             <div className={styles.filterListContainer}>
                 <SideNavFilter
-                    onFilterTypeChange={() => {}}
-                    filterType={'ALL'}
+                    onFilterTypeChange={this.handleSideNavFilterChange}
+                    filterType={integratedPlatformType}
                     isSearched={true}
-                    filterOptions={peopleBasedDestinationsTypeOptions}
+                    filterOptions={integratedPlatformsOptions}
                 />
             </div>
         );
@@ -43,18 +51,16 @@ class Destinations extends Component {
                 data-test={`${destinationType.toLowerCase()}-destinations`}>
                 {this.showSideNavFilter() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
-                    <div className={styles.search}>
-                        <Search placeholder="Search" onChange={() => {}} onSubmit={() => {}} />
-                    </div>
                     {destinations.requestInFlight ? (
                         <p>Loading</p>
                     ) : (
                         <Table
-                            dataTest="peopleBased-destination-table"
-                            items={destinations.list}
+                            items={list}
                             reachedEndOfRows={fetchDestinations}
                             height={900}
-                            columns={columnsForDestinationType[destinationType]}
+                            columns={
+                                columnsForDestinationType[integratedPlatformType || destinationType]
+                            } //TODO: fix the columnName rendering issue when switch SideNavFilter
                             rowHeight={250}
                             renderCell={this.renderCell}
                         />
@@ -76,14 +82,15 @@ Destinations.propTypes = {
                 createdBy: PropTypes.string,
             }),
         ),
+        integratedPlatformType: PropTypes.string,
     }),
-    destinationType: PropTypes.string.isRequired,
+    destinationType: PropTypes.oneOf(destinationCategories).isRequired,
 };
 
 const mapStateToProps = ({ destinations }) => ({
     destinations,
 });
-const actionCreators = { fetchDestinations };
+const actionCreators = { fetchDestinations, updateIntegratedPlatformType };
 
 export { Destinations };
 

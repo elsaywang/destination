@@ -17,16 +17,17 @@
 :local(.gridRow){
   border-bottom: 1px solid var(--spectrum-alias-border-color-dark);
 }
-:local(.flexAlignBottom) {
-    display: flex;
-    align-items: baseline;
-    margin-bottom: 1rem;
-}
 
 :local(.message) {
     margin: 1rem;
 }
 
+:local(.search) {
+    padding-bottom: 1rem;
+}
+#destinations-search{
+  min-width: 30rem;
+}
 :local(.entry) {
     margin: 2.75rem 0 0 0.1rem;
 }

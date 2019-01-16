@@ -3,28 +3,24 @@
 exports[`nav Tab routes constants matches snapshot 1`] = `
 Array [
   Object {
-    "name": "All",
+    "name": "",
     "route": "/",
   },
   Object {
-    "name": "People-Based",
+    "name": "All",
     "route": "/destinations",
   },
   Object {
-    "name": "Device-Based",
-    "route": "/deviceBased",
-  },
-  Object {
-    "name": "Cookie-Based",
-    "route": "/cookieBased",
-  },
-  Object {
-    "name": "URL-Based",
-    "route": "/urlBased",
-  },
-  Object {
     "name": "Adobe Experience Cloud",
-    "route": "/adobeExperienceCloud",
+    "route": "/destinations/adobeExperienceCloud",
+  },
+  Object {
+    "name": "Integrated Platforms",
+    "route": "/destinations/integratedPlatforms",
+  },
+  Object {
+    "name": "Custom",
+    "route": "/destinations/custom",
   },
 ]
 `;

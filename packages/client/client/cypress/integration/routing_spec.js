@@ -30,38 +30,36 @@ describe('Integration Tests for routing', function() {
             cy.title().should('contain', 'Destinations');
         });
 
-        it('should contain the Destinations Head and the button for Create Destination', () => {
+        it('should contain the Destinations Head and the button for Create Destination and the search bar', () => {
             cy.get('.spectrum-Heading')
                 .contains('Destinations')
                 .should('be.exist');
             cy.get('.creat-destination-dropdown')
                 .contains('Create Destination')
                 .should('be.exist');
+            cy.get('#destinations-search')
+                .should('have.attr', 'placeholder', 'Search')
+                .should('be.exist');
         });
-        it('should contain peopel-based-destions including sideNav filter,search, and table', () => {
-            cy.get('[data-test="people-based-destinations"]').as('peopleBasedDestinations');
-            cy.get('@peopleBasedDestinations').should('be.exist');
-            // Verify - sideNav filter,search, and table
-            cy.get('@peopleBasedDestinations').within(el => {
-                cy.get('.spectrum-Search').should('be.exist');
-                cy.get('.spectrum-Table').should('be.exist');
-            });
+
+        it('should contain all-destinations table list', () => {
+            cy.get('[data-test="all-destinations"]').should('be.exist');
         });
 
         it('should contain valid navigation tabs', () => {
             routes.map(({ route, name }) => cy.contains(name).should('be.exist'));
         });
 
-        it('only the People-Based navigation tab should be clicked', () => {
-            cy.get('.spectrum-Tabs-item.is-selected [data-test="people-based-nav-link"]').as(
+        it('only the all-destinations navigation tab should be clicked', () => {
+            cy.get('.spectrum-Tabs-item.is-selected [data-test="all-nav-link"]').as(
                 'selectedNavTab',
             );
             cy.get('@selectedNavTab')
-                .contains('People-Based')
+                .contains('All')
                 .should('be.exist');
 
             routes
-                .filter(({ name }) => name !== 'People-Based')
+                .filter(({ name }) => name !== 'All')
                 .map(({ route, name }) =>
                     cy
                         .get('.spectrum-Tabs-item.is-selected')
@@ -93,6 +91,19 @@ describe('Integration Tests for routing', function() {
                     .contains(name)
                     .should('be.exist');
             });
+        });
+
+        it('after click the `Integrated Platforms` tab,should contain side nav filter and Integrated Platforms list view', () => {
+            cy.get('[data-test="integrated platforms-nav-link"]')
+                .click()
+                .then(() => {
+                    cy.url().should('match', /\/destinations\/integratedPlatforms/);
+                    cy.get('[data-test="side-nav-filter"]').should('be.exist');
+                    ['integrated platforms', 'people-based', 'device-based'].map(type => {
+                        const currentDataTest = '[data-test="' + type + '-type-filter"]';
+                        cy.get(currentDataTest).should('be.exist');
+                    });
+                });
         });
     });
 

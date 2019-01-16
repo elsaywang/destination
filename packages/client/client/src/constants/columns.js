@@ -9,6 +9,20 @@ const allColumnTypes = [
         sortable: true,
     },
     {
+        title: 'CATEGORY',
+        key: 'category',
+        width: 150,
+        active: true,
+        sortable: true,
+    },
+    {
+        title: 'TYPE',
+        key: 'type',
+        width: 150,
+        active: true,
+        sortable: true,
+    },
+    {
         title: 'PLATFORM',
         key: 'platform',
         width: 150,
@@ -34,6 +48,24 @@ const allColumnTypes = [
         sortable: true,
     },
     {
+        title: 'ADDRESSABLE AUDIENCE(DEVICE)',
+        key: 'addressableAudience',
+        width: 100,
+        sortable: true,
+    },
+    {
+        title: 'MATCH RATE',
+        key: 'machRate',
+        width: 100,
+        sortable: true,
+    },
+    {
+        title: 'LIFETIME ADDRESSABLE AUDIENCE(DEVICE)',
+        key: 'lifetimeAddressableAudience',
+        width: 100,
+        sortable: true,
+    },
+    {
         title: 'ACTION',
         key: 'action',
         width: 150,
@@ -42,12 +74,21 @@ const allColumnTypes = [
 
 // Declare name of columnTypes to use
 const columnsForDestinationType = {
-    All: ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
+    All: ['ID', 'CATEGORY', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
+    'Integrated Platforms': ['ID', 'TYPE', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
     'People-Based': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'SHAREABLE AUDIENCE', 'ACTION'],
-    'Device-Based': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'SHAREABLE AUDIENCE', 'ACTION'],
-    'Cookie-Based': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
-    'URL-Based': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
-    'Adobe Experience Cloud': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
+    'Device-Based': [
+        'ID',
+        'PLATFORM',
+        'NAME',
+        'DESCRIPTION',
+        'ADDRESSABLE AUDIENCE(DEVICE)',
+        'MATCH RATE',
+        'LIFETIME ADDRESSABLE AUDIENCE(DEVICE)',
+        'ACTION',
+    ],
+    Custom: ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
+    'Adobe Experience Cloud': ['ID', 'NAME', 'DESCRIPTION', 'ACTION'],
 };
 
 const allColumnTypesByTitle = _.keyBy(allColumnTypes, el => el.title);

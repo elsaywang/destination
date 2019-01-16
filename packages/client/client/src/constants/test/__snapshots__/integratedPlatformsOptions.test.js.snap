@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integratedPlatformsOptions matches snapshot 1`] = `
+Array [
+  Object {
+    "label": "ALL PLATFORMS",
+    "value": "Integrated Platforms",
+  },
+  Object {
+    "label": "PEOPLE-BASED",
+    "value": "People-Based",
+  },
+  Object {
+    "label": "DEVICE-BASED",
+    "value": "Device-Based",
+  },
+]
+`;

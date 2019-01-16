@@ -46,7 +46,7 @@ describe('renders <App/> without crashing', () => {
             ],
             requestInFlight: false,
         },
-        destinationType: 'People-Based',
+        destinationType: 'Integrated Platforms',
     };
     const wrapper = shallow(<Destinations {...props} />);
     describe('rendering', () => {
@@ -56,11 +56,11 @@ describe('renders <App/> without crashing', () => {
         it('renders <Table/>', () => {
             expect(wrapper.find(Table).exists()).toBeTruthy();
         });
-        it('renders <SideNavFilter/> when `destinationType` is `People-Based`', () => {
+        it('renders <SideNavFilter/> when `destinationType` is `Integrated Platforms`', () => {
             expect(wrapper.find(SideNavFilter).exists()).toBeTruthy();
         });
-        it('renders no <SideNavFilter/> when `destinationType` is non-`People-Based`', () => {
-            wrapper.setProps({ destinationType: 'Cookie-Based' });
+        it('renders no <SideNavFilter/> when `destinationType` is non-`Integrated Platforms`', () => {
+            wrapper.setProps({ destinationType: 'Adobe Experience Cloud' });
             expect(wrapper.find(SideNavFilter).exists()).toBeFalsy();
         });
     });

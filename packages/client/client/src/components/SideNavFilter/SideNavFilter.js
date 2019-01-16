@@ -23,13 +23,13 @@ class SideNavFilter extends Component {
     render() {
         const { filterOptions, filterType } = this.props;
         return (
-            <div className={styles.filterType}>
+            <div className={styles.filterType} data-test='side-nav-filter'>
                 <TabList
                     orientation="vertical"
                     variant="compact"
                     quiet
                     value={this.state.value}
-                    onSelect={this.handleNavFilterChange}>
+                    onChange={this.handleNavFilterChange}>
                     {filterOptions.map(({ label, value }) => (
                         <Tab
                             data-test={`${value.toLowerCase()}-type-filter`}
