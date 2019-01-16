@@ -40,15 +40,161 @@ $ npx lerna run build --scope portal-signals-client
 
 ## Adding a new package.
 
-If you want to add a new package, please do it inside the packages folder, that way can follow the lerna structure. Lerna allows you to resolve the dependency of a module with the local project instead of resolving with the npm registry, this is done via a symlink.
+Lets do this via an example, lets say that we want to create a component called `amm-component` that will be a react component to be used in `Destinations` app
 
+### Create your new package
+
+Lerna offers a way to create a new package that will be part of your mono-repo
+
+```javascript
+$ npx lerna create @aam/aam-component --yes
+```
+
+That command will create a new directory under packages called `aam-component`, containing
+
+- `_test_` folder
+- `lib` folder with the source code
+- `lib/aam-component.js` which is the entry point for now for our component
+- `package.json` with the project documentation
+- `README.md` readme for the project
+
+If you look at its package.json will look something like this.
+
+``` json
+{
+  "name": "@aam/aam-component",
+  "version": "0.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "XXXXX",
+  "license": "ISC",
+  "main": "lib/aam-c.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:AAM/portal-signals.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
+```
+### Configure your component
+
+Since we are trying to create a `React` component to be used somewhere else, lets add some dependencies to build our react component using `Babel` and `preset-react` (we are trying to keep as simple as possible)
+
+``` json
+"dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.7.0"
+}
+```
+And lets install those dependencies
+
+```javascript
+$ npm i
+```
+
+Obviously we want to be able to build the component, so in order to do that we can use `Babel-CLI`, so add the next script in the scripts section of your `package.json`
+
+``` json
+{
+    "scripts": {
+        "build": "npx babel --presets @babel/preset-react lib/aam-component.js -o index.js"
+    }
+}
+```
+
+and lets update the `package.json` to make our transpiled file the entry point of our package
+
+``` json
+{
+    "main": "index.js"
+}
+```
+
+Finally for lets create a React component in `lib/aam-component.js`
+
+``` javascript
+import React from 'react';
+
+class Hello extends React.Component {
+    render() {
+        return <div>Hello, World!</div>;
+    }
+};
+
+export default Hello;
+
+```
+
+Once you have all this pieces you can run the build command for your package either at the package level or at the top monorepo level
+
+``` javascript
+// if you are in /packages/aam-component
+$ npm run build
+
+// if you are at /
+$ npx lerna run build --stream --scope @aam/aam-component
+```
+
+### Use the new component in Destinations app
+
+In order to start using your new component in `Destinations`, the fist step will be to add the dependency in  `destinations/package.json`.
+Make sure that you are using the `name` and `version` defined in `@aam/aam-component` so `Lerna` can bootstrap and make the correct relationship between this two components
+
+``` json
+{
+
+    "dependencies": {
+    ...
+    "@aam/aam-component": "0.0.0",
+    ...
+}
+```
+
+The next step will be to bootstrap your app using `Lerna` so the links between the components can be created, you need to execute this at the top level of the project
+
+``` javascript
+$ npx lerna bootstrap
+```
+
+Once you have this, your component is ready to be used in Destinations, how ? simply import the component and use it in your JSX
+
+``` javascript
+import AamComponent from '@aam/aam-component`
+
+...
+render () {(
+        <AamComponent></AamComponent>
+)}
+```
+
+A recommendation would be to have your component building activelly with the `--watch` flag so the changes can be picked up by the `Destinations` app, so your console would look somewhat like
+
+```javascript
+//console window 1
+$ npx lerna run build --scope @aam/aam-component --stream -- -- --watch
+
+//console window 2
+$ npx lerna run start --scope --stream portal-destinations-client
+```
+
+And yes there are 2 pairs of `--` before `--watch` this is to be able to bubble the flag from lerna through `npm` all the way to `babel`
+
+#### Notes
 The result of this is an improved developer experience, allowing you to update a dependency without having to publish to npm forcing you to update your package.json with the latest version.
 
-## You dont wnat to know about lerna
-
-You can always navigate to the exact package that you want to work on and run your know npm commands.
-
-
-## Notes
 Please refer to [Lerna](https://github.com/lerna/lerna#readme) documentation to know more about lerna.
 
