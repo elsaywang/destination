@@ -121,14 +121,14 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "key": "description",
-                                          "minWidth": 200,
+                                          "minWidth": 100,
                                           "sortable": true,
                                           "title": "DESCRIPTION",
                                         },
                                         Object {
                                           "key": "action",
                                           "title": "ACTION",
-                                          "width": 150,
+                                          "width": 250,
                                         },
                                       ]
                     }
@@ -276,14 +276,14 @@ ShallowWrapper {
                                     },
                                     Object {
                                       "key": "description",
-                                      "minWidth": 200,
+                                      "minWidth": 100,
                                       "sortable": true,
                                       "title": "DESCRIPTION",
                                     },
                                     Object {
                                       "key": "action",
                                       "title": "ACTION",
-                                      "width": 150,
+                                      "width": 250,
                                     },
                                   ]
             }
@@ -367,14 +367,14 @@ ShallowWrapper {
               },
               Object {
                 "key": "description",
-                "minWidth": 200,
+                "minWidth": 100,
                 "sortable": true,
                 "title": "DESCRIPTION",
               },
               Object {
                 "key": "action",
                 "title": "ACTION",
-                "width": 150,
+                "width": 250,
               },
             ],
             "height": 900,
@@ -493,14 +493,14 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "key": "description",
-                                                  "minWidth": 200,
+                                                  "minWidth": 100,
                                                   "sortable": true,
                                                   "title": "DESCRIPTION",
                                                 },
                                                 Object {
                                                   "key": "action",
                                                   "title": "ACTION",
-                                                  "width": 150,
+                                                  "width": 250,
                                                 },
                                               ]
                         }
@@ -648,14 +648,14 @@ ShallowWrapper {
                                           },
                                           Object {
                                             "key": "description",
-                                            "minWidth": 200,
+                                            "minWidth": 100,
                                             "sortable": true,
                                             "title": "DESCRIPTION",
                                           },
                                           Object {
                                             "key": "action",
                                             "title": "ACTION",
-                                            "width": 150,
+                                            "width": 250,
                                           },
                                         ]
               }
@@ -739,14 +739,14 @@ ShallowWrapper {
                 },
                 Object {
                   "key": "description",
-                  "minWidth": 200,
+                  "minWidth": 100,
                   "sortable": true,
                   "title": "DESCRIPTION",
                 },
                 Object {
                   "key": "action",
                   "title": "ACTION",
-                  "width": 150,
+                  "width": 250,
                 },
               ],
               "height": 900,

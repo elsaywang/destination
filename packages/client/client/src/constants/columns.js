@@ -38,37 +38,37 @@ const allColumnTypes = [
     {
         title: 'DESCRIPTION',
         key: 'description',
-        minWidth: 200,
+        minWidth: 100,
         sortable: true,
     },
     {
         title: 'SHAREABLE AUDIENCE',
         key: 'shareableAudience',
-        width: 100,
+        width: 150,
         sortable: true,
     },
     {
         title: 'ADDRESSABLE AUDIENCE(DEVICE)',
         key: 'addressableAudience',
-        width: 100,
+        width: 150,
         sortable: true,
     },
     {
         title: 'MATCH RATE',
         key: 'machRate',
-        width: 100,
+        width: 120,
         sortable: true,
     },
     {
         title: 'LIFETIME ADDRESSABLE AUDIENCE(DEVICE)',
         key: 'lifetimeAddressableAudience',
-        width: 100,
+        width: 250,
         sortable: true,
     },
     {
         title: 'ACTION',
         key: 'action',
-        width: 150,
+        width: 250,
     },
 ];
 
