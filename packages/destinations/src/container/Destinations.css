@@ -1,6 +1,8 @@
-:local(.search){
-  padding: 0 0 1rem 1rem;
+:local(.destinationContainer){
+  display: flex;
+  min-height: calc(115vh - var(--top-nav-height) - var(--footer-height) - var(--offset) );
 }
+
 :local(.searchText){
   width: 25rem;
 }
@@ -12,4 +14,5 @@
 :local(.tableContainer) {
     flex: 1;
     padding-top: 1rem;
+    min-height: 20rem;
 }

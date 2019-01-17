@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Table from '../components/Table';
-import { columns, mockItems } from '../constants/tableData';
 import SideNavFilter from '../components/SideNavFilter';
-import Search from '@react/react-spectrum/Search';
 import styles from './Destinations.css';
-import { peopleBasedDestinationsTypeOptions } from '../constants/peopleBasedDestinationsOptions';
+import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
+import { destinationCategories } from '../constants/destinations';
+import { fetchDestinations, updateIntegratedPlatformType } from '../redux/actions/destinations';
+import columnsForDestinationType from '../constants/columns';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
@@ -14,37 +16,56 @@ class Destinations extends Component {
 
     showSideNavFilter = () => {
         const { destinationType } = this.props;
-        return ['People-Based', 'Device-Based'].includes(destinationType);
+        return destinationType === 'Integrated Platforms';
     };
 
+    componentWillMount() {
+        this.props.fetchDestinations();
+    }
+
+    handleSideNavFilterChange = e => {
+        this.props.updateIntegratedPlatformType(e);
+        this.props.fetchDestinations();
+    };
+
+    componentWillUnmount() {
+        this.props.updateIntegratedPlatformType('');
+    }
+
     render() {
-        const { destinationType, items } = this.props;
+        const { fetchDestinations, destinations, destinationType } = this.props;
+        const { integratedPlatformType, list } = destinations;
+
         const renderSideNavFilter = (
             <div className={styles.filterListContainer}>
                 <SideNavFilter
-                    onFilterTypeChange={() => {}}
-                    filterType={'ALL'}
+                    onFilterTypeChange={this.handleSideNavFilterChange}
+                    filterType={integratedPlatformType}
                     isSearched={true}
-                    filterOptions={peopleBasedDestinationsTypeOptions}
+                    filterOptions={integratedPlatformsOptions}
                 />
             </div>
         );
         return (
             <div
-                style={{ display: 'flex' }}
+                className={styles.destinationContainer}
                 data-test={`${destinationType.toLowerCase()}-destinations`}>
                 {this.showSideNavFilter() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
-                    <div className={styles.search}>
-                        <Search placeholder="Search" onChange={() => {}} onSubmit={() => {}} />
-                    </div>
-                    <Table
-                        dataTest="peopleBased-destination-table"
-                        items={items || mockItems}
-                        columns={columns}
-                        renderCell={this.renderCell}
-                        allowsSelection={false}
-                    />
+                    {destinations.inFlight ? (
+                        <p>Loading</p>
+                    ) : (
+                        <Table
+                            items={list}
+                            reachedEndOfRows={fetchDestinations}
+                            height={900}
+                            columns={
+                                columnsForDestinationType[integratedPlatformType || destinationType]
+                            }
+                            rowHeight={250}
+                            renderCell={this.renderCell}
+                        />
+                    )}
                 </div>
             </div>
         );
@@ -52,14 +73,29 @@ class Destinations extends Component {
 }
 
 Destinations.propTypes = {
-    items: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number,
-            name: PropTypes.string,
-            enabled: PropTypes.bool,
-            createdBy: PropTypes.string,
-        }),
-    ),
-    destinationType: PropTypes.string.isRequired,
+    fetchDestinations: PropTypes.func.isRequired,
+    destinations: PropTypes.shape({
+        list: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.number,
+                name: PropTypes.string,
+                enabled: PropTypes.bool,
+                createdBy: PropTypes.string,
+            }),
+        ),
+        integratedPlatformType: PropTypes.string,
+    }),
+    destinationType: PropTypes.oneOf(destinationCategories).isRequired,
 };
-export default Destinations;
+
+const mapStateToProps = ({ destinations }) => ({
+    destinations,
+});
+const actionCreators = { fetchDestinations, updateIntegratedPlatformType };
+
+export { Destinations };
+
+export default connect(
+    mapStateToProps,
+    actionCreators,
+)(Destinations);

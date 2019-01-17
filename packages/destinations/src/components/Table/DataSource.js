@@ -1,34 +1,59 @@
-import ListDataSource from "@react/react-spectrum/ListDataSource";
+import ListDataSource from '@react/react-spectrum/ListDataSource';
 
-export default class DataSource extends ListDataSource {
-	constructor({ items, onLoadMore }) {
-		super();
-		this.items = items;
-		this.onLoadMore = onLoadMore;
-	}
+const createDataSourceSubclass = ({
+    getInitialData,
+    getMoreData,
+    triggerGetInitialData,
+    triggerGetMoreData,
+    sortData,
+}) => {
+    return new class DataSource extends ListDataSource {
+        createFunctionWithPrototypeChainFallback(prototypeFallbackName, fn) {
+            return (...args) => {
+                if (fn) {
+                    return fn(...args);
+                }
 
-	//override
-	async load(sortDescriptor) {
-		let data = this.items;
-		if (sortDescriptor) {
-			data.sort((a, b) =>
-				a[sortDescriptor.column.key] < b[sortDescriptor.column.key]
-					? -sortDescriptor.direction
-					: sortDescriptor.direction
-			);
-		}
-		return data;
-	}
-	//override
-	async loadMore() {
-		// load more data
-		//return new Promise(resolve => setTimeout(() => resolve(this.items), 2000));
-		return typeof this.onLoadMore === "function"
-			? await this.onLoadMore()
-			: new Promise(resolve => setTimeout(() => resolve(this.items), 2000));
-	}
+                return super[prototypeFallbackName](...args);
+            };
+        }
 
-	// async performLoad() {
-	// 	// await this.performLoad();
-	// }
-}
+        async load(sortDescriptor) {
+            const initialData = await getInitialData(sortDescriptor);
+
+            this.rowsLoaded = initialData.length;
+
+            return initialData;
+        }
+
+        async loadMore() {
+            const dataToAppend = await getMoreData(this.rowsLoaded.length);
+
+            this.rowsLoaded += dataToAppend.length;
+
+            return dataToAppend;
+        }
+
+        performLoad(sortDescriptor) {
+            return this.createFunctionWithPrototypeChainFallback(
+                'performLoad',
+                triggerGetInitialData,
+            )(sortDescriptor);
+        }
+
+        performLoadMore() {
+            return this.createFunctionWithPrototypeChainFallback(
+                'performLoadMore',
+                triggerGetMoreData,
+            )();
+        }
+
+        performSort(sortDescriptor) {
+            return this.createFunctionWithPrototypeChainFallback('performSort', sortData)(
+                sortDescriptor,
+            );
+        }
+    }();
+};
+
+export default createDataSourceSubclass;

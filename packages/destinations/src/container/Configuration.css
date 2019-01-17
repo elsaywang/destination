@@ -1,0 +1,7 @@
+:local(.configurationGrid) {
+    width: 100%;
+    padding-top:6.25rem;
+    text-align: center;
+    background: var(--spectrum-global-color-grey75);
+    min-height: calc(115vh - var(--top-nav-height) - var(--footer-height) - var(--offset));
+}

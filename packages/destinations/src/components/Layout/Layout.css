@@ -4,24 +4,30 @@
 :root {
     --top-nav-height: 3.25rem;
     --footer-height: 3.375rem;
+    --offset:10rem;
 }
 
 :local(.grid) {
     overflow: auto;
     padding-top: 1rem;
-    min-height: calc(120vh - var(--top-nav-height) - var(--footer-height));
+    min-height: calc(115vh - var(--top-nav-height) - var(--footer-height));
+    width: 100%;
 }
 
-:local(.flexAlignBottom) {
-    display: flex;
-    align-items: baseline;
-    margin-bottom: 1rem;
+:local(.gridRow){
+  border-bottom: 1px solid var(--spectrum-alias-border-color-dark);
 }
 
 :local(.message) {
     margin: 1rem;
 }
 
+:local(.search) {
+    padding-bottom: 1rem;
+}
+#destinations-search{
+  min-width: 30rem;
+}
 :local(.entry) {
     margin: 2.75rem 0 0 0.1rem;
 }
