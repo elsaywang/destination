@@ -4,12 +4,12 @@
   "author": "Portal UI Team",
   "version": "1.0.0",
   "dependencies": {
-    "@aam/aam-topnav": "^1.1.9",
+    "@aam/aam-topnav": "1.1.9",
     "@react/react-spectrum": "^2.16.1",
     "@spectrum/spectrum-variables": "^1.0.2",
     "babel-preset-react-app": "^7.0.0",
     "classnames": "^2.2.6",
-    "coral-shell-ims": "~2.0.6",
+    "coral-shell-ims": "2.0.6",
     "cpx": "^1.5.0",
     "cypress": "3.1.0",
     "debounce": "^1.2.0",
@@ -17,6 +17,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "extract-react-intl-messages": "^0.11.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "faker": "^4.1.0",
     "he": "^1.2.0",
     "http-server": "^0.11.1",
@@ -58,6 +59,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:8080",
   "devDependencies": {
     "@aam/eslint-config-aam": "^1.2.1",
     "eslint-plugin-cypress": "^2.2.0",
