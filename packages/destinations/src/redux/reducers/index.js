@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux';
+import destinations from './destinations';
 
-//TODO: fill in the reducer once hooked with redux store 
-export default combineReducers({});
+export default combineReducers({ destinations });

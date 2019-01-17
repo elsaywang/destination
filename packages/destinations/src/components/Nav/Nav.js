@@ -44,7 +44,7 @@ function Nav({ location, routes }) {
                     size={6}>
                     <Button quiet variant="secondary" icon={<Settings size="S" />}>
                         <NavLink
-                            to={'/configuration'}
+                            to={'/destinations/configuration'}
                             className={styles.buttonLink}
                             data-test={`configuration-button-link`}>
                             {`Configuration`}

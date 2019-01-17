@@ -8,7 +8,8 @@ import { Grid, GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import { FormattedMessage } from 'react-intl';
 import styles from './Layout.css';
 import DropdownMenu from '../DropdownMenu';
-import { dropdownMenuOptions } from '../../constants/destinationCreationOptions';
+import Search from '@react/react-spectrum/Search';
+import { dropdownMenuOptions } from '../../constants/destinations';
 import { getMessages } from '../../utils/localization';
 
 const Layout = ({ children, heading }) => {
@@ -18,13 +19,24 @@ const Layout = ({ children, heading }) => {
         <IntlProvider locale="en">
             <ReactSpectrumProvider scale="medium">
                 <Grid className={styles.grid}>
-                    <GridRow valign="middle">
+                    <GridRow
+                        className={classNames({ [styles.gridRow]: heading === 'Configuration' })}
+                        valign="middle">
                         <GridColumn size={6}>
                             <GridRow>
                                 <FormattedMessage {...title}>
                                     {text => <Heading className={styles.message}>{text}</Heading>}
                                 </FormattedMessage>
                             </GridRow>
+                            {heading === 'Destinations' && (
+                                <Search
+                                    className={styles.search}
+                                    id={`destinations-search`}
+                                    placeholder="Search"
+                                    onChange={() => {}}
+                                    onSubmit={() => {}}
+                                />
+                            )}
                         </GridColumn>
                         {heading === 'Destinations' && (
                             <GridColumn

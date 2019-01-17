@@ -1,82 +1,78 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import classNames from "classnames";
-import { TableView } from "@react/react-spectrum/TableView";
-import DataSource from "./DataSource";
-import {
-	defaultRowHeight,
-	defaultMaxRows,
-	defaultHeadHeight
-} from "../../constants/rows";
-import styles from "./Table.css";
+import React, { Component } from 'react';
+import { TableView } from '@react/react-spectrum/TableView';
+import createDataSourceSubclass from './DataSource';
+import IndexPath from '../../utils/indexPath';
+import PropTypes from 'prop-types';
 
-/**
- * Table component that wraps the react-spectrum table components
- * (`TableView` and `TableViewDataSource`). More easily accepts props
- * for items, columns, table config, and event handlers.
- */
 class Table extends Component {
-	constructor({ items, onLoadMore }) {
-		super();
-		this.dataSource = new DataSource({ items, onLoadMore });
-	}
+    constructor({ reachedEndOfRows }) {
+        super();
 
-	/**
-	 * Dynamically set the height of the table's container to show up to a
-	 * certain number of rows.
-	 */
-	getTableHeight({
-		items,
-		rowHeight = defaultRowHeight,
-		maxRows = defaultMaxRows
-	}) {
-		const bodyHeight = Math.min(items.length, maxRows) * rowHeight;
+        this.dataSource = createDataSourceSubclass({
+            triggerGetInitialData: () => {
+                /*no-op*/
+            },
+            triggerGetMoreData: reachedEndOfRows,
+        });
+    }
 
-		return `${defaultHeadHeight + bodyHeight}px`;
-	}
+    componentWillMount() {
+        this.dataSource.insertSection(0, this.props.items);
+    }
 
-	render() {
-		const {
-			items,
-			columns,
-			rowHeight,
-			renderCell,
-			onSelectionChange,
-			dataTest,
-			allowsSelection
-		} = this.props;
+    componentWillReceiveProps(nextProps) {
+        const length = this.props.items.length;
 
-		const height = this.getTableHeight({ items, rowHeight });
-		return (
-			<div
-				data-test={dataTest}
-				className={classNames("table-wrapper", styles.tableWrapper)}
-				style={{ height }}>
-				<TableView
-					dataSource={this.dataSource}
-					columns={columns}
-					renderCell={renderCell}
-					rowHeight={rowHeight}
-					onSelectionChange={onSelectionChange}
-					allowsSelection={allowsSelection}
-				/>
-			</div>
-		);
-	}
+        this.dataSource.insertItems(new IndexPath(0, length), nextProps.items.slice(length));
+    }
+
+    render() {
+        const {
+            height,
+            columns,
+            rowHeight,
+            renderCell,
+            onSelectionChange,
+            dataTest,
+            allowsSelection,
+            styles,
+        } = this.props;
+
+        return (
+            <div data-test={dataTest} className={styles} style={{ height: `${height}px` }}>
+                <TableView
+                    columns={columns}
+                    dataSource={this.dataSource}
+                    renderCell={renderCell}
+                    rowHeight={rowHeight}
+                    onSelectionChange={onSelectionChange}
+                    allowsSelection={allowsSelection}
+                />
+            </div>
+        );
+    }
 }
 
-Table.propTypes = {
-	items: PropTypes.array.isRequired,
-	columns: PropTypes.array.isRequired,
-	renderCell: PropTypes.func.isRequired,
-	onLoadMore: PropTypes.func,
-	rowHeight: PropTypes.number,
-	selectedRowIndexes: PropTypes.array,
-	isMaxSelectedRowsReached: PropTypes.bool,
-	onSelectionChange: PropTypes.func,
-	sortSearch: PropTypes.func,
-	dataTest: PropTypes.string,
-	allowsSelection: PropTypes.bool
+Table.defaultProps = {
+    items: [],
+    rowHeight: 30, // chosen randomly, not sure what a sensible default should be
+    allowsSelection: false,
+    reachedEndOfRows: () => {
+        /* no-op*/
+    },
+};
+
+Table.protoTypes = {
+    height: PropTypes.number,
+    columns: PropTypes.array,
+    rowHeight: PropTypes.number,
+    renderCell: PropTypes.func,
+    onSelectionChange: PropTypes.func,
+    dataTest: PropTypes.string,
+    allowsSelection: PropTypes.bool,
+    styles: PropTypes.string,
+    setRefreshDataSource: PropTypes.func,
+    reachedEndOfRows: PropTypes.func,
 };
 
 export default Table;

@@ -13,7 +13,7 @@ const store = configureStore();
 const App = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path={'/configuration'} render={props => <ConfigurationContainer />} />
+            <Route exact path={'/destinations/configuration'} render={props => <ConfigurationContainer />} />
             <Route component={DestinationContainer} />
         </Switch>
     </BrowserRouter>
