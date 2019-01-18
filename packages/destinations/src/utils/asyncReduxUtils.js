@@ -1,5 +1,7 @@
+const actionDispatcherCache = new Map();
+
 function createAsyncAction(type, fn) {
-    return (...args) => async dispatch => {
+    const actionDispatcher = (...args) => async dispatch => {
         let response;
 
         try {
@@ -42,6 +44,23 @@ function createAsyncAction(type, fn) {
 
         return response;
     };
+
+    actionDispatcherCache.set(actionDispatcher, type);
+
+    return actionDispatcher;
 }
 
-export { createAsyncAction };
+function createAsyncActionHandlers(actionDispatcher, { onPending, onFulfilled, onError }) {
+    const actionType = actionDispatcherCache.get(actionDispatcher);
+    if (!actionType) {
+        throw Error('No such action dispatcher exists');
+    }
+
+    return [
+        [`${actionType}_PENDING`, onPending],
+        [`${actionType}_FULFILLED`, onFulfilled],
+        [`${actionType}_REJECTED`, onError],
+    ];
+}
+
+export { createAsyncAction, createAsyncActionHandlers };
