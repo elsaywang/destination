@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Layout from '../Layout';
-import DropdownMenu from '../../DropdownMenu';
+import Button from '@react/react-spectrum/Button';
 import Well from '@react/react-spectrum/Well';
 
 describe('<Layout/> component', () => {
@@ -12,12 +12,12 @@ describe('<Layout/> component', () => {
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
         });
-        it('renders <DropdownMenu/> when `heading` props is `Destinations`', () => {
-            expect(wrapper.find(DropdownMenu).exists()).toBeTruthy();
+        it('renders <Button/> when `heading` props is `Destinations`', () => {
+            expect(wrapper.find(Button).exists()).toBeTruthy();
         });
-        it('renders not <DropdownMenu/> when `heading` props is `Configuration`', () => {
+        it('renders not <Button/> when `heading` props is `Configuration`', () => {
             wrapper.setProps({ heading: `Configuration` });
-            expect(wrapper.find(DropdownMenu).exists()).toBeFalsy();
+            expect(wrapper.find(Button).exists()).toBeFalsy();
         });
     });
 

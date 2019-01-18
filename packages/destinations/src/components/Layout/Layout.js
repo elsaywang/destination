@@ -7,7 +7,7 @@ import { IntlProvider } from 'react-intl';
 import { Grid, GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import { FormattedMessage } from 'react-intl';
 import styles from './Layout.css';
-import DropdownMenu from '../DropdownMenu';
+import Button from '@react/react-spectrum/Button';
 import Search from '@react/react-spectrum/Search';
 import { dropdownMenuOptions } from '../../constants/destinations';
 import { getMessages } from '../../utils/localization';
@@ -43,12 +43,9 @@ const Layout = ({ children, heading }) => {
                                 size={6}
                                 className={classNames(
                                     styles.createDestinations,
-                                    'creat-destination-dropdown',
+                                    'creat-destination-button',
                                 )}>
-                                <DropdownMenu
-                                    title={'Create Destination'}
-                                    menuOptions={dropdownMenuOptions}
-                                />
+                                <Button variant="cta">{'Create Destination'}</Button>
                             </GridColumn>
                         )}
                     </GridRow>

@@ -50,13 +50,13 @@ const allColumnTypes = [
     {
         title: 'ADDRESSABLE AUDIENCE (DEVICE)',
         key: 'addressableAudience',
-        width: 150,
+        width: 170,
         sortable: true,
     },
     {
         title: 'MATCH RATE',
         key: 'matchRate',
-        width: 100,
+        width: 120,
         sortable: true,
     },
     {
