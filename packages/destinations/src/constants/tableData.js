@@ -15,7 +15,7 @@ export const generateItems = () => {
             description: faker.lorem.sentence(),
             shareableAudience: faker.random.number(),
             addressableAudience: faker.random.number(),
-            machRate: `${Math.floor(Math.random() * 100)}%`,
+            matchRate: `${Math.floor(Math.random() * 100)}%`,
             lifetimeAddressableAudience: faker.random.number(),
             action: '',
         });

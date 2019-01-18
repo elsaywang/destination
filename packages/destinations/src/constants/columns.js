@@ -55,7 +55,7 @@ const allColumnTypes = [
     },
     {
         title: 'MATCH RATE',
-        key: 'machRate',
+        key: 'matchRate',
         width: 100,
         sortable: true,
     },
