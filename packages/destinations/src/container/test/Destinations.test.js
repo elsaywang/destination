@@ -10,8 +10,8 @@ describe('renders <App/> without crashing', () => {
             /* no-op */
         },
         destinations: {
-            list: [
-                {
+            byIds: {
+                0: {
                     action: '',
                     description: 'Maxime ut totam nemo assumenda ratione impedit.',
                     id: 0,
@@ -19,7 +19,7 @@ describe('renders <App/> without crashing', () => {
                     platform: 'Twitter',
                     shareableAudience: 41898,
                 },
-                {
+                1: {
                     action: '',
                     description: 'Et nesciunt voluptatibus facilis blanditiis.',
                     id: 1,
@@ -27,7 +27,7 @@ describe('renders <App/> without crashing', () => {
                     platform: 'Google',
                     shareableAudience: 18751,
                 },
-                {
+                2: {
                     action: '',
                     description: 'Repellat sit dolor ut quisquam et ducimus.',
                     id: 2,
@@ -35,7 +35,7 @@ describe('renders <App/> without crashing', () => {
                     platform: 'Twitter',
                     shareableAudience: 5434,
                 },
-                {
+                3: {
                     action: '',
                     description: 'Blanditiis tenetur culpa aut distinctio.',
                     id: 3,
@@ -43,8 +43,9 @@ describe('renders <App/> without crashing', () => {
                     platform: 'LinkedIn',
                     shareableAudience: 40918,
                 },
-            ],
-            requestInFlight: false,
+            },
+            idsToDisplay: [0, 1, 2, 3],
+            inFlight: false,
         },
         destinationType: 'Integrated Platforms',
     };

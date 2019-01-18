@@ -5,6 +5,7 @@ function createAsyncAction(type, fn) {
         try {
             dispatch({
                 type: `${type}_PENDING`,
+                ...args,
             });
 
             response = await fn(...args);
