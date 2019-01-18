@@ -23,7 +23,7 @@ describe('Integration Tests for routing', function() {
         });
 
         it('url should redirect to destinations by default', () => {
-            cy.url().should('match', /destinations/);
+            cy.url().should('match', /#\/destinations/);
         });
 
         it('should be the dashboard page with Destinations title', () => {
@@ -97,7 +97,7 @@ describe('Integration Tests for routing', function() {
             cy.get('[data-test="integrated platforms-nav-link"]')
                 .click()
                 .then(() => {
-                    cy.url().should('match', /\/destinations\/integratedPlatforms/);
+                    cy.url().should('match', /#\/destinations\/integratedPlatforms/);
                     cy.get('[data-test="side-nav-filter"]').should('be.exist');
                     ['integrated platforms', 'people-based', 'device-based'].map(type => {
                         const currentDataTest = '[data-test="' + type + '-type-filter"]';
@@ -122,7 +122,7 @@ describe('Integration Tests for routing', function() {
             cy.get('@configurationButton')
                 .click()
                 .then(() => {
-                    cy.url().should('match', /configuration/);
+                    cy.url().should('match', /#\/destinations\/configuration/);
                     cy.get('.spectrum-Heading')
                         .contains('Configuration')
                         .should('be.exist');
