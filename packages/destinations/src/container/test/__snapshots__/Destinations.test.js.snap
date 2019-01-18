@@ -103,7 +103,7 @@ ShallowWrapper {
                                           "key": "id",
                                           "sortable": true,
                                           "title": "ID",
-                                          "width": 50,
+                                          "width": 80,
                                         },
                                         Object {
                                           "active": true,
@@ -187,7 +187,7 @@ ShallowWrapper {
                                           "key": "id",
                                           "sortable": true,
                                           "title": "ID",
-                                          "width": 50,
+                                          "width": 80,
                                         },
                                         "direction": 1,
                                       }
@@ -272,7 +272,7 @@ ShallowWrapper {
                                       "key": "id",
                                       "sortable": true,
                                       "title": "ID",
-                                      "width": 50,
+                                      "width": 80,
                                     },
                                     Object {
                                       "active": true,
@@ -356,7 +356,7 @@ ShallowWrapper {
                                       "key": "id",
                                       "sortable": true,
                                       "title": "ID",
-                                      "width": 50,
+                                      "width": 80,
                                     },
                                     "direction": 1,
                                   }
@@ -377,7 +377,7 @@ ShallowWrapper {
                 "key": "id",
                 "sortable": true,
                 "title": "ID",
-                "width": 50,
+                "width": 80,
               },
               Object {
                 "active": true,
@@ -457,7 +457,7 @@ ShallowWrapper {
                 "key": "id",
                 "sortable": true,
                 "title": "ID",
-                "width": 50,
+                "width": 80,
               },
               "direction": 1,
             },
@@ -515,7 +515,7 @@ ShallowWrapper {
                                                   "key": "id",
                                                   "sortable": true,
                                                   "title": "ID",
-                                                  "width": 50,
+                                                  "width": 80,
                                                 },
                                                 Object {
                                                   "active": true,
@@ -599,7 +599,7 @@ ShallowWrapper {
                                                   "key": "id",
                                                   "sortable": true,
                                                   "title": "ID",
-                                                  "width": 50,
+                                                  "width": 80,
                                                 },
                                                 "direction": 1,
                                               }
@@ -684,7 +684,7 @@ ShallowWrapper {
                                             "key": "id",
                                             "sortable": true,
                                             "title": "ID",
-                                            "width": 50,
+                                            "width": 80,
                                           },
                                           Object {
                                             "active": true,
@@ -768,7 +768,7 @@ ShallowWrapper {
                                             "key": "id",
                                             "sortable": true,
                                             "title": "ID",
-                                            "width": 50,
+                                            "width": 80,
                                           },
                                           "direction": 1,
                                         }
@@ -789,7 +789,7 @@ ShallowWrapper {
                   "key": "id",
                   "sortable": true,
                   "title": "ID",
-                  "width": 50,
+                  "width": 80,
                 },
                 Object {
                   "active": true,
@@ -869,7 +869,7 @@ ShallowWrapper {
                   "key": "id",
                   "sortable": true,
                   "title": "ID",
-                  "width": 50,
+                  "width": 80,
                 },
                 "direction": 1,
               },

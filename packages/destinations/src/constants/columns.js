@@ -4,7 +4,7 @@ const allColumnTypes = [
     {
         title: 'ID',
         key: 'id',
-        width: 50,
+        width: 80,
         announce: false,
         sortable: true,
     },
