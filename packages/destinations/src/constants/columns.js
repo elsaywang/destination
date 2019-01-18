@@ -4,7 +4,7 @@ const allColumnTypes = [
     {
         title: 'ID',
         key: 'id',
-        width: 50,
+        width: 80,
         announce: false,
         sortable: true,
     },
@@ -48,9 +48,9 @@ const allColumnTypes = [
         sortable: true,
     },
     {
-        title: 'ADDRESSABLE AUDIENCE(DEVICE)',
+        title: 'ADDRESSABLE AUDIENCE (DEVICE)',
         key: 'addressableAudience',
-        width: 180,
+        width: 150,
         sortable: true,
     },
     {
@@ -60,9 +60,9 @@ const allColumnTypes = [
         sortable: true,
     },
     {
-        title: 'LIFETIME ADDRESSABLE AUDIENCE(DEVICE)',
+        title: 'LIFETIME ADDRESSABLE AUDIENCE (DEVICE)',
         key: 'lifetimeAddressableAudience',
-        width: 180,
+        width: 170,
         sortable: true,
     },
     {
@@ -82,12 +82,12 @@ const columnsForDestinationType = {
         'PLATFORM',
         'NAME',
         'DESCRIPTION',
-        'ADDRESSABLE AUDIENCE(DEVICE)',
+        'ADDRESSABLE AUDIENCE (DEVICE)',
         'MATCH RATE',
-        'LIFETIME ADDRESSABLE AUDIENCE(DEVICE)',
+        'LIFETIME ADDRESSABLE AUDIENCE (DEVICE)',
         'ACTION',
     ],
-    Custom: ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
+    Custom: ['ID', 'TYPE', 'NAME', 'DESCRIPTION', 'ACTION'],
     'Adobe Experience Cloud': ['ID', 'NAME', 'DESCRIPTION', 'ACTION'],
 };
 
