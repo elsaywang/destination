@@ -11,7 +11,7 @@ const allColumnTypes = [
     {
         title: 'CATEGORY',
         key: 'category',
-        width: 150,
+        width: 200,
         active: true,
         sortable: true,
     },
@@ -38,7 +38,7 @@ const allColumnTypes = [
     {
         title: 'DESCRIPTION',
         key: 'description',
-        minWidth: 100,
+        minWidth: 250,
         sortable: true,
     },
     {
@@ -50,25 +50,25 @@ const allColumnTypes = [
     {
         title: 'ADDRESSABLE AUDIENCE(DEVICE)',
         key: 'addressableAudience',
-        width: 150,
+        width: 180,
         sortable: true,
     },
     {
         title: 'MATCH RATE',
-        key: 'machRate',
-        width: 120,
+        key: 'matchRate',
+        width: 100,
         sortable: true,
     },
     {
         title: 'LIFETIME ADDRESSABLE AUDIENCE(DEVICE)',
         key: 'lifetimeAddressableAudience',
-        width: 250,
+        width: 180,
         sortable: true,
     },
     {
         title: 'ACTION',
         key: 'action',
-        width: 250,
+        width: 200,
     },
 ];
 
