@@ -8,20 +8,3 @@ Array [
   "Custom",
 ]
 `;
-
-exports[`destinations creations drop down Menu Options constant matches snapshot 1`] = `
-Array [
-  Object {
-    "label": "Experience Cloud Activation",
-    "value": "experienceCloudActivation",
-  },
-  Object {
-    "label": "Integrated Partner",
-    "value": "integratedPartner",
-  },
-  Object {
-    "label": "Customer Activation",
-    "value": "customerActivation",
-  },
-]
-`;

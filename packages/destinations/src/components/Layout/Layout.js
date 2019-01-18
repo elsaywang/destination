@@ -9,7 +9,6 @@ import { FormattedMessage } from 'react-intl';
 import styles from './Layout.css';
 import Button from '@react/react-spectrum/Button';
 import Search from '@react/react-spectrum/Search';
-import { dropdownMenuOptions } from '../../constants/destinations';
 import { getMessages } from '../../utils/localization';
 
 const Layout = ({ children, heading }) => {
