@@ -1,8 +1,12 @@
+import _ from 'lodash';
 import { handleActions } from 'redux-actions';
 import {
     FETCH_DESTINATIONS_PENDING,
     FETCH_DESTINATIONS_FULFILLED,
     FETCH_DESTINATIONS_REJECTED,
+    FETCH_MORE_DESTINATIONS_PENDING,
+    FETCH_MORE_DESTINATIONS_FULFILLED,
+    FETCH_MORE_DESTINATIONS_REJECTED,
     UPDATE_INTEGRATED_PLATFORM_TYPE,
 } from '../actions/destinations';
 
@@ -19,7 +23,8 @@ export default handleActions(
             FETCH_DESTINATIONS_FULFILLED,
             (state, action) => ({
                 ...state,
-                list: state.list.concat(action.payload),
+                byIds: _.merge({}, state.list, _.keyBy(action.payload, el => el.id)),
+                idsToDisplay: action.payload.map(({ id }) => id),
                 inFlight: false,
             }),
         ],
@@ -31,6 +36,26 @@ export default handleActions(
             }),
         ],
         [
+            FETCH_MORE_DESTINATIONS_PENDING,
+            (state, action) => ({
+                ...state,
+            }),
+        ],
+        [
+            FETCH_MORE_DESTINATIONS_FULFILLED,
+            (state, action) => ({
+                ...state,
+                byIds: _.merge({}, state.list, _.keyBy(action.payload, el => el.id)),
+                idsToDisplay: state.idsToDisplay.concat(action.payload.map(({ id }) => id)),
+            }),
+        ],
+        [
+            FETCH_MORE_DESTINATIONS_REJECTED,
+            (state, action) => ({
+                ...state,
+            }),
+        ],
+        [
             UPDATE_INTEGRATED_PLATFORM_TYPE,
             (state, action) => ({
                 ...state,
@@ -38,5 +63,5 @@ export default handleActions(
             }),
         ],
     ]),
-    { list: [], integratedPlatformType: '' },
+    { list: {}, idsToDisplay: [], destinationType: 'ALL', integratedPlatformType: '' },
 );

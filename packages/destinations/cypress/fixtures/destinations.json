@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "platform": "Netflix",
+        "name": "car",
+        "description": "cool stuff happening here",
+        "shareableAudience": 1283,
+        "action": ""
+    },
+    {
+        "id": 1,
+        "platform": "Adobe",
+        "name": "horse",
+        "description": "differen description",
+        "shareableAudience": 98234,
+        "action": ""
+    },
+    {
+        "id": 2,
+        "platform": "Google",
+        "name": "dog",
+        "description": "wow check it out!!!",
+        "shareableAudience": 23,
+        "action": ""
+    },
+    {
+        "id": 3,
+        "platform": "Napster",
+        "name": "cat",
+        "description": "zzzz boring",
+        "shareableAudience": 243,
+        "action": ""
+    },
+    {
+        "id": 4,
+        "platform": "Chipotle",
+        "name": "bird",
+        "description": "I think this one is worth looking into",
+        "shareableAudience": 938,
+        "action": ""
+    },
+    {
+        "id": 5,
+        "platform": "Uber",
+        "name": "whatever",
+        "description": "Nice, really.",
+        "shareableAudience": 938108,
+        "action": ""
+    }
+]
