@@ -61,28 +61,23 @@ ShallowWrapper {
                                 />
                         </GridColumn>
                         <GridColumn
-                                className="creat-destination-dropdown"
+                                className="creat-destination-button"
                                 size={6}
                         >
-                                <DropdownMenu
-                                        menuOptions={
-                                                Array [
-                                                        Object {
-                                                          "label": "Experience Cloud Activation",
-                                                          "value": "experienceCloudActivation",
-                                                        },
-                                                        Object {
-                                                          "label": "Integrated Partner",
-                                                          "value": "integratedPartner",
-                                                        },
-                                                        Object {
-                                                          "label": "Customer Activation",
-                                                          "value": "customerActivation",
-                                                        },
-                                                      ]
-                                        }
-                                        title="Create Destination"
-                                />
+                                <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        disabled={false}
+                                        element="button"
+                                        invalid={false}
+                                        label=""
+                                        logic={false}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="cta"
+                                >
+                                        Create Destination
+                                </Button>
                         </GridColumn>
                 </GridRow>
                 <Well />
@@ -130,28 +125,23 @@ ShallowWrapper {
                               />
                     </GridColumn>
                     <GridColumn
-                              className="creat-destination-dropdown"
+                              className="creat-destination-button"
                               size={6}
                     >
-                              <DropdownMenu
-                                        menuOptions={
-                                                  Array [
-                                                            Object {
-                                                              "label": "Experience Cloud Activation",
-                                                              "value": "experienceCloudActivation",
-                                                            },
-                                                            Object {
-                                                              "label": "Integrated Partner",
-                                                              "value": "integratedPartner",
-                                                            },
-                                                            Object {
-                                                              "label": "Customer Activation",
-                                                              "value": "customerActivation",
-                                                            },
-                                                          ]
-                                        }
-                                        title="Create Destination"
-                              />
+                              <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        disabled={false}
+                                        element="button"
+                                        invalid={false}
+                                        label=""
+                                        logic={false}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="cta"
+                              >
+                                        Create Destination
+                              </Button>
                     </GridColumn>
           </GridRow>
           <Well />
@@ -198,28 +188,23 @@ ShallowWrapper {
                             />
               </GridColumn>
               <GridColumn
-                            className="creat-destination-dropdown"
+                            className="creat-destination-button"
                             size={6}
               >
-                            <DropdownMenu
-                                          menuOptions={
-                                                        Array [
-                                                                      Object {
-                                                                        "label": "Experience Cloud Activation",
-                                                                        "value": "experienceCloudActivation",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Integrated Partner",
-                                                                        "value": "integratedPartner",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Customer Activation",
-                                                                        "value": "customerActivation",
-                                                                      },
-                                                                    ]
-                                          }
-                                          title="Create Destination"
-                            />
+                            <Button
+                                          autoFocus={false}
+                                          block={false}
+                                          disabled={false}
+                                          element="button"
+                                          invalid={false}
+                                          label=""
+                                          logic={false}
+                                          quiet={false}
+                                          selected={false}
+                                          variant="cta"
+                            >
+                                          Create Destination
+                            </Button>
               </GridColumn>
 </GridRow>,
             <Well />,
@@ -260,28 +245,23 @@ ShallowWrapper {
                   />
 </GridColumn>,
                 <GridColumn
-                  className="creat-destination-dropdown"
+                  className="creat-destination-button"
                   size={6}
 >
-                  <DropdownMenu
-                                    menuOptions={
-                                                      Array [
-                                                                        Object {
-                                                                          "label": "Experience Cloud Activation",
-                                                                          "value": "experienceCloudActivation",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Integrated Partner",
-                                                                          "value": "integratedPartner",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Customer Activation",
-                                                                          "value": "customerActivation",
-                                                                        },
-                                                                      ]
-                                    }
-                                    title="Create Destination"
-                  />
+                  <Button
+                                    autoFocus={false}
+                                    block={false}
+                                    disabled={false}
+                                    element="button"
+                                    invalid={false}
+                                    label=""
+                                    logic={false}
+                                    quiet={false}
+                                    selected={false}
+                                    variant="cta"
+                  >
+                                    Create Destination
+                  </Button>
 </GridColumn>,
               ],
               "className": "",
@@ -378,26 +358,21 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": <DropdownMenu
-                    menuOptions={
-                                        Array [
-                                                            Object {
-                                                              "label": "Experience Cloud Activation",
-                                                              "value": "experienceCloudActivation",
-                                                            },
-                                                            Object {
-                                                              "label": "Integrated Partner",
-                                                              "value": "integratedPartner",
-                                                            },
-                                                            Object {
-                                                              "label": "Customer Activation",
-                                                              "value": "customerActivation",
-                                                            },
-                                                          ]
-                    }
-                    title="Create Destination"
-/>,
-                  "className": "creat-destination-dropdown",
+                  "children": <Button
+                    autoFocus={false}
+                    block={false}
+                    disabled={false}
+                    element="button"
+                    invalid={false}
+                    label=""
+                    logic={false}
+                    quiet={false}
+                    selected={false}
+                    variant="cta"
+>
+                    Create Destination
+</Button>,
+                  "className": "creat-destination-button",
                   "size": 6,
                 },
                 "ref": null,
@@ -406,24 +381,20 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "menuOptions": Array [
-                      Object {
-                        "label": "Experience Cloud Activation",
-                        "value": "experienceCloudActivation",
-                      },
-                      Object {
-                        "label": "Integrated Partner",
-                        "value": "integratedPartner",
-                      },
-                      Object {
-                        "label": "Customer Activation",
-                        "value": "customerActivation",
-                      },
-                    ],
-                    "title": "Create Destination",
+                    "autoFocus": false,
+                    "block": false,
+                    "children": "Create Destination",
+                    "disabled": false,
+                    "element": "button",
+                    "invalid": false,
+                    "label": "",
+                    "logic": false,
+                    "quiet": false,
+                    "selected": false,
+                    "variant": "cta",
                   },
                   "ref": null,
-                  "rendered": null,
+                  "rendered": "Create Destination",
                   "type": [Function],
                 },
                 "type": [Function],
@@ -493,28 +464,23 @@ ShallowWrapper {
                                         />
                               </GridColumn>
                               <GridColumn
-                                        className="creat-destination-dropdown"
+                                        className="creat-destination-button"
                                         size={6}
                               >
-                                        <DropdownMenu
-                                                  menuOptions={
-                                                            Array [
-                                                                      Object {
-                                                                        "label": "Experience Cloud Activation",
-                                                                        "value": "experienceCloudActivation",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Integrated Partner",
-                                                                        "value": "integratedPartner",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Customer Activation",
-                                                                        "value": "customerActivation",
-                                                                      },
-                                                                    ]
-                                                  }
-                                                  title="Create Destination"
-                                        />
+                                        <Button
+                                                  autoFocus={false}
+                                                  block={false}
+                                                  disabled={false}
+                                                  element="button"
+                                                  invalid={false}
+                                                  label=""
+                                                  logic={false}
+                                                  quiet={false}
+                                                  selected={false}
+                                                  variant="cta"
+                                        >
+                                                  Create Destination
+                                        </Button>
                               </GridColumn>
                     </GridRow>
                     <Well />
@@ -562,28 +528,23 @@ ShallowWrapper {
                                     />
                         </GridColumn>
                         <GridColumn
-                                    className="creat-destination-dropdown"
+                                    className="creat-destination-button"
                                     size={6}
                         >
-                                    <DropdownMenu
-                                                menuOptions={
-                                                            Array [
-                                                                        Object {
-                                                                          "label": "Experience Cloud Activation",
-                                                                          "value": "experienceCloudActivation",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Integrated Partner",
-                                                                          "value": "integratedPartner",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Customer Activation",
-                                                                          "value": "customerActivation",
-                                                                        },
-                                                                      ]
-                                                }
-                                                title="Create Destination"
-                                    />
+                                    <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                disabled={false}
+                                                element="button"
+                                                invalid={false}
+                                                label=""
+                                                logic={false}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="cta"
+                                    >
+                                                Create Destination
+                                    </Button>
                         </GridColumn>
             </GridRow>
             <Well />
@@ -630,28 +591,23 @@ ShallowWrapper {
                                 />
                 </GridColumn>
                 <GridColumn
-                                className="creat-destination-dropdown"
+                                className="creat-destination-button"
                                 size={6}
                 >
-                                <DropdownMenu
-                                                menuOptions={
-                                                                Array [
-                                                                                Object {
-                                                                                  "label": "Experience Cloud Activation",
-                                                                                  "value": "experienceCloudActivation",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Integrated Partner",
-                                                                                  "value": "integratedPartner",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Customer Activation",
-                                                                                  "value": "customerActivation",
-                                                                                },
-                                                                              ]
-                                                }
-                                                title="Create Destination"
-                                />
+                                <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                disabled={false}
+                                                element="button"
+                                                invalid={false}
+                                                label=""
+                                                logic={false}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="cta"
+                                >
+                                                Create Destination
+                                </Button>
                 </GridColumn>
 </GridRow>,
               <Well />,
@@ -692,28 +648,23 @@ ShallowWrapper {
                     />
 </GridColumn>,
                   <GridColumn
-                    className="creat-destination-dropdown"
+                    className="creat-destination-button"
                     size={6}
 >
-                    <DropdownMenu
-                                        menuOptions={
-                                                            Array [
-                                                                                Object {
-                                                                                  "label": "Experience Cloud Activation",
-                                                                                  "value": "experienceCloudActivation",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Integrated Partner",
-                                                                                  "value": "integratedPartner",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Customer Activation",
-                                                                                  "value": "customerActivation",
-                                                                                },
-                                                                              ]
-                                        }
-                                        title="Create Destination"
-                    />
+                    <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        disabled={false}
+                                        element="button"
+                                        invalid={false}
+                                        label=""
+                                        logic={false}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="cta"
+                    >
+                                        Create Destination
+                    </Button>
 </GridColumn>,
                 ],
                 "className": "",
@@ -810,26 +761,21 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <DropdownMenu
-                      menuOptions={
-                                            Array [
-                                                                  Object {
-                                                                    "label": "Experience Cloud Activation",
-                                                                    "value": "experienceCloudActivation",
-                                                                  },
-                                                                  Object {
-                                                                    "label": "Integrated Partner",
-                                                                    "value": "integratedPartner",
-                                                                  },
-                                                                  Object {
-                                                                    "label": "Customer Activation",
-                                                                    "value": "customerActivation",
-                                                                  },
-                                                                ]
-                      }
-                      title="Create Destination"
-/>,
-                    "className": "creat-destination-dropdown",
+                    "children": <Button
+                      autoFocus={false}
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
+                      label=""
+                      logic={false}
+                      quiet={false}
+                      selected={false}
+                      variant="cta"
+>
+                      Create Destination
+</Button>,
+                    "className": "creat-destination-button",
                     "size": 6,
                   },
                   "ref": null,
@@ -838,24 +784,20 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "menuOptions": Array [
-                        Object {
-                          "label": "Experience Cloud Activation",
-                          "value": "experienceCloudActivation",
-                        },
-                        Object {
-                          "label": "Integrated Partner",
-                          "value": "integratedPartner",
-                        },
-                        Object {
-                          "label": "Customer Activation",
-                          "value": "customerActivation",
-                        },
-                      ],
-                      "title": "Create Destination",
+                      "autoFocus": false,
+                      "block": false,
+                      "children": "Create Destination",
+                      "disabled": false,
+                      "element": "button",
+                      "invalid": false,
+                      "label": "",
+                      "logic": false,
+                      "quiet": false,
+                      "selected": false,
+                      "variant": "cta",
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": "Create Destination",
                     "type": [Function],
                   },
                   "type": [Function],
@@ -959,28 +901,23 @@ ShallowWrapper {
                                 />
                         </GridColumn>
                         <GridColumn
-                                className="creat-destination-dropdown"
+                                className="creat-destination-button"
                                 size={6}
                         >
-                                <DropdownMenu
-                                        menuOptions={
-                                                Array [
-                                                        Object {
-                                                          "label": "Experience Cloud Activation",
-                                                          "value": "experienceCloudActivation",
-                                                        },
-                                                        Object {
-                                                          "label": "Integrated Partner",
-                                                          "value": "integratedPartner",
-                                                        },
-                                                        Object {
-                                                          "label": "Customer Activation",
-                                                          "value": "customerActivation",
-                                                        },
-                                                      ]
-                                        }
-                                        title="Create Destination"
-                                />
+                                <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        disabled={false}
+                                        element="button"
+                                        invalid={false}
+                                        label=""
+                                        logic={false}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="cta"
+                                >
+                                        Create Destination
+                                </Button>
                         </GridColumn>
                 </GridRow>
         </Grid>
@@ -1027,28 +964,23 @@ ShallowWrapper {
                               />
                     </GridColumn>
                     <GridColumn
-                              className="creat-destination-dropdown"
+                              className="creat-destination-button"
                               size={6}
                     >
-                              <DropdownMenu
-                                        menuOptions={
-                                                  Array [
-                                                            Object {
-                                                              "label": "Experience Cloud Activation",
-                                                              "value": "experienceCloudActivation",
-                                                            },
-                                                            Object {
-                                                              "label": "Integrated Partner",
-                                                              "value": "integratedPartner",
-                                                            },
-                                                            Object {
-                                                              "label": "Customer Activation",
-                                                              "value": "customerActivation",
-                                                            },
-                                                          ]
-                                        }
-                                        title="Create Destination"
-                              />
+                              <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        disabled={false}
+                                        element="button"
+                                        invalid={false}
+                                        label=""
+                                        logic={false}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="cta"
+                              >
+                                        Create Destination
+                              </Button>
                     </GridColumn>
           </GridRow>
 </Grid>,
@@ -1094,28 +1026,23 @@ ShallowWrapper {
                             />
               </GridColumn>
               <GridColumn
-                            className="creat-destination-dropdown"
+                            className="creat-destination-button"
                             size={6}
               >
-                            <DropdownMenu
-                                          menuOptions={
-                                                        Array [
-                                                                      Object {
-                                                                        "label": "Experience Cloud Activation",
-                                                                        "value": "experienceCloudActivation",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Integrated Partner",
-                                                                        "value": "integratedPartner",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Customer Activation",
-                                                                        "value": "customerActivation",
-                                                                      },
-                                                                    ]
-                                          }
-                                          title="Create Destination"
-                            />
+                            <Button
+                                          autoFocus={false}
+                                          block={false}
+                                          disabled={false}
+                                          element="button"
+                                          invalid={false}
+                                          label=""
+                                          logic={false}
+                                          quiet={false}
+                                          selected={false}
+                                          variant="cta"
+                            >
+                                          Create Destination
+                            </Button>
               </GridColumn>
 </GridRow>,
             undefined,
@@ -1156,28 +1083,23 @@ ShallowWrapper {
                   />
 </GridColumn>,
                 <GridColumn
-                  className="creat-destination-dropdown"
+                  className="creat-destination-button"
                   size={6}
 >
-                  <DropdownMenu
-                                    menuOptions={
-                                                      Array [
-                                                                        Object {
-                                                                          "label": "Experience Cloud Activation",
-                                                                          "value": "experienceCloudActivation",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Integrated Partner",
-                                                                          "value": "integratedPartner",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Customer Activation",
-                                                                          "value": "customerActivation",
-                                                                        },
-                                                                      ]
-                                    }
-                                    title="Create Destination"
-                  />
+                  <Button
+                                    autoFocus={false}
+                                    block={false}
+                                    disabled={false}
+                                    element="button"
+                                    invalid={false}
+                                    label=""
+                                    logic={false}
+                                    quiet={false}
+                                    selected={false}
+                                    variant="cta"
+                  >
+                                    Create Destination
+                  </Button>
 </GridColumn>,
               ],
               "className": "",
@@ -1274,26 +1196,21 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "children": <DropdownMenu
-                    menuOptions={
-                                        Array [
-                                                            Object {
-                                                              "label": "Experience Cloud Activation",
-                                                              "value": "experienceCloudActivation",
-                                                            },
-                                                            Object {
-                                                              "label": "Integrated Partner",
-                                                              "value": "integratedPartner",
-                                                            },
-                                                            Object {
-                                                              "label": "Customer Activation",
-                                                              "value": "customerActivation",
-                                                            },
-                                                          ]
-                    }
-                    title="Create Destination"
-/>,
-                  "className": "creat-destination-dropdown",
+                  "children": <Button
+                    autoFocus={false}
+                    block={false}
+                    disabled={false}
+                    element="button"
+                    invalid={false}
+                    label=""
+                    logic={false}
+                    quiet={false}
+                    selected={false}
+                    variant="cta"
+>
+                    Create Destination
+</Button>,
+                  "className": "creat-destination-button",
                   "size": 6,
                 },
                 "ref": null,
@@ -1302,24 +1219,20 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "menuOptions": Array [
-                      Object {
-                        "label": "Experience Cloud Activation",
-                        "value": "experienceCloudActivation",
-                      },
-                      Object {
-                        "label": "Integrated Partner",
-                        "value": "integratedPartner",
-                      },
-                      Object {
-                        "label": "Customer Activation",
-                        "value": "customerActivation",
-                      },
-                    ],
-                    "title": "Create Destination",
+                    "autoFocus": false,
+                    "block": false,
+                    "children": "Create Destination",
+                    "disabled": false,
+                    "element": "button",
+                    "invalid": false,
+                    "label": "",
+                    "logic": false,
+                    "quiet": false,
+                    "selected": false,
+                    "variant": "cta",
                   },
                   "ref": null,
-                  "rendered": null,
+                  "rendered": "Create Destination",
                   "type": [Function],
                 },
                 "type": [Function],
@@ -1381,28 +1294,23 @@ ShallowWrapper {
                                         />
                               </GridColumn>
                               <GridColumn
-                                        className="creat-destination-dropdown"
+                                        className="creat-destination-button"
                                         size={6}
                               >
-                                        <DropdownMenu
-                                                  menuOptions={
-                                                            Array [
-                                                                      Object {
-                                                                        "label": "Experience Cloud Activation",
-                                                                        "value": "experienceCloudActivation",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Integrated Partner",
-                                                                        "value": "integratedPartner",
-                                                                      },
-                                                                      Object {
-                                                                        "label": "Customer Activation",
-                                                                        "value": "customerActivation",
-                                                                      },
-                                                                    ]
-                                                  }
-                                                  title="Create Destination"
-                                        />
+                                        <Button
+                                                  autoFocus={false}
+                                                  block={false}
+                                                  disabled={false}
+                                                  element="button"
+                                                  invalid={false}
+                                                  label=""
+                                                  logic={false}
+                                                  quiet={false}
+                                                  selected={false}
+                                                  variant="cta"
+                                        >
+                                                  Create Destination
+                                        </Button>
                               </GridColumn>
                     </GridRow>
           </Grid>
@@ -1449,28 +1357,23 @@ ShallowWrapper {
                                     />
                         </GridColumn>
                         <GridColumn
-                                    className="creat-destination-dropdown"
+                                    className="creat-destination-button"
                                     size={6}
                         >
-                                    <DropdownMenu
-                                                menuOptions={
-                                                            Array [
-                                                                        Object {
-                                                                          "label": "Experience Cloud Activation",
-                                                                          "value": "experienceCloudActivation",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Integrated Partner",
-                                                                          "value": "integratedPartner",
-                                                                        },
-                                                                        Object {
-                                                                          "label": "Customer Activation",
-                                                                          "value": "customerActivation",
-                                                                        },
-                                                                      ]
-                                                }
-                                                title="Create Destination"
-                                    />
+                                    <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                disabled={false}
+                                                element="button"
+                                                invalid={false}
+                                                label=""
+                                                logic={false}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="cta"
+                                    >
+                                                Create Destination
+                                    </Button>
                         </GridColumn>
             </GridRow>
 </Grid>,
@@ -1516,28 +1419,23 @@ ShallowWrapper {
                                 />
                 </GridColumn>
                 <GridColumn
-                                className="creat-destination-dropdown"
+                                className="creat-destination-button"
                                 size={6}
                 >
-                                <DropdownMenu
-                                                menuOptions={
-                                                                Array [
-                                                                                Object {
-                                                                                  "label": "Experience Cloud Activation",
-                                                                                  "value": "experienceCloudActivation",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Integrated Partner",
-                                                                                  "value": "integratedPartner",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Customer Activation",
-                                                                                  "value": "customerActivation",
-                                                                                },
-                                                                              ]
-                                                }
-                                                title="Create Destination"
-                                />
+                                <Button
+                                                autoFocus={false}
+                                                block={false}
+                                                disabled={false}
+                                                element="button"
+                                                invalid={false}
+                                                label=""
+                                                logic={false}
+                                                quiet={false}
+                                                selected={false}
+                                                variant="cta"
+                                >
+                                                Create Destination
+                                </Button>
                 </GridColumn>
 </GridRow>,
               undefined,
@@ -1578,28 +1476,23 @@ ShallowWrapper {
                     />
 </GridColumn>,
                   <GridColumn
-                    className="creat-destination-dropdown"
+                    className="creat-destination-button"
                     size={6}
 >
-                    <DropdownMenu
-                                        menuOptions={
-                                                            Array [
-                                                                                Object {
-                                                                                  "label": "Experience Cloud Activation",
-                                                                                  "value": "experienceCloudActivation",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Integrated Partner",
-                                                                                  "value": "integratedPartner",
-                                                                                },
-                                                                                Object {
-                                                                                  "label": "Customer Activation",
-                                                                                  "value": "customerActivation",
-                                                                                },
-                                                                              ]
-                                        }
-                                        title="Create Destination"
-                    />
+                    <Button
+                                        autoFocus={false}
+                                        block={false}
+                                        disabled={false}
+                                        element="button"
+                                        invalid={false}
+                                        label=""
+                                        logic={false}
+                                        quiet={false}
+                                        selected={false}
+                                        variant="cta"
+                    >
+                                        Create Destination
+                    </Button>
 </GridColumn>,
                 ],
                 "className": "",
@@ -1696,26 +1589,21 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <DropdownMenu
-                      menuOptions={
-                                            Array [
-                                                                  Object {
-                                                                    "label": "Experience Cloud Activation",
-                                                                    "value": "experienceCloudActivation",
-                                                                  },
-                                                                  Object {
-                                                                    "label": "Integrated Partner",
-                                                                    "value": "integratedPartner",
-                                                                  },
-                                                                  Object {
-                                                                    "label": "Customer Activation",
-                                                                    "value": "customerActivation",
-                                                                  },
-                                                                ]
-                      }
-                      title="Create Destination"
-/>,
-                    "className": "creat-destination-dropdown",
+                    "children": <Button
+                      autoFocus={false}
+                      block={false}
+                      disabled={false}
+                      element="button"
+                      invalid={false}
+                      label=""
+                      logic={false}
+                      quiet={false}
+                      selected={false}
+                      variant="cta"
+>
+                      Create Destination
+</Button>,
+                    "className": "creat-destination-button",
                     "size": 6,
                   },
                   "ref": null,
@@ -1724,24 +1612,20 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "menuOptions": Array [
-                        Object {
-                          "label": "Experience Cloud Activation",
-                          "value": "experienceCloudActivation",
-                        },
-                        Object {
-                          "label": "Integrated Partner",
-                          "value": "integratedPartner",
-                        },
-                        Object {
-                          "label": "Customer Activation",
-                          "value": "customerActivation",
-                        },
-                      ],
-                      "title": "Create Destination",
+                      "autoFocus": false,
+                      "block": false,
+                      "children": "Create Destination",
+                      "disabled": false,
+                      "element": "button",
+                      "invalid": false,
+                      "label": "",
+                      "logic": false,
+                      "quiet": false,
+                      "selected": false,
+                      "variant": "cta",
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": "Create Destination",
                     "type": [Function],
                   },
                   "type": [Function],

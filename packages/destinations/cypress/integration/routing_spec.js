@@ -34,7 +34,7 @@ describe('Integration Tests for routing', function() {
             cy.get('.spectrum-Heading')
                 .contains('Destinations')
                 .should('be.exist');
-            cy.get('.creat-destination-dropdown')
+            cy.get('.creat-destination-button')
                 .contains('Create Destination')
                 .should('be.exist');
             cy.get('#destinations-search')
