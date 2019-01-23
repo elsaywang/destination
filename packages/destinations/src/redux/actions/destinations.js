@@ -1,4 +1,5 @@
 import { createAsyncAction } from '../../utils/asyncReduxUtils';
+import { apiUrl } from '../../utils/urls';
 import { createAction } from 'redux-actions';
 import _ from 'lodash';
 
@@ -21,7 +22,7 @@ const queryDestinationsAPI = queryOptions => {
         .map(([key, val]) => `${key}=${val}`)
         .join('&');
 
-    return fetch(`http://localhost:3003/api?${queryString}`);
+    return fetch(`${apiUrl}?${queryString}`);
 };
 
 export const fetchDestinations = createAsyncAction('FETCH_DESTINATIONS', queryDestinationsAPI);

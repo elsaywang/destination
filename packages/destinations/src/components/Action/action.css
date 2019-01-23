@@ -1,0 +1,17 @@
+:local(.deletionAlert){
+  color:var(--spectrum-semantic-notice-color-state-focus);
+  margin: -0.5rem 0 -0.15rem 0.1rem
+}
+:local(.deletionText){
+  font-weight: 300;
+  font-style:normal;
+  font-size:1.25rem;
+}
+:local(.deletionTextDialog){
+  padding: 0.985rem
+}
+:local(.metricsTitle){
+  font-weight: var(--spectrum-body-small-font-weight-default);
+  font-style:normal;
+  font-size:var(--spectrum-body-small-font-size-default);
+}

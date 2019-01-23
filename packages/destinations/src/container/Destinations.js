@@ -12,6 +12,7 @@ import {
     updateIntegratedPlatformType,
 } from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
+import Action from '../components/Action';
 
 class Destinations extends Component {
     state = {
@@ -22,7 +23,21 @@ class Destinations extends Component {
     };
 
     renderCell = (column, data) => {
+        if (column.key === 'action') {
+            return this.renderActionCell(data);
+        }
         return <span>{data[column.key]}</span>;
+    };
+
+    renderActionCell = data => {
+        const { category } = data;
+        const { destinationType } = this.props;
+        //TODO: this validation could be simplified once hooked with real-data
+        const includeMetrics =
+            destinationType === 'Integrated Platforms' ||
+            (category === 'Integrated Platforms' && destinationType === 'All');
+
+        return <Action destination={data} showMetrics={includeMetrics} />;
     };
 
     showSideNavFilter = () => {
@@ -54,7 +69,7 @@ class Destinations extends Component {
 
     render() {
         const { fetchMoreDestinations, destinations, destinationType } = this.props;
-        const { integratedPlatformType, list } = destinations;
+        const { integratedPlatformType } = destinations;
 
         const renderSideNavFilter = (
             <div className={styles.filterListContainer}>
