@@ -1,5 +1,5 @@
 import { createAsyncAction } from '../../utils/asyncReduxUtils';
-import { apiUrl } from '../../utils/urls';
+import { apiUrl, portalUrl } from '../../utils/urls';
 import { createAction } from 'redux-actions';
 import _ from 'lodash';
 
@@ -31,3 +31,10 @@ export const fetchMoreDestinations = createAsyncAction(
     'FETCH_MORE_DESTINATIONS',
     queryDestinationsAPI,
 );
+
+//TODO: update with real api delete call
+export const deleteFromDestinationsAPI = idToDelete =>
+    //fetch(`${portalUrl}/api/v1/destinations/${idToDelete}`, { method: 'DELETE' });
+    fetch(`${apiUrl}/${idToDelete}`, { method: 'DELETE' });
+
+export const deleteDestination = createAsyncAction('DELETE_DESTINATION', deleteFromDestinationsAPI);

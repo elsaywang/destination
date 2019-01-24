@@ -9,6 +9,7 @@ import { destinationCategories } from '../constants/destinations';
 import {
     fetchDestinations,
     fetchMoreDestinations,
+    deleteDestination,
     updateIntegratedPlatformType,
 } from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
@@ -31,13 +32,19 @@ class Destinations extends Component {
 
     renderActionCell = data => {
         const { category } = data;
-        const { destinationType } = this.props;
+        const { destinationType, deleteDestination } = this.props;
         //TODO: this validation could be simplified once hooked with real-data
         const includeMetrics =
             destinationType === 'Integrated Platforms' ||
             (category === 'Integrated Platforms' && destinationType === 'All');
 
-        return <Action destination={data} showMetrics={includeMetrics} />;
+        return (
+            <Action
+                destination={data}
+                showMetrics={includeMetrics}
+                handleDeleteDestination={deleteDestination}
+            />
+        );
     };
 
     showSideNavFilter = () => {
@@ -134,7 +141,12 @@ const mapStateToProps = ({ destinations }) => ({
     destinations,
 });
 
-const actionCreators = { fetchDestinations, fetchMoreDestinations, updateIntegratedPlatformType };
+const actionCreators = {
+    fetchDestinations,
+    fetchMoreDestinations,
+    updateIntegratedPlatformType,
+    deleteDestination,
+};
 
 export { Destinations };
 

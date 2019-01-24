@@ -5,6 +5,7 @@ import {
     updateIntegratedPlatformType,
     fetchDestinations,
     fetchMoreDestinations,
+    deleteDestination,
 } from '../actions/destinations';
 
 const fetchDestinationsHandlers = createAsyncActionHandlers(fetchDestinations, {
@@ -34,10 +35,29 @@ const fetchMoreDestinationsHandlers = createAsyncActionHandlers(fetchMoreDestina
     onError: _.indentity,
 });
 
+//TODO: change the onPening, onFulfilled once hooked with real-data, need to pass down id 
+const deleteDestinationHandlers = createAsyncActionHandlers(deleteDestination, {
+    onPending: state => ({
+        ...state,
+        inFlight: true,
+    }),
+    onFulfilled: (state, action) => ({
+        ...state,
+        byIds: _.merge({}, _.omitBy({ ...state.byIds }, el => el.id === action.payload.id)),
+        idsToDisplay: state.idsToDisplay.filter(id => id !== action.payload.id),
+        inFlight: false,
+    }),
+    onError: state => ({
+        ...state,
+        inFlight: false,
+    }),
+});
+
 export default handleActions(
     new Map([
         ...fetchDestinationsHandlers,
         ...fetchMoreDestinationsHandlers,
+        ...deleteDestinationHandlers,
         [
             updateIntegratedPlatformType,
             (state, action) => ({

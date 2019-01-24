@@ -17,8 +17,7 @@ class DeleteAction extends Component {
 
     render() {
         const { destination, disabled, deleteDestination } = this.props;
-        const { name } = destination;
-        const boundDeleteClick = deleteDestination.bind(this, destination);
+        const { name, id } = destination;
 
         return (
             !disabled && (
@@ -39,7 +38,7 @@ class DeleteAction extends Component {
                         confirmLabel="Delete"
                         size="S"
                         cancelLabel="Cancel"
-                        onConfirm={boundDeleteClick}
+                        onConfirm={() => deleteDestination(id)}
                         variant="destructive">
                         <span>
                             Are you sure you want to delete this <strong>{name}</strong>{' '}
