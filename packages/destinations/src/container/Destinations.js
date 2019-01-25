@@ -9,9 +9,11 @@ import { destinationCategories } from '../constants/destinations';
 import {
     fetchDestinations,
     fetchMoreDestinations,
+    deleteDestination,
     updateIntegratedPlatformType,
 } from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
+import Actions from '../components/Actions';
 
 class Destinations extends Component {
     state = {
@@ -22,7 +24,27 @@ class Destinations extends Component {
     };
 
     renderCell = (column, data) => {
+        if (column.key === 'action') {
+            return this.renderActionCell(data);
+        }
         return <span>{data[column.key]}</span>;
+    };
+
+    renderActionCell = data => {
+        const { category } = data;
+        const { destinationType, deleteDestination } = this.props;
+        //TODO: this validation could be simplified once hooked with real-data
+        const includeMetrics =
+            destinationType === 'Integrated Platforms' ||
+            (category === 'Integrated Platforms' && destinationType === 'All');
+
+        return (
+            <Actions
+                destination={data}
+                showMetrics={includeMetrics}
+                handleDeleteDestination={deleteDestination}
+            />
+        );
     };
 
     showSideNavFilter = () => {
@@ -54,7 +76,7 @@ class Destinations extends Component {
 
     render() {
         const { fetchMoreDestinations, destinations, destinationType } = this.props;
-        const { integratedPlatformType, list } = destinations;
+        const { integratedPlatformType } = destinations;
 
         const renderSideNavFilter = (
             <div className={styles.filterListContainer}>
@@ -75,7 +97,7 @@ class Destinations extends Component {
                 data-test={`${destinationType.toLowerCase()}-destinations`}>
                 {this.showSideNavFilter() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
-                    {destinations.inFlight ? (
+                    {destinations.replacementDataInFlight ? (
                         <p>Loading</p>
                     ) : (
                         <Table
@@ -119,7 +141,12 @@ const mapStateToProps = ({ destinations }) => ({
     destinations,
 });
 
-const actionCreators = { fetchDestinations, fetchMoreDestinations, updateIntegratedPlatformType };
+const actionCreators = {
+    fetchDestinations,
+    fetchMoreDestinations,
+    updateIntegratedPlatformType,
+    deleteDestination,
+};
 
 export { Destinations };
 
