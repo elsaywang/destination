@@ -83,15 +83,7 @@ class SearchContainer extends Component {
     }
 
     componentDidMount() {
-        // Pre-populate search fields if user clicked view more button in dashboard
         this.setState({ ...this.state, ...this.props.savedSearchFields });
-        //if user does not click any view more button in the dashboard, reset the carried over search results from dashboard
-        //TODO: Extract all shared search fields state changes to redux
-        if (!this.props.savedSearchFields.name) {
-            this.onClearAll();
-        } else {
-            this.setState({ searched: true });
-        }
 
         if (!Object.keys(this.props.permissions).length) {
             this.props.fetchUserRoles();
