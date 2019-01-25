@@ -35,16 +35,20 @@ const fetchMoreDestinationsHandlers = createAsyncActionHandlers(fetchMoreDestina
     onError: _.indentity,
 });
 
-//TODO: change the onPening, onFulfilled once hooked with real-data, need to pass down id 
+//TODO: change the onPening, onFulfilled once hooked with real-data, need to pass down id
 const deleteDestinationHandlers = createAsyncActionHandlers(deleteDestination, {
-    onPending: state => ({
+    onPending: (state, action) => ({
         ...state,
+        ...(action.payload[0] && { idToDelete: action.payload[0] }),
         inFlight: true,
     }),
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, _.omitBy({ ...state.byIds }, el => el.id === action.payload.id)),
-        idsToDisplay: state.idsToDisplay.filter(id => id !== action.payload.id),
+        byIds: _.merge(
+            {},
+            _.omitBy({ ...state.byIds }, el => state.idToDelete && el.id === state.idToDelete),
+        ),
+        idsToDisplay: state.idsToDisplay.filter(id => state.idToDelete && id !== state.idToDelete),
         inFlight: false,
     }),
     onError: state => ({
