@@ -29,7 +29,7 @@ EditAction.defaultProps = {
     },
 };
 
-EditAction.protoTypes = {
+EditAction.propTypes = {
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,

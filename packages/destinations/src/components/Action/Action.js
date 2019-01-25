@@ -20,7 +20,7 @@ Action.defaultProps = {
     disabled: false,
 };
 
-Action.protoTypes = {
+Action.propTypes = {
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,

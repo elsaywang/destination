@@ -34,7 +34,7 @@ MetcisView.defaultProps = {
     disabled: false,
 };
 
-MetcisView.protoTypes = {
+MetcisView.propTypes = {
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
