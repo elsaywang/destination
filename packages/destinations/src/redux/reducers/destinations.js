@@ -29,7 +29,7 @@ const fetchMoreDestinationsHandlers = createAsyncActionHandlers(fetchMoreDestina
     onPending: _.indentity,
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, { ...state.byIds }, _.keyBy(action.payload, el => el.id)),
+        byIds: _.merge({}, state.byIds, _.keyBy(action.payload, el => el.id)),
         idsToDisplay: state.idsToDisplay.concat(action.payload.map(({ id }) => id)),
     }),
     onError: _.indentity,

@@ -4,7 +4,7 @@ import DeleteAction from './DeleteAction';
 import EditAction from './EditAction';
 import MetricsView from './MetricsView';
 
-const Action = ({ disabled, destination, showMetrics, handleDeleteDestination }) => (
+const Actions = ({ disabled, destination, showMetrics, handleDeleteDestination }) => (
     <Fragment>
         <EditAction destination={destination} disabled={disabled} />
         <DeleteAction
@@ -16,11 +16,11 @@ const Action = ({ disabled, destination, showMetrics, handleDeleteDestination })
     </Fragment>
 );
 
-Action.defaultProps = {
+Actions.defaultProps = {
     disabled: false,
 };
 
-Action.propTypes = {
+Actions.propTypes = {
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
@@ -29,4 +29,4 @@ Action.propTypes = {
     showMetrics: PropTypes.bool,
     handleDeleteDestination: PropTypes.func,
 };
-export default Action;
+export default Actions;
