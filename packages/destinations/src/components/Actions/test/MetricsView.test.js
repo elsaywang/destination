@@ -4,6 +4,7 @@ import MetricsView from '../MetricsView';
 import Button from '@react/react-spectrum/Button';
 import Popover from '@react/react-spectrum/Popover';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
+import MetricsContext from '../MetricsContext';
 
 describe('<MetricsView/> component', () => {
     describe('rendering', () => {
@@ -33,6 +34,11 @@ describe('<MetricsView/> component', () => {
             const childrenWrapper = wrapper.find(OverlayTrigger).children();
             expect(childrenWrapper.find(Button).exists()).toBeTruthy();
             expect(childrenWrapper.find(Popover).exists()).toBeTruthy();
+        });
+
+        it('renders <MetricsContext/> as <Popover/> children', () => {
+            const childrenWrapper = wrapper.find(Popover).children();
+            expect(childrenWrapper.find(MetricsContext).exists()).toBeTruthy();
         });
     });
 });
