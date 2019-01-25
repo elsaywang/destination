@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MetricsView/> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MetricsView
+    destination={
+        Object {
+            "addressableAudience": 213123,
+            "id": 20008,
+            "lifetimeAddressableAudience": 123123,
+            "matchRate": "89%",
+            "name": "card",
+            "shareableAudience": 245123,
+            "type": "People-Based",
+          }
+    }
+    disabled={false}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "boundariesElement": [Function],
+      "children": Array [
+        <Button
+          autoFocus={false}
+          block={false}
+          disabled={false}
+          element="button"
+          icon={
+                    <GraphBarVertical
+                              size="S"
+                    />
+          }
+          invalid={false}
+          label=""
+          logic={false}
+          quiet={true}
+          selected={false}
+          variant="action"
+/>,
+        <Popover
+          open={true}
+          placement="bottom"
+          title={
+                    <span
+                              className={undefined}
+                    >
+                              PEOPLE-BASED PLATFORM
+                    </span>
+          }
+          trapFocus={true}
+          variant="default"
+>
+          TBD
+          <br />
+</Popover>,
+      ],
+      "crossOffset": 0,
+      "defaultShow": false,
+      "delayHide": 100,
+      "disabled": false,
+      "flip": true,
+      "offset": 0,
+      "placement": "left",
+      "trigger": "click",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoFocus": false,
+          "block": false,
+          "disabled": false,
+          "element": "button",
+          "icon": <GraphBarVertical
+            size="S"
+/>,
+          "invalid": false,
+          "label": "",
+          "logic": false,
+          "quiet": true,
+          "selected": false,
+          "variant": "action",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            "TBD",
+            <br />,
+          ],
+          "open": true,
+          "placement": "bottom",
+          "title": <span
+            className={undefined}
+>
+            PEOPLE-BASED PLATFORM
+</span>,
+          "trapFocus": true,
+          "variant": "default",
+        },
+        "ref": null,
+        "rendered": Array [
+          "TBD",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "boundariesElement": [Function],
+        "children": Array [
+          <Button
+            autoFocus={false}
+            block={false}
+            disabled={false}
+            element="button"
+            icon={
+                        <GraphBarVertical
+                                    size="S"
+                        />
+            }
+            invalid={false}
+            label=""
+            logic={false}
+            quiet={true}
+            selected={false}
+            variant="action"
+/>,
+          <Popover
+            open={true}
+            placement="bottom"
+            title={
+                        <span
+                                    className={undefined}
+                        >
+                                    PEOPLE-BASED PLATFORM
+                        </span>
+            }
+            trapFocus={true}
+            variant="default"
+>
+            TBD
+            <br />
+</Popover>,
+        ],
+        "crossOffset": 0,
+        "defaultShow": false,
+        "delayHide": 100,
+        "disabled": false,
+        "flip": true,
+        "offset": 0,
+        "placement": "left",
+        "trigger": "click",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoFocus": false,
+            "block": false,
+            "disabled": false,
+            "element": "button",
+            "icon": <GraphBarVertical
+              size="S"
+/>,
+            "invalid": false,
+            "label": "",
+            "logic": false,
+            "quiet": true,
+            "selected": false,
+            "variant": "action",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              "TBD",
+              <br />,
+            ],
+            "open": true,
+            "placement": "bottom",
+            "title": <span
+              className={undefined}
+>
+              PEOPLE-BASED PLATFORM
+</span>,
+            "trapFocus": true,
+            "variant": "default",
+          },
+          "ref": null,
+          "rendered": Array [
+            "TBD",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

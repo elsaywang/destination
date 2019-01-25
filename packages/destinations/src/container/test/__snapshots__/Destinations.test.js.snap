@@ -47,7 +47,7 @@ ShallowWrapper {
               2,
               3,
             ],
-            "inFlight": false,
+            "replacementDataInFlight": false,
           }
     }
     fetchDestinations={[Function]}

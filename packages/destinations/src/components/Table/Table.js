@@ -50,7 +50,7 @@ Table.defaultProps = {
     },
 };
 
-Table.protoTypes = {
+Table.propTypes = {
     height: PropTypes.number,
     columns: PropTypes.array,
     rowHeight: PropTypes.number,

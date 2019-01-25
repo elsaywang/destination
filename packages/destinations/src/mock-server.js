@@ -59,6 +59,13 @@ server.get('/api', (req, res) => {
     res.send(items);
 });
 
+//TODO: fake delete API call, response should be empty
+server.delete('/api/:id', (req, res, next) => {
+    res.status(200).send({
+        id: Number(req.params.id),
+    });
+});
+
 server.listen(3003, () => {
     console.log('JSON Server is running');
 });
