@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
-import { Route, Switch, Redirect, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, Redirect, HashRouter } from 'react-router-dom';
 import Nav from '../components/Nav';
 import Layout from '../components/Layout';
 import Destinations from './Destinations';
@@ -11,12 +11,12 @@ import { routes } from '../constants/navTab';
 const store = configureStore();
 
 const App = () => (
-    <BrowserRouter>
+    <HashRouter>
         <Switch>
             <Route exact path={'/destinations/configuration'} render={props => <ConfigurationContainer />} />
             <Route component={DestinationContainer} />
         </Switch>
-    </BrowserRouter>
+    </HashRouter>
 );
 
 const DestinationContainer = () => (

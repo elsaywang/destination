@@ -7,8 +7,8 @@ ShallowWrapper {
     destinationType="Integrated Platforms"
     destinations={
         Object {
-            "list": Array [
-              Object {
+            "byIds": Object {
+              "0": Object {
                 "action": "",
                 "description": "Maxime ut totam nemo assumenda ratione impedit.",
                 "id": 0,
@@ -16,7 +16,7 @@ ShallowWrapper {
                 "platform": "Twitter",
                 "shareableAudience": 41898,
               },
-              Object {
+              "1": Object {
                 "action": "",
                 "description": "Et nesciunt voluptatibus facilis blanditiis.",
                 "id": 1,
@@ -24,7 +24,7 @@ ShallowWrapper {
                 "platform": "Google",
                 "shareableAudience": 18751,
               },
-              Object {
+              "2": Object {
                 "action": "",
                 "description": "Repellat sit dolor ut quisquam et ducimus.",
                 "id": 2,
@@ -32,7 +32,7 @@ ShallowWrapper {
                 "platform": "Twitter",
                 "shareableAudience": 5434,
               },
-              Object {
+              "3": Object {
                 "action": "",
                 "description": "Blanditiis tenetur culpa aut distinctio.",
                 "id": 3,
@@ -40,8 +40,14 @@ ShallowWrapper {
                 "platform": "LinkedIn",
                 "shareableAudience": 40918,
               },
+            },
+            "idsToDisplay": Array [
+              0,
+              1,
+              2,
+              3,
             ],
-            "requestInFlight": false,
+            "inFlight": false,
           }
     }
     fetchDestinations={[Function]}
@@ -97,7 +103,7 @@ ShallowWrapper {
                                           "key": "id",
                                           "sortable": true,
                                           "title": "ID",
-                                          "width": 50,
+                                          "width": 80,
                                         },
                                         Object {
                                           "active": true,
@@ -121,17 +127,18 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "key": "description",
-                                          "minWidth": 100,
+                                          "minWidth": 250,
                                           "sortable": true,
                                           "title": "DESCRIPTION",
                                         },
                                         Object {
                                           "key": "action",
                                           "title": "ACTION",
-                                          "width": 250,
+                                          "width": 200,
                                         },
                                       ]
                     }
+                    dataTest="peopleBased-destination-table"
                     height={900}
                     items={
                               Array [
@@ -169,9 +176,22 @@ ShallowWrapper {
                                         },
                                       ]
                     }
+                    onSortChange={[Function]}
                     reachedEndOfRows={[Function]}
                     renderCell={[Function]}
                     rowHeight={250}
+                    sortDescriptor={
+                              Object {
+                                        "column": Object {
+                                          "announce": false,
+                                          "key": "id",
+                                          "sortable": true,
+                                          "title": "ID",
+                                          "width": 80,
+                                        },
+                                        "direction": 1,
+                                      }
+                    }
           />
 </div>,
       ],
@@ -252,7 +272,7 @@ ShallowWrapper {
                                       "key": "id",
                                       "sortable": true,
                                       "title": "ID",
-                                      "width": 50,
+                                      "width": 80,
                                     },
                                     Object {
                                       "active": true,
@@ -276,17 +296,18 @@ ShallowWrapper {
                                     },
                                     Object {
                                       "key": "description",
-                                      "minWidth": 100,
+                                      "minWidth": 250,
                                       "sortable": true,
                                       "title": "DESCRIPTION",
                                     },
                                     Object {
                                       "key": "action",
                                       "title": "ACTION",
-                                      "width": 250,
+                                      "width": 200,
                                     },
                                   ]
             }
+            dataTest="peopleBased-destination-table"
             height={900}
             items={
                         Array [
@@ -324,9 +345,22 @@ ShallowWrapper {
                                     },
                                   ]
             }
+            onSortChange={[Function]}
             reachedEndOfRows={[Function]}
             renderCell={[Function]}
             rowHeight={250}
+            sortDescriptor={
+                        Object {
+                                    "column": Object {
+                                      "announce": false,
+                                      "key": "id",
+                                      "sortable": true,
+                                      "title": "ID",
+                                      "width": 80,
+                                    },
+                                    "direction": 1,
+                                  }
+            }
 />,
           "className": undefined,
         },
@@ -343,7 +377,7 @@ ShallowWrapper {
                 "key": "id",
                 "sortable": true,
                 "title": "ID",
-                "width": 50,
+                "width": 80,
               },
               Object {
                 "active": true,
@@ -367,16 +401,17 @@ ShallowWrapper {
               },
               Object {
                 "key": "description",
-                "minWidth": 100,
+                "minWidth": 250,
                 "sortable": true,
                 "title": "DESCRIPTION",
               },
               Object {
                 "key": "action",
                 "title": "ACTION",
-                "width": 250,
+                "width": 200,
               },
             ],
+            "dataTest": "peopleBased-destination-table",
             "height": 900,
             "items": Array [
               Object {
@@ -412,9 +447,20 @@ ShallowWrapper {
                 "shareableAudience": 40918,
               },
             ],
+            "onSortChange": [Function],
             "reachedEndOfRows": [Function],
             "renderCell": [Function],
             "rowHeight": 250,
+            "sortDescriptor": Object {
+              "column": Object {
+                "announce": false,
+                "key": "id",
+                "sortable": true,
+                "title": "ID",
+                "width": 80,
+              },
+              "direction": 1,
+            },
           },
           "ref": null,
           "rendered": null,
@@ -469,7 +515,7 @@ ShallowWrapper {
                                                   "key": "id",
                                                   "sortable": true,
                                                   "title": "ID",
-                                                  "width": 50,
+                                                  "width": 80,
                                                 },
                                                 Object {
                                                   "active": true,
@@ -493,17 +539,18 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "key": "description",
-                                                  "minWidth": 100,
+                                                  "minWidth": 250,
                                                   "sortable": true,
                                                   "title": "DESCRIPTION",
                                                 },
                                                 Object {
                                                   "key": "action",
                                                   "title": "ACTION",
-                                                  "width": 250,
+                                                  "width": 200,
                                                 },
                                               ]
                         }
+                        dataTest="peopleBased-destination-table"
                         height={900}
                         items={
                                     Array [
@@ -541,9 +588,22 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        onSortChange={[Function]}
                         reachedEndOfRows={[Function]}
                         renderCell={[Function]}
                         rowHeight={250}
+                        sortDescriptor={
+                                    Object {
+                                                "column": Object {
+                                                  "announce": false,
+                                                  "key": "id",
+                                                  "sortable": true,
+                                                  "title": "ID",
+                                                  "width": 80,
+                                                },
+                                                "direction": 1,
+                                              }
+                        }
             />
 </div>,
         ],
@@ -624,7 +684,7 @@ ShallowWrapper {
                                             "key": "id",
                                             "sortable": true,
                                             "title": "ID",
-                                            "width": 50,
+                                            "width": 80,
                                           },
                                           Object {
                                             "active": true,
@@ -648,17 +708,18 @@ ShallowWrapper {
                                           },
                                           Object {
                                             "key": "description",
-                                            "minWidth": 100,
+                                            "minWidth": 250,
                                             "sortable": true,
                                             "title": "DESCRIPTION",
                                           },
                                           Object {
                                             "key": "action",
                                             "title": "ACTION",
-                                            "width": 250,
+                                            "width": 200,
                                           },
                                         ]
               }
+              dataTest="peopleBased-destination-table"
               height={900}
               items={
                             Array [
@@ -696,9 +757,22 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              onSortChange={[Function]}
               reachedEndOfRows={[Function]}
               renderCell={[Function]}
               rowHeight={250}
+              sortDescriptor={
+                            Object {
+                                          "column": Object {
+                                            "announce": false,
+                                            "key": "id",
+                                            "sortable": true,
+                                            "title": "ID",
+                                            "width": 80,
+                                          },
+                                          "direction": 1,
+                                        }
+              }
 />,
             "className": undefined,
           },
@@ -715,7 +789,7 @@ ShallowWrapper {
                   "key": "id",
                   "sortable": true,
                   "title": "ID",
-                  "width": 50,
+                  "width": 80,
                 },
                 Object {
                   "active": true,
@@ -739,16 +813,17 @@ ShallowWrapper {
                 },
                 Object {
                   "key": "description",
-                  "minWidth": 100,
+                  "minWidth": 250,
                   "sortable": true,
                   "title": "DESCRIPTION",
                 },
                 Object {
                   "key": "action",
                   "title": "ACTION",
-                  "width": 250,
+                  "width": 200,
                 },
               ],
+              "dataTest": "peopleBased-destination-table",
               "height": 900,
               "items": Array [
                 Object {
@@ -784,9 +859,20 @@ ShallowWrapper {
                   "shareableAudience": 40918,
                 },
               ],
+              "onSortChange": [Function],
               "reachedEndOfRows": [Function],
               "renderCell": [Function],
               "rowHeight": 250,
+              "sortDescriptor": Object {
+                "column": Object {
+                  "announce": false,
+                  "key": "id",
+                  "sortable": true,
+                  "title": "ID",
+                  "width": 80,
+                },
+                "direction": 1,
+              },
             },
             "ref": null,
             "rendered": null,

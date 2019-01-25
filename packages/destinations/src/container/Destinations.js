@@ -6,10 +6,21 @@ import SideNavFilter from '../components/SideNavFilter';
 import styles from './Destinations.css';
 import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
 import { destinationCategories } from '../constants/destinations';
-import { fetchDestinations, updateIntegratedPlatformType } from '../redux/actions/destinations';
+import {
+    fetchDestinations,
+    fetchMoreDestinations,
+    updateIntegratedPlatformType,
+} from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
 
 class Destinations extends Component {
+    state = {
+        sortDescriptor: {
+            column: columnsForDestinationType[this.props.destinationType][0],
+            direction: 1,
+        },
+    };
+
     renderCell = (column, data) => {
         return <span>{data[column.key]}</span>;
     };
@@ -17,6 +28,15 @@ class Destinations extends Component {
     showSideNavFilter = () => {
         const { destinationType } = this.props;
         return destinationType === 'Integrated Platforms';
+    };
+
+    sortData = ({ column, direction }) => {
+        this.setState({ sortDescriptor: { column, direction } }, () =>
+            this.props.fetchDestinations({
+                sortBy: column.key,
+                descending: direction === -1,
+            }),
+        );
     };
 
     componentWillMount() {
@@ -33,7 +53,7 @@ class Destinations extends Component {
     }
 
     render() {
-        const { fetchDestinations, destinations, destinationType } = this.props;
+        const { fetchMoreDestinations, destinations, destinationType } = this.props;
         const { integratedPlatformType, list } = destinations;
 
         const renderSideNavFilter = (
@@ -46,6 +66,9 @@ class Destinations extends Component {
                 />
             </div>
         );
+
+        const destinationsList = destinations.idsToDisplay.map(id => destinations.byIds[id]);
+
         return (
             <div
                 className={styles.destinationContainer}
@@ -56,8 +79,11 @@ class Destinations extends Component {
                         <p>Loading</p>
                     ) : (
                         <Table
-                            items={list}
-                            reachedEndOfRows={fetchDestinations}
+                            dataTest="peopleBased-destination-table"
+                            items={destinationsList}
+                            onSortChange={this.sortData}
+                            reachedEndOfRows={fetchMoreDestinations}
+                            sortDescriptor={this.state.sortDescriptor}
                             height={900}
                             columns={
                                 columnsForDestinationType[integratedPlatformType || destinationType]
@@ -75,14 +101,15 @@ class Destinations extends Component {
 Destinations.propTypes = {
     fetchDestinations: PropTypes.func.isRequired,
     destinations: PropTypes.shape({
-        list: PropTypes.arrayOf(
-            PropTypes.shape({
+        byIds: PropTypes.shape({
+            id: PropTypes.shape({
                 id: PropTypes.number,
                 name: PropTypes.string,
                 enabled: PropTypes.bool,
                 createdBy: PropTypes.string,
             }),
-        ),
+        }),
+        idsToDisplay: PropTypes.arrayOf(PropTypes.number),
         integratedPlatformType: PropTypes.string,
     }),
     destinationType: PropTypes.oneOf(destinationCategories).isRequired,
@@ -91,7 +118,8 @@ Destinations.propTypes = {
 const mapStateToProps = ({ destinations }) => ({
     destinations,
 });
-const actionCreators = { fetchDestinations, updateIntegratedPlatformType };
+
+const actionCreators = { fetchDestinations, fetchMoreDestinations, updateIntegratedPlatformType };
 
 export { Destinations };
 

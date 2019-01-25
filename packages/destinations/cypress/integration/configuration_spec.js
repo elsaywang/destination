@@ -1,7 +1,7 @@
 describe('Configration Integration Tests', () => {
     beforeEach(() => {
         cy.server();
-        cy.visit('/destinations/configuration');
+        cy.visit('#/destinations/configuration');
     });
 
     it('should show Configration page with message, EmptyState and Add-Account Button', () => {

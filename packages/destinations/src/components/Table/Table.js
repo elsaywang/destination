@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
 import { TableView } from '@react/react-spectrum/TableView';
-import createDataSourceSubclass from './DataSource';
+import ListDataSource from '@react/react-spectrum/ListDataSource';
 import IndexPath from '../../utils/indexPath';
 import PropTypes from 'prop-types';
 
 class Table extends Component {
-    constructor({ reachedEndOfRows }) {
+    constructor({ reachedEndOfRows, items = [] }) {
         super();
 
-        this.dataSource = createDataSourceSubclass({
-            triggerGetInitialData: () => {
-                /*no-op*/
-            },
-            triggerGetMoreData: reachedEndOfRows,
-        });
-    }
+        this.dataSource = new class DataSource extends ListDataSource {
+            load() {
+                return items;
+            }
 
-    componentWillMount() {
-        this.dataSource.insertSection(0, this.props.items);
+            performLoadMore() {
+                let totalItems = 0;
+                for (let i = 0; i < this.getNumberOfSections(); i++) {
+                    totalItems += this.getSectionLength(i);
+                }
+
+                reachedEndOfRows(totalItems);
+            }
+        }();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -27,27 +31,11 @@ class Table extends Component {
     }
 
     render() {
-        const {
-            height,
-            columns,
-            rowHeight,
-            renderCell,
-            onSelectionChange,
-            dataTest,
-            allowsSelection,
-            styles,
-        } = this.props;
+        const { dataTest, styles, height, dataSource, items, ...tableViewProps } = this.props;
 
         return (
             <div data-test={dataTest} className={styles} style={{ height: `${height}px` }}>
-                <TableView
-                    columns={columns}
-                    dataSource={this.dataSource}
-                    renderCell={renderCell}
-                    rowHeight={rowHeight}
-                    onSelectionChange={onSelectionChange}
-                    allowsSelection={allowsSelection}
-                />
+                <TableView dataSource={this.dataSource} {...tableViewProps} />
             </div>
         );
     }
@@ -66,7 +54,7 @@ Table.protoTypes = {
     height: PropTypes.number,
     columns: PropTypes.array,
     rowHeight: PropTypes.number,
-    renderCell: PropTypes.func,
+    renderCell: PropTypes.func.isRequired,
     onSelectionChange: PropTypes.func,
     dataTest: PropTypes.string,
     allowsSelection: PropTypes.bool,

@@ -1,10 +1,4 @@
-import { dropdownMenuOptions, destinationCategories } from '../destinations';
-
-describe('destinations creations drop down Menu Options constant', () => {
-    it('matches snapshot', () => {
-        expect(dropdownMenuOptions).toMatchSnapshot();
-    });
-});
+import { destinationCategories } from '../destinations';
 
 describe('destination categories constant', () => {
     it('matches snapshot', () => {

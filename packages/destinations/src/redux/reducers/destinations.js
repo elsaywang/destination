@@ -1,42 +1,50 @@
+import _ from 'lodash';
 import { handleActions } from 'redux-actions';
+import { createAsyncActionHandlers } from '../../utils/asyncReduxUtils';
 import {
-    FETCH_DESTINATIONS_PENDING,
-    FETCH_DESTINATIONS_FULFILLED,
-    FETCH_DESTINATIONS_REJECTED,
-    UPDATE_INTEGRATED_PLATFORM_TYPE,
+    updateIntegratedPlatformType,
+    fetchDestinations,
+    fetchMoreDestinations,
 } from '../actions/destinations';
+
+const fetchDestinationsHandlers = createAsyncActionHandlers(fetchDestinations, {
+    onPending: state => ({
+        ...state,
+        inFlight: true,
+    }),
+    onFulfilled: (state, action) => ({
+        ...state,
+        byIds: _.merge({}, state.list, _.keyBy(action.payload, el => el.id)),
+        idsToDisplay: action.payload.map(({ id }) => id),
+        inFlight: false,
+    }),
+    onError: state => ({
+        ...state,
+        inFlight: false,
+    }),
+});
+
+const fetchMoreDestinationsHandlers = createAsyncActionHandlers(fetchMoreDestinations, {
+    onPending: _.indentity,
+    onFulfilled: (state, action) => ({
+        ...state,
+        byIds: _.merge({}, state.list, _.keyBy(action.payload, el => el.id)),
+        idsToDisplay: state.idsToDisplay.concat(action.payload.map(({ id }) => id)),
+    }),
+    onError: _.indentity,
+});
 
 export default handleActions(
     new Map([
+        ...fetchDestinationsHandlers,
+        ...fetchMoreDestinationsHandlers,
         [
-            FETCH_DESTINATIONS_PENDING,
-            (state, action) => ({
-                ...state,
-                inFlight: true,
-            }),
-        ],
-        [
-            FETCH_DESTINATIONS_FULFILLED,
-            (state, action) => ({
-                ...state,
-                list: state.list.concat(action.payload),
-                inFlight: false,
-            }),
-        ],
-        [
-            FETCH_DESTINATIONS_REJECTED,
-            (state, action) => ({
-                ...state,
-                inFlight: false,
-            }),
-        ],
-        [
-            UPDATE_INTEGRATED_PLATFORM_TYPE,
+            updateIntegratedPlatformType,
             (state, action) => ({
                 ...state,
                 integratedPlatformType: action.payload,
             }),
         ],
     ]),
-    { list: [], integratedPlatformType: '' },
+    { list: {}, idsToDisplay: [], destinationType: 'ALL', integratedPlatformType: '' },
 );
