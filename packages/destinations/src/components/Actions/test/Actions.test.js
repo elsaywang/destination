@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Action from '../Action';
+import Actions from '../Actions';
 import DeleteAction from '../DeleteAction';
 import EditAction from '../EditAction';
 import MetricsView from '../MetricsView';
 
-describe('<Action/> component', () => {
+describe('<Actions/> component', () => {
     describe('rendering', () => {
         const mockFn = jest.fn();
         const props = {
@@ -16,7 +16,7 @@ describe('<Action/> component', () => {
             },
             showMetrics: false,
         };
-        const wrapper = shallow(<Action {...props} />);
+        const wrapper = shallow(<Actions {...props} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();

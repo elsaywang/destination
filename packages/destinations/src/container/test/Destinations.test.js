@@ -45,7 +45,7 @@ describe('renders <App/> without crashing', () => {
                 },
             },
             idsToDisplay: [0, 1, 2, 3],
-            inFlight: false,
+            replacementDataInFlight: false,
         },
         destinationType: 'Integrated Platforms',
     };

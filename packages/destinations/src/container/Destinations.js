@@ -13,7 +13,7 @@ import {
     updateIntegratedPlatformType,
 } from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
-import Action from '../components/Action';
+import Actions from '../components/Actions';
 
 class Destinations extends Component {
     state = {
@@ -39,7 +39,7 @@ class Destinations extends Component {
             (category === 'Integrated Platforms' && destinationType === 'All');
 
         return (
-            <Action
+            <Actions
                 destination={data}
                 showMetrics={includeMetrics}
                 handleDeleteDestination={deleteDestination}
@@ -97,7 +97,7 @@ class Destinations extends Component {
                 data-test={`${destinationType.toLowerCase()}-destinations`}>
                 {this.showSideNavFilter() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
-                    {destinations.inFlight ? (
+                    {destinations.replacementDataInFlight ? (
                         <p>Loading</p>
                     ) : (
                         <Table

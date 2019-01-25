@@ -60,7 +60,7 @@ DeleteAction.defaultProps = {
 };
 
 DeleteAction.propTypes = {
-    deleteDestination: PropTypes.func, //TODO
+    deleteDestination: PropTypes.func,
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,

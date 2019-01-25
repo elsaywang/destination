@@ -11,17 +11,17 @@ import {
 const fetchDestinationsHandlers = createAsyncActionHandlers(fetchDestinations, {
     onPending: state => ({
         ...state,
-        inFlight: true,
+        replacementDataInFlight: true,
     }),
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, state.list, _.keyBy(action.payload, el => el.id)),
+        byIds: _.merge({}, _.keyBy(action.payload, el => el.id)),
         idsToDisplay: action.payload.map(({ id }) => id),
-        inFlight: false,
+        replacementDataInFlight: false,
     }),
     onError: state => ({
         ...state,
-        inFlight: false,
+        replacementDataInFlight: false,
     }),
 });
 
@@ -29,18 +29,18 @@ const fetchMoreDestinationsHandlers = createAsyncActionHandlers(fetchMoreDestina
     onPending: _.indentity,
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, state.list, _.keyBy(action.payload, el => el.id)),
+        byIds: _.merge({}, { ...state.byIds }, _.keyBy(action.payload, el => el.id)),
         idsToDisplay: state.idsToDisplay.concat(action.payload.map(({ id }) => id)),
     }),
     onError: _.indentity,
 });
 
-//TODO: change the onPening, onFulfilled once hooked with real-data, need to pass down id
+//TODO: validate with real-data api call
 const deleteDestinationHandlers = createAsyncActionHandlers(deleteDestination, {
     onPending: (state, action) => ({
         ...state,
         ...(action.payload[0] && { idToDelete: action.payload[0] }),
-        inFlight: true,
+        replacementDataInFlight: true,
     }),
     onFulfilled: (state, action) => ({
         ...state,
@@ -49,12 +49,9 @@ const deleteDestinationHandlers = createAsyncActionHandlers(deleteDestination, {
             _.omitBy({ ...state.byIds }, el => state.idToDelete && el.id === state.idToDelete),
         ),
         idsToDisplay: state.idsToDisplay.filter(id => state.idToDelete && id !== state.idToDelete),
-        inFlight: false,
+        replacementDataInFlight: false,
     }),
-    onError: state => ({
-        ...state,
-        inFlight: false,
-    }),
+    onError: _.indentity,
 });
 
 export default handleActions(
@@ -70,5 +67,5 @@ export default handleActions(
             }),
         ],
     ]),
-    { list: {}, idsToDisplay: [], destinationType: 'ALL', integratedPlatformType: '' },
+    { idsToDisplay: [], destinationType: 'ALL', integratedPlatformType: '' },
 );

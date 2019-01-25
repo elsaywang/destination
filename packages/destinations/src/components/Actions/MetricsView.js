@@ -6,7 +6,7 @@ import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import GraphBarVertical from '@react/react-spectrum/Icon/GraphBarVertical';
 import styles from './action.css';
 
-const MetcisView = ({ destination, disabled }) => {
+const MetricsView = ({ destination, disabled }) => {
     const {
         type,
         shareableAudience,
@@ -30,11 +30,11 @@ const MetcisView = ({ destination, disabled }) => {
     );
 };
 
-MetcisView.defaultProps = {
+MetricsView.defaultProps = {
     disabled: false,
 };
 
-MetcisView.propTypes = {
+MetricsView.propTypes = {
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
@@ -46,4 +46,4 @@ MetcisView.propTypes = {
     }),
 };
 
-export default MetcisView;
+export default MetricsView;
