@@ -13,6 +13,7 @@ describe('<Actions/> component', () => {
             destination: {
                 id: 20008,
                 name: 'card',
+                type: 'People-Based',
             },
             showMetrics: false,
         };

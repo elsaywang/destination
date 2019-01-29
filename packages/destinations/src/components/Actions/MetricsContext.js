@@ -4,7 +4,7 @@ import Heading from '@react/react-spectrum/Heading';
 import styles from './action.css';
 import { metricsHeadings } from '../../constants/metrics';
 
-const MetricsContext = ({ type, ...rest }) => {
+const MetricsContext = ({ type, ...metricsValues }) => {
     return metricsHeadings
         .filter(({ integratedType }) => integratedType === type)
         .map(({ heading, key }) => (
@@ -12,7 +12,7 @@ const MetricsContext = ({ type, ...rest }) => {
                 <Heading variant="subtitle2" className={styles.contextHeading}>
                     {heading}
                 </Heading>
-                <span className={styles.contextData}>{rest[key].toLocaleString()}</span>
+                <span className={styles.contextData}>{metricsValues[key].toLocaleString()}</span>
             </Fragment>
         ));
 };

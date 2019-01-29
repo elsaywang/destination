@@ -8,10 +8,8 @@ import MetricsContext from './MetricsContext';
 import styles from './action.css';
 
 const MetricsView = ({ destination, disabled }) => {
-    const {
-        type,
-        ...rest,
-    } = destination;
+    const { type } = destination;
+
 
     const renderTitle = () => (
         <span className={styles.metricsTitle}>{`${type.toUpperCase()} PLATFORM`}</span>
@@ -21,7 +19,7 @@ const MetricsView = ({ destination, disabled }) => {
         <OverlayTrigger trigger="click" placement="left">
             <Button label="" variant="action" quiet icon={<GraphBarVertical size="S" />} />
             <Popover title={renderTitle()}>
-                <MetricsContext type={type} {...rest}/>
+                <MetricsContext {...destination} />
             </Popover>
         </OverlayTrigger>
     );
@@ -35,7 +33,7 @@ MetricsView.propTypes = {
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
-        type: PropTypes.oneOf(['People-Based', 'Device-Based']).isReuqired,
+        type: PropTypes.oneOf(['People-Based', 'Device-Based']).isRequired,
         shareableAudience: PropTypes.number,
         addressableAudience: PropTypes.number,
         matchRate: PropTypes.string,
