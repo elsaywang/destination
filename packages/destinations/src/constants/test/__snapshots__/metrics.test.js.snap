@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`metricsHeadings constants matches snapshot 1`] = `
+Array [
+  Object {
+    "heading": "Shareable Audience",
+    "integratedType": "People-Based",
+    "key": "shareableAudience",
+  },
+  Object {
+    "heading": "Addressable Audience (device)",
+    "integratedType": "Device-Based",
+    "key": "addressableAudience",
+  },
+  Object {
+    "heading": "Match Rate",
+    "integratedType": "Device-Based",
+    "key": "matchRate",
+  },
+  Object {
+    "heading": "Lifetime Addressable Audience (device)",
+    "integratedType": "Device-Based",
+    "key": "lifetimeAddressableAudience",
+  },
+]
+`;

@@ -8,6 +8,7 @@ ShallowWrapper {
         Object {
             "id": 20008,
             "name": "card",
+            "type": "People-Based",
           }
     }
     disabled={false}
@@ -32,6 +33,7 @@ ShallowWrapper {
                     Object {
                               "id": 20008,
                               "name": "card",
+                              "type": "People-Based",
                             }
           }
           disabled={false}
@@ -43,6 +45,7 @@ ShallowWrapper {
                     Object {
                               "id": 20008,
                               "name": "card",
+                              "type": "People-Based",
                             }
           }
           disabled={false}
@@ -60,6 +63,7 @@ ShallowWrapper {
           "destination": Object {
             "id": 20008,
             "name": "card",
+            "type": "People-Based",
           },
           "disabled": false,
           "editDestination": [Function],
@@ -77,6 +81,7 @@ ShallowWrapper {
           "destination": Object {
             "id": 20008,
             "name": "card",
+            "type": "People-Based",
           },
           "disabled": false,
         },
@@ -100,6 +105,7 @@ ShallowWrapper {
                         Object {
                                     "id": 20008,
                                     "name": "card",
+                                    "type": "People-Based",
                                   }
             }
             disabled={false}
@@ -111,6 +117,7 @@ ShallowWrapper {
                         Object {
                                     "id": 20008,
                                     "name": "card",
+                                    "type": "People-Based",
                                   }
             }
             disabled={false}
@@ -128,6 +135,7 @@ ShallowWrapper {
             "destination": Object {
               "id": 20008,
               "name": "card",
+              "type": "People-Based",
             },
             "disabled": false,
             "editDestination": [Function],
@@ -145,6 +153,7 @@ ShallowWrapper {
             "destination": Object {
               "id": 20008,
               "name": "card",
+              "type": "People-Based",
             },
             "disabled": false,
           },

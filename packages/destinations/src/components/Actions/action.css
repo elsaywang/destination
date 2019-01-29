@@ -11,7 +11,21 @@
   padding: 0.985rem
 }
 :local(.metricsTitle){
-  font-weight: var(--spectrum-body-small-font-weight-default);
+  font-weight: var(--spectrum-global-font-weight-black);
   font-style:normal;
   font-size:var(--spectrum-body-small-font-size-default);
+  color:var(--spectrum-global-color-grey500);
+}
+:local(.contextHeading){
+  font-weight: var(--spectrum-global-font-weight-light);
+  margin-top: -0.25rem;
+  font-style:normal;
+  font-size:var(--spectrum-global-font-size-medium);
+}
+:local(.contextData){
+  display: inline-block;
+  color:var(--spectrum-semantic-positive-color-status);
+  font-size:var(--spectrum-global-font-size-xlarge);
+  font-weight: var(--spectrum-global-font-weight-light);
+  margin-top: -0.5rem;
 }

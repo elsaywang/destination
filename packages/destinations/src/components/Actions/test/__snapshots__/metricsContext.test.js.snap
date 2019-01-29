@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MetricsContext/> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MetricsContext
+    addressableAudience={213123}
+    lifetimeAddressableAudience={123123}
+    matchRate="89%"
+    shareableAudience={245123}
+    type="People-Based"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "shareableAudience",
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Heading
+          className={undefined}
+          variant="subtitle2"
+>
+          Shareable Audience
+</Heading>,
+        <span
+          className={undefined}
+>
+          245,123
+</span>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Shareable Audience",
+          "className": undefined,
+          "variant": "subtitle2",
+        },
+        "ref": null,
+        "rendered": "Shareable Audience",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "245,123",
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": "245,123",
+        "type": "span",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "shareableAudience",
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Heading
+            className={undefined}
+            variant="subtitle2"
+>
+            Shareable Audience
+</Heading>,
+          <span
+            className={undefined}
+>
+            245,123
+</span>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Shareable Audience",
+            "className": undefined,
+            "variant": "subtitle2",
+          },
+          "ref": null,
+          "rendered": "Shareable Audience",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "245,123",
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": "245,123",
+          "type": "span",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
