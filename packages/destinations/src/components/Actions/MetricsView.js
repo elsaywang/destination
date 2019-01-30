@@ -35,8 +35,12 @@ const MetricsView = ({ destination }) => {
     );
 };
 
-MetricsView.propTypes = {
+MetricsView.defaultProps = {
     disabled: false,
+};
+
+MetricsView.propTypes = {
+    disabled: PropTypes.bool,
     destination: PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
