@@ -3,7 +3,7 @@ import _ from 'lodash';
 const allColumnTypes = [
     {
         title: 'ID',
-        key: 'id',
+        key: 'destinationId',
         width: 80,
         announce: false,
         sortable: true,

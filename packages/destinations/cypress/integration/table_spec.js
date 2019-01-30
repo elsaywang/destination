@@ -7,7 +7,7 @@ describe('Integration Tests for table', function() {
         const URL_SLUG = '#/destinations';
         beforeEach(() => {
             cy.server();
-            cy.route('get', '**/api?**', destinationsResponse);
+            cy.route('get', '**/api/**', destinationsResponse);
             cy.visit(URL_SLUG);
         });
 
@@ -15,7 +15,7 @@ describe('Integration Tests for table', function() {
             // + 1 because column header also uses .react-spectrum-TableView-row
             cy.get('.react-spectrum-TableView-row').should(
                 'have.length',
-                destinationsResponse.length + 1,
+                destinationsResponse.list.length + 1,
             );
         });
 

@@ -6,13 +6,13 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <MetricsView
     destination={
         Object {
-            "addressableAudience": 213123,
+            "addressableAudience": 438975,
             "id": 20008,
-            "lifetimeAddressableAudience": 123123,
-            "matchRate": "89%",
+            "lifetimeAddressableAudience": 3784610,
+            "matchRate": "32%",
             "name": "card",
-            "shareableAudience": 245123,
-            "type": "People-Based",
+            "shareableAudience": 7839241,
+            "type": "Device-Based",
           }
     }
     disabled={false}
@@ -56,20 +56,20 @@ ShallowWrapper {
                     <span
                               className={undefined}
                     >
-                              PEOPLE-BASED PLATFORM
+                              DEVICE-BASED PLATFORM
                     </span>
           }
           trapFocus={true}
           variant="default"
 >
           <MetricsContext
-                    addressableAudience={213123}
+                    addressableAudience={438975}
                     id={20008}
-                    lifetimeAddressableAudience={123123}
-                    matchRate="89%"
+                    lifetimeAddressableAudience={3784610}
+                    matchRate="32%"
                     name="card"
-                    shareableAudience={245123}
-                    type="People-Based"
+                    shareableAudience={7839241}
+                    type="Device-Based"
           />
 </Popover>,
       ],
@@ -113,20 +113,20 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <MetricsContext
-            addressableAudience={213123}
+            addressableAudience={438975}
             id={20008}
-            lifetimeAddressableAudience={123123}
-            matchRate="89%"
+            lifetimeAddressableAudience={3784610}
+            matchRate="32%"
             name="card"
-            shareableAudience={245123}
-            type="People-Based"
+            shareableAudience={7839241}
+            type="Device-Based"
 />,
           "open": true,
           "placement": "bottom",
           "title": <span
             className={undefined}
 >
-            PEOPLE-BASED PLATFORM
+            DEVICE-BASED PLATFORM
 </span>,
           "trapFocus": true,
           "variant": "default",
@@ -137,13 +137,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "addressableAudience": 213123,
+            "addressableAudience": 438975,
             "id": 20008,
-            "lifetimeAddressableAudience": 123123,
-            "matchRate": "89%",
+            "lifetimeAddressableAudience": 3784610,
+            "matchRate": "32%",
             "name": "card",
-            "shareableAudience": 245123,
-            "type": "People-Based",
+            "shareableAudience": 7839241,
+            "type": "Device-Based",
           },
           "ref": null,
           "rendered": null,
@@ -186,20 +186,20 @@ ShallowWrapper {
                         <span
                                     className={undefined}
                         >
-                                    PEOPLE-BASED PLATFORM
+                                    DEVICE-BASED PLATFORM
                         </span>
             }
             trapFocus={true}
             variant="default"
 >
             <MetricsContext
-                        addressableAudience={213123}
+                        addressableAudience={438975}
                         id={20008}
-                        lifetimeAddressableAudience={123123}
-                        matchRate="89%"
+                        lifetimeAddressableAudience={3784610}
+                        matchRate="32%"
                         name="card"
-                        shareableAudience={245123}
-                        type="People-Based"
+                        shareableAudience={7839241}
+                        type="Device-Based"
             />
 </Popover>,
         ],
@@ -243,20 +243,20 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <MetricsContext
-              addressableAudience={213123}
+              addressableAudience={438975}
               id={20008}
-              lifetimeAddressableAudience={123123}
-              matchRate="89%"
+              lifetimeAddressableAudience={3784610}
+              matchRate="32%"
               name="card"
-              shareableAudience={245123}
-              type="People-Based"
+              shareableAudience={7839241}
+              type="Device-Based"
 />,
             "open": true,
             "placement": "bottom",
             "title": <span
               className={undefined}
 >
-              PEOPLE-BASED PLATFORM
+              DEVICE-BASED PLATFORM
 </span>,
             "trapFocus": true,
             "variant": "default",
@@ -267,13 +267,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "addressableAudience": 213123,
+              "addressableAudience": 438975,
               "id": 20008,
-              "lifetimeAddressableAudience": 123123,
-              "matchRate": "89%",
+              "lifetimeAddressableAudience": 3784610,
+              "matchRate": "32%",
               "name": "card",
-              "shareableAudience": 245123,
-              "type": "People-Based",
+              "shareableAudience": 7839241,
+              "type": "Device-Based",
             },
             "ref": null,
             "rendered": null,

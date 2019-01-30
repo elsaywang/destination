@@ -1,7 +1,7 @@
 const actionDispatcherCache = new Map();
 
 function createAsyncAction(type, fn) {
-    const actionDispatcher = (...args) => async dispatch => {
+    const actionDispatcher = (...args) => async (dispatch, getStore) => {
         let response;
 
         try {
@@ -10,7 +10,11 @@ function createAsyncAction(type, fn) {
                 payload: { ...args },
             });
 
-            response = await fn(...args);
+            if (args.length === 0) {
+                response = await fn(null, getStore);
+            } else {
+                response = await fn(...args, getStore);
+            }
 
             if (response.ok) {
                 const json = await response.json();

@@ -7,22 +7,16 @@ import styles from './Destinations.css';
 import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
 import { destinationCategories } from '../constants/destinations';
 import {
+    updateIntegratedPlatformType,
+    applySort,
     fetchDestinations,
     fetchMoreDestinations,
     deleteDestination,
-    updateIntegratedPlatformType,
 } from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
 import Actions from '../components/Actions';
 
 class Destinations extends Component {
-    state = {
-        sortDescriptor: {
-            column: columnsForDestinationType[this.props.destinationType][0],
-            direction: 1,
-        },
-    };
-
     renderCell = (column, data) => {
         if (column.key === 'action') {
             return this.renderActionCell(data);
@@ -53,22 +47,18 @@ class Destinations extends Component {
     };
 
     sortData = ({ column, direction }) => {
-        this.setState({ sortDescriptor: { column, direction } }, () =>
-            this.props.fetchDestinations({
-                sortBy: column.key,
-                descending: direction === -1,
-            }),
-        );
-    };
-
-    componentWillMount() {
+        this.props.applySort({ sortColumn: column, sortDirection: direction });
         this.props.fetchDestinations();
-    }
+    };
 
     handleSideNavFilterChange = e => {
         this.props.updateIntegratedPlatformType(e);
         this.props.fetchDestinations();
     };
+
+    componentWillMount() {
+        this.props.fetchDestinations();
+    }
 
     componentWillUnmount() {
         this.props.updateIntegratedPlatformType('');
@@ -105,7 +95,10 @@ class Destinations extends Component {
                             items={destinationsList}
                             onSortChange={this.sortData}
                             reachedEndOfRows={fetchMoreDestinations}
-                            sortDescriptor={this.state.sortDescriptor}
+                            sortDescriptor={{
+                                column: this.props.destinations.sortColumn,
+                                direction: this.props.destinations.sortDirection,
+                            }}
                             height={900}
                             columns={
                                 columnsForDestinationType[integratedPlatformType || destinationType]
@@ -133,6 +126,8 @@ Destinations.propTypes = {
         }),
         idsToDisplay: PropTypes.arrayOf(PropTypes.number),
         integratedPlatformType: PropTypes.string,
+        sortColumn: PropTypes.object,
+        sortDirection: PropTypes.oneOf([-1, 1]),
     }),
     destinationType: PropTypes.oneOf(destinationCategories).isRequired,
 };
@@ -146,6 +141,7 @@ const actionCreators = {
     fetchMoreDestinations,
     updateIntegratedPlatformType,
     deleteDestination,
+    applySort,
 };
 
 export { Destinations };

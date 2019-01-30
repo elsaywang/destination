@@ -3,20 +3,26 @@ import { handleActions } from 'redux-actions';
 import { createAsyncActionHandlers } from '../../utils/asyncReduxUtils';
 import {
     updateIntegratedPlatformType,
+    applyFilter,
+    applySearch,
+    applySort,
     fetchDestinations,
     fetchMoreDestinations,
     deleteDestination,
 } from '../actions/destinations';
+import columnsForDestinationType from '../../constants/columns';
+
+const initialDestinationType = 'All';
 
 const fetchDestinationsHandlers = createAsyncActionHandlers(fetchDestinations, {
-    onPending: state => ({
+    onPending: (state, action) => ({
         ...state,
         replacementDataInFlight: true,
     }),
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, _.keyBy(action.payload, el => el.id)),
-        idsToDisplay: action.payload.map(({ id }) => id),
+        byIds: _.merge({}, _.keyBy(action.payload.list, el => el.destinationId)),
+        idsToDisplay: action.payload.list.map(({ destinationId }) => destinationId),
         replacementDataInFlight: false,
     }),
     onError: state => ({
@@ -29,8 +35,10 @@ const fetchMoreDestinationsHandlers = createAsyncActionHandlers(fetchMoreDestina
     onPending: _.indentity,
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, state.byIds, _.keyBy(action.payload, el => el.id)),
-        idsToDisplay: state.idsToDisplay.concat(action.payload.map(({ id }) => id)),
+        byIds: _.merge({}, state.byIds, _.keyBy(action.payload.list, el => el.destinationId)),
+        idsToDisplay: state.idsToDisplay.concat(
+            action.payload.list.map(({ destinationId }) => destinationId),
+        ),
     }),
     onError: _.indentity,
 });
@@ -46,7 +54,10 @@ const deleteDestinationHandlers = createAsyncActionHandlers(deleteDestination, {
         ...state,
         byIds: _.merge(
             {},
-            _.omitBy({ ...state.byIds }, el => state.idToDelete && el.id === state.idToDelete),
+            _.omitBy(
+                { ...state.byIds },
+                el => state.idToDelete && el.destinationId === state.idToDelete,
+            ),
         ),
         idsToDisplay: state.idsToDisplay.filter(id => state.idToDelete && id !== state.idToDelete),
         replacementDataInFlight: false,
@@ -63,9 +74,39 @@ export default handleActions(
             updateIntegratedPlatformType,
             (state, action) => ({
                 ...state,
+                searchFormText: '',
+                integratedPlatformType: action.payload,
+            }),
+        ],
+        [
+            applySort,
+            (state, action) => ({
+                ...state,
+                searchFormText: '',
+                sortColumn: action.payload.sortColumn,
+                sortDirection: action.payload.sortDirection,
+            }),
+        ],
+        [
+            applySearch,
+            (state, action) => ({
+                ...state,
+                searchFormText: action.payload,
+            }),
+        ],
+        [
+            applyFilter,
+            (state, action) => ({
+                ...state,
                 integratedPlatformType: action.payload,
             }),
         ],
     ]),
-    { idsToDisplay: [], destinationType: 'ALL', integratedPlatformType: '' },
+    {
+        idsToDisplay: [],
+        destinationType: initialDestinationType,
+        sortColumn: columnsForDestinationType[initialDestinationType][0],
+        sortDirection: 1,
+        integratedPlatformType: '',
+    },
 );

@@ -51,14 +51,7 @@ ShallowWrapper {
                                                 [Function]
                                         </FormattedMessage>
                                 </GridRow>
-                                <Search
-                                        className={undefined}
-                                        icon={<Magnifier />}
-                                        id="destinations-search"
-                                        onChange={[Function]}
-                                        onSubmit={[Function]}
-                                        placeholder="Search"
-                                />
+                                <Connect(SearchWrapper) />
                         </GridColumn>
                         <GridColumn
                                 className="creat-destination-button"
@@ -115,14 +108,7 @@ ShallowWrapper {
                                                   [Function]
                                         </FormattedMessage>
                               </GridRow>
-                              <Search
-                                        className={undefined}
-                                        icon={<Magnifier />}
-                                        id="destinations-search"
-                                        onChange={[Function]}
-                                        onSubmit={[Function]}
-                                        placeholder="Search"
-                              />
+                              <Connect(SearchWrapper) />
                     </GridColumn>
                     <GridColumn
                               className="creat-destination-button"
@@ -178,14 +164,7 @@ ShallowWrapper {
                                                         [Function]
                                           </FormattedMessage>
                             </GridRow>
-                            <Search
-                                          className={undefined}
-                                          icon={<Magnifier />}
-                                          id="destinations-search"
-                                          onChange={[Function]}
-                                          onSubmit={[Function]}
-                                          placeholder="Search"
-                            />
+                            <Connect(SearchWrapper) />
               </GridColumn>
               <GridColumn
                             className="creat-destination-button"
@@ -235,14 +214,7 @@ ShallowWrapper {
                                                       [Function]
                                     </FormattedMessage>
                   </GridRow>
-                  <Search
-                                    className={undefined}
-                                    icon={<Magnifier />}
-                                    id="destinations-search"
-                                    onChange={[Function]}
-                                    onSubmit={[Function]}
-                                    placeholder="Search"
-                  />
+                  <Connect(SearchWrapper) />
 </GridColumn>,
                 <GridColumn
                   className="creat-destination-button"
@@ -288,14 +260,7 @@ ShallowWrapper {
                                             [Function]
                       </FormattedMessage>
 </GridRow>,
-                    <Search
-                      className={undefined}
-                      icon={<Magnifier />}
-                      id="destinations-search"
-                      onChange={[Function]}
-                      onSubmit={[Function]}
-                      placeholder="Search"
-/>,
+                    <Connect(SearchWrapper) />,
                   ],
                   "size": 6,
                 },
@@ -338,14 +303,7 @@ ShallowWrapper {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "class",
-                    "props": Object {
-                      "className": undefined,
-                      "icon": <Magnifier />,
-                      "id": "destinations-search",
-                      "onChange": [Function],
-                      "onSubmit": [Function],
-                      "placeholder": "Search",
-                    },
+                    "props": Object {},
                     "ref": null,
                     "rendered": null,
                     "type": [Function],
@@ -454,14 +412,7 @@ ShallowWrapper {
                                                             [Function]
                                                   </FormattedMessage>
                                         </GridRow>
-                                        <Search
-                                                  className={undefined}
-                                                  icon={<Magnifier />}
-                                                  id="destinations-search"
-                                                  onChange={[Function]}
-                                                  onSubmit={[Function]}
-                                                  placeholder="Search"
-                                        />
+                                        <Connect(SearchWrapper) />
                               </GridColumn>
                               <GridColumn
                                         className="creat-destination-button"
@@ -518,14 +469,7 @@ ShallowWrapper {
                                                             [Function]
                                                 </FormattedMessage>
                                     </GridRow>
-                                    <Search
-                                                className={undefined}
-                                                icon={<Magnifier />}
-                                                id="destinations-search"
-                                                onChange={[Function]}
-                                                onSubmit={[Function]}
-                                                placeholder="Search"
-                                    />
+                                    <Connect(SearchWrapper) />
                         </GridColumn>
                         <GridColumn
                                     className="creat-destination-button"
@@ -581,14 +525,7 @@ ShallowWrapper {
                                                                 [Function]
                                                 </FormattedMessage>
                                 </GridRow>
-                                <Search
-                                                className={undefined}
-                                                icon={<Magnifier />}
-                                                id="destinations-search"
-                                                onChange={[Function]}
-                                                onSubmit={[Function]}
-                                                placeholder="Search"
-                                />
+                                <Connect(SearchWrapper) />
                 </GridColumn>
                 <GridColumn
                                 className="creat-destination-button"
@@ -638,14 +575,7 @@ ShallowWrapper {
                                                             [Function]
                                         </FormattedMessage>
                     </GridRow>
-                    <Search
-                                        className={undefined}
-                                        icon={<Magnifier />}
-                                        id="destinations-search"
-                                        onChange={[Function]}
-                                        onSubmit={[Function]}
-                                        placeholder="Search"
-                    />
+                    <Connect(SearchWrapper) />
 </GridColumn>,
                   <GridColumn
                     className="creat-destination-button"
@@ -691,14 +621,7 @@ ShallowWrapper {
                                                 [Function]
                         </FormattedMessage>
 </GridRow>,
-                      <Search
-                        className={undefined}
-                        icon={<Magnifier />}
-                        id="destinations-search"
-                        onChange={[Function]}
-                        onSubmit={[Function]}
-                        placeholder="Search"
-/>,
+                      <Connect(SearchWrapper) />,
                     ],
                     "size": 6,
                   },
@@ -741,14 +664,7 @@ ShallowWrapper {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "class",
-                      "props": Object {
-                        "className": undefined,
-                        "icon": <Magnifier />,
-                        "id": "destinations-search",
-                        "onChange": [Function],
-                        "onSubmit": [Function],
-                        "placeholder": "Search",
-                      },
+                      "props": Object {},
                       "ref": null,
                       "rendered": null,
                       "type": [Function],
@@ -891,14 +807,7 @@ ShallowWrapper {
                                                 [Function]
                                         </FormattedMessage>
                                 </GridRow>
-                                <Search
-                                        className={undefined}
-                                        icon={<Magnifier />}
-                                        id="destinations-search"
-                                        onChange={[Function]}
-                                        onSubmit={[Function]}
-                                        placeholder="Search"
-                                />
+                                <Connect(SearchWrapper) />
                         </GridColumn>
                         <GridColumn
                                 className="creat-destination-button"
@@ -954,14 +863,7 @@ ShallowWrapper {
                                                   [Function]
                                         </FormattedMessage>
                               </GridRow>
-                              <Search
-                                        className={undefined}
-                                        icon={<Magnifier />}
-                                        id="destinations-search"
-                                        onChange={[Function]}
-                                        onSubmit={[Function]}
-                                        placeholder="Search"
-                              />
+                              <Connect(SearchWrapper) />
                     </GridColumn>
                     <GridColumn
                               className="creat-destination-button"
@@ -1016,14 +918,7 @@ ShallowWrapper {
                                                         [Function]
                                           </FormattedMessage>
                             </GridRow>
-                            <Search
-                                          className={undefined}
-                                          icon={<Magnifier />}
-                                          id="destinations-search"
-                                          onChange={[Function]}
-                                          onSubmit={[Function]}
-                                          placeholder="Search"
-                            />
+                            <Connect(SearchWrapper) />
               </GridColumn>
               <GridColumn
                             className="creat-destination-button"
@@ -1073,14 +968,7 @@ ShallowWrapper {
                                                       [Function]
                                     </FormattedMessage>
                   </GridRow>
-                  <Search
-                                    className={undefined}
-                                    icon={<Magnifier />}
-                                    id="destinations-search"
-                                    onChange={[Function]}
-                                    onSubmit={[Function]}
-                                    placeholder="Search"
-                  />
+                  <Connect(SearchWrapper) />
 </GridColumn>,
                 <GridColumn
                   className="creat-destination-button"
@@ -1126,14 +1014,7 @@ ShallowWrapper {
                                             [Function]
                       </FormattedMessage>
 </GridRow>,
-                    <Search
-                      className={undefined}
-                      icon={<Magnifier />}
-                      id="destinations-search"
-                      onChange={[Function]}
-                      onSubmit={[Function]}
-                      placeholder="Search"
-/>,
+                    <Connect(SearchWrapper) />,
                   ],
                   "size": 6,
                 },
@@ -1176,14 +1057,7 @@ ShallowWrapper {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "class",
-                    "props": Object {
-                      "className": undefined,
-                      "icon": <Magnifier />,
-                      "id": "destinations-search",
-                      "onChange": [Function],
-                      "onSubmit": [Function],
-                      "placeholder": "Search",
-                    },
+                    "props": Object {},
                     "ref": null,
                     "rendered": null,
                     "type": [Function],
@@ -1284,14 +1158,7 @@ ShallowWrapper {
                                                             [Function]
                                                   </FormattedMessage>
                                         </GridRow>
-                                        <Search
-                                                  className={undefined}
-                                                  icon={<Magnifier />}
-                                                  id="destinations-search"
-                                                  onChange={[Function]}
-                                                  onSubmit={[Function]}
-                                                  placeholder="Search"
-                                        />
+                                        <Connect(SearchWrapper) />
                               </GridColumn>
                               <GridColumn
                                         className="creat-destination-button"
@@ -1347,14 +1214,7 @@ ShallowWrapper {
                                                             [Function]
                                                 </FormattedMessage>
                                     </GridRow>
-                                    <Search
-                                                className={undefined}
-                                                icon={<Magnifier />}
-                                                id="destinations-search"
-                                                onChange={[Function]}
-                                                onSubmit={[Function]}
-                                                placeholder="Search"
-                                    />
+                                    <Connect(SearchWrapper) />
                         </GridColumn>
                         <GridColumn
                                     className="creat-destination-button"
@@ -1409,14 +1269,7 @@ ShallowWrapper {
                                                                 [Function]
                                                 </FormattedMessage>
                                 </GridRow>
-                                <Search
-                                                className={undefined}
-                                                icon={<Magnifier />}
-                                                id="destinations-search"
-                                                onChange={[Function]}
-                                                onSubmit={[Function]}
-                                                placeholder="Search"
-                                />
+                                <Connect(SearchWrapper) />
                 </GridColumn>
                 <GridColumn
                                 className="creat-destination-button"
@@ -1466,14 +1319,7 @@ ShallowWrapper {
                                                             [Function]
                                         </FormattedMessage>
                     </GridRow>
-                    <Search
-                                        className={undefined}
-                                        icon={<Magnifier />}
-                                        id="destinations-search"
-                                        onChange={[Function]}
-                                        onSubmit={[Function]}
-                                        placeholder="Search"
-                    />
+                    <Connect(SearchWrapper) />
 </GridColumn>,
                   <GridColumn
                     className="creat-destination-button"
@@ -1519,14 +1365,7 @@ ShallowWrapper {
                                                 [Function]
                         </FormattedMessage>
 </GridRow>,
-                      <Search
-                        className={undefined}
-                        icon={<Magnifier />}
-                        id="destinations-search"
-                        onChange={[Function]}
-                        onSubmit={[Function]}
-                        placeholder="Search"
-/>,
+                      <Connect(SearchWrapper) />,
                     ],
                     "size": 6,
                   },
@@ -1569,14 +1408,7 @@ ShallowWrapper {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "class",
-                      "props": Object {
-                        "className": undefined,
-                        "icon": <Magnifier />,
-                        "id": "destinations-search",
-                        "onChange": [Function],
-                        "onSubmit": [Function],
-                        "placeholder": "Search",
-                      },
+                      "props": Object {},
                       "ref": null,
                       "rendered": null,
                       "type": [Function],

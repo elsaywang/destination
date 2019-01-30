@@ -100,7 +100,7 @@ ShallowWrapper {
                               Array [
                                         Object {
                                           "announce": false,
-                                          "key": "id",
+                                          "key": "destinationId",
                                           "sortable": true,
                                           "title": "ID",
                                           "width": 80,
@@ -182,14 +182,8 @@ ShallowWrapper {
                     rowHeight={250}
                     sortDescriptor={
                               Object {
-                                        "column": Object {
-                                          "announce": false,
-                                          "key": "id",
-                                          "sortable": true,
-                                          "title": "ID",
-                                          "width": 80,
-                                        },
-                                        "direction": 1,
+                                        "column": undefined,
+                                        "direction": undefined,
                                       }
                     }
           />
@@ -269,7 +263,7 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "announce": false,
-                                      "key": "id",
+                                      "key": "destinationId",
                                       "sortable": true,
                                       "title": "ID",
                                       "width": 80,
@@ -351,14 +345,8 @@ ShallowWrapper {
             rowHeight={250}
             sortDescriptor={
                         Object {
-                                    "column": Object {
-                                      "announce": false,
-                                      "key": "id",
-                                      "sortable": true,
-                                      "title": "ID",
-                                      "width": 80,
-                                    },
-                                    "direction": 1,
+                                    "column": undefined,
+                                    "direction": undefined,
                                   }
             }
 />,
@@ -374,7 +362,7 @@ ShallowWrapper {
             "columns": Array [
               Object {
                 "announce": false,
-                "key": "id",
+                "key": "destinationId",
                 "sortable": true,
                 "title": "ID",
                 "width": 80,
@@ -452,14 +440,8 @@ ShallowWrapper {
             "renderCell": [Function],
             "rowHeight": 250,
             "sortDescriptor": Object {
-              "column": Object {
-                "announce": false,
-                "key": "id",
-                "sortable": true,
-                "title": "ID",
-                "width": 80,
-              },
-              "direction": 1,
+              "column": undefined,
+              "direction": undefined,
             },
           },
           "ref": null,
@@ -512,7 +494,7 @@ ShallowWrapper {
                                     Array [
                                                 Object {
                                                   "announce": false,
-                                                  "key": "id",
+                                                  "key": "destinationId",
                                                   "sortable": true,
                                                   "title": "ID",
                                                   "width": 80,
@@ -594,14 +576,8 @@ ShallowWrapper {
                         rowHeight={250}
                         sortDescriptor={
                                     Object {
-                                                "column": Object {
-                                                  "announce": false,
-                                                  "key": "id",
-                                                  "sortable": true,
-                                                  "title": "ID",
-                                                  "width": 80,
-                                                },
-                                                "direction": 1,
+                                                "column": undefined,
+                                                "direction": undefined,
                                               }
                         }
             />
@@ -681,7 +657,7 @@ ShallowWrapper {
                             Array [
                                           Object {
                                             "announce": false,
-                                            "key": "id",
+                                            "key": "destinationId",
                                             "sortable": true,
                                             "title": "ID",
                                             "width": 80,
@@ -763,14 +739,8 @@ ShallowWrapper {
               rowHeight={250}
               sortDescriptor={
                             Object {
-                                          "column": Object {
-                                            "announce": false,
-                                            "key": "id",
-                                            "sortable": true,
-                                            "title": "ID",
-                                            "width": 80,
-                                          },
-                                          "direction": 1,
+                                          "column": undefined,
+                                          "direction": undefined,
                                         }
               }
 />,
@@ -786,7 +756,7 @@ ShallowWrapper {
               "columns": Array [
                 Object {
                   "announce": false,
-                  "key": "id",
+                  "key": "destinationId",
                   "sortable": true,
                   "title": "ID",
                   "width": 80,
@@ -864,14 +834,8 @@ ShallowWrapper {
               "renderCell": [Function],
               "rowHeight": 250,
               "sortDescriptor": Object {
-                "column": Object {
-                  "announce": false,
-                  "key": "id",
-                  "sortable": true,
-                  "title": "ID",
-                  "width": 80,
-                },
-                "direction": 1,
+                "column": undefined,
+                "direction": undefined,
               },
             },
             "ref": null,

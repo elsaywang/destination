@@ -8,7 +8,7 @@ import { Grid, GridRow, GridColumn } from '@react/react-spectrum/Grid';
 import { FormattedMessage } from 'react-intl';
 import styles from './Layout.css';
 import Button from '@react/react-spectrum/Button';
-import Search from '@react/react-spectrum/Search';
+import SearchWrapper from '../Search';
 import { getMessages } from '../../utils/localization';
 
 const Layout = ({ children, heading }) => {
@@ -19,7 +19,9 @@ const Layout = ({ children, heading }) => {
             <ReactSpectrumProvider scale="medium">
                 <Grid className={styles.grid}>
                     <GridRow
-                        className={classNames({ [styles.gridRow]: heading === 'Configuration' })}
+                        className={classNames({
+                            [styles.gridRow]: heading === 'Configuration',
+                        })}
                         valign="middle">
                         <GridColumn size={6}>
                             <GridRow>
@@ -27,15 +29,7 @@ const Layout = ({ children, heading }) => {
                                     {text => <Heading className={styles.message}>{text}</Heading>}
                                 </FormattedMessage>
                             </GridRow>
-                            {heading === 'Destinations' && (
-                                <Search
-                                    className={styles.search}
-                                    id={`destinations-search`}
-                                    placeholder="Search"
-                                    onChange={() => {}}
-                                    onSubmit={() => {}}
-                                />
-                            )}
+                            {heading === 'Destinations' && <SearchWrapper />}
                         </GridColumn>
                         {heading === 'Destinations' && (
                             <GridColumn

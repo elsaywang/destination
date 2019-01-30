@@ -18,7 +18,7 @@ const EditAction = ({ destination, disabled, editDestination }) => (
         target="_blank"
         element="a"
         rel="noopener"
-        href={editDestinationUrl(destination.id)}
+        href={editDestinationUrl(destination.destinationId)}
     />
 );
 
@@ -31,7 +31,7 @@ EditAction.defaultProps = {
 
 EditAction.propTypes = {
     destination: PropTypes.shape({
-        id: PropTypes.number,
+        destinationId: PropTypes.number,
         name: PropTypes.string,
     }),
     editDestination: PropTypes.func, //TODO
