@@ -62,7 +62,10 @@ const deleteDestinationHandlers = createAsyncActionHandlers(deleteDestination, {
         idsToDisplay: state.idsToDisplay.filter(id => state.idToDelete && id !== state.idToDelete),
         replacementDataInFlight: false,
     }),
-    onError: _.indentity,
+    onError: state => ({
+        ...state,
+        replacementDataInFlight: false,
+    }),
 });
 
 export default handleActions(

@@ -17,7 +17,7 @@ class DeleteAction extends Component {
 
     render() {
         const { destination, disabled, deleteDestination } = this.props;
-        const { name, id } = destination;
+        const { name, destinationId } = destination;
 
         return (
             !disabled && (
@@ -38,7 +38,7 @@ class DeleteAction extends Component {
                         confirmLabel="Delete"
                         size="S"
                         cancelLabel="Cancel"
-                        onConfirm={() => deleteDestination(id)}
+                        onConfirm={() => deleteDestination(destinationId)}
                         variant="destructive">
                         <span>
                             Are you sure you want to delete this <strong>{name}</strong>{' '}
@@ -62,7 +62,7 @@ DeleteAction.defaultProps = {
 DeleteAction.propTypes = {
     deleteDestination: PropTypes.func,
     destination: PropTypes.shape({
-        id: PropTypes.number,
+        destinationId: PropTypes.number,
         name: PropTypes.string,
     }),
 };

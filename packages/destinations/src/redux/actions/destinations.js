@@ -51,16 +51,20 @@ export const applySearch = createAction('APPLY_SEARCH');
 
 export const applyFilter = createAction('APPLY_FILTER');
 
-export const fetchDestinations = createAsyncAction('FETCH_DESTINATIONS', queryDestinationsAPI);
+export const fetchDestinations = createAsyncAction('FETCH_DESTINATIONS', queryDestinationsAPI)({
+    json: true,
+});
 
 export const fetchMoreDestinations = createAsyncAction(
     'FETCH_MORE_DESTINATIONS',
     queryDestinationsAPI,
-);
+)({ json: true });
 
 //TODO: update with real api delete call
 export const deleteFromDestinationsAPI = (
     idToDelete, //fetch(`${portalUrl}/api/v1/destinations/${idToDelete}`, { method: 'DELETE' });
 ) => fetch(`${apiUrl}/destinations/${idToDelete}`, { method: 'DELETE' });
 
-export const deleteDestination = createAsyncAction('DELETE_DESTINATION', deleteFromDestinationsAPI);
+export const deleteDestination = createAsyncAction('DELETE_DESTINATION', deleteFromDestinationsAPI)(
+    { json: false },
+);
