@@ -2,30 +2,42 @@
 
 ## Installation steps
 
-All the commands stated here should be executed at the top level folder.
+### First Time Installation:
+1. Clone repo 
+2. Make sure you are logged into https://www.npmjs.com with your adobe corporate email address (and you have recieved the confirmation email and clicked through to validate/confirm email address)
+3. Make sure you have a `.npmrc` file in the top level (root) user of your computer with adobe artifactory `_auth` secret, and adobe corporate email address. Your top level `.npmrc` file should look something like this:
+    ``` bash
+    _auth={ADOBE-SECRET-TOKEN-HERE}
+    always-auth=true
+    email={ADOBE-CORPORATE-EMAIL-ADDRESS-HERE}
+    ```
+4. You may need to restart your terminal processes for these changes to take effect
+5. For first time installation, begin at the top level of the project folder with: `npm install`
+6. Then (at the top level folder) run: `npx lerna bootstrap`
+7. Then navigate to your desired package (such as signals) `/portal-signals/packages/{DESIRED-PACKAGE}` and from the desired package folder, run: `npx lerna run build` 
+8. Then from the same place within your desired package folder (such as signals) `/portal-signals/packages/{DESIRED-PACKAGE` execute the start command: `npm start`
+9. Your localhost should now be up and running! :) 
 
+
+## After (Successful) First Time Installation:
 ``` javascript
-
-//Installation steps
+Execute at the top level folder:
 $ npm run clean  /// this will remove your old node_modules
 $ npm install // install lerna
 
-// Setup - Lerna basically goes and runs npm i on each package.
-$ npx lerna bootstrap
 
-// Build - Lerna runs npm run build on each package.
-$ npx lerna run build
-
+Navigate to the correct package and execute:
+$ npx lerna bootstrap //set up
+$ npm start //start the desired package
 ```
+
 
 ## Run commands on all packages
 
 To run a NPM command in all packages (if exists) is pretty easy with lerna
 
 ``` javascript
-
 $ npx lerna run build // this executes the build command in all packages
-
 ```
 
 ## Run commands on specific packages.
