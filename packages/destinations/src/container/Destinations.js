@@ -18,10 +18,22 @@ import Actions from '../components/Actions';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
-        if (column.key === 'action') {
-            return this.renderActionCell(data);
+        // TODO: This mapping is used in other open PR's extract and reuse once PR's merged
+        const serverNameTypeMap = {
+            PUSH: 'URL',
+            ADS: 'Cookie',
+            S2S: 'Device-based',
+            ANALYTICS: 'Adobe Experience Cloud',
+        };
+
+        switch (column.key) {
+            case 'action':
+                return this.renderActionCell(data);
+            case 'category':
+                return <span>{serverNameTypeMap[data['destinationType']]}</span>;
+            default:
+                return <span>{data[column.key]}</span>;
         }
-        return <span>{data[column.key]}</span>;
     };
 
     renderActionCell = data => {
