@@ -21,7 +21,7 @@ const fetchDestinationsHandlers = createAsyncActionHandlers(fetchDestinations, {
     }),
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, _.keyBy(action.payload.list, el => el.destinationId)),
+        byIds: _.merge({}, state.byIds, _.keyBy(action.payload.list, el => el.destinationId)),
         idsToDisplay: action.payload.list.map(({ destinationId }) => destinationId),
         replacementDataInFlight: false,
     }),
