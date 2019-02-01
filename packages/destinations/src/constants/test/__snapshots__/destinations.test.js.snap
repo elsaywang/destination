@@ -8,3 +8,23 @@ Array [
   "Custom",
 ]
 `;
+
+exports[`destination types constant matches snapshot 1`] = `
+Object {
+  "ADS": "Cookie",
+  "ANALYTICS": "Adobe Analytics",
+  "PEOPLE_BASED": "People-Based",
+  "PUSH": "URL",
+  "S2S": "Device-Based",
+}
+`;
+
+exports[`getCategoryByDestinationType matches snapshot 1`] = `"Custom"`;
+
+exports[`getCategoryByDestinationType matches snapshot 2`] = `"Custom"`;
+
+exports[`getCategoryByDestinationType matches snapshot 3`] = `"Integrated Platforms"`;
+
+exports[`getCategoryByDestinationType matches snapshot 4`] = `"Adobe Experience Cloud"`;
+
+exports[`getCategoryByDestinationType matches snapshot 5`] = `"Integrated Platforms"`;
