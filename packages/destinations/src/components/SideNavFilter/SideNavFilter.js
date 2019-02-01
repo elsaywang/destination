@@ -32,7 +32,7 @@ class SideNavFilter extends Component {
                     onChange={this.handleNavFilterChange}>
                     {filterOptions.map(({ label, value }) => (
                         <Tab
-                            data-test={`${value.toLowerCase()}-type-filter`}
+                            data-test={`${value.toLowerCase().replace(/\W/g, '-')}-type-filter`}
                             selected={filterType === value}
                             key={value}
                             value={value}
