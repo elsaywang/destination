@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './App.css';
 import { Provider } from 'react-redux';
-import { Route, Switch, Redirect, HashRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Redirect} from 'react-router-dom';
 import Nav from '../components/Nav';
 import Layout from '../components/Layout';
 import Destinations from './Destinations';
@@ -11,12 +11,13 @@ import { routes } from '../constants/navTab';
 const store = configureStore();
 
 const App = () => (
-    <HashRouter>
+    <BrowserRouter basename="/portal">
         <Switch>
-            <Route exact path={'/destinations/configuration'} render={props => <ConfigurationContainer />} />
-            <Route component={DestinationContainer} />
+            <Route exact path={'/administration/integrated-accounts'} component={ConfigurationContainer} />
+            <Route exact path="/" render={() => (  <Redirect to="/destinations/all"/>)} />
+            <Route path='/destinations' render={DestinationContainer} />
         </Switch>
-    </HashRouter>
+    </BrowserRouter>
 );
 
 const DestinationContainer = () => (
@@ -24,20 +25,16 @@ const DestinationContainer = () => (
         <Fragment>
             <Layout heading="Destinations">
                 <Nav routes={routes} />
-                {routes.map(({ route, name }) => (
-                    <Route
-                        exact
-                        path={route}
-                        key={route}
-                        render={props =>
-                            route === '/' ? (
-                                <Redirect to="/destinations" />
-                            ) : (
-                                <Destinations {...props} destinationType={name} />
-                            )
-                        }
-                    />
-                ))}
+                    {routes.map(item => (
+                        <Route
+                            exact
+                            path={item.route}
+                            key={item.route}
+                            component={props =>
+                                <Destinations {...props} currentDestination={item} />
+                            }
+                        />
+                    ))}
             </Layout>
         </Fragment>
     </Provider>

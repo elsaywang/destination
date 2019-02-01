@@ -18,18 +18,15 @@ const queryDestinationsAPI = (queryOptions, getStore) => {
         descending: false,
     };
 
-    const queryDataFromStore = _.pick(getStore().destinations, [
-        'sortColumn',
-        'sortDirection',
-        'searchFormText',
-    ]);
-
     // HACK: so so gross. This function shouldn't have to know so much about the store's structure
     const storeToQueryMappers = {
         sortColumn: sortColumn => ({ sortBy: sortColumn.key }),
         sortDirection: sortDirection => ({ descending: sortDirection === -1 }),
         searchFormText: searchFormText => ({ search: searchFormText }),
+        filterBy: filterBy => ({ restrictType: filterBy }),
     };
+
+    const queryDataFromStore = _.pick(getStore().destinations, Object.keys(storeToQueryMappers));
 
     const appliedQueryOptions = _.transform(
         queryDataFromStore,
@@ -37,10 +34,15 @@ const queryDestinationsAPI = (queryOptions, getStore) => {
         {},
     );
 
-    queryOptions = _.merge({}, defaultQueryOptions, appliedQueryOptions, queryOptions);
-    const queryString = Object.entries(queryOptions)
-        .map(([key, val]) => `${key}=${val}`)
-        .join('&');
+    const allQueryOptions = _.merge({}, defaultQueryOptions, appliedQueryOptions, queryOptions);
+    const queryOptionsAsTuples = _.flatMap(Object.entries(allQueryOptions), ([key, val]) => {
+        if (Array.isArray(val)) {
+            return val.map(queryVal => [key, queryVal]);
+        }
+
+        return [[key, val]];
+    });
+    const queryString = queryOptionsAsTuples.map(([key, val]) => `${key}=${val}`).join('&');
 
     return fetch(`${apiUrl}/destinations?${queryString}`);
 };
@@ -51,16 +53,20 @@ export const applySearch = createAction('APPLY_SEARCH');
 
 export const applyFilter = createAction('APPLY_FILTER');
 
-export const fetchDestinations = createAsyncAction('FETCH_DESTINATIONS', queryDestinationsAPI);
+export const fetchDestinations = createAsyncAction('FETCH_DESTINATIONS', queryDestinationsAPI)({
+    json: true,
+});
 
 export const fetchMoreDestinations = createAsyncAction(
     'FETCH_MORE_DESTINATIONS',
     queryDestinationsAPI,
-);
+)({ json: true });
 
 //TODO: update with real api delete call
 export const deleteFromDestinationsAPI = (
     idToDelete, //fetch(`${portalUrl}/api/v1/destinations/${idToDelete}`, { method: 'DELETE' });
 ) => fetch(`${apiUrl}/destinations/${idToDelete}`, { method: 'DELETE' });
 
-export const deleteDestination = createAsyncAction('DELETE_DESTINATION', deleteFromDestinationsAPI);
+export const deleteDestination = createAsyncAction('DELETE_DESTINATION', deleteFromDestinationsAPI)(
+    { json: false },
+);

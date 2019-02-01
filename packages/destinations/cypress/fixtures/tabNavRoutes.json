@@ -1,6 +1,6 @@
 [
-    { "route": "/destinations", "name": "All" },
-    { "route": "/destinations/adobeExperienceCloud", "name": "Adobe Experience Cloud" },
-    { "route": "/destinations/integratedPlatforms", "name": "Integrated Platforms" },
-    { "route": "/destinations/custom", "name": "Custom" }
+    { "route": "/all", "name": "All" },
+    { "route": "/adobeExperienceCloud", "name": "Adobe Experience Cloud", "types": ["ANALYTICS"] },
+    { "route": "/integratedPlatforms", "name": "Integrated Platforms", "types": ["S2S"] },
+    { "route": "/custom", "name": "Custom", "types": ["PUSH", "ADS"] }
 ]

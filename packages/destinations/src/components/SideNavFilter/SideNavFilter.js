@@ -15,15 +15,15 @@ class SideNavFilter extends Component {
     }
 
     handleNavFilterChange = tabIndex => {
-        const { filterOptions } = this.props;
-        const { value } = filterOptions[tabIndex];
-        this.setState({ selectedIndex: tabIndex }, () => this.props.onFilterTypeChange(value));
+        this.setState({ selectedIndex: tabIndex }, () =>
+            this.props.onFilterTypeChange(this.props.filterOptions[tabIndex]),
+        );
     };
 
     render() {
         const { filterOptions, filterType } = this.props;
         return (
-            <div className={styles.filterType} data-test='side-nav-filter'>
+            <div className={styles.filterType} data-test="side-nav-filter">
                 <TabList
                     orientation="vertical"
                     variant="compact"
@@ -32,7 +32,7 @@ class SideNavFilter extends Component {
                     onChange={this.handleNavFilterChange}>
                     {filterOptions.map(({ label, value }) => (
                         <Tab
-                            data-test={`${value.toLowerCase()}-type-filter`}
+                            data-test={`${value.toLowerCase().replace(/\W/g, '-')}-type-filter`}
                             selected={filterType === value}
                             key={value}
                             value={value}

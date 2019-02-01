@@ -4,7 +4,16 @@ exports[`renders <App/> without crashing rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Destinations
-    destinationType="Integrated Platforms"
+    applyFilter={[Function]}
+    currentDestination={
+        Object {
+            "name": "Integrated Platforms",
+            "route": "/destinations/integratedPlatforms",
+            "types": Array [
+              "S2S",
+            ],
+          }
+    }
     destinations={
         Object {
             "byIds": Object {
@@ -54,6 +63,7 @@ ShallowWrapper {
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -74,14 +84,21 @@ ShallowWrapper {
                               Array [
                                         Object {
                                           "label": "ALL PLATFORMS",
+                                          "serverTypes": Array [
+                                            "S2S",
+                                          ],
                                           "value": "Integrated Platforms",
                                         },
                                         Object {
                                           "label": "PEOPLE-BASED",
+                                          "serverTypes": Array [],
                                           "value": "People-Based",
                                         },
                                         Object {
                                           "label": "DEVICE-BASED",
+                                          "serverTypes": Array [
+                                            "S2S",
+                                          ],
                                           "value": "Device-Based",
                                         },
                                       ]
@@ -138,7 +155,7 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    dataTest="peopleBased-destination-table"
+                    dataTest="destination-list-table"
                     height={900}
                     items={
                               Array [
@@ -190,7 +207,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": undefined,
-      "data-test": "integrated platforms-destinations",
+      "data-test": "integrated-platforms-destinations",
     },
     "ref": null,
     "rendered": Array [
@@ -204,14 +221,21 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "label": "ALL PLATFORMS",
+                                      "serverTypes": Array [
+                                        "S2S",
+                                      ],
                                       "value": "Integrated Platforms",
                                     },
                                     Object {
                                       "label": "PEOPLE-BASED",
+                                      "serverTypes": Array [],
                                       "value": "People-Based",
                                     },
                                     Object {
                                       "label": "DEVICE-BASED",
+                                      "serverTypes": Array [
+                                        "S2S",
+                                      ],
                                       "value": "Device-Based",
                                     },
                                   ]
@@ -231,14 +255,21 @@ ShallowWrapper {
             "filterOptions": Array [
               Object {
                 "label": "ALL PLATFORMS",
+                "serverTypes": Array [
+                  "S2S",
+                ],
                 "value": "Integrated Platforms",
               },
               Object {
                 "label": "PEOPLE-BASED",
+                "serverTypes": Array [],
                 "value": "People-Based",
               },
               Object {
                 "label": "DEVICE-BASED",
+                "serverTypes": Array [
+                  "S2S",
+                ],
                 "value": "Device-Based",
               },
             ],
@@ -301,7 +332,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
-            dataTest="peopleBased-destination-table"
+            dataTest="destination-list-table"
             height={900}
             items={
                         Array [
@@ -399,7 +430,7 @@ ShallowWrapper {
                 "width": 200,
               },
             ],
-            "dataTest": "peopleBased-destination-table",
+            "dataTest": "destination-list-table",
             "height": 900,
             "items": Array [
               Object {
@@ -468,14 +499,21 @@ ShallowWrapper {
                                     Array [
                                                 Object {
                                                   "label": "ALL PLATFORMS",
+                                                  "serverTypes": Array [
+                                                    "S2S",
+                                                  ],
                                                   "value": "Integrated Platforms",
                                                 },
                                                 Object {
                                                   "label": "PEOPLE-BASED",
+                                                  "serverTypes": Array [],
                                                   "value": "People-Based",
                                                 },
                                                 Object {
                                                   "label": "DEVICE-BASED",
+                                                  "serverTypes": Array [
+                                                    "S2S",
+                                                  ],
                                                   "value": "Device-Based",
                                                 },
                                               ]
@@ -532,7 +570,7 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        dataTest="peopleBased-destination-table"
+                        dataTest="destination-list-table"
                         height={900}
                         items={
                                     Array [
@@ -584,7 +622,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": undefined,
-        "data-test": "integrated platforms-destinations",
+        "data-test": "integrated-platforms-destinations",
       },
       "ref": null,
       "rendered": Array [
@@ -598,14 +636,21 @@ ShallowWrapper {
                             Array [
                                           Object {
                                             "label": "ALL PLATFORMS",
+                                            "serverTypes": Array [
+                                              "S2S",
+                                            ],
                                             "value": "Integrated Platforms",
                                           },
                                           Object {
                                             "label": "PEOPLE-BASED",
+                                            "serverTypes": Array [],
                                             "value": "People-Based",
                                           },
                                           Object {
                                             "label": "DEVICE-BASED",
+                                            "serverTypes": Array [
+                                              "S2S",
+                                            ],
                                             "value": "Device-Based",
                                           },
                                         ]
@@ -625,14 +670,21 @@ ShallowWrapper {
               "filterOptions": Array [
                 Object {
                   "label": "ALL PLATFORMS",
+                  "serverTypes": Array [
+                    "S2S",
+                  ],
                   "value": "Integrated Platforms",
                 },
                 Object {
                   "label": "PEOPLE-BASED",
+                  "serverTypes": Array [],
                   "value": "People-Based",
                 },
                 Object {
                   "label": "DEVICE-BASED",
+                  "serverTypes": Array [
+                    "S2S",
+                  ],
                   "value": "Device-Based",
                 },
               ],
@@ -695,7 +747,7 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              dataTest="peopleBased-destination-table"
+              dataTest="destination-list-table"
               height={900}
               items={
                             Array [
@@ -793,7 +845,7 @@ ShallowWrapper {
                   "width": 200,
                 },
               ],
-              "dataTest": "peopleBased-destination-table",
+              "dataTest": "destination-list-table",
               "height": 900,
               "items": Array [
                 Object {
@@ -852,9 +904,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
