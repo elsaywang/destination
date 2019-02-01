@@ -21,7 +21,7 @@ const fetchDestinationsHandlers = createAsyncActionHandlers(fetchDestinations, {
     }),
     onFulfilled: (state, action) => ({
         ...state,
-        byIds: _.merge({}, _.keyBy(action.payload.list, el => el.destinationId)),
+        byIds: _.merge({}, state.byIds, _.keyBy(action.payload.list, el => el.destinationId)),
         idsToDisplay: action.payload.list.map(({ destinationId }) => destinationId),
         replacementDataInFlight: false,
     }),
@@ -62,7 +62,10 @@ const deleteDestinationHandlers = createAsyncActionHandlers(deleteDestination, {
         idsToDisplay: state.idsToDisplay.filter(id => state.idToDelete && id !== state.idToDelete),
         replacementDataInFlight: false,
     }),
-    onError: _.indentity,
+    onError: state => ({
+        ...state,
+        replacementDataInFlight: false,
+    }),
 });
 
 export default handleActions(
@@ -98,7 +101,8 @@ export default handleActions(
             applyFilter,
             (state, action) => ({
                 ...state,
-                integratedPlatformType: action.payload,
+                filterBy: action.payload,
+                searchFormText: '',
             }),
         ],
     ]),

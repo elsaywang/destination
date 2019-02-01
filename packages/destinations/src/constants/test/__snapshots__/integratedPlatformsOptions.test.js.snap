@@ -4,14 +4,21 @@ exports[`integratedPlatformsOptions matches snapshot 1`] = `
 Array [
   Object {
     "label": "ALL PLATFORMS",
+    "serverTypes": Array [
+      "S2S",
+    ],
     "value": "Integrated Platforms",
   },
   Object {
     "label": "PEOPLE-BASED",
+    "serverTypes": Array [],
     "value": "People-Based",
   },
   Object {
     "label": "DEVICE-BASED",
+    "serverTypes": Array [
+      "S2S",
+    ],
     "value": "Device-Based",
   },
 ]

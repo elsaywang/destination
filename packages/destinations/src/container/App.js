@@ -13,7 +13,11 @@ const store = configureStore();
 const App = () => (
     <HashRouter>
         <Switch>
-            <Route exact path={'/destinations/configuration'} render={props => <ConfigurationContainer />} />
+            <Route
+                exact
+                path={'/destinations/configuration'}
+                render={props => <ConfigurationContainer />}
+            />
             <Route component={DestinationContainer} />
         </Switch>
     </HashRouter>
@@ -24,16 +28,16 @@ const DestinationContainer = () => (
         <Fragment>
             <Layout heading="Destinations">
                 <Nav routes={routes} />
-                {routes.map(({ route, name }) => (
+                {routes.map(item => (
                     <Route
                         exact
-                        path={route}
-                        key={route}
+                        path={item.route}
+                        key={item.route}
                         render={props =>
-                            route === '/' ? (
+                            item.route === '/' ? (
                                 <Redirect to="/destinations" />
                             ) : (
-                                <Destinations {...props} destinationType={name} />
+                                <Destinations {...props} currentDestination={item} />
                             )
                         }
                     />

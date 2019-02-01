@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Nav from '../Nav';
+import { RouterWrappedNav } from '../Nav';
 import { NavLink } from 'react-router-dom';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
 
@@ -16,7 +16,7 @@ describe('<Nav/> component', () => {
                 { route: '/adobeExperienceCloud', name: 'Adobe Experience Cloud' },
             ],
         };
-        const wrapper = shallow(<Nav {...props} />);
+        const wrapper = shallow(<RouterWrappedNav {...props} />);
 
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
