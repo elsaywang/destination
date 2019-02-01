@@ -3,13 +3,8 @@
 exports[`nav Tab routes constants matches snapshot 1`] = `
 Array [
   Object {
-    "name": "",
-    "route": "/",
-    "types": Array [],
-  },
-  Object {
     "name": "All",
-    "route": "/destinations",
+    "route": "/destinations/all",
     "types": Array [],
   },
   Object {

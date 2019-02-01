@@ -63,6 +63,7 @@ ShallowWrapper {
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
     "simulateError": [Function],
@@ -154,7 +155,7 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-                    dataTest="peopleBased-destination-table"
+                    dataTest="destination-list-table"
                     height={900}
                     items={
                               Array [
@@ -206,7 +207,7 @@ ShallowWrapper {
 </div>,
       ],
       "className": undefined,
-      "data-test": "integrated platforms-destinations",
+      "data-test": "integrated-platforms-destinations",
     },
     "ref": null,
     "rendered": Array [
@@ -331,7 +332,7 @@ ShallowWrapper {
                                     },
                                   ]
             }
-            dataTest="peopleBased-destination-table"
+            dataTest="destination-list-table"
             height={900}
             items={
                         Array [
@@ -429,7 +430,7 @@ ShallowWrapper {
                 "width": 200,
               },
             ],
-            "dataTest": "peopleBased-destination-table",
+            "dataTest": "destination-list-table",
             "height": 900,
             "items": Array [
               Object {
@@ -569,7 +570,7 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
-                        dataTest="peopleBased-destination-table"
+                        dataTest="destination-list-table"
                         height={900}
                         items={
                                     Array [
@@ -621,7 +622,7 @@ ShallowWrapper {
 </div>,
         ],
         "className": undefined,
-        "data-test": "integrated platforms-destinations",
+        "data-test": "integrated-platforms-destinations",
       },
       "ref": null,
       "rendered": Array [
@@ -746,7 +747,7 @@ ShallowWrapper {
                                           },
                                         ]
               }
-              dataTest="peopleBased-destination-table"
+              dataTest="destination-list-table"
               height={900}
               items={
                             Array [
@@ -844,7 +845,7 @@ ShallowWrapper {
                   "width": 200,
                 },
               ],
-              "dataTest": "peopleBased-destination-table",
+              "dataTest": "destination-list-table",
               "height": 900,
               "items": Array [
                 Object {
@@ -903,9 +904,13 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
         "lifecycles": Object {
           "componentDidUpdate": Object {
             "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
           },
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
