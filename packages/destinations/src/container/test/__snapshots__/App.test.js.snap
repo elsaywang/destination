@@ -17,14 +17,21 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "basename": "/portal",
       "children": <Switch>
         <Route
+                component={[Function]}
                 exact={true}
-                path="/destinations/configuration"
+                path="/administration/integrated-accounts"
+        />
+        <Route
+                exact={true}
+                path="/"
                 render={[Function]}
         />
         <Route
-                component={[Function]}
+                path="/destinations"
+                render={[Function]}
         />
 </Switch>,
     },
@@ -36,12 +43,18 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Route
+            component={[Function]}
             exact={true}
-            path="/destinations/configuration"
+            path="/administration/integrated-accounts"
+/>,
+          <Route
+            exact={true}
+            path="/"
             render={[Function]}
 />,
           <Route
-            component={[Function]}
+            path="/destinations"
+            render={[Function]}
 />,
         ],
       },
@@ -52,8 +65,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "component": [Function],
             "exact": true,
-            "path": "/destinations/configuration",
+            "path": "/administration/integrated-accounts",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/",
             "render": [Function],
           },
           "ref": null,
@@ -65,7 +91,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
+            "path": "/destinations",
+            "render": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -82,14 +109,21 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "basename": "/portal",
         "children": <Switch>
           <Route
+                    component={[Function]}
                     exact={true}
-                    path="/destinations/configuration"
+                    path="/administration/integrated-accounts"
+          />
+          <Route
+                    exact={true}
+                    path="/"
                     render={[Function]}
           />
           <Route
-                    component={[Function]}
+                    path="/destinations"
+                    render={[Function]}
           />
 </Switch>,
       },
@@ -101,12 +135,18 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Route
+              component={[Function]}
               exact={true}
-              path="/destinations/configuration"
+              path="/administration/integrated-accounts"
+/>,
+            <Route
+              exact={true}
+              path="/"
               render={[Function]}
 />,
             <Route
-              component={[Function]}
+              path="/destinations"
+              render={[Function]}
 />,
           ],
         },
@@ -117,8 +157,21 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "component": [Function],
               "exact": true,
-              "path": "/destinations/configuration",
+              "path": "/administration/integrated-accounts",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/",
               "render": [Function],
             },
             "ref": null,
@@ -130,7 +183,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "component": [Function],
+              "path": "/destinations",
+              "render": [Function],
             },
             "ref": null,
             "rendered": null,

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import _ from 'lodash';
 import { connect } from 'react-redux';
 import Table from '../components/Table';
 import SideNavFilter from '../components/SideNavFilter';
@@ -100,14 +99,16 @@ class Destinations extends Component {
         return (
             <div
                 className={styles.destinationContainer}
-                data-test={`${currentDestination.name.toLowerCase()}-destinations`}>
+                data-test={`${currentDestination.name
+                    .toLowerCase()
+                    .replace(/\W/g, '-')}-destinations`}>
                 {this.isIntegratedPlatform() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
                     {replacementDataInFlight ? (
                         <p>Loading</p>
                     ) : (
                         <Table
-                            dataTest="peopleBased-destination-table"
+                            dataTest="destination-list-table"
                             items={destinationsList}
                             onSortChange={this.sortData}
                             reachedEndOfRows={fetchMoreDestinations}

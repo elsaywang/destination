@@ -24,8 +24,9 @@ describe('Integration Tests for table', function() {
             cy.route('get', '**sortBy**', () => {
                 sortAPICallCount++;
             });
+            const selectedRoute = routes.find(r => `#${r.route}` === URL_SLUG) || routes[0];
 
-            columnsForDestinationType[routes.find(r => `#${r.route}` === URL_SLUG).name].forEach(
+            columnsForDestinationType[selectedRoute.name].forEach(
                 ({ title }) => {
                     cy.contains(title).click();
                 },
