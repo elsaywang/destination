@@ -43,9 +43,7 @@ class Destinations extends Component {
         const { name } = currentDestination;
         const currentRecordCategory = getCategoryByDestinationType(data.destinationType);
 
-        const includeMetrics =
-            this.isIntegratedPlatform() ||
-            (name === 'All' && this.isIntegratedPlatform(currentRecordCategory));
+        const includeMetrics = this.isIntegratedPlatform(currentRecordCategory);
 
         return (
             <Actions
