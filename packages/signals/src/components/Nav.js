@@ -12,8 +12,6 @@ function Nav(props) {
         <TabList
             className={styles.tabList}
             selectedIndex={getSelectedIndex()}
-            quiet
-            variant="compact"
             onChange={noOp}>
             <Tab selected={props.location.pathname === '/'}>
                 <NavLink to="/" className={styles.link} data-test="dashboard-nav-link">
