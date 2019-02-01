@@ -3,12 +3,13 @@ import { shallow } from 'enzyme';
 import { Destinations } from '../Destinations';
 import Table from '../../components/Table';
 import SideNavFilter from '../../components/SideNavFilter';
+import { routes } from '../../constants/navTab';
 
 describe('renders <App/> without crashing', () => {
+    const noOp = () => {};
     const props = {
-        fetchDestinations: () => {
-            /* no-op */
-        },
+        fetchDestinations: noOp,
+        applyFilter: noOp,
         destinations: {
             byIds: {
                 0: {
@@ -47,9 +48,10 @@ describe('renders <App/> without crashing', () => {
             idsToDisplay: [0, 1, 2, 3],
             replacementDataInFlight: false,
         },
-        destinationType: 'Integrated Platforms',
+        currentDestination: routes.find(({ name }) => name === 'Integrated Platforms'),
     };
     const wrapper = shallow(<Destinations {...props} />);
+
     describe('rendering', () => {
         it('matches snapshot', () => {
             expect(wrapper).toMatchSnapshot();
@@ -57,11 +59,14 @@ describe('renders <App/> without crashing', () => {
         it('renders <Table/>', () => {
             expect(wrapper.find(Table).exists()).toBeTruthy();
         });
-        it('renders <SideNavFilter/> when `destinationType` is `Integrated Platforms`', () => {
+        it('renders <SideNavFilter/> when `currentDestination` name is `Integrated Platforms`', () => {
             expect(wrapper.find(SideNavFilter).exists()).toBeTruthy();
         });
-        it('renders no <SideNavFilter/> when `destinationType` is non-`Integrated Platforms`', () => {
-            wrapper.setProps({ destinationType: 'Adobe Experience Cloud' });
+        it('renders no <SideNavFilter/> when `currentDestination` name is non-`Integrated Platforms`', () => {
+            const nonIntegratedPlatform = routes.find(
+                ({ name }) => name && name !== 'Integrated Platforms',
+            );
+            wrapper.setProps({ currentDestination: nonIntegratedPlatform });
             expect(wrapper.find(SideNavFilter).exists()).toBeFalsy();
         });
     });

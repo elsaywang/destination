@@ -101,7 +101,8 @@ export default handleActions(
             applyFilter,
             (state, action) => ({
                 ...state,
-                integratedPlatformType: action.payload,
+                filterBy: action.payload,
+                searchFormText: '',
             }),
         ],
     ]),

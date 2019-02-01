@@ -4,7 +4,16 @@ exports[`renders <App/> without crashing rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Destinations
-    destinationType="Integrated Platforms"
+    applyFilter={[Function]}
+    currentDestination={
+        Object {
+            "name": "Integrated Platforms",
+            "route": "/destinations/integratedPlatforms",
+            "types": Array [
+              "S2S",
+            ],
+          }
+    }
     destinations={
         Object {
             "byIds": Object {
@@ -74,14 +83,21 @@ ShallowWrapper {
                               Array [
                                         Object {
                                           "label": "ALL PLATFORMS",
+                                          "serverTypes": Array [
+                                            "S2S",
+                                          ],
                                           "value": "Integrated Platforms",
                                         },
                                         Object {
                                           "label": "PEOPLE-BASED",
+                                          "serverTypes": Array [],
                                           "value": "People-Based",
                                         },
                                         Object {
                                           "label": "DEVICE-BASED",
+                                          "serverTypes": Array [
+                                            "S2S",
+                                          ],
                                           "value": "Device-Based",
                                         },
                                       ]
@@ -204,14 +220,21 @@ ShallowWrapper {
                         Array [
                                     Object {
                                       "label": "ALL PLATFORMS",
+                                      "serverTypes": Array [
+                                        "S2S",
+                                      ],
                                       "value": "Integrated Platforms",
                                     },
                                     Object {
                                       "label": "PEOPLE-BASED",
+                                      "serverTypes": Array [],
                                       "value": "People-Based",
                                     },
                                     Object {
                                       "label": "DEVICE-BASED",
+                                      "serverTypes": Array [
+                                        "S2S",
+                                      ],
                                       "value": "Device-Based",
                                     },
                                   ]
@@ -231,14 +254,21 @@ ShallowWrapper {
             "filterOptions": Array [
               Object {
                 "label": "ALL PLATFORMS",
+                "serverTypes": Array [
+                  "S2S",
+                ],
                 "value": "Integrated Platforms",
               },
               Object {
                 "label": "PEOPLE-BASED",
+                "serverTypes": Array [],
                 "value": "People-Based",
               },
               Object {
                 "label": "DEVICE-BASED",
+                "serverTypes": Array [
+                  "S2S",
+                ],
                 "value": "Device-Based",
               },
             ],
@@ -468,14 +498,21 @@ ShallowWrapper {
                                     Array [
                                                 Object {
                                                   "label": "ALL PLATFORMS",
+                                                  "serverTypes": Array [
+                                                    "S2S",
+                                                  ],
                                                   "value": "Integrated Platforms",
                                                 },
                                                 Object {
                                                   "label": "PEOPLE-BASED",
+                                                  "serverTypes": Array [],
                                                   "value": "People-Based",
                                                 },
                                                 Object {
                                                   "label": "DEVICE-BASED",
+                                                  "serverTypes": Array [
+                                                    "S2S",
+                                                  ],
                                                   "value": "Device-Based",
                                                 },
                                               ]
@@ -598,14 +635,21 @@ ShallowWrapper {
                             Array [
                                           Object {
                                             "label": "ALL PLATFORMS",
+                                            "serverTypes": Array [
+                                              "S2S",
+                                            ],
                                             "value": "Integrated Platforms",
                                           },
                                           Object {
                                             "label": "PEOPLE-BASED",
+                                            "serverTypes": Array [],
                                             "value": "People-Based",
                                           },
                                           Object {
                                             "label": "DEVICE-BASED",
+                                            "serverTypes": Array [
+                                              "S2S",
+                                            ],
                                             "value": "Device-Based",
                                           },
                                         ]
@@ -625,14 +669,21 @@ ShallowWrapper {
               "filterOptions": Array [
                 Object {
                   "label": "ALL PLATFORMS",
+                  "serverTypes": Array [
+                    "S2S",
+                  ],
                   "value": "Integrated Platforms",
                 },
                 Object {
                   "label": "PEOPLE-BASED",
+                  "serverTypes": Array [],
                   "value": "People-Based",
                 },
                 Object {
                   "label": "DEVICE-BASED",
+                  "serverTypes": Array [
+                    "S2S",
+                  ],
                   "value": "Device-Based",
                 },
               ],

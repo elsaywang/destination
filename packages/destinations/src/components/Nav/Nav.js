@@ -7,14 +7,14 @@ import styles from './Nav.css';
 import Settings from '@react/react-spectrum/Icon/Settings';
 import Button from '@react/react-spectrum/Button';
 import React from 'react';
+import { connect } from 'react-redux';
+import _ from 'lodash';
+import { fetchDestinations, applyFilter } from '../../redux/actions/destinations';
 
-function Nav({ location, routes }) {
-    const getSelectedIndex = () =>
-        routes
-            .filter(({ route }) => route !== '/')
-            .map(({ route }) => route)
-            .indexOf(location.pathname);
-    const noOp = () => {};
+function Nav({ location, routes, applyFilter }) {
+    const tabRoutes = routes.filter(({ route }) => route !== '/');
+
+    const getSelectedIndex = () => tabRoutes.map(({ route }) => route).indexOf(location.pathname);
 
     return (
         <div className={styles.navList}>
@@ -24,19 +24,17 @@ function Nav({ location, routes }) {
                         selectedIndex={getSelectedIndex()}
                         quiet
                         variant="compact"
-                        onChange={noOp}>
-                        {routes
-                            .filter(({ route }) => route !== '/')
-                            .map(({ route, name }) => (
-                                <Tab selected={location.pathname === route} key={route}>
-                                    <NavLink
-                                        to={route}
-                                        className={styles.link}
-                                        data-test={`${name.toLowerCase()}-nav-link`}>
-                                        {name}
-                                    </NavLink>
-                                </Tab>
-                            ))}
+                        onChange={indexSelected => applyFilter(tabRoutes[indexSelected].types)}>
+                        {tabRoutes.map(({ route, name }) => (
+                            <Tab selected={location.pathname === route} key={route}>
+                                <NavLink
+                                    to={route}
+                                    className={styles.link}
+                                    data-test={`${name.toLowerCase()}-nav-link`}>
+                                    {name}
+                                </NavLink>
+                            </Tab>
+                        ))}
                     </TabList>
                 </GridColumn>
                 <GridColumn
@@ -67,4 +65,14 @@ Nav.propTypes = {
         }).isRequired,
     ),
 };
-export default withRouter(Nav);
+
+const RouterWrappedNav = withRouter(Nav);
+
+export { RouterWrappedNav };
+
+export default withRouter(
+    connect(
+        () => {},
+        { fetchDestinations, applyFilter },
+    )(Nav),
+);
