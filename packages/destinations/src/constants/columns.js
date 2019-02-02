@@ -17,7 +17,7 @@ const allColumnTypes = [
     },
     {
         title: 'TYPE',
-        key: 'type',
+        key: 'destinationType',
         width: 150,
         active: true,
         sortable: true,

@@ -26,7 +26,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Heading
-          className={undefined}
+          className=""
           variant="subtitle2"
 >
           Shareable Audience
@@ -46,7 +46,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "Shareable Audience",
-          "className": undefined,
+          "className": "",
           "variant": "subtitle2",
         },
         "ref": null,
@@ -76,7 +76,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Heading
-            className={undefined}
+            className=""
             variant="subtitle2"
 >
             Shareable Audience
@@ -96,7 +96,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Shareable Audience",
-            "className": undefined,
+            "className": "",
             "variant": "subtitle2",
           },
           "ref": null,

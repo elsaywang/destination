@@ -5,7 +5,11 @@ import Table from '../components/Table';
 import SideNavFilter from '../components/SideNavFilter';
 import styles from './Destinations.css';
 import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
-import { destinationCategories } from '../constants/destinations';
+import {
+    destinationCategories,
+    getCategoryByDestinationType,
+    destinationTypeMap,
+} from '../constants/destinations';
 import {
     updateIntegratedPlatformType,
     applySort,
@@ -19,32 +23,26 @@ import Actions from '../components/Actions';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
-        // TODO: This mapping is used in other open PR's extract and reuse once PR's merged
-        const serverNameTypeMap = {
-            PUSH: 'URL',
-            ADS: 'Cookie',
-            S2S: 'Device-based',
-            ANALYTICS: 'Adobe Experience Cloud',
-        };
-
-        switch (column.key) {
+        const { destinationType } = data;
+        const { key } = column;
+        switch (key) {
             case 'action':
                 return this.renderActionCell(data);
             case 'category':
-                return <span>{serverNameTypeMap[data['destinationType']]}</span>;
+                return <span>{getCategoryByDestinationType(destinationType)}</span>;
+            case 'destinationType':
+                return <span>{destinationTypeMap[destinationType]}</span>;
             default:
-                return <span>{data[column.key]}</span>;
+                return <span>{data[key]}</span>;
         }
     };
 
     renderActionCell = data => {
-        const { category } = data;
-        const { currentDestination: name, deleteDestination } = this.props;
-        //TODO: this validation could be simplified once hooked with real-data
-        const includeMetrics =
-            name === 'Integrated Platforms' ||
-            (category === 'Integrated Platforms' && name === 'All');
+        const { currentDestination, deleteDestination } = this.props;
+        const { name } = currentDestination;
+        const currentRecordCategory = getCategoryByDestinationType(data.destinationType);
 
+        const includeMetrics = this.isIntegratedPlatform(currentRecordCategory);
 
         return (
             <Actions
@@ -55,7 +53,8 @@ class Destinations extends Component {
         );
     };
 
-    showSideNavFilter = () => this.props.currentDestination.name === 'Integrated Platforms';
+    isIntegratedPlatform = (category = this.props.currentDestination.name) =>
+        category === 'Integrated Platforms';
 
     sortData = ({ column, direction }) => {
         this.props.applySort({ sortColumn: column, sortDirection: direction });
@@ -100,9 +99,10 @@ class Destinations extends Component {
         return (
             <div
                 className={styles.destinationContainer}
-                data-test={`${currentDestination.name.toLowerCase().replace(/\W/g, '-')}-destinations`}>
-                {this.showSideNavFilter() && renderSideNavFilter}
-
+                data-test={`${currentDestination.name
+                    .toLowerCase()
+                    .replace(/\W/g, '-')}-destinations`}>
+                {this.isIntegratedPlatform() && renderSideNavFilter}
                 <div className={styles.tableContainer}>
                     {replacementDataInFlight ? (
                         <p>Loading</p>
