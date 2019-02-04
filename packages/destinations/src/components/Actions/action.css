@@ -29,3 +29,6 @@
   font-weight: var(--spectrum-global-font-weight-light);
   margin-top: -0.5rem;
 }
+:local(.lifeTimeAddressableAudience){
+  margin-top: 0.85rem;
+}
