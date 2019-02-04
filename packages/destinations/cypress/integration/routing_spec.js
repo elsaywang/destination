@@ -1,7 +1,7 @@
 const routes = require('../fixtures/tabNavRoutes.json');
 
-describe('Integration Tests for routing', function () {
-    it('should check the ability for routing in the UI', function (done) {
+describe('Integration Tests for routing', function() {
+    it('should check the ability for routing in the UI', function(done) {
         cy.on('uncaught:exception', err => {
             expect(err.message).to.include('.props.onClick is not a function');
 
@@ -19,11 +19,11 @@ describe('Integration Tests for routing', function () {
 
     describe('when routing to Destinations Dashboard (home) URL', () => {
         beforeEach(() => {
-            cy.visit('/');
+            cy.visit('/portal/destinations/');
         });
 
         xit('url should redirect to destinations by default', () => {
-            cy.url().should('match', /\/destinations/);
+            cy.url().should('match', /\/portal\/destinations/);
         });
 
         it('should be the dashboard page with Destinations title', () => {
@@ -71,7 +71,7 @@ describe('Integration Tests for routing', function () {
 
     describe('when click different tab links ', () => {
         beforeEach(() => {
-            cy.visit('/');
+            cy.visit('/portal/destinations/');
         });
 
         it('should route to all the correct urls and TabLinks ', () => {
@@ -82,7 +82,7 @@ describe('Integration Tests for routing', function () {
                 cy.get(currentDataTest)
                     .click()
                     .then(() => {
-                        cy.url().should('match', new RegExp(`destinations${route}`));
+                        cy.url().should('match', new RegExp(`${route}`));
                     });
 
                 cy.get(`.spectrum-Tabs-item.is-selected ${currentDataTest}`).as('selectedNavTab');
@@ -108,7 +108,7 @@ describe('Integration Tests for routing', function () {
 
     describe('when click on the configuration button links ', () => {
         beforeEach(() => {
-            cy.visit('/');
+            cy.visit('/portal/destinations/');
         });
 
         it('should route to Configration page with correct url', () => {
