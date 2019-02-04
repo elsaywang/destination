@@ -5,18 +5,27 @@
 ### First Time Installation:
 1. Clone repo 
 2. Make sure you are logged into https://www.npmjs.com with your adobe corporate email address (and you have recieved the confirmation email and clicked through to validate/confirm email address)
-3. Make sure you have a `.npmrc` file in the top level (root) user of your computer with adobe artifactory `_auth` secret, and adobe corporate email address. Your top level `.npmrc` file should look something like this:
-    ``` bash
-    _auth={ADOBE-SECRET-TOKEN-HERE}
-    always-auth=true
-    email={ADOBE-CORPORATE-EMAIL-ADDRESS-HERE}
-    ```
-4. You may need to restart your terminal processes for these changes to take effect
-5. For first time installation, begin at the top level of the project folder with: `npm install`
-6. Then (at the top level folder) run: `npx lerna bootstrap`
-7. Then navigate to your desired package (such as signals) `/portal-signals/packages/{DESIRED-PACKAGE}` and from the desired package folder, run: `npx lerna run build` 
-8. Then from the same place within your desired package folder (such as signals) `/portal-signals/packages/{DESIRED-PACKAGE` execute the start command: `npm start`
-9. Your localhost should now be up and running! :) 
+3. After you are logged in through the website, please type `npm login` in your terminal and use the same credentials (corporate email address) to create the npm account locally. 
+4. Make sure you have a `.npmrc` file in the top level (root) user of your computer with adobe artifactory `_auth` secret, adobe corporate email address, and npm auth token.
+
+    Your top level `.npmrc` file should include these lines:
+
+``` javascript
+        _auth={ADOBE-SECRET-TOKEN-HERE}
+        always-auth=true
+        email={ADOBE-CORPORATE-EMAIL-ADDRESS-HERE}
+        //registry.npmjs.org/:_authToken={NPM-AUTH-TOKEN}
+```
+
+5. You may need to restart your terminal processes for these changes to take effect
+6. For first time installation, begin at the top level of the project folder with: `npm install`
+7. Then (at the top level folder) run: `npx lerna bootstrap`
+8. Then to execute the build script you can either:
+    - Build every package from the top level folder by running: `npx lerna run  build` (this will run the build script for each package)
+    - Or navigate to your desired package (such as signals) and build just the  one package. Navigate to desired package: `/portal-signals/packages/ {DESIRED-PACKAGE}` and from the desired package folder, run: `npm run build` 
+    - You can also build a specific package with lerna from the top level by    running: `npx lerna run build --scope {NAME-OF-PACKAGE} --stream`
+9. Then navigate to your desired package folder (such as signals) `/portal-signals/packages/{DESIRED-PACKAGE}` and execute the start command: `npm start`
+10. Your localhost should now be up and running! :)     
 
 
 ## After (Successful) First Time Installation:
@@ -24,10 +33,10 @@
 Execute at the top level folder:
 $ npm run clean  /// this will remove your old node_modules
 $ npm install // install lerna
+$ npx lerna bootstrap //set up
 
 
 Navigate to the correct package and execute:
-$ npx lerna bootstrap //set up
 $ npm start //start the desired package
 ```
 
@@ -45,9 +54,7 @@ $ npx lerna run build // this executes the build command in all packages
 It's common that you dont want to run a command on all packages, so lets say that you only want to build Data Explorer App. For that you can use `--scope` flag from lerna which allows you to run a command on a specific project, the parameters must be the name of the package from its `package.json` it wont work with the directory name.
 
 ``` javascript
-
-$ npx lerna run build --scope portal-signals-client
-
+    $ npx lerna run build --scope portal-signals-client
 ```
 
 ## Adding a new package.
