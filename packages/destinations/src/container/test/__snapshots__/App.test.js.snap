@@ -27,7 +27,23 @@ ShallowWrapper {
         />
         <Route
                 exact={true}
-                path="/"
+                path="/destinations"
+                render={[Function]}
+        />
+        <Route
+                path="/destinations/all"
+                render={[Function]}
+        />
+        <Route
+                path="/destinations/adobeExperienceCloud"
+                render={[Function]}
+        />
+        <Route
+                path="/destinations/integratedPlatforms"
+                render={[Function]}
+        />
+        <Route
+                path="/destinations/custom"
                 render={[Function]}
         />
         <Route
@@ -50,9 +66,27 @@ ShallowWrapper {
 />,
           <Route
             exact={true}
-            path="/"
+            path="/destinations"
             render={[Function]}
 />,
+          Array [
+            <Route
+              path="/destinations/all"
+              render={[Function]}
+/>,
+            <Route
+              path="/destinations/adobeExperienceCloud"
+              render={[Function]}
+/>,
+            <Route
+              path="/destinations/integratedPlatforms"
+              render={[Function]}
+/>,
+            <Route
+              path="/destinations/custom"
+              render={[Function]}
+/>,
+          ],
           <Route
             path="/destinations"
             render={[Function]}
@@ -80,7 +114,55 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "exact": true,
-            "path": "/",
+            "path": "/destinations",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "/destinations/all",
+          "nodeType": "class",
+          "props": Object {
+            "path": "/destinations/all",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "/destinations/adobeExperienceCloud",
+          "nodeType": "class",
+          "props": Object {
+            "path": "/destinations/adobeExperienceCloud",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "/destinations/integratedPlatforms",
+          "nodeType": "class",
+          "props": Object {
+            "path": "/destinations/integratedPlatforms",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "/destinations/custom",
+          "nodeType": "class",
+          "props": Object {
+            "path": "/destinations/custom",
             "render": [Function],
           },
           "ref": null,
@@ -119,7 +201,23 @@ ShallowWrapper {
           />
           <Route
                     exact={true}
-                    path="/"
+                    path="/destinations"
+                    render={[Function]}
+          />
+          <Route
+                    path="/destinations/all"
+                    render={[Function]}
+          />
+          <Route
+                    path="/destinations/adobeExperienceCloud"
+                    render={[Function]}
+          />
+          <Route
+                    path="/destinations/integratedPlatforms"
+                    render={[Function]}
+          />
+          <Route
+                    path="/destinations/custom"
                     render={[Function]}
           />
           <Route
@@ -142,9 +240,27 @@ ShallowWrapper {
 />,
             <Route
               exact={true}
-              path="/"
+              path="/destinations"
               render={[Function]}
 />,
+            Array [
+              <Route
+                path="/destinations/all"
+                render={[Function]}
+/>,
+              <Route
+                path="/destinations/adobeExperienceCloud"
+                render={[Function]}
+/>,
+              <Route
+                path="/destinations/integratedPlatforms"
+                render={[Function]}
+/>,
+              <Route
+                path="/destinations/custom"
+                render={[Function]}
+/>,
+            ],
             <Route
               path="/destinations"
               render={[Function]}
@@ -172,7 +288,55 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "exact": true,
-              "path": "/",
+              "path": "/destinations",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/destinations/all",
+            "nodeType": "class",
+            "props": Object {
+              "path": "/destinations/all",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/destinations/adobeExperienceCloud",
+            "nodeType": "class",
+            "props": Object {
+              "path": "/destinations/adobeExperienceCloud",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/destinations/integratedPlatforms",
+            "nodeType": "class",
+            "props": Object {
+              "path": "/destinations/integratedPlatforms",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "/destinations/custom",
+            "nodeType": "class",
+            "props": Object {
+              "path": "/destinations/custom",
               "render": [Function],
             },
             "ref": null,

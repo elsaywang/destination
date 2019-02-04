@@ -4,7 +4,7 @@ import destinationsResponse from '../fixtures/destinations.json';
 
 describe('Integration Tests for table', function() {
     describe('when routing to Destinations Dashboard (home) URL', () => {
-        const URL_SLUG = '#/destinations';
+        const URL_SLUG = '/portal/destinations';
         beforeEach(() => {
             cy.server();
             cy.route('get', '**/api/**', destinationsResponse);
@@ -26,11 +26,9 @@ describe('Integration Tests for table', function() {
             });
             const selectedRoute = routes.find(r => `#${r.route}` === URL_SLUG) || routes[0];
 
-            columnsForDestinationType[selectedRoute.name].forEach(
-                ({ title }) => {
-                    cy.contains(title).click();
-                },
-            );
+            columnsForDestinationType[selectedRoute.name].forEach(({ title }) => {
+                cy.contains(title).click();
+            });
 
             const sortableColumns = Object.values(columnsForDestinationType).filter(
                 ({ sortable }) => sortable === true,

@@ -38,8 +38,7 @@ class Destinations extends Component {
     };
 
     renderActionCell = data => {
-        const { currentDestination, deleteDestination } = this.props;
-        const { name } = currentDestination;
+        const { deleteDestination } = this.props;
         const currentRecordCategory = getCategoryByDestinationType(data.destinationType);
 
         const includeMetrics = this.isIntegratedPlatform(currentRecordCategory);
