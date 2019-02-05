@@ -16,7 +16,7 @@ const App = () => (
             <Route
                 exact
                 path={'/administration/integrated-accounts'}
-                component={ConfigurationContainer}
+                component={IntegratedAccounts}
             />
             <Route exact path="/destinations" render={() => <Redirect to="/destinations/all" />} />
             {routes.map(routeObject => (
@@ -26,7 +26,6 @@ const App = () => (
                     render={() => <DestinationContainer routeObject={routeObject} />}
                 />
             ))}
-            <Route path="/destinations" render={() => <Redirect to="/destinations/all" />} />
         </Switch>
     </BrowserRouter>
 );
@@ -45,8 +44,8 @@ const DestinationContainer = ({ routeObject }) => (
     </Provider>
 );
 
-const ConfigurationContainer = () => (
-    <Layout heading="Configuration">
+const IntegratedAccounts = () => (
+    <Layout heading="Integrated Accounts">
         <Configuration />
     </Layout>
 );

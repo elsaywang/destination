@@ -150,7 +150,7 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "key": "action",
-                                          "title": "ACTION",
+                                          "title": "ACTIONS",
                                           "width": 200,
                                         },
                                       ]
@@ -327,7 +327,7 @@ ShallowWrapper {
                                     },
                                     Object {
                                       "key": "action",
-                                      "title": "ACTION",
+                                      "title": "ACTIONS",
                                       "width": 200,
                                     },
                                   ]
@@ -426,7 +426,7 @@ ShallowWrapper {
               },
               Object {
                 "key": "action",
-                "title": "ACTION",
+                "title": "ACTIONS",
                 "width": 200,
               },
             ],
@@ -565,7 +565,7 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "key": "action",
-                                                  "title": "ACTION",
+                                                  "title": "ACTIONS",
                                                   "width": 200,
                                                 },
                                               ]
@@ -742,7 +742,7 @@ ShallowWrapper {
                                           },
                                           Object {
                                             "key": "action",
-                                            "title": "ACTION",
+                                            "title": "ACTIONS",
                                             "width": 200,
                                           },
                                         ]
@@ -841,7 +841,7 @@ ShallowWrapper {
                 },
                 Object {
                   "key": "action",
-                  "title": "ACTION",
+                  "title": "ACTIONS",
                   "width": 200,
                 },
               ],

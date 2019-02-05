@@ -123,7 +123,7 @@ describe('Integration Tests for routing', function() {
                 .then(() => {
                     cy.url().should('match', /\/administration\/integrated-accounts/g);
                     cy.get('.spectrum-Heading')
-                        .contains('Configuration')
+                        .contains('Integrated Accounts')
                         .should('be.exist');
                 });
         });

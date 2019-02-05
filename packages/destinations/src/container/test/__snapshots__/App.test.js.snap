@@ -46,10 +46,6 @@ ShallowWrapper {
                 path="/destinations/custom"
                 render={[Function]}
         />
-        <Route
-                path="/destinations"
-                render={[Function]}
-        />
 </Switch>,
     },
     "ref": null,
@@ -87,10 +83,6 @@ ShallowWrapper {
               render={[Function]}
 />,
           ],
-          <Route
-            path="/destinations"
-            render={[Function]}
-/>,
         ],
       },
       "ref": null,
@@ -169,18 +161,6 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "path": "/destinations",
-            "render": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
       ],
       "type": [Function],
     },
@@ -220,10 +200,6 @@ ShallowWrapper {
                     path="/destinations/custom"
                     render={[Function]}
           />
-          <Route
-                    path="/destinations"
-                    render={[Function]}
-          />
 </Switch>,
       },
       "ref": null,
@@ -261,10 +237,6 @@ ShallowWrapper {
                 render={[Function]}
 />,
             ],
-            <Route
-              path="/destinations"
-              render={[Function]}
-/>,
           ],
         },
         "ref": null,
@@ -337,18 +309,6 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "path": "/destinations/custom",
-              "render": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "path": "/destinations",
               "render": [Function],
             },
             "ref": null,

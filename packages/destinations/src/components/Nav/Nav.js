@@ -8,15 +8,9 @@ import Settings from '@react/react-spectrum/Icon/Settings';
 import Button from '@react/react-spectrum/Button';
 import React from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import { fetchDestinations, applyFilter } from '../../redux/actions/destinations';
 
 function Nav({ location, routes, applyFilter }) {
-    const getSelectedIndex = () => {
-        const { pathname } = window.location;
-
-        return Math.max(routes.indexOf(pathname), 0); // return 0 when there's no hash (index === -1)
-    }
 
     return (
         <div className={styles.navList}>
@@ -47,7 +41,7 @@ function Nav({ location, routes, applyFilter }) {
                             to={'/administration/integrated-accounts'}
                             className={styles.buttonLink}
                             data-test={`configuration-button-link`}>
-                            {`Configuration`}
+                            {`Integrated Accounts`}
                         </NavLink>
                     </Button>
                 </GridColumn>
