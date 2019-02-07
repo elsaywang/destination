@@ -32,3 +32,10 @@
 :local(.lifeTimeAddressableAudience){
   margin-top: 0.85rem;
 }
+:local(.activationButton){
+  font-weight: var(--spectrum-global-font-weight-normal);
+}
+
+:local(.actions){
+  margin-left: -0.95rem;
+}

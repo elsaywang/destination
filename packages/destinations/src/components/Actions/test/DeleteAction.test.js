@@ -16,6 +16,7 @@ describe('<DeleteAction/> component', () => {
                 id: 20008,
                 name: 'card',
             },
+            isForDestination: true,
         };
         const wrapper = shallow(<DeleteAction {...props} />);
 
@@ -23,7 +24,7 @@ describe('<DeleteAction/> component', () => {
             expect(wrapper).toMatchSnapshot();
         });
 
-        it('renders <ModalTrigger/> with <Button/> and <MenuItem/> children', () => {
+        it('renders <ModalTrigger/> with <Button/> and <Dialog/> children', () => {
             expect(wrapper.find(ModalTrigger).exists()).toBeTruthy();
             const childrenWrapper = wrapper.find(ModalTrigger).children();
             expect(childrenWrapper.find(Button).exists()).toBeTruthy();

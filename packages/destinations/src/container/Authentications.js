@@ -43,12 +43,12 @@ class Authentications extends Component {
     };
 
     renderActionCell = data => {
-        const { deleteDestination } = this.props;
+        const { deleteAuthentication } = this.props;
         const currentRecordCategory = getCategoryByDestinationType(data.destinationType);
 
         const includeMetrics = this.isIntegratedPlatform(currentRecordCategory);
 
-        return <Actions ={data} handleDeleteDestination={deleteDestination} />;
+        return <Actions ={data} handleDeleteAction={deleteAuthentication} />;
     };
 
     render() {

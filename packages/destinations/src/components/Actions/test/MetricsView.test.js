@@ -7,17 +7,14 @@ import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
 import MetricsContext from '../MetricsContext';
 
 describe('<MetricsView/> component', () => {
-    describe('rendering', () => {
+    describe('rendering `PEOPLE_BASED`', () => {
         const props = {
             disabled: false,
             destination: {
-                id: 20008,
+                destinationId: 20008,
                 name: 'card',
-                type: 'People-Based',
+                destinationType: 'PEOPLE_BASED',
                 shareableAudience: 245123,
-                addressableAudience: 213123,
-                matchRate: '89%',
-                lifetimeAddressableAudience: 123123,
             },
         };
         const wrapper = shallow(<MetricsView {...props} />);
@@ -39,6 +36,27 @@ describe('<MetricsView/> component', () => {
         it('renders <MetricsContext/> as <Popover/> children', () => {
             const childrenWrapper = wrapper.find(Popover).children();
             expect(childrenWrapper.find(MetricsContext).exists()).toBeTruthy();
+        });
+    });
+
+    describe('rendering `S2S`', () => {
+        const props = {
+            disabled: false,
+            destination: {
+                destinationId: 2009,
+                name: 'card',
+                destinationType: 'S2S',
+                addressableAudienceMetrics: {
+                    addressableAudience: 213123,
+                    matchRate: '89%',
+                    lifetimeAddressableAudience: 123123,
+                },
+            },
+        };
+        const wrapper = shallow(<MetricsView {...props} />);
+
+        it('matches snapshot', () => {
+            expect(wrapper).toMatchSnapshot();
         });
     });
 });

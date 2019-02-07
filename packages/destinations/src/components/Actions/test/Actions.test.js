@@ -4,18 +4,21 @@ import Actions from '../Actions';
 import DeleteAction from '../DeleteAction';
 import EditAction from '../EditAction';
 import MetricsView from '../MetricsView';
+import Activation from '../Activation';
 
 describe('<Actions/> component', () => {
-    describe('rendering', () => {
+    describe('rendering when `isForDestination` ', () => {
         const mockFn = jest.fn();
         const props = {
             disabled: false,
             destination: {
                 id: 20008,
                 name: 'card',
-                type: 'People-Based',
+                destinationType: 'PEOPLE_BASED',
+                shareableAudience: 909,
             },
             showMetrics: false,
+            isForDestination: true,
         };
         const wrapper = shallow(<Actions {...props} />);
 
@@ -34,6 +37,38 @@ describe('<Actions/> component', () => {
             expect(wrapper.find(DeleteAction).exists()).toBeTruthy();
             expect(wrapper.find(EditAction).exists()).toBeTruthy();
             expect(wrapper.find(MetricsView).exists()).toBeTruthy();
+        });
+
+        it('should not render <Activation/> as `isForDestination` is true', () => {
+            expect(wrapper.find(Activation).exists()).toBeFalsy();
+        });
+    });
+
+    describe('rendering when `isForDestination` is false', () => {
+        const mockFn = jest.fn();
+        const props = {
+            disabled: false,
+            authentication: {
+                adAccountId: 1,
+                accountName: 'test',
+                expireIn: 'Expired',
+            },
+            isForDestination: false,
+        };
+        const wrapper = shallow(<Actions {...props} />);
+
+        it('matches snapshot', () => {
+            expect(wrapper).toMatchSnapshot();
+        });
+
+        it('renders only <DeleteAction/> and <Activation/> if `isForDestination` prop is false', () => {
+            expect(wrapper.find(DeleteAction).exists()).toBeTruthy();
+            expect(wrapper.find(Activation).exists()).toBeTruthy();
+        });
+
+        it('should not render <EditAction/> and <MetricsView/> ', () => {
+            expect(wrapper.find(EditAction).exists()).toBeFalsy();
+            expect(wrapper.find(MetricsView).exists()).toBeFalsy();
         });
     });
 });

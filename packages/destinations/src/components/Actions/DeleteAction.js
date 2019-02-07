@@ -11,23 +11,32 @@ class DeleteAction extends Component {
     renderTitle = () => (
         <Fragment>
             <Alert size="S" className={styles.deletionAlert} />
-            <span className={styles.deletionText}>&nbsp; Delete Destination</span>
+            <span className={styles.deletionText}>
+                &nbsp; Delete {this.props.isForDestination ? `Destination` : `Authentication`}
+            </span>
         </Fragment>
     );
 
     render() {
-        const { destination, disabled, deleteDestination } = this.props;
-        const { name, destinationId } = destination;
+        const {
+            destination,
+            disabled,
+            handleDeleteAction,
+            isForDestination,
+            authentication,
+        } = this.props;
+        const { name, destinationId } = isForDestination && destination;
+        const { accountName, adAccountId } = !isForDestination && authentication;
 
         return (
             !disabled && (
                 <ModalTrigger>
                     <Button
                         data-test="action-delete-button"
-                        label={''}
+                        label={isForDestination ? '' : 'Delete'}
                         variant="action"
                         quiet
-                        icon={<Delete size="S" />}
+                        icon={isForDestination && <Delete size="S" />}
                         modaltrigger
                     />
                     <Dialog
@@ -38,11 +47,14 @@ class DeleteAction extends Component {
                         confirmLabel="Delete"
                         size="S"
                         cancelLabel="Cancel"
-                        onConfirm={() => deleteDestination(destinationId)}
+                        onConfirm={() =>
+                            handleDeleteAction(isForDestination ? destinationId : adAccountId)
+                        }
                         variant="destructive">
                         <span>
-                            Are you sure you want to delete this <strong>{name}</strong>{' '}
-                            destination?
+                            Are you sure you want to delete this{' '}
+                            <strong>{isForDestination ? name : accountName}</strong>{' '}
+                            {isForDestination ? `destination` : `authentication`} ?
                             <br />
                         </span>
                     </Dialog>
@@ -54,16 +66,22 @@ class DeleteAction extends Component {
 
 DeleteAction.defaultProps = {
     disabled: false,
-    deleteDestination: () => {
+    handleDeleteAction: () => {
         //no-ops
     },
+    isForDestination: true,
 };
 
 DeleteAction.propTypes = {
-    deleteDestination: PropTypes.func,
+    isForDestination: PropTypes.bool,
+    handleDeleteAction: PropTypes.func,
     destination: PropTypes.shape({
         destinationId: PropTypes.number,
         name: PropTypes.string,
+    }),
+    authentication: PropTypes.shape({
+        adAccountId: PropTypes.number,
+        accountName: PropTypes.string,
     }),
 };
 

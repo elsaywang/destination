@@ -29,7 +29,6 @@ ShallowWrapper {
     "props": Object {
       "autoFocus": false,
       "block": false,
-      "className": undefined,
       "data-test": "action-edit-button",
       "disabled": false,
       "element": "a",
@@ -59,7 +58,6 @@ ShallowWrapper {
       "props": Object {
         "autoFocus": false,
         "block": false,
-        "className": undefined,
         "data-test": "action-edit-button",
         "disabled": false,
         "element": "a",

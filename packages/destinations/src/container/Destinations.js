@@ -31,12 +31,15 @@ class Destinations extends Component {
 
     renderActionCell = data => {
         const currentRecordCategory = destinationsMap[data.destinationType].category;
+        console.log(data);
         return (
-            <Actions
-                destination={data}
-                showMetrics={this.isIntegratedPlatform(currentRecordCategory)}
-                handleDeleteDestination={this.props.deleteDestination}
-            />
+            <div>
+                <Actions
+                    destination={data}
+                    showMetrics={this.isIntegratedPlatform(currentRecordCategory)}
+                    handleDeleteAction={this.props.deleteDestination}
+                />
+            </div>
         );
     };
 
