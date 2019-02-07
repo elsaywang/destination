@@ -5,55 +5,41 @@ import Table from '../components/Table';
 import SideNavFilter from '../components/SideNavFilter';
 import styles from './Destinations.css';
 import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
-import {
-    destinationCategories,
-    getCategoryByDestinationType,
-    destinationTypeMap,
-} from '../constants/destinations';
-import {
-    updateIntegratedPlatformType,
-    applySort,
-    applyFilter,
-    fetchDestinations,
-    fetchMoreDestinations,
-    deleteDestination,
-} from '../redux/actions/destinations';
+import { destinationsMap } from '../constants/destinations';
+import * as actionCreators from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
 import Actions from '../components/Actions';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
         const { destinationType } = data;
+        const { category, name } = destinationsMap[destinationType];
         const { key } = column;
+
         switch (key) {
             case 'action':
                 return this.renderActionCell(data);
             case 'category':
-                return <span>{getCategoryByDestinationType(destinationType)}</span>;
+                return <span>{category}</span>;
             case 'destinationType':
-                return <span>{destinationTypeMap[destinationType]}</span>;
+                return <span>{name}</span>;
             default:
                 return <span>{data[key]}</span>;
         }
     };
 
     renderActionCell = data => {
-        const { deleteDestination } = this.props;
-        const currentRecordCategory = getCategoryByDestinationType(data.destinationType);
-
-        const includeMetrics = this.isIntegratedPlatform(currentRecordCategory);
-
+        const currentRecordCategory = destinationsMap[data.destinationType].category;
         return (
             <Actions
                 destination={data}
-                showMetrics={includeMetrics}
-                handleDeleteDestination={deleteDestination}
+                showMetrics={this.isIntegratedPlatform(currentRecordCategory)}
+                handleDeleteDestination={this.props.deleteDestination}
             />
         );
     };
 
-    isIntegratedPlatform = (category = this.props.currentDestination.name) =>
-        category === 'Integrated Platforms';
+    isIntegratedPlatform = category => category === 'Integrated Platforms';
 
     sortData = ({ column, direction }) => {
         this.props.applySort({ sortColumn: column, sortDirection: direction });
@@ -79,7 +65,14 @@ class Destinations extends Component {
         const {
             fetchMoreDestinations,
             currentDestination,
-            destinations: { integratedPlatformType, byIds, idsToDisplay, replacementDataInFlight },
+            destinations: {
+                integratedPlatformType,
+                byIds,
+                idsToDisplay,
+                replacementDataInFlight,
+                sortColumn,
+                sortDirection,
+            },
         } = this.props;
 
         const renderSideNavFilter = (
@@ -101,7 +94,7 @@ class Destinations extends Component {
                 data-test={`${currentDestination.name
                     .toLowerCase()
                     .replace(/\W/g, '-')}-destinations`}>
-                {this.isIntegratedPlatform() && renderSideNavFilter}
+                {this.isIntegratedPlatform(currentDestination.name) && renderSideNavFilter}
                 <div className={styles.tableContainer}>
                     {replacementDataInFlight ? (
                         <p>Loading</p>
@@ -112,8 +105,8 @@ class Destinations extends Component {
                             onSortChange={this.sortData}
                             reachedEndOfRows={fetchMoreDestinations}
                             sortDescriptor={{
-                                column: this.props.destinations.sortColumn,
-                                direction: this.props.destinations.sortDirection,
+                                column: sortColumn,
+                                direction: sortDirection,
                             }}
                             height={900}
                             columns={
@@ -148,7 +141,6 @@ Destinations.propTypes = {
         sortDirection: PropTypes.oneOf([-1, 1]),
     }),
     currentDestination: PropTypes.shape({
-        name: PropTypes.oneOf(destinationCategories).isRequired,
         types: PropTypes.array.isRequired,
         route: PropTypes.string.isRequired,
     }),
@@ -157,15 +149,6 @@ Destinations.propTypes = {
 const mapStateToProps = ({ destinations }) => ({
     destinations,
 });
-
-const actionCreators = {
-    fetchDestinations,
-    fetchMoreDestinations,
-    updateIntegratedPlatformType,
-    deleteDestination,
-    applySort,
-    applyFilter,
-};
 
 export { Destinations };
 

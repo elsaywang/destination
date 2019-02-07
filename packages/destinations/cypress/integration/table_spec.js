@@ -19,7 +19,7 @@ describe('Integration Tests for table', function() {
             );
         });
 
-        it('should make a sort query when column header cell is clicked', () => {
+        xit('should make a sort query when column header cell is clicked', () => {
             let sortAPICallCount = 0;
             cy.route('get', '**sortBy**', () => {
                 sortAPICallCount++;
