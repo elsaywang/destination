@@ -58,6 +58,7 @@ class Search extends Component {
                         <Button
                             label="Add"
                             data-test="add-button"
+                            className={styles.addButton}
                             onClick={onAddClick}
                             icon={<AddCircle />}
                             variant="action"
@@ -68,6 +69,7 @@ class Search extends Component {
                         <Button
                             label="Remove"
                             data-test="remove-button"
+                            className={styles.removeButton}
                             onClick={onRemove}
                             icon={<RemoveCircle />}
                             variant="action"
