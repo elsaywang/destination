@@ -156,6 +156,7 @@ ShallowWrapper {
                                                         <Button
                                                                 autoFocus={false}
                                                                 block={false}
+                                                                className="addButton"
                                                                 data-test="add-button"
                                                                 disabled={false}
                                                                 element="button"
@@ -385,6 +386,7 @@ ShallowWrapper {
                                                                         <Button
                                                                                     autoFocus={false}
                                                                                     block={false}
+                                                                                    className="addButton"
                                                                                     data-test="add-button"
                                                                                     disabled={false}
                                                                                     element="button"
@@ -640,6 +642,7 @@ ShallowWrapper {
                                                                       <Button
                                                                                     autoFocus={false}
                                                                                     block={false}
+                                                                                    className="addButton"
                                                                                     data-test="add-button"
                                                                                     disabled={false}
                                                                                     element="button"
@@ -849,6 +852,7 @@ ShallowWrapper {
                                                                         <Button
                                                                                           autoFocus={false}
                                                                                           block={false}
+                                                                                          className="addButton"
                                                                                           data-test="add-button"
                                                                                           disabled={false}
                                                                                           element="button"
@@ -1056,6 +1060,7 @@ ShallowWrapper {
                                                             <Button
                                                                                 autoFocus={false}
                                                                                 block={false}
+                                                                                className="addButton"
                                                                                 data-test="add-button"
                                                                                 disabled={false}
                                                                                 element="button"
@@ -1258,6 +1263,7 @@ ShallowWrapper {
                                                     <Button
                                                                               autoFocus={false}
                                                                               block={false}
+                                                                              className="addButton"
                                                                               data-test="add-button"
                                                                               disabled={false}
                                                                               element="button"
@@ -1458,6 +1464,7 @@ ShallowWrapper {
                             <Button
                                                         autoFocus={false}
                                                         block={false}
+                                                        className="addButton"
                                                         data-test="add-button"
                                                         disabled={false}
                                                         element="button"
@@ -1564,6 +1571,7 @@ ShallowWrapper {
                               <Button
                                 autoFocus={false}
                                 block={false}
+                                className="addButton"
                                 data-test="add-button"
                                 disabled={false}
                                 element="button"
@@ -1590,6 +1598,7 @@ ShallowWrapper {
                               "props": Object {
                                 "autoFocus": false,
                                 "block": false,
+                                "className": "addButton",
                                 "data-test": "add-button",
                                 "disabled": false,
                                 "element": "button",
@@ -2233,6 +2242,7 @@ ShallowWrapper {
                                                                       <Button
                                                                                 autoFocus={false}
                                                                                 block={false}
+                                                                                className="addButton"
                                                                                 data-test="add-button"
                                                                                 disabled={false}
                                                                                 element="button"
@@ -2462,6 +2472,7 @@ ShallowWrapper {
                                                                                     <Button
                                                                                                   autoFocus={false}
                                                                                                   block={false}
+                                                                                                  className="addButton"
                                                                                                   data-test="add-button"
                                                                                                   disabled={false}
                                                                                                   element="button"
@@ -2717,6 +2728,7 @@ ShallowWrapper {
                                                                                 <Button
                                                                                                 autoFocus={false}
                                                                                                 block={false}
+                                                                                                className="addButton"
                                                                                                 data-test="add-button"
                                                                                                 disabled={false}
                                                                                                 element="button"
@@ -2926,6 +2938,7 @@ ShallowWrapper {
                                                                                 <Button
                                                                                                     autoFocus={false}
                                                                                                     block={false}
+                                                                                                    className="addButton"
                                                                                                     data-test="add-button"
                                                                                                     disabled={false}
                                                                                                     element="button"
@@ -3133,6 +3146,7 @@ ShallowWrapper {
                                                                   <Button
                                                                                         autoFocus={false}
                                                                                         block={false}
+                                                                                        className="addButton"
                                                                                         data-test="add-button"
                                                                                         disabled={false}
                                                                                         element="button"
@@ -3335,6 +3349,7 @@ ShallowWrapper {
                                                         <Button
                                                                                     autoFocus={false}
                                                                                     block={false}
+                                                                                    className="addButton"
                                                                                     data-test="add-button"
                                                                                     disabled={false}
                                                                                     element="button"
@@ -3535,6 +3550,7 @@ ShallowWrapper {
                               <Button
                                                             autoFocus={false}
                                                             block={false}
+                                                            className="addButton"
                                                             data-test="add-button"
                                                             disabled={false}
                                                             element="button"
@@ -3641,6 +3657,7 @@ ShallowWrapper {
                                 <Button
                                   autoFocus={false}
                                   block={false}
+                                  className="addButton"
                                   data-test="add-button"
                                   disabled={false}
                                   element="button"
@@ -3667,6 +3684,7 @@ ShallowWrapper {
                                 "props": Object {
                                   "autoFocus": false,
                                   "block": false,
+                                  "className": "addButton",
                                   "data-test": "add-button",
                                   "disabled": false,
                                   "element": "button",
