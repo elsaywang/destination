@@ -1,30 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`destination categories constant matches snapshot 1`] = `
-Array [
-  "All",
-  "Adobe Experience Cloud",
-  "Integrated Platforms",
-  "Custom",
-]
-`;
-
-exports[`destination types constant matches snapshot 1`] = `
+exports[`destinations map matches snapshot 1`] = `
 Object {
-  "ADS": "Cookie",
-  "ANALYTICS": "Adobe Analytics",
-  "PEOPLE_BASED": "People-Based",
-  "PUSH": "URL",
-  "S2S": "Device-Based",
+  "ADS": Object {
+    "category": "Custom",
+    "name": "Cookie",
+  },
+  "ANALYTICS": Object {
+    "category": "Adobe Experience Cloud",
+    "name": "Adobe Analytics",
+  },
+  "PEOPLE_BASED": Object {
+    "category": "Adobe Experience Cloud",
+    "name": "People-Based",
+  },
+  "PUSH": Object {
+    "category": "Custom",
+    "name": "URL",
+  },
+  "S2S": Object {
+    "category": "Integrated Platforms",
+    "name": "Device-Based",
+  },
 }
 `;
-
-exports[`getCategoryByDestinationType matches snapshot 1`] = `"Custom"`;
-
-exports[`getCategoryByDestinationType matches snapshot 2`] = `"Custom"`;
-
-exports[`getCategoryByDestinationType matches snapshot 3`] = `"Integrated Platforms"`;
-
-exports[`getCategoryByDestinationType matches snapshot 4`] = `"Adobe Experience Cloud"`;
-
-exports[`getCategoryByDestinationType matches snapshot 5`] = `"Integrated Platforms"`;

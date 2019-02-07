@@ -8,53 +8,43 @@ import Settings from '@react/react-spectrum/Icon/Settings';
 import Button from '@react/react-spectrum/Button';
 import React from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import { fetchDestinations, applyFilter } from '../../redux/actions/destinations';
 
-function Nav({ location, routes, applyFilter }) {
-    const getSelectedIndex = () => {
-        const { pathname } = window.location;
-
-        return Math.max(routes.indexOf(pathname), 0); // return 0 when there's no hash (index === -1)
-    }
-
-    return (
-        <div className={styles.navList}>
-            <GridRow valign="middle">
-                <GridColumn size={6}>
-                    <TabList
-                        quiet
-                        variant="compact"
-                        onChange={indexSelected => applyFilter(routes[indexSelected].types)}>
-                            {routes.map(({ route, name }) => (
-                                <Tab selected={location.pathname === route} key={route}>
-                                    <NavLink
-                                        to={route}
-                                        className={styles.link}
-                                        data-test={`${name.toLowerCase().replace(/\W/g, '-')}-nav-link`}>
-                                        {name}
-                                    </NavLink>
-                                </Tab>
-                            ))}
-
-                    </TabList>
-                </GridColumn>
-                <GridColumn
-                    className={classNames(styles.configButton, 'configuration-button')}
-                    size={6}>
-                    <Button quiet variant="secondary" icon={<Settings size="S" />}>
-                        <NavLink
-                            to={'/administration/integrated-accounts'}
-                            className={styles.buttonLink}
-                            data-test={`configuration-button-link`}>
-                            {`Configuration`}
-                        </NavLink>
-                    </Button>
-                </GridColumn>
-            </GridRow>
-        </div >
-    );
-}
+const Nav = ({ location, routes, applyFilter }) => (
+    <div className={styles.navList}>
+        <GridRow valign="middle">
+            <GridColumn size={6}>
+                <TabList
+                    quiet
+                    variant="compact"
+                    onChange={indexSelected => applyFilter(routes[indexSelected].types)}>
+                    {routes.map(({ route, name }) => (
+                        <Tab selected={location.pathname === route} key={route}>
+                            <NavLink
+                                to={route}
+                                className={styles.link}
+                                data-test={`${name.toLowerCase().replace(/\W/g, '-')}-nav-link`}>
+                                {name}
+                            </NavLink>
+                        </Tab>
+                    ))}
+                </TabList>
+            </GridColumn>
+            <GridColumn
+                className={classNames(styles.configButton, 'configuration-button')}
+                size={6}>
+                <Button quiet variant="secondary" icon={<Settings size="S" />}>
+                    <NavLink
+                        to={'/administration/integrated-accounts'}
+                        className={styles.buttonLink}
+                        data-test={`configuration-button-link`}>
+                        {`Configuration`}
+                    </NavLink>
+                </Button>
+            </GridColumn>
+        </GridRow>
+    </div>
+);
 
 Nav.propTypes = {
     location: PropTypes.shape({
@@ -74,7 +64,7 @@ export { RouterWrappedNav };
 
 export default withRouter(
     connect(
-        () => {},
+        () => ({}),
         { fetchDestinations, applyFilter },
     )(Nav),
 );
