@@ -131,7 +131,7 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "active": true,
-                                          "key": "platform",
+                                          "key": "destinationTemplateId",
                                           "sortable": true,
                                           "title": "PLATFORM",
                                           "width": 150,
@@ -308,7 +308,7 @@ ShallowWrapper {
                                     },
                                     Object {
                                       "active": true,
-                                      "key": "platform",
+                                      "key": "destinationTemplateId",
                                       "sortable": true,
                                       "title": "PLATFORM",
                                       "width": 150,
@@ -407,7 +407,7 @@ ShallowWrapper {
               },
               Object {
                 "active": true,
-                "key": "platform",
+                "key": "destinationTemplateId",
                 "sortable": true,
                 "title": "PLATFORM",
                 "width": 150,
@@ -546,7 +546,7 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "active": true,
-                                                  "key": "platform",
+                                                  "key": "destinationTemplateId",
                                                   "sortable": true,
                                                   "title": "PLATFORM",
                                                   "width": 150,
@@ -723,7 +723,7 @@ ShallowWrapper {
                                           },
                                           Object {
                                             "active": true,
-                                            "key": "platform",
+                                            "key": "destinationTemplateId",
                                             "sortable": true,
                                             "title": "PLATFORM",
                                             "width": 150,
@@ -822,7 +822,7 @@ ShallowWrapper {
                 },
                 Object {
                   "active": true,
-                  "key": "platform",
+                  "key": "destinationTemplateId",
                   "sortable": true,
                   "title": "PLATFORM",
                   "width": 150,

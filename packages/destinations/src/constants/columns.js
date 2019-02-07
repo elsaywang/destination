@@ -24,7 +24,7 @@ const allColumnTypes = [
     },
     {
         title: 'PLATFORM', //reused by both destinations and authentications list
-        key: 'platform',
+        key: 'destinationTemplateId', // 1: Facebook
         width: 150,
         active: true,
         sortable: true,
@@ -68,17 +68,17 @@ const allColumnTypes = [
     //authentications list
     {
         title: 'ACCOUNT',
-        key: 'account',
+        key: 'accountName',
         width: 200,
     },
     {
         title: 'AUTHORIZED',
-        key: 'authorized',
+        key: 'createTime',
         width: 200,
     },
     {
         title: 'NOTIFYING',
-        key: 'notifying',
+        key: 'emailNotificationList',
         width: 200,
     },
     {

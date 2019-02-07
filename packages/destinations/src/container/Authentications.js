@@ -5,6 +5,29 @@ import Table from '../components/Table';
 import styles from './Authentications.css';
 import { columnsForAuthentications } from '../constants/columns';
 
+const authenticationList =
+[
+  {
+    "destinationTemplateId": 1,
+    "dcid": 1,
+    "pid": 1194,
+    "accountName": "TestAccount",
+    "adAccountId": "1",
+    "status": "UNDEFINED",
+    "irisPublishStatus": "ACTIVE",
+    "expirationTime": 1548345128000,
+    "createTime": 1548345128000,
+    "crUid": 735,
+    "updateTime": 1548345128000,
+    "upUid": 0,
+    "emailNotificationList": [
+
+    ],
+    "credentialType": "ACCOUNT"
+  }
+];
+
+
 class Authentications extends Component {
     renderCell = (column, data) => {
         const { destinationType } = data;
@@ -25,8 +48,29 @@ class Authentications extends Component {
 
         const includeMetrics = this.isIntegratedPlatform(currentRecordCategory);
 
-        return <Actions destination={data} handleDeleteDestination={deleteDestination} />;
+        return <Actions ={data} handleDeleteDestination={deleteDestination} />;
     };
+
+    render() {
+        return (
+            <Table
+                dataTest="authentication-list-table"
+                items={authenticationList}
+                onSortChange={this.sortData}
+                reachedEndOfRows={fetchMoreDestinations}
+                sortDescriptor={{
+                    column: sortColumn,
+                    direction: sortDirection,
+                }}
+                height={900}
+                columns={
+                    columnsForAuthentications
+                }
+                rowHeight={250}
+                renderCell={this.renderCell}
+            />
+        );
+    }
 }
 
 Authentications.propTypes = {

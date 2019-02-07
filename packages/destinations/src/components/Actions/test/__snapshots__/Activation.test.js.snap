@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Activation/> component rendering matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Activation
+    addAccount={[Function]}
+    authentication={
+        Object {
+            "accountName": "test",
+            "adAccountId": 1,
+            "expireIn": "Expired",
+          }
+    }
+    disabled={false}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Button
+          autoFocus={false}
+          block={false}
+          className={undefined}
+          data-test="action-activation-button"
+          disabled={false}
+          element="button"
+          invalid={false}
+          label="Reactivate"
+          logic={false}
+          modaltrigger={true}
+          onClick={[Function]}
+          quiet={true}
+          selected={false}
+          variant="primary"
+/>,
+        <Dialog
+          autoFocusButton={null}
+          backdropClickable={false}
+          cancelLabel="close"
+          confirmDisabled={false}
+          confirmLabel="OK"
+          keyboardConfirm={false}
+          modalContent={true}
+          onClose={[Function]}
+          open={true}
+          role="dialog"
+          size="S"
+          title="Add Account"
+>
+          <span>
+                    TBD, Add Account Modal Context 
+          </span>
+</Dialog>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoFocus": false,
+          "block": false,
+          "className": undefined,
+          "data-test": "action-activation-button",
+          "disabled": false,
+          "element": "button",
+          "invalid": false,
+          "label": "Reactivate",
+          "logic": false,
+          "modaltrigger": true,
+          "onClick": [Function],
+          "quiet": true,
+          "selected": false,
+          "variant": "primary",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoFocusButton": null,
+          "backdropClickable": false,
+          "cancelLabel": "close",
+          "children": Array [
+            <span>
+              TBD, Add Account Modal Context 
+</span>,
+            undefined,
+          ],
+          "confirmDisabled": false,
+          "confirmLabel": "OK",
+          "keyboardConfirm": false,
+          "modalContent": true,
+          "onClose": [Function],
+          "open": true,
+          "role": "dialog",
+          "size": "S",
+          "title": "Add Account",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "TBD, Add Account Modal Context ",
+            },
+            "ref": null,
+            "rendered": "TBD, Add Account Modal Context ",
+            "type": "span",
+          },
+          undefined,
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Button
+            autoFocus={false}
+            block={false}
+            className={undefined}
+            data-test="action-activation-button"
+            disabled={false}
+            element="button"
+            invalid={false}
+            label="Reactivate"
+            logic={false}
+            modaltrigger={true}
+            onClick={[Function]}
+            quiet={true}
+            selected={false}
+            variant="primary"
+/>,
+          <Dialog
+            autoFocusButton={null}
+            backdropClickable={false}
+            cancelLabel="close"
+            confirmDisabled={false}
+            confirmLabel="OK"
+            keyboardConfirm={false}
+            modalContent={true}
+            onClose={[Function]}
+            open={true}
+            role="dialog"
+            size="S"
+            title="Add Account"
+>
+            <span>
+                        TBD, Add Account Modal Context 
+            </span>
+</Dialog>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoFocus": false,
+            "block": false,
+            "className": undefined,
+            "data-test": "action-activation-button",
+            "disabled": false,
+            "element": "button",
+            "invalid": false,
+            "label": "Reactivate",
+            "logic": false,
+            "modaltrigger": true,
+            "onClick": [Function],
+            "quiet": true,
+            "selected": false,
+            "variant": "primary",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoFocusButton": null,
+            "backdropClickable": false,
+            "cancelLabel": "close",
+            "children": Array [
+              <span>
+                TBD, Add Account Modal Context 
+</span>,
+              undefined,
+            ],
+            "confirmDisabled": false,
+            "confirmLabel": "OK",
+            "keyboardConfirm": false,
+            "modalContent": true,
+            "onClose": [Function],
+            "open": true,
+            "role": "dialog",
+            "size": "S",
+            "title": "Add Account",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "TBD, Add Account Modal Context ",
+              },
+              "ref": null,
+              "rendered": "TBD, Add Account Modal Context ",
+              "type": "span",
+            },
+            undefined,
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

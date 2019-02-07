@@ -1,25 +1,7 @@
-import {
-    destinationCategories,
-    destinationTypeMap,
-    getCategoryByDestinationType,
-} from '../destinations';
+import { destinationsMap } from '../destinations';
 
-describe('destination categories constant', () => {
+describe('destinations map', () => {
     it('matches snapshot', () => {
-        expect(destinationCategories).toMatchSnapshot();
-    });
-});
-
-describe('destination types constant', () => {
-    it('matches snapshot', () => {
-        expect(destinationTypeMap).toMatchSnapshot();
-    });
-});
-
-describe('getCategoryByDestinationType', () => {
-    it('matches snapshot', () => {
-        Object.keys(destinationTypeMap).map(type =>
-            expect(getCategoryByDestinationType(type)).toMatchSnapshot(),
-        );
+        expect(destinationsMap).toMatchSnapshot();
     });
 });
