@@ -9,6 +9,7 @@ import { destinationsMap } from '../constants/destinations';
 import * as actionCreators from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
 import Actions from '../components/Actions';
+import AddAccountModal from '../components/AddAccountModal';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
@@ -118,6 +119,7 @@ class Destinations extends Component {
                             renderCell={this.renderCell}
                         />
                     )}
+                    {process.env.NODE_ENV === 'development' ? <AddAccountModal /> : ''}
                 </div>
             </div>
         );
