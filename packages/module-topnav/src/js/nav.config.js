@@ -52,7 +52,8 @@ const navConfig = {
             },
             {
                 name: 'Profile Merge Rules',
-                requiredRoles: ['VIEW_DATASOURCES'],
+                requiredRoles: ['VIEW_DATASOURCES', 'ACCOUNT_FULL_AAM'],
+                requiredAllRoles: true,
                 url: '/portal/ProfileMerge/ProfileMerge.ddx',
             },
             {

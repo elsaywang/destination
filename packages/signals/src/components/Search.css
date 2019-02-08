@@ -6,6 +6,7 @@
 
 :local(.rowButtons) {
     margin-top: 25px;
+    padding-left: 120px;
 }
 
 :local(.ctas) {
@@ -20,4 +21,19 @@
 
 :local(.fieldLabel) {
     margin-right: 20px;
+}
+
+:local(.removeButton) {
+    margin-left: 0 !important;
+}
+
+@media only screen and (min-width: 768px) {
+    :local(.rowButtons) {
+        padding-left: 225px;
+    }
+}
+@media only screen and (min-width: 304px) and (min-width: 768px) {
+    :local(.rowButtons) {
+        padding-left: 290px;
+    }
 }
