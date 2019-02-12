@@ -32,7 +32,7 @@ ShallowWrapper {
       "data-test": "action-edit-button",
       "disabled": false,
       "element": "a",
-      "href": "http://localhost:8000/portal/Segments/ManageDestination.ddx?destinationId=undefined#edit",
+      "href": "/portal/Segments/ManageDestination.ddx?destinationId=undefined#edit",
       "icon": <Edit
         size="S"
 />,
@@ -61,7 +61,7 @@ ShallowWrapper {
         "data-test": "action-edit-button",
         "disabled": false,
         "element": "a",
-        "href": "http://localhost:8000/portal/Segments/ManageDestination.ddx?destinationId=undefined#edit",
+        "href": "/portal/Segments/ManageDestination.ddx?destinationId=undefined#edit",
         "icon": <Edit
           size="S"
 />,
