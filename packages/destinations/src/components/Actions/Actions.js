@@ -48,7 +48,7 @@ Actions.propTypes = {
     ),
     authentication: requiredIf(
         PropTypes.shape({
-            adAccountId: PropTypes.number,
+            adAccountId: PropTypes.string,
             accountName: PropTypes.string,
         }),
         ({ isForDestination }) => !isForDestination,

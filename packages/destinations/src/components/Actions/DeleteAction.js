@@ -18,15 +18,9 @@ class DeleteAction extends Component {
     );
 
     render() {
-        const {
-            destination,
-            disabled,
-            handleDeleteAction,
-            isForDestination,
-            authentication,
-        } = this.props;
-        const { name, destinationId } = isForDestination && destination;
-        const { accountName, adAccountId } = !isForDestination && authentication;
+        const { disabled, handleDeleteAction, isForDestination } = this.props;
+        const { name, destinationId } = isForDestination && this.props.destination;
+        const { accountName, adAccountId } = !isForDestination && this.props.authentication;
 
         return (
             !disabled && (
@@ -80,7 +74,7 @@ DeleteAction.propTypes = {
         name: PropTypes.string,
     }),
     authentication: PropTypes.shape({
-        adAccountId: PropTypes.number,
+        adAccountId: PropTypes.string,
         accountName: PropTypes.string,
     }),
 };

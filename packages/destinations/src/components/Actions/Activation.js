@@ -1,28 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@react/react-spectrum/Button';
 import styles from './action.css';
-import ModalTrigger from '@react/react-spectrum/ModalTrigger';
-import Dialog from '@react/react-spectrum/Dialog';
+import AddAccountModal from '../AddAccountModal';
 
-const Activation = ({ authentication, disabled, addAccount, children }) => (
-    <ModalTrigger>
-        <Button
-            data-test="action-activation-button"
-            className={styles.activationButton}
-            label={authentication.expireIn === 'Expired' ? 'Reactivate' : 'Renew'}
-            quiet
-            variant="primary"
-            onClick={addAccount}
-            disabled={disabled}
-            modaltrigger
-        />
-        <Dialog modalContent title="Add Account" confirmLabel="OK" size="S" cancelLabel="close">
-            <span>TBD, Add Account Modal Context </span>
-            {/* children could be AddAccount Modal wrapped within <Activation/>*/}
-            {children}
-        </Dialog>
-    </ModalTrigger>
+const Activation = ({ authentication, disabled, addAccount }) => (
+    <AddAccountModal
+        message={authentication.expireIn === 'Expired' ? 'Reactivate' : 'Renew'}
+        quiet
+        className={styles.activationButton}
+        disabled={disabled}
+        addAccount={addAccount}
+        authentication={authentication}
+    />
 );
 
 Activation.defaultProps = {
@@ -33,13 +22,14 @@ Activation.defaultProps = {
 };
 
 Activation.propTypes = {
+    //TODO: AddAccountModal may need to add corresponding props value
     authentication: PropTypes.shape({
-        adAccountId: PropTypes.number,
+        adAccountId: PropTypes.string,
         accountName: PropTypes.string,
         expireIn: PropTypes.string,
     }),
     addAccount: PropTypes.func, //TODO
-    children: PropTypes.node,
+    disabled: PropTypes.bool,
 };
 
 export default Activation;

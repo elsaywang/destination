@@ -16,7 +16,7 @@ const MetricsView = ({ destination }) => {
         {},
         destinationType === 'S2S' && {
             type: 'Device-Based',
-            addressableAudience: addressableAudienceMetrics.clientAddressableAudience1Day,
+            addressableAudience: addressableAudienceMetrics.clientAddressableAudience30Day,
             matchRate: '0%', //TODO: need to get the correct formula to calculate
             lifetimeAddressableAudience:
                 addressableAudienceMetrics.platformAddressableAudienceLifetime,
@@ -56,7 +56,7 @@ MetricsView.propTypes = {
         addressableAudienceMetrics: requiredIf(
             PropTypes.shape({
                 platformAddressableAudienceLifetime: PropTypes.number,
-                clientAddressableAudience1Day: PropTypes.number,
+                clientAddressableAudience30Day: PropTypes.number,
             }),
             ({ destinationType }) => destinationType === 'S2S',
         ),

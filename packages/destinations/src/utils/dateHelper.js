@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-export const datePattern = 'MMM DD,YYYY hh:mm a';
+export const datePattern = 'MMM DD, YYYY hh:mm A';
 
 export const formatDate = ms => moment(ms).format(datePattern);
 

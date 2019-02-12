@@ -15,6 +15,8 @@ describe('<DeleteAction/> component', () => {
             destination: {
                 id: 20008,
                 name: 'card',
+                destinationType: 'PEOPLE_BASED',
+                shareableAudience: 909,
             },
             isForDestination: true,
         };

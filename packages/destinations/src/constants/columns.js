@@ -69,22 +69,22 @@ const allColumnTypes = [
     {
         title: 'ACCOUNT',
         key: 'accountName',
-        width: 200,
+        width: 150,
     },
     {
         title: 'AUTHORIZED',
-        key: 'createTime',
+        key: 'updateTime',
         width: 200,
     },
     {
         title: 'NOTIFYING',
         key: 'emailNotificationList',
-        width: 200,
+        minWidth: 320,
     },
     {
         title: 'EXPIRE IN',
-        key: 'expireIn',
-        width: 200,
+        key: 'expirationTime',
+        width: 100,
     },
     {
         title: 'ACTIONS', //reused by both destinations and authentications list

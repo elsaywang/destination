@@ -7,8 +7,10 @@ ShallowWrapper {
     deleteDestination={[Function]}
     destination={
         Object {
+            "destinationType": "PEOPLE_BASED",
             "id": 20008,
             "name": "card",
+            "shareableAudience": 909,
           }
     }
     disabled={false}

@@ -39,3 +39,7 @@
 p {
     margin: 3px;
 }
+
+:local(.menuOption){
+  min-width: 120px;
+}

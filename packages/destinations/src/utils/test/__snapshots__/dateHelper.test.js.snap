@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Jan 24,2019 10:52 am 1`] = `"Jan 24,2019 10:52 am"`;
+exports[`Jan 24,2019 10:52 am 1`] = `"Jan 24, 2019 10:52 AM"`;
 
-exports[`MMM DD,YYYY hh:mm a 1`] = `"MMM DD,YYYY hh:mm a"`;
+exports[`MMM DD,YYYY hh:mm a 1`] = `"MMM DD, YYYY hh:mm A"`;

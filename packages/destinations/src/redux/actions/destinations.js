@@ -47,8 +47,6 @@ const queryDestinationsAPI = (queryOptions, getStore) => {
     return fetch(`${apiUrl}/destinations?${queryString}`);
 };
 
-export const applySort = createAction('APPLY_SORT');
-
 export const applySearch = createAction('APPLY_SEARCH');
 
 export const applyFilter = createAction('APPLY_FILTER');

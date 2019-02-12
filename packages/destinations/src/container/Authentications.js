@@ -1,72 +1,103 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { GridRow } from '@react/react-spectrum/Grid';
+import Edit from '@react/react-spectrum/Icon/Edit';
 import Table from '../components/Table';
+import AddAccountModal from '../components/AddAccountModal';
+import Actions from '../components/Actions';
 import styles from './Authentications.css';
 import { columnsForAuthentications } from '../constants/columns';
+import { destinationTemplateIDMap } from '../constants/integratedPlatformsOptions';
+import { formatDate, expireIn } from '../utils/dateHelper';
 
-const authenticationList =
-[
-  {
-    "destinationTemplateId": 1,
-    "dcid": 1,
-    "pid": 1194,
-    "accountName": "TestAccount",
-    "adAccountId": "1",
-    "status": "UNDEFINED",
-    "irisPublishStatus": "ACTIVE",
-    "expirationTime": 1548345128000,
-    "createTime": 1548345128000,
-    "crUid": 735,
-    "updateTime": 1548345128000,
-    "upUid": 0,
-    "emailNotificationList": [
-
-    ],
-    "credentialType": "ACCOUNT"
-  }
+//TODO: hook with realAPI call to get more data into list
+const authenticationList = [
+    {
+        destinationTemplateId: 1,
+        dcid: 1,
+        pid: 1194,
+        accountName: 'TestAccount',
+        adAccountId: '1',
+        status: 'UNDEFINED',
+        irisPublishStatus: 'ACTIVE',
+        expirationTime: 1548345128000,
+        createTime: 1548345128000,
+        crUid: 735,
+        updateTime: 1548345128000,
+        upUid: 0,
+        emailNotificationList: [],
+        credentialType: 'ACCOUNT',
+    },
 ];
-
 
 class Authentications extends Component {
     renderCell = (column, data) => {
-        const { destinationType } = data;
+        const { destinationTemplateId, updateTime, expirationTime, emailNotificationList } = data;
+
+        const platform = destinationTemplateIDMap[destinationTemplateId];
+        const authorizedDate = formatDate(updateTime);
+        const expireInDays = expireIn(expirationTime);
+
         const { key } = column;
         switch (key) {
             case 'action':
                 return this.renderActionCell(data);
-            case 'notifying':
-                return <span>{data[key]}</span>;
+            case 'destinationTemplateId':
+                return <span>{platform}</span>;
+            case 'expirationTime':
+                return <span>{expireInDays}</span>;
+            case 'updateTime':
+                return <span>{authorizedDate}</span>;
+            case 'emailNotificationList':
+                return this.renderNotifyingCell(emailNotificationList, platform);
             default:
                 return <span>{data[key]}</span>;
         }
     };
 
+    renderNotifyingCell = (emailNotificationList, platform) => {
+        //TODO: remove those fake emails when response has real email list
+        emailNotificationList = ['abc@fb.com', 'def@fb.com', 'hello@fb.com', 'test@fb.com'];
+
+        return (
+            <div className={styles.notifyingCell}>
+                {emailNotificationList.map(email => (
+                    <GridRow align={'center'} className={styles.email} key={email}>
+                        <span>{email}</span>
+                    </GridRow>
+                ))}
+                <AddAccountModal
+                    title="Add Contacts"
+                    triggerIcon={<Edit size="XS" />}
+                    quiet
+                    contactOnlyMode
+                    platform={platform}
+                    contactEmails={emailNotificationList}
+                    className={styles.addAccountButton}
+                />
+            </div>
+        );
+    };
+
     renderActionCell = data => {
         const { deleteAuthentication } = this.props;
-        const currentRecordCategory = getCategoryByDestinationType(data.destinationType);
-
-        const includeMetrics = this.isIntegratedPlatform(currentRecordCategory);
-
-        return <Actions ={data} handleDeleteAction={deleteAuthentication} />;
+        return (
+            <Actions
+                authentication={data}
+                handleDeleteAction={deleteAuthentication}
+                isForDestination={false}
+            />
+        );
     };
 
     render() {
         return (
             <Table
                 dataTest="authentication-list-table"
-                items={authenticationList}
-                onSortChange={this.sortData}
-                reachedEndOfRows={fetchMoreDestinations}
-                sortDescriptor={{
-                    column: sortColumn,
-                    direction: sortDirection,
-                }}
-                height={900}
-                columns={
-                    columnsForAuthentications
-                }
-                rowHeight={250}
+                items={this.props.authentications || authenticationList}
+                height={250}
+                columns={columnsForAuthentications}
+                rowHeight={90}
                 renderCell={this.renderCell}
             />
         );
@@ -88,4 +119,7 @@ Authentications.propTypes = {
         sortColumn: PropTypes.object,
         sortDirection: PropTypes.oneOf([-1, 1]),
     }),
+    deleteAuthentication: PropTypes.func,
 };
+
+export default Authentications;

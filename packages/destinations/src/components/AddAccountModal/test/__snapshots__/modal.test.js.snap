@@ -3,7 +3,13 @@
 exports[`<AddAccountModal/> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AddAccountModal />,
+  Symbol(enzyme.__unrendered__): <AddAccountModal
+    contactEmails={Array []}
+    icon={null}
+    platform=""
+    quiet={false}
+    title="Add Account"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -22,10 +28,13 @@ ShallowWrapper {
         <Button
           autoFocus={false}
           block={false}
+          className={undefined}
+          data-test="add-account-modal-button"
           disabled={false}
           element="button"
+          icon={undefined}
           invalid={false}
-          label="click for modal"
+          label=""
           logic={false}
           modaltrigger={true}
           quiet={false}
@@ -33,8 +42,11 @@ ShallowWrapper {
           variant="primary"
 />,
         <ModalContentHackForSpectrum
+          contactEmails={Array []}
           contactOnlyMode={undefined}
-          modalcontent={true}
+          platform=""
+          role="dialog"
+          title="Add Account"
 />,
       ],
     },
@@ -47,10 +59,13 @@ ShallowWrapper {
         "props": Object {
           "autoFocus": false,
           "block": false,
+          "className": undefined,
+          "data-test": "add-account-modal-button",
           "disabled": false,
           "element": "button",
+          "icon": undefined,
           "invalid": false,
-          "label": "click for modal",
+          "label": "",
           "logic": false,
           "modaltrigger": true,
           "quiet": false,
@@ -66,8 +81,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "contactEmails": Array [],
           "contactOnlyMode": undefined,
-          "modalcontent": true,
+          "platform": "",
+          "role": "dialog",
+          "title": "Add Account",
         },
         "ref": null,
         "rendered": null,
@@ -86,10 +104,13 @@ ShallowWrapper {
           <Button
             autoFocus={false}
             block={false}
+            className={undefined}
+            data-test="add-account-modal-button"
             disabled={false}
             element="button"
+            icon={undefined}
             invalid={false}
-            label="click for modal"
+            label=""
             logic={false}
             modaltrigger={true}
             quiet={false}
@@ -97,8 +118,11 @@ ShallowWrapper {
             variant="primary"
 />,
           <ModalContentHackForSpectrum
+            contactEmails={Array []}
             contactOnlyMode={undefined}
-            modalcontent={true}
+            platform=""
+            role="dialog"
+            title="Add Account"
 />,
         ],
       },
@@ -111,10 +135,13 @@ ShallowWrapper {
           "props": Object {
             "autoFocus": false,
             "block": false,
+            "className": undefined,
+            "data-test": "add-account-modal-button",
             "disabled": false,
             "element": "button",
+            "icon": undefined,
             "invalid": false,
-            "label": "click for modal",
+            "label": "",
             "logic": false,
             "modaltrigger": true,
             "quiet": false,
@@ -130,8 +157,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "contactEmails": Array [],
             "contactOnlyMode": undefined,
-            "modalcontent": true,
+            "platform": "",
+            "role": "dialog",
+            "title": "Add Account",
           },
           "ref": null,
           "rendered": null,

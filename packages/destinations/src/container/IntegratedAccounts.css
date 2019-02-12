@@ -5,3 +5,12 @@
     background: var(--spectrum-global-color-grey75);
     min-height: calc(115vh - var(--top-nav-height) - var(--footer-height) - var(--offset));
 }
+
+:local(.gridRow){
+  padding-bottom:0.75rem;
+}
+
+:local(.authenticationList){
+  padding-top: 1.75rem;
+  display: inline-flex;
+}

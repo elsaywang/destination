@@ -1,0 +1,11 @@
+:local(.notifyingCell){
+  display: flex;
+}
+:local(.email){
+  display: inline-flex;
+  margin-right: 1.15rem;
+}
+:local(.addAccountButton){
+    display: inline-flex;
+    margin: -0.3rem 0 0 -2.5rem
+}

@@ -115,7 +115,7 @@ describe('Integration Tests for routing', function() {
             cy.get('.configuration-button .spectrum-Button').as('configurationButton');
 
             cy.get('[data-test="configuration-button-link"]')
-                .contains('Configuration')
+                .contains('Integrated Accounts')
                 .should('be.exist');
 
             cy.get('@configurationButton')

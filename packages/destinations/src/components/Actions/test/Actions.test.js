@@ -20,6 +20,7 @@ describe('<Actions/> component', () => {
             showMetrics: false,
             isForDestination: true,
         };
+
         const wrapper = shallow(<Actions {...props} />);
 
         it('matches snapshot', () => {
@@ -49,7 +50,7 @@ describe('<Actions/> component', () => {
         const props = {
             disabled: false,
             authentication: {
-                adAccountId: 1,
+                adAccountId: '1',
                 accountName: 'test',
                 expireIn: 'Expired',
             },
