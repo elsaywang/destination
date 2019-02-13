@@ -86,12 +86,15 @@ ShallowWrapper {
                                           "label": "ALL PLATFORMS",
                                           "serverTypes": Array [
                                             "S2S",
+                                            "PEOPLE_BASED",
                                           ],
                                           "value": "Integrated Platforms",
                                         },
                                         Object {
                                           "label": "PEOPLE-BASED",
-                                          "serverTypes": Array [],
+                                          "serverTypes": Array [
+                                            "PEOPLE_BASED",
+                                          ],
                                           "value": "People-Based",
                                         },
                                         Object {
@@ -224,12 +227,15 @@ ShallowWrapper {
                                       "label": "ALL PLATFORMS",
                                       "serverTypes": Array [
                                         "S2S",
+                                        "PEOPLE_BASED",
                                       ],
                                       "value": "Integrated Platforms",
                                     },
                                     Object {
                                       "label": "PEOPLE-BASED",
-                                      "serverTypes": Array [],
+                                      "serverTypes": Array [
+                                        "PEOPLE_BASED",
+                                      ],
                                       "value": "People-Based",
                                     },
                                     Object {
@@ -258,12 +264,15 @@ ShallowWrapper {
                 "label": "ALL PLATFORMS",
                 "serverTypes": Array [
                   "S2S",
+                  "PEOPLE_BASED",
                 ],
                 "value": "Integrated Platforms",
               },
               Object {
                 "label": "PEOPLE-BASED",
-                "serverTypes": Array [],
+                "serverTypes": Array [
+                  "PEOPLE_BASED",
+                ],
                 "value": "People-Based",
               },
               Object {
@@ -508,12 +517,15 @@ ShallowWrapper {
                                                   "label": "ALL PLATFORMS",
                                                   "serverTypes": Array [
                                                     "S2S",
+                                                    "PEOPLE_BASED",
                                                   ],
                                                   "value": "Integrated Platforms",
                                                 },
                                                 Object {
                                                   "label": "PEOPLE-BASED",
-                                                  "serverTypes": Array [],
+                                                  "serverTypes": Array [
+                                                    "PEOPLE_BASED",
+                                                  ],
                                                   "value": "People-Based",
                                                 },
                                                 Object {
@@ -646,12 +658,15 @@ ShallowWrapper {
                                             "label": "ALL PLATFORMS",
                                             "serverTypes": Array [
                                               "S2S",
+                                              "PEOPLE_BASED",
                                             ],
                                             "value": "Integrated Platforms",
                                           },
                                           Object {
                                             "label": "PEOPLE-BASED",
-                                            "serverTypes": Array [],
+                                            "serverTypes": Array [
+                                              "PEOPLE_BASED",
+                                            ],
                                             "value": "People-Based",
                                           },
                                           Object {
@@ -680,12 +695,15 @@ ShallowWrapper {
                   "label": "ALL PLATFORMS",
                   "serverTypes": Array [
                     "S2S",
+                    "PEOPLE_BASED",
                   ],
                   "value": "Integrated Platforms",
                 },
                 Object {
                   "label": "PEOPLE-BASED",
-                  "serverTypes": Array [],
+                  "serverTypes": Array [
+                    "PEOPLE_BASED",
+                  ],
                   "value": "People-Based",
                 },
                 Object {
