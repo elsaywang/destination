@@ -15,20 +15,17 @@ export const getIntegratedPlatformsOptionByType = type => {
     const integratedPlatformOption = integratedPlatformsOptions.find(
         ({ label, value }) => value === type,
     );
-    return integratedPlatformOption ? integratedPlatformOption : '';
+    return integratedPlatformOption || '';
 };
 
-export const getPlatformOptions = (type = 'People-Based') => {
-    const integratedPlatformOption = getIntegratedPlatformsOptionByType(type);
-    const { platformOptions } = integratedPlatformOption;
-    return platformOptions && platformOptions.length ? platformOptions : [];
+export const getPlatformOptions = type => {
+    const { platformOptions } = getIntegratedPlatformsOptionByType(type);
+    return platformOptions || [];
 };
-
-
 
 export const destinationTemplateIDMap = _.keyBy(
-    getPlatformOptions(),
-    option => getPlatformOptions().indexOf(option) + 1,
+    getPlatformOptions('People-Based'),
+    option => getPlatformOptions('People-Based').indexOf(option) + 1,
 );
 // map id may change
 // {
