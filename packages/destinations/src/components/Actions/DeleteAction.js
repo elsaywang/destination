@@ -5,6 +5,7 @@ import Dialog from '@react/react-spectrum/Dialog';
 import Button from '@react/react-spectrum/Button';
 import Delete from '@react/react-spectrum/Icon/Delete';
 import Alert from '@react/react-spectrum/Icon/Alert';
+import requiredIf from 'react-required-if';
 import styles from './action.css';
 
 class DeleteAction extends Component {
@@ -63,20 +64,25 @@ DeleteAction.defaultProps = {
     handleDeleteAction: () => {
         //no-ops
     },
-    isForDestination: true,
 };
 
 DeleteAction.propTypes = {
     isForDestination: PropTypes.bool,
     handleDeleteAction: PropTypes.func,
-    destination: PropTypes.shape({
-        destinationId: PropTypes.number,
-        name: PropTypes.string,
-    }),
-    authentication: PropTypes.shape({
-        adAccountId: PropTypes.string,
-        accountName: PropTypes.string,
-    }),
+    destination: requiredIf(
+        PropTypes.shape({
+            destinationId: PropTypes.number,
+            name: PropTypes.string,
+        }),
+        ({ isForDestination }) => isForDestination,
+    ),
+    authentication: requiredIf(
+        PropTypes.shape({
+            adAccountId: PropTypes.string,
+            accountName: PropTypes.string,
+        }),
+        ({ isForDestination }) => !isForDestination,
+    ),
 };
 
 export default DeleteAction;

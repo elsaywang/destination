@@ -7,27 +7,27 @@ import EditAction from './EditAction';
 import MetricsView from './MetricsView';
 import styles from './action.css';
 
-const Actions = ({ destination, authentication, showMetrics, ...moreProps }) => {
-    const { disabled, isForDestination } = moreProps;
-
-    const renderActionsForDestinations = (
-        <Fragment>
-            <EditAction destination={destination} disabled={disabled} />
-            <DeleteAction destination={destination} {...moreProps} />
-            {showMetrics && <MetricsView destination={destination} disabled={disabled} />}
-        </Fragment>
-    );
-
-    const renderActionsForAuthentications = (
-        <Fragment>
-            <Activation authentication={authentication} disabled={disabled} />
-            <DeleteAction authentication={authentication} {...moreProps} />
-        </Fragment>
-    );
+const Actions = ({ isForDestination, disabled, ...actionsProps }) => {
+    const { destination, showMetrics } = isForDestination && actionsProps;
+    const { authentication } = !isForDestination && actionsProps;
 
     return (
         <div className={styles.actions}>
-            {isForDestination ? renderActionsForDestinations : renderActionsForAuthentications}
+            {isForDestination ? (
+                <Fragment>
+                    <EditAction destination={destination} disabled={disabled} />
+                    <DeleteAction destination={destination} isForDestination={isForDestination} />
+                    {showMetrics && <MetricsView destination={destination} disabled={disabled} />}
+                </Fragment>
+            ) : (
+                <Fragment>
+                    <Activation authentication={authentication} disabled={disabled} />
+                    <DeleteAction
+                        authentication={authentication}
+                        isForDestination={isForDestination}
+                    />
+                </Fragment>
+            )}
         </div>
     );
 };
