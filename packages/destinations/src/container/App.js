@@ -35,10 +35,7 @@ const DestinationContainer = ({ routeObject }) => (
         <Fragment>
             <Layout heading="Destinations">
                 <Nav routes={routes} />
-                <Route
-                    path={routeObject.route}
-                    render={() => <Destinations currentDestination={routeObject} />}
-                />
+                <Destinations currentDestination={routeObject} />
             </Layout>
         </Fragment>
     </Provider>
