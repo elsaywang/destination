@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { datePattern, formatDate, isExpired, expireIn } from '../dateHelper';
+import { datePattern, standardizedTime, formatDate, isExpired, expireIn } from '../dateHelper';
 import mockdate from 'mockdate';
 
 describe('dateHelp until test', () => {
@@ -12,10 +12,11 @@ describe('dateHelp until test', () => {
     });
 
     it('matches snapshot', () => {
-        expect(datePattern).toMatchSnapshot(`MMM DD,YYYY hh:mm a`);
+        expect(datePattern).toMatchSnapshot();
+        expect(standardizedTime()).toMatchSnapshot();
     });
     it(`formatDate func test`, () => {
-        expect(formatDate(1548345128000)).toMatchSnapshot('Jan 24,2019 10:52 am');
+        expect(formatDate(1548345128000)).toEqual('Jan 24, 2019 10:52 AM');
     });
     it(`isExpired func test`, () => {
         expect(isExpired(1548345128000)).toBeFalsy();

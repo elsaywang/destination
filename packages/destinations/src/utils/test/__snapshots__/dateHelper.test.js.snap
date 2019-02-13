@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Jan 24,2019 10:52 am 1`] = `"Jan 24, 2019 10:52 AM"`;
+exports[`dateHelp until test matches snapshot 1`] = `"MMM DD, YYYY hh:mm A"`;
 
-exports[`MMM DD,YYYY hh:mm a 1`] = `"MMM DD, YYYY hh:mm A"`;
+exports[`dateHelp until test matches snapshot 2`] = `"2018-05-01T12:00:00.000Z"`;

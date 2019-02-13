@@ -2,8 +2,12 @@ import moment from 'moment';
 
 export const datePattern = 'MMM DD, YYYY hh:mm A';
 
-export const formatDate = ms => moment(ms).format(datePattern);
+//standardize to New York Time Zone
+export const standardizedTime = (ms = undefined) => moment(ms).utcOffset('-0500');
 
-export const isExpired = ms => moment(ms).isBefore(moment());
+export const formatDate = ms => standardizedTime(ms).format(datePattern);
 
-export const expireIn = ms => isExpired(ms) ? 'Expired' : moment(ms).diff(moment(), "days")+` days`;
+export const isExpired = ms => standardizedTime(ms).isBefore(standardizedTime());
+
+export const expireIn = ms =>
+    isExpired(ms) ? 'Expired' : `${standardizedTime(ms).diff(standardizedTime(), 'days')} days`;
