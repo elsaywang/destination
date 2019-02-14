@@ -3,7 +3,7 @@ import moment from 'moment';
 export const datePattern = 'MMM DD, YYYY hh:mm A';
 
 //standardize to UTC
-export const standardizedTime = (ms = undefined) => moment(ms).utc();
+export const standardizedTime = (ms = undefined) => moment.utc(ms);
 
 export const formatDate = ms => standardizedTime(ms).format(datePattern);
 
