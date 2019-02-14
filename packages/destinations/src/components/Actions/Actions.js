@@ -36,7 +36,6 @@ const Actions = ({ isForDestination, disabled, ...actionsProps }) => {
 
 Actions.defaultProps = {
     disabled: false,
-    isForDestination: true,
 };
 
 Actions.propTypes = {
