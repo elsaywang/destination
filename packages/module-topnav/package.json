@@ -1,6 +1,6 @@
 {
   "name": "@aam/aam-topnav",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "TopNav component of Adobe Audience Manager",
   "main": "index.js",
   "scripts": {
