@@ -1,23 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
+import { NavLink, withRouter } from 'react-router-dom';
 import { Tab, TabList } from '@react/react-spectrum/TabList';
 import styles from './SideNavFilter.css';
 
-const SideNavFilter = ({ filterOptions, filterType, onFilterTypeChange }) => (
+const SideNavFilter = ({ filterOptions, filterType, onFilterTypeChange, baseRoute }) => (
     <div className={styles.filterType} data-test="side-nav-filter">
         <TabList
             orientation="vertical"
             variant="compact"
             quiet
+            selectedIndex={filterOptions.findIndex(
+                ({ value, isDefault }) =>
+                    (_.isEmpty(filterType) && isDefault) || value === filterType,
+            )}
             onChange={tabIndex => onFilterTypeChange(filterOptions[tabIndex])}>
-            {filterOptions.map(({ label, value }) => (
+            {filterOptions.map(({ label, value, subroute }) => (
                 <Tab
                     data-test={`${value.toLowerCase().replace(/\W/g, '-')}-type-filter`}
-                    selected={filterType === value}
                     key={value}
                     value={value}
                     className={styles.filterType}>
-                    {label}
+                    <NavLink className={styles.link} to={baseRoute + subroute}>
+                        {label}
+                    </NavLink>
                 </Tab>
             ))}
         </TabList>
@@ -36,4 +43,4 @@ SideNavFilter.propTypes = {
     ),
 };
 
-export default SideNavFilter;
+export default withRouter(SideNavFilter);

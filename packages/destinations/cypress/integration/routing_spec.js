@@ -1,4 +1,5 @@
 const routes = require('../fixtures/tabNavRoutes.json');
+const { integratedPlatformsOptions } = require('../../src/constants/integratedPlatformsOptions');
 
 describe('Integration Tests for routing', function() {
     it('should check the ability for routing in the UI', function(done) {
@@ -103,6 +104,39 @@ describe('Integration Tests for routing', function() {
                         cy.get(currentDataTest).should('be.exist');
                     });
                 });
+        });
+    });
+
+    describe('when clicking links in sidenav', () => {
+        beforeEach(() => {
+            cy.visit('portal/destinations/integratedPlatforms');
+        });
+
+        it('should route to the correct subroute', () => {
+            integratedPlatformsOptions.forEach(({ subroute, value }) => {
+                cy.get(`[data-test="${value.toLowerCase().replace(/\W/g, '-')}-type-filter"]`)
+                    .click()
+                    .then(() => {
+                        cy.url().should('match', new RegExp(`${subroute}`));
+                    });
+            });
+        });
+    });
+
+    describe('when entering subroute into url', () => {
+        it('should have correct sidenav tab selected', () => {
+            integratedPlatformsOptions.forEach(({ subroute, value, label }) => {
+                cy.visit(`portal/destinations/integratedPlatforms${subroute}`).then(() => {
+                    cy.get(
+                        `.spectrum-Tabs-item.is-selected${`[data-test="${value
+                            .toLowerCase()
+                            .replace(/\W/g, '-')}-type-filter"]`}`,
+                    ).as('selectedSideNavTab');
+                    cy.get('@selectedSideNavTab')
+                        .contains(label)
+                        .should('be.exist');
+                });
+            });
         });
     });
 

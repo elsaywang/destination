@@ -17,9 +17,12 @@ const Nav = ({ location, routes, applyFilter }) => (
                 <TabList
                     quiet
                     variant="compact"
+                    selectedIndex={routes.findIndex(({ route }) =>
+                        location.pathname.includes(route),
+                    )}
                     onChange={indexSelected => applyFilter(routes[indexSelected].types)}>
                     {routes.map(({ route, name }) => (
-                        <Tab selected={location.pathname === route} key={route}>
+                        <Tab key={route}>
                             <NavLink
                                 to={route}
                                 className={styles.link}

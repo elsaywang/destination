@@ -1,15 +1,26 @@
 import _ from 'lodash';
 
 export const integratedPlatformsOptions = [
-    { label: `ALL PLATFORMS`, value: `Integrated Platforms`, serverTypes: ['S2S', 'PEOPLE_BASED'] },
+    {
+        label: `ALL PLATFORMS`,
+        value: `Integrated Platforms`,
+        isDefault: true,
+        subroute: '',
+        serverTypes: ['S2S', 'PEOPLE_BASED'],
+    },
     {
         label: `PEOPLE-BASED`,
         value: `People-Based`,
+        subroute: '/peopleBased',
         serverTypes: ['PEOPLE_BASED'],
         platformOptions: ['Facebook', 'Google', 'Twitter', 'LinkedIn'],
     },
-
-    { label: `DEVICE-BASED`, value: `Device-Based`, serverTypes: ['S2S'] },
+    {
+        label: `DEVICE-BASED`,
+        value: `Device-Based`,
+        subroute: '/deviceBased',
+        serverTypes: ['S2S'],
+    },
 ];
 
 export const getIntegratedPlatformsOptionByType = type => {

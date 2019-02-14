@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import Table from '../components/Table';
 import SideNavFilter from '../components/SideNavFilter';
 import styles from './Destinations.css';
@@ -56,8 +57,18 @@ class Destinations extends Component {
         this.props.fetchDestinations();
     };
 
-    componentWillMount() {
-        this.props.applyFilter(this.props.currentDestination.types);
+    componentDidMount() {
+        if (!_.isEmpty(this.props.subroute)) {
+            const currentPlatform = integratedPlatformsOptions.find(
+                ({ subroute }) => subroute === this.props.subroute,
+            );
+
+            this.props.updateIntegratedPlatformType(currentPlatform.value);
+            this.props.applyFilter(currentPlatform.serverTypes);
+        } else {
+            this.props.applyFilter(this.props.currentDestination.types);
+        }
+
         this.props.fetchDestinations();
     }
 
@@ -85,6 +96,7 @@ class Destinations extends Component {
                     onFilterTypeChange={this.handleSideNavFilterChange}
                     filterType={integratedPlatformType}
                     isSearched={true}
+                    baseRoute={this.props.currentDestination.route}
                     filterOptions={integratedPlatformsOptions}
                 />
             </div>

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import _ from 'lodash';
 import './App.css';
 import { Provider } from 'react-redux';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
@@ -8,6 +9,7 @@ import Destinations from './Destinations';
 import IntegratedAccounts from './IntegratedAccounts';
 import configureStore from '../configureStore';
 import { routes } from '../constants/navTab';
+import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
 const store = configureStore();
 
 const App = () => (
@@ -23,19 +25,51 @@ const App = () => (
                 <Route
                     key={routeObject.route}
                     path={routeObject.route}
-                    render={() => <DestinationContainer routeObject={routeObject} />}
+                    render={({ location }) => (
+                        <DestinationContainer location={location} routeObject={routeObject} />
+                    )}
                 />
             ))}
         </Switch>
     </BrowserRouter>
 );
 
-const DestinationContainer = ({ routeObject }) => (
+const DestinationContainer = ({ location, routeObject }) => (
     <Provider store={store}>
         <Fragment>
             <Layout heading="Destinations">
                 <Nav routes={routes} />
-                <Destinations currentDestination={routeObject} />
+                <Switch>
+                    {routeObject.name === 'Integrated Platforms' ? (
+                        [
+                            integratedPlatformsOptions.map(platform => (
+                                <Route
+                                    exact
+                                    key={platform.value}
+                                    path={routeObject.route + platform.subroute}
+                                    render={() => (
+                                        <Destinations
+                                            currentDestination={routeObject}
+                                            subroute={_.last(
+                                                location.pathname.split(routeObject.route),
+                                            )}
+                                        />
+                                    )}
+                                />
+                            )),
+                            <Route
+                                key={`no_match_${routeObject.name}`}
+                                path={'/destinations/integratedPlatforms'}
+                                render={() => <Redirect to="/destinations/integratedPlatforms" />}
+                            />,
+                        ]
+                    ) : (
+                        <Destinations
+                            currentDestination={routeObject}
+                            subroute={_.last(location.pathname.split(routeObject.route))}
+                        />
+                    )}
+                </Switch>
             </Layout>
         </Fragment>
     </Provider>
