@@ -12,11 +12,13 @@ Object {
 exports[`integratedPlatformsOptions matches snapshot 1`] = `
 Array [
   Object {
+    "isDefault": true,
     "label": "ALL PLATFORMS",
     "serverTypes": Array [
       "S2S",
       "PEOPLE_BASED",
     ],
+    "subroute": "",
     "value": "Integrated Platforms",
   },
   Object {
@@ -30,6 +32,7 @@ Array [
     "serverTypes": Array [
       "PEOPLE_BASED",
     ],
+    "subroute": "/peopleBased",
     "value": "People-Based",
   },
   Object {
@@ -37,6 +40,7 @@ Array [
     "serverTypes": Array [
       "S2S",
     ],
+    "subroute": "/deviceBased",
     "value": "Device-Based",
   },
 ]
