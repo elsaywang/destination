@@ -2,12 +2,10 @@ import moment from 'moment';
 
 export const datePattern = 'MMM DD, YYYY hh:mm A';
 
-//standardize to UTC
-export const standardizedTime = (ms = undefined) => moment.utc(ms);
 
-export const formatDate = ms => standardizedTime(ms).format(datePattern);
+export const formatDate = ms => moment.utc(ms).format(datePattern);
 
-export const isExpired = ms => standardizedTime(ms).isBefore(standardizedTime());
+export const isExpired = ms => moment.utc(ms).isBefore(moment.utc());
 
 export const expireIn = ms =>
-    isExpired(ms) ? 'Expired' : `${standardizedTime(ms).diff(standardizedTime(), 'days')} days`;
+    isExpired(ms) ? 'Expired' : `${moment.utc(ms).diff(moment.utc(), 'days')} days`;

@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { datePattern, standardizedTime, formatDate, isExpired, expireIn } from '../dateHelper';
+import { datePattern, formatDate, isExpired, expireIn } from '../dateHelper';
 import mockdate from 'mockdate';
 
 describe('dateHelper until test', () => {
@@ -13,7 +13,6 @@ describe('dateHelper until test', () => {
 
     it('matches snapshot', () => {
         expect(datePattern).toMatchSnapshot();
-        expect(standardizedTime()).toMatchSnapshot();
     });
     it(`formatDate func test`, () => {
         expect(formatDate(1548345128000)).toEqual('Jan 24, 2019 03:52 PM');

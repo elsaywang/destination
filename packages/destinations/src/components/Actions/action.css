@@ -34,6 +34,7 @@
 }
 :local(.activationButton){
   font-weight: var(--spectrum-global-font-weight-normal);
+  max-width: 1.25rem;
 }
 
 :local(.actions){

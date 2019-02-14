@@ -37,6 +37,7 @@ class Destinations extends Component {
                     destination={data}
                     showMetrics={this.isIntegratedPlatform(currentRecordCategory)}
                     handleDeleteAction={this.props.deleteDestination}
+                    isForDestination
                 />
             </div>
         );
