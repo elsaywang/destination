@@ -48,7 +48,7 @@
 		"start": "react-app-rewired start",
 		"start:ci": "npx http-server build -p 3000 --cors",
 		"build": "react-app-rewired build",
-		"postbuild": "npm run copy-shell-topnav",
+		"prebuild": "npm run copy-shell-topnav",
 		"build:replace:version": "npx replace-in-file appVersion $BUILD_NUMBER build/index.html",
 		"build:replace:branch": "npx replace-in-file appBranch $BRANCH_NAME build/index.html",
 		"test": "react-app-rewired test --env=jsdom",
@@ -62,7 +62,8 @@
 		"copy-topnav": "npx cpx -v ./node_modules/@aam/aam-topnav/build/css/*.css ./public/static/css",
 		"copy-shell-topnav": "npm run copy-coral-shell-ims && npm run copy-topnav",
 		"json-server": "json-server data-generator.js --port 3002 --routes ./routes.json",
-		"externalize": "rm -f ./src/lib/i18n/messages/en.json && NODE_ENV=development npx extract-messages -l=en --flat true -o ./src/lib/i18n/messages './src/**/!(*.test).js'"
+		"externalize": "rm -f ./src/lib/i18n/messages/en.json && NODE_ENV=development npx extract-messages -l=en --flat true -o ./src/lib/i18n/messages './src/**/!(*.test).js'",
+		"clean": "rm -rf build && rm -rf node_modules"
 	},
 	"jest": {
 		"moduleNameMapper": {

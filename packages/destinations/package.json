@@ -57,7 +57,8 @@
     "cypress:run": "npx cypress run",
     "cypress:ci": "npx start-server-and-test start:ci http://localhost:3002 cypress:run",
     "eject": "react-scripts eject",
-    "mock-server": "node ./src/mock-server.js"
+    "mock-server": "node ./src/mock-server.js",
+    "clean": "rm -rf build && rm -rf node_modules"
   },
   "eslintConfig": {
     "extends": "react-app"

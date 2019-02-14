@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "npm rebuild node-sass",
-    "clean": "rm -rf ./build",
-    "build": "npm run clean && npm run babel && npm run sass",
+    "build": "npm run remove-build && npm run babel && npm run sass",
     "babel": "npx babel ./src -d ./build",
     "sass": "npx node-sass ./src/scss -o ./build/css",
-    "postcss": "npx postcss --no-map  -r ./build/css/*.css"
+    "postcss": "npx postcss --no-map  -r ./build/css/*.css",
+    "remove-build": "rm -rf ./build",
+    "clean": "npm run remove-build && rm -rf node_modules"
   },
   "keywords": [
     "TopNav",
