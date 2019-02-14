@@ -39,3 +39,8 @@
 p {
     margin: 3px;
 }
+
+:local(.menuOption){
+  justify-content:flex-start;
+  min-width: 120px;
+}

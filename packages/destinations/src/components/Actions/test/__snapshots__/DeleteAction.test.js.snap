@@ -7,11 +7,15 @@ ShallowWrapper {
     deleteDestination={[Function]}
     destination={
         Object {
+            "destinationType": "PEOPLE_BASED",
             "id": 20008,
             "name": "card",
+            "shareableAudience": 909,
           }
     }
     disabled={false}
+    handleDeleteAction={[Function]}
+    isForDestination={true}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -71,19 +75,21 @@ ShallowWrapper {
                               <span
                                         className={undefined}
                               >
-                                          Delete Destination
+                                          Delete   Destination
                               </span>
                     </Unknown>
           }
           variant="destructive"
 >
           <span>
-                    Are you sure you want to delete this 
+                    Are you sure you want to delete this
+                     
                     <strong>
                               card
                     </strong>
                      
-                    destination?
+                    destination
+                     ?
                     <br />
           </span>
 </Dialog>,
@@ -125,12 +131,14 @@ ShallowWrapper {
           "backdropClickable": false,
           "cancelLabel": "Cancel",
           "children": <span>
-            Are you sure you want to delete this 
+            Are you sure you want to delete this
+             
             <strong>
                         card
             </strong>
              
-            destination?
+            destination
+             ?
             <br />
 </span>,
           "className": undefined,
@@ -152,7 +160,7 @@ ShallowWrapper {
             <span
                         className={undefined}
             >
-                          Delete Destination
+                          Delete   Destination
             </span>
 </Unknown>,
           "variant": "destructive",
@@ -164,18 +172,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Are you sure you want to delete this ",
+              "Are you sure you want to delete this",
+              " ",
               <strong>
                 card
 </strong>,
               " ",
-              "destination?",
+              "destination",
+              " ?",
               <br />,
             ],
           },
           "ref": null,
           "rendered": Array [
-            "Are you sure you want to delete this ",
+            "Are you sure you want to delete this",
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -188,7 +199,8 @@ ShallowWrapper {
               "type": "strong",
             },
             " ",
-            "destination?",
+            "destination",
+            " ?",
             Object {
               "instance": null,
               "key": undefined,
@@ -256,19 +268,21 @@ ShallowWrapper {
                                     <span
                                                 className={undefined}
                                     >
-                                                  Delete Destination
+                                                  Delete   Destination
                                     </span>
                         </Unknown>
             }
             variant="destructive"
 >
             <span>
-                        Are you sure you want to delete this 
+                        Are you sure you want to delete this
+                         
                         <strong>
                                     card
                         </strong>
                          
-                        destination?
+                        destination
+                         ?
                         <br />
             </span>
 </Dialog>,
@@ -310,12 +324,14 @@ ShallowWrapper {
             "backdropClickable": false,
             "cancelLabel": "Cancel",
             "children": <span>
-              Are you sure you want to delete this 
+              Are you sure you want to delete this
+               
               <strong>
                             card
               </strong>
                
-              destination?
+              destination
+               ?
               <br />
 </span>,
             "className": undefined,
@@ -337,7 +353,7 @@ ShallowWrapper {
               <span
                             className={undefined}
               >
-                              Delete Destination
+                              Delete   Destination
               </span>
 </Unknown>,
             "variant": "destructive",
@@ -349,18 +365,21 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "Are you sure you want to delete this ",
+                "Are you sure you want to delete this",
+                " ",
                 <strong>
                   card
 </strong>,
                 " ",
-                "destination?",
+                "destination",
+                " ?",
                 <br />,
               ],
             },
             "ref": null,
             "rendered": Array [
-              "Are you sure you want to delete this ",
+              "Are you sure you want to delete this",
+              " ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -373,7 +392,8 @@ ShallowWrapper {
                 "type": "strong",
               },
               " ",
-              "destination?",
+              "destination",
+              " ?",
               Object {
                 "instance": null,
                 "key": undefined,

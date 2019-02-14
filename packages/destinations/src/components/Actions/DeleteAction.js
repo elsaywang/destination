@@ -5,29 +5,33 @@ import Dialog from '@react/react-spectrum/Dialog';
 import Button from '@react/react-spectrum/Button';
 import Delete from '@react/react-spectrum/Icon/Delete';
 import Alert from '@react/react-spectrum/Icon/Alert';
+import requiredIf from 'react-required-if';
 import styles from './action.css';
 
 class DeleteAction extends Component {
     renderTitle = () => (
         <Fragment>
             <Alert size="S" className={styles.deletionAlert} />
-            <span className={styles.deletionText}>&nbsp; Delete Destination</span>
+            <span className={styles.deletionText}>
+                {`  Delete  ${this.props.isForDestination ? ' Destination' : '  Authentication'}`}
+            </span>
         </Fragment>
     );
 
     render() {
-        const { destination, disabled, deleteDestination } = this.props;
-        const { name, destinationId } = destination;
+        const { disabled, handleDeleteAction, isForDestination } = this.props;
+        const { name, destinationId } = isForDestination && this.props.destination;
+        const { accountName, adAccountId } = !isForDestination && this.props.authentication;
 
         return (
             !disabled && (
                 <ModalTrigger>
                     <Button
                         data-test="action-delete-button"
-                        label={''}
+                        label={isForDestination ? '' : 'Delete'}
                         variant="action"
                         quiet
-                        icon={<Delete size="S" />}
+                        icon={isForDestination && <Delete size="S" />}
                         modaltrigger
                     />
                     <Dialog
@@ -38,11 +42,14 @@ class DeleteAction extends Component {
                         confirmLabel="Delete"
                         size="S"
                         cancelLabel="Cancel"
-                        onConfirm={() => deleteDestination(destinationId)}
+                        onConfirm={() =>
+                            handleDeleteAction(isForDestination ? destinationId : adAccountId)
+                        }
                         variant="destructive">
                         <span>
-                            Are you sure you want to delete this <strong>{name}</strong>{' '}
-                            destination?
+                            Are you sure you want to delete this{' '}
+                            <strong>{isForDestination ? name : accountName}</strong>{' '}
+                            {isForDestination ? `destination` : `authentication`} ?
                             <br />
                         </span>
                     </Dialog>
@@ -54,17 +61,28 @@ class DeleteAction extends Component {
 
 DeleteAction.defaultProps = {
     disabled: false,
-    deleteDestination: () => {
+    handleDeleteAction: () => {
         //no-ops
     },
 };
 
 DeleteAction.propTypes = {
-    deleteDestination: PropTypes.func,
-    destination: PropTypes.shape({
-        destinationId: PropTypes.number,
-        name: PropTypes.string,
-    }),
+    isForDestination: PropTypes.bool,
+    handleDeleteAction: PropTypes.func,
+    destination: requiredIf(
+        PropTypes.shape({
+            destinationId: PropTypes.number,
+            name: PropTypes.string,
+        }),
+        ({ isForDestination }) => isForDestination,
+    ),
+    authentication: requiredIf(
+        PropTypes.shape({
+            adAccountId: PropTypes.string,
+            accountName: PropTypes.string,
+        }),
+        ({ isForDestination }) => !isForDestination,
+    ),
 };
 
 export default DeleteAction;

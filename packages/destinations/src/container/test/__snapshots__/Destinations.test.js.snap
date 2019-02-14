@@ -92,6 +92,12 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "label": "PEOPLE-BASED",
+                                          "platformOptions": Array [
+                                            "Facebook",
+                                            "Google",
+                                            "Twitter",
+                                            "LinkedIn",
+                                          ],
                                           "serverTypes": Array [
                                             "PEOPLE_BASED",
                                           ],
@@ -134,7 +140,7 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "active": true,
-                                          "key": "platform",
+                                          "key": "destinationTemplateId",
                                           "sortable": true,
                                           "title": "PLATFORM",
                                           "width": 150,
@@ -153,13 +159,13 @@ ShallowWrapper {
                                         },
                                         Object {
                                           "key": "action",
-                                          "title": "ACTION",
+                                          "title": "ACTIONS",
                                           "width": 200,
                                         },
                                       ]
                     }
                     dataTest="destination-list-table"
-                    height={900}
+                    height={800}
                     items={
                               Array [
                                         Object {
@@ -199,7 +205,7 @@ ShallowWrapper {
                     onSortChange={[Function]}
                     reachedEndOfRows={[Function]}
                     renderCell={[Function]}
-                    rowHeight={250}
+                    rowHeight={100}
                     sortDescriptor={
                               Object {
                                         "column": undefined,
@@ -207,7 +213,6 @@ ShallowWrapper {
                                       }
                     }
           />
-          
 </div>,
       ],
       "className": undefined,
@@ -233,6 +238,12 @@ ShallowWrapper {
                                     },
                                     Object {
                                       "label": "PEOPLE-BASED",
+                                      "platformOptions": Array [
+                                        "Facebook",
+                                        "Google",
+                                        "Twitter",
+                                        "LinkedIn",
+                                      ],
                                       "serverTypes": Array [
                                         "PEOPLE_BASED",
                                       ],
@@ -270,6 +281,12 @@ ShallowWrapper {
               },
               Object {
                 "label": "PEOPLE-BASED",
+                "platformOptions": Array [
+                  "Facebook",
+                  "Google",
+                  "Twitter",
+                  "LinkedIn",
+                ],
                 "serverTypes": Array [
                   "PEOPLE_BASED",
                 ],
@@ -298,203 +315,197 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <Table
-              allowsSelection={false}
-              columns={
-                            Array [
-                                          Object {
-                                            "announce": false,
-                                            "key": "destinationId",
-                                            "sortable": true,
-                                            "title": "ID",
-                                            "width": 80,
-                                          },
-                                          Object {
-                                            "active": true,
-                                            "key": "destinationType",
-                                            "sortable": true,
-                                            "title": "TYPE",
-                                            "width": 150,
-                                          },
-                                          Object {
-                                            "active": true,
-                                            "key": "platform",
-                                            "sortable": true,
-                                            "title": "PLATFORM",
-                                            "width": 150,
-                                          },
-                                          Object {
-                                            "key": "name",
-                                            "sortable": true,
-                                            "title": "NAME",
-                                            "width": 200,
-                                          },
-                                          Object {
-                                            "key": "description",
-                                            "minWidth": 250,
-                                            "sortable": true,
-                                            "title": "DESCRIPTION",
-                                          },
-                                          Object {
-                                            "key": "action",
-                                            "title": "ACTION",
-                                            "width": 200,
-                                          },
-                                        ]
-              }
-              dataTest="destination-list-table"
-              height={900}
-              items={
-                            Array [
-                                          Object {
-                                            "action": "",
-                                            "description": "Maxime ut totam nemo assumenda ratione impedit.",
-                                            "id": 0,
-                                            "name": "input",
-                                            "platform": "Twitter",
-                                            "shareableAudience": 41898,
-                                          },
-                                          Object {
-                                            "action": "",
-                                            "description": "Et nesciunt voluptatibus facilis blanditiis.",
-                                            "id": 1,
-                                            "name": "Bedfordshire",
-                                            "platform": "Google",
-                                            "shareableAudience": 18751,
-                                          },
-                                          Object {
-                                            "action": "",
-                                            "description": "Repellat sit dolor ut quisquam et ducimus.",
-                                            "id": 2,
-                                            "name": "Shoes",
-                                            "platform": "Twitter",
-                                            "shareableAudience": 5434,
-                                          },
-                                          Object {
-                                            "action": "",
-                                            "description": "Blanditiis tenetur culpa aut distinctio.",
-                                            "id": 3,
-                                            "name": "mesh",
-                                            "platform": "LinkedIn",
-                                            "shareableAudience": 40918,
-                                          },
-                                        ]
-              }
-              onSortChange={[Function]}
-              reachedEndOfRows={[Function]}
-              renderCell={[Function]}
-              rowHeight={250}
-              sortDescriptor={
-                            Object {
-                                          "column": undefined,
-                                          "direction": undefined,
-                                        }
-              }
+          "children": <Table
+            allowsSelection={false}
+            columns={
+                        Array [
+                                    Object {
+                                      "announce": false,
+                                      "key": "destinationId",
+                                      "sortable": true,
+                                      "title": "ID",
+                                      "width": 80,
+                                    },
+                                    Object {
+                                      "active": true,
+                                      "key": "destinationType",
+                                      "sortable": true,
+                                      "title": "TYPE",
+                                      "width": 150,
+                                    },
+                                    Object {
+                                      "active": true,
+                                      "key": "destinationTemplateId",
+                                      "sortable": true,
+                                      "title": "PLATFORM",
+                                      "width": 150,
+                                    },
+                                    Object {
+                                      "key": "name",
+                                      "sortable": true,
+                                      "title": "NAME",
+                                      "width": 200,
+                                    },
+                                    Object {
+                                      "key": "description",
+                                      "minWidth": 250,
+                                      "sortable": true,
+                                      "title": "DESCRIPTION",
+                                    },
+                                    Object {
+                                      "key": "action",
+                                      "title": "ACTIONS",
+                                      "width": 200,
+                                    },
+                                  ]
+            }
+            dataTest="destination-list-table"
+            height={800}
+            items={
+                        Array [
+                                    Object {
+                                      "action": "",
+                                      "description": "Maxime ut totam nemo assumenda ratione impedit.",
+                                      "id": 0,
+                                      "name": "input",
+                                      "platform": "Twitter",
+                                      "shareableAudience": 41898,
+                                    },
+                                    Object {
+                                      "action": "",
+                                      "description": "Et nesciunt voluptatibus facilis blanditiis.",
+                                      "id": 1,
+                                      "name": "Bedfordshire",
+                                      "platform": "Google",
+                                      "shareableAudience": 18751,
+                                    },
+                                    Object {
+                                      "action": "",
+                                      "description": "Repellat sit dolor ut quisquam et ducimus.",
+                                      "id": 2,
+                                      "name": "Shoes",
+                                      "platform": "Twitter",
+                                      "shareableAudience": 5434,
+                                    },
+                                    Object {
+                                      "action": "",
+                                      "description": "Blanditiis tenetur culpa aut distinctio.",
+                                      "id": 3,
+                                      "name": "mesh",
+                                      "platform": "LinkedIn",
+                                      "shareableAudience": 40918,
+                                    },
+                                  ]
+            }
+            onSortChange={[Function]}
+            reachedEndOfRows={[Function]}
+            renderCell={[Function]}
+            rowHeight={100}
+            sortDescriptor={
+                        Object {
+                                    "column": undefined,
+                                    "direction": undefined,
+                                  }
+            }
 />,
-            "",
-          ],
           "className": undefined,
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "allowsSelection": false,
-              "columns": Array [
-                Object {
-                  "announce": false,
-                  "key": "destinationId",
-                  "sortable": true,
-                  "title": "ID",
-                  "width": 80,
-                },
-                Object {
-                  "active": true,
-                  "key": "destinationType",
-                  "sortable": true,
-                  "title": "TYPE",
-                  "width": 150,
-                },
-                Object {
-                  "active": true,
-                  "key": "platform",
-                  "sortable": true,
-                  "title": "PLATFORM",
-                  "width": 150,
-                },
-                Object {
-                  "key": "name",
-                  "sortable": true,
-                  "title": "NAME",
-                  "width": 200,
-                },
-                Object {
-                  "key": "description",
-                  "minWidth": 250,
-                  "sortable": true,
-                  "title": "DESCRIPTION",
-                },
-                Object {
-                  "key": "action",
-                  "title": "ACTION",
-                  "width": 200,
-                },
-              ],
-              "dataTest": "destination-list-table",
-              "height": 900,
-              "items": Array [
-                Object {
-                  "action": "",
-                  "description": "Maxime ut totam nemo assumenda ratione impedit.",
-                  "id": 0,
-                  "name": "input",
-                  "platform": "Twitter",
-                  "shareableAudience": 41898,
-                },
-                Object {
-                  "action": "",
-                  "description": "Et nesciunt voluptatibus facilis blanditiis.",
-                  "id": 1,
-                  "name": "Bedfordshire",
-                  "platform": "Google",
-                  "shareableAudience": 18751,
-                },
-                Object {
-                  "action": "",
-                  "description": "Repellat sit dolor ut quisquam et ducimus.",
-                  "id": 2,
-                  "name": "Shoes",
-                  "platform": "Twitter",
-                  "shareableAudience": 5434,
-                },
-                Object {
-                  "action": "",
-                  "description": "Blanditiis tenetur culpa aut distinctio.",
-                  "id": 3,
-                  "name": "mesh",
-                  "platform": "LinkedIn",
-                  "shareableAudience": 40918,
-                },
-              ],
-              "onSortChange": [Function],
-              "reachedEndOfRows": [Function],
-              "renderCell": [Function],
-              "rowHeight": 250,
-              "sortDescriptor": Object {
-                "column": undefined,
-                "direction": undefined,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowsSelection": false,
+            "columns": Array [
+              Object {
+                "announce": false,
+                "key": "destinationId",
+                "sortable": true,
+                "title": "ID",
+                "width": 80,
               },
+              Object {
+                "active": true,
+                "key": "destinationType",
+                "sortable": true,
+                "title": "TYPE",
+                "width": 150,
+              },
+              Object {
+                "active": true,
+                "key": "destinationTemplateId",
+                "sortable": true,
+                "title": "PLATFORM",
+                "width": 150,
+              },
+              Object {
+                "key": "name",
+                "sortable": true,
+                "title": "NAME",
+                "width": 200,
+              },
+              Object {
+                "key": "description",
+                "minWidth": 250,
+                "sortable": true,
+                "title": "DESCRIPTION",
+              },
+              Object {
+                "key": "action",
+                "title": "ACTIONS",
+                "width": 200,
+              },
+            ],
+            "dataTest": "destination-list-table",
+            "height": 800,
+            "items": Array [
+              Object {
+                "action": "",
+                "description": "Maxime ut totam nemo assumenda ratione impedit.",
+                "id": 0,
+                "name": "input",
+                "platform": "Twitter",
+                "shareableAudience": 41898,
+              },
+              Object {
+                "action": "",
+                "description": "Et nesciunt voluptatibus facilis blanditiis.",
+                "id": 1,
+                "name": "Bedfordshire",
+                "platform": "Google",
+                "shareableAudience": 18751,
+              },
+              Object {
+                "action": "",
+                "description": "Repellat sit dolor ut quisquam et ducimus.",
+                "id": 2,
+                "name": "Shoes",
+                "platform": "Twitter",
+                "shareableAudience": 5434,
+              },
+              Object {
+                "action": "",
+                "description": "Blanditiis tenetur culpa aut distinctio.",
+                "id": 3,
+                "name": "mesh",
+                "platform": "LinkedIn",
+                "shareableAudience": 40918,
+              },
+            ],
+            "onSortChange": [Function],
+            "reachedEndOfRows": [Function],
+            "renderCell": [Function],
+            "rowHeight": 100,
+            "sortDescriptor": Object {
+              "column": undefined,
+              "direction": undefined,
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
           },
-          "",
-        ],
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": "div",
       },
     ],
@@ -523,6 +534,12 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "label": "PEOPLE-BASED",
+                                                  "platformOptions": Array [
+                                                    "Facebook",
+                                                    "Google",
+                                                    "Twitter",
+                                                    "LinkedIn",
+                                                  ],
                                                   "serverTypes": Array [
                                                     "PEOPLE_BASED",
                                                   ],
@@ -565,7 +582,7 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "active": true,
-                                                  "key": "platform",
+                                                  "key": "destinationTemplateId",
                                                   "sortable": true,
                                                   "title": "PLATFORM",
                                                   "width": 150,
@@ -584,13 +601,13 @@ ShallowWrapper {
                                                 },
                                                 Object {
                                                   "key": "action",
-                                                  "title": "ACTION",
+                                                  "title": "ACTIONS",
                                                   "width": 200,
                                                 },
                                               ]
                         }
                         dataTest="destination-list-table"
-                        height={900}
+                        height={800}
                         items={
                                     Array [
                                                 Object {
@@ -630,7 +647,7 @@ ShallowWrapper {
                         onSortChange={[Function]}
                         reachedEndOfRows={[Function]}
                         renderCell={[Function]}
-                        rowHeight={250}
+                        rowHeight={100}
                         sortDescriptor={
                                     Object {
                                                 "column": undefined,
@@ -638,7 +655,6 @@ ShallowWrapper {
                                               }
                         }
             />
-            
 </div>,
         ],
         "className": undefined,
@@ -664,6 +680,12 @@ ShallowWrapper {
                                           },
                                           Object {
                                             "label": "PEOPLE-BASED",
+                                            "platformOptions": Array [
+                                              "Facebook",
+                                              "Google",
+                                              "Twitter",
+                                              "LinkedIn",
+                                            ],
                                             "serverTypes": Array [
                                               "PEOPLE_BASED",
                                             ],
@@ -701,6 +723,12 @@ ShallowWrapper {
                 },
                 Object {
                   "label": "PEOPLE-BASED",
+                  "platformOptions": Array [
+                    "Facebook",
+                    "Google",
+                    "Twitter",
+                    "LinkedIn",
+                  ],
                   "serverTypes": Array [
                     "PEOPLE_BASED",
                   ],
@@ -729,203 +757,197 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <Table
-                allowsSelection={false}
-                columns={
-                                Array [
-                                                Object {
-                                                  "announce": false,
-                                                  "key": "destinationId",
-                                                  "sortable": true,
-                                                  "title": "ID",
-                                                  "width": 80,
-                                                },
-                                                Object {
-                                                  "active": true,
-                                                  "key": "destinationType",
-                                                  "sortable": true,
-                                                  "title": "TYPE",
-                                                  "width": 150,
-                                                },
-                                                Object {
-                                                  "active": true,
-                                                  "key": "platform",
-                                                  "sortable": true,
-                                                  "title": "PLATFORM",
-                                                  "width": 150,
-                                                },
-                                                Object {
-                                                  "key": "name",
-                                                  "sortable": true,
-                                                  "title": "NAME",
-                                                  "width": 200,
-                                                },
-                                                Object {
-                                                  "key": "description",
-                                                  "minWidth": 250,
-                                                  "sortable": true,
-                                                  "title": "DESCRIPTION",
-                                                },
-                                                Object {
-                                                  "key": "action",
-                                                  "title": "ACTION",
-                                                  "width": 200,
-                                                },
-                                              ]
-                }
-                dataTest="destination-list-table"
-                height={900}
-                items={
-                                Array [
-                                                Object {
-                                                  "action": "",
-                                                  "description": "Maxime ut totam nemo assumenda ratione impedit.",
-                                                  "id": 0,
-                                                  "name": "input",
-                                                  "platform": "Twitter",
-                                                  "shareableAudience": 41898,
-                                                },
-                                                Object {
-                                                  "action": "",
-                                                  "description": "Et nesciunt voluptatibus facilis blanditiis.",
-                                                  "id": 1,
-                                                  "name": "Bedfordshire",
-                                                  "platform": "Google",
-                                                  "shareableAudience": 18751,
-                                                },
-                                                Object {
-                                                  "action": "",
-                                                  "description": "Repellat sit dolor ut quisquam et ducimus.",
-                                                  "id": 2,
-                                                  "name": "Shoes",
-                                                  "platform": "Twitter",
-                                                  "shareableAudience": 5434,
-                                                },
-                                                Object {
-                                                  "action": "",
-                                                  "description": "Blanditiis tenetur culpa aut distinctio.",
-                                                  "id": 3,
-                                                  "name": "mesh",
-                                                  "platform": "LinkedIn",
-                                                  "shareableAudience": 40918,
-                                                },
-                                              ]
-                }
-                onSortChange={[Function]}
-                reachedEndOfRows={[Function]}
-                renderCell={[Function]}
-                rowHeight={250}
-                sortDescriptor={
-                                Object {
-                                                "column": undefined,
-                                                "direction": undefined,
-                                              }
-                }
+            "children": <Table
+              allowsSelection={false}
+              columns={
+                            Array [
+                                          Object {
+                                            "announce": false,
+                                            "key": "destinationId",
+                                            "sortable": true,
+                                            "title": "ID",
+                                            "width": 80,
+                                          },
+                                          Object {
+                                            "active": true,
+                                            "key": "destinationType",
+                                            "sortable": true,
+                                            "title": "TYPE",
+                                            "width": 150,
+                                          },
+                                          Object {
+                                            "active": true,
+                                            "key": "destinationTemplateId",
+                                            "sortable": true,
+                                            "title": "PLATFORM",
+                                            "width": 150,
+                                          },
+                                          Object {
+                                            "key": "name",
+                                            "sortable": true,
+                                            "title": "NAME",
+                                            "width": 200,
+                                          },
+                                          Object {
+                                            "key": "description",
+                                            "minWidth": 250,
+                                            "sortable": true,
+                                            "title": "DESCRIPTION",
+                                          },
+                                          Object {
+                                            "key": "action",
+                                            "title": "ACTIONS",
+                                            "width": 200,
+                                          },
+                                        ]
+              }
+              dataTest="destination-list-table"
+              height={800}
+              items={
+                            Array [
+                                          Object {
+                                            "action": "",
+                                            "description": "Maxime ut totam nemo assumenda ratione impedit.",
+                                            "id": 0,
+                                            "name": "input",
+                                            "platform": "Twitter",
+                                            "shareableAudience": 41898,
+                                          },
+                                          Object {
+                                            "action": "",
+                                            "description": "Et nesciunt voluptatibus facilis blanditiis.",
+                                            "id": 1,
+                                            "name": "Bedfordshire",
+                                            "platform": "Google",
+                                            "shareableAudience": 18751,
+                                          },
+                                          Object {
+                                            "action": "",
+                                            "description": "Repellat sit dolor ut quisquam et ducimus.",
+                                            "id": 2,
+                                            "name": "Shoes",
+                                            "platform": "Twitter",
+                                            "shareableAudience": 5434,
+                                          },
+                                          Object {
+                                            "action": "",
+                                            "description": "Blanditiis tenetur culpa aut distinctio.",
+                                            "id": 3,
+                                            "name": "mesh",
+                                            "platform": "LinkedIn",
+                                            "shareableAudience": 40918,
+                                          },
+                                        ]
+              }
+              onSortChange={[Function]}
+              reachedEndOfRows={[Function]}
+              renderCell={[Function]}
+              rowHeight={100}
+              sortDescriptor={
+                            Object {
+                                          "column": undefined,
+                                          "direction": undefined,
+                                        }
+              }
 />,
-              "",
-            ],
             "className": undefined,
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "allowsSelection": false,
-                "columns": Array [
-                  Object {
-                    "announce": false,
-                    "key": "destinationId",
-                    "sortable": true,
-                    "title": "ID",
-                    "width": 80,
-                  },
-                  Object {
-                    "active": true,
-                    "key": "destinationType",
-                    "sortable": true,
-                    "title": "TYPE",
-                    "width": 150,
-                  },
-                  Object {
-                    "active": true,
-                    "key": "platform",
-                    "sortable": true,
-                    "title": "PLATFORM",
-                    "width": 150,
-                  },
-                  Object {
-                    "key": "name",
-                    "sortable": true,
-                    "title": "NAME",
-                    "width": 200,
-                  },
-                  Object {
-                    "key": "description",
-                    "minWidth": 250,
-                    "sortable": true,
-                    "title": "DESCRIPTION",
-                  },
-                  Object {
-                    "key": "action",
-                    "title": "ACTION",
-                    "width": 200,
-                  },
-                ],
-                "dataTest": "destination-list-table",
-                "height": 900,
-                "items": Array [
-                  Object {
-                    "action": "",
-                    "description": "Maxime ut totam nemo assumenda ratione impedit.",
-                    "id": 0,
-                    "name": "input",
-                    "platform": "Twitter",
-                    "shareableAudience": 41898,
-                  },
-                  Object {
-                    "action": "",
-                    "description": "Et nesciunt voluptatibus facilis blanditiis.",
-                    "id": 1,
-                    "name": "Bedfordshire",
-                    "platform": "Google",
-                    "shareableAudience": 18751,
-                  },
-                  Object {
-                    "action": "",
-                    "description": "Repellat sit dolor ut quisquam et ducimus.",
-                    "id": 2,
-                    "name": "Shoes",
-                    "platform": "Twitter",
-                    "shareableAudience": 5434,
-                  },
-                  Object {
-                    "action": "",
-                    "description": "Blanditiis tenetur culpa aut distinctio.",
-                    "id": 3,
-                    "name": "mesh",
-                    "platform": "LinkedIn",
-                    "shareableAudience": 40918,
-                  },
-                ],
-                "onSortChange": [Function],
-                "reachedEndOfRows": [Function],
-                "renderCell": [Function],
-                "rowHeight": 250,
-                "sortDescriptor": Object {
-                  "column": undefined,
-                  "direction": undefined,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "allowsSelection": false,
+              "columns": Array [
+                Object {
+                  "announce": false,
+                  "key": "destinationId",
+                  "sortable": true,
+                  "title": "ID",
+                  "width": 80,
                 },
+                Object {
+                  "active": true,
+                  "key": "destinationType",
+                  "sortable": true,
+                  "title": "TYPE",
+                  "width": 150,
+                },
+                Object {
+                  "active": true,
+                  "key": "destinationTemplateId",
+                  "sortable": true,
+                  "title": "PLATFORM",
+                  "width": 150,
+                },
+                Object {
+                  "key": "name",
+                  "sortable": true,
+                  "title": "NAME",
+                  "width": 200,
+                },
+                Object {
+                  "key": "description",
+                  "minWidth": 250,
+                  "sortable": true,
+                  "title": "DESCRIPTION",
+                },
+                Object {
+                  "key": "action",
+                  "title": "ACTIONS",
+                  "width": 200,
+                },
+              ],
+              "dataTest": "destination-list-table",
+              "height": 800,
+              "items": Array [
+                Object {
+                  "action": "",
+                  "description": "Maxime ut totam nemo assumenda ratione impedit.",
+                  "id": 0,
+                  "name": "input",
+                  "platform": "Twitter",
+                  "shareableAudience": 41898,
+                },
+                Object {
+                  "action": "",
+                  "description": "Et nesciunt voluptatibus facilis blanditiis.",
+                  "id": 1,
+                  "name": "Bedfordshire",
+                  "platform": "Google",
+                  "shareableAudience": 18751,
+                },
+                Object {
+                  "action": "",
+                  "description": "Repellat sit dolor ut quisquam et ducimus.",
+                  "id": 2,
+                  "name": "Shoes",
+                  "platform": "Twitter",
+                  "shareableAudience": 5434,
+                },
+                Object {
+                  "action": "",
+                  "description": "Blanditiis tenetur culpa aut distinctio.",
+                  "id": 3,
+                  "name": "mesh",
+                  "platform": "LinkedIn",
+                  "shareableAudience": 40918,
+                },
+              ],
+              "onSortChange": [Function],
+              "reachedEndOfRows": [Function],
+              "renderCell": [Function],
+              "rowHeight": 100,
+              "sortDescriptor": Object {
+                "column": undefined,
+                "direction": undefined,
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
             },
-            "",
-          ],
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": "div",
         },
       ],

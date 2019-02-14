@@ -38,7 +38,7 @@ const Nav = ({ location, routes, applyFilter }) => (
                         to={'/administration/integrated-accounts'}
                         className={styles.buttonLink}
                         data-test={`configuration-button-link`}>
-                        {`Configuration`}
+                        {`Integrated Accounts`}
                     </NavLink>
                 </Button>
             </GridColumn>

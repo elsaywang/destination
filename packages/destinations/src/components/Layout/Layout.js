@@ -20,7 +20,7 @@ const Layout = ({ children, heading }) => {
                 <Grid className={styles.grid}>
                     <GridRow
                         className={classNames({
-                            [styles.gridRow]: heading === 'Configuration',
+                            [styles.gridRow]: heading === 'Integrated Accounts',
                         })}
                         valign="middle">
                         <GridColumn size={6}>
@@ -50,7 +50,7 @@ const Layout = ({ children, heading }) => {
 };
 
 Layout.propTypes = {
-    heading: PropTypes.oneOf(['Destinations', 'Configuration']),
+    heading: PropTypes.oneOf(['Destinations', 'Integrated Accounts']),
     children: PropTypes.node,
 };
 export default Layout;

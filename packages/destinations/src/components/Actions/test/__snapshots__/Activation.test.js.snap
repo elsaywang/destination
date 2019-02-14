@@ -1,17 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EditAction/> component rendering matches snapshot 1`] = `
+exports[`<Activation/> component rendering matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <EditAction
-    destination={
+  Symbol(enzyme.__unrendered__): <Activation
+    addAccount={[Function]}
+    authentication={
         Object {
-            "id": 20008,
-            "name": "card",
+            "accountName": "test",
+            "adAccountId": "1",
+            "expireIn": "Expired",
           }
     }
     disabled={false}
-    editDestination={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -25,26 +26,18 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
-      "autoFocus": false,
-      "block": false,
-      "data-test": "action-edit-button",
+      "accountName": "test",
+      "addAccount": [Function],
+      "className": undefined,
+      "contactEmails": Array [],
       "disabled": false,
-      "element": "a",
-      "href": "/portal/Segments/ManageDestination.ddx?destinationId=undefined#edit",
-      "icon": <Edit
-        size="S"
-/>,
-      "invalid": false,
-      "label": "",
-      "logic": false,
-      "onClick": [Function],
+      "icon": null,
+      "message": "Reactivate",
+      "platform": "",
       "quiet": true,
-      "rel": "noopener",
-      "selected": false,
-      "target": "_blank",
-      "variant": "action",
+      "title": "Reactivate Account",
     },
     "ref": null,
     "rendered": null,
@@ -54,26 +47,18 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
-        "autoFocus": false,
-        "block": false,
-        "data-test": "action-edit-button",
+        "accountName": "test",
+        "addAccount": [Function],
+        "className": undefined,
+        "contactEmails": Array [],
         "disabled": false,
-        "element": "a",
-        "href": "/portal/Segments/ManageDestination.ddx?destinationId=undefined#edit",
-        "icon": <Edit
-          size="S"
-/>,
-        "invalid": false,
-        "label": "",
-        "logic": false,
-        "onClick": [Function],
+        "icon": null,
+        "message": "Reactivate",
+        "platform": "",
         "quiet": true,
-        "rel": "noopener",
-        "selected": false,
-        "target": "_blank",
-        "variant": "action",
+        "title": "Reactivate Account",
       },
       "ref": null,
       "rendered": null,

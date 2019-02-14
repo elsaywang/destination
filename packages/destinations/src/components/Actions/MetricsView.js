@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import requiredIf from 'react-required-if';
 import Button from '@react/react-spectrum/Button';
 import Popover from '@react/react-spectrum/Popover';
 import OverlayTrigger from '@react/react-spectrum/OverlayTrigger';
@@ -9,17 +10,24 @@ import MetricsContext from './MetricsContext';
 import styles from './action.css';
 
 const MetricsView = ({ destination }) => {
-    /* Actual API response doesn't perfectly match format here. Hacking it for now to get this PR in */
-    destination = _.merge(destination, {
-        type: 'Device-Based',
-        shareableAudience: 7839241,
-        addressableAudience: 438975,
-        matchRate: '32%',
-        lifetimeAddressableAudience: 3784610,
-    });
-    /* ---- End Hacky stuff ---- */
+    const { addressableAudienceMetrics, destinationType } = destination;
 
-    const { type } = destination;
+    const metricsProps = _.merge(
+        {},
+        destinationType === 'S2S' && {
+            type: 'Device-Based',
+            addressableAudience: addressableAudienceMetrics.clientAddressableAudience30Day,
+            matchRate: '0%', //TODO: need to get the correct formula to calculate
+            lifetimeAddressableAudience:
+                addressableAudienceMetrics.platformAddressableAudienceLifetime,
+        },
+        destinationType === 'PEOPLE_BASED' && {
+            type: 'People-Based',
+            shareableAudience: 34785, // TODO: fetch from API for PEOPLE_BASED
+        },
+    );
+
+    const { type } = metricsProps;
 
     const renderTitle = () => (
         <span className={styles.metricsTitle}>{`${type.toUpperCase()} PLATFORM`}</span>
@@ -29,7 +37,7 @@ const MetricsView = ({ destination }) => {
         <OverlayTrigger trigger="click" placement="left">
             <Button label="" variant="action" quiet icon={<GraphBarVertical size="S" />} />
             <Popover title={renderTitle()}>
-                <MetricsContext {...destination} />
+                <MetricsContext {...metricsProps} />
             </Popover>
         </OverlayTrigger>
     );
@@ -42,13 +50,20 @@ MetricsView.defaultProps = {
 MetricsView.propTypes = {
     disabled: PropTypes.bool,
     destination: PropTypes.shape({
-        id: PropTypes.number,
+        destinationId: PropTypes.number,
         name: PropTypes.string,
-        type: PropTypes.oneOf(['People-Based', 'Device-Based']).isRequired,
-        shareableAudience: PropTypes.number,
-        addressableAudience: PropTypes.number,
-        matchRate: PropTypes.string,
-        lifetimeAddressableAudience: PropTypes.number,
+        destinationType: PropTypes.oneOf(['PEOPLE_BASED', 'S2S']).isRequired,
+        addressableAudienceMetrics: requiredIf(
+            PropTypes.shape({
+                platformAddressableAudienceLifetime: PropTypes.number,
+                clientAddressableAudience30Day: PropTypes.number,
+            }),
+            ({ destinationType }) => destinationType === 'S2S',
+        ),
+        shareableAudience: requiredIf(
+            PropTypes.number,
+            ({ destinationType }) => destinationType === 'PEOPLE_BASED',
+        ),
     }),
 };
 

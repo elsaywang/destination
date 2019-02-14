@@ -5,7 +5,7 @@ import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 import Nav from '../components/Nav';
 import Layout from '../components/Layout';
 import Destinations from './Destinations';
-import Configuration from './Configuration';
+import IntegratedAccounts from './IntegratedAccounts';
 import configureStore from '../configureStore';
 import { routes } from '../constants/navTab';
 const store = configureStore();
@@ -16,7 +16,7 @@ const App = () => (
             <Route
                 exact
                 path={'/administration/integrated-accounts'}
-                component={ConfigurationContainer}
+                component={IntegratedAccountsContainer}
             />
             <Route exact path="/destinations" render={() => <Redirect to="/destinations/all" />} />
             {routes.map(routeObject => (
@@ -26,7 +26,6 @@ const App = () => (
                     render={() => <DestinationContainer routeObject={routeObject} />}
                 />
             ))}
-            <Route path="/destinations" render={() => <Redirect to="/destinations/all" />} />
         </Switch>
     </BrowserRouter>
 );
@@ -42,9 +41,9 @@ const DestinationContainer = ({ routeObject }) => (
     </Provider>
 );
 
-const ConfigurationContainer = () => (
-    <Layout heading="Configuration">
-        <Configuration />
+const IntegratedAccountsContainer = () => (
+    <Layout heading="Integrated Accounts">
+        <IntegratedAccounts />
     </Layout>
 );
 export default App;

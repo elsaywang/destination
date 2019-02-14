@@ -1,18 +1,296 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MetricsView/> component rendering matches snapshot 1`] = `
+exports[`<MetricsView/> component rendering \`PEOPLE_BASED\` matches snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MetricsView
     destination={
         Object {
-            "addressableAudience": 438975,
-            "id": 20008,
-            "lifetimeAddressableAudience": 3784610,
-            "matchRate": "32%",
+            "destinationId": 20008,
+            "destinationType": "PEOPLE_BASED",
             "name": "card",
-            "shareableAudience": 7839241,
-            "type": "Device-Based",
+            "shareableAudience": 245123,
+          }
+    }
+    disabled={false}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "boundariesElement": [Function],
+      "children": Array [
+        <Button
+          autoFocus={false}
+          block={false}
+          disabled={false}
+          element="button"
+          icon={
+                    <GraphBarVertical
+                              size="S"
+                    />
+          }
+          invalid={false}
+          label=""
+          logic={false}
+          quiet={true}
+          selected={false}
+          variant="action"
+/>,
+        <Popover
+          open={true}
+          placement="bottom"
+          title={
+                    <span
+                              className={undefined}
+                    >
+                              PEOPLE-BASED PLATFORM
+                    </span>
+          }
+          trapFocus={true}
+          variant="default"
+>
+          <MetricsContext
+                    shareableAudience={34785}
+                    type="People-Based"
+          />
+</Popover>,
+      ],
+      "crossOffset": 0,
+      "defaultShow": false,
+      "delayHide": 100,
+      "disabled": false,
+      "flip": true,
+      "offset": 0,
+      "placement": "left",
+      "trigger": "click",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoFocus": false,
+          "block": false,
+          "disabled": false,
+          "element": "button",
+          "icon": <GraphBarVertical
+            size="S"
+/>,
+          "invalid": false,
+          "label": "",
+          "logic": false,
+          "quiet": true,
+          "selected": false,
+          "variant": "action",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <MetricsContext
+            shareableAudience={34785}
+            type="People-Based"
+/>,
+          "open": true,
+          "placement": "bottom",
+          "title": <span
+            className={undefined}
+>
+            PEOPLE-BASED PLATFORM
+</span>,
+          "trapFocus": true,
+          "variant": "default",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "shareableAudience": 34785,
+            "type": "People-Based",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "boundariesElement": [Function],
+        "children": Array [
+          <Button
+            autoFocus={false}
+            block={false}
+            disabled={false}
+            element="button"
+            icon={
+                        <GraphBarVertical
+                                    size="S"
+                        />
+            }
+            invalid={false}
+            label=""
+            logic={false}
+            quiet={true}
+            selected={false}
+            variant="action"
+/>,
+          <Popover
+            open={true}
+            placement="bottom"
+            title={
+                        <span
+                                    className={undefined}
+                        >
+                                    PEOPLE-BASED PLATFORM
+                        </span>
+            }
+            trapFocus={true}
+            variant="default"
+>
+            <MetricsContext
+                        shareableAudience={34785}
+                        type="People-Based"
+            />
+</Popover>,
+        ],
+        "crossOffset": 0,
+        "defaultShow": false,
+        "delayHide": 100,
+        "disabled": false,
+        "flip": true,
+        "offset": 0,
+        "placement": "left",
+        "trigger": "click",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoFocus": false,
+            "block": false,
+            "disabled": false,
+            "element": "button",
+            "icon": <GraphBarVertical
+              size="S"
+/>,
+            "invalid": false,
+            "label": "",
+            "logic": false,
+            "quiet": true,
+            "selected": false,
+            "variant": "action",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <MetricsContext
+              shareableAudience={34785}
+              type="People-Based"
+/>,
+            "open": true,
+            "placement": "bottom",
+            "title": <span
+              className={undefined}
+>
+              PEOPLE-BASED PLATFORM
+</span>,
+            "trapFocus": true,
+            "variant": "default",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "shareableAudience": 34785,
+              "type": "People-Based",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`<MetricsView/> component rendering \`S2S\` matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MetricsView
+    destination={
+        Object {
+            "addressableAudienceMetrics": Object {
+              "addressableAudience": 213123,
+              "lifetimeAddressableAudience": 123123,
+              "matchRate": "89%",
+            },
+            "destinationId": 2009,
+            "destinationType": "S2S",
+            "name": "card",
           }
     }
     disabled={false}
@@ -64,12 +342,9 @@ ShallowWrapper {
           variant="default"
 >
           <MetricsContext
-                    addressableAudience={438975}
-                    id={20008}
-                    lifetimeAddressableAudience={3784610}
-                    matchRate="32%"
-                    name="card"
-                    shareableAudience={7839241}
+                    addressableAudience={undefined}
+                    lifetimeAddressableAudience={undefined}
+                    matchRate="0%"
                     type="Device-Based"
           />
 </Popover>,
@@ -114,12 +389,9 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <MetricsContext
-            addressableAudience={438975}
-            id={20008}
-            lifetimeAddressableAudience={3784610}
-            matchRate="32%"
-            name="card"
-            shareableAudience={7839241}
+            addressableAudience={undefined}
+            lifetimeAddressableAudience={undefined}
+            matchRate="0%"
             type="Device-Based"
 />,
           "open": true,
@@ -138,12 +410,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "addressableAudience": 438975,
-            "id": 20008,
-            "lifetimeAddressableAudience": 3784610,
-            "matchRate": "32%",
-            "name": "card",
-            "shareableAudience": 7839241,
+            "addressableAudience": undefined,
+            "lifetimeAddressableAudience": undefined,
+            "matchRate": "0%",
             "type": "Device-Based",
           },
           "ref": null,
@@ -194,12 +463,9 @@ ShallowWrapper {
             variant="default"
 >
             <MetricsContext
-                        addressableAudience={438975}
-                        id={20008}
-                        lifetimeAddressableAudience={3784610}
-                        matchRate="32%"
-                        name="card"
-                        shareableAudience={7839241}
+                        addressableAudience={undefined}
+                        lifetimeAddressableAudience={undefined}
+                        matchRate="0%"
                         type="Device-Based"
             />
 </Popover>,
@@ -244,12 +510,9 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <MetricsContext
-              addressableAudience={438975}
-              id={20008}
-              lifetimeAddressableAudience={3784610}
-              matchRate="32%"
-              name="card"
-              shareableAudience={7839241}
+              addressableAudience={undefined}
+              lifetimeAddressableAudience={undefined}
+              matchRate="0%"
               type="Device-Based"
 />,
             "open": true,
@@ -268,12 +531,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "addressableAudience": 438975,
-              "id": 20008,
-              "lifetimeAddressableAudience": 3784610,
-              "matchRate": "32%",
-              "name": "card",
-              "shareableAudience": 7839241,
+              "addressableAudience": undefined,
+              "lifetimeAddressableAudience": undefined,
+              "matchRate": "0%",
               "type": "Device-Based",
             },
             "ref": null,

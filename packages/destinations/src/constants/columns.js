@@ -23,8 +23,8 @@ const allColumnTypes = [
         sortable: true,
     },
     {
-        title: 'PLATFORM',
-        key: 'platform',
+        title: 'PLATFORM', //reused by both destinations and authentications list
+        key: 'destinationTemplateId', // 1: Facebook
         width: 150,
         active: true,
         sortable: true,
@@ -65,8 +65,29 @@ const allColumnTypes = [
         width: 170,
         sortable: true,
     },
+    //authentications list
     {
-        title: 'ACTION',
+        title: 'ACCOUNT',
+        key: 'accountName',
+        width: 150,
+    },
+    {
+        title: 'AUTHORIZED',
+        key: 'updateTime',
+        width: 200,
+    },
+    {
+        title: 'NOTIFYING',
+        key: 'emailNotificationList',
+        minWidth: 320,
+    },
+    {
+        title: 'EXPIRE IN',
+        key: 'expirationTime',
+        width: 100,
+    },
+    {
+        title: 'ACTIONS', //reused by both destinations and authentications list
         key: 'action',
         width: 200,
     },
@@ -74,9 +95,9 @@ const allColumnTypes = [
 
 // Declare name of columnTypes to use
 const columnsForDestinationType = {
-    All: ['ID', 'CATEGORY', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
-    'Integrated Platforms': ['ID', 'TYPE', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTION'],
-    'People-Based': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'SHAREABLE AUDIENCE', 'ACTION'],
+    All: ['ID', 'CATEGORY', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTIONS'],
+    'Integrated Platforms': ['ID', 'TYPE', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTIONS'],
+    'People-Based': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'SHAREABLE AUDIENCE', 'ACTIONS'],
     'Device-Based': [
         'ID',
         'PLATFORM',
@@ -85,15 +106,23 @@ const columnsForDestinationType = {
         'ADDRESSABLE AUDIENCE (DEVICE)',
         'MATCH RATE',
         'LIFETIME ADDRESSABLE AUDIENCE (DEVICE)',
-        'ACTION',
+        'ACTIONS',
     ],
-    Custom: ['ID', 'TYPE', 'NAME', 'DESCRIPTION', 'ACTION'],
-    'Adobe Experience Cloud': ['ID', 'NAME', 'DESCRIPTION', 'ACTION'],
+    Custom: ['ID', 'TYPE', 'NAME', 'DESCRIPTION', 'ACTIONS'],
+    'Adobe Experience Cloud': ['ID', 'NAME', 'DESCRIPTION', 'ACTIONS'],
+};
+
+const columnsForIntegratedAccounts = {
+    Authentications: ['PLATFORM', 'ACCOUNT', 'AUTHORIZED', 'NOTIFYING', 'EXPIRE IN', 'ACTIONS'],
 };
 
 const allColumnTypesByTitle = _.keyBy(allColumnTypes, el => el.title);
 
 // column names get matched and replaced with corresponding type
-export default _.mapValues(columnsForDestinationType, columnNames => {
-    return columnNames.map(name => allColumnTypesByTitle[name]);
-});
+export const columnsByType = type =>
+    _.mapValues(type, columnNames => columnNames.map(name => allColumnTypesByTitle[name]));
+
+export default columnsByType(columnsForDestinationType);
+
+export const columnsForAuthentications = columnsByType(columnsForIntegratedAccounts)
+    .Authentications;

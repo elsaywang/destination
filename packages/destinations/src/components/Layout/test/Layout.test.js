@@ -15,8 +15,8 @@ describe('<Layout/> component', () => {
         it('renders <Button/> when `heading` props is `Destinations`', () => {
             expect(wrapper.find(Button).exists()).toBeTruthy();
         });
-        it('renders not <Button/> when `heading` props is `Configuration`', () => {
-            wrapper.setProps({ heading: `Configuration` });
+        it('renders not <Button/> when `heading` props is `Integrated Accounts`', () => {
+            wrapper.setProps({ heading: `Integrated Accounts` });
             expect(wrapper.find(Button).exists()).toBeFalsy();
         });
     });

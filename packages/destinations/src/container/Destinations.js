@@ -6,10 +6,10 @@ import SideNavFilter from '../components/SideNavFilter';
 import styles from './Destinations.css';
 import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
 import { destinationsMap } from '../constants/destinations';
-import * as actionCreators from '../redux/actions/destinations';
+import * as tableActionCreators from '../redux/actions/tableActions';
+import * as destinationActionCreators from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
 import Actions from '../components/Actions';
-import AddAccountModal from '../components/AddAccountModal';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
@@ -32,11 +32,14 @@ class Destinations extends Component {
     renderActionCell = data => {
         const currentRecordCategory = destinationsMap[data.destinationType].category;
         return (
-            <Actions
-                destination={data}
-                showMetrics={this.isIntegratedPlatform(currentRecordCategory)}
-                handleDeleteDestination={this.props.deleteDestination}
-            />
+            <div>
+                <Actions
+                    destination={data}
+                    showMetrics={this.isIntegratedPlatform(currentRecordCategory)}
+                    handleDeleteAction={this.props.deleteDestination}
+                    isForDestination
+                />
+            </div>
         );
     };
 
@@ -109,17 +112,16 @@ class Destinations extends Component {
                                 column: sortColumn,
                                 direction: sortDirection,
                             }}
-                            height={900}
+                            height={800}
                             columns={
                                 columnsForDestinationType[
                                     integratedPlatformType || currentDestination.name
                                 ]
                             }
-                            rowHeight={250}
+                            rowHeight={100}
                             renderCell={this.renderCell}
                         />
                     )}
-                    {process.env.NODE_ENV === 'development' ? <AddAccountModal /> : ''}
                 </div>
             </div>
         );
@@ -156,5 +158,5 @@ export { Destinations };
 
 export default connect(
     mapStateToProps,
-    actionCreators,
+    { ...destinationActionCreators, ...tableActionCreators },
 )(Destinations);

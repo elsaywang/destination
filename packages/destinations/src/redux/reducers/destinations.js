@@ -1,14 +1,14 @@
 import _ from 'lodash';
 import { handleActions } from 'redux-actions';
 import { createAsyncActionHandlers } from '../../utils/asyncReduxUtils';
+import { applySort } from '../actions/tableActions';
 import {
     updateIntegratedPlatformType,
-    applyFilter,
-    applySearch,
-    applySort,
     fetchDestinations,
     fetchMoreDestinations,
     deleteDestination,
+    applySearch,
+    applyFilter
 } from '../actions/destinations';
 import columnsForDestinationType from '../../constants/columns';
 

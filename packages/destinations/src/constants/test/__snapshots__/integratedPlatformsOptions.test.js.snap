@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`integratedPlatformsOptions destinationTemplateIDMap matches snapshot 1`] = `
+Object {
+  "1": "Facebook",
+  "2": "Google",
+  "3": "Twitter",
+  "4": "LinkedIn",
+}
+`;
+
 exports[`integratedPlatformsOptions matches snapshot 1`] = `
 Array [
   Object {
@@ -12,6 +21,12 @@ Array [
   },
   Object {
     "label": "PEOPLE-BASED",
+    "platformOptions": Array [
+      "Facebook",
+      "Google",
+      "Twitter",
+      "LinkedIn",
+    ],
     "serverTypes": Array [
       "PEOPLE_BASED",
     ],

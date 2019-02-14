@@ -1,4 +1,4 @@
-export const configurationMessage = 'People-Based Platform Authentication';
+export const configurationMessage = 'People-Based Platform Authentications';
 
 export const primaryEmptyMessage = 'Start adding accounts to enable people-based destinations.';
 
