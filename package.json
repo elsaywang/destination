@@ -18,6 +18,6 @@
   },
   "scripts": {
     "genvulnerabilitiesreport": "npx retire > vulnerabilities-report.txt 2>&1 || echo \"Generated vulnerability report\" ",
-    "clean": "npx lerna exec -- rm -r package-lock.json || true  && npx lerna clean --yes || true && rm -r node_modules || true"
+    "clean": "npx lerna run clean && npx lerna clean --yes && npx lerna exec rm -- -rf package-lock.json"
   }
 }

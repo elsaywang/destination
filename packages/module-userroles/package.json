@@ -4,7 +4,8 @@
     "description": "UserRoles module of Adobe Audience Manager",
     "main": "index.js",
     "scripts": {
-        "build": "npx babel ./src -d ./build"
+        "build": "npx babel ./src -d ./build",
+        "clean": "rm -rf ./build && rm -rf node_modules"
     },
     "keywords": [
         "UserRoles",

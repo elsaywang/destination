@@ -7,7 +7,8 @@
         "url": "https://git.corp.adobe.com/AAM/coral-shell-ims"
     },
     "scripts": {
-        "build": "npx grunt"
+        "build": "npx grunt",
+        "clean": "rm -rf build && rm -rf node_modules"
     },
     "dependencies": {
         "@coralui/coralui-core": "~4.6.3",
