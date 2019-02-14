@@ -11,23 +11,25 @@ const Actions = ({ isForDestination, disabled, ...actionsProps }) => {
     const { destination, showMetrics } = isForDestination && actionsProps;
     const { authentication } = !isForDestination && actionsProps;
 
+    const renderActionsForDestination = isForDestination && (
+        <Fragment>
+            <EditAction destination={destination} disabled={disabled} />
+            <DeleteAction destination={destination} isForDestination={isForDestination} />
+            {showMetrics && <MetricsView destination={destination} disabled={disabled} />}
+        </Fragment>
+    );
+
+    const renderActionsForAuthentication = !isForDestination && (
+        <Fragment>
+            <Activation authentication={authentication} disabled={disabled} />
+            <DeleteAction authentication={authentication} isForDestination={isForDestination} />
+        </Fragment>
+    );
+
     return (
         <div className={styles.actions}>
-            {isForDestination ? (
-                <Fragment>
-                    <EditAction destination={destination} disabled={disabled} />
-                    <DeleteAction destination={destination} isForDestination={isForDestination} />
-                    {showMetrics && <MetricsView destination={destination} disabled={disabled} />}
-                </Fragment>
-            ) : (
-                <Fragment>
-                    <Activation authentication={authentication} disabled={disabled} />
-                    <DeleteAction
-                        authentication={authentication}
-                        isForDestination={isForDestination}
-                    />
-                </Fragment>
-            )}
+            {renderActionsForDestination}
+            {renderActionsForAuthentication}
         </div>
     );
 };

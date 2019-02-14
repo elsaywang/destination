@@ -86,6 +86,7 @@ ShallowWrapper {
                                           "label": "ALL PLATFORMS",
                                           "serverTypes": Array [
                                             "S2S",
+                                            "PEOPLE_BASED",
                                           ],
                                           "value": "Integrated Platforms",
                                         },
@@ -97,7 +98,9 @@ ShallowWrapper {
                                             "Twitter",
                                             "LinkedIn",
                                           ],
-                                          "serverTypes": Array [],
+                                          "serverTypes": Array [
+                                            "PEOPLE_BASED",
+                                          ],
                                           "value": "People-Based",
                                         },
                                         Object {
@@ -229,6 +232,7 @@ ShallowWrapper {
                                       "label": "ALL PLATFORMS",
                                       "serverTypes": Array [
                                         "S2S",
+                                        "PEOPLE_BASED",
                                       ],
                                       "value": "Integrated Platforms",
                                     },
@@ -240,7 +244,9 @@ ShallowWrapper {
                                         "Twitter",
                                         "LinkedIn",
                                       ],
-                                      "serverTypes": Array [],
+                                      "serverTypes": Array [
+                                        "PEOPLE_BASED",
+                                      ],
                                       "value": "People-Based",
                                     },
                                     Object {
@@ -269,6 +275,7 @@ ShallowWrapper {
                 "label": "ALL PLATFORMS",
                 "serverTypes": Array [
                   "S2S",
+                  "PEOPLE_BASED",
                 ],
                 "value": "Integrated Platforms",
               },
@@ -280,7 +287,9 @@ ShallowWrapper {
                   "Twitter",
                   "LinkedIn",
                 ],
-                "serverTypes": Array [],
+                "serverTypes": Array [
+                  "PEOPLE_BASED",
+                ],
                 "value": "People-Based",
               },
               Object {
@@ -519,6 +528,7 @@ ShallowWrapper {
                                                   "label": "ALL PLATFORMS",
                                                   "serverTypes": Array [
                                                     "S2S",
+                                                    "PEOPLE_BASED",
                                                   ],
                                                   "value": "Integrated Platforms",
                                                 },
@@ -530,7 +540,9 @@ ShallowWrapper {
                                                     "Twitter",
                                                     "LinkedIn",
                                                   ],
-                                                  "serverTypes": Array [],
+                                                  "serverTypes": Array [
+                                                    "PEOPLE_BASED",
+                                                  ],
                                                   "value": "People-Based",
                                                 },
                                                 Object {
@@ -662,6 +674,7 @@ ShallowWrapper {
                                             "label": "ALL PLATFORMS",
                                             "serverTypes": Array [
                                               "S2S",
+                                              "PEOPLE_BASED",
                                             ],
                                             "value": "Integrated Platforms",
                                           },
@@ -673,7 +686,9 @@ ShallowWrapper {
                                               "Twitter",
                                               "LinkedIn",
                                             ],
-                                            "serverTypes": Array [],
+                                            "serverTypes": Array [
+                                              "PEOPLE_BASED",
+                                            ],
                                             "value": "People-Based",
                                           },
                                           Object {
@@ -702,6 +717,7 @@ ShallowWrapper {
                   "label": "ALL PLATFORMS",
                   "serverTypes": Array [
                     "S2S",
+                    "PEOPLE_BASED",
                   ],
                   "value": "Integrated Platforms",
                 },
@@ -713,7 +729,9 @@ ShallowWrapper {
                     "Twitter",
                     "LinkedIn",
                   ],
-                  "serverTypes": Array [],
+                  "serverTypes": Array [
+                    "PEOPLE_BASED",
+                  ],
                   "value": "People-Based",
                 },
                 Object {

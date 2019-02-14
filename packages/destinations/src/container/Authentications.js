@@ -28,11 +28,33 @@ const authenticationList = [
         emailNotificationList: [],
         credentialType: 'ACCOUNT',
     },
+    {
+        destinationTemplateId: 1,
+        dcid: 2,
+        pid: 1194,
+        accountName: 'TestAccount2',
+        adAccountId: '2',
+        status: 'UNDEFINED',
+        irisPublishStatus: 'ACTIVE',
+        expirationTime: 1558345128000,
+        createTime: 1558345128000,
+        crUid: 736,
+        updateTime: 1558345128000,
+        upUid: 0,
+        emailNotificationList: [],
+        credentialType: 'ACCOUNT',
+    },
 ];
 
 class Authentications extends Component {
     renderCell = (column, data) => {
-        const { destinationTemplateId, updateTime, expirationTime, emailNotificationList } = data;
+        const {
+            destinationTemplateId,
+            updateTime,
+            expirationTime,
+            emailNotificationList,
+            accountName,
+        } = data;
 
         const platform = destinationTemplateIDMap[destinationTemplateId];
         const authorizedDate = formatDate(updateTime);
@@ -49,13 +71,13 @@ class Authentications extends Component {
             case 'updateTime':
                 return <span>{authorizedDate}</span>;
             case 'emailNotificationList':
-                return this.renderNotifyingCell(emailNotificationList, platform);
+                return this.renderNotifyingCell(emailNotificationList, platform, accountName);
             default:
                 return <span>{data[key]}</span>;
         }
     };
 
-    renderNotifyingCell = (emailNotificationList, platform) => {
+    renderNotifyingCell = (emailNotificationList, platform, accountName) => {
         //TODO: remove those fake emails when response has real email list
         emailNotificationList = ['abc@fb.com', 'def@fb.com', 'hello@fb.com', 'test@fb.com'];
 
@@ -72,6 +94,7 @@ class Authentications extends Component {
                     quiet
                     contactOnlyMode
                     platform={platform}
+                    accountName={accountName}
                     contactEmails={emailNotificationList}
                     className={styles.addAccountButton}
                 />

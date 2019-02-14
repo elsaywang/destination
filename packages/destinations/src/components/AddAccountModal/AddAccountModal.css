@@ -41,5 +41,6 @@ p {
 }
 
 :local(.menuOption){
+  justify-content:flex-start;
   min-width: 120px;
 }

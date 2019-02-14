@@ -13,7 +13,7 @@ class DeleteAction extends Component {
         <Fragment>
             <Alert size="S" className={styles.deletionAlert} />
             <span className={styles.deletionText}>
-                &nbsp; Delete {this.props.isForDestination ? `Destination` : `Authentication`}
+                {`  Delete  ${this.props.isForDestination ? ' Destination' : '  Authentication'}`}
             </span>
         </Fragment>
     );

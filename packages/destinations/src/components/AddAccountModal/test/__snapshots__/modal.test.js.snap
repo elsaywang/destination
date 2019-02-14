@@ -42,8 +42,10 @@ ShallowWrapper {
           variant="primary"
 />,
         <ModalContentHackForSpectrum
+          accountName={undefined}
           contactEmails={Array []}
           contactOnlyMode={undefined}
+          message={undefined}
           platform=""
           role="dialog"
           title="Add Account"
@@ -81,8 +83,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "accountName": undefined,
           "contactEmails": Array [],
           "contactOnlyMode": undefined,
+          "message": undefined,
           "platform": "",
           "role": "dialog",
           "title": "Add Account",
@@ -118,8 +122,10 @@ ShallowWrapper {
             variant="primary"
 />,
           <ModalContentHackForSpectrum
+            accountName={undefined}
             contactEmails={Array []}
             contactOnlyMode={undefined}
+            message={undefined}
             platform=""
             role="dialog"
             title="Add Account"
@@ -157,8 +163,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "accountName": undefined,
             "contactEmails": Array [],
             "contactOnlyMode": undefined,
+            "message": undefined,
             "platform": "",
             "role": "dialog",
             "title": "Add Account",

@@ -2,7 +2,7 @@ import moment from 'moment';
 import { datePattern, standardizedTime, formatDate, isExpired, expireIn } from '../dateHelper';
 import mockdate from 'mockdate';
 
-describe('dateHelp until test', () => {
+describe('dateHelper until test', () => {
     beforeEach(() => {
         mockdate.set(1525176000000); // Mon May 01 2018 12:00:00 GMT+0000 (GMT)
     });
@@ -16,7 +16,7 @@ describe('dateHelp until test', () => {
         expect(standardizedTime()).toMatchSnapshot();
     });
     it(`formatDate func test`, () => {
-        expect(formatDate(1548345128000)).toEqual('Jan 24, 2019 10:52 AM');
+        expect(formatDate(1548345128000)).toEqual('Jan 24, 2019 03:52 PM');
     });
     it(`isExpired func test`, () => {
         expect(isExpired(1548345128000)).toBeFalsy();

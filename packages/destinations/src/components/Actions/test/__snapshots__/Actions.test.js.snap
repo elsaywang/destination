@@ -30,122 +30,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Unknown>
-        <EditAction
-                destination={
-                        Object {
-                                "destinationType": "PEOPLE_BASED",
-                                "id": 20008,
-                                "name": "card",
-                                "shareableAudience": 909,
-                              }
-                }
-                disabled={false}
-                editDestination={[Function]}
-        />
-        <DeleteAction
-                destination={
-                        Object {
-                                "destinationType": "PEOPLE_BASED",
-                                "id": 20008,
-                                "name": "card",
-                                "shareableAudience": 909,
-                              }
-                }
-                disabled={false}
-                handleDeleteAction={[Function]}
-                isForDestination={true}
-        />
-</Unknown>,
-      "className": undefined,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <EditAction
-            destination={
-                        Object {
-                                    "destinationType": "PEOPLE_BASED",
-                                    "id": 20008,
-                                    "name": "card",
-                                    "shareableAudience": 909,
-                                  }
-            }
-            disabled={false}
-            editDestination={[Function]}
-/>,
-          <DeleteAction
-            destination={
-                        Object {
-                                    "destinationType": "PEOPLE_BASED",
-                                    "id": 20008,
-                                    "name": "card",
-                                    "shareableAudience": 909,
-                                  }
-            }
-            disabled={false}
-            handleDeleteAction={[Function]}
-            isForDestination={true}
-/>,
-          false,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "destination": Object {
-              "destinationType": "PEOPLE_BASED",
-              "id": 20008,
-              "name": "card",
-              "shareableAudience": 909,
-            },
-            "disabled": false,
-            "editDestination": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "destination": Object {
-              "destinationType": "PEOPLE_BASED",
-              "id": 20008,
-              "name": "card",
-              "shareableAudience": 909,
-            },
-            "disabled": false,
-            "handleDeleteAction": [Function],
-            "isForDestination": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        false,
-      ],
-      "type": Symbol(react.fragment),
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Unknown>
+      "children": Array [
+        <Unknown>
           <EditAction
                     destination={
                               Object {
@@ -172,10 +58,13 @@ ShallowWrapper {
                     isForDestination={true}
           />
 </Unknown>,
-        "className": undefined,
-      },
-      "ref": null,
-      "rendered": Object {
+        false,
+      ],
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
@@ -252,6 +141,129 @@ ShallowWrapper {
         ],
         "type": Symbol(react.fragment),
       },
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Unknown>
+            <EditAction
+                        destination={
+                                    Object {
+                                                "destinationType": "PEOPLE_BASED",
+                                                "id": 20008,
+                                                "name": "card",
+                                                "shareableAudience": 909,
+                                              }
+                        }
+                        disabled={false}
+                        editDestination={[Function]}
+            />
+            <DeleteAction
+                        destination={
+                                    Object {
+                                                "destinationType": "PEOPLE_BASED",
+                                                "id": 20008,
+                                                "name": "card",
+                                                "shareableAudience": 909,
+                                              }
+                        }
+                        disabled={false}
+                        handleDeleteAction={[Function]}
+                        isForDestination={true}
+            />
+</Unknown>,
+          false,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <EditAction
+                destination={
+                                Object {
+                                                "destinationType": "PEOPLE_BASED",
+                                                "id": 20008,
+                                                "name": "card",
+                                                "shareableAudience": 909,
+                                              }
+                }
+                disabled={false}
+                editDestination={[Function]}
+/>,
+              <DeleteAction
+                destination={
+                                Object {
+                                                "destinationType": "PEOPLE_BASED",
+                                                "id": 20008,
+                                                "name": "card",
+                                                "shareableAudience": 909,
+                                              }
+                }
+                disabled={false}
+                handleDeleteAction={[Function]}
+                isForDestination={true}
+/>,
+              false,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "destination": Object {
+                  "destinationType": "PEOPLE_BASED",
+                  "id": 20008,
+                  "name": "card",
+                  "shareableAudience": 909,
+                },
+                "disabled": false,
+                "editDestination": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "destination": Object {
+                  "destinationType": "PEOPLE_BASED",
+                  "id": 20008,
+                  "name": "card",
+                  "shareableAudience": 909,
+                },
+                "disabled": false,
+                "handleDeleteAction": [Function],
+                "isForDestination": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            false,
+          ],
+          "type": Symbol(react.fragment),
+        },
+        false,
+      ],
       "type": "div",
     },
   ],
@@ -307,114 +319,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Unknown>
-        <Activation
-                addAccount={[Function]}
-                authentication={
-                        Object {
-                                "accountName": "test",
-                                "adAccountId": "1",
-                                "expireIn": "Expired",
-                              }
-                }
-                disabled={false}
-        />
-        <DeleteAction
-                authentication={
-                        Object {
-                                "accountName": "test",
-                                "adAccountId": "1",
-                                "expireIn": "Expired",
-                              }
-                }
-                disabled={false}
-                handleDeleteAction={[Function]}
-                isForDestination={false}
-        />
-</Unknown>,
-      "className": undefined,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Activation
-            addAccount={[Function]}
-            authentication={
-                        Object {
-                                    "accountName": "test",
-                                    "adAccountId": "1",
-                                    "expireIn": "Expired",
-                                  }
-            }
-            disabled={false}
-/>,
-          <DeleteAction
-            authentication={
-                        Object {
-                                    "accountName": "test",
-                                    "adAccountId": "1",
-                                    "expireIn": "Expired",
-                                  }
-            }
-            disabled={false}
-            handleDeleteAction={[Function]}
-            isForDestination={false}
-/>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "addAccount": [Function],
-            "authentication": Object {
-              "accountName": "test",
-              "adAccountId": "1",
-              "expireIn": "Expired",
-            },
-            "disabled": false,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "authentication": Object {
-              "accountName": "test",
-              "adAccountId": "1",
-              "expireIn": "Expired",
-            },
-            "disabled": false,
-            "handleDeleteAction": [Function],
-            "isForDestination": false,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": Symbol(react.fragment),
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Unknown>
+      "children": Array [
+        false,
+        <Unknown>
           <Activation
                     addAccount={[Function]}
                     authentication={
@@ -439,10 +346,13 @@ ShallowWrapper {
                     isForDestination={false}
           />
 </Unknown>,
-        "className": undefined,
-      },
-      "ref": null,
-      "rendered": Object {
+      ],
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      false,
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
@@ -513,6 +423,120 @@ ShallowWrapper {
         ],
         "type": Symbol(react.fragment),
       },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          <Unknown>
+            <Activation
+                        addAccount={[Function]}
+                        authentication={
+                                    Object {
+                                                "accountName": "test",
+                                                "adAccountId": "1",
+                                                "expireIn": "Expired",
+                                              }
+                        }
+                        disabled={false}
+            />
+            <DeleteAction
+                        authentication={
+                                    Object {
+                                                "accountName": "test",
+                                                "adAccountId": "1",
+                                                "expireIn": "Expired",
+                                              }
+                        }
+                        disabled={false}
+                        handleDeleteAction={[Function]}
+                        isForDestination={false}
+            />
+</Unknown>,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Activation
+                addAccount={[Function]}
+                authentication={
+                                Object {
+                                                "accountName": "test",
+                                                "adAccountId": "1",
+                                                "expireIn": "Expired",
+                                              }
+                }
+                disabled={false}
+/>,
+              <DeleteAction
+                authentication={
+                                Object {
+                                                "accountName": "test",
+                                                "adAccountId": "1",
+                                                "expireIn": "Expired",
+                                              }
+                }
+                disabled={false}
+                handleDeleteAction={[Function]}
+                isForDestination={false}
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "addAccount": [Function],
+                "authentication": Object {
+                  "accountName": "test",
+                  "adAccountId": "1",
+                  "expireIn": "Expired",
+                },
+                "disabled": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "authentication": Object {
+                  "accountName": "test",
+                  "adAccountId": "1",
+                  "expireIn": "Expired",
+                },
+                "disabled": false,
+                "handleDeleteAction": [Function],
+                "isForDestination": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+      ],
       "type": "div",
     },
   ],

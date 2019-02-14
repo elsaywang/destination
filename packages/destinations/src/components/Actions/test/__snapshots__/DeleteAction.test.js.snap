@@ -75,8 +75,7 @@ ShallowWrapper {
                               <span
                                         className={undefined}
                               >
-                                          Delete 
-                                        Destination
+                                          Delete   Destination
                               </span>
                     </Unknown>
           }
@@ -161,8 +160,7 @@ ShallowWrapper {
             <span
                         className={undefined}
             >
-                          Delete 
-                        Destination
+                          Delete   Destination
             </span>
 </Unknown>,
           "variant": "destructive",
@@ -270,8 +268,7 @@ ShallowWrapper {
                                     <span
                                                 className={undefined}
                                     >
-                                                  Delete 
-                                                Destination
+                                                  Delete   Destination
                                     </span>
                         </Unknown>
             }
@@ -356,8 +353,7 @@ ShallowWrapper {
               <span
                             className={undefined}
               >
-                              Delete 
-                            Destination
+                              Delete   Destination
               </span>
 </Unknown>,
             "variant": "destructive",

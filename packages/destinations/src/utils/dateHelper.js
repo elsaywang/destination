@@ -3,7 +3,7 @@ import moment from 'moment';
 export const datePattern = 'MMM DD, YYYY hh:mm A';
 
 //standardize to New York Time Zone
-export const standardizedTime = (ms = undefined) => moment(ms).utcOffset('-0500');
+export const standardizedTime = (ms = undefined) => moment(ms).utc();
 
 export const formatDate = ms => standardizedTime(ms).format(datePattern);
 

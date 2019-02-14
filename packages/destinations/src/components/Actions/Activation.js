@@ -2,17 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './action.css';
 import AddAccountModal from '../AddAccountModal';
+import { isExpired } from '../../utils/dateHelper';
+import { destinationTemplateIDMap } from '../../constants/integratedPlatformsOptions';
 
-const Activation = ({ authentication, disabled, addAccount }) => (
-    <AddAccountModal
-        message={authentication.expireIn === 'Expired' ? 'Reactivate' : 'Renew'}
-        quiet
-        className={styles.activationButton}
-        disabled={disabled}
-        addAccount={addAccount}
-        authentication={authentication}
-    />
-);
+const Activation = ({ authentication, disabled, addAccount }) => {
+    const message = isExpired(authentication.expirationTime) ? 'Reactivate' : 'Renew';
+    const { accountName, destinationTemplateId } = authentication;
+
+    return (
+        <AddAccountModal
+            message={message}
+            title={`${message} Account`}
+            quiet
+            className={styles.activationButton}
+            disabled={disabled}
+            addAccount={addAccount}
+            accountName={accountName}
+            platform={destinationTemplateIDMap[destinationTemplateId]}
+        />
+    );
+};
 
 Activation.defaultProps = {
     disabled: false,
@@ -26,7 +35,8 @@ Activation.propTypes = {
     authentication: PropTypes.shape({
         adAccountId: PropTypes.string,
         accountName: PropTypes.string,
-        expireIn: PropTypes.string,
+        expirationTime: PropTypes.number,
+        destinationTemplateId: PropTypes.number,
     }),
     addAccount: PropTypes.func, //TODO
     disabled: PropTypes.bool,
