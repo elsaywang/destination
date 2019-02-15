@@ -1,0 +1,45 @@
+.subNav-anchorlist:hover a[is='coral-anchorlist-item'], .subNav-anchorlist a[is='coral-anchorlist-item'] {
+  color: #858585;
+  background-color: inherit; }
+  .subNav-anchorlist a:hover[is='coral-anchorlist-item'] {
+    color: #e2e2e2;
+    background-color: inherit;
+    text-decoration: none; }
+
+.subNav {
+  z-index: 10;
+  /*
+        for some older apps, like Traits, that have the z-index
+        set for the page top action buttons, which may interference with the SubNav
+    */
+  position: relative; }
+  .subNav-anchorlist {
+    position: absolute;
+    padding: 14px;
+    background-color: #1e1e1e; }
+    .subNav-anchorlist .coral3-BasicList-item-contentContainer {
+      width: auto; }
+      .subNav-anchorlist .coral3-BasicList-item-contentContainer coral-tag {
+        display: inline-flex;
+        background-color: #326ec8;
+        border-radius: 100px/100px;
+        margin-left: 5px; }
+
+.coral-Shell coral-shell-header-content {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden; }
+
+[is='coral-shell-workspace'] {
+  letter-spacing: 0.5px;
+  background-color: #1e1e1e; }
+  [is='coral-shell-workspace'] coral-icon[icon='chevronDown'] {
+    padding-left: 8px; }
+  [is='coral-shell-workspace']:hover {
+    text-decoration: none; }
+  [is='coral-shell-workspace']:focus {
+    border-color: #ffffff;
+    color: #ffffff; }
+
+coral-shell-menu#menu_solutions {
+  width: 100%; }
