@@ -9,3 +9,6 @@
     display: inline-flex;
     margin: -0.3rem 0 0 -2.5rem
 }
+:local(.expiration){
+    color: var(--spectrum-semantic-negative-color-default)
+}

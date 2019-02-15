@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { GridRow } from '@react/react-spectrum/Grid';
 import Edit from '@react/react-spectrum/Icon/Edit';
 import Table from '../components/Table';
@@ -67,7 +68,14 @@ class Authentications extends Component {
             case 'destinationTemplateId':
                 return <span>{platform}</span>;
             case 'expirationTime':
-                return <span>{expireInDays}</span>;
+                return (
+                    <span
+                        className={classNames({
+                            [styles.expiration]: `${expireInDays}` === 'Expired',
+                        })}>
+                        {expireInDays}
+                    </span>
+                );
             case 'updateTime':
                 return <span>{authorizedDate}</span>;
             case 'emailNotificationList':
