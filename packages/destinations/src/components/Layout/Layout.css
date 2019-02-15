@@ -27,6 +27,7 @@
 }
 #destinations-search{
   min-width: 30rem;
+  margin-bottom: 1rem;
 }
 :local(.entry) {
     margin: 2.75rem 0 0 0.1rem;
