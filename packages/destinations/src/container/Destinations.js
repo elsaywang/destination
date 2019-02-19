@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import _ from 'lodash';
 import Table from '../components/Table';
 import SideNavFilter from '../components/SideNavFilter';
@@ -11,6 +12,8 @@ import * as tableActionCreators from '../redux/actions/tableActions';
 import * as destinationActionCreators from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
 import Actions from '../components/Actions';
+import { updateUrl } from '../utils/updateUrl';
+import { allColumnTypes } from '../constants/columns';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
@@ -47,30 +50,8 @@ class Destinations extends Component {
     isIntegratedPlatform = category => category === 'Integrated Platforms';
 
     sortData = ({ column, direction }) => {
-        this.props.applySort({ sortColumn: column, sortDirection: direction });
-        this.props.fetchDestinations();
+        updateUrl(this.props.history, { sort: direction === 1 ? column.key : `-${column.key}` });
     };
-
-    handleSideNavFilterChange = ({ serverTypes, value }) => {
-        this.props.applyFilter(serverTypes);
-        this.props.updateIntegratedPlatformType(value);
-        this.props.fetchDestinations();
-    };
-
-    componentDidMount() {
-        if (!_.isEmpty(this.props.subroute)) {
-            const currentPlatform = integratedPlatformsOptions.find(
-                ({ subroute }) => subroute === this.props.subroute,
-            );
-
-            this.props.updateIntegratedPlatformType(currentPlatform.value);
-            this.props.applyFilter(currentPlatform.serverTypes);
-        } else {
-            this.props.applyFilter(this.props.currentDestination.types);
-        }
-
-        this.props.fetchDestinations();
-    }
 
     componentWillUnmount() {
         this.props.updateIntegratedPlatformType('');
@@ -93,7 +74,6 @@ class Destinations extends Component {
         const renderSideNavFilter = (
             <div className={styles.filterListContainer}>
                 <SideNavFilter
-                    onFilterTypeChange={this.handleSideNavFilterChange}
                     filterType={integratedPlatformType}
                     isSearched={true}
                     baseRoute={this.props.currentDestination.route}
@@ -121,7 +101,7 @@ class Destinations extends Component {
                             onSortChange={this.sortData}
                             reachedEndOfRows={fetchMoreDestinations}
                             sortDescriptor={{
-                                column: sortColumn,
+                                column: allColumnTypes.find(({ key }) => key === sortColumn),
                                 direction: sortDirection,
                             }}
                             height={800}
@@ -153,7 +133,7 @@ Destinations.propTypes = {
         }),
         idsToDisplay: PropTypes.arrayOf(PropTypes.number),
         integratedPlatformType: PropTypes.string,
-        sortColumn: PropTypes.object,
+        sortColumn: PropTypes.string,
         sortDirection: PropTypes.oneOf([-1, 1]),
     }),
     currentDestination: PropTypes.shape({
@@ -168,7 +148,12 @@ const mapStateToProps = ({ destinations }) => ({
 
 export { Destinations };
 
-export default connect(
-    mapStateToProps,
-    { ...destinationActionCreators, ...tableActionCreators },
-)(Destinations);
+export default withRouter(
+    connect(
+        mapStateToProps,
+        {
+            ...destinationActionCreators,
+            ...tableActionCreators,
+        },
+    )(Destinations),
+);

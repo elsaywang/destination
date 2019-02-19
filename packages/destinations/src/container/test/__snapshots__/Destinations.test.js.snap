@@ -119,7 +119,6 @@ ShallowWrapper {
                     }
                     filterType={undefined}
                     isSearched={true}
-                    onFilterTypeChange={[Function]}
           />
 </div>,
         <div
@@ -270,7 +269,6 @@ ShallowWrapper {
             }
             filterType={undefined}
             isSearched={true}
-            onFilterTypeChange={[Function]}
 />,
           "className": undefined,
         },
@@ -317,7 +315,6 @@ ShallowWrapper {
             ],
             "filterType": undefined,
             "isSearched": true,
-            "onFilterTypeChange": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -576,7 +573,6 @@ ShallowWrapper {
                         }
                         filterType={undefined}
                         isSearched={true}
-                        onFilterTypeChange={[Function]}
             />
 </div>,
           <div
@@ -727,7 +723,6 @@ ShallowWrapper {
               }
               filterType={undefined}
               isSearched={true}
-              onFilterTypeChange={[Function]}
 />,
             "className": undefined,
           },
@@ -774,7 +769,6 @@ ShallowWrapper {
               ],
               "filterType": undefined,
               "isSearched": true,
-              "onFilterTypeChange": [Function],
             },
             "ref": null,
             "rendered": null,

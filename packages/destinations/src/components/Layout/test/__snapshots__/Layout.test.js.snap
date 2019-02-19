@@ -52,7 +52,7 @@ ShallowWrapper {
                                                 [Function]
                                         </FormattedMessage>
                                 </GridRow>
-                                <Connect(SearchWrapper) />
+                                <withRouter(Connect(SearchWrapper)) />
                         </GridColumn>
                         <GridColumn
                                 className="creat-destination-button"
@@ -109,7 +109,7 @@ ShallowWrapper {
                                                   [Function]
                                         </FormattedMessage>
                               </GridRow>
-                              <Connect(SearchWrapper) />
+                              <withRouter(Connect(SearchWrapper)) />
                     </GridColumn>
                     <GridColumn
                               className="creat-destination-button"
@@ -165,7 +165,7 @@ ShallowWrapper {
                                                         [Function]
                                           </FormattedMessage>
                             </GridRow>
-                            <Connect(SearchWrapper) />
+                            <withRouter(Connect(SearchWrapper)) />
               </GridColumn>
               <GridColumn
                             className="creat-destination-button"
@@ -215,7 +215,7 @@ ShallowWrapper {
                                                       [Function]
                                     </FormattedMessage>
                   </GridRow>
-                  <Connect(SearchWrapper) />
+                  <withRouter(Connect(SearchWrapper)) />
 </GridColumn>,
                 <GridColumn
                   className="creat-destination-button"
@@ -261,7 +261,7 @@ ShallowWrapper {
                                             [Function]
                       </FormattedMessage>
 </GridRow>,
-                    <Connect(SearchWrapper) />,
+                    <withRouter(Connect(SearchWrapper)) />,
                   ],
                   "size": 6,
                 },
@@ -303,7 +303,7 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {},
                     "ref": null,
                     "rendered": null,
@@ -413,7 +413,7 @@ ShallowWrapper {
                                                             [Function]
                                                   </FormattedMessage>
                                         </GridRow>
-                                        <Connect(SearchWrapper) />
+                                        <withRouter(Connect(SearchWrapper)) />
                               </GridColumn>
                               <GridColumn
                                         className="creat-destination-button"
@@ -470,7 +470,7 @@ ShallowWrapper {
                                                             [Function]
                                                 </FormattedMessage>
                                     </GridRow>
-                                    <Connect(SearchWrapper) />
+                                    <withRouter(Connect(SearchWrapper)) />
                         </GridColumn>
                         <GridColumn
                                     className="creat-destination-button"
@@ -526,7 +526,7 @@ ShallowWrapper {
                                                                 [Function]
                                                 </FormattedMessage>
                                 </GridRow>
-                                <Connect(SearchWrapper) />
+                                <withRouter(Connect(SearchWrapper)) />
                 </GridColumn>
                 <GridColumn
                                 className="creat-destination-button"
@@ -576,7 +576,7 @@ ShallowWrapper {
                                                             [Function]
                                         </FormattedMessage>
                     </GridRow>
-                    <Connect(SearchWrapper) />
+                    <withRouter(Connect(SearchWrapper)) />
 </GridColumn>,
                   <GridColumn
                     className="creat-destination-button"
@@ -622,7 +622,7 @@ ShallowWrapper {
                                                 [Function]
                         </FormattedMessage>
 </GridRow>,
-                      <Connect(SearchWrapper) />,
+                      <withRouter(Connect(SearchWrapper)) />,
                     ],
                     "size": 6,
                   },
@@ -664,7 +664,7 @@ ShallowWrapper {
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "class",
+                      "nodeType": "function",
                       "props": Object {},
                       "ref": null,
                       "rendered": null,
@@ -813,7 +813,7 @@ ShallowWrapper {
                                                 [Function]
                                         </FormattedMessage>
                                 </GridRow>
-                                <Connect(SearchWrapper) />
+                                <withRouter(Connect(SearchWrapper)) />
                         </GridColumn>
                         <GridColumn
                                 className="creat-destination-button"
@@ -869,7 +869,7 @@ ShallowWrapper {
                                                   [Function]
                                         </FormattedMessage>
                               </GridRow>
-                              <Connect(SearchWrapper) />
+                              <withRouter(Connect(SearchWrapper)) />
                     </GridColumn>
                     <GridColumn
                               className="creat-destination-button"
@@ -924,7 +924,7 @@ ShallowWrapper {
                                                         [Function]
                                           </FormattedMessage>
                             </GridRow>
-                            <Connect(SearchWrapper) />
+                            <withRouter(Connect(SearchWrapper)) />
               </GridColumn>
               <GridColumn
                             className="creat-destination-button"
@@ -974,7 +974,7 @@ ShallowWrapper {
                                                       [Function]
                                     </FormattedMessage>
                   </GridRow>
-                  <Connect(SearchWrapper) />
+                  <withRouter(Connect(SearchWrapper)) />
 </GridColumn>,
                 <GridColumn
                   className="creat-destination-button"
@@ -1020,7 +1020,7 @@ ShallowWrapper {
                                             [Function]
                       </FormattedMessage>
 </GridRow>,
-                    <Connect(SearchWrapper) />,
+                    <withRouter(Connect(SearchWrapper)) />,
                   ],
                   "size": 6,
                 },
@@ -1062,7 +1062,7 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "class",
+                    "nodeType": "function",
                     "props": Object {},
                     "ref": null,
                     "rendered": null,
@@ -1164,7 +1164,7 @@ ShallowWrapper {
                                                             [Function]
                                                   </FormattedMessage>
                                         </GridRow>
-                                        <Connect(SearchWrapper) />
+                                        <withRouter(Connect(SearchWrapper)) />
                               </GridColumn>
                               <GridColumn
                                         className="creat-destination-button"
@@ -1220,7 +1220,7 @@ ShallowWrapper {
                                                             [Function]
                                                 </FormattedMessage>
                                     </GridRow>
-                                    <Connect(SearchWrapper) />
+                                    <withRouter(Connect(SearchWrapper)) />
                         </GridColumn>
                         <GridColumn
                                     className="creat-destination-button"
@@ -1275,7 +1275,7 @@ ShallowWrapper {
                                                                 [Function]
                                                 </FormattedMessage>
                                 </GridRow>
-                                <Connect(SearchWrapper) />
+                                <withRouter(Connect(SearchWrapper)) />
                 </GridColumn>
                 <GridColumn
                                 className="creat-destination-button"
@@ -1325,7 +1325,7 @@ ShallowWrapper {
                                                             [Function]
                                         </FormattedMessage>
                     </GridRow>
-                    <Connect(SearchWrapper) />
+                    <withRouter(Connect(SearchWrapper)) />
 </GridColumn>,
                   <GridColumn
                     className="creat-destination-button"
@@ -1371,7 +1371,7 @@ ShallowWrapper {
                                                 [Function]
                         </FormattedMessage>
 </GridRow>,
-                      <Connect(SearchWrapper) />,
+                      <withRouter(Connect(SearchWrapper)) />,
                     ],
                     "size": 6,
                   },
@@ -1413,7 +1413,7 @@ ShallowWrapper {
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "class",
+                      "nodeType": "function",
                       "props": Object {},
                       "ref": null,
                       "rendered": null,

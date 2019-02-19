@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const allColumnTypes = [
+export const allColumnTypes = [
     {
         title: 'ID',
         key: 'destinationId',

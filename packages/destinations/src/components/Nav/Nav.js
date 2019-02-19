@@ -8,9 +8,8 @@ import Settings from '@react/react-spectrum/Icon/Settings';
 import Button from '@react/react-spectrum/Button';
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchDestinations, applyFilter } from '../../redux/actions/destinations';
 
-const Nav = ({ location, routes, applyFilter }) => (
+const Nav = ({ location, routes }) => (
     <div className={styles.navList}>
         <GridRow valign="middle">
             <GridColumn size={6}>
@@ -19,8 +18,7 @@ const Nav = ({ location, routes, applyFilter }) => (
                     variant="compact"
                     selectedIndex={routes.findIndex(({ route }) =>
                         location.pathname.includes(route),
-                    )}
-                    onChange={indexSelected => applyFilter(routes[indexSelected].types)}>
+                    )}>
                     {routes.map(({ route, name }) => (
                         <Tab key={route}>
                             <NavLink
@@ -68,6 +66,6 @@ export { RouterWrappedNav };
 export default withRouter(
     connect(
         () => ({}),
-        { fetchDestinations, applyFilter },
+        {},
     )(Nav),
 );

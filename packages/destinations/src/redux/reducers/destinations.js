@@ -8,7 +8,7 @@ import {
     fetchMoreDestinations,
     deleteDestination,
     applySearch,
-    applyFilter
+    applyFilter,
 } from '../actions/destinations';
 import columnsForDestinationType from '../../constants/columns';
 
@@ -77,7 +77,6 @@ export default handleActions(
             updateIntegratedPlatformType,
             (state, action) => ({
                 ...state,
-                searchFormText: '',
                 integratedPlatformType: action.payload,
             }),
         ],
@@ -85,7 +84,6 @@ export default handleActions(
             applySort,
             (state, action) => ({
                 ...state,
-                searchFormText: '',
                 sortColumn: action.payload.sortColumn,
                 sortDirection: action.payload.sortDirection,
             }),
@@ -102,14 +100,13 @@ export default handleActions(
             (state, action) => ({
                 ...state,
                 filterBy: action.payload,
-                searchFormText: '',
             }),
         ],
     ]),
     {
         idsToDisplay: [],
         destinationType: initialDestinationType,
-        sortColumn: columnsForDestinationType[initialDestinationType][0],
+        sortColumn: columnsForDestinationType[initialDestinationType][0].key,
         sortDirection: 1,
         integratedPlatformType: '',
     },

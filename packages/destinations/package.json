@@ -30,6 +30,7 @@
     "nodelist-foreach-polyfill": "^1.2.0",
     "npx": "^10.2.0",
     "prop-types": "^15.6.2",
+    "query-string": "^5.1.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-intl": "^2.7.2",

@@ -20,7 +20,7 @@ const queryDestinationsAPI = (queryOptions, getStore) => {
 
     // HACK: so so gross. This function shouldn't have to know so much about the store's structure
     const storeToQueryMappers = {
-        sortColumn: sortColumn => ({ sortBy: sortColumn.key }),
+        sortColumn: columnKey => ({ sortBy: columnKey }),
         sortDirection: sortDirection => ({ descending: sortDirection === -1 }),
         searchFormText: searchFormText => ({ search: searchFormText }),
         filterBy: filterBy => ({ restrictType: filterBy }),
