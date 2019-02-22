@@ -95,7 +95,7 @@ export const allColumnTypes = [
 
 // Declare name of columnTypes to use
 const columnsForDestinationType = {
-    All: ['ID', 'CATEGORY', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTIONS'],
+    All: ['ID', 'CATEGORY', 'NAME', 'DESCRIPTION', 'ACTIONS'],
     'Integrated Platforms': ['ID', 'TYPE', 'PLATFORM', 'NAME', 'DESCRIPTION', 'ACTIONS'],
     'People-Based': ['ID', 'PLATFORM', 'NAME', 'DESCRIPTION', 'SHAREABLE AUDIENCE', 'ACTIONS'],
     'Device-Based': [
