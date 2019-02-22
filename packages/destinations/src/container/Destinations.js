@@ -53,13 +53,14 @@ class Destinations extends Component {
         updateUrl(this.props.history, { sort: direction === 1 ? column.key : `-${column.key}` });
     };
 
+    debouncedFetchMoreDestinations = _.debounce(this.props.fetchMoreDestinations, 500);
+
     componentWillUnmount() {
         this.props.updateIntegratedPlatformType('');
     }
 
     render() {
         const {
-            fetchMoreDestinations,
             currentDestination,
             destinations: {
                 integratedPlatformType,
@@ -99,7 +100,7 @@ class Destinations extends Component {
                             dataTest="destination-list-table"
                             items={destinationsList}
                             onSortChange={this.sortData}
-                            reachedEndOfRows={fetchMoreDestinations}
+                            reachedEndOfRows={this.debouncedFetchMoreDestinations}
                             sortDescriptor={{
                                 column: allColumnTypes.find(({ key }) => key === sortColumn),
                                 direction: sortDirection,

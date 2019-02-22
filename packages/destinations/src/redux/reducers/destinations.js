@@ -33,13 +33,20 @@ const fetchDestinationsHandlers = createAsyncActionHandlers(fetchDestinations, {
 
 const fetchMoreDestinationsHandlers = createAsyncActionHandlers(fetchMoreDestinations, {
     onPending: _.indentity,
-    onFulfilled: (state, action) => ({
-        ...state,
-        byIds: _.merge({}, state.byIds, _.keyBy(action.payload.list, el => el.destinationId)),
-        idsToDisplay: state.idsToDisplay.concat(
-            action.payload.list.map(({ destinationId }) => destinationId),
-        ),
-    }),
+    onFulfilled: (state, action) => {
+        const allDestinationsLoaded = state.idsToDisplay.includes(
+            _.first(action.payload.list).destinationId,
+        );
+        return {
+            ...state,
+            byIds: _.merge({}, state.byIds, _.keyBy(action.payload.list, el => el.destinationId)),
+            idsToDisplay: allDestinationsLoaded
+                ? state.idsToDisplay
+                : state.idsToDisplay.concat(
+                      action.payload.list.map(({ destinationId }) => destinationId),
+                  ),
+        };
+    },
     onError: _.indentity,
 });
 

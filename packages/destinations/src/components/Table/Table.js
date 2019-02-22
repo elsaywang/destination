@@ -19,7 +19,7 @@ class Table extends Component {
                     totalItems += this.getSectionLength(i);
                 }
 
-                reachedEndOfRows(totalItems);
+                reachedEndOfRows({ itemsSeen: totalItems });
             }
         }();
     }

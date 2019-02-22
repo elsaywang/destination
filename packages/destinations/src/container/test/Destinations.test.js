@@ -9,6 +9,7 @@ describe('renders <App/> without crashing', () => {
     const noOp = () => {};
     const props = {
         fetchDestinations: noOp,
+        fetchMoreDestinations: noOp,
         applyFilter: noOp,
         destinations: {
             byIds: {

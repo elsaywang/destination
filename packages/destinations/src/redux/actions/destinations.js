@@ -18,6 +18,11 @@ const queryDestinationsAPI = (queryOptions, getStore) => {
         descending: false,
     };
 
+    // FIXME: This is actually garbage
+    if (queryOptions && queryOptions.itemsSeen) {
+        queryOptions.page = Math.floor(queryOptions.itemsSeen / defaultQueryOptions.pageSize);
+    }
+
     // HACK: so so gross. This function shouldn't have to know so much about the store's structure
     const storeToQueryMappers = {
         sortColumn: columnKey => ({ sortBy: columnKey }),
