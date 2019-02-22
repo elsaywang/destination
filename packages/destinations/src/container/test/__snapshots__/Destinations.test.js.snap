@@ -11,6 +11,7 @@ ShallowWrapper {
             "route": "/destinations/integratedPlatforms",
             "types": Array [
               "S2S",
+              "PEOPLE_BASED",
             ],
           }
     }
