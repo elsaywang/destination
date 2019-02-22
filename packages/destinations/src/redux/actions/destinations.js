@@ -66,7 +66,7 @@ export const fetchMoreDestinations = createAsyncAction(
 )({ json: true });
 
 //TODO: update with real api delete call
-export const deleteFromDestinationsAPI = (
+const deleteFromDestinationsAPI = (
     idToDelete, //fetch(`${portalUrl}/api/v1/destinations/${idToDelete}`, { method: 'DELETE' });
 ) => fetch(`${apiUrl}/destinations/${idToDelete}`, { method: 'DELETE' });
 

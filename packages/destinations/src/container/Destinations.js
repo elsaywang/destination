@@ -6,14 +6,17 @@ import _ from 'lodash';
 import Table from '../components/Table';
 import SideNavFilter from '../components/SideNavFilter';
 import styles from './Destinations.css';
+import actionStyles from '../components/Actions/action.css';
 import { integratedPlatformsOptions } from '../constants/integratedPlatformsOptions';
 import { destinationsMap } from '../constants/destinations';
 import * as tableActionCreators from '../redux/actions/tableActions';
 import * as destinationActionCreators from '../redux/actions/destinations';
 import columnsForDestinationType from '../constants/columns';
-import Actions from '../components/Actions';
 import { updateUrl } from '../utils/updateUrl';
 import { allColumnTypes } from '../constants/columns';
+import EditAction from '../components/Actions/EditAction';
+import DeleteAction from '../components/Actions/DeleteAction';
+import MetricsView from '../components/Actions/MetricsView';
 
 class Destinations extends Component {
     renderCell = (column, data) => {
@@ -38,13 +41,18 @@ class Destinations extends Component {
     renderActionCell = data => {
         const currentRecordCategory = destinationsMap[data.destinationType].category;
         return (
-            <div>
-                <Actions
+            <div className={actionStyles}>
+                <EditAction destination={data} disabled={false} />
+                <DeleteAction
+                    id={data.id}
+                    handleDelete={() => this.props.deleteDestination(data.destinationId)}
+                    type={'destination'}
+                    name={data.name}
                     destination={data}
-                    showMetrics={this.isIntegratedPlatform(currentRecordCategory)}
-                    handleDeleteAction={this.props.deleteDestination}
-                    isForDestination
                 />
+                {this.isIntegratedPlatform(currentRecordCategory) && (
+                    <MetricsView destination={data} disabled={false} />
+                )}
             </div>
         );
     };

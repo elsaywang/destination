@@ -3,22 +3,16 @@ import { shallow } from 'enzyme';
 import DeleteAction from '../DeleteAction';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
 import Dialog from '@react/react-spectrum/Dialog';
-import Popover from '@react/react-spectrum/Popover';
 import Button from '@react/react-spectrum/Button';
 
 describe('<DeleteAction/> component', () => {
     describe('rendering', () => {
         const mockFn = jest.fn();
         const props = {
-            disabled: false,
-            deleteDestination: mockFn,
-            destination: {
-                id: 20008,
-                name: 'card',
-                destinationType: 'PEOPLE_BASED',
-                shareableAudience: 909,
-            },
-            isForDestination: true,
+            handleDelete: mockFn,
+            id: 20008,
+            name: 'card',
+            type: 'destination',
         };
         const wrapper = shallow(<DeleteAction {...props} />);
 

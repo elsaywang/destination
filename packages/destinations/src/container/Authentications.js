@@ -5,8 +5,10 @@ import { GridRow } from '@react/react-spectrum/Grid';
 import Edit from '@react/react-spectrum/Icon/Edit';
 import Table from '../components/Table';
 import AddAccountModal from '../components/AddAccountModal';
-import Actions from '../components/Actions';
+import Activation from '../components/Actions/Activation';
+import DeleteAction from '../components/Actions/DeleteAction';
 import styles from './Authentications.css';
+import actionStyles from '../components/Actions/action.css';
 import { columnsForAuthentications } from '../constants/columns';
 import { destinationTemplateIDMap } from '../constants/integratedPlatformsOptions';
 import { formatDate, expireIn } from '../utils/dateHelper';
@@ -113,11 +115,20 @@ class Authentications extends Component {
     renderActionCell = data => {
         const { deleteAuthentication } = this.props;
         return (
-            <Actions
-                authentication={data}
-                handleDeleteAction={deleteAuthentication}
-                isForDestination={false}
-            />
+            <div className={actionStyles}>
+                <Activation
+                    authentication={data}
+                    handleDeleteAction={() => deleteAuthentication(data.adAccountId)}
+                    disabled={false}
+                />
+                <DeleteAction
+                    id={data.id}
+                    type={'authentication'}
+                    authentication={data}
+                    name={data.name}
+                    handleDeleteAction={deleteAuthentication}
+                />
+            </div>
         );
     };
 
