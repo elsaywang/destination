@@ -28,6 +28,8 @@ class Destinations extends Component {
                 return <span>{category}</span>;
             case 'destinationType':
                 return <span>{name}</span>;
+            case 'description':
+                return <span className={styles.description}>{data[key]}</span>;
             default:
                 return <span>{data[key]}</span>;
         }
