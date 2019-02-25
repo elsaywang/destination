@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
 import Dialog from '@react/react-spectrum/Dialog';
 import Button from '@react/react-spectrum/Button';
-import ComboBox from '@react/react-spectrum/ComboBox';
+import Select from '@react/react-spectrum/Select';
 import Textfield from '@react/react-spectrum/Textfield';
 import requiredIf from 'react-required-if';
 import styles from './AddAccountModal.css';
 import { getPlatformOptions } from '../../constants/integratedPlatformsOptions';
-
+import {capitalizeFirstLetter} from '../../utils/strings';
 /*
     Currently Spectrum doesn't propogate prop changes to ModalTrigger children because they are
     doing a bunch of props mutating stuff. As far as I can tell this isn't a bug, their spec is
@@ -18,7 +18,7 @@ import { getPlatformOptions } from '../../constants/integratedPlatformsOptions';
 */
 
 class ModalContentHackForSpectrum extends Component {
-    state = { selectedPlatform: null, confirmDisabled: true, newContactEmail: null };
+    state = { selectedPlatform: null, newContactEmail: null };
 
     handleContactEmailsChange = e => {
         this.setState({ newContactEmail: e })
@@ -32,17 +32,18 @@ class ModalContentHackForSpectrum extends Component {
             ? this.props.contactEmails.slice(0).join(`,   `)
             : 'Enter one or more email addresses separate with commas';
 
-        //disable in Add Account when no Platform is selected, Add contact when no new email is entered
+        //disable in Add Account when no Platform is selected / Add contact when no new email is typed in
         const disableConfirmation = (!this.props.platform && !this.state.selectedPlatform)
             || (this.props.contactOnlyMode && !this.state.newContactEmail);
 
-        //Add Contacts - Save, Add Account and Renew/Reactivate Account - Confirm
+        //Add Contacts - 'Save', Add Account and Renew/Reactivate Account - 'Confirm'
         const renderConfirmationLabel = this.props.contactOnlyMode
             ? 'Save' : 'Confirm';
 
         const renderCancelLabel = this.props.contactOnlyMode
             ? 'Close' : 'Cancel';
 
+        // TODO: delete this mock service when OAuth integration is done
         const mockPromise = new Promise(resolve => {
             setTimeout(
                 resolve("Success!")
@@ -55,6 +56,8 @@ class ModalContentHackForSpectrum extends Component {
                 return false;
             }
         }
+
+        const platformOptions = _.map(getPlatformOptions('People-Based'), platform => { return { label: platform, value: platform.toLowerCase() } })
 
         return (
             <Dialog
@@ -70,12 +73,11 @@ class ModalContentHackForSpectrum extends Component {
                 {!this.props.contactOnlyMode && (
                     <div className={classnames(styles.platform_dropdown_section, styles.sections)}>
                         <span>People-Based Platform *</span>
-                        <ComboBox
-                            onSelect={selectedPlatform =>this.setState({ selectedPlatform, confirmDisabled: false })}
-                            placeholder={dropDownOptionMessage}
-                            options={getPlatformOptions('People-Based')}
+                        <Select
+                            onChange={selectedPlatform => this.setState({ selectedPlatform })}
+                            options={platformOptions}
                             disabled={this.props.contactOnlyMode || this.props.platform || this.state.newAccountAdded}
-                            aria-label="Default"
+                            placeholder="other placeholder"
                         />
                     </div>
                 )}
