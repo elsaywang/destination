@@ -76,7 +76,7 @@ class ModalContentHackForSpectrum extends Component {
                         <span>People-Based Platform *</span>
                         <Select
                             value={this.state.selectedPlatform || this.props.platform}
-                            placeholder={this.props.platform || "Select one platform"}
+                            placeholder={dropDownOptionMessage}
                             onChange={selectedPlatform => this.setState({ selectedPlatform })}
                             options={platformOptions}
                             disabled={this.props.contactOnlyMode || this.props.platform || this.state.newAccountAdded}
