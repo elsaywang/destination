@@ -9,7 +9,7 @@ import Textfield from '@react/react-spectrum/Textfield';
 import requiredIf from 'react-required-if';
 import styles from './AddAccountModal.css';
 import { getPlatformOptions } from '../../constants/integratedPlatformsOptions';
-import {capitalizeFirstLetter} from '../../utils/strings';
+
 /*
     Currently Spectrum doesn't propogate prop changes to ModalTrigger children because they are
     doing a bunch of props mutating stuff. As far as I can tell this isn't a bug, their spec is
@@ -74,10 +74,11 @@ class ModalContentHackForSpectrum extends Component {
                     <div className={classnames(styles.platform_dropdown_section, styles.sections)}>
                         <span>People-Based Platform *</span>
                         <Select
+                            value={this.state.selectedPlatform || this.props.platform}
+                            placeholder={this.props.platform || "Select one platform"}
                             onChange={selectedPlatform => this.setState({ selectedPlatform })}
                             options={platformOptions}
                             disabled={this.props.contactOnlyMode || this.props.platform || this.state.newAccountAdded}
-                            placeholder="other placeholder"
                         />
                     </div>
                 )}
