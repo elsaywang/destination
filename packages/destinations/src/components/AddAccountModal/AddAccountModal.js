@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
