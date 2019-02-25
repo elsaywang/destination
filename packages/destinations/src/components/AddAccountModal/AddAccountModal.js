@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
 import Dialog from '@react/react-spectrum/Dialog';
 import Button from '@react/react-spectrum/Button';
-import Dropdown from '@react/react-spectrum/Dropdown';
-import { Menu, MenuItem } from '@react/react-spectrum/Menu';
+import ComboBox from '@react/react-spectrum/ComboBox';
 import Textfield from '@react/react-spectrum/Textfield';
 import requiredIf from 'react-required-if';
 import styles from './AddAccountModal.css';
@@ -19,10 +18,10 @@ import { getPlatformOptions } from '../../constants/integratedPlatformsOptions';
 */
 
 class ModalContentHackForSpectrum extends Component {
-    state = { selectedPlatform: null, confirmDisabled: true };
+    state = { selectedPlatform: null, confirmDisabled: true, newContactEmail: null };
 
     handleContactEmailsChange = e => {
-        //TODO: add contacts email event
+        this.setState({ newContactEmail: e })
     };
 
     render() {
@@ -33,14 +32,29 @@ class ModalContentHackForSpectrum extends Component {
             ? this.props.contactEmails.slice(0).join(`,   `)
             : 'Enter one or more email addresses separate with commas';
 
-        //disable only in Add Account dialog, neither `add contact` nor `activation (platform is pre-populated)`
-        const disableConfirmation = !(this.props.contactOnlyMode || this.props.platform);
+        //disable in Add Account when no Platform is selected, Add contact when no new email is entered
+        const disableConfirmation = (!this.props.platform && !this.state.selectedPlatform)
+            || (this.props.contactOnlyMode && !this.state.newContactEmail);
 
-        //Add Contacts - `Add`; Activation( when platform is pre-populated)- same as the trigger Button label ;
-        //Add Account - no confirmationLabel, all events happen in iframe
+        //Add Contacts - Save, Add Account and Renew/Reactivate Account - Confirm
         const renderConfirmationLabel = this.props.contactOnlyMode
-            ? 'Add'
-            : (this.props.platform && this.props.message) || '  ';
+            ? 'Save' : 'Confirm';
+
+        const renderCancelLabel = this.props.contactOnlyMode
+            ? 'Close' : 'Cancel';
+
+        const mockPromise = new Promise(resolve => {
+            setTimeout(
+                resolve("Success!")
+                , 3000)
+        });
+
+        const onConfirmCallback = () => {
+            if (!this.state.newAccountAdded && this.state.selectedPlatform) {
+                mockPromise.then(() => this.setState({ newAccountAdded: true }))
+                return false;
+            }
+        }
 
         return (
             <Dialog
@@ -48,58 +62,43 @@ class ModalContentHackForSpectrum extends Component {
                 className={styles.dialog}
                 title={this.props.title}
                 confirmDisabled={disableConfirmation}
-                confirmLabel={renderConfirmationLabel}
-                cancelLabel="Cancel"
+                confirmLabel={this.state.newAccountAdded ? 'Close' : renderConfirmationLabel}
+                cancelLabel={this.state.newAccountAdded ? null : renderCancelLabel}
+                onConfirm={onConfirmCallback}
                 {...this.props}>
-                <div className={classnames(styles.platform_dropdown_section, styles.sections)}>
-                    <span>People-Based Platform *</span>
-                    <Dropdown
-                        onSelect={selectedPlatform =>
-                            this.setState({ selectedPlatform, confirmDisabled: false })
-                        }>
-                        <Button
-                            disabled={this.props.contactOnlyMode || this.props.platform}
-                            variant="action"
-                            className={styles.menuOption}>
-                            {dropDownOptionMessage}
-                        </Button>
-                        <Menu>
-                            {getPlatformOptions('People-Based').map(platform => (
-                                <MenuItem
-                                    className={styles.menuOption}
-                                    key={platform}
-                                    value={platform}>
-                                    {platform}
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Dropdown>
-                    <span>{this.props.accountName}</span>
-                </div>
+
+                {!this.props.contactOnlyMode && (
+                    <div className={classnames(styles.platform_dropdown_section, styles.sections)}>
+                        <span>People-Based Platform *</span>
+                        <ComboBox
+                            onSelect={selectedPlatform =>this.setState({ selectedPlatform, confirmDisabled: false })}
+                            placeholder={dropDownOptionMessage}
+                            options={getPlatformOptions('People-Based')}
+                            disabled={this.props.contactOnlyMode || this.props.platform || this.state.newAccountAdded}
+                            aria-label="Default"
+                        />
+                    </div>
+                )}
+
 
                 {!this.props.contactOnlyMode && (
                     <div className={styles.sections}>
-                        <p>Authorization</p>
-                        <div className={styles.iframe}>
-                            <p className={styles.iframe_default_text}>
-                                {this.state.selectedPlatform
-                                    ? `${this.state.selectedPlatform} goes here`
-                                    : this.props.platform || 'Select a Platform'}
-                            </p>
-                        </div>
+                        You will be taken outside of adobe domain to finish the authentication process.
                     </div>
                 )}
 
                 {this.props.contactOnlyMode && (
                     <div className={styles.sections}>
-                        <p>Contact Emails For Expiring Notification</p>
-                        <Textfield
-                            placeholder={emailContactsPlaceholder}
-                            quiet
-                            className={styles.email_input}
-                            defaultValue={this.props.contactEmails}
-                            onChange={this.handleContactEmailsChange}
-                        />
+                        <p>We will send a notification when the authentication is expiring for {this.props.platform} account: adobe@adobe.com</p>
+                        <div className={styles.platform_email_section}>
+                            <span>Email</span>
+                            <Textfield
+                                placeholder={emailContactsPlaceholder}
+                                className={styles.email_input}
+                                defaultValue={this.props.contactEmails}
+                                onChange={this.handleContactEmailsChange}
+                            />
+                        </div>
                     </div>
                 )}
             </Dialog>
@@ -118,27 +117,27 @@ const AddAccountModal = ({
     contactEmails,
     accountName,
 }) => (
-    <ModalTrigger>
-        <Button
-            label={message}
-            variant="primary"
-            modaltrigger
-            quiet={quiet}
-            className={className}
-            icon={triggerIcon}
-            data-test="add-account-modal-button"
-        />
-        <ModalContentHackForSpectrum
-            role="dialog"
-            contactOnlyMode={contactOnlyMode}
-            title={title}
-            platform={platform}
-            contactEmails={contactEmails}
-            accountName={accountName}
-            message={message}
-        />
-    </ModalTrigger>
-);
+        <ModalTrigger>
+            <Button
+                label={message}
+                variant="primary"
+                modaltrigger
+                quiet={quiet}
+                className={className}
+                icon={triggerIcon}
+                data-test="add-account-modal-button"
+            />
+            <ModalContentHackForSpectrum
+                role="dialog"
+                contactOnlyMode={contactOnlyMode}
+                title={title}
+                platform={platform}
+                contactEmails={contactEmails}
+                accountName={accountName}
+                message={message}
+            />
+        </ModalTrigger>
+    );
 
 AddAccountModal.defaultProps = {
     quiet: false,

@@ -7,22 +7,6 @@
     max-width: 600px;
 }
 
-:local(.iframe) {
-    background-color: white;
-    border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    height: 300px;
-}
-
-:local(.iframe_default_text) {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-    font-weight: 200;
-}
-
 :local(.email_input) {
     width: 100%;
 }
@@ -36,11 +20,15 @@
     margin: 5px;
 }
 
-p {
-    margin: 3px;
+:local(.platform_email_section) {
+    display: flex;
+    align-items: center;
 }
 
-:local(.menuOption){
-  justify-content:flex-start;
-  min-width: 120px;
+:local(.platform_email_section) > * {
+    margin: 10px;
+}
+
+p {
+    margin: 3px;
 }
