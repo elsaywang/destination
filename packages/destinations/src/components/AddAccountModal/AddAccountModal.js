@@ -40,12 +40,14 @@ class ModalContentHackForSpectrum extends Component {
         //Add Contacts - 'Save', Add Account and Renew/Reactivate Account - 'Confirm'
         const confirmationLabel = () => {
             let confirmationLabel = null;
-            if (this.state.newAccountAdded) confirmationLabel = 'Close';
+            if (this.state.newAccountAdded) {
+                confirmationLabel = 'Close';
+            }
             else if (this.props.contactOnlyMode) {
-                confirmationLabel = 'Save'
+                confirmationLabel = 'Save';
             }
             else {
-                confirmationLabel = 'Confirm'
+                confirmationLabel = 'Confirm';
             }
             return confirmationLabel;
         }
@@ -84,7 +86,7 @@ class ModalContentHackForSpectrum extends Component {
                 {...this.props}>
 
                 {!this.props.contactOnlyMode && (
-                    <div className={classnames(styles.platform_dropdown_section, styles.sections)}>
+                    <div className={classnames(styles.platformDropdownSection, styles.sections)}>
                         <span>People-Based Platform *</span>
                         <Select
                             value={this.state.selectedPlatform || this.props.platform}
@@ -105,8 +107,8 @@ class ModalContentHackForSpectrum extends Component {
 
                 {this.props.contactOnlyMode && (
                     <div className={styles.sections}>
-                        <p>We will send a notification when the authentication is expiring for {this.props.platform} account: adobe@adobe.com</p>
-                        <div className={styles.platform_email_section}>
+                        <p className={styles.modalMessage}>We will send a notification when the authentication is expiring for {this.props.platform} account: adobe@adobe.com</p>
+                        <div className={styles.platformEmailSection}>
                             <span>Email</span>
                             <Textfield
                                 placeholder={emailContactsPlaceholder}

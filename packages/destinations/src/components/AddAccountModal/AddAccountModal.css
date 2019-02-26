@@ -11,24 +11,24 @@
     width: 100%;
 }
 
-:local(.platform_dropdown_section) {
+:local(.platformDropdownSection) {
     display: flex;
     align-items: center;
 }
 
-:local(.platform_dropdown_section) > * {
+:local(.platformDropdownSection) > * {
     margin-right: 15px;
 }
 
-:local(.platform_email_section) {
+:local(.platformEmailSection) {
     display: flex;
     align-items: center;
 }
 
-:local(.platform_email_section) > * {
+:local(.platformEmailSection) > * {
     margin: 10px 2px;
 }
 
-p {
+:local(.modalMessage) {
     margin: 3px;
 }
