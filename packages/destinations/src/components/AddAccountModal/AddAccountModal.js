@@ -19,10 +19,10 @@ import { getPlatformOptions } from '../../constants/integratedPlatformsOptions';
 */
 
 class ModalContentHackForSpectrum extends Component {
-    state = { selectedPlatform: null, newContactEmail: null };
+    state = { selectedPlatform: null, newContactEmail: null, newAccountAdded: false };
 
-    handleContactEmailsChange = e => {
-        this.setState({ newContactEmail: e })
+    handleContactEmailsChange = newContactEmail => {
+        this.setState({ newContactEmail })
     };
 
     render() {
@@ -38,27 +38,39 @@ class ModalContentHackForSpectrum extends Component {
             || (this.props.contactOnlyMode && !this.state.newContactEmail);
 
         //Add Contacts - 'Save', Add Account and Renew/Reactivate Account - 'Confirm'
-        const renderConfirmationLabel = this.props.contactOnlyMode
-            ? 'Save' : 'Confirm';
+        const confirmationLabel = () => {
+            let confirmationLabel = null;
+            if (this.state.newAccountAdded) confirmationLabel = 'Close';
+            else if (this.props.contactOnlyMode) {
+                confirmationLabel = 'Save'
+            }
+            else {
+                confirmationLabel = 'Confirm'
+            }
+            return confirmationLabel;
+        }
 
-        const renderCancelLabel = this.props.contactOnlyMode
-            ? 'Close' : 'Cancel';
-
-        // TODO: delete this mock service when OAuth integration is done
-        const mockPromise = new Promise(resolve => {
-            setTimeout(
-                resolve("Success!")
-                , 3000)
-        });
+        const cancelLabel = () => {
+            let cancelLabel = null;
+            if (!this.state.newAccountAdded) {
+                if (this.props.contactOnlyMode) {
+                    cancelLabel = 'Close'
+                }
+                else {
+                    cancelLabel = 'Cancel'
+                }
+            }
+            return cancelLabel;
+        }
 
         const onConfirmCallback = () => {
             if (!this.state.newAccountAdded && this.state.selectedPlatform) {
-                mockPromise.then(() => this.setState({ newAccountAdded: true }))
+                setTimeout(() => this.setState({ newAccountAdded: true }), 1000)
                 return false;
             }
         }
 
-        const platformOptions = _.map(getPlatformOptions('People-Based'), platform => { return { label: platform, value: platform.toLowerCase() } })
+        const platformOptions = getPlatformOptions('People-Based').map(platform => ({ label: platform, value: platform.toLowerCase() }))
 
         return (
             <Dialog
@@ -66,8 +78,8 @@ class ModalContentHackForSpectrum extends Component {
                 className={styles.dialog}
                 title={this.props.title}
                 confirmDisabled={disableConfirmation}
-                confirmLabel={this.state.newAccountAdded ? 'Close' : renderConfirmationLabel}
-                cancelLabel={this.state.newAccountAdded ? null : renderCancelLabel}
+                confirmLabel={confirmationLabel()}
+                cancelLabel={cancelLabel()}
                 onConfirm={onConfirmCallback}
                 {...this.props}>
 
