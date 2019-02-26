@@ -7,7 +7,7 @@
     max-width: 600px;
 }
 
-:local(.email_input) {
+:local(.emailInput) {
     width: 100%;
 }
 

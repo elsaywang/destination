@@ -112,7 +112,7 @@ class ModalContentHackForSpectrum extends Component {
                             <span>Email</span>
                             <Textfield
                                 placeholder={emailContactsPlaceholder}
-                                className={styles.email_input}
+                                className={styles.emailInput}
                                 defaultValue={this.props.contactEmails}
                                 onChange={this.handleContactEmailsChange}
                             />
