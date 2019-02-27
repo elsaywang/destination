@@ -32,3 +32,18 @@ Cypress.Commands.add('getRequestParams', requestAlias =>
 Cypress.on('window:before:load', win => {
     win.fetch = null;
 });
+
+Cypress.Commands.add('seedAndLoadIntegratedAccountsPage', (authentications = 'fixture:authentications') => {
+    cy.server();
+    // Stub out API after it's integrated
+    // cy.route('GET', '/api/v1/destinations', authentications).as('load')
+    cy.visit('portal/administration/integrated-accounts')
+    // cy.wait('@load')
+})
+
+Cypress.Commands.add('seedAndLoadDestinationPage', (destinations = 'fixture:destinations') => {
+    cy.server();
+    cy.route('GET', '**/api/**', destinations).as('load')
+    cy.visit('/portal/destinations')
+    cy.wait('@load')
+})

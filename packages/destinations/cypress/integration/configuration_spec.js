@@ -1,7 +1,6 @@
 describe('Configration Integration Tests', () => {
     beforeEach(() => {
-        cy.server();
-        cy.visit('portal/administration/integrated-accounts');
+        cy.seedAndLoadIntegratedAccountsPage();
     });
 
     it.skip('should show Configration page with message, EmptyState and Add-Account Button', () => {
