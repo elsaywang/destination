@@ -29,7 +29,7 @@ ShallowWrapper {
           autoFocus={false}
           block={false}
           className={undefined}
-          data-test="add-account-modal-button"
+          data-test="modal-button-edit"
           disabled={false}
           element="button"
           icon={undefined}
@@ -62,7 +62,7 @@ ShallowWrapper {
           "autoFocus": false,
           "block": false,
           "className": undefined,
-          "data-test": "add-account-modal-button",
+          "data-test": "modal-button-edit",
           "disabled": false,
           "element": "button",
           "icon": undefined,
@@ -109,7 +109,7 @@ ShallowWrapper {
             autoFocus={false}
             block={false}
             className={undefined}
-            data-test="add-account-modal-button"
+            data-test="modal-button-edit"
             disabled={false}
             element="button"
             icon={undefined}
@@ -142,7 +142,7 @@ ShallowWrapper {
             "autoFocus": false,
             "block": false,
             "className": undefined,
-            "data-test": "add-account-modal-button",
+            "data-test": "modal-button-edit",
             "disabled": false,
             "element": "button",
             "icon": undefined,
