@@ -11,6 +11,7 @@
     "classnames": "^2.2.6",
     "coral-shell-ims": "2.0.6",
     "cpx": "^1.5.0",
+    "cypress": "^3.1.5",
     "debounce": "^1.2.0",
     "debounce-promise": "^3.1.0",
     "enzyme": "^3.8.0",
@@ -67,7 +68,6 @@
   "proxy": "http://localhost:8080",
   "devDependencies": {
     "@aam/eslint-config-aam": "^1.2.1",
-    "cypress": "^3.1.5",
     "eslint-plugin-cypress": "^2.2.0",
     "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.3.1",
