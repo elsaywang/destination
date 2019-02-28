@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import ModalTrigger from '@react/react-spectrum/ModalTrigger';
@@ -83,6 +82,7 @@ class ModalContentHackForSpectrum extends Component {
                 confirmLabel={confirmationLabel()}
                 cancelLabel={cancelLabel()}
                 onConfirm={onConfirmCallback}
+                data-test={`modal-${this.props.title}`}
                 {...this.props}>
 
                 {!this.props.contactOnlyMode && (
@@ -94,6 +94,7 @@ class ModalContentHackForSpectrum extends Component {
                             onChange={selectedPlatform => this.setState({ selectedPlatform })}
                             options={platformOptions}
                             disabled={this.props.contactOnlyMode || this.props.platform || this.state.newAccountAdded}
+                            data-test={`dropdown-${this.props.title}`}
                         />
                     </div>
                 )}
@@ -115,6 +116,7 @@ class ModalContentHackForSpectrum extends Component {
                                 className={styles.emailInput}
                                 defaultValue={this.props.contactEmails}
                                 onChange={this.handleContactEmailsChange}
+                                data-test={`textfield-${this.props.title}`}
                             />
                         </div>
                     </div>
@@ -143,7 +145,7 @@ const AddAccountModal = ({
                 quiet={quiet}
                 className={className}
                 icon={triggerIcon}
-                data-test="add-account-modal-button"
+                data-test={`modal-button-${message || 'edit'}`}
             />
             <ModalContentHackForSpectrum
                 role="dialog"
