@@ -52,7 +52,7 @@ describe('Add Contact Modal Tests', () => {
         cy.get('[data-test=modal-button-edit]').eq(0).should('be.visible');
     });
 
-    it('Clicking on Add Contact button will pop up a modal', () => {
+    it.skip('Clicking on Add Contact button will pop up a modal', () => {
         cy.get('[data-test=modal-button-edit]').eq(0).click();
         cy.get('.spectrum-Dialog').should('be.visible');
         cy.get('.spectrum-Button--cta').should('be.disabled');
