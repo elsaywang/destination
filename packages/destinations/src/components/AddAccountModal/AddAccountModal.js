@@ -157,7 +157,7 @@ const AddAccountModal = ({
             message={message}
         />
     </ModalTrigger>
-    );
+);
 
 AddAccountModal.defaultProps = {
     quiet: false,
