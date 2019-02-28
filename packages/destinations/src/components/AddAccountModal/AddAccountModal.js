@@ -137,26 +137,26 @@ const AddAccountModal = ({
     contactEmails,
     accountName,
 }) => (
-        <ModalTrigger>
-            <Button
-                label={message}
-                variant="primary"
-                modaltrigger
-                quiet={quiet}
-                className={className}
-                icon={triggerIcon}
-                data-test={`modal-button-${message || 'edit'}`}
-            />
-            <ModalContentHackForSpectrum
-                role="dialog"
-                contactOnlyMode={contactOnlyMode}
-                title={title}
-                platform={platform}
-                contactEmails={contactEmails}
-                accountName={accountName}
-                message={message}
-            />
-        </ModalTrigger>
+    <ModalTrigger>
+        <Button
+            label={message}
+            variant="primary"
+            modaltrigger
+            quiet={quiet}
+            className={className}
+            icon={triggerIcon}
+            data-test={`modal-button-${message || 'edit'}`}
+        />
+        <ModalContentHackForSpectrum
+            role="dialog"
+            contactOnlyMode={contactOnlyMode}
+            title={title}
+            platform={platform}
+            contactEmails={contactEmails}
+            accountName={accountName}
+            message={message}
+        />
+    </ModalTrigger>
     );
 
 AddAccountModal.defaultProps = {
