@@ -13,7 +13,7 @@ export const allColumnTypes = [
         key: 'category',
         width: 200,
         active: true,
-        sortable: true,
+        sortable: false,
     },
     {
         title: 'TYPE',
